@@ -1,0 +1,33 @@
+[project]
+name = "eprint-summary"
+version = "0.1.0"
+description = "AI-powered summarization tool for IACR ePrint cryptography papers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "streamlit>=1.30.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "feedparser>=6.0.0",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "litellm>=1.40.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "ruff",
+]
+
+[project.scripts]
+eprint-fetch = "eprint_summary.cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[tool.setuptools.packages.find]
+where = ["src"]

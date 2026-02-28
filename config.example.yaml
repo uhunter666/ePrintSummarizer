@@ -1,0 +1,78 @@
+# ePrint Summary Tool Configuration
+# Copy this to config.yaml and customize
+
+# LLM Backend Configuration
+llm:
+  # Provider options: ollama, groq, openrouter, deepseek, custom
+  provider: ollama
+
+  # Model name (format depends on provider):
+  #   ollama:     ollama/llama3.2, ollama/qwen2.5, ollama/mistral
+  #   groq:       groq/llama-3.3-70b-versatile, groq/mixtral-8x7b-32768
+  #   openrouter: openrouter/deepseek/deepseek-chat-v3-0324:free
+  #   deepseek:   deepseek/deepseek-chat
+  #   custom:     any litellm-supported model string
+  model_name: ollama/qwen2.5:7b
+
+  # API base URL (required for ollama, optional for cloud providers)
+  api_base: http://localhost:11434
+
+  # API key (not needed for ollama; set via env var for security)
+  # api_key: null  # Or use env var: EPRINT_LLM_API_KEY
+
+  # Generation parameters
+  temperature: 0.3
+  max_tokens: 1024
+
+  # Delay between API calls in seconds (respect rate limits)
+  request_delay: 1.0
+
+# Keywords for paper recommendation
+# Papers matching any keyword will be highlighted
+keywords:
+  - lattice
+  - post-quantum
+  - homomorphic encryption
+
+# Exclude keywords - papers matching these will be filtered out
+# Useful for skipping topics you're not interested in
+exclude_keywords:
+  - bitcoin
+  - blockchain
+
+# Target year (null = current year)
+target_year: null
+
+# Directory paths (relative to project root)
+reports_dir: reports
+data_dir: data
+
+# Optional: enrich papers with keywords from paper pages
+# This requires scraping individual pages (slower)
+enrich_keywords: false
+
+# Logging level: DEBUG, INFO, WARNING, ERROR
+log_level: INFO
+
+# Email configuration
+# Send HTML report to email after fetching new papers
+email:
+  enabled: false
+  # SMTP server settings (common providers):
+  #   QQ Mail:  smtp.qq.com:465
+  #   163 Mail: smtp.163.com:465
+  #   Gmail:    smtp.gmail.com:587
+  smtp_host: smtp.qq.com
+  smtp_port: 465
+  sender: your_email@qq.com
+  # Password / authorization code
+  # For security, prefer env var: export EPRINT_EMAIL_PASSWORD=your_password
+  password: ""
+  recipients:
+    - recipient@example.com
+
+# Daily schedule configuration
+# Used by scheduler.py for automatic daily execution
+schedule:
+  enabled: true
+  time: "09:00"  # 24-hour format, e.g., "09:00", "18:30"
