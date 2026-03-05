@@ -91,7 +91,7 @@ def render_sidebar():
             else 0,
         )
 
-        # Suggest model names based on provider
+        # Suggest model names based on provider (use config value if provider matches)
         model_suggestions = {
             "ollama": "ollama/llama3.2",
             "groq": "groq/llama-3.3-70b-versatile",
@@ -99,10 +99,15 @@ def render_sidebar():
             "deepseek": "deepseek/deepseek-chat",
             "custom": config.llm.model_name,
         }
+        default_model = (
+            config.llm.model_name
+            if provider == config.llm.provider
+            else model_suggestions.get(provider, config.llm.model_name)
+        )
 
         model_name = st.text_input(
             "Model",
-            value=model_suggestions.get(provider, config.llm.model_name),
+            value=default_model,
         )
 
         api_base = st.text_input(
