@@ -5,6 +5,137 @@
 
 ---
 
+## 更新: 2026-03-09 21:07
+
+*新增 7 篇论文 (编号 478--484)*
+
+### [2026/478] A Hardware/Software Co-Optimization of HQC Using Tightly-Coupled Accelerators on a 32-bit Ibex Core
+
+- **作者:** Seog Chung Seo, YoungBeom Kim
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/478) | [PDF](https://eprint.iacr.org/2026/478.pdf)
+
+
+> **研究背景:** 本文研究了在32位Ibex RISC-V核心上通过紧密耦合的加速器实现Hamming Quasi-Cyclic (HQC)算法的硬件/软件协同优化，以提高其性能。
+>
+> **主要贡献:** 贡献在于提出了一个统一的乘法器，并设计了一个Keccak置换加速器来支持高效的随机数生成；同时优化了多项式乘法在Ibex核心上的实现方法。
+>
+> **达到效果:** 通过这些策略，实现了相对于参考实现几倍于原有性能的提升。
+>
+> **技术梗概:** 技术上采用了统一乘法器、Keccak置换加速器设计，并结合Toom–Cook和Karatsuba方法优化了多项式乘法执行过程中的内存访问次数。
+
+---
+### [2026/479] Strong Efficiency Lower Bounds for Byzantine Agreement
+
+- **作者:** Clément Ducros, Julian Loss, Matthieu Rambaud
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/479) | [PDF](https://eprint.iacr.org/2026/479.pdf)
+
+
+> **研究背景:** 研究背景：理解拜占庭共识（BA）的复杂性是分布式计算和密码学中的基本问题，现有的一些通信下界要么限制了协议的应用范围，要么只针对非常强大的适应式敌手。
+>
+> **主要贡献:** 主要贡献：本文提出了两个新的随机化拜占庭共识协议的通信复杂度下界，适用于标准的适应式敌手，并且在特定设置下改进了现有结果。
+>
+> **达到效果:** 达到的效果：这些新下界填补了理论与实际应用之间的差距，为设计更有效的拜占庭共识协议提供了指导。
+>
+> **技术梗概:** 技术梗概：通过重新审视现有的通信复杂度下界，并结合认证的通信信道假设，本文提出了改进的新下界。
+
+---
+### [2026/480] CHOPIN: Optimal Pairing-Based Multilinear Polynomial Commitments from Bivariate KZG
+
+- **作者:** Juraj Belohorec, Pavel Hubáček, Aleksi Kalsta, Kristýna Mašková
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/480) | [PDF](https://eprint.iacr.org/2026/480.pdf)
+
+
+> **研究背景:** CHOPIN是一种基于配对的多线性多项式承诺方案（PCS），旨在实现恒定大小的证明和线性时间验证者，通过模块化设计从双变量PCS构建。
+>
+> **主要贡献:** 该研究贡献了一种新的构造方法，将现有的单变量PCS编译器扩展到多线性PCS，并提供了直接的知识健全性证明。
+>
+> **达到效果:** 使用双变量KZG方案实例化时，CHOPIN在保持与MERCURY和Samaritan相似的证明大小的同时，实现了验证者时间的主要瓶颈两倍的速度提升。
+>
+> **技术梗概:** 技术上，CHOPIN通过减少验证者的计算复杂度来提高效率，并且只需要一个大型MSM操作，而之前的方案需要两个。
+
+---
+### [2026/481] Remise: Authorized Anonymous Communication Systems
+
+- **作者:** Rohan Ravi, Paritosh Shukla, Adithya Vadapalli
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/481) | [PDF](https://eprint.iacr.org/2026/481.pdf)
+
+
+> **研究背景:** Remise 是一种基于分布式透明RAM（DORAM）的双服务器授权匿名通信系统，旨在支持匿名公告板和匿名通信通道两种模式。
+>
+> **主要贡献:** 其主要贡献在于提出了一种轻量级且高效的访问控制机制，能够在至少有一个诚实服务器的情况下，防止服务器获取敏感信息，并提供内置审计功能。
+>
+> **达到效果:** 实验结果表明，在数据库大小为$22^{24}$的情况下，与PACL (Spectrum)相比，Remise的在线服务器时间提高了80倍。
+>
+> **技术梗概:** 通过在半诚实服务器内部生成标准基向量份额来实现内置审计，并保持授权证明以秘密共享形式分布在两个服务器上，从而实现在不泄露信息的前提下进行透明验证。
+
+---
+### [2026/482] Cryptanalysis of Two Alternating Moduli Weak PRFs
+
+- **作者:** Kai Hu, Gregor Leander, Håvard Raddum, Arne Sandrib, Aleksei Udovenko
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/482) | [PDF](https://eprint.iacr.org/2026/482.pdf)
+
+
+> **研究背景:** 本文针对近期提出的理论导向的弱伪随机函数（weak-PRFs）设计进行了新的密码分析攻击，揭示了初始安全论据中的不足之处。
+>
+> **主要贡献:** 作者提出了基于循环矩阵结构的新观察、Wagner广义生日技术的应用以及多项式系统转换的方法，展示了对这些弱-PRF候选者的更细致分析的必要性。
+>
+> **达到效果:** 通过这些方法，作者成功攻击了多个此类设计，证明了需要对它们的安全性进行显著改进。
+>
+> **技术梗概:** 研究采用了关于循环矩阵的新观察、Wagner广义生日技术的应用以及将问题转化为$\mathbb{F}_3$上的多项式系统的技术。
+
+---
+### [2026/483] Debt-Aware Bonding Curves: Non-Decreasing Floor Prices and Non-Liquidatable Borrowing
+
+- **作者:** Ömer Demirel, Michael Lewkowitz, Tiago Santana
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/483) | [PDF](https://eprint.iacr.org/2026/483.pdf)
+
+
+> **研究背景:** 去中心化借贷协议依赖于与波动的预言机价格绑定的清算机制，这在市场下跌时会导致系统性风险。
+>
+> **主要贡献:** 提出了一种债务感知离散债券曲线（DABC），这是一种具有特定地板段的价格非递减的分段线性债券曲线。
+>
+> **达到效果:** 这种机制确保了任何以或低于地板锚定的贷款抵押品价格下降都不会导致未偿清贷款的去抵押，从而消除了基于此借款模型的协议触发清算。
+>
+> **技术梗概:** 通过将发行、交易和借贷整合到一个合约中，并利用收益再投资于地板提升，实现了无清算风险的杠杆头寸。
+
+---
+### [2026/484] Signal Lost (Integrity): The Signal App is More than the Sum of its Protocols
+
+- **作者:** Kien Tuong Truong, Noemi Terzo, Kenneth G. Paterson
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/484) | [PDF](https://eprint.iacr.org/2026/484.pdf)
+
+
+> **研究背景:** Signal是一款提供端到端安全性的即时通讯应用，拥有数千万用户，并对其他安全消息应用的设计产生了重大影响。尽管被广泛分析，但其完整性属性在公开的威胁模型下仍存在未被发现的安全漏洞。
+>
+> **主要贡献:** 研究者发现了两个实际攻击方法，分别针对Signal的身份解析机制和密封发送功能，揭示了这些功能中的设计缺陷。
+>
+> **达到效果:** 第一个攻击使得恶意服务器可以在特定条件下注入消息，而用户难以察觉；第二个攻击则更为严重，允许恶意服务器在一对一及群组对话中注入任意消息。
+>
+> **技术梗概:** 研究通过详细分析Signal的协议实现和文档记录不全的功能来发现这些漏洞，并展示了具体的攻击流程以验证其可行性。
+
+---
+
 ## 更新: 2026-03-08 10:34
 
 *新增 26 篇论文 (编号 450--477)*
