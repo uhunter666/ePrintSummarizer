@@ -5,6 +5,251 @@
 
 ---
 
+## 更新: 2026-03-11 19:53
+
+*新增 13 篇论文 (编号 485--497)*
+
+### [推荐] [2026/485] SIMD HSS and aHMAC from Interval Encoding with Application to One-Bit-Per-Gate Garbling
+
+- **匹配关键字:** homomorphic encryption, LWE
+
+- **作者:** Jaehyung Kim, Hanjun Li, Huijia Lin, Zeyu Liu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/485) | [PDF](https://eprint.iacr.org/2026/485.pdf)
+
+
+> **研究背景:** Homomorphic Secret Sharing (HSS)和代数同态MAC（aHMAC）作为高效替代方案，正在取代全同态加密（FHE）和属性基加密（ABE），用于秘密共享值上的同态计算。
+>
+> **主要贡献:** 首次提出了基于RLWE假设的变体，并结合新的区间系数编码方法，实现了SIMD评估技术，显著提高了HSS和aHMAC的效率。
+>
+> **达到效果:** 通过支持每环元素$\sqrt{n}$倍批处理加法和乘法，在$O(\log n)$环操作内实现，相比先前直接构造方案在累积效率上获得了约$\tilde O(\sqrt{n})$的改进。
+>
+> **技术梗概:** 采用新的区间系数编码方法嵌入了每环元素$\sqrt{n}$个整数值插槽，并支持$\sqrt{n}$倍批处理加法和乘法，仅需$O(\log n)$环操作实现SIMD评估技术。
+
+---
+### [推荐] [2026/487] Bootstrapping-Free Blind PCS: Achieving Constant Depth and Linear Prover
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Kexi Huang, Yanpei Guo, Wenjie Qu, Jiaheng Zhang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/487) | [PDF](https://eprint.iacr.org/2026/487.pdf)
+
+
+> **研究背景:** 该研究旨在设计一种高效的安全多项式承诺方案（PCS），特别适用于处理加密系数，无需昂贵的重新归一化操作，突破了复杂度与深度之间的权衡。
+>
+> **主要贡献:** 贡献在于提出了首个在非二进制域上具有严格线性证明者复杂性的盲PCS，并且避免了昂贵的重新归一化操作，同时保持了常数倍的乘法深度。
+>
+> **达到效果:** 实验结果显示，在大规模电路规模下，该方案的证明者比现有的领先方案如phalanx和laminate更快。
+>
+> **技术梗概:** 技术上采用了广义RAA码，这是一种将二进制RAA结构扩展到任意非二进制素域F_p的高效纠错码，并结合了Ligero的IOPP框架。
+
+---
+### [推荐] [2026/489] Threshold Oblivious Pseudorandom Functions from Isogeny Group Actions
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Robi Pedersen
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/489) | [PDF](https://eprint.iacr.org/2026/489.pdf)
+
+
+> **研究背景:** 本文提出了一种基于Isogeny组动作的新颖可验证不可知伪随机函数（VOPRF），旨在提高安全性并实现阈值协议。
+>
+> **主要贡献:** 贡献在于设计了一个新的证明协议，将其集成到OPRF协议中以实现输出的可验证性，并且能够方便地转换为阈值协议。
+>
+> **达到效果:** 该构造在保持通信成本略有增加的情况下，比现有最佳方案快一倍，实现了首个基于Isogenies的阈值VOPRF，并且输入和输出大小与服务器方数量无关。
+>
+> **技术梗概:** 技术上，通过模块化设计不同的子程序，并使用模拟论证替换这些子程序以实现其阈值对应物。
+
+---
+### [2026/486] White-Box Attacks on PhotoDNA Perceptual Hash Function
+
+- **作者:** Maxime Deryck, Diane Leblanc-Albarel, Bart Preneel
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/486) | [PDF](https://eprint.iacr.org/2026/486.pdf)
+
+
+> **研究背景:** PhotoDNA是一种广泛部署的感知哈希函数，用于检测非法内容如儿童色情材料（CSAM）。然而，该研究揭示了其设计弱点，并展示了如何利用这些弱点进行白盒攻击。
+>
+> **主要贡献:** 作者首次提供了Allège PhotoDNA的数学描述，并识别出其算法是分段线性和可微的，哈希值仅依赖于每个像素RGB值之和。此外，还证明了基于梯度优化技术和二次规划可以利用这些弱点生成视觉上吸引人的精确碰撞和第二前象限。
+>
+> **达到效果:** 攻击成功率达到接近或等于100%，并在个人笔记本电脑上运行几秒到几分钟内即可完成；这表明PhotoDNA的不可逆性被推翻，并且能够产生与原始图像感知上相同的高质量图像，但哈希值却相差甚远以逃避检测。
+>
+> **技术梗概:** 研究采用了基于梯度优化技术和二次规划的方法来利用Allège PhotoDNA和PhotoDNA的设计弱点，生成视觉吸引力强的精确碰撞和第二前象限；并通过大量不同图像集实现了攻击效果。
+
+---
+### [2026/488] SoK: Offline Finding Protocols for Lightweight Location Tracking
+
+- **作者:** Akshaya Kumar, Carolina Ortega Pérez, Joseph Jaeger, Thomas Ristenpart, Michael A. Specter
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/488) | [PDF](https://eprint.iacr.org/2026/488.pdf)
+
+
+> **研究背景:** 研究背景：离线查找（OF）协议通过蓝牙追踪标签帮助数亿用户定位物品，但其规模和跟踪能力带来了隐私风险以及受害者被利用的风险。因此，学术界与实践者提出了多种加密及非加密的缓解措施以改善隐私保护和反骚扰防护。
+>
+> **主要贡献:** 主要贡献：作者系统化了OF协议的景观，通过分析49篇研究论文和技术规范开发了一个分类法，并对四大主流部署及六种学术构造进行了评估，明确了设计选择、已知攻击以及各设计之间的权衡。
+>
+> **达到效果:** 达到的效果：提供了一种简单但安全的OF协议，澄清了OF协议背后的必要加密组件；同时概述了物理层攻击和用户体验问题如何削弱保护效果。
+>
+> **技术梗概:** 技术梗概：通过构建分类法来指导评估，并综合分析了设计选择、已知攻击及各设计之间的权衡。
+
+---
+### [2026/490] Towards Modeling Cybersecurity Behavior of Humans in Organizations
+
+- **作者:** Klaas Ole Kürtz
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/490) | [PDF](https://eprint.iacr.org/2026/490.pdf)
+
+
+> **研究背景:** 本文旨在综合分析组织内人员（尤其是公司员工）在网络安全行为中的驱动力，并将意识、安全文化及可用性等关键概念整合进一个连贯的理论框架中。
+>
+> **主要贡献:** 作者通过对比多个相关的行为模型，提出了一个适用于组织内部人员行为的理论框架，为基于自然语言处理的自主AI安全提供了参考。
+>
+> **达到效果:** 该研究不仅深化了对人类网络安全行为的理解，还为开发针对AI代理操纵攻击的安全策略提供了理论基础。
+>
+> **技术梗概:** 通过构建结合意识、安全文化和可用性的综合模型，并将其与现有行为模型进行对比分析来实现上述贡献。
+
+---
+### [2026/491] SoK: Private Transformer-Based Model Inference
+
+- **作者:** Yuntian Chen, Tianpei Lu, Zhanyong Tang, Bingsheng Zhang, Zhiying Shi, Yuxiang Luan, Zhuzhu Wang
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/491) | [PDF](https://eprint.iacr.org/2026/491.pdf)
+
+
+> **研究背景:** 针对隐私保护的需求，出现了多种用于Transformer模型推理的协议，这些协议利用了不同的加密工具，并在计算、通信和准确性之间做出了各自的权衡。
+>
+> **主要贡献:** 本文系统地分析了现有方法，从多个性能角度出发，指出了它们的局限性和研究空白。
+>
+> **达到效果:** 通过标准化配置下的重新基准测试，我们为不同部署场景下平衡协议权衡提供了指导原则。
+>
+> **技术梗概:** 采用全面的评估方法，包括系统的文献回顾、实证分析和重新实现关键系统以确保可重复性。
+
+---
+### [2026/492] The Landscape of Reusable Garbling
+
+- **作者:** Anasuya Acharya, Carmit Hazay, Rahul Satish
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/492) | [PDF](https://eprint.iacr.org/2026/492.pdf)
+
+
+> **研究背景:** 研究背景：重用性是密码学中的一个核心主题，出现在多种不同的情境中，如不可区分的混淆（iO）、功能加密（FE）等。然而，尽管一次性混淆已成为广泛应用的基本原语，其重用变体却受到了较少的关注，通常仅作为FE的一个副产品进行研究。
+>
+> **主要贡献:** 主要贡献：作者重新审视了重用性混淆的基础，并构建了一个框架来明确与其他重用性原语的关系。他们展示了重用性混淆等价于单一密钥私钥功能加密的单钥变体，将其作为一个独立的原始概念进行隔离。
+>
+> **达到效果:** 达到的效果：这一发现进一步表明，重用性可以完全在私钥设置中实现，无需调用公钥机制，并且直接从几个固有的重用性原语展示了构建方法。
+>
+> **技术梗概:** 技术梗概：作者通过建立重用性混淆与单一密钥私钥功能加密之间的等价关系，提供了一种新的视角来理解重用性混淆的实现方式。
+
+---
+### [2026/493] The SQInstructor: a guide to SQIsign and the Deuring Correspondence with level structures
+
+- **作者:** Giacomo Borin, Luca De Feo, Guido Maria Lido, Sina Schaeffler
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/493) | [PDF](https://eprint.iacr.org/2026/493.pdf)
+
+
+> **研究背景:** 研究旨在通过引入层结构来扩展SQIsign签名方案，以增强其灵活性和安全性。
+>
+> **主要贡献:** 贡献在于提出了一个通用框架，并具体实例化为一维和二维正则性同态，从而实现了新的超奇异椭圆曲线与层结构之间的德林格对应关系。
+>
+> **达到效果:** 结果是成功设计并实现了一种新的约束范数方程的解法，并增强了SQIsign签名方案的安全性和实用性。
+>
+> **技术梗概:** 技术上采用了正则性同态和层结构的概念，通过数学方法解决了特定类型的约束规范方程。
+
+---
+### [2026/494] $\mathsf{GlueLUT}$: Generalized Lookup Table Arguments over Residue Rings via Auxiliary Fields
+
+- **作者:** Yuanju Wei, Zhelei Zhou, Xinxuan Zhang, Songyu Wu, Binwu Xiang, Cheng Hong, Yi Deng
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/494) | [PDF](https://eprint.iacr.org/2026/494.pdf)
+
+
+> **研究背景:** 现有的高效率查找表（LUT）论证大多针对大域，而越来越多的应用天然基于环结构，在剩余环$\mathbb{Z}_Q$上进行算术运算。直接将域上的LUT技术扩展到环上会遇到根本性的障碍。
+>
+> **主要贡献:** $\mathsf{GlueLUT}$框架提供了一种通用方法，用于在任意剩余环$\mathbb{Z}_Q$上构建支持任意表的查找表论证，并引入了交叉模数一致性（CMC）PIOP作为关键工具。
+>
+> **达到效果:** 通过使用$\mathsf{GlueLUT}$框架和优化实例化，解决了直接在环上构造LUT论证的问题，提高了效率并扩大了应用范围。实现了$\mathsf{GlueLUT}$-$\mathsf{v1}$和$\mathsf{GlueLUT}$-$\mathsf{v2}$作为独立的PIOP。
+>
+> **技术梗概:** 利用CMC PIOP将查找操作置于辅助域$\mathbb{F}_P$上，并验证两个模数下证人的一致性，从而绕过了直接在环上构建LUT论证的障碍。
+
+---
+### [2026/495] Linear Code Equivalence via Plücker Coordinates
+
+- **作者:** Gessica Alecci, Giuseppe D'Alconzo
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/495) | [PDF](https://eprint.iacr.org/2026/495.pdf)
+
+
+> **研究背景:** 研究背景：线性码等价问题（LCE）的假设难度是LESS签名方案及其他具有高级功能的签名方案安全性的核心。该问题要求确定两个线性码是否等价，即是否存在一个置换矩阵P和一个对角矩阵D使得Q=DP成立。
+>
+> **主要贡献:** 主要贡献：作者通过研究多项式矩阵对线性码的作用，并利用代数几何工具（如Plücker坐标和不变有理函数场），提出了确定不变函数生成元的方法，避免了Reynolds算子或Gröbner基计算的依赖。
+>
+> **达到效果:** 达到的效果：对于给定的等价码，作者能够为每个不变函数构造一个多项式作为置换矩阵P的根，但这些多项式的度数和单项式的数量在密码学相关参数下过高，使得实际操作不可行。
+>
+> **技术梗概:** 技术梗概：通过分析对角矩阵作用于线性码的过程（即坐标缩放），作者找到了不变有理函数场的代数独立生成元，并利用这些结果构造了多项式以表示置换矩阵P。
+
+---
+### [2026/496] On quadratic equations of $q$-regular tree and    their applications in Graph Theory and Cryptography.
+
+- **作者:** Vasyl Ustimenko, Tymoteusz Chojecki
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/496) | [PDF](https://eprint.iacr.org/2026/496.pdf)
+
+
+> **研究背景:** 研究了$q$-规则树图$D(n,q)$及其连通分量$CD(n,q)$在极值图论、谱图论、代数图论、对称密码学和低密度奇偶校验码理论中的应用。
+>
+> **主要贡献:** 提出了基于这些大周长的森林的新非交换密码算法，特别是修改了Diffie-Hellman协议，并提出了一种基于$F_q[x_1, x_2, \dots, x_n]$上的仿射Cremona同构半群共轭幂问题复杂性的安全方案。
+>
+> **达到效果:** 该方案允许用户在$O(n^2)$时间内从$(F_q)^n$中推导出碰撞向量，且逆协议具有El Gamal类型，可用于加密或创建数字签名。
+>
+> **技术梗概:** 通过引入基于$q$-规则树图的非交换密码算法，并利用共轭幂问题的复杂性来确保安全性。
+
+---
+### [2026/497] Trustworthy Agent Network: Trust in Agent Networks Must Be Baked In, Not Bolted On
+
+- **作者:** Yixiang Yao, Yuhang Yao, Xinyi Fan, Jiechao Gao, Jie Wang, Minjia Zhang, Srivatsan Ravi, Carlee Joe-Wong
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/497) | [PDF](https://eprint.iacr.org/2026/497.pdf)
+
+
+> **研究背景:** 随着大型语言模型的快速发展，自主运行的语言模型代理能够进行复杂的推理和执行任务。这些代理从孤立操作过渡到协作生态系统时，形成了代理间网络（A2A），其中异构代理自主协调解决多步骤任务。然而，这种网络引入了现有代理对齐技术无法解决的系统性漏洞，如对抗组合、语义不一致和级联运行失败等。
+>
+> **主要贡献:** 本文提出了一种全面的概念框架，通过四个设计支柱将信任嵌入到A2A系统中，以确保其安全性与可靠性。
+>
+> **达到效果:** 该框架能够从根本上解决现有协议在应对多代理协作时的局限性，从而提升整体系统的安全性和鲁棒性。
+>
+> **技术梗概:** 该研究采用了多层次的信任机制设计，包括但不限于身份验证、行为审计和动态信任评估等技术。
+
+---
+
 ## 更新: 2026-03-09 21:07
 
 *新增 7 篇论文 (编号 478--484)*
