@@ -5,6 +5,161 @@
 
 ---
 
+## 更新: 2026-03-15 16:26
+
+*新增 8 篇论文 (编号 499--506)*
+
+### [推荐] [2026/499] Accelerating FAEST Signatures on ARM: NEON SIMD AES and Parallel VOLE Optimization
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Seung-Won Lee, Ha-Gyeong Kim, Min-Ho Song, Si-Woo Eum, Hwa-Jeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/499) | [PDF](https://eprint.iacr.org/2026/499.pdf)
+
+
+> **研究背景:** FAEST是一种后量子数字签名候选方案，其性能主要受VOLE-in-the-Head阶段中重复的AES-CTR基PRG调用的影响。
+>
+> **主要贡献:** 作者提出了一种针对ARM优化的方法，利用通用NEON SIMD指令加速FAEST签名过程中的瓶颈问题，而不依赖于ARMv8 Crypto Extensions。
+>
+> **达到效果:** 该优化在Raspberry Pi 4和Apple M2上分别实现了最高136.9倍和330.1倍的速度提升，单线程NEON实现优于OpenSSL的软件AES，而全NEON加多线程配置则超越了所有测试参数的最佳参考配置。
+>
+> **技术梗概:** 优化结合了寄存器驻留256字节S-box、TBL/TBX基于四阶段SubBytes、4路和8路并行AES块处理、专为FAEST树结构设计的固定大小PRG路径以及基于pthread的独立VOLE任务批处理级并行化。
+
+---
+### [推荐] [2026/502] Efficient RLWE based Chosen-Ciphertext Secure Dual-Receiver Encryption and Sender-Binding KEM in the Standard Model
+
+- **匹配关键字:** LWE
+
+- **作者:** Laurin Benz, Robert Brede
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/502) | [PDF](https://eprint.iacr.org/2026/502.pdf)
+
+
+> **研究背景:** 文章旨在解决在标准模型下实现具有IND-CCA2和IND-SB-CPA安全性的双接收者加密(DRE)和关键封装机制(KEM)，以提高效率并满足实际应用需求。
+>
+> **主要贡献:** 作者提出了基于RLWE的DRE和KEM方案，它们分别实现了IND-CCA2和IND-SB-CPA安全性，并且相比之前的工作在密钥大小和密文大小上有了显著改进。
+>
+> **达到效果:** 所提出的方案在标准模型下是安全的，其密钥大小为150 KB，密文大小为100 KB，比现有结果提高了10到100倍的效率。
+>
+> **技术梗概:** 该研究采用了基于RLWE的技术，并通过改进证明技术来确保在标准模型下的安全性，从而实现高效的安全通信方案。
+
+---
+### [推荐] [2026/504] Compression And Decompression Under FHE Using Error-Correcting Codes and Copy-And-Recurse
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Adi Akavia, Hayim Shaul, Ofer Shayevitz
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/504) | [PDF](https://eprint.iacr.org/2026/504.pdf)
+
+
+> **研究背景:** 压缩作为计算机科学中的基本问题，已有数十年历史。在全同态加密(FHE)环境下，由于需要同时考虑压缩和解压的隐私性，使得该问题变得更加复杂且具有挑战性。
+>
+> **主要贡献:** 本文首次提出了能够在FHE环境中进行有效压缩与解压的非平凡算法，并结合了复制-递归技术与压缩与纠错码之间的已知对偶关系。
+>
+> **达到效果:** 实验结果表明，所提出的解压算法比传统方法更快，这在中间存在受限制代理且通信和计算受限的系统中尤为重要。
+>
+> **技术梗概:** 该研究利用了复制-递归技术和纠错码理论来设计压缩与解压算法，在FHE环境下实现了高效的数据处理。
+
+---
+### [2026/500] Expander properties of superspecial isogeny digraphs with level structure
+
+- **作者:** Thomas Decru, Krijn Reijnders
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/500) | [PDF](https://eprint.iacr.org/2026/500.pdf)
+
+
+> **研究背景:** 研究背景：Charles、Goren和Lauter证明了超奇异$\ell$-isogeny图是拉马努詹图，即最优扩展器。然而，Jordan和Zaytman指出这一结论在二维情况下不再成立，但Florit和Smith展示了这些图仍然表现出良好的扩展性质。
+>
+> **主要贡献:** 主要贡献：作者研究了具有$(\ell,\ell)$-级结构的$(\ell)^g$-isogeny有向图，并通过实证证据表明，在一维情况下它们是拉马努詹图，对于$\ell=2$在二维情况下的表现也非常好。
+>
+> **达到效果:** 达到的效果：作者的研究结果为超奇异isogeny图在不同维度和参数下是否仍能保持良好的扩展性质提供了新的见解，并提出了一个主要猜想来解释这些现象。
+>
+> **技术梗概:** 技术梗概：研究采用了对好扩展路径的限制，从而使得生成的有向图表现出优秀的扩展性能。
+
+---
+### [2026/501] More Brisés in Ballet: Extending Differential and Linear Cryptanalysis
+
+- **作者:** Emanuele Bellini, Gabriele Bellini, Alessandro De Piccoli, Michela Gallone, David Gerault, Yun Ju Huang, Paul Huynh, Matteo Onger, Simone Pelizzola, Andrea Visconti
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/501) | [PDF](https://eprint.iacr.org/2026/501.pdf)
+
+
+> **研究背景:** 该研究针对Ballet分组密码家族进行了新的密码分析，这是一个简化了的Lay-Massey ARX结构，具有线性密钥调度，曾在中国2018-2020年密码算法竞赛中获胜。
+>
+> **主要贡献:** 研究人员首次提供了古典密钥恢复攻击，并发现了新的差分和线性路径（分别达到15轮差分和16轮线性），改进了不可能差分路径（从7轮提高到8轮），并首次进行了Ballet的差分-线性分析（最多20轮）。
+>
+> **达到效果:** 研究结果导致对Ballet-128/128/46和Ballet-128/256/48分别进行到了16轮和17轮的密钥恢复攻击，扩展了对该ARX设计加密理解，并为该算法的安全余量提供了新的见解。
+>
+> **技术梗概:** 研究采用了差分密码分析、线性密码分析以及差分-线性联合分析等技术来评估Ballet的安全性。
+
+---
+### [2026/503] SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems
+
+- **作者:** Kanwal Batool, Saleem Anwar, Francesco Regazzoni, Andy Pimentel, Zoltán Ádám Mann
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/503) | [PDF](https://eprint.iacr.org/2026/503.pdf)
+
+
+> **研究背景:** Secure Neural Network Inference (SNNI)旨在保护加密数据的隐私，但在实际部署中面临高预处理开销、显著的通信成本以及顺序执行的问题，导致吞吐量低、系统资源利用率低下、队列延迟长且可扩展性差。
+>
+> **主要贡献:** 	extit{SwiftSNNI}提出了一种统一的、资源感知的调度框架，通过结合离线和在线策略来最大化并行度，并将未来请求的预处理阶段与当前活动的推理任务重叠执行。
+>
+> **达到效果:** 在五种基准神经网络（M1, M2, HiNet, AlexNet, VGG-16）下的不同负载和随机到达率下进行评估，	extit{SwiftSNNI}相比并行化顺序基线(MS-SHARK)实现了高达97%的平均输入延迟减少、81%的工期缩短（约5.4倍加速）、吞吐量提高5.6倍，并且将平均等待时间减少了超过99%。
+>
+> **技术梗概:** 	extit{SwiftSNNI}通过优化离线和在线任务调度，利用约束优化问题模型重叠预处理阶段与推理阶段的执行，同时支持提前通知以实现主动预处理，从而提高整体性能。
+
+---
+### [2026/505] SCALE-FL: Scalable Cryptography-based Aggregation with Lightweight Enclaves for Federated Learning
+
+- **作者:** Micah Brody, Antonia Januszewicz, Jiachen Zhao, Nirajan Koirala, Taeho Jung
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/505) | [PDF](https://eprint.iacr.org/2026/505.pdf)
+
+
+> **研究背景:** 隐私保护联邦学习（PPFL）旨在确保在医疗保健、智能电网和物联网等场景中用户数据的安全性和隐私性。然而，维护跨多个周期的众多用户的复杂关系使得在整个PPFL过程中保证安全性和隐私性具有挑战性。
+>
+> **主要贡献:** SCALE-FL提出了一个创新方案，结合了最先进的私有流聚合（PSA）协议和可信执行环境（TEE），以实现近明文性能的安全联邦学习。
+>
+> **达到效果:** 通过使用PSA协议进行聚合，SCALE-FL能够在不需每个用户存储密钥或TEE使用的情况下保护信息隐私，并且TEE仅在明文中安全处理聚合结果，从而减少了每客户端每次周期的开销。
+>
+> **技术梗概:** 该方案采用了先进的PSA协议来收集用户信息，并利用TEE隐藏原始聚合的信息，实现了高效的安全联邦学习。
+
+---
+### [2026/506] Unclonable Encryption in the Haar Random Oracle Model
+
+- **作者:** James Bartusek, Eli Goldin
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/506) | [PDF](https://eprint.iacr.org/2026/506.pdf)
+
+
+> **研究背景:** 本文旨在构建在Haar随机算子模型下的不可克隆加密方案，该模型假设所有参与方可以访问一个Haar随机酉矩阵及其共轭转置、逆和转置操作。
+>
+> **主要贡献:** 我们首次证明了在micocrypt世界中（即可能不存在单向函数的世界），可重用的不可克隆加密是存在的，并且提出了路径记录框架下的单位元重新编程引理，这是我们的主要技术贡献之一。
+>
+> **达到效果:** 该方案满足标准的不可克隆区分安全性定义，支持密钥重用，并能加密任意长度的消息。
+>
+> **技术梗概:** 我们利用了最近引入的路径记录框架来证明一个自然的“单位元重新编程引理”，这可能具有独立的研究价值。
+
+---
+
 ## 更新: 2026-03-11 19:53
 
 *新增 13 篇论文 (编号 485--497)*
