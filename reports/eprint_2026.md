@@ -5,6 +5,251 @@
 
 ---
 
+## 更新: 2026-03-16 20:25
+
+*新增 13 篇论文 (编号 507--521)*
+
+### [推荐] [2026/510] FHorgEt: A Cryptographic Solution for Secure Machine Unlearning
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** David Balbás, Dario Fiore, Georgios Raikos, Damien Robissout, Claudio Soriente
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/510) | [PDF](https://eprint.iacr.org/2026/510.pdf)
+
+
+> **研究背景:** 现有机器卸载方法假设服务器诚实执行所有卸载请求，但在实践中这一假设过于严格。即使卸载请求可验证，服务器仍可能保留数据副本或继续使用数据进行训练。因此，需要一种能够在模型生命周期中保护数据机密性的安全模型。
+>
+> **主要贡献:** 作者提出了一个形式化的安全模型，并设计了一个基于全同态加密（FHE）和安全多方计算（MPC）的机器学习框架，确保卸载请求被正确执行且用户的数据被遗忘。
+>
+> **达到效果:** 该框架能够在分布式环境中处理训练、卸载和推理请求，并在诚实但好奇的服务器模型下提供安全性保证。
+>
+> **技术梗概:** 通过结合全同态加密（FHE）和安全多方计算（MPC），作者实现了对卸载请求的加密验证，确保数据在整个生命周期中的机密性。
+
+---
+### [推荐] [2026/515] Privacy at your Fingertips: Enabling Rapid Client-Side Operations in Fully Homomorphic Encryption
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Aikata Aikata, Florian Krieger, Sujoy Sinha Roy
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/515) | [PDF](https://eprint.iacr.org/2026/515.pdf)
+
+
+> **研究背景:** 全同态加密（FHE）允许用户在不泄露底层数据的情况下将大量计算任务外包给服务器，这使其在隐私保护机器学习等领域具有广泛应用前景。然而，现有的所有FHE方案都面临着加密/解密速度慢和密文膨胀率高的问题，导致其实用性受到极大限制。
+>
+> **主要贡献:** 本文提出了一种新颖的	onetwo方法来优化客户端侧同态加密操作，并通过利用启动过程减少了密文膨胀并降低了服务器及客户端的通信开销。此外，该技术还消除了对浮点数算术的要求，从而简化了FHE的实现流程。
+>
+> **达到效果:** 实验结果表明，所提出的技术将加密/解密计算和通信需求分别降低了97%。通过开发兼容软件和硬件平台的框架，并进行综合设计分析、FPGA原型制作以及ASIC合成和微控制器性能评估，证明了该方法的有效性。
+>
+> **技术梗概:** 该技术利用内置的FHE例行程序并保持安全性和精度保证，同时减少了客户端的编码和解码需求。
+
+---
+### [推荐] [2026/519] A Generalized Partial Exposure Lattice Attack Against an RSA variant Based on Cubic Pell Curves
+
+- **匹配关键字:** lattice
+
+- **作者:** Michel Seck, Hortense Boudjou Tchapgnouo
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/519) | [PDF](https://eprint.iacr.org/2026/519.pdf)
+
+
+> **研究背景:** 该研究针对Nitaj和Seck基于立方佩尔方程的RSA变种进行攻击，旨在改进现有方法以处理更广泛的情况。
+>
+> **主要贡献:** 作者提出了一种新的部分暴露格攻击方法，可以应用于已知p或q的部分位值的情况。
+>
+> **达到效果:** 该攻击能够有效利用公钥和私钥之间的关系，即使在有限的密钥信息下也能提高破解效率。
+>
+> **技术梗概:** 通过分析关键方程eu_0 - (p-1)^2(q-1)^2 v_0 = w_0，并结合格理论技术实现攻击。
+
+---
+### [2026/507] Practically Efficient Linear-Time Protocols for Server-Aided Private Set Union and Third Party Private Set Operations
+
+- **作者:** Foo Yee Yeo, Jason H. M. Ying
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/507) | [PDF](https://eprint.iacr.org/2026/507.pdf)
+
+
+> **研究背景:** 本文提出了服务器辅助的私有集合并集（PSU）协议以及第三方私有集合差集（TP-PSD）和第三方私有对称差集（TP-PSymD）协议，旨在提高这些操作在实际应用中的效率。
+>
+> **主要贡献:** 该研究的主要贡献在于设计了更高效的第三方私有集合运算协议，相比前人工作，在计算复杂度和实用性上都有显著提升。
+>
+> **达到效果:** 实验结果显示，本文提出的服务器辅助的PSU协议比现有最先进的两方PSU协议快几倍，并且能够在更大的数据集上运行。
+>
+> **技术梗概:** 通过优化算法设计和采用高效的密码学技术，实现了快速执行和大规模应用的能力。
+
+---
+### [2026/508] Schnorr Blind Signatures and Signed ElGamal KEM in Algebraic Group Action Model
+
+- **作者:** Dung Hoang Duong, Willy Susilo, Chuanqi Zhang
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/508) | [PDF](https://eprint.iacr.org/2026/508.pdf)
+
+
+> **研究背景:** 研究背景：Schnorr盲签名是效率最高且应用最广泛的盲签名方案之一。CSI-Otter作为首个基于类Schnorr构造的密码学方案，尽管在OR关系上有所创新，但其并发安全性被证明存在漏洞。
+>
+> **主要贡献:** 主要贡献在于首次在代数群作用模型（AGAM）和随机预言机模型（ROM）下，严格证明了基于类Schnorr构造的签名方案的安全性，并提出了首个具备紧致安全性的类Schnorr盲签名。
+>
+> **达到效果:** 达到的效果是填补了CSI-Otter及其类似方案在并发安全性上的不足，为后续研究提供了坚实的理论基础。
+>
+> **技术梗概:** 技术梗概：通过证明基于类Schnorr构造的签名方案的安全性，并利用群作用离散对数假设（GADLOG）和一个更多组作用离散对数假设（OMGADLOG），实现了紧致并发安全性的证明。
+
+---
+### [2026/509] PUFF: Maximally Proactive Security for Free in Perfectly Secure MPC with Guaranteed Output Delivery
+
+- **作者:** Jiarui Li, Mengzhen Zou, Guidong Li, Guoyan Zhang, Chen Qian
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/509) | [PDF](https://eprint.iacr.org/2026/509.pdf)
+
+
+> **研究背景:** 在完美安全多方计算(MPC)中实现主动安全性并保证输出交付是一个重大挑战，因为传统协议要求所有参与者持续在线，这使得它们在许多应用场景中不可行。
+>
+> **主要贡献:** 本文提出了一种统一框架和基本构建块来构造层化模型下的协议，并使用Shamir和CNF秘密共享进行实例化，从而开发了高效的可验证秘密共享(VSS)和安全乘法协议以实现主动安全性。
+>
+> **达到效果:** 应用该框架，我们构建了层化MPC协议，显著降低了每门电路通信复杂度和所需的总层数。具体而言，基于Shamir的MPC实现了每门$O(n^6)$的通信复杂性，并且总层数为$D+13$，相比之前的工作在门级通信复杂度上从$O(n^9)$降低到了$O(n^6)$，并且总层数从$10D+8$减少到$D+13$。
+>
+> **技术梗概:** 该工作利用了层化MPC模型，并通过引入高效的VSS和安全乘法协议来实现主动安全性。
+
+---
+### [2026/512] Securely Scaling Autonomy: The Role of Cryptography in Future Unmanned Aircraft Systems (UAS)
+
+- **作者:** Paul Rochford, William J Buchanan, Rich Macfarlane, Madjid Tehrani
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/512) | [PDF](https://eprint.iacr.org/2026/512.pdf)
+
+
+> **研究背景:** 研究背景：无人驾驶航空系统（UAS）的去中心化带来了在受限资源和争议环境中建立安全通信和共识的重大挑战。
+>
+> **主要贡献:** 主要贡献在于评估了两种加密技术在UAS中的应用，即MLS用于组密钥交换，以及FROST和BLS阈值签名用于分散式共识。
+>
+> **达到效果:** 研究结果表明，MLSpp库不适用于动态环境，而OpenMLS则表现出高性能和可扩展性；Zcash FROST实现因其安全特性和高效的验证而在持续、高流量用例中表现最佳。
+>
+> **技术梗概:** 技术概要是通过一系列静态评估、网络模拟和新型批量签名基准测试来衡量这些开源库的计算效率和实际鲁棒性。
+
+---
+### [2026/514] Secure Matrix Invertibility Testing over Fields of Small Order or Characteristics
+
+- **作者:** Seungwoo Han, Jooyoung Lee, Seungmin Park, Mincheol Son
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/514) | [PDF](https://eprint.iacr.org/2026/514.pdf)
+
+
+> **研究背景:** 针对有限域的小阶数或特征下的多方矩阵可逆性测试是多变量二次(MQ)签名方案阈值化中的关键操作，但现有解决方案要么在安全性和效率上存在不足。
+>
+> **主要贡献:** 作者提出了两种新的协议来实现完美隐私的多方矩阵可逆性测试，分别适用于小阶数域和小特征域。
+>
+> **达到效果:** 这两种协议均实现了在线和离线轮次之间的权衡，在保证安全性的同时提高了计算和通信效率。
+>
+> **技术梗概:** 第一种协议通过扩展Cramer-Damgård协议并结合字段提升技术实现；第二种基于Samuelson-Berkowitz算法的多方计算，特别适用于小特征域。
+
+---
+### [2026/516] Towards Compact UOV-Based MQ Signatures: Rectangular and Lifted Whipping Structures
+
+- **作者:** Quang-Duc Nguyen, Minh Hieu Nguyen
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/516) | [PDF](https://eprint.iacr.org/2026/516.pdf)
+
+
+> **研究背景:** 多变量二次(MQ)签名方案提供了快速的签名和验证过程，并且具有较小的签名大小，但其实际应用受限于较大的公钥。
+>
+> **主要贡献:** 作者提出了两种改进技术：矩形乳化矩阵和提升乳化矩阵，以进一步减小UOV基MQ签名的公钥大小并提高性能。
+>
+> **达到效果:** 通过结合这两种方法，作者设计了一种新的变体MAYO$^−_L$，并在已知伪造和密钥恢复攻击中提供了详细的安全性分析，并提出了在相同安全性水平下改进的公钥和签名尺寸参数集。
+>
+> **技术梗概:** 矩形乳化矩阵减少了基础UOV实例所需的方程数量，而提升乳化矩阵则将其提升到扩展域以避免已知的提升系统攻击。
+
+---
+### [2026/517] Multi-Instance Security Degradation of Code-Based KEMs
+
+- **作者:** Alexander May, Gabriel Sá Diogo
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/517) | [PDF](https://eprint.iacr.org/2026/517.pdf)
+
+
+> **研究背景:** 大多数基于码的KEM的安全性依赖于综合解码问题的难度。现有的现代方案如HQC和BIKE在单实例设置中考虑了DOOM类型的$\sqrt{n}$加速，但未充分评估多实例设置下的安全性。
+>
+> **主要贡献:** 作者分析了使用相同公钥生成多个会话密钥的多实例设置，并展示了如何利用DOOM技术加速解码过程以攻击这些KEM方案。
+>
+> **达到效果:** 研究结果表明，在HQC和BIKE等多实例设置中，随着会话密钥数量$M$的增加，安全性显著下降，某些情况下甚至低于NIST的安全标准。
+>
+> **技术梗概:** 通过构造具有$nM$个综合解码问题实例的新DOOM实例，攻击者能够加速单个会话密钥的重建过程。
+
+---
+### [2026/518] ${{\mathsf{SMA}^2\mathsf{RT}}}$ : Secret-Metadata Attribute-based Anonymous Rate-limited Tokens
+
+- **作者:** Anna Lysyanskaya, Eileen Nolan
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/518) | [PDF](https://eprint.iacr.org/2026/518.pdf)
+
+
+> **研究背景:** 在高流量在线服务中，如隐私保护的验证码绕过或计量付费墙，服务提供商需要过滤恶意流量而不泄露用户隐私。现有的带有隐藏元数据的秘密属性凭证（ATPM）解决了这一问题，但它们存在通信复杂度高和缺乏细粒度策略支持的问题。
+>
+> **主要贡献:** $\mathsf{SMA}^2\mathsf{RT}$首次在隐藏元数据的上下文中支持选择性属性披露，结合了匿名凭证和匿名令牌的研究成果。
+>
+> **达到效果:** 该方案通过使用等价类签名（SEQ）实现了“一次发行，多次使用”的能力，用户可以仅与发行人交互一次获取主凭据，并随后本地生成多达N个不可链接的有效令牌，无需进一步的在线通信。这大大减少了服务器负载和网络延迟，使其非常适合实时Web应用程序。
+>
+> **技术梗概:** 该技术利用等价类签名（SEQ）来实现“发行一次，多次使用”的能力，允许用户仅与发行人交互一次获取主凭据，并在本地生成多达N个不可链接的有效令牌。
+
+---
+### [2026/520] Sparse optimisation and quantum-inspired encoding for ransomware detection
+
+- **作者:** Elodie Mutombo Ngoie, Mike Wa Nkongolo
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/520) | [PDF](https://eprint.iacr.org/2026/520.pdf)
+
+
+> **研究背景:** 针对高维网络流量和复杂混淆技术导致的勒索软件检测难题，现有特征选择方法常面临冗余、噪声及维度灾难的问题，影响了泛化能力和解释性。
+>
+> **主要贡献:** 提出了一种结合梯度优化与Minimax Concave Penalty (MCP)以强制稀疏性的BioSparse-MCP框架，并采用Rotated Circular Partitioning (RCP)策略提升特征选择的组织结构，同时融入Quantum Feature Mapping (QFM)-启发的空间变换。
+>
+> **达到效果:** 该方法在149,043个网络流量实例上实现了高检测精度，且具有较低的误报率。
+>
+> **技术梗概:** 通过经典模拟RCP和QFM操作，保持了与传统机器学习管道的兼容性，并确保实时部署无需专用硬件。
+
+---
+### [2026/521] UniMSM: An Efficient and Flexible Hardware Accelerator for Multi-Scalar Multiplication
+
+- **作者:** Kaixuan Wang, Yifan Yanggong, Chenti Baixiao, Xiaoyu Yang, Lei Wang
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/521) | [PDF](https://eprint.iacr.org/2026/521.pdf)
+
+
+> **研究背景:** 多标量乘法（MSM）是密码系统中的核心操作，涉及大量带有数百位模算术的项。
+>
+> **主要贡献:** UniMSM 设计了一种基于扩展雅可比坐标系统的流水线点加器，并采用时间复用数据通路来减少模乘成本并保持高吞吐量。
+>
+> **达到效果:** 相比之前的FPGA加速器，UniMSM 在面积-时间积上提高了2.12倍；在ASIC中，UniMSM 达到了现有最佳加速器的3.85倍性能提升。
+>
+> **技术梗概:** 通过引入冲突感知调度方案来解决桶更新冲突，并开发了一种硬件友好的Pippenger算法变体以减少中间存储开销和聚合中的串行依赖性。
+
+---
+
 ## 更新: 2026-03-15 16:26
 
 *新增 8 篇论文 (编号 499--506)*
