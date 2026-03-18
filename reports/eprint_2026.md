@@ -5,6 +5,49 @@
 
 ---
 
+## 更新: 2026-03-18 19:44
+
+*新增 2 篇论文 (编号 522--523)*
+
+### [推荐] [2026/523] RISC-V based Vectorization of Classic McEliece Key Generation
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Mahnaz Namazi Rizi, Nusa Zidaric, Lejla Batina, Nele Mentens
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/523) | [PDF](https://eprint.iacr.org/2026/523.pdf)
+
+
+> **研究背景:** 量子计算机可能通过Shor算法和Grover算法破解或削弱经典密码学，促使开发如Classic McEliece（CM）等后量子密码学（PQC）算法以抵抗量子攻击。然而，CM的复杂计算和大密钥尺寸使其在保持高效性能方面具有挑战性。
+>
+> **主要贡献:** 该研究首次全面探索并实现了基于RISC-V向量扩展（RVV）加速Classic McEliece密钥生成过程的方法，并提出了新的自定义RVV指令以进一步提高实现速度。
+>
+> **达到效果:** 通过评估使用RVV1.0的自动和手动向量化实现，结合多种向量寄存器配置，研究展示了在FPGA上利用RVV加速CM密钥生成的实际能力。
+>
+> **技术梗概:** 研究采用RISC-V Vector Extension Version 1.0（RVV1.0）进行评估，并提出了新的自定义RVV指令以进一步优化Classic McEliece密钥生成的实现。
+
+---
+### [2026/522] X3DH with Deniable Authentication without Trusted Third Parties
+
+- **作者:** Stanislaw Jarecki, Phillip Nazarian, Apurva Rai
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/522) | [PDF](https://eprint.iacr.org/2026/522.pdf)
+
+
+> **研究背景:** X3DH是一种广泛应用于即时通讯应用中的加密协议，旨在提供无第三方信任的密钥交换，并具有可否认性。然而，现有基于VRF的SAS-MA扩展破坏了X3DH的可否认性。
+>
+> **主要贡献:** 本文提出了一种基于私有VRF（PVRF）的新方案，该方案在保持与X3DH相同集成便利性的同时，几乎保留了X3DH的可否认性。
+>
+> **达到效果:** 通过引入PVRF机制，新方案能够在不牺牲性能的前提下，实现与X3DH兼容的SAS-MA认证过程，并提供类似X3DH的可否认性。
+>
+> **技术梗概:** 该技术利用PVRF的独特属性，允许仅由指定验证者进行正确性的验证，从而在保持协议效率的同时增强了安全性。
+
+---
+
 ## 更新: 2026-03-16 20:25
 
 *新增 13 篇论文 (编号 507--521)*
