@@ -5,6 +5,217 @@
 
 ---
 
+## 更新: 2026-03-20 20:33
+
+*新增 11 篇论文 (编号 524--536)*
+
+### [推荐] [2026/527] QR-UOV without Rejection Sampling: Security Analysis and High-Speed Implementation
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Hiroshi Amagasa, Hiroki Furue, Rei Ueno, Naofumi Homma
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/527) | [PDF](https://eprint.iacr.org/2026/527.pdf)
+
+
+> **研究背景:** QR-UOV是一种基于UOV的多变量签名方案，通过利用商环结构实现紧凑的公钥，被认为是后量子数字签名的候选者。然而，其公钥扩展过程中的拒绝采样步骤引入了额外的数据移动和不规则的控制流，影响了验证速度。
+>
+> **主要贡献:** 本文提出了一种名为NoRS QR-UOV的新方案，去除了公钥扩展中的拒绝采样步骤，并通过确定性地将拒绝值映射为0简化了系数生成过程。
+>
+> **达到效果:** 理论和实证分析表明，在推荐的参数集下，NoRS QR-UOV保留了声称的安全水平。在x86处理器上实现了带有AES-NI和AVX2指令的支持，验证速度得到了显著提升。
+>
+> **技术梗概:** 通过确定性映射拒绝值为0来简化系数生成，并评估了这种修改对安全性的影响。
+
+---
+### [推荐] [2026/528] Full Secret Key Recovery of First-order Masked Crystals-Kyber implementation using multiple distinct chosen-ciphertexts
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Souhayl Ben El Haj Soulami, Yann Connan, Sylvain Duquesne
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/528) | [PDF](https://eprint.iacr.org/2026/528.pdf)
+
+
+> **研究背景:** 该研究针对第一级掩码实现的Crystals-Kyber进行侧信道攻击，旨在揭示后量子密码学中全秘密密钥恢复的技术挑战。
+>
+> **主要贡献:** 研究人员提出了一种新颖的区别器，并结合了多个不同的选择明文来提高攻击效果，这是在现有文献中的创新贡献。
+>
+> **达到效果:** 实验结果显示，在噪声较大的环境下（信噪比SNR为0.67），通过75000个样本成功恢复了全秘密密钥，成功率达到了95%，证明了该方法的有效性。
+>
+> **技术梗概:** 攻击技术基于对多个相同区别器实例的信息收集，并利用多次解密请求来增强攻击效果，展示了在复杂环境下的应用潜力。
+
+---
+### [推荐] [2026/533] A Maliciously-Secure Post-Quantum OPRF from Crypto Dark Matter
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Diego F. Aranha, Aron van Baarsen, Adam Blatchley Hansen, Kent Nielsen, Peter Scholl
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/533) | [PDF](https://eprint.iacr.org/2026/533.pdf)
+
+
+> **研究背景:** 本文构建了基于交替模数假设的恶意安全OPRF协议，采用Crypto Dark Matter范式。
+>
+> **主要贡献:** 通过结合新的向量模糊线性评估技术，实现了在零知识和安全两方计算中的相关随机数生成，从而获得恶意安全性。
+>
+> **达到效果:** 相比现有最先进的GOLD OPRF，在所有场景下在线阶段更快，并且在小批量设置中整体效率更高；支持秘密共享输出并可扩展处理秘密共享输入。
+>
+> **技术梗概:** 利用向量模糊线性评估技术进行模数转换，实现高效的零知识和安全两方计算中的相关随机数生成。
+
+---
+### [推荐] [2026/534] Ciphertext-Policy ABE for $\mathsf{NC}^1$ Circuits with Constant-Size Ciphertexts from Succinct LWE
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Jiaqi Liu, Yuanyi Zhang, Fang-Wei Fu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/534) | [PDF](https://eprint.iacr.org/2026/534.pdf)
+
+
+> **研究背景:** 本文构建了一种基于格的细粒度属性加密方案，用于$\mathsf{NC}^1$访问策略，并实现了恒定大小的密文。
+>
+> **主要贡献:** 该方案在深度$d$和规模$s$为$\ell$位输入的$\mathsf{NC}^1$电路上实现了选择性安全性。
+>
+> **达到效果:** 此方案使得公钥和密文大小与$d$无关，而秘密密钥大小与$\ell$成正比，且在标准模型下安全假设为多项式精确线性LWE。
+>
+> **技术梗概:** 通过引入多项式精确线性LWE假设并结合$\mathsf{NC}^1$电路的特性来实现恒定大小的密文和高效的安全性证明。
+
+---
+### [2026/524] Distance of RAA Codes over Large Finite Fields (with Applications in zkSNARKs and PCGs)
+
+- **作者:** Pariya Akhiani, Yupeng Zhang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/524) | [PDF](https://eprint.iacr.org/2026/524.pdf)
+
+
+> **研究背景:** RAA码因其线性时间编码和良好的距离特性，在现代密码学中被广泛研究，尤其在零知识证明和安全多方计算等构建模块中发挥关键作用。然而，现有工作仅针对二进制域或较小的有限字段提供了可验证的距离保证。
+>
+> **主要贡献:** 本文首次证明了RAA码在大有限域上具有恒定相对距离，并解决了关于其距离随领域增大而改善的公开猜想。
+>
+> **达到效果:** 实验结果显示，在消息长度为$2^{15}$和重复因子为4的情况下，31位素数字段上的RAA码实现了相对距离$\frac{1}{2}$，失败概率仅为$2^{-16}$，优于二进制域上最佳证明的距离$\delta = 0.2$，失败概率为$2^{-7}$。
+>
+> **技术梗概:** 通过理论分析和实证证据，本文展示了大字段相较于二进制场能提供更优的距离保证，并显著降低了失败概率。
+
+---
+### [2026/526] Broken By Design: A Longitudinal Analysis of Cryptographic Failures in Alipay Mobile Payment Infrastructure
+
+- **作者:** Jiqiang Feng
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/526) | [PDF](https://eprint.iacr.org/2026/526.pdf)
+
+
+> **研究背景:** 本文对支付宝移动支付基础设施中的加密失败进行了系统性安全分析，重点关注其自2009年起使用MD5WithRSAEncryption和RSA-1024的APK签名证书，并将持续至2026年。
+>
+> **主要贡献:** 作者通过组织15个可复现的概念验证攻击，展示了支付宝加密基础设施每一层都存在可利用的安全弱点，包括证书、签名方案、密钥管理和生态系统层面的伪随机数生成器失败。
+>
+> **达到效果:** 研究揭示了生态系统级别的加密退化现象：123个证书中有38个（占比30.9%）使用RSA-1024，并且通过批处理GCD方法发现了28个RSA密钥中存在8个共享的素数。进一步测试确认，其中3台服务器仍处于运行状态并具有易受攻击的TLS配置。
+>
+> **技术梗概:** 研究采用了包括MD5碰撞生成、SHA-1碰撞可行性评估、Janus漏洞利用、v1签名绕过技术、硬编码DES密钥分析以及RSA密钥重复使用在内的多种已知技术和方法。
+
+---
+### [2026/529] Benchmarking Exported Key Material from Commercial QKD Systems Using SENTRY-Q: A Model-Based Output Validator
+
+- **作者:** Darshit Suratwala, Matvey Romanowski, Orr Dunkelman, Elham Amini, Jean-Pierre Seifert
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/529) | [PDF](https://eprint.iacr.org/2026/529.pdf)
+
+
+> **研究背景:** 该研究针对商用量子密钥分发(QKD)系统中导出密钥材料的实际应用需求，填补了现有协议级指标如量子比特错误率和秘密密钥速率与下游密钥管理系统(KMS)及加密应用对接验证之间的空白。
+>
+> **主要贡献:** 研究通过SENTRY-Q模型构建了一个可重复的测量工作流，评估三个商用QKD系统的导出密钥块，并提出了五个指标来衡量这些系统的行为稳定性。
+>
+> **达到效果:** 实验结果表明，这三个商用QKD系统在256位密钥导出方面均表现出稳定的块级分布特性，验证了它们在实际部署中的可靠性。
+>
+> **技术梗概:** 研究采用了一种基于模型的输出基准方法，通过计算哈明重量平衡、最小熵代理等五个指标，并结合NIST SP 800-22长序列一致性检查来评估导出密钥块的行为。
+
+---
+### [2026/531] A Review of IC Logical Reverse Engineering Techniques
+
+- **作者:** Kevin Xu, Lucas Daudt Franck, Samuel Pagliarini
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/531) | [PDF](https://eprint.iacr.org/2026/531.pdf)
+
+
+> **研究背景:** 本文综述了应用特定集成电路（ASIC）的逻辑逆向工程技术，从硬件安全角度定义了该问题，并回顾了早期相关技术的发展历程。
+>
+> **主要贡献:** 文章组织并总结了当前的逆向工程技术，按目标和方法分类，并指出了现有文献中的共同趋势和评估实践。
+>
+> **达到效果:** 研究结果为研究人员提供了关于逆向工程及其未来方向的基础知识，识别出未充分探索的问题领域及完全新颖的研究问题。
+>
+> **技术梗概:** 文章追溯了从手动评估和结构分析到图论和基于机器学习的解决方案的技术演变。
+
+---
+### [2026/532] S-two Whitepaper
+
+- **作者:** Dan Carmon, Lior Goldberg, Ulrich Haböck, Leonardo Lerer, Ilya Lesokhin
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/532) | [PDF](https://eprint.iacr.org/2026/532.pdf)
+
+
+> **研究背景:** S-two是基于Mersenne素数的圈STARK，旨在提供一种高效的零知识证明方案。
+>
+> **主要贡献:** 论文贡献了对扁平化代数指示关系（flat AIR）电路模型的形式化描述，并分析了其接近性证明的安全性。
+>
+> **达到效果:** 通过S-two，实现了在多表证明中控制正确性误差的突破，同时提出了关于Reed-Solomon码的可列表解性和线性解码性的猜想。
+>
+> **技术梗概:** 采用了跨域相关一致性的概念来改进STARK证明系统的性能，并结合圈FRI技术以增强证明的有效性和可靠性。
+
+---
+### [2026/535] Improved Related-Key Differential Neural Distinguishers for SPN Block Ciphers
+
+- **作者:** Chuchu Ge, Qichun Wang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/535) | [PDF](https://eprint.iacr.org/2026/535.pdf)
+
+
+> **研究背景:** 近年来，相关密钥差分神经区分器在块密码分析中引起了广泛关注，但其构建仍主要依赖于手动设计。
+>
+> **主要贡献:** 本文提出了一种统一框架来系统地为轻量级SPN结构的块密码构建相关密钥差分神经区分器，并开发了特征增强和样本增强方法以提高准确性。
+>
+> **达到效果:** 实验结果表明，所提出的框架能够有效构建多轮相关密钥差分神经区分器，随着每样本明文对数量增加，准确率持续提升。
+>
+> **技术梗概:** 该方法通过利用SPN组件的可逆性来推导更丰富的最终内部状态表示，并通过在不同相关密钥下重用每个明文对来生成多个密文对关系以增强样本。
+
+---
+### [2026/536] Exploring the Boundary: Discriminative Model-based Parameter Search for Fault Injection
+
+- **作者:** Ju-Hwan Kim, Dong-Guk Han
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/536) | [PDF](https://eprint.iacr.org/2026/536.pdf)
+
+
+> **研究背景:** 故障注入（FI）攻击通过物理手段诱导目标设备产生特定的错误，精确调整故障参数是可靠触发预期故障的关键。然而，现有参数搜索策略往往在探索和利用之间存在不平衡，导致容易过早收敛或未能充分调查潜在高价值区域。
+>
+> **主要贡献:** 本文提出了一种新颖的参数搜索框架，结合了判别模型来高效生成具有高成功率的参数候选，并引入了Refining Successive Halving Algorithm (RSHA) 来统计学地识别发现的故障参数中的全局最优解。
+>
+> **达到效果:** 该方法在八个场景中表现优异，包括电压瞬变（VG）和电磁故障注入（EMFI），能够识别出多达42.2倍的独特预期故障参数，并将成功率提高20.3个百分点以上，超越了最先进的技术。
+>
+> **技术梗概:** 通过结合回归模型探索正常与静默判决之间的边界，并利用分类模型开发发现的预期故障样本进行优化，同时引入RSHA算法以统计学方式识别全局最优解。
+
+---
+
 ## 更新: 2026-03-18 19:44
 
 *新增 2 篇论文 (编号 522--523)*
