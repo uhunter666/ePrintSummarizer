@@ -5,6 +5,367 @@
 
 ---
 
+## 更新: 2026-03-22 20:49
+
+*新增 19 篇论文 (编号 537--556)*
+
+### [推荐] [2026/537] Cheap Digit Decomposition and Large Plaintext Spaces in FHEW using Phase Splitting
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Leonard Schild, Aysajan Abidin, Bart Preneel
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/537) | [PDF](https://eprint.iacr.org/2026/537.pdf)
+
+
+> **研究背景:** 该研究聚焦于全同态加密算法，特别是基于累积器的方案（如FHEW和TFHE），这些方案通常适用于小数据集。然而，通过程序化的重新启动能力，可以将小型数据扩展到更大的明文域。
+>
+> **主要贡献:** 作者提出了新颖的方法来实现同态数字分解，即高效地将一个超出常规明文域大小的加密大数值拆分为基数表示形式。这种方法在计算上更为经济，并显著提高了性能。
+>
+> **达到效果:** 与之前的工作相比，该方法在理论上将性能提升了两倍，在实践中比Liu等人最新的技术快90%。此外，通过这种数字分解，作者展示了如何大幅增加明文域的大小，同时仅使计算复杂度翻倍，避免了超多项式级别的延迟问题。
+>
+> **技术梗概:** 研究采用了分相分裂的技术来实现高效的同态数字分解，无需实际拆分成数字片段即可组装回原始消息。
+
+---
+### [推荐] [2026/540] Ticket to Hide: Private, Practical Proofs of Provenance for TLS
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Ryan Little, Daniel S. Roche, Mayank Varia
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/540) | [PDF](https://eprint.iacr.org/2026/540.pdf)
+
+
+> **研究背景:** TLS协议确保了客户端与服务器之间的通信安全，但这种保证不能直接传递给第三方。现有研究如DECO协议旨在通过“TLS oracle”协议解决这一问题，允许客户端证明数据的来源并披露其属性。
+>
+> **主要贡献:** Ticket to Hide引入了一种适用于TLS 1.3的新协议，在多服务器环境中实现了数据源隐藏功能，并且比先前的工作更快更私密。此外，它是首个与后量子安全TLS密钥协商和证书兼容的TLS oracle协议。
+>
+> **达到效果:** 该协议通过利用TLS 1.3的新特性，实现了在不到3秒的时间内处理N=100个服务器的高效性能，并且能够证明数据来自特定服务器而不泄露其身份。
+>
+> **技术梗概:** Ticket to Hide采用了Garble-then-Prove框架，并结合了TLS 1.3的多服务器环境和新功能，从而实现了上述效果。
+
+---
+### [推荐] [2026/543] MTSF --- Market-Theoretic Security Framework: A Unified Paradigm For The Art Of Proving and Disproving Security
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Basker Palaniswamy, Paolo Palmieri
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/543) | [PDF](https://eprint.iacr.org/2026/543.pdf)
+
+
+> **研究背景:** 现有的加密安全证明分散在多个范式中，如博弈论证明、通用组成性（UC）、形式验证和自定义不安全性论证，各自有不同的语言、假设和局限性。
+>
+> **主要贡献:** MTSF通过将所有安全证明重新解释为经济市场来提供一个统一的框架，其中防御者作为卖家提供安全商品，而攻击者作为买家出价以破坏这些商品。
+>
+> **达到效果:** 这种统一范式为密码学家提供了一个严谨且富有表现力的框架，能够将四大主要证明范式统一到单一的形式语言中，并引入了扩展差分引理、基于竞价的归约等关键技术创新。
+>
+> **技术梗概:** MTSF通过处理多个同时失败事件的扩展差分引理、明确建模攻击者策略的基于竞价的归约以及在相同结构内对证明和反证进行对称处理的双方法论，实现了这些技术革新。
+
+---
+### [推荐] [2026/548] Post-Quantum Cryptography from Quantum Stabilizer Decoding
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Jonathan Z. Lu, Alexander Poremba, Yihui Quek, Akshar Ramkumar
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/548) | [PDF](https://eprint.iacr.org/2026/548.pdf)
+
+
+> **研究背景:** 后量子密码学依赖于少数几个假设，存在被破解的风险。因此，寻找新的、具有说服力的量子硬度假设成为必要。
+>
+> **主要贡献:** 作者提出了量子稳定码解码作为候选问题，并证明了其平均案例难度可以转化为经典密码学的核心构建块。
+>
+> **达到效果:** 该工作不仅提供了理论上有效的后量子安全方案，还展示了其实用性，与现有LPN基方案效率相当。
+>
+> **技术梗概:** 通过将随机量子稳定码解码归约到一个类似于LPN但带有额外辛代数结构的平均案例问题来证明其难度。
+
+---
+### [推荐] [2026/549] Look Ahead! Practical CCA-secure Steganography: Cover-Source Switching meets Lattice Gaussian Sampling
+
+- **匹配关键字:** lattice
+
+- **作者:** Russell W. F. Lai, Ivy K. Y. Woo, Hoover H. F. Yin
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/549) | [PDF](https://eprint.iacr.org/2026/549.pdf)
+
+
+> **研究背景:** 研究背景：隐写术旨在保护消息的机密性并隐藏其传输行为。现有基于拒绝采样技术的证明安全隐写系统通常具有与覆盖信道最小熵成反比的编码率，且在具有记忆性的信道上实现标准选择明文攻击（CCA）安全性存在困难。
+>
+> **主要贡献:** 主要贡献：通过引入“部分可抽样信道”概念，并结合“覆盖源切换”技术，在随机预言模型中实现了高编码率的CCA安全隐写系统，特别适用于包含可显式采样分布如数字照片中的高斯噪声的信道。
+>
+> **达到效果:** 达到的效果：该工作突破了在具有记忆性的非前瞻模式信道上实现标准CCA安全性的一般不可能性，并通过结合覆盖源切换技术与格基预像采样方法，成功构建了适用于高斯信道的CCA安全隐写系统。
+>
+> **技术梗概:** 技术梗概：采用扩展后的隐写系统形式化定义，结合部分可抽样信道和覆盖源切换技术，利用来自格基的高斯预像采样方法实现了高效且安全的隐写方案。
+
+---
+### [推荐] [2026/551] Succinct Verification of Lattice-Based Compressed $\Sigma$-Protocols via Delegated Proofs of Correct Folding of Cryptographically Generated Public Parameters
+
+- **匹配关键字:** lattice
+
+- **作者:** Anders Kallesøe
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/551) | [PDF](https://eprint.iacr.org/2026/551.pdf)
+
+
+> **研究背景:** 内积论证在密码学中广泛应用，尽管压缩$\Sigma$协议提供了高效的通信复杂度，但其验证复杂度仍为线性。
+>
+> **主要贡献:** 本文提出了通过委托证明正确折叠加密生成的公共参数来实现简洁可验证的压缩$\Sigma$协议的新途径。
+>
+> **达到效果:** 该方法显著降低了验证者的计算负担，并适用于基于格的结构化线性形式。
+>
+> **技术梗概:** 利用交互式证明整合承诺方案的设置函数，使得CRS可以通过小型种子加密生成。
+
+---
+### [推荐] [2026/556] TP-NTT: Batch NTT Hardware with Application to Relinearization
+
+- **匹配关键字:** lattice, homomorphic encryption
+
+- **作者:** Emre Koçer, Tolun Tosun, Beren Aydoğan, Erkay Savaş, Furkan Turan, Ingrid Verbauwhede
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/556) | [PDF](https://eprint.iacr.org/2026/556.pdf)
+
+
+> **研究背景:** 全同态加密(FHE)允许在不解密的情况下对加密数据进行任意计算，为安全的云计算、加密数据分析和隐私保护机器学习提供了强大的隐私保证。然而，由于大模环上多项式算术的高度计算成本，FHE的实际部署仍然受到限制。
+>
+> **主要贡献:** TP-NTT 是一种可扩展且吞吐量优化的 NTT 架构，支持从 $2^{10}$ 到 $2^{16}$ 的广泛环维度。该设计在多个层面进行了优化，包括多维分解和自定义吞吐量配置。
+>
+> **达到效果:** TP-NTT 在 $n=2^{16}$ 时，在平均延迟上比之前最佳的设计快了 $8.03	imes$，同时实现了 $1.26	imes$ 更好的面积-时间积（ATP）。其高效的性能在 FHE 的重新线性化案例研究中得到了验证。
+>
+> **技术梗概:** TP-NTT 通过多维度分解和自定义吞吐量配置，在设计时支持 2-D、3-D 和 4-D 分解，每种分解都有其特定的优势。此外，该架构还结合了可扩展性和高吞吐量优化技术。
+
+---
+### [2026/538] Proof-Carrying Data via Holography Accumulation
+
+- **作者:** Nikitas Paslis, Carla Ràfols, Alexandros Zacharakis
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/538) | [PDF](https://eprint.iacr.org/2026/538.pdf)
+
+
+> **研究背景:** 研究背景：Succinct non-interactive arguments of knowledge (SNARKs) 使复杂的计算可以通过短证明进行验证。递归证明组合允许对长时间运行或分布式计算进行逐步验证，但现有方法存在根本性的权衡。
+>
+> **主要贡献:** 主要贡献：提出了一种基于 holography accumulation 的无状态递归 SNARK 证明框架，该框架结合了高效的递归和无状态性，同时避免了传统方法中的高证明者成本问题。
+>
+> **达到效果:** 达到的效果：通过引入 generalized bilinear forms (GBF)，实现了对多种现代 SNARKs 的验证过程的高效累积，并构造了一种通用的 PCD 方案，兼容单变量和多变量多项式承诺方案。
+>
+> **技术梗概:** 技术梗概：该方法利用了 lincheck 或可检查子空间论证，将验证分解为依赖于证人的检查和公共多项式的评估，从而实现了高效的递归证明累积。
+
+---
+### [2026/539] Orca And Dolphin: Efficient Bivariate And Multilinear Polynomial Commitment Schemes Under Standard Assumptions
+
+- **作者:** Helger Lipmaa
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/539) | [PDF](https://eprint.iacr.org/2026/539.pdf)
+
+
+> **研究背景:** 现有的多项式承诺方案要么证明者时间呈超线性增长，要么论证大小呈超常数增长。SamaritanPCS和Mercury通过利用高效的单变量多项式交互式检查协议（IOP），将单变量多项式承诺方案提升至多线性设置，从而实现基于求和检验的高效零知识内含论证系统（zk-SNARKs）并减小通信量。然而，这些方案仅在联合随机预言机和代数群模型下实现了知识诚实性。
+>
+> **主要贡献:** 作者提出了Orca和Dolphin两种优化后的多变量多项式承诺方案，分别对应二元和多元情况。这两种方案证明了其交互评估协议在标准模型下的计算特殊诚实性，并假设KZG满足绑定性和插值绑定性（两者均基于ARSDH安全假设）。
+>
+> **达到效果:** Orca和Dolphin不仅保证了知识诚实性在随机预言机模型下成立，还提供了一种更高效的评估阶段，在联合随机预言机和代数群模型下实现了知识诚实性。这使得它们成为构建高效zk-SNARKs的重要组成部分。
+>
+> **技术梗概:** 这两种方案通过利用KZG承诺的绑定性和插值绑定性，证明了其交互式评估协议在标准模型下的计算特殊诚实性，并且优化了证明者的时间复杂度和论证大小。
+
+---
+### [2026/541] Towards Verifiable AI with Lightweight Cryptographic Proofs of Inference
+
+- **作者:** Pranay Anchuri, Matteo Campanelli, Paul Cesaretti, Rosario Gennaro, Tushar M. Jois, Hasan S. Kayman, Tugce Ozdemir
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/541) | [PDF](https://eprint.iacr.org/2026/541.pdf)
+
+
+> **研究背景:** 在基于云的大型AI模型部署中，客户端无法保证响应的正确性或由预期模型产生。现有的加密证明系统虽然提供了强大的正确性保证，但验证者开销过高，使得大规模应用难以实现。
+>
+> **主要贡献:** 提出了一种轻量级的统计性质为基础的抽样验证框架和协议，替代了全量加密证明，并通过形式化条件确保功能上不相似模型之间的踪迹分离可以用于论证可验证推理协议的安全性。
+>
+> **达到效果:** 该方法将证明时间大幅降低几个数量级，从几分钟缩短到几毫秒，虽然证明大小略有增加，但适用于审计、大规模部署场景以及理性激励的验证者面临检测惩罚的情况。
+>
+> **技术梗概:** 通过默克尔树为基础的向量承诺机制，验证者仅沿随机采样的路径打开少量输出到输入的条目，从而实现了一种在精确性和效率之间权衡的协议。
+
+---
+### [2026/542] VERIDP: Verifiable Differentially Private Training
+
+- **作者:** Behzad Abdolmaleki, Amir R. Asadi, Vahid R. Asadi, Stefan Köpsell, Bhavish Mohee, Nahid Roustaeifar, Maryam Zarezadeh
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/542) | [PDF](https://eprint.iacr.org/2026/542.pdf)
+
+
+> **研究背景:** 传统的随机梯度下降(SGD)算法是现代机器学习的基础，但在隐私敏感的环境中，梯度可能泄露个体数据点的信息。现有的差分隐私(DP)框架假设参与者为半诚实类型，在对抗或联邦环境下，恶意行为者可以绕过或篡改噪声添加过程，从而破坏隐私保证。
+>
+> **主要贡献:** VERIDP框架通过结合零知识证明(ZKPs)、多项式承诺、和GKR基的证明以及增量可验证计算(IVC)，在不泄露私有数据或随机数的情况下，生成正确的梯度计算、裁剪、平均化和高斯噪声生成的有效证明。
+>
+> **达到效果:** 与仅验证最终隐私预算的系统不同，VERIDP能够在每次迭代中验证每个模型更新，即使在对抗性环境中也能提供强大的隐私保证。这为安全且可审计的机器学习建立了差分隐私和可验证计算的新颖统一框架。
+>
+> **技术梗概:** VERIDP采用了零知识证明、多项式承诺、和GKR基的证明以及增量可验证计算等技术，确保在不泄露任何私有数据或随机数的情况下，能够生成正确的梯度计算、裁剪、平均化和高斯噪声生成的有效证明。
+
+---
+### [2026/544] HARE: Compact HQC via Distance-Informed Erasure Decoding
+
+- **作者:** Tianrui Wang, Qicheng Teng, Anyu Wang, Jun Zhang, Bo Pang, Chunhuan Zhao, Sihuang Hu, Xiaoyun Wang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/544) | [PDF](https://eprint.iacr.org/2026/544.pdf)
+
+
+> **研究背景:** HARE 是基于 HQC 框架的一个 KEM 方案，旨在通过改进的编码技术减少公钥和密文的大小，以提高安全性与效率。
+>
+> **主要贡献:** HARE 引入了一种距离感知的擦除解码技术，结合了内层代码的距离信息来识别不可靠块，并使用外层代码进行纠正，从而降低了解密失败率。
+>
+> **达到效果:** 通过这种技术，HARE 较 HQC 实现了公钥和密文大小分别减少了 13.2%、12.3% 和 13.3%，适用于 NIST 安全级别 1、3 和 5。
+>
+> **技术梗概:** HARE 使用距离感知的擦除解码技术，结合 Bitzer 等人在 EUROCRYPT 2026 提出的密文压缩方法和参数优化，提高了编码效率并减少了数据传输量。
+
+---
+### [2026/545] Aggregator-Based Voting using proof of Partition
+
+- **作者:** Marius Lombard-Platet, Doron Zarchy
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/545) | [PDF](https://eprint.iacr.org/2026/545.pdf)
+
+
+> **研究背景:** 为了解决DAO等大规模频繁选举中投票存储成本高且隐私保护需求的问题，研究提出了一种基于聚合器的证明分割方案。
+>
+> **主要贡献:** 贡献在于设计并实现了Aggios系统及其核心组件Extended Partition Argument (EPA)，该组件能够高效地验证分组信息。
+>
+> **达到效果:** 实验结果表明，与传统投票方式相比，Aggios在证明大小上至少缩小了512倍，并且在最优情况下不依赖于投票人数，实现了大规模隐私保护选举的可行性。
+>
+> **技术梗概:** EPA通过零知识论证技术，允许证明者展示一个承诺向量可以被分解成多个互斥子向量形成分割，每个子向量可公开或保密。
+
+---
+### [2026/546] Hyperelliptic Gluing Isogeny Diffie–Hellman (HGIDH): A Genus-2 Gluing Isogeny Key-Exchange
+
+- **作者:** Nouhou Abdou Idris, Mustapha Hedabou
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/546) | [PDF](https://eprint.iacr.org/2026/546.pdf)
+
+
+> **研究背景:** 该研究旨在设计一种基于超椭圆曲线粘合态结构的密钥交换协议，以增强安全性并应对现有侧信道攻击。
+>
+> **主要贡献:** 提出了一种新的Hyperelliptic Gluing Isogeny Diffie–Hellman (HGIDH) 协议，利用两个超奇异椭圆曲线和一个超椭圆曲线雅可比的粘合态结构来构建密钥交换机制。
+>
+> **达到效果:** 该协议通过使用非循环二维核编码私钥，避免了SIDH类攻击中的结构性弱点，并且其安全性被置于标准超奇异态结构问题的复杂性框架中。
+>
+> **技术梗概:** 研究通过引入两个中间问题形式化计算任务，抽象出粘合内核恢复和计算超椭圆曲线态的问题，并证明任何有效解决这些问题的对手都可以转化为解决标准超奇异态问题的算法。
+
+---
+### [2026/547] Dialga: A Family of Low-Latency Tweakable Block Ciphers using Multiple Linear Layers (Full Version)
+
+- **作者:** Subhadeep Banik, Tatsuya Ishikawa, Takanori Isobe, Ryoma Ito, Kazuhiko Minematsu, Kazuma Nakata, Mostafizar Rahman, Kosei Sakamoto
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/547) | [PDF](https://eprint.iacr.org/2026/547.pdf)
+
+
+> **研究背景:** Dialga旨在提供低延迟的可调块密码，支持128/256位调整和256位密钥，通过创新策略显著减少延迟。
+>
+> **主要贡献:** 贡献在于提出了一种新的可调块密码设计方法，结合了多线性层和高效的单元置换，并优化S盒选择以进一步降低轮函数的延迟。
+>
+> **达到效果:** Dialga在硬件延迟上几乎减半至QARMAv2的一半，并且电路面积减少了约40%，同时保持相同的安全性水平。
+>
+> **技术梗概:** 技术包括使用多线性层和高效的单元置换，以及通过SAT等先进方法优化S盒选择，以减少轮函数的延迟。
+
+---
+### [2026/550] Solving the Linear Code Equivalence Problem from Single Codeword Matching
+
+- **作者:** Magali Bardet, Charles Brion, Ayoub Otmani, Mohamed Saeed, Nicolas Sendrier
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/550) | [PDF](https://eprint.iacr.org/2026/550.pdf)
+
+
+> **研究背景:** 研究背景：线性码等价问题（LCE）是在给定两个线性码之间寻找哈明空间$\mathbb{F}_q^n$的同构，被认为是计算上难以解决的问题。现有的匹配码字框架被广泛用于评估依赖于LCE难度的密码方案的安全性。
+>
+> **主要贡献:** 主要贡献：提出了一种基于逆向量Schur乘积的新方法来判断单对码字是否匹配，该方法能够更高效地识别线性等价关系。
+>
+> **达到效果:** 达到的效果：通过这种方法，可以显著减少计算复杂度，并且在某些参数范围内提供了更强的攻击能力。这为评估和改进基于LCE安全性的密码方案提供了新的工具。
+>
+> **技术梗概:** 技术梗概：该方法利用Schur乘积$\mathcal{C} \star \mathbf{v}^{-1}$来判断码字匹配性，通过证明线性等价的码在施瓦茨-齐默曼同构下的关系，从而简化了问题求解过程。
+
+---
+### [2026/553] Graph-based Asynchrony with Quasilinear Complexity for Any Linear Verifiable Secret Sharing Scheme
+
+- **作者:** Hugo Delavenne, Lola-Baie Mallordy
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/553) | [PDF](https://eprint.iacr.org/2026/553.pdf)
+
+
+> **研究背景:** 现有的线性VSS方案在同步通信假设下运行，但在实际网络中，由于数据包丢失或节点延迟，往往无法实现。
+>
+> **主要贡献:** 作者提出了一种新的方法，将任何线性VSS方案转化为统计意义上的AVSS，并构建了一个名为Bonneval-on-Arc的协议。
+>
+> **达到效果:** 该协议实现了经销商的准线性通信复杂度和每个参与者的小于亚线性复杂度，并且恶意节点的容忍阈值为$t < n/(d+2)$，从而降低了整体通信成本。
+>
+> **技术梗概:** 通过构建一个$d$-规则图模型，使得每个节点仅与$d$个邻居进行通信，作者实现了这一目标。
+
+---
+### [2026/554] PrivaLean: Low-Latency and High-Accuracy System for Secure 2PC Inference
+
+- **作者:** Jinghao Zhao, Hongwei Yang, Bobo Wang, Lichunxi Yang, Juncheng Li, Xiangrui Zeng, Meng Hao, Desheng Wang, Hui He, Weizhe Zhang
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/554) | [PDF](https://eprint.iacr.org/2026/554.pdf)
+
+
+> **研究背景:** 传统的安全多方计算虽然强大，但其高计算开销和通信延迟限制了其广泛应用。
+>
+> **主要贡献:** PrivaLean框架通过优化线性层和非线性层的评估方法，实现了低延迟和高准确度的安全双方推理。
+>
+> **达到效果:** 在广域网环境下，PrivaLean能够以125.02秒完成单次ResNet-50推理，并且其准确性超越了基于ReLU的基本模型。
+>
+> **技术梗概:** 通过局部随机密文生成机制和中间编码方法优化线性层；设计新型三角激活协议及数据分布感知训练策略来克服非线性评估瓶颈。
+
+---
+### [2026/555] Improved Issuer Hiding for BBS-based Anonymous Credentials
+
+- **作者:** Nesrine Kaaniche, Seyni Kane, Maryline Laurent, Jacques Traoré
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/555) | [PDF](https://eprint.iacr.org/2026/555.pdf)
+
+
+> **研究背景:** 现有基于属性的匿名凭证系统通常无法隐藏发行者身份，且近期尝试解决此问题的方法要么效率低下，要么存在关键策略漏洞。
+>
+> **主要贡献:** 本文提出了一种新的基于BBS的发行者隐藏匿名凭证系统，并采用签名策略方法来解决这些问题。
+>
+> **达到效果:** 该方案在代数组模型下证明安全，消除了秘密策略密钥的需求，允许验证无需秘密值；并实现了首个无对偶性的发行者隐藏匿名凭证，基于代数MACs。
+>
+> **技术梗概:** 通过引入签名策略和使用代数MACs技术，确保了系统在不依赖对偶性的情况下实现不可伪造性和永久的发行者隐藏匿名性。
+
+---
+
 ## 更新: 2026-03-20 20:33
 
 *新增 11 篇论文 (编号 524--536)*
