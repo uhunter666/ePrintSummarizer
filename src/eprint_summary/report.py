@@ -104,30 +104,40 @@ def append_to_report(
         logger.info("No new papers to add to report (all already present)")
         return report_path
 
-    # Create file with header if it doesn't exist
+    # Build the new batch content
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    numbers = [pws.paper.number for pws in new_papers]
+    min_num, max_num = min(numbers), max(numbers)
+
+    batch_lines = []
+    batch_lines.append(f"\n## 更新: {now}\n\n")
+    batch_lines.append(f"*新增 {len(new_papers)} 篇论文 (编号 {min_num}--{max_num})*\n\n")
+
+    # Write recommended papers first
+    recommended = [p for p in new_papers if p.is_keyword_match]
+    others = [p for p in new_papers if not p.is_keyword_match]
+
+    for pws in recommended:
+        batch_lines.append(_format_paper_entry(pws))
+    for pws in others:
+        batch_lines.append(_format_paper_entry(pws))
+
+    new_content = "".join(batch_lines)
+
+    # Insert new batch right after the header so newest papers are on top
     if not report_path.exists():
-        report_path.write_text(
-            _generate_report_header(year), encoding="utf-8"
-        )
-
-    # Append the update batch
-    with open(report_path, "a", encoding="utf-8") as f:
-        now = datetime.now().strftime("%Y-%m-%d %H:%M")
-        numbers = [pws.paper.number for pws in new_papers]
-        min_num, max_num = min(numbers), max(numbers)
-
-        f.write(f"\n## 更新: {now}\n\n")
-        f.write(f"*新增 {len(new_papers)} 篇论文 (编号 {min_num}--{max_num})*\n\n")
-
-        # Write recommended papers first
-        recommended = [p for p in new_papers if p.is_keyword_match]
-        others = [p for p in new_papers if not p.is_keyword_match]
-
-        for pws in recommended:
-            f.write(_format_paper_entry(pws))
-
-        for pws in others:
-            f.write(_format_paper_entry(pws))
+        header = _generate_report_header(year)
+        report_path.write_text(header + new_content, encoding="utf-8")
+    else:
+        existing = report_path.read_text(encoding="utf-8")
+        # Find the end of header (after the first "---\n")
+        header_end = existing.find("---\n")
+        if header_end != -1:
+            header_end += len("---\n")
+            updated = existing[:header_end] + new_content + existing[header_end:]
+        else:
+            updated = existing + new_content
+        report_path.write_text(updated, encoding="utf-8")
 
     logger.info(
         "Appended %d papers to %s", len(new_papers), report_path
