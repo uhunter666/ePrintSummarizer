@@ -5,6 +5,349 @@
 
 ---
 
+## 更新: 2026-03-23 22:07
+
+*新增 18 篇论文 (编号 557--575)*
+
+### [推荐] [2026/557] On Post-Quantum Signature with Message Recovery from Hash-and-Sign in QROM
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Bohang Chen, Shuai Han, Shengli Liu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/557) | [PDF](https://eprint.iacr.org/2026/557.pdf)
+
+
+> **研究背景:** 传统的哈希签名方案在后量子时代面临效率低下问题，而具有消息恢复功能的签名方案能够嵌入部分消息而不增加签名长度，从而减少空间消耗。然而，在后量子安全环境中设计此类方案的研究较少。
+>
+> **主要贡献:** 本文提出了一种基于经典PSS-R方案并在量子随机预言机模型下证明其安全性的后量子签名方案。
+>
+> **达到效果:** 该方案在量子随机预言机模型下首次实现了具有消息恢复功能的PSS-R类似签名方案的安全性证明。
+>
+> **技术梗概:** 通过扩展紧适应重编程定理和测量与重编程定理，解决了两个相关输入/输出的随机预言机依次重新编程的问题。
+
+---
+### [推荐] [2026/562] New Approaches to Zero-Knowledge SNARG Constructions
+
+- **匹配关键字:** LWE
+
+- **作者:** Chaya Ganesh, Mor Weiss
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/562) | [PDF](https://eprint.iacr.org/2026/562.pdf)
+
+
+> **研究背景:** 研究背景：零知识简洁非交互式论证(zkSNARGs)是SNARGs的一种，它证明除了声明的有效性外不泄露任何信息。现有的zkSNARG构造方法通常依赖于NIZK+SNARG的非黑盒方式实现。
+>
+> **主要贡献:** 主要贡献：提出了一种新的SNARG到zkSNARG转换方法，该方法与传统的NIZK+SNARG方法不同，采用了更简洁的信息论零知识证明系统，并且在一定程度上实现了SNARG的黑盒使用。
+>
+> **达到效果:** 达到的效果：通过这种方法，可以基于标准假设构造出针对子类NP问题的zbarg和zkSNARGs，从而为zkSNARGs提供了基于标准假设的新构建方法。
+>
+> **技术梗概:** 技术梗概：该转换利用了SNARG作为黑盒，并结合了哈希函数与概率可检验证明系统，实现了对SNARG的有效转化以适应特定子类NP问题。
+
+---
+### [推荐] [2026/564] TAPAS: Efficient Two-Server Asymmetric Private Aggregation Beyond Prio(+)
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Harish Karthikeyan, Antigoni Polychroniadou
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/564) | [PDF](https://eprint.iacr.org/2026/564.pdf)
+
+
+> **研究背景:** 隐私保护聚合对于不暴露个体记录即可从分布式数据中学习的AI系统至关重要，特别是在联邦学习和遥测领域。现有的双服务器协议虽然验证输入并防止任何单一方了解用户值，但它们在两个服务器上的成本是相同的，并且通信量与每个客户端输入维度L成比例增长，这限制了其在现代高维学习任务中的应用。
+>
+> **主要贡献:** TAPAS提出了一种新的双服务器非对称私有聚合方案，通过四个关键设计：无信任设置、独立于L的服务器端通信、基于标准格假设（LWE, SIS）的后量子安全性和更强的鲁棒性来解决这些问题。
+>
+> **达到效果:** 该方案显著降低了总成本，并允许次要服务器在普通硬件上运行，增强了服务器不串通的假设。此外，TAPAS还提供了一套新的高效格基零知识证明机制，确保了隐私和正确性。
+>
+> **技术梗概:** 通过设计一个具有计算复杂度与L相关的聚合和验证工作的主服务器以及一个轻量级辅助服务器来实现非对称性，并使用基于标准格假设的零知识证明技术增强了安全性。
+
+---
+### [推荐] [2026/569] Hybrid KEM Constructions from Classical PKEs and Post-Quantum KEMs
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Biming Zhou, Yukai Zhang, Haodong Jiang, Yunlei Zhao
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/569) | [PDF](https://eprint.iacr.org/2026/569.pdf)
+
+
+> **研究背景:** 随着量子计算的快速发展，RSA和Diffie–Hellman等经典公钥加密系统面临威胁，推动了向后量子密码学(PQC)的过渡。在此过程中，标准化机构和网络安全机构推荐使用结合经典和后量子密钥封装机制(KEMs)的混合设计以确保过渡期间的安全性。
+>
+> **主要贡献:** 本文提出了两种通用的混合构造$\mathsf{HybKEM}$和$\mathsf{HybKEM}^{*}$，将一个经典PKE方案与满足第二单行密文抗原像性的后量子KEM相结合，证明了这两种构造在标准模型中实现了IND-CCA安全性。
+>
+> **达到效果:** 通过引入新的安全属性部分第二单行密文抗原像性(PC2PRI)，$\mathsf{HybKEM}^{*}$能够仅从指定的PKE密文分量中推导出共享密钥，从而提高了效率并提供了对多个标准化经典加密方案PC2PRI性质的系统分析。
+>
+> **技术梗概:** 该研究通过设计满足特定安全属性的经典和后量子组件之间的组合来实现其目标，并证明了这些构造在理论上的安全性。
+
+---
+### [推荐] [2026/570] iToken: One-Time-Use Anonymous Token with Issuance Hiding
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Zengpeng Li, Xiangyu Su, Dongfang Wei, Guangyu Liao, Mei Wang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/570) | [PDF](https://eprint.iacr.org/2026/570.pdf)
+
+
+> **研究背景:** iToken旨在增强隐私保护的KYC系统中的一次性匿名令牌（OTAT）的安全性和用户隐私，特别是在自主权身份框架中，如欧盟数字身份钱包、苹果私有访问令牌和W3C隐私保护广告提案。
+>
+> **主要贡献:** 该研究引入了一种新的盲环签名（BRS）原语，并提供了两种通用构造方法，从而实现了发行方在整个发行过程中的匿名性，增强了OTAT的鲁棒性和用户隐私。
+>
+> **达到效果:** 基于线性函数和同态加密或承诺证明求和论证的方法，iToken成功地实现了高效的签名带宽和竞争力的计算性能。
+>
+> **技术梗概:** 通过引入盲环签名（BRS）并采用盲签协议中的盲-环模式来确保从一开始就存在环结构，并由签署者在交互式盲签名协议中启动。
+
+---
+### [推荐] [2026/574] A Universal Blinder: One-round Blind Signatures from FHE
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Dan Boneh, Jaehyung Kim
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/574) | [PDF](https://eprint.iacr.org/2026/574.pdf)
+
+
+> **研究背景:** 本文提出了一种通用盲签方案，通过任何安全签名方案生成单轮次盲签名，并保持格式一致以实现向后兼容性。
+>
+> **主要贡献:** 贡献了三种不同工作分配的编译器设计，利用全同态加密和零知识证明确保最终方案的安全性和匿名性。
+>
+> **达到效果:** 实现了与基础签名方案相同格式的单轮次盲签名，增强了现有签名方案的应用灵活性。
+>
+> **技术梗概:** 采用了全同态加密技术，并引入了新的验证型全同态加密概念，通过客户端、签发人或双方共同完成大部分工作来实现目标。
+
+---
+### [推荐] [2026/575] RoKoko: Lattice-based Succinct Arguments, a Committed Refinement
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Michael Klooss, Russell W. F. Lai, Ngoc Khanh Nguyen, Michał Osadnik, Lorenzo Tucci
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/575) | [PDF](https://eprint.iacr.org/2026/575.pdf)
+
+
+> **研究背景:** RoKoko 是一种基于格的简洁论证系统，旨在实现线性时间证明者和多项式对数通信及验证者复杂度。该研究改进了现有技术，并在实际应用中表现出色。
+>
+> **主要贡献:** 主要贡献在于引入了承诺折叠技术，允许更大的子证词数量 $ho$，从而减小了证明大小并突破了常量障碍。
+>
+> **达到效果:** RoKoko 实现了约 200KB 的证明尺寸，并在验证速度上超越了 Greyhound 等现有方案，同时保持了相似的证明生成时间和竞争力的证明大小。
+>
+> **技术梗概:** 技术梗概包括承诺折叠和递归拆分与折叠范式，通过承诺机制减少了需要发送的消息数量，从而提高了效率。
+
+---
+### [2026/558] Cryptanalysis of four arbitrated quantum signature schemes
+
+- **作者:** Pierre-Alain Jacqmin, Jean Liénardy
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/558) | [PDF](https://eprint.iacr.org/2026/558.pdf)
+
+
+> **研究背景:** 本文研究了四种仲裁量子签名(AQS)方案的安全性，这些方案旨在通过仲裁者的帮助确保消息的真实性，并防止发送者和接收者的抵赖行为。
+>
+> **主要贡献:** 作者提出了一系列针对这四个AQS方案的攻击方法，揭示了它们在安全性方面的缺陷。
+>
+> **达到效果:** 研究发现，所有被分析的AQS方案都存在安全漏洞，包括签名伪造、虚假指控以及参与方的抵赖策略。
+>
+> **技术梗概:** 通过量子通信和信息理论分析，作者提出了一系列具体的攻击技术来验证其结论。
+
+---
+### [2026/560] High-Order Galois Automorphisms for TNFS Linear Algebra
+
+- **作者:** Haetham Al Aswad, Cécile Pierrot, Emmanuel Thomé
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/560) | [PDF](https://eprint.iacr.org/2026/560.pdf)
+
+
+> **研究背景:** 高阶Galois自同构对于TNFS线性代数步骤的加速是解决有限域离散对数问题的关键，尤其是在具有复合扩展度的配对基密码学中。
+>
+> **主要贡献:** 本文提出了针对$k=6$和$k=12$的新构造方法，使得在$\mathbb{F}_{p^6}$和$\mathbb{F}_{p^{12}}$中可以利用相应的Galois自同构加速线性代数步骤。
+>
+> **达到效果:** 通过引入新构造，本文实现了线性代数步骤约36倍（对于$k=6$）和144倍（对于$k=12$）的加速效果。
+>
+> **技术梗概:** 利用SageMath实现TNFS及其新构造，并在小规模实例上验证了结果的有效性。
+
+---
+### [2026/561] SynCirc: Efficient Synthesis of Depth-Optimized Circuits from High-Level Languages (Extended Version)
+
+- **作者:** Arpita Patra, Joachim Schmidt, Thomas Schneider, Ajith Suresh, Hossein Yalame
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/561) | [PDF](https://eprint.iacr.org/2026/561.pdf)
+
+
+> **研究背景:** SynCirc旨在通过优化硬件合成框架来提高多方计算(MPC)的实用性，特别是在电路表示方面，以减少乘法深度和在线轮数。
+>
+> **主要贡献:** 该研究贡献了一种基于Verilog和Yosys-ABC工具的定制化库和约束条件，特别针对多输入AND门进行优化，实现了显著的性能提升。
+>
+> **达到效果:** SynCirc在多输入AND门、比较器、多路复用器等构建块上取得了22.3%至66.7%的深度/在线轮数改进，并且与Trifecta协议相比，通信量减少了116倍。
+>
+> **技术梗概:** 通过引入XLS工具支持高级综合，SynCirc允许开发者使用C/C++编写安全函数，无需硬件定义语言的专业知识。
+
+---
+### [2026/563] Optimizing FROST for Message Capacity
+
+- **作者:** Philipp Jovanovic, Ben Riva, Arnab Roy
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/563) | [PDF](https://eprint.iacr.org/2026/563.pdf)
+
+
+> **研究背景:** FROST阈值签名方案通过双重随机数构造实现了圆最优Schnorr签名，但需要每个签名两个预签名，这在高吞吐量应用中产生了显著的开销。
+>
+> **主要贡献:** 作者证明了使用$k+1$个预签名来签署$k$条消息是安全的，并提出了改进后的FROST-core协议以提高消息容量。
+>
+> **达到效果:** 通过优化预签名的数量，该研究将消息容量从50%提升到接近100%，显著提高了FROST的安全性和效率。
+>
+> **技术梗概:** 研究采用了基于哈希重随机化的预签名协议，并分析了不同数量预签名对安全性的影响。
+
+---
+### [2026/565] Zeeperio: Verifying Governmental Elections with Ethereum
+
+- **作者:** Aikamdeep Malhotra, Aleksander Essex, Jeremy Clark
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/565) | [PDF](https://eprint.iacr.org/2026/565.pdf)
+
+
+> **研究背景:** Scantegrity II是首个采用加密端到端选举验证(E2E-V)协议的政府选举，但公众参与这一重要过程主要依赖于自愿和非正式的方式。
+>
+> **主要贡献:** Zeeperio是一种为Scantegrity选举设计的特殊用途zk-SNARK证明，可以通过智能合约自动验证，降低了成本并提高了效率。
+>
+> **达到效果:** 使用Zeeperio进行选举验证的成本低于30美元，并且与选票数量无关；证明生成时间在10万张选票的情况下不到5小时。
+>
+> **技术梗概:** Zeeperio通过特定应用的算术化构建了定制化的论证，相比通用zk-SNARK工具包实现了多个数量级的证明者效率提升。
+
+---
+### [2026/566] Secret-Shared Shuffle from Authenticated Correlations
+
+- **作者:** Xiangfu Song, Xiaojian Liang, Ye Dong, Jianli Bai, Pu Duan, Changyu Dong, Tianwei Zhang, Ee-Chien Chang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/566) | [PDF](https://eprint.iacr.org/2026/566.pdf)
+
+
+> **研究背景:** 秘密共享洗牌是一种在密文共享数据上实现盲排序的基本机制，广泛应用于基于秘密共享的安全计算中。然而，在高度敏感的应用场景下，需要提供恶意安全保证以确保实际安全性。
+>
+> **主要贡献:** 本文提出了一种新的两方恶意安全的秘密共享洗牌协议族，具有线性通信/计算成本和常数轮次通信，并通过认证关联提出了一个新的简单且高效的协议模板。
+>
+> **达到效果:** 该方法能够增强对恶意发送者的完全认证，避免了现有解决方案中的选择性失败攻击带来的主要开销。同时解决了来自恶意接收者的一致性问题，保持了预期的效率特性。
+>
+> **技术梗概:** 通过提出新的效率保留一致性检查以及一系列新技术、优化和分析，结合基于认证关联的框架，实现了恶意安全的秘密共享洗牌协议。
+
+---
+### [2026/567] Accurate Parameter Estimates for Punctured Key Recovery Linear Attacks
+
+- **作者:** TIm Beyne, Antonio Flórez-Gutiérrez, Yosuke Todo
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/567) | [PDF](https://eprint.iacr.org/2026/567.pdf)
+
+
+> **研究背景:** 该研究针对线性密钥恢复攻击中的穿孔技术，旨在通过修改评估线性逼近的映射来减少攻击的时间复杂性。
+>
+> **主要贡献:** 作者重新审视了数据复杂度估计模型，并澄清了一些假设，提高了模型的准确性。
+>
+> **达到效果:** 改进后的模型能够更精确地估算包含接近全码本数据复杂性的穿孔攻击的成本。
+>
+> **技术梗概:** 通过分析修改后的傅里叶变换坐标来优化线性逼近映射，从而调整数据和时间复杂度之间的权衡。
+
+---
+### [2026/568] Low-Depth Construction of Grover Oracles from Fully Functional Quantum Circuits
+
+- **作者:** Behzad Abdolmaleki, Jiaqi Gu
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/568) | [PDF](https://eprint.iacr.org/2026/568.pdf)
+
+
+> **研究背景:** 研究背景：Grover oracle是Grover搜索算法的核心组件。通常，构造Grover oracle需要从头开始设计量子电路，但本文提出了一种新的方法，即利用已有的完全功能量子电路（FFQC）来构建Grover oracle，以减少冗余并优化深度和宽度。
+>
+> **主要贡献:** 主要贡献：作者提出了一个低深度转换方法，将现有的FFQC转化为低深度的Grover oracle，并进一步减小了电路的宽度，同时保持低深度特性。
+>
+> **达到效果:** 达到的效果：通过该方法，AES量子电路的宽度从7280减少到7104，显著优化了Grover oracle的设计效率和资源利用率。
+>
+> **技术梗概:** 技术梗概：本文采用了一种低深度转换技术，通过对现有FFQC进行特定操作来构建Grover oracle，并通过分析实例验证了该方法的有效性。
+
+---
+### [2026/571] Playing Tag with Okamoto-Schnorr: Three-Move Pairing-Free Blind Signatures from DDH
+
+- **作者:** Rutchathon Chairattana-Apirom, Michael Reichle, Stefano Tessaro
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/571) | [PDF](https://eprint.iacr.org/2026/571.pdf)
+
+
+> **研究背景:** 该研究旨在设计一种无配对的盲签名方案，以解决现有解决方案在安全性或通信效率上的不足。
+>
+> **主要贡献:** 论文提出了首个仅需三轮交互且基于决策性Diffie-Hellman假设的安全无配对盲签名方案，并实现了统计意义上的匿名性。
+>
+> **达到效果:** 该方案达到了最优的通信复杂度和签名大小，同时提供了强的一次更多伪造抵抗性，并包含部分盲签名变体。
+>
+> **技术梗概:** 研究结合了传统的盲签名方案（如盲Okamoto-Schnorr方案）与精心设计的代数消息认证码，以实现所需的安全性和效率特性。
+
+---
+### [2026/572] Earpicks: Tightly Secure Two-Round Multi- and Threshold Signatures
+
+- **作者:** Renas Bacho, Yanbo Chen
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/572) | [PDF](https://eprint.iacr.org/2026/572.pdf)
+
+
+> **研究背景:** 多签名为分布式系统中的核心密码学原语，允许多方共同生成一条消息的紧凑签名。现有紧安全构造存在效率低下问题，特别是T-Spoon虽支持紧安全和密钥聚合但签名大小过大，限制了其应用范围。
+>
+> **主要贡献:** Earpick-MS提出了一种在非配对循环群上实现的两轮多签名称词，同时支持密钥聚合，并且实现了紧凑的签名形式。
+>
+> **达到效果:** 与T-Spoon相比，Earpick-MS显著减小了签名大小至仅三个字段元素和一个位，提升了实际应用中的效率和可部署性。
+>
+> **技术梗概:** 通过创新的设计方法，Earpick-MS在保持紧安全性和密钥聚合支持的同时优化了签名结构，减少了签名的字段数量。
+
+---
+### [2026/573] Two-Party BBS+ Signature in Two Passes
+
+- **作者:** Xiaofei Wu, Tian Qiu, Guofeng Tang, Yuqing Niu, Bowen Jiang, Jun Zhou, Haiyang Xue, Guomin Yang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/573) | [PDF](https://eprint.iacr.org/2026/573.pdf)
+
+
+> **研究背景:** BBS+/BBS签名方案是匿名凭证和隐私保护认证的关键构建块，正被标准化并广泛部署。现有的阈值设计仍需至少三轮通信和大量数据传输。
+>
+> **主要贡献:** 提出了一种两方两遍BBS+签名协议，实现了减少交互次数的同时保持低计算和通信开销。
+>
+> **达到效果:** 该协议在双方设置下每签名仅需0.85KB的通信量，比现有最高效的方案少约27%，并能高效处理大消息向量，适合实际部署。
+>
+> **技术梗概:** 通过改进协议设计减少了通信轮次，并优化了计算效率以适应轻量级系统需求。
+
+---
+
 ## 更新: 2026-03-22 20:49
 
 *新增 19 篇论文 (编号 537--556)*
