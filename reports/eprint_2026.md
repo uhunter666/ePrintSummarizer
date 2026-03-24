@@ -5,6 +5,119 @@
 
 ---
 
+## 更新: 2026-03-24 21:23
+
+*新增 6 篇论文 (编号 576--581)*
+
+### [2026/576] Radical 3-isogenies for the ideal class group actions on $(2, \varepsilon)$-structures
+
+- **作者:** Masaomi Shibata, Hiroshi Onuki, Tsuyoshi Takagi
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/576) | [PDF](https://eprint.iacr.org/2026/576.pdf)
+
+
+> **研究背景:** 研究背景：Chenu和Smith引入了$(d,\varepsilon)$-结构的概念，这对椭圆曲线密码学中的理想类群作用提供了基础。针对$d=2$的情况，本文旨在提供高效的方法来评估上述作用。
+>
+> **主要贡献:** 主要贡献在于提出了利用$\mathbb{Q}$-曲线和Montgomery曲线的两种表示方法，设计了高效的根3-isogenies，以实现特定素理想类的作用。
+>
+> **达到效果:** 达到的效果是提出了一种新的算法，能够更高效地执行理想类群作用于$(2,\varepsilon)$-结构的操作，从而改进了Delfs-Galbraith算法。
+>
+> **技术梗概:** 技术梗概：本文通过利用$\mathbb{Q}$-曲线和Montgomery曲线的表示方法，设计并实现了根3-isogenies来评估理想类群作用，并展示了如何将任何$(2,\varepsilon)$-结构表示为一个曲线系数和单一符号。
+
+---
+### [2026/577] Two Decades of Identity-Based Identification Schemes- A Survey on Challenges and Advances
+
+- **作者:** Apurva Kiran Vangujar, Paolo Palmieri, Ji-Jian Chin, Swee-Huay Heng
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/577) | [PDF](https://eprint.iacr.org/2026/577.pdf)
+
+
+> **研究背景:** 身份基识别（IBI）方案因其高效的性能和可扩展性在密码学领域获得了广泛应用，但近年来提出的大量IBI方案使得有效比较和评估变得困难。
+>
+> **主要贡献:** 该综述首次提出了IBI方案的一般分类法，并基于其安全假设进行了系统分类和评价；同时分析了IBI方案的计算和通信成本，指出了实施过程中遇到的各种挑战和限制。
+>
+> **达到效果:** 通过对比不同类别的IBI方案的安全性、效率、优缺点，为研究人员和开发人员提供了深入理解该快速发展的领域的指导，并确定了当前的研究空白并提出了未来方向。
+>
+> **技术梗概:** 采用严格的综述方法，对各种硬度假设下的IBI方案进行了全面的文献回顾和分析，引入了一种新的分类法以系统地评估这些方案。
+
+---
+### [2026/578] How Much Verifier's Dilemma and Staking Pools Adversely Affect Decentralization of Ethereum PoS under Realistic Operational Costs? (Extended Version)
+
+- **作者:** Ivan Homoliak, Martin Hruby, Martin Peresini, Kristian Kostal, Daria Smuseva
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/578) | [PDF](https://eprint.iacr.org/2026/578.pdf)
+
+
+> **研究背景:** 研究探讨了验证者困境（VD）和质押池对以太坊PoS共识协议去中心化的影响，特别是在实际运营成本下的表现。
+>
+> **主要贡献:** 通过演化博弈理论和复制子方程模型，分析了三种验证者策略之间的竞争，并揭示了这些因素如何影响长期网络的去中心化程度。
+>
+> **达到效果:** 研究发现，由于VD和较低的操作成本，懒惰策略和加入质押池策略对网络去中心化的负面影响显著，而诚实策略则面临较高的硬件运营成本挑战。
+>
+> **技术梗概:** 利用演化博弈理论和复制子方程构建模型来模拟不同验证者策略之间的竞争，并量化其对网络去中心化的影响。
+
+---
+### [2026/579] PRIVADA: Private user-centric Data Aggregation
+
+- **作者:** Betul Askin Ozdemir, Beyza Bozdemir, Ionut Groza, Melek Önen
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/579) | [PDF](https://eprint.iacr.org/2026/579.pdf)
+
+
+> **研究背景:** 隐私保护的数据聚合已成为AI驱动和基于云系统的大型数据分析的基本工具，但现有解决方案在多重数据客户环境中难以同时确保用户匿名性、选择性披露和结果隐私。
+>
+> **主要贡献:** PRIVADA通过SPDZ框架下的MPC提供恶意安全的数据聚合方案，支持多个数据客户并防止推断用户的参与情况及抵制现实世界中的合谋行为。
+>
+> **达到效果:** PRIVADA在确保输入隐私的同时也保证了用户和结果的隐私性，并且相比现有最佳解决方案，在提供对参与方的安全性方面表现出色，实验结果显示性能提升了12-15倍。
+>
+> **技术梗概:** PRIVADA采用SPDZ框架下的MPC技术实现恶意安全的数据聚合，简化了聚合操作并增强了大规模部署中的强隐私保证。
+
+---
+### [2026/580] Exploiting noisy single-bit leakage in ML-DSA
+
+- **作者:** Kaveh Bashiri, Jan Geuenich, Johannes Mittmann
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/580) | [PDF](https://eprint.iacr.org/2026/580.pdf)
+
+
+> **研究背景:** ML-DSA实现中，部分泄露掩码向量$oldsymbol{y}$的单比特噪声信息构成严重威胁，即使在高噪声环境下累积少量签名的泄漏也能恢复密钥。
+>
+> **主要贡献:** 研究提出了新的攻击方法，能够在理论上所需的最小签名数附近成功恢复密钥，并分析了不同错误概率和泄露位数对攻击效果的影响。
+>
+> **达到效果:** 实验结果显示，在误差概率高达0.49的情况下，攻击仍能有效工作；对于指数不低于四或五的泄露比特位置，攻击比先前方法更具普适性。
+>
+> **技术梗概:** 通过建立随机模型精确计算所需签名数量，并开发了适用于高噪声环境的新攻击技术。
+
+---
+### [2026/581] vkproof: Succinct verification of indexed verifying keys using modular compilation and polynomial fingerprinting
+
+- **作者:** Antonio Mejias Gil, Xueqin Zhao
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/581) | [PDF](https://eprint.iacr.org/2026/581.pdf)
+
+
+> **研究背景:** vkproof旨在为Varuna验证密钥提供一种简洁的预处理SNARG方案，特别适用于包含复杂函数（如哈希）作为程序指令的情况。
+>
+> **主要贡献:** 该工作通过模块化编译和指纹技术实现了验证器成本与程序指令数量成线性关系，并扩展了Marlin模型以支持实例和查询中的多项式见证和线性组合验证。
+>
+> **达到效果:** vkproof能够保持常数级的证明大小，同时显著降低验证者成本，使其在处理复杂函数时更具优势。
+>
+> **技术梗概:** 通过模块化编译程序并利用指纹技术验证多项式的正确性，vkproof实现了验证器成本与程序指令数量成线性关系。
+
+---
+
 ## 更新: 2026-03-23 22:07
 
 *新增 18 篇论文 (编号 557--575)*
@@ -142,7 +255,8 @@
 
 > **研究背景:** RoKoko 是一种基于格的简洁论证系统，旨在实现线性时间证明者和多项式对数通信及验证者复杂度。该研究改进了现有技术，并在实际应用中表现出色。
 >
-> **主要贡献:** 主要贡献在于引入了承诺折叠技术，允许更大的子证词数量 $ho$，从而减小了证明大小并突破了常量障碍。
+> **主要贡献:** 主要贡献在于引入了承诺折叠技术，允许更大的子证词数量 $
+ho$，从而减小了证明大小并突破了常量障碍。
 >
 > **达到效果:** RoKoko 实现了约 200KB 的证明尺寸，并在验证速度上超越了 Greyhound 等现有方案，同时保持了相似的证明生成时间和竞争力的证明大小。
 >
