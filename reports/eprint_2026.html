@@ -79,6 +79,182 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-03-25 20:20</h2>
+<p><em>新增 9 篇论文 (编号 582--590)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/582] FrozenTRU: Cold Boot Attacks on NTRU-Based Hash-and-Sign Signatures</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Hiroto Kaihara, Mehdi Tibouchi, Masayuki Abe</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/582">论文</a> | <a href="https://eprint.iacr.org/2026/582.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 冷启动攻击是一种恢复计算机关机后存储在易失性内存中的加密密钥的技术，即使在低温下内存内容也能部分保留。针对基于NTRU的签名方案Falcon及其前身DLP方案，研究了冷启动攻击的有效性。</p>
+<p><strong>主要贡献:</strong> 提出了FrozenTRU方法，该方法利用浮点数表示的秘密密钥进行分析，并成功地展示了如何从冷启动攻击中恢复这些方案的私钥。</p>
+<p><strong>达到效果:</strong> 在可实现的位翻转概率下，通过冷冻TRU方法能够部分或完全恢复NTRU基签名方案Falcon和DLP的私钥，证明了这些方案对于冷启动攻击的脆弱性。</p>
+<p><strong>技术梗概:</strong> 该研究采用了一种新颖的方法来处理浮点数误差，并结合统计分析技术，以提高从冷启动数据中提取有效信息的能力。</p>
+</blockquote>
+<hr />
+<h3>[2026/583] SoK: Updatable Public-Key Encryption</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Mark Manulis, Daniel Slamanig, Federico Valbusa</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/583">论文</a> | <a href="https://eprint.iacr.org/2026/583.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：可更新公钥加密是一种允许密钥随时间演变的广义概念，旨在支持安全的密钥轮换并限制密钥泄露的影响。这种机制在诸如安全外包存储、安全消息传递或低延迟前向保密密钥交换协议等多种应用场景中具有重要作用。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者提供了一个分类体系，澄清了文献中使用的术语差异，并对比了现有定义、语法和形式安全性模型之间的异同，为该领域的研究提供了清晰的框架。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过系统化这一领域，作者帮助研究人员更好地理解当前术语的混乱状态，并促进了不同方案之间更为有效的比较与整合。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过对文献进行深入分析和对比，作者识别并定义了多种可更新公钥加密方案的不同变体及其触发机制，强调了它们在实现前向保密性和后密钥泄露安全性方面的作用。</p>
+</blockquote>
+<hr />
+<h3>[2026/584] Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Martin Bach, Vukašin Karadžić, Lukas Knittel, Robert Merget, Jean Paul Degabriele</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/584">论文</a> | <a href="https://eprint.iacr.org/2026/584.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> DTLS-SRTP被设计用于保护实时媒体通信，广泛应用于Zoom、Teams和Google Meet等主流音频和视频通话平台。然而，其复杂的系统结构使得全面审计变得极其困难，导致该核心技术的安全性研究不足。</p>
+<p><strong>主要贡献:</strong> 本文开发了一种自动化中间人攻击测试框架（DTLS-MitM-Scanner (DMS)），用于检测DTLS-SRTP连接中的DTLS通道安全性，并对24个服务提供商的浏览器和移动应用进行了案例研究。</p>
+<p><strong>达到效果:</strong> 研究发现，在33个测试的媒体服务器实现中，有19个存在漏洞，允许攻击者在DTLS层破解认证机制。对于其中9个影响数亿用户的系统，研究人员还证明了这些系统的可利用性。</p>
+<p><strong>技术梗概:</strong> 通过使用自动化中间人攻击测试框架（DMS），对DTLS-SRTP的DTLS通道进行了全面的安全性评估，并特别关注了认证机制中的19种潜在漏洞。</p>
+</blockquote>
+<hr />
+<h3>[2026/585] Format-Preserving Compression-Tolerating Authenticated Encryption for Images</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Alexandra Boldyreva, Kaishuo Cheng, Jehad Hussein</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/585">论文</a> | <a href="https://eprint.iacr.org/2026/585.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：针对图像的可压缩性认证加密方案，确保在图像经过压缩后仍能正确解密并保持视觉相似度，同时提供形式化的安全分析。</p>
+<p><strong>主要贡献:</strong> 主要贡献：提出了一种格式保留、抗压缩的认证加密方案，并特别设计了适用于JPEG格式的构造方法，使用标准的对称密码工具和特殊预处理及后处理步骤。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过正式的安全评估，参数选择实验以及性能研究，实现了在图像经过压缩后仍能成功解密并保持视觉质量的目标。</p>
+<p><strong>技术梗概:</strong> 技术梗概：采用形式化定义安全目标，结合JPEG格式特性设计加密方案，并通过实验证明了方案的有效性及效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/586] Bulletproofs*: Verifier-Efficient Arithmetic Circuit Proofs via Folding</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Emanuele Scala, Daniele Bartoli</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/586">论文</a> | <a href="https://eprint.iacr.org/2026/586.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Bulletproofs* 是对 Bulletproofs 协议的改进，旨在提高验证器效率并适用于标准假设下的算术电路证明。</p>
+<p><strong>主要贡献:</strong> 该研究通过适应 Bulletproofs 的代数验证器并设计折叠方案，实现了在无需预处理的情况下对算术电路满足性语言的支持。</p>
+<p><strong>达到效果:</strong> 经过折叠转换后的验证成本分析表明，Bulletproofs* 达到了理论上的线性效率提升。</p>
+<p><strong>技术梗概:</strong> 研究采用了折叠技术，并通过修改协议保持其安全性来实现高效的验证器设计。</p>
+</blockquote>
+<hr />
+<h3>[2026/587] Speeding Up Sum-Check Proving (Extended Version)</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Quang Dao, Zachary DeStefano, Suyash Bagad, Yuval Domb, Justin Thaler</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/587">论文</a> | <a href="https://eprint.iacr.org/2026/587.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> sum-check协议作为现代密码学证明系统中的基础组件，其证明者的成本已成为实际应用中的瓶颈。</p>
+<p><strong>主要贡献:</strong> 作者提出了三种互补的技术来显著减少sum-check证明的时间和内存消耗，特别是在零知识虚拟机(zkVM)的上下文中。</p>
+<p><strong>达到效果:</strong> 通过这些技术，在Jolt zkVM中实现了超过一个数量级的运行时加速和内存减少，并在关键高阶度sum-check子协议上获得了1.7到2.2倍的速度提升。</p>
+<p><strong>技术梗概:</strong> 第一种技术针对多项式乘积的应用，开发了一种新的算法以显著减少所需的字段乘法次数；第二种技术为小值sum-check证明者设计了算法，加速了常见的64或32位整数或小型子域元素的求和场景；第三种技术通过利用等式多项式的可分解张量结构，在一个因子是等式多项式的情况下几乎消除了证明者的开销。</p>
+</blockquote>
+<hr />
+<h3>[2026/588] Tailored Limb Counts, Faster Arithmetic: Improved TMVP Decompositions for Curve5453 and Curve6071</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Murat Cenk, N. Gamze Orhon Kılıç, Halil Kemal Taşkın, Oğuz Yayla</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/588">论文</a> | <a href="https://eprint.iacr.org/2026/588.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究了Montgomery曲线Curve5453和Curve6071在大素数域上的椭圆曲线密码学应用，旨在优化这些曲线上基于TMVP的字段乘法运算效率。</p>
+<p><strong>主要贡献:</strong> 提出了针对特定曲线选择不同基数下的肢计数方法，以减少TMVP分解中的乘法次数。</p>
+<p><strong>达到效果:</strong> 通过调整 limb 计数和使用分层块级 TMVP，实现了 Curve5453 和 Curve6071 的字段乘法运算速度分别提高了 22% 和 30%，并在 ARM64 和 x86-64 平台上验证了这些优化。</p>
+<p><strong>技术梗概:</strong> 通过选择合适的 limb 计数来生成 $3   imes 3$ Toeplitz 块，并利用大小为 3 的 TMVP 公式，每个块的乘积计算减少了所需的乘法次数。</p>
+</blockquote>
+<hr />
+<h3>[2026/589] FROSTLASS: Flexible Ring-Oriented Schnorr-like Thresholdized Linkably Anonymous Signature Scheme</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Joshua Babb, Brandon Goodell, Rigo Salazar, Freeman Slaughter, Luke Szramowski</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/589">论文</a> | <a href="https://eprint.iacr.org/2026/589.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> FROST是一种实用的Schnorr签名阈值化方法，允许多个参与者共同签署消息。FROSTLASS在此基础上进一步增强了链上应用的安全性和匿名性。</p>
+<p><strong>主要贡献:</strong> FROSTLASS引入了新颖的可追踪性和匿名性保证，并通过'Schnorr-shaped hole'技术证明了良好的安全性。</p>
+<p><strong>达到效果:</strong> 该方案提高了Monero等区块链的安全性和实用性，能够在实际场景中有效防止恶意攻击并保护用户隐私。</p>
+<p><strong>技术梗概:</strong> FROSTLASS利用Schnorr签名的特性设计了一种特殊的‘洞’结构来实现所需的安全属性。</p>
+</blockquote>
+<hr />
+<h3>[2026/590] On the Security of Constraint-Friendly Map-to-Curve Relations</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Youssef El Housni, Benedikt Bünz</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/590">论文</a> | <a href="https://eprint.iacr.org/2026/590.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：Groth等人提出了一种新的映射到椭圆曲线关系，旨在减少约束系统中的电路大小，并在椭圆曲线上提供了安全证明。然而，该方案存在安全边界未明确分析、通用组模型不适用于实际部署的曲线以及对字段限制的要求等问题。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者识别并解决了上述问题，提出了一个改进的y增量变体，消除了代数攻击，并放宽了对字段的限制，同时保持了与原方案相当的约束数量。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过实现在开源gnark库中的两种构造，并使用SageMath进行了自我包含的模拟验证，证明了改进方案的有效性。</p>
+<p><strong>技术梗概:</strong> 技术梗概：采用y增量方法来消除代数攻击，同时放宽对椭圆曲线字段的要求，并在Go和Rust实现中进行了性能测试。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-03-24 21:23</h2>
 <p><em>新增 6 篇论文 (编号 576--581)</em></p>
 <h3>[2026/576] Radical 3-isogenies for the ideal class group actions on $(2, \varepsilon)$-structures</h3>
