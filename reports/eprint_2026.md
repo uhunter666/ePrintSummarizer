@@ -5,6 +5,123 @@
 
 ---
 
+## 更新: 2026-03-26 21:28
+
+*新增 6 篇论文 (编号 591--596)*
+
+### [推荐] [2026/592] Performance Analysis of Parameterizable HQC Hardware Architecture
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Nishant Pandey, Sanjay Deshpande, Dixit Dutt Bohra, Debapriya Basu Roy, Dip Sankar Banerjee, Jakub Szefer
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/592) | [PDF](https://eprint.iacr.org/2026/592.pdf)
+
+
+> **研究背景:** 本文针对NIST后量子密码学标准制定过程中选定的基于Hamming Quasi-Cyclic (HQC)码的密钥封装机制，在硬件实现上进行了性能分析，旨在克服现有实现中受限于面积而导致的低效问题。
+>
+> **主要贡献:** 作者提出了一种可参数化的、灵活的数据宽度硬件设计，该设计能够根据不同的性能目标和安全级别进行配置，并在Verilog中实现了HQC的关键生成、封装和解封装模块。
+>
+> **达到效果:** 通过优化稀疏多项式乘法器和固定权重向量生成器等模块，作者的设计显著提高了吞吐量并减少了面积-时间（AT）产品，在Xilinx Artix 7 FPGA上实现时，达到了比现有最高效统一HQC硬件设计更好的性能。
+>
+> **技术梗概:** 该设计通过共享SHAKE256哈希核心来最小化面积开销，并引入了针对稀疏多项式乘法器和固定权重向量生成器的优化技术。
+
+---
+### [推荐] [2026/595] Registration-Optimized Dynamic Group Time-based One-time Passwords for Mobile Access
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Jiaqing Guo, Xuelian Cao, Zengpeng Li, Yong Zhou, Zheng Yang, Jianying Zhou
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/595) | [PDF](https://eprint.iacr.org/2026/595.pdf)
+
+
+> **研究背景:** 针对公共金融和企业环境中轻量级匿名认证的需求，提出了Group Time-based One-Time Passwords（GTOTP），以实现用户在不泄露身份的情况下证明授权。然而，现有方案DGTOne存在动态组成员管理及容量浪费等问题，影响了移动访问中的离线验证需求。
+>
+> **主要贡献:** 本文提出NWDGT和LWDGT两种新方案，分别通过构建按需生成的VP树和使用多个小型一次性签名树来解决上述问题，提高了系统的灵活性和效率。
+>
+> **达到效果:** 实验结果表明，与DGTOne相比，NWDGT和LWDGT显著减少了容量浪费，并且能够在不牺牲安全性的前提下实现高效的离线验证。
+>
+> **技术梗概:** NWDGT通过动态构建VP树来避免过期节点的使用；而LWDGT则利用一次性签名树分批处理新成员的身份验证请求，从而减少延迟和提高资源利用率。
+
+---
+### [2026/591] A Note on HCTR++
+
+- **作者:** Mustafa Khairallah
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/591) | [PDF](https://eprint.iacr.org/2026/591.pdf)
+
+
+> **研究背景:** 本文指出了Öztürk等人提出的HCTR++构造中存在的基本正确性缺陷，该缺陷导致解密算法无法正确反转加密算法。
+>
+> **主要贡献:** 作者独立发现了这一漏洞，并通过提供算法给AI模型进行验证以展示其发现过程的透明度。
+>
+> **达到效果:** 研究揭示了HCTR++设计中的一个关键错误，使得方案不可逆。
+>
+> **技术梗概:** 通过对比分析加密和解密算法，识别出算法间的不一致性问题。
+
+---
+### [2026/593] Three-Move Blind Signatures in Pairing-Free Groups
+
+- **作者:** Yanbo Chen
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/593) | [PDF](https://eprint.iacr.org/2026/593.pdf)
+
+
+> **研究背景:** 该研究旨在设计一种既不依赖对数阶群模型（AGM），也不使用配对的三轮盲签名方案，以填补现有技术中的空白。
+>
+> **主要贡献:** 作者提出了一种同时满足无配对、非AGM标准假设下并发安全性的三轮盲签方案，并且是首次在无需AGM的情况下实现这一目标。
+>
+> **达到效果:** 该方案的公钥、签名以及通信量均仅由固定数量的群/域元素组成，显著提高了效率和实用性。
+>
+> **技术梗概:** 通过巧妙设计协议交互流程及利用随机预言机模型，在不依赖配对运算的前提下实现了并发安全性证明。
+
+---
+### [2026/594] Efficient Compilers for Verifiable Dynamic Searchable Symmetric Encryption
+
+- **作者:** Chaya Ganesh, Sikhar Patranabis, Raja Rakshit Varanasi
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/594) | [PDF](https://eprint.iacr.org/2026/594.pdf)
+
+
+> **研究背景:** 研究背景：本文旨在解决动态搜索加密（DSSE）在面对恶意服务器时的安全性问题，通过构建编译器将现有的半诚实服务器安全的DSSE方案转化为恶意服务器安全的验证型动态搜索加密（VDSSE）。
+>
+> **主要贡献:** 主要贡献在于提出了两个高效的编译器$\mathsf{FLASH}$和$\mathsf{BOLT}$，分别优化了通信开销和客户端存储需求。
+>
+> **达到效果:** 达到的效果是实现了在保持前向和后向隐私的同时，对现有半诚实DSSE方案进行转换，使其具备恶意服务器安全性，并且实验验证了这些编译器在实际数据库上的性能表现优异。
+>
+> **技术梗概:** 技术梗概：定义并实现了一种新的认证数据结构——集合承诺（Set Commitment），以此为基础构建高效的VDSSE方案。
+
+---
+### [2026/596] Gryphes: Hybrid Proofs for Modular SNARKs with Applications to zkRollups
+
+- **作者:** Jiajun Xin, Samuel Cheung On Tin, Christodoulos Pappas, Yongjin Huang, Dimitrios Papadopoulos
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/596) | [PDF](https://eprint.iacr.org/2026/596.pdf)
+
+
+> **研究背景:** 针对处理多种计算任务（如可扩展的zkRollup应用）的需求，现有SNARKs和zkVM在通用性和效率之间存在权衡。
+>
+> **主要贡献:** 提出Gryphes框架，结合矩阵查找与特定加密操作的SNARK解决方案，实现高效且灵活的证明系统。
+>
+> **达到效果:** 构建了一个基于Groth16签名和RSA累加器的zkRollup原型，实现了高效的证明、恒定大小的证明以及数千种交易类型的动态支持。
+>
+> **技术梗概:** Gryphes通过引入新型高效链接协议，将矩阵查找与Plonk等通用SNARKs无缝集成，优化了效率和适应性。
+
+---
+
 ## 更新: 2026-03-25 20:20
 
 *新增 9 篇论文 (编号 582--590)*
