@@ -5,6 +5,181 @@
 
 ---
 
+## 更新: 2026-03-27 19:08
+
+*新增 9 篇论文 (编号 597--605)*
+
+### [推荐] [2026/597] Efficiency Improvement of Deniable FHE: Tighter Deniability Analysis and TFHE-based Construction
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Towa Toyooka, Yohei Watanabe, Mitsugu Iwamoto
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/597) | [PDF](https://eprint.iacr.org/2026/597.pdf)
+
+
+> **研究背景:** 研究背景：全同态加密（FHE）允许在不解密的情况下对密文进行计算，而可否认加密则使用户能够在被迫透露密文时撒谎。将这两种技术结合的可否认全同态加密（DFHE）旨在提供更高的隐私保护。
+>
+> **主要贡献:** 主要贡献：作者通过提供更紧的可否认性上界分析，减少了存储随机性和所需执行的启动验证次数，从而改进了DFHE的效率。
+>
+> **达到效果:** 达到的效果：该研究降低了存储的空间需求，并提高了执行速度，特别是在使用TFHE方案时效果显著。
+>
+> **技术梗概:** 技术梗概：通过改进可否认性分析方法，作者优化了基于BGV和TFHE方案的DFHE构造过程。
+
+---
+### [推荐] [2026/600] Hadal: Centralized Label DP Training without a Trusted Party
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** James Choncholas, Stanislav Peceny, Amit Agarwal, Mariana Raykova, Baiyu Li, Karn Seth
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/600) | [PDF](https://eprint.iacr.org/2026/600.pdf)
+
+
+> **研究背景:** 研究背景：在特征由一方持有、标签由另一方持有的分布式训练场景中，如何保护标签隐私并避免依赖可信第三方成为挑战。
+>
+> **主要贡献:** 主要贡献在于提出PostScale协议和Hadal框架，实现了高隐私设置下的模型训练，并显著减少了通信量和训练时间。
+>
+> **达到效果:** 达到的效果是，在保持与中心化DP相似的模型性能的同时，将每批次的通信量从1 TB减少到8 GB，训练时间缩短了99%。
+>
+> **技术梗概:** 技术梗概包括HE协议PostScale、多党采样噪声生成协议以及Hadal框架，该框架支持加密计算并优化执行效率。
+
+---
+### [推荐] [2026/603] Oblivious SpaceSaving: Heavy-Hitter Detection over Fully Homomorphic Encryption
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Sohaib .., Divyakant Agrawal, Amr El Abbadi
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/603) | [PDF](https://eprint.iacr.org/2026/603.pdf)
+
+
+> **研究背景:** 在流数据分析中，重 hitter 检测是基础的计算原语之一，应用于网络监控、遥测和大规模数据系统。然而，在许多实际部署场景下，必须在提供更高可用性和集中运维控制的远程基础设施上持续进行此计算，即使底层流包含敏感标识符或专有活动模式。现有的隐私保护方法要么引入大量统计噪声，要么依赖多服务器信任假设。
+>
+> **主要贡献:** 我们提出了Oblivious SpaceSaving，这是一种对经典Space-Saving算法进行了隐私保护重构的方法，使其能够在单个未受信的服务器上进行完全加密执行。我们的核心思想是Moving Floor抽象，它利用摘要状态中的单调性不变量来用等式选择替换重复的大小比较，并结合并行受害者选择和分层异步摄取管道，从而实现端到端加密重 hitter 架构，同时保持原始算法的确定性准确性保证。
+>
+> **达到效果:** 我们的设计将加密更新的成本降低了最多2.74倍，相比朴素的方法，显著提高了效率。此外，该方法还能够精确地在未受信服务器上执行流处理任务，而不会泄露任何敏感信息。
+>
+> **技术梗概:** 我们通过引入Moving Floor抽象和结合并行受害者选择以及分层异步摄取管道来优化算法的实现。这种方法利用了加密数据上的单调性不变量，并减少了重复大小比较的开销，从而提高了整体性能。
+
+---
+### [推荐] [2026/604] CatCrypt: From Rust to Cryptographic Security in Lean
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Bas Spitters
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/604) | [PDF](https://eprint.iacr.org/2026/604.pdf)
+
+
+> **研究背景:** CatCrypt是一个在Lean中实现的库，用于机器验证密码学安全证明，从Rust参考实现到计算模型的安全证明。
+>
+> **主要贡献:** 该研究贡献了一种将Rust代码转换为Lean形式化证明的方法，并覆盖了172个加密协议和构造，其中110个具有完整的Rust-to-Lean流水线。
+>
+> **达到效果:** CatCrypt实现了从Rust到Lean的端到端管道，所有边界都系统地与已发布的来源进行了交叉引用，提高了对规格正确性的信心，并在两个月内完成了整个项目。
+>
+> **技术梗概:** 使用Hax工具进行从Rust到Lean的翻译，部分证明是从其他形式化验证工具如SSProve、EasyCrypt等移植过来的，大部分是独立的形式化实现。
+
+---
+### [2026/598] Triangulating Meet-in-the-Middle Attack
+
+- **作者:** Boxin Zhao, Qingliang Hou, Lingyue Qin, Xiaoyang Dong
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/598) | [PDF](https://eprint.iacr.org/2026/598.pdf)
+
+
+> **研究背景:** 本文旨在通过改进的三角化中间相遇攻击（Triangulating MitM）来降低内存复杂度，以突破更多轮次的AES等加密算法。
+>
+> **主要贡献:** 作者提出了一种基于改进三角化算法的新MitM攻击方法，并成功应用于多种加密算法，显著降低了攻击所需的内存复杂度。
+>
+> **达到效果:** 通过该方法，针对4/5轮AES-128的单密文密钥恢复攻击内存复杂度从$2^{80}$降至实践中的$2^{24}$或从$2^{96}$降至$2^{40}$；同时提出了针对减缩版AES-192/-256和Rijndael-EM的新攻击方法。
+>
+> **技术梗概:** 作者利用Khovratovich等人的三角化算法（TA）并结合LaMacchia等人和Bender等人的结构高斯消元法，改进了TA以处理仍有许多未处理方程但无变量仅存在于单一方程的情况。
+
+---
+### [2026/599] Proving modern code-based dual attacks with second-order techniques
+
+- **作者:** Charles Meyer-Hilfiger
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/599) | [PDF](https://eprint.iacr.org/2026/599.pdf)
+
+
+> **研究背景:** 研究背景在于代码基密码学中，最近的双重攻击通过将解码问题转化为LPN问题得到了改进，并且在某些情况下超越了信息集解码器。然而，这些攻击的分析目前仍依赖于启发式方法而非严格证明。
+>
+> **主要贡献:** 主要贡献是提出了一种无需使用任何模型即可完全证明的新变体双重RLPN算法。该算法与原始版本相比，在性能上仅相差多项式因子，并且其分析更为简单。
+>
+> **达到效果:** 结果表明，通过翻转噪声码字的坐标并观察相关LPN问题中噪音量的细微变化来重建整个错误，从而实现了这一目标。
+>
+> **技术梗概:** 技术梗概涉及利用第二阶技巧对双重RLPN算法进行改进，并基于傅里叶理论和随机线性代码权重枚举的泊松近似来进行分析。
+
+---
+### [2026/601] Cryptanalysis of the Lightweight Stream Cipher RRSC
+
+- **作者:** Shivarama K. N., Susil Kumar Bishoi
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/601) | [PDF](https://eprint.iacr.org/2026/601.pdf)
+
+
+> **研究背景:** 本文对RRSC轻量级流密码在64位和128位变体的安全性进行了评估，重点关注密钥更新过程、内部组件交互及初始化期间的扩散行为。
+>
+> **主要贡献:** 研究提出了针对RRSC的各种攻击场景，包括时间-内存-数据权衡攻击、已知明文设置下的完整密钥恢复攻击以及针对线性和非线性反馈移位寄存器部件的部分密钥恢复攻击。
+>
+> **达到效果:** 研究表明，128位变体的有效密钥空间从\(2^{128}\)减少到\(2^{96}\)，而64位变体则从\(2^{64}\)减少到\(2^{48}\)。
+>
+> **技术梗概:** 分析通过实施雪崩研究来检验组件间的交互，并基于观察结果探索了多种攻击场景。
+
+---
+### [2026/602] Confidential Transfers for Multi-Purpose Tokens on the XRP Ledger
+
+- **作者:** Murat Cenk, Aanchal Malhotra, Joseph A. Akinyele
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/602) | [PDF](https://eprint.iacr.org/2026/602.pdf)
+
+
+> **研究背景:** 该研究旨在为XRP Ledger上的多用途代币引入保密转移功能，以保护交易金额和账户余额的隐私性，同时保持供应量的公开验证。
+>
+> **主要贡献:** 贡献在于设计了一种基于EC-ElGamal加密和非交互式零知识证明的协议，使得转账正确、余额充足以及最大发行量不变，无需验证者解密即可实现保密转移。
+>
+> **达到效果:** 该协议成功实现了多用途代币的保密性与透明性的平衡，同时保持了现有功能的兼容性和可审计性，增强了XRP Ledger的安全性和灵活性。
+>
+> **技术梗概:** 通过使用EC-ElGamal加密来隐藏账户余额和交易金额，并利用非交互式零知识证明确保转账的有效性，同时设计了基于多密文余额表示和等式证明的选择披露模型以满足监管要求。
+
+---
+### [2026/605] Adaptively-Secure Proxy Re-Encryption with Tight Security
+
+- **作者:** Chen Qian, Shuo Chen, Shuai Han
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/605) | [PDF](https://eprint.iacr.org/2026/605.pdf)
+
+
+> **研究背景:** 现有的代理重新加密方案在适应性攻击下安全性会显著下降，仅少数方案实现了接近多项式的时间安全损失，且限制了重加密策略。
+>
+> **主要贡献:** 作者提出了四个基于MDDH假设的适应性安全代理重新加密方案，并引入了一种新的标签基语言可变归零知识证明。
+>
+> **达到效果:** 这些方案在单挑战和多挑战下分别实现了几乎紧致的安全性和适应性选择明文攻击下的紧致安全性。
+>
+> **技术梗概:** 通过引入标签基语言可变归零知识证明，确保了模拟声学的同时保留了一种受限形式的可变性。
+
+---
+
 ## 更新: 2026-03-26 21:28
 
 *新增 6 篇论文 (编号 591--596)*
