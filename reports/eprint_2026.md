@@ -5,6 +5,141 @@
 
 ---
 
+## 更新: 2026-04-08 21:15
+
+*新增 7 篇论文 (编号 667--675)*
+
+### [推荐] [2026/670] Verification Facade: Masquerading Insecure Cryptographic Implementations as Verified Code
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Nadim Kobeissi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/670) | [PDF](https://eprint.iacr.org/2026/670.pdf)
+
+
+> **研究背景:** 研究探讨了Hax验证管道在将Rust代码转换为F*以进行形式化证明时，是否能够准确地保持其声称的加密实现的安全特性。
+>
+> **主要贡献:** 贡献在于识别并分类了三种类型的安全性差距：翻译不忠、不可验证的信任边界和规范游戏，并通过具体实例展示了这些差距的存在。
+>
+> **达到效果:** 结果表明，即使经过形式化验证的代码也可能存在未被发现的安全漏洞，验证过程并不能完全保证加密实现的安全性。
+>
+> **技术梗概:** 研究通过对Hax验证管道的35个阶段转换、F*证明库和规范API进行结构分析来识别这些差距，并通过针对ML-DSA等标准算法的具体攻击案例进行了展示。
+
+---
+### [推荐] [2026/671] A note on the Unsuitability of LIGA for Linkable Ring Signatures: The perils of non-commutativity
+
+- **匹配关键字:** lattice
+
+- **作者:** Iñigo Diaz Iribarnegaray, Václav Gregor, Florian L’écu Leal
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/671) | [PDF](https://eprint.iacr.org/2026/671.pdf)
+
+
+> **研究背景:** 本文研究了[KTS+24]中基于群作用框架的链可追溯环签名(LRS)方案，该方案使用Lattice Isomorphism Group Action (LIGA)，其安全性依赖于著名的Lattice Isomorphism Problem (LIP)。
+>
+> **主要贡献:** 作者指出，尽管[BKP20]框架提供了保证，但由于使用了非交换群，导致[LTS+24]中的签名方案不符合链可追溯环签名的要求，即不满足正确性和链接性。
+>
+> **达到效果:** 研究进一步揭示了[KTS+24]中提出的匿名属性也不成立，并探讨了将秘密密钥空间限制为GL_n(ℤ)的交换子群以修复签名方案的可能性，但发现这并不容易实现。
+>
+> **技术梗概:** 通过分析非交换群GL_n(ℤ)及其在LIP中的应用障碍，作者尝试通过限制秘密密钥空间来解决链可追溯环签名的问题。
+
+---
+### [2026/667] Which Privacy Blanket is Optimal in the Shuffle Model?
+
+- **作者:** Pengcheng Su, Haibo Cheng, Ping Wang
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/667) | [PDF](https://eprint.iacr.org/2026/667.pdf)
+
+
+> **研究背景:** 近年来，混洗模型作为隐私保护数据分析的主流范式之一，通过‘隐私放大’机制模糊个体用户的报告，本文从信息论角度系统研究了这一机制。
+>
+> **主要贡献:** 作者首次系统性地探讨了最优噪声设计问题：在给定目标用户消息遵循特定分布的情况下，寻找最大化隐私保护的混洗噪声分布。
+>
+> **达到效果:** 研究表明，最优化的噪声分布通常与目标分布不同。对于二元字母表，几乎均匀分布是最优的；对于一般有限字母表，作者推导出了显式的最优解。
+>
+> **技术梗概:** 通过分析互信息、总变差信息、消息恢复优势和预期后验方差等指标来评估隐私保护程度，并证明了最优化噪声设计的重要性。
+
+---
+### [2026/668] Cryptographic Implications of Worst-Case Hardness of Time-Bounded Kolmogorov Complexity
+
+- **作者:** Yanyi Liu, Noam Mazor, Rafael Pass
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/668) | [PDF](https://eprint.iacr.org/2026/668.pdf)
+
+
+> **研究背景:** 研究探讨了时间限制下的Kolmogorov复杂性问题的最坏情况难度，及其对密码学应用的影响。
+>
+> **主要贡献:** 作者提出了在适当假设下，该问题不属于$P/poly$时的新结论，包括非统一模拟器的零知识证明系统和难分离NP对的存在性。
+>
+> **达到效果:** 这些结果表明，在最坏情况下假设该问题不属于$P/poly$可以推导出密码学中的重要应用实例。
+>
+> **技术梗概:** 通过展示在适当假设下，如果该问题不属于$P/poly$，则可以证明上述结论，技术上涉及复杂性类的分离和零知识证明理论。
+
+---
+### [2026/672] FLOSS: Fast Linear Online Secret-Shared Shuffling
+
+- **作者:** Ian Chang, Sela Navot, Alex Ozdemir, Nirvan Tyagi
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/672) | [PDF](https://eprint.iacr.org/2026/672.pdf)
+
+
+> **研究背景:** 随机秘密数据向量的置换是许多隐私保护协议的核心组件，包括数据分析、广告和通信等领域。现有的方法要么依赖于计算密集型的公钥密码学和零知识证明，要么在处理大型向量时由于使用了准线性大小的置换网络而性能不佳。
+>
+> **主要贡献:** 本文提出了一种预处理方法，以实现恶意安全下的双方计算（2PC）中快速的线性时间在线洗牌。我们提出了FLOSS协议，这是一种用于安全计算任何交互式算术置换电路的2PC协议。
+>
+> **达到效果:** 我们的实验证明了FLOSS在执行在线洗牌方面的高效性：在不到500毫秒的时间内完成了$2^{20}$个元素的洗牌操作，比现有最佳替代方案快800多倍。
+>
+> **技术梗概:** 我们通过将秘密共享排序（数据统计中的子协议）描述为算术置换电路，并使用FLOSS将其编译为高效的在线2PC协议来实现这一目标。
+
+---
+### [2026/674] Efficient Batch Threshold Encryption Using Partial Fraction Techniques
+
+- **作者:** Dan Boneh, Rohit Nema, Arnab Roy, Ertem Nusret Tas
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/674) | [PDF](https://eprint.iacr.org/2026/674.pdf)
+
+
+> **研究背景:** 现有的批量加密方案要么依赖于时间周期，要么在无时间周期的情况下存在公共参数过大和易受审查的问题。
+>
+> **主要贡献:** 本文提出了一种无时间周期、抗审查的批量加密方案，该方案具有线性大小的公共参数、常量大小的预解密密钥和密文，并且支持高效的批量解密。
+>
+> **达到效果:** 通过使用部分分数技术，我们的方案能够发布单个群元素作为预解密密钥，从而允许解密者解密整个批次中的所有密文。我们证明了该方案在选择明文攻击下的安全性，并展示了如何对其进行门限化。
+>
+> **技术梗概:** 我们利用部分分数分解技术，使得发布单个组元素即可作为预解密密钥，从而实现批量解密功能。
+
+---
+### [2026/675] SoK: DeFi Lending and Yield Aggregation Protocol Taxonomy, Empirical Measurements, and Security Challenges
+
+- **作者:** Arad Kotzer, Tom Azoulay, Yoad Abels, Aviv Yaish, Ori Rottenstreich
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/675) | [PDF](https://eprint.iacr.org/2026/675.pdf)
+
+
+> **研究背景:** 研究旨在系统化DeFi借贷生态系统，涵盖抵押借贷、非抵押原语及收益聚合协议，并通过实证分析揭示设计选择对行为和安全的影响。
+>
+> **主要贡献:** 贡献在于构建了DeFi借贷机制的分类体系，提供了Compound V2和AAVE V2的实际案例研究，并指出了由于特定设计导致的安全漏洞。
+>
+> **达到效果:** 结果包括识别出关键的设计缺陷及其潜在风险，并为未来的研究提出了开放性问题。
+>
+> **技术梗概:** 技术上采用了实证方法来测量链上借贷活动和用户行为，并分析了利率设定机制和时间计量方法中的安全挑战。
+
+---
+
 ## 更新: 2026-04-06 20:44
 
 *新增 54 篇论文 (编号 606--666)*
