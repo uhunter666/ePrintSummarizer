@@ -5,6 +5,159 @@
 
 ---
 
+## 更新: 2026-04-10 20:20
+
+*新增 8 篇论文 (编号 676--683)*
+
+### [推荐] [2026/678] Mergeable SNARGs for Trapdoor Languages and Their Applications
+
+- **匹配关键字:** homomorphic encryption, LWE
+
+- **作者:** Zvika Brakerski, Maya Farber Brodsky, Omer Paneth, Tomer Solomon
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/678) | [PDF](https://eprint.iacr.org/2026/678.pdf)
+
+
+> **研究背景:** 该研究旨在开发一种新的方法，用于合并短的计算声学论证(SNARGs)，使从两个声明的简短证明生成一个逻辑后果的简短证明成为可能。
+>
+> **主要贡献:** 研究首次实现了对任意拓扑结构下的多项式数量级的递归合并处理，并且安全性的验证时间仅与合并过程的深度成正比，而不受关联的“树大小”的影响。
+>
+> **达到效果:** 通过这种方法，研究人员构建了基于子指数级iO和LWE的第一个完全紧凑型证明系统，并提出了第一个适应性多跳聚合签名方案。
+>
+> **技术梗概:** 该技术适用于所谓的‘陷阱门语言’，其中声明的有效性可以在给定陷阱门的情况下在多项式时间内决定。
+
+---
+### [推荐] [2026/683] VEIL: Lightweight Zero-Knowledge for Hash-Based Multilinear Proof Systems
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Rahul Dalal, Tamir Hemo, Eugene Rabinovich, Ron Rothblum
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/683) | [PDF](https://eprint.iacr.org/2026/683.pdf)
+
+
+> **研究背景:** 随着高效的证明系统迅速成熟，越来越多需要零知识（ZK）保证的实际应用场景正在出现。然而，添加ZK通常需要将非ZK基础系统与昂贵的ZK系统结合使用，或者对基础协议的每个组件进行紧密耦合的修改。
+>
+> **主要贡献:** 我们提出了VEIL，一种轻量级且不侵入式的编译器，用于基于哈希的多线性证明系统。VEIL通过解耦协议的代数交互和加密哈希，并仅将ZK包装器应用于代数组件来实现ZK。
+>
+> **达到效果:** 我们的概念验证实现表明，在31位基素域中，对于2^29个字段元素的踪迹，与非ZK证明系统相比，VEIL的证明者开销约为3%，验证者开销为22%，证明大小开销为12%。
+>
+> **技术梗概:** VEIL通过解耦协议的代数交互和加密哈希，并仅将ZK包装器应用于代数组件来实现ZK，从而保持基础证明系统的架构完整性。
+
+---
+### [2026/676] An Efficient Identity-Based Blind Signature Scheme from SM9
+
+- **作者:** Zhiwei Wang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/676) | [PDF](https://eprint.iacr.org/2026/676.pdf)
+
+
+> **研究背景:** 盲签名是实现电子现金、电子投票和匿名认证等隐私保护协议的基本密码学工具，但同时满足形式安全性和与现有国家标准兼容性仍是一个挑战。
+>
+> **主要贡献:** 作者提出了一种直接基于SM9国家标准的高效身份基盲签名方案，并提供了严格的形式安全性模型。
+>
+> **达到效果:** 该方案在随机预言机模型下实现了单次伪造不可抵赖性和完美盲签，相比当前最先进的多因子SM9盲签名减少了至少60%的配对操作和约73%的整体签名延迟。
+>
+> **技术梗概:** 通过将盲签名直接构建于SM9标准之上，并利用\(q\)-SBDH假设证明了安全性，同时实现了信息论意义上的完美盲签。
+
+---
+### [2026/677] SPLASH: SPeculative Leakage-Adaptive Secure Hardware
+
+- **作者:** Huimin Li, Mohamadreza Rostami, Pallavi Borkar, Lichao Wu, Ahmad-Reza Sadeghi
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/677) | [PDF](https://eprint.iacr.org/2026/677.pdf)
+
+
+> **研究背景:** 现代处理器在制造时基本固定，导致无法进行后硅安全更新。现有的防御措施通常是硬编码的、范围狭窄且不具备适应性，一旦部署就难以应对新的攻击变种，从而留下严重的安全漏洞。
+>
+> **主要贡献:** SPLASH框架引入了Speculative Information Flow Tracking (SIFT)，实现了对推测数据传播的细粒度跟踪；同时提供了可重构的推测表，首次在处理器流水线中实现全面且灵活的推测行为控制。
+>
+> **达到效果:** 通过在小型和中型BOOM处理器上实施SPLASH，成功地缓解了所有类型的推测泄漏漏洞，并展示了其动态安全策略调整能力，无需重新设计硬件。
+>
+> **技术梗概:** SPLASH采用运行时可配置的方法，在制造后可以灵活调整安全策略，如调整推测窗口大小或选择性保护特定微架构结构。
+
+---
+### [2026/679] Compressed Key Exchange Protocol from Orientations of Large Discriminant Using AVX-512
+
+- **作者:** Yuhao Zheng, Jianming Lin, Yutong Liang, Yanzhen Ren, Huixin Zhang, Chang-An Zhao
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/679) | [PDF](https://eprint.iacr.org/2026/679.pdf)
+
+
+> **研究背景:** CSIDH是一种基于类群的密钥交换协议，但在提出时由于Kuperberg算法的存在而面临安全性的挑战。一种基于大型判别式的定向椭圆曲线的新协议（CSIDH-LDO）被提出以解决这一问题。
+>
+> **主要贡献:** 本文通过优化常数时间实现和有效的公钥压缩框架，解决了CSIDH-LDO的性能瓶颈。
+>
+> **达到效果:** 实现了对CSIDH-LDO的高度优化，并成功减少了其公钥大小，提高了其实用性。
+>
+> **技术梗概:** 结合了差分加法链的标量乘法、扭曲爱德华模型上的仿射变换计算以及通过Intel AVX-512指令利用并行性的技术。
+
+---
+### [2026/680] Open Problems in List Decoding and Correlated Agreement
+
+- **作者:** Gal Arnon, Dan Boneh, Giacomo Fenzi
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/680) | [PDF](https://eprint.iacr.org/2026/680.pdf)
+
+
+> **研究背景:** 本文回顾了与Ethereum基金会的Proximity Prize相关的开放问题，重点关注与证明系统和Reed-Solomon码相关的列表解码边界、接近差距、相关协议以及互相关协议等重大挑战。
+>
+> **主要贡献:** 文章总结了当前在这些领域已知的结果，并指出了需要解决的关键问题，为未来的研究提供了方向。
+>
+> **达到效果:** 通过分析现有研究，本文揭示了一些关键的理论缺口和实际应用中的技术障碍，有助于推进证明系统的前沿发展。
+>
+> **技术梗概:** 作者们采用了综述的方法，结合了现有的数学和技术成果来探讨这些开放问题，并提出了可能的技术路径。
+
+---
+### [2026/681] The many faces of Schnorr: a touch-up
+
+- **作者:** Victor Shoup
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/681) | [PDF](https://eprint.iacr.org/2026/681.pdf)
+
+
+> **研究背景:** 本文是对Shoup在2023年关于阈值Schnorr签名方案工具箱的研究的进一步探讨，特别是重新审视了批量随机性提取与再随机化预签名组合的随机预言机分析。
+>
+> **主要贡献:** 作者通过使模拟论证完全明确，并详细分析了通过预签名、编程哈希值和签名值泄露的信息，填补了批量再随机化处理中的空白。
+>
+> **达到效果:** 这种方法使得在随机预言机加通用群模型中获得紧致的安全边界变得更加简单直接，避免了对哈希函数内部假设的复杂依赖。
+>
+> **技术梗概:** 技术上，作者通过将安全证明归约到Schnorr交互式身份验证方案，并观察该方案在通用群模型中的硬度来简化了路径。
+
+---
+### [2026/682] Witness-Indistinguishable Arguments of Knowledge and One-Way Functions
+
+- **作者:** Gal Arnon, Noam Mazor, Rafael Pass, Jad Silbak
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/682) | [PDF](https://eprint.iacr.org/2026/682.pdf)
+
+
+> **研究背景:** 研究了非平凡知识证明中的目击者不可区分性（WI）论证的密码学复杂性，特别是在假设NP不在多项式时间电路类P/poly中时，其与辅助输入单向函数的关系。
+>
+> **主要贡献:** 证明了在特定假设下，常数轮计算复杂度的知识型WI论证的存在性等价于某些形式的辅助输入单向函数的存在；并指出了统计学上WI论证从单向置换构造的限制。
+>
+> **达到效果:** 通过这些理论结果，进一步明确了知识提取器的设计边界，并为构建更安全的密码系统提供了指导。
+>
+> **技术梗概:** 采用了假设验证和复杂性类之间的归约方法来证明上述结论。
+
+---
+
 ## 更新: 2026-04-08 21:15
 
 *新增 7 篇论文 (编号 667--675)*
