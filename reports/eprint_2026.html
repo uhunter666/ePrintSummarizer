@@ -79,6 +79,150 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-04-13 21:10</h2>
+<p><em>新增 7 篇论文 (编号 705--711)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/705] Cross-Paradigm Models of Restricted Syndrome Decoding with Application to CROSS</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Étienne Burle, Aleksei Udovenko</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/705">论文</a> | <a href="https://eprint.iacr.org/2026/705.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：受限 Syndrome 解码（ResSD）问题是线性码解码的一种变体，其中每个错误项必须属于固定的小值集合。该问题构成了后量子签名方案CROSS的安全基础，CROSS是NIST正在进行的附加签名调用中Round 2的候选者之一。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者展示了如何从特定结构和小范数的向量在新构造的码中推导出ResSD问题的解，并将该问题归约为基于代码（常规 Syndrome 解码）和基于格（最近向量问题，列表短/接近向量集）的问题。</p>
+<p><strong>达到效果:</strong> 达到的效果：这种方法增加了攻击面并为 ResSD 的安全性提供了新的见解。作者还对CROSS实例进行了理论和实验评估，特别是在减少参数的情况下。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过构造特定结构的码，并利用小范数向量来解决ResSD问题，将该问题归约为代码基和格基问题。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/706] Improved Cryptanalysis of the Permuted Kernel Problem with Applications to PERK v2.2.0, SUSHSYFISH and PKP-DSS</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Abul Kalam, Sudeshna Karmakar, Arindam Mukherjee, Soumya Sahoo, Santanu Sarkar</p>
+</li>
+<li>
+<p><strong>分类:</strong> Unknown</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/706">论文</a> | <a href="https://eprint.iacr.org/2026/706.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Permuted Kernel Problem (PKP)是Shamir提出的一个计算难题，支撑了PERK、SUSHSYFISH和PKP-DSS等后量子签名方案。尽管已有攻击方法，但其复杂度仍为超指数级别，且内存需求与其时间复杂度相当。</p>
+<p><strong>主要贡献:</strong> 本文提出了超越所有已知攻击的新型PKP分析结果，特别是对于PERK v2.2.0的所有参数集，首次提供了在估计的安全位数以下实现秘密向量恢复的可能性。</p>
+<p><strong>达到效果:</strong> 研究不仅改进了SUSHSYFISH和PKP-DSS参数集的比特复杂度估算，还引入了一种Schroeppel-Shamir风格的时间-内存权衡方法，显著减少了内存需求同时保持时间复杂度接近最佳已知攻击。</p>
+<p><strong>技术梗概:</strong> 通过组合meet-in-the-middle技术，并结合新颖的时间-内存权衡策略，实现了对PKP的有效分析。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/710] Optimizing and Implementing Threshold MAYO</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Diego F. Aranha, Giacomo Borin, Sofia Celi, Guilhem Niot</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/710">论文</a> | <a href="https://eprint.iacr.org/2026/710.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 阈值签名将信任分散到多个参与方，消除了单点故障的风险，并减少了内部人员和密钥泄露的风险，这些特性对于高保证部署越来越重要。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种实用的t-out-of-n阈值变体和MAYO的仿真实现，这是NIST量子后签名候选方案之一。</p>
+<p><strong>达到效果:</strong> 通过引入两种针对分布式环境的技术：Explicit-Salt MAYO和Depth-Reduced MAYO，并结合其他特定于MPC的优化技术，作者实现了最小化在线延迟的目标。</p>
+<p><strong>技术梗概:</strong> 该工作提出了统一协议框架，集成这些技术和其它特定于MPC的优化方法，以确保在诚实多数设置下安全，并对抗活跃对手。</p>
+</blockquote>
+<hr />
+<h3>[2026/707] Alternating Sponge: A Low-Memory Hash Function with Beyond-Birthday-Bound Security</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ziyang Luo, Yaobin Shen, Hailun Yan, Lei Wang, Dawu Gu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Secret-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/707">论文</a> | <a href="https://eprint.iacr.org/2026/707.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对低内存环境下的哈希函数设计，提出了Alternating Sponge (ASP)方案以实现超越生日界限的安全性。</p>
+<p><strong>主要贡献:</strong> ASP通过重新设计双海绵结构的状态布局和置换机制，减少了状态空间并增加了每轮挤压的比特数。</p>
+<p><strong>达到效果:</strong> 证明了ASP在保持与双海绵构造相似安全性的同时，实现了更紧凑的状态表示和更多的每轮挤压比特数。</p>
+<p><strong>技术梗概:</strong> ASP采用两阶段串行置换序列更新共享状态，并通过分层吸收和交替置换确保每一处理轮次的紧凑性和扩散性。</p>
+</blockquote>
+<hr />
+<h3>[2026/708] Block Circulant Codes for Ethereum PeerDAS</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Birenjith Sasidharan, Emanuele Viterbo, Dankrad Feist</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/708">论文</a> | <a href="https://eprint.iacr.org/2026/708.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文探讨了如何在Ethereum PeerDAS协议中使用块循环码（BC码）作为一维Reed-Solomon (RS)码和二维RS码的替代方案。</p>
+<p><strong>主要贡献:</strong> 贡献在于开发了一套高效的编码与重建算法，并展示了BC码在相同实现框架下的应用，同时允许KZG承诺方案的平滑集成。</p>
+<p><strong>达到效果:</strong> 结果表明，BC码在码率、停止率以及本地代码大小方面优于一维和二维RS码。</p>
+<p><strong>技术梗概:</strong> 技术上采用了循环矩阵结构来设计编码算法，并优化了错误恢复过程以提高效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/709] zkRAG: Efficiently Proving RAG Retrieval in Zero Knowledge</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yanze Jiang, Xinyang Yang, Xuanming Liu, Yanpei Guo, Jiaheng Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/709">论文</a> | <a href="https://eprint.iacr.org/2026/709.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在RAG-as-a-Service环境中，客户端无法验证服务器的检索结果是否忠实执行了约定的近似最近邻搜索算法，这引发了服务一致性问题。</p>
+<p><strong>主要贡献:</strong> 作者提出了第一个针对广泛使用的HNSW近似最近邻搜索算法的多项式交互公证证明（PIOP），并基于此设计了zkRAG，这是一种零知识、简洁且非交互式的论证系统。</p>
+<p><strong>达到效果:</strong> 该系统实现了在线证明者效率的渐进最优性，在单线程下可以快速验证典型的HNSW查询，比现有基线快约1000倍。</p>
+<p><strong>技术梗概:</strong> 设计中引入了混合查找论证、基于检查器的PIOP以高效检查优先队列更新以及高效的成员选择向量检查器等新技术。</p>
+</blockquote>
+<hr />
+<h3>[2026/711] Drop-In Masked Modular Reduction for ML-DSA: Cutting Side-Channel Cost in the Root-of-Trust</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Merve Karabulut, Reza Azarderakhsh</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/711">论文</a> | <a href="https://eprint.iacr.org/2026/711.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在硬件受限环境下，掩码技术虽能有效抵御侧信道攻击，但通常会带来较大的面积开销。Caliptra Root-of-Trust的ML-DSA实现即面临这一挑战，其面积开销高达约6倍。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种新颖的一阶掩码解决方案，旨在优化Caliptra的设计，显著提升其实现效率。</p>
+<p><strong>达到效果:</strong> 与Caliptra的ML-DSA减少相比，该设计实现了12.1倍的速度提升，减少了86.7%的LUT和94.5%的FF，并将面积延迟效率提高了91倍。</p>
+<p><strong>技术梗概:</strong> 通过提出一种滴入式掩码模块化减少方法，作者优化了Caliptra的设计，同时确保了安全性要求并大幅降低了硬件开销。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-04-12 20:29</h2>
 <p><em>新增 19 篇论文 (编号 684--704)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/687] High-Throughput Side-Channel-Protected Stream Cipher Hardware for 6G Systems</h3>
