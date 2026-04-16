@@ -5,6 +5,83 @@
 
 ---
 
+## 更新: 2026-04-16 08:17
+
+*新增 4 篇论文 (编号 712--715)*
+
+### [2026/712] Public Key Encryption from High-Corruption Constraint Satisfaction Problems
+
+- **作者:** Isaac M Hair, Amit Sahai
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/712) | [PDF](https://eprint.iacr.org/2026/712.pdf)
+
+
+> **研究背景:** 该研究旨在构建一种基于高腐蚀约束满足问题的公钥加密方案，以实现可证明的安全性。
+>
+> **主要贡献:** 贡献在于提出了两种新的假设难题：大字母表随机谓词约束满足问题（LARP-CSP）和高腐蚀率的kXOR问题，并据此设计了一种新型的公钥加密方案。
+>
+> **达到效果:** 该方案首次结合了高腐蚀约束满足问题，实现了远超准多项式级别的安全级别。同时，还提供了一种新的基于约束满足问题标签扩展因子图的加密陷阱门方法。
+>
+> **技术梗概:** 技术上，通过构建一种新型的纠错码，使得生成矩阵既具有扩张性又低密度，并能高效地从几乎全部错误中解码。
+
+---
+### [2026/713] How to construct even faster and indifferentiable hash functions from random permutations
+
+- **作者:** Liting Zhang, Han Sui, Lei Zhang, Wenling Wu
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/713) | [PDF](https://eprint.iacr.org/2026/713.pdf)
+
+
+> **研究背景:** 传统的哈希函数设计，如Merkle-Damgård和SPONGE模式，在安全性与效率之间存在固有的权衡，并且容易受到长度扩展攻击。
+>
+> **主要贡献:** 提出了Compress-then-Randomize范式，将哈希函数模块化为两个独立组件：一个可变输入长度的压缩组件和一个固定输入长度的最终化组件。
+>
+> **达到效果:** Rocket系列哈希函数通过此设计实现了高速消息吸收并有效抵御了长度扩展攻击，达到了紧致的安全边界。
+>
+> **技术梗概:** 该方法利用独立随机置换确保最终化组件从理想散列器的角度看是不可区分的，并且压缩组件优化以接近全原语宽度进行处理。
+
+---
+### [2026/714] $\mathsf{Veloz}$: Efficient and Flexible Distribution Framework for Code-Based Polynomial Commitment Scheme
+
+- **作者:** Yuanzhuo Yu, Shi-Feng Sun, Yuncong Zhang, Chenhua Fan, Tianyi Ma, Dawu Gu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/714) | [PDF](https://eprint.iacr.org/2026/714.pdf)
+
+
+> **研究背景:** 现有的多项式承诺方案（PCS）在大规模计算的证明生成中效率低下，并且存在第三方依赖和量子威胁的问题，因此需要一种能够分布式处理这些任务的方法。
+>
+> **主要贡献:** $\mathsf{Veloz}$框架首次实现了通信成本与$N$的次线性关系，并消除了证明大小对子证明者数量的依赖性，同时保持了证明速度和安全性。
+>
+> **达到效果:** 通过$\mathsf{Veloz}$框架，证明时间减少到$O(\frac{N}{M}\log{\frac{N}{\log{N}}})$，通信成本降低至$O(\lambda \cdot \frac{\log^{2}{N}}{\log\log{N}} + M\cdot\frac{N}{\log{N}})$。
+>
+> **技术梗概:** 该框架的核心是一种定制化的交织码证明聚合方法，能够高效地结合子证明而仅需最小的通信量。
+
+---
+### [2026/715] Chorus: Secret Recovery with Ephemeral Client Committees
+
+- **作者:** Deevashwer Rathee, Emma Dauterman, Allison Li, Raluca Ada Popa
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/715) | [PDF](https://eprint.iacr.org/2026/715.pdf)
+
+
+> **研究背景:** 传统的密码恢复系统依赖于安全硬件或非合谋服务器，但这些方法可能增加系统的复杂性和成本。
+>
+> **主要贡献:** Chorus通过设计临时委员会来分散信任，每个委员会由大约一千个客户端组成，并且不依赖服务器进行隐私保护，从而提供强大的隐私性并提高可扩展性。
+>
+> **达到效果:** 在每四个月内，每个客户端的预期开销低于30秒的计算时间和13.2MB的通信量，在拥有1亿客户端的配置中，最多可以有1000万个客户端离线且最多100万个客户端被攻破的情况下实现这一性能。
+>
+> **技术梗概:** Chorus通过频繁更换临时委员会来限制攻击者的能力，并为不稳定的、资源受限的客户端设计了系统，以减少每个客户端的开销。
+
+---
+
 ## 更新: 2026-04-13 21:10
 
 *新增 7 篇论文 (编号 705--711)*
