@@ -79,6 +79,457 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-04-22 20:27</h2>
+<p><em>新增 23 篇论文 (编号 742--766)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/742] Efficient and Post-Quantum Conjunctive Dynamic SSE with Strong Privacy Guarantees</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Bibhas Chandra Das, Nilanjan Datta, Avijit Dutta, Avishek Majumder, Debdeep Mukhopadhyay, Sikhar Patranabis, Subhabrata  Samajder, Laltu Sardar</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/742">论文</a> | <a href="https://eprint.iacr.org/2026/742.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有高效的动态可搜索对称加密(DSSE)方案大多无法同时满足前向和后向隐私，或者通信开销过大、客户端计算负担过重。此外，所有已知的兼具前向和后向隐私的DSSE方案在量子攻击下均不安全。</p>
+<p><strong>主要贡献:</strong> 作者提出了首个系统化的联合查询后向隐私定义，并设计了一种名为fp-GA-ODXT的新框架，该框架同时实现了全面的前向隐私和强大的后向隐私保证，且具有较小的客户端计算开销和低通信成本。</p>
+<p><strong>达到效果:</strong> 实验结果表明，与现有方案相比，该方案在保持高效的同时显著增强了隐私保护能力，并且通信量和客户端计算负担得到了有效控制。</p>
+<p><strong>技术梗概:</strong> 通过引入新的理论框架和改进的协议设计，作者解决了前向和后向隐私之间的冲突问题，在不牺牲性能的前提下实现了更强的安全性。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/744] SPARQ: Scalable Privacy-preserving Aggregate Range Queries</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Mahdieh Heidaripour, Maryam Rezapour, Benjamin Fuller, Hoda Maleki, Gagan Agrawal</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/744">论文</a> | <a href="https://eprint.iacr.org/2026/744.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有方法在多维数组数据上执行关联聚合查询时存在显著限制，包括存储大小与总域大小成正比或最坏情况下的线性时间搜索。此外，基于桶的方法仅适用于最大桶较小的情况，而全同态加密方法则因计算成本过高而不切实际。</p>
+<p><strong>主要贡献:</strong> 研究提出了SPARQ（可扩展隐私保护聚合范围查询），通过使用秘密分段树实现高效存储和搜索，达到了多项式对数的查询复杂度，并在典型数据分布下证明了其长度短于标准替代方案。</p>
+<p><strong>达到效果:</strong> 在具有1-3个维度且最多包含500万条记录的数据集上进行评估时，与非FHE方法相比，该方法减少了存储项的数量达10倍至十亿倍。服务器端查询处理时间保持在合理范围内。</p>
+<p><strong>技术梗概:</strong> SPARQ 使用秘密分段树技术，在保证隐私的同时实现了高效的数据检索和聚合操作，避免了传统方法的存储和搜索瓶颈问题。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/763] LEAH: Lightweight and Efficient Hardware Accelerator for Code-based PQC Scheme HQC</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Yazheng Tu, Jiafeng Xie</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/763">论文</a> | <a href="https://eprint.iacr.org/2026/763.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 量子计算的发展对现代密码学构成了重大威胁，为此，美国国家标准与技术研究院（NIST）启动了后量子密码学（PQC）标准化进程。在这一背景下，本文提出了一种针对HQC方案的轻量高效硬件加速器LEAH。</p>
+<p><strong>主要贡献:</strong> 本文的主要贡献包括：设计专用流程以优化HQC的关键组件；创新数据流布局支持所有参数集的操作阶段；以及FPGA实现结果表明，与现有解决方案相比，在等效面积延迟积（EADP）方面至少节省了13.66%至最多49.87%。</p>
+<p><strong>达到效果:</strong> 通过LEAH的设计，本文实现了HQC方案在不同安全级别下的高效硬件加速，并且在FPGA实现中展示了显著的效率提升。</p>
+<p><strong>技术梗概:</strong> LEAH采用了针对稀疏多项式乘法器、采样器、编码器和解码器等关键组件的高度优化设计；并创新地安排了数据流以支持HQC的所有操作阶段。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/764] CEDAR: A Compact and Efficient Decoder Architecture for RS-RM Code in HQC</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Yazheng Tu, Tianyou Bao, Jiafeng Xie</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/764">论文</a> | <a href="https://eprint.iacr.org/2026/764.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着量子计算的快速发展，后量子密码学(PQC)成为研究热点，旨在开发能够抵御量子攻击的新算法。HQC作为最新的PQC方案之一，在硬件加速方面尚未得到充分研究。</p>
+<p><strong>主要贡献:</strong> 本文提出了CEDAR架构，包括优化的RM解码器、高效的低复杂度RS解码器以及完整的HQC解码器实现，并展示了其性能优势。</p>
+<p><strong>达到效果:</strong> 通过设计CEDAR架构，该研究显著提升了HQC在硬件加速方面的效率，并为NIST PQC标准化进程提供了有力支持。</p>
+<p><strong>技术梗概:</strong> 采用多层次优化策略，包括算法层面和结构层面的改进，以降低解码复杂度并提高解码速度。</p>
+</blockquote>
+<hr />
+<h3>[2026/743] Improved Rate for Non-Malleable Codes and Time-Lock Puzzles</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Cody Freitag, Ilan Komargodski, Manu Kondapaneni, Jad Silbak</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/743">论文</a> | <a href="https://eprint.iacr.org/2026/743.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 非可塑编码允许发送者向接收者传输消息，同时提供一种最佳的完整性保证，确保攻击者（无法解码原始信息）不能篡改消息。</p>
+<p><strong>主要贡献:</strong> 研究提出了新的技术，用于构建具有改进率的非可塑编码和时间锁谜题。</p>
+<p><strong>达到效果:</strong> 通过这些技术，实现了率1的CCA隐藏时间锁谜题，并在辅助输入随机预言模型中实现了率1的非可塑编码。</p>
+<p><strong>技术梗概:</strong> 研究识别了一种新的安全性概念——'CCA隐藏'，并将其应用于构建高效的非可塑编码和时间锁谜题。</p>
+</blockquote>
+<hr />
+<h3>[2026/745] Round-Optimal Privacy Preserving Authenticated Key Exchange Even for Incomplete Sessions</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xavier Bultel, Khouredia Cisse</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/745">论文</a> | <a href="https://eprint.iacr.org/2026/745.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究针对现代应用中使用的高效Noise-like隐式认证密钥交换协议，这些协议仅需少量的指数运算和两次交互。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种高效的Noise-like协议，能够在中断会话的情况下仍保持隐私性，并且在交互次数上达到最优。</p>
+<p><strong>达到效果:</strong> 该协议不仅实现了与非隐私保护协议相当的效率，还在理论安全性假设上有所改进，同时提供了更强的隐私保证。</p>
+<p><strong>技术梗概:</strong> 研究采用了新的安全模型来定义强隐私属性，并设计了一种基于CDH假设的新协议以优化交互次数和计算成本。</p>
+</blockquote>
+<hr />
+<h3>[2026/747] MDSS-STAR: Private Heavy-Hitters through Multi-Dealer Secret Sharing</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Harry Eldridge, Aditya Hegde, Brennon Brimhall, Gabrielle Beck, Matthew Green</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/747">论文</a> | <a href="https://eprint.iacr.org/2026/747.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文提出了一种新的私有遥测系统，用于在STAR和POPSTAR模型下计算t-重击者。该系统通过轻量级随机性服务器协助客户端生成报告并提交给中心聚合服务器来实现隐私保护。</p>
+<p><strong>主要贡献:</strong> 与STAR和POPSTAR相比，该协议减少了泄漏：聚合服务器仅在频率超过预定义阈值时才学习非重击者的值，并且能够抵御聚合服务器与客户端共谋的安全威胁。</p>
+<p><strong>达到效果:</strong> 通过将多重经销商秘密共享技术适应到STAR/POPSTAR模型并引入新型的盲秘密份额抽样协议，该协议实现了这些隐私保证。实验表明其在多种应用场景中是可行的，并支持可调的正确性、效率和隐私之间的权衡。</p>
+<p><strong>技术梗概:</strong> 本文采用了多重经销商秘密共享（MDSS）技术来适应STAR/POPSTAR模型，并引入了新型的盲秘密份额抽样协议以确保对抗共谋聚合服务器的安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/748] Related-Key Multi-Pair Neural Distinguishers: Analysis and Applications to Lightweight Block Ciphers</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Thanh-Phong Nguyen, Nguyen Tan Cam, Thanh-Hien Vu, Van-Than Huynh, Hieu-Minh Nguyen</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/748">论文</a> | <a href="https://eprint.iacr.org/2026/748.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究了神经差分密码分析在相关密钥和多对设置下的扩展，通过聚合多个密文对的微弱统计偏差来增强攻击效果。</p>
+<p><strong>主要贡献:</strong> 提出了基于信号中心的方法，分析了四个轻量级块密码（PRESENT-80, SIMECK-32/64, LEA-128, HIGHT）的相关密钥、多对神经区别的性能。</p>
+<p><strong>达到效果:</strong> 结果表明，多对聚合可以增强弱统计偏差的可区分性，但随着轮数增加，信号逐渐衰减，导致区分能力边界清晰。</p>
+<p><strong>技术梗概:</strong> 使用独立于模型的几何度量（如PCA嵌入和轮廓评分）来表征密文分布，并关联这些数据级测量与在不同聚合水平下的神经区别的性能。</p>
+</blockquote>
+<hr />
+<h3>[2026/749] Divide-and-Pair: Faster subgroup membership testing for elliptic curves</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yu Dai, Youssef El Housni, Dimitri Koshelev, Krijn Reijnders</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/749">论文</a> | <a href="https://eprint.iacr.org/2026/749.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在椭圆曲线上进行子群成员身份测试（SMT）对于防止小子群攻击至关重要，尤其是在具有非平凡陪数的曲线中。现有方法包括Pornin的方法和Koshelev的方法，但两者各有局限。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种新的方法Divide-and-Pair，它在分拆和配对之间进行权衡，能够在多种情况下比原有方法更快。</p>
+<p><strong>达到效果:</strong> 该方法被应用于五种广泛使用的曲线，并实现了显著的速度提升，尤其是在Curve25519、Curve448、GC256A、Four$\mathbb{Q}$ 和 JubJub 曲线上。</p>
+<p><strong>技术梗概:</strong> Divide-and-Pair 方法通过结合使用分拆和配对技术来优化SMT过程，在不需要非退化条件的情况下提高了效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/750] MCU: Exact and Constant-Round Nonlinear Function Evaluation in MPC without Preprocessing</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Min Yang, Jinxuan Du, Zihang Zhou, Dongcan Guo, Qingshu Meng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/750">论文</a> | <a href="https://eprint.iacr.org/2026/750.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着人工智能应用的迅速增长，特别是大规模语言模型和深度神经网络的发展，对大量训练数据的需求激增，引发了隐私保护问题。现有的安全多方计算（MPC）系统虽然有效但效率低下且难以扩展，尤其是在处理现代基于Transformer的大规模参数模型时需要大量的预处理工作量。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种名为MCU的新颖MPC架构，能够在无需任何预处理的情况下直接支持广泛的非线性函数。该方法通过引入半诚实的辅助计算方来实现这一目标，显著减少了隐私泄露风险并提高了效率。</p>
+<p><strong>达到效果:</strong> MCU架构能够以精确且常数轮次的方式执行非线性函数计算，并且在不牺牲安全性的前提下大幅提升了性能和可扩展性。</p>
+<p><strong>技术梗概:</strong> MCU通过输入加掩码、辅助方进行计算以及输出解掩码的流程，实现了非线性函数的有效计算，同时保持了协议的安全性和效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/751] LigeSIS: Distribution-friendly Polynomial Commitment \ Based on Error-correcting Code</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yanpei Guo, Hancheng Lou, Wenjie Qu, Zhuoyuan Xu, Jiaheng Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/751">论文</a> | <a href="https://eprint.iacr.org/2026/751.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 多项式承诺方案（PCS）是现代证明系统的基本构建块。随着证明系统应用的工作负载增大，分布式PCS变得至关重要，以减少证明者的时间和内存压力。</p>
+<p><strong>主要贡献:</strong> 本文提出了LigeSIS，这是首个分布友好的基于纠错码的多线性PCS。</p>
+<p><strong>达到效果:</strong> LigeSIS实现了跨节点通信量的亚线性增长，并保持最终证明大小与机器数量无关。在分布式设置中，LigeSIS在证明者时间上表现出接近线性的可扩展性。</p>
+<p><strong>技术梗概:</strong> 通过用Goldilocks64上的同态子集和哈希替换梅克尔树哈希，LigeSIS实现了部分承诺的代数聚合，并引入了预处理加速的子集和哈希以减少哈希开销。</p>
+</blockquote>
+<hr />
+<h3>[2026/752] GlitchSnipe: Toward Localized Voltage Fault Attacks</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Fatemeh Khojasteh Dana, Saleh Khalaj Monfared, Hamed Okhravi, Shahin Tajik</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/752">论文</a> | <a href="https://eprint.iacr.org/2026/752.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 电压故障注入技术因其有效性和简单性而广受关注，尽管通常认为其影响是全局性的，但研究发现特定位置可能受到更大影响。</p>
+<p><strong>主要贡献:</strong> 作者提出了GlitchSnipe方法，通过分析电压瞬变的频域特性并将其视为通过电源分配网络（PDN）传播的传导电磁能量来建模，从而实现局部故障注入。</p>
+<p><strong>达到效果:</strong> 该方法能够识别系统PDN最脆弱的频率范围，并确定每个频率分量影响的芯片区域，验证了局部故障注入的可能性。</p>
+<p><strong>技术梗概:</strong> 通过使用分布式时间-数字转换器（TDC）对多个FPGA进行详尽分析，作者提出了一种后硅探测框架来定位受影响的频率带宽和空间区域。</p>
+</blockquote>
+<hr />
+<h3>[2026/753] DDR-SSE: Duplicated Retrieval of Documents for System-wide Secure Searchable Symmetric Encryption</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zichen Gui, Simon-Philipp Merz, Kenneth G. Paterson, Sikhar Patranabis</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/753">论文</a> | <a href="https://eprint.iacr.org/2026/753.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的高效可系统安全性搜索加密方案存在客户端状态更新频繁或泄漏特征难以精确描述的问题，这限制了其在实际场景中的应用。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种名为DDR-SSE的新方案，该方案仅需静态客户端状态，并具有简单的泄漏模式，从而解决了现有方案的不足。</p>
+<p><strong>达到效果:</strong> 通过形式化的系统安全性泄漏模型和广泛的泄漏密码分析，证明了DDR-SSE能够抵御查询重构攻击并保持高效性。</p>
+<p><strong>技术梗概:</strong> 该方案利用重复文档存储和随机化检索机制来抑制访问模式泄漏，同时不牺牲实际效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/754] BTX: Simple and Efficient Batch Threshold Encryption</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Amit Agarwal, Sourav Das, Babak Poorebrahim Gilkalaye, Peter Rindal, Victor Shoup</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/754">论文</a> | <a href="https://eprint.iacr.org/2026/754.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Batched threshold encryption (BTE)允许多个服务器联合解密大量密文中的任意子集，同时保持未选中密文的隐私性。这是构建加密内存池的关键组件，在交易被区块包含前进行加密以减轻最大可提取价值(MEV)的问题。现有的无周期BTE方案要么需要用户选择密文索引导致协调和审查问题，要么计算效率低下。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种名为BTX的简单且高效BTE构造，无需用户选择批次索引即可实现无周期和碰撞自由特性，并在相同大小的标准Elgamal密文中实现了最短的密文长度。</p>
+<p><strong>达到效果:</strong> 通过使方案适用于FFT，我们将解密成本降低到$O(B\log B)$组指数运算和$O(B)$对数运算。在批量大小为512时，使用单个核心进行解密，BTX所需时间为约598毫秒，比Boneh等人部分分数评估基线的FFT优化版本快了大约2.0倍。</p>
+<p><strong>技术梗概:</strong> 通过在BLS12-381上共享并高度优化C++代码，并使用AVX-512矢量化和适用时的FFT后端，实现了上述性能提升。</p>
+</blockquote>
+<hr />
+<h3>[2026/755] ACTS: Attestations of Contents in TLS Sessions</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Pierpaolo Della Monica, Ivan Visconti, Andrea Vitaletti, Marco Zecchini</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/755">论文</a> | <a href="https://eprint.iacr.org/2026/755.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有技术如DECO和TLSNotary虽然能够在不修改TLS服务器的情况下验证用户从TLS服务器获取特定数据的能力，但这些方法要求验证器运行复杂的非标准化加密方案（如ZK-SNARKs），这限制了其大规模应用。</p>
+<p><strong>主要贡献:</strong> ACTS通过利用Fuchsbauer和Wolf提出的谓词盲签名概念，提出了一种新的分布式架构，允许用户仅需验证器软件检查标准签名即可证明拥有从TLS服务器获取的数据，从而绕过了先前工作的局限性。</p>
+<p><strong>达到效果:</strong> ACTS实现了圆最优的谓词盲签名协议，并生成了标准RSA-PSS签名。该方案能够与DECO及其后续版本集成使用，用于认证从TLS服务器检索的数据。</p>
+<p><strong>技术梗概:</strong> ACTS基于谓词盲签名技术，设计了一种分布式架构，使得验证器只需检查标准签名即可完成数据认证过程，从而简化了验证流程并提高了应用的可行性。</p>
+</blockquote>
+<hr />
+<h3>[2026/756] Integral Attack on Reduced-Round Kalyna</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Nitish Kumar, Ranit Dutta, Bimal Mandal</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/756">论文</a> | <a href="https://eprint.iacr.org/2026/756.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：本文探讨了对乌拉尔区块密码Kalyna的整数攻击，旨在构建具有低数据、时间和内存复杂度的减少轮次区分器和密钥恢复攻击。尽管Kalyna采用SPN型圆结构，其预白化和后白化层使用列向量模$2^{64}$加法，这使得整数属性的传播比仅XOR设计更为微妙。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者通过精心选择输入多集并结合逆轮变换进行反向扩展，为Kalyna-128、Kalyna-256和Kalyna-512提供了标准设置下的区分器，并在弱密钥假设下以及无预白化变体中进行了研究。这些区分器的数据复杂度低至$2^8$或$2^{16}$个选择文本，显著提高了之前公开的Kalyna整数结果的数据复杂度。</p>
+<p><strong>达到效果:</strong> 达到的效果：作者进一步将这些区分器扩展为针对减少轮次Kalyna的部分解密和平衡性测试的密钥恢复攻击。例如，他们对Kalyna-128/128实现了5轮密钥恢复攻击，数据复杂度为$2^9$个选择明文，时间复杂度为$2^{74}$加密运算，并且内存开销可以忽略不计。据我们所知，这是首次提供针对Kalyna-256/256和Kalyna-512/512的整数密码分析。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过结合精心选择的输入多集与逆轮变换进行反向扩展，作者提出了针对减少轮次Kalyna的区分器，并进一步将其转化为密钥恢复攻击。这种方法利用了模$2^{64}$加法对整数属性传播的影响，从而提高了攻击的有效性和效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/757] Integral Distinguishers and a 4-Round Key-Recovery Attack on Kuznyechik Without Initial Key Whitening</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Nitish Kumar, Ranit Dutta, Bimal Mandal</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/757">论文</a> | <a href="https://eprint.iacr.org/2026/757.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文研究了Kuznyechik密码算法，通过集成密码分析方法追踪特定明文集合在多轮函数中的传播特性。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种2轮区分器，并在此基础上扩展至3轮，最终实现了一个无需初始密钥混洗的4轮密钥恢复攻击。</p>
+<p><strong>达到效果:</strong> 该研究揭示了Kuznyechik在特定条件下的弱点，能够有效减少密钥空间搜索的时间和资源消耗。</p>
+<p><strong>技术梗概:</strong> 通过构造平衡测试并结合部分逆向操作来过滤密钥猜测，从而实现高效的密钥恢复。</p>
+</blockquote>
+<hr />
+<h3>[2026/759] A Scalable Fault Countermeasure for SLH-DSA: Trade-offs Between Memory, Performance, and Fault Resilience</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Melissa Azouaoui, Tobias Schneider, Denise Verbakel</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/759">论文</a> | <a href="https://eprint.iacr.org/2026/759.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对SLH-DSA中的嫁接树故障攻击，研究提出了一种可扩展且参数化的压缩缓存对策。</p>
+<p><strong>主要贡献:</strong> 该方法通过减少缓存的WOTS+签名和公钥占用的内存空间来实现显著的记忆节省，并保持强大的故障检测能力。</p>
+<p><strong>达到效果:</strong> 安全性和性能分析表明，在有限的缓存内存（少于约256 kB）下，压缩缓存比标准缓存具有更高的故障检测概率并表现出更好的性能。</p>
+<p><strong>技术梗概:</strong> 通过调整缓存大小、故障恢复能力和性能之间的权衡来实现定制化配置，并研究了标准和压缩缓存的细粒度变体以优化内存-性能权衡。</p>
+</blockquote>
+<hr />
+<h3>[2026/760] A Simple Batched Threshold Encryption Scheme</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Guru-Vamsi Policharla</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/760">论文</a> | <a href="https://eprint.iacr.org/2026/760.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究旨在设计一种简单高效的批量门限加密方案，以解决现有方案中的审查抵抗性、周期限制及解密复杂度过高等问题。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种满足挑战适应性选择攻击（CPA）和挑战选择适应性选择攻击（CCA）安全性的批量门限加密方案，并且该方案具有线性增长的密钥大小和准线性解密复杂度。</p>
+<p><strong>达到效果:</strong> 实验结果显示，该方案在批量大小为B时，解密复杂度为O(BlogB)，并且其CPA安全的密文长度为|(\mathbb{G}_1)| + |(\mathbb{G}_T)|，CCA安全的密文长度为|(\mathbb{G}_1)| + 2|(\mathbb{F})| + |(\mathbb{G}_T)|。</p>
+<p><strong>技术梗概:</strong> 该方案通过引入交互式的设置阶段（涉及安全乘法）来实现，并且需要在每个批量中生成和维护线性增长的密钥。</p>
+</blockquote>
+<hr />
+<h3>[2026/761] Improved Garbled RAM via Garbled Merge</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Can Liu, Lenny Liu, Ning Luo, David Heath</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/761">论文</a> | <a href="https://eprint.iacr.org/2026/761.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：在加密电路（GC）中，合并两个长度为$n$的$w$位数组以生成一个单一的长度-$n$数组是构建加密随机存取存储器（GRAM）的关键问题。GRAM技术允许高效地编译通用程序。</p>
+<p><strong>主要贡献:</strong> 主要贡献：提出了一种基于对称密钥的新颖合并方法，实现了$(w + 1) \cdot n \cdot \lambda$比特的电路大小，相比现有最佳结果在渐进性和具体实现上均有所改进。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过应用此合并方法，获得了适用于操作$\Theta(\lg n)$位字且在$n$步内停止运行的字RAM程序的对称密钥GRAM，其通信成本为$O(n \lg^3 n \cdot \lambda) \cdot \omega(1)$比特，相比前最佳结果减少了$O(\lg \lg n)$倍。</p>
+<p><strong>技术梗概:</strong> 技术梗概：该方法基于对称密钥机制，并通过优化合并过程实现了更小的电路大小和通信成本。</p>
+</blockquote>
+<hr />
+<h3>[2026/762] The Sum-Check Protocol over the Monomial Basis, and Other Optimizations</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Quang Dao, Ari Biswas, Liam Eagen, Andrew Milson, Shahar Papini, Justin Thaler</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/762">论文</a> | <a href="https://eprint.iacr.org/2026/762.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究基于快速证明者SUMCHECK协议，旨在优化SNARKs（简洁可验证论证系统），特别是在多变量多项式上的求和验证。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种项目化SUMCHECK协议，通过将插值集从布尔超立方体{0,1}^n更改为无穷超立方体{0,∞}^n，实现了证明者速度提升约10%，并简化了多项式的绑定过程。</p>
+<p><strong>达到效果:</strong> 在BN254和伪梅森素数域上，项目化SUMCHECK协议显著提高了SNARKs的验证效率，并减少了字段减法操作。对于结构化的多项式如等式和小于关系，该方法进一步降低了计算复杂度。</p>
+<p><strong>技术梗概:</strong> 通过改变插值集并引入无穷点的评估方法，直接提取多项式的相应单项式系数，从而简化了多项式表示、轮次身份验证及评估公式。</p>
+</blockquote>
+<hr />
+<h3>[2026/765] MBU:  Scalable and Constant-Round  Evaluation of Non-linear Functions in Standard MPC Setting</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Min Yang, Dongcan Guo, Zihang Zhou, Jinxuan Du, Qingshu Meng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/765">论文</a> | <a href="https://eprint.iacr.org/2026/765.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 尽管多 party 计算 (MPC) 在处理变量乘法和基于比较的函数方面取得了显著进展，但对于多项式、幂、指数、三角函数、Sigmoid、Softmax 和 GeLU 等一般非线性函数，仍缺乏高效且精确的常数轮次 MPC 解决方案。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种统一的 '掩码-广播-去掩码' 设计模式，实现了多种非线性函数的一轮次评估，并保持了无近似特性。贡献包括一种适用于 (k) 个变量的一轮次乘法协议，通信复杂度为最优的 (O(kn))。</p>
+<p><strong>达到效果:</strong> 该方法不仅简化了现有解决方案中的多轮次问题和精度损失，还提高了非线性函数评估的效率与准确性，支持更多参与方的大规模计算。</p>
+<p><strong>技术梗概:</strong> 通过结合广播机制和去掩码技术，实现了对多种复杂非线性函数的精确且高效的常数轮次评估。</p>
+</blockquote>
+<hr />
+<h3>[2026/766] Dynamic Group Time-based One-time Passwords</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xuelian Cao, Zheng Yang, Jianting Ning, Chenglu Jin, Zhiming Liu, Jianying Zhou</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/766">论文</a> | <a href="https://eprint.iacr.org/2026/766.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：针对静态组管理设置下的一次性密码（OTP）方案，提出了动态组时间基一次性密码（DGTOTP），以支持成员的非破坏性加入和退出，同时保持匿名性和可追踪性。</p>
+<p><strong>主要贡献:</strong> 主要贡献：首次定义了动态组时间基一次性密码的概念及其安全模型，并提出了一种利用可变色哈希函数家族和Merkle树方案将异步时间基一次性密码转换为DGTOTP的有效构造方法。</p>
+<p><strong>达到效果:</strong> 达到的效果：实现了在动态组管理下轻量级的一次性密码生成过程，确保了成员的非破坏性加入与退出，并保持了匿名性和可追踪性。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过设计外包解决方案实现先发问题后加入（IFJL）策略，结合使用可变色哈希函数家族和Merkle树方案来支持动态组管理。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-04-19 15:52</h2>
 <p><em>新增 24 篇论文 (编号 716--741)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/717] Scalable Registration-Based Encryption from Lattices</h3>
