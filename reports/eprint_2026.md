@@ -5,6 +5,199 @@
 
 ---
 
+## 更新: 2026-04-23 19:48
+
+*新增 10 篇论文 (编号 767--777)*
+
+### [推荐] [2026/767] Cryptanalysis of the Sharafi–Daghigh digital signature scheme
+
+- **匹配关键字:** LWE
+
+- **作者:** Nour-eddine Rahmani, Taoufik Serraj, Abdelmalek Azizi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/767) | [PDF](https://eprint.iacr.org/2026/767.pdf)
+
+
+> **研究背景:** 该研究旨在分析Sharafi和Daghigh提出的基于Ring-LWE的数字签名方案的安全性，该方案借鉴了Lindner–Peikert加密范式，并采用Fiat–Shamir变换的哈希签名方法。
+>
+> **主要贡献:** 作者通过证明该方案不安全并将其分析推广到plain-LWE设置下的类似方案，揭示了其潜在的安全漏洞。
+>
+> **达到效果:** 研究结果表明Sharafi和Daghigh的签名方案在理论和实际应用中均存在安全隐患，不能依赖于Ring LWE和Ring-SIS问题的假设难度来保证安全性。
+>
+> **技术梗概:** 采用密码分析技术对方案进行深入研究，并通过构造特定实例展示了其脆弱性。
+
+---
+### [推荐] [2026/768] Towards More Efficient Registration-Based Encryption from LWE
+
+- **匹配关键字:** post-quantum, LWE
+
+- **作者:** Toi Tomita
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/768) | [PDF](https://eprint.iacr.org/2026/768.pdf)
+
+
+> **研究背景:** 现有后量子注册加密方案因密文大小过大而难以大规模实施，这限制了其在社会中的应用。
+>
+> **主要贡献:** 作者提出了一种基于LWE假设的高效RBE构造框架，并引入了可分解精简加密技术。
+>
+> **达到效果:** 该方案即使用户数量增加到$2^{10}$时，密文大小仍保持在约221MB左右。
+>
+> **技术梗概:** 通过结合可分解精简加密和改进的快照技巧来实现高效性。
+
+---
+### [推荐] [2026/772] Lattice-based Ring Verifiable Random Functions
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Jie Xu, Muhammed F. Esgin, Ron Steinfeld
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/772) | [PDF](https://eprint.iacr.org/2026/772.pdf)
+
+
+> **研究背景:** Verifiable Random Functions (VRFs)在去中心化协议中广泛应用，但标准的VRF验证会泄露签名者的身份，这使得他们容易受到针对性攻击。
+>
+> **主要贡献:** 研究提出了Ring VRFs（RVRFs），允许环中的成员发布与输入和秘密密钥相关联的可验证伪随机值，并隐藏其在环内的索引位置。
+>
+> **达到效果:** 通过设计一个综合的安全概念框架，包括正确性、匿名性、伪随机性和新颖的抗篡改唯一性($T$-uniqueness)，实现了对匿名环境下的可验证随机性的全面保护。
+>
+> **技术梗概:** 提出了一种模块化编译器，将任何证明VRF转换为RVRF，通过在随机预言机模型中使用优化后的Fiat-Shamir OR (FS-OR)组合实现后量子安全。
+
+---
+### [推荐] [2026/777] How Strong is the FO-Calypse, Really? Instantiating Plaintext-Checking Oracles against Masked Software Implementations of ML-KEM
+
+- **匹配关键字:** lattice
+
+- **作者:** Brieuc Balon, Gaëtan Cassiers, Thibaud Schoenauen, François-Xavier Standaert
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/777) | [PDF](https://eprint.iacr.org/2026/777.pdf)
+
+
+> **研究背景:** 研究背景：针对基于ML-KEM的软件实现中的明文检查预言机（PCO）侧信道攻击已有广泛研究，但较少关注如何在实际掩码实现中有效利用这些预言机。
+>
+> **主要贡献:** 主要贡献：系统地对三种开源Keccak函数的掩码软件实现进行了PCO实例化，并提出了一个简单、具体且可重用的Keccak掩码实现模型。
+>
+> **达到效果:** 达到的效果：通过状态最前沿的攻击方法，成功利用了多达7份额码的高准确性泄漏信息，证实了“计算更多意味着泄露更多”的说法，并表明在这些平台上实施高级安全级别将不可行。
+>
+> **技术梗概:** 技术梗概：使用ARM Cortex-M4平台进行基于最新攻击技术的定量评估，结合不同掩码技术和编程风格实现PCO实例化。
+
+---
+### [2026/769] High-Order Masking for MQOM v2.1 Signing
+
+- **作者:** Yi-Lin Hung, Jiun-Peng Chen, Ho-Lin Chen, Bo-Yin Yang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/769) | [PDF](https://eprint.iacr.org/2026/769.pdf)
+
+
+> **研究背景:** 该研究旨在为NIST额外数字签名标准化过程中的MQOM v2.1候选算法提供首个高阶完全共享掩码构造，以提高其安全性并优化性能。
+>
+> **主要贡献:** 贡献在于提出了基于标准探针泄漏模型的基线高阶掩码签名设计，并引入了基于Rijndael LUT的加速模式来缓解在线时间瓶颈。
+>
+> **达到效果:** 研究结果表明，虽然加速模式增加了离线时间和内存成本，但显著减少了在线签名延迟；全面评估了36种MQOM v2.1签名变体在GF(2)、GF(16)和GF(256)上的性能和泄漏情况。
+>
+> **技术梗概:** 技术上采用了高阶掩码技术和Rijndael查找表来优化签名过程，确保安全性和效率的平衡。
+
+---
+### [2026/770] Cryptanalysis of Hecke-KE: A Linear-Algebra Attack via Hecke Eigenbasis Decomposition
+
+- **作者:** Xiyao Chen
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/770) | [PDF](https://eprint.iacr.org/2026/770.pdf)
+
+
+> **研究背景:** 本文针对Hecke-KE密钥交换方案提出了一种被动攻击方法，该方案利用Hecke算子在$S_k(\Gamma_0(N))$上的乘积作为单向函数。
+>
+> **主要贡献:** 作者证明了Hecke代数在任何固定的空间$S_k(\Gamma_0(N))$上可以同时对角化，并将共享密钥恢复归结为$d$次标量除法运算，其中$d=\dim S_k(\Gamma_0(N))$。
+>
+> **达到效果:** 通过预计算Hecke算子的特征基，攻击者可以在每次会话中仅需$O(d^2)$次数域操作来恢复共享密钥，验证结果表明该方法在SageMath 10.7上对所有参数集均有效。
+>
+> **技术梗概:** 技术上，通过分解Hecke算子的作用空间并利用特征基进行线性代数攻击，将复杂的密钥恢复问题简化为标量除法运算。
+
+---
+### [2026/771] Vector-Input Hashing Modes for Collision-Resistant Pseudorandom Function
+
+- **作者:** Shoichi Hirose, Tetsu Iwata, Hidenori Kuwakado
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/771) | [PDF](https://eprint.iacr.org/2026/771.pdf)
+
+
+> **研究背景:** 该研究旨在通过使用密钥哈希函数构建抗冲突伪随机函数（CR PRF），解决现有字符串输入模式在处理向量输入时的局限性。
+>
+> **主要贡献:** 提出了一种新的向量输入密钥哈希模式VIM1和VIM2，以及一种并行处理向量中字符串的模式PVIM。
+>
+> **达到效果:** 通过结合最近提出的KHC1或KHC2模式，证明了在满足扩展抗冲突性和相关密钥攻击下为安全伪随机函数的压缩函数的基础上，可以构建CR PRFs。
+>
+> **技术梗概:** 该研究通过替换压缩函数来实现向量输入，并利用现有的字符串输入模式进行优化，从而提高效率和安全性。
+
+---
+### [2026/774] Provably Secure Hybrid Inner Product and Boolean Masking via Composable Conversion
+
+- **作者:** Jaeseung Han, Dong-Guk Han
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/774) | [PDF](https://eprint.iacr.org/2026/774.pdf)
+
+
+> **研究背景:** 文章针对掩码技术中的布尔掩码（BM）和内积掩码（IPM）的安全性进行了研究，旨在解决现有方案在实现高安全级别时面临的挑战。
+>
+> **主要贡献:** 作者提出了BM到IPM及IPM到BM的转换机制，并优化了内积乘法器，实现了两个掩码域之间的可组合且证明安全的互操作。
+>
+> **达到效果:** 通过这些贡献，文章成功地减少了随机比特的需求量并提高了效率，同时保持了所需的安全级别。
+>
+> **技术梗概:** 采用行打包和行列减少技术优化了IPM乘法器，并设计了混合IPM-BM框架以实现高效安全的线性操作处理。
+
+---
+### [2026/775] Differential and Linear Cryptanalysis of Modular Addition
+
+- **作者:** Halil İbrahim Kaplan, Ali Doğan, Gökçe Yetişer
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/775) | [PDF](https://eprint.iacr.org/2026/775.pdf)
+
+
+> **研究背景:** 本文从密码分析的角度全面分析了模加操作，探讨了进位比特的概率分布及其对线性逼近的影响。
+>
+> **主要贡献:** 作者提出了构造模加操作的线性逼近表（LAT）和差分分布表（DDT）的具体算法，并提供了理论证明和实际案例。
+>
+> **达到效果:** 研究揭示了随着位位置增加，进位比特的概率接近1/2，这对线性密码分析的有效性产生了显著影响。
+>
+> **技术梗概:** 通过利用较小的表格和进位比特关系来扩展大尺寸差分分布表（DDT），作者展示了如何构建适用于更大位数模加操作的算法。
+
+---
+### [2026/776] SCOUT-CT: Sound Constant-Time Outcome with Uncertainty Tracking using multi-taint analysis
+
+- **作者:** Damien Maier, Jean-François Pasche, Maxim Golay, Alexandre Duc
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/776) | [PDF](https://eprint.iacr.org/2026/776.pdf)
+
+
+> **研究背景:** 侧信道攻击是一种重要的安全威胁，通过观察系统无意中泄露的信息来获取敏感数据。编写常量时间代码是防止基于时间和微体系结构侧信道攻击的常见防御措施。
+>
+> **主要贡献:** 本文提出了一种新颖的声音分析方法，用于在常量时间模型下检测信息泄露，并通过系统跟踪精度损失来确定检测到的信息泄露是否由过度近似引起。
+>
+> **达到效果:** 该技术能够直接对二进制可执行文件进行分析，减少手动检查的需要，并保证未检测到精度损失的确认发现的真实性。
+>
+> **技术梗概:** 本文的方法通过多污点分析系统地跟踪精度损失，以确定检测到的信息泄露是否由过度近似引起，并仅需对检测到精度损失的发现进行传统的人工验证。
+
+---
+
 ## 更新: 2026-04-22 20:27
 
 *新增 23 篇论文 (编号 742--766)*
