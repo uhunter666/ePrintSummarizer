@@ -5,6 +5,105 @@
 
 ---
 
+## 更新: 2026-04-26 21:16
+
+*新增 5 篇论文 (编号 797--801)*
+
+### [推荐] [2026/798] Implementing CCZ Gates with Variation of Gate Teleportation for Quantum Homomorphic Encryption on NISQ Platform
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Gia Phat Dang, Weisheng Si, Belal Alsinglawi, Jim Basilakis
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/798) | [PDF](https://eprint.iacr.org/2026/798.pdf)
+
+
+> **研究背景:** 针对分布式量子硬件服务主要由IBM、Google和AWS等量子提供商主导的问题，提出了量子同态加密（QHE）以确保在银行业、国防和医疗等行业中的数据安全。然而，由于电路复杂性和当前量子系统的噪声，部署QHE仍然具有挑战性。
+>
+> **主要贡献:** 本文通过结合VGT方案与CQC-QHE框架，实现了CCZ门的高效实现，从而支持7个量子比特和14次T-门操作，显著降低了计算成本并提高了资源利用率。
+>
+> **达到效果:** 实验结果表明，该方法能够在不引入大量错误的情况下支持更多的量子比特和更复杂的量子门操作，提升了QHE在NISQ平台上的实用性。
+>
+> **技术梗概:** 本文采用VGT方案对CCZ门进行变种实现，并结合Ortega等人提出的CQC-QHE框架，通过优化电路设计减少了计算资源的消耗。
+
+---
+### [推荐] [2026/799] EQuADiSE: Efficient Quantum-safe Adaptive Distributed Symmetric-key Encryption
+
+- **匹配关键字:** post-quantum, LWR
+
+- **作者:** Sayani Sinha, Sikhar Patranabis, Debdeep Mukhopadhyay
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/799) | [PDF](https://eprint.iacr.org/2026/799.pdf)
+
+
+> **研究背景:** 分布式对称密钥加密(DiSE)允许传统对称密钥认证加密的阈值版本，其中长期主密钥在多个参与方之间秘密共享，并且加密和解密都是分布式的。然而，现有的适应性安全DiSE实例要么因依赖于离散对数难题组而量子脆弱，要么在线加密/解密开销呈指数增长。
+>
+> **主要贡献:** EQuADiSE是首个基于模块学习近似(MLWR)假设在量子随机预言模型(QROM)下的实用高效、适应性安全且可能后量子DiSE构造，其加密和解密开销为线性。此外，引入了具有QROM下适应性安全性的MLWR基分布式伪随机函数(DPRF)，在线评估时间表现优于现有所有适应性安全DPRF构造。
+>
+> **达到效果:** EQuADiSE在保持适应性安全性的同时实现了线性加密和解密开销，并且是首个实用高效的量子安全DiSE实例，显著提高了性能。
+>
+> **技术梗概:** 通过引入基于MLWR的分布式伪随机函数(DPRF)，EQuADiSE利用QROM下的适应性安全性技术，在不牺牲效率的情况下提供了适应性安全性保证。
+
+---
+### [2026/797] Factorisation-Based Multivariate Schemes: Structural Properties and New Constructions
+
+- **作者:** Borja Gomez
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/797) | [PDF](https://eprint.iacr.org/2026/797.pdf)
+
+
+> **研究背景:** 研究基于因子分解的多变量方案，特别是利用多项式环上的代数结构进行秘密因子分解作为陷阱门机制。
+>
+> **主要贡献:** 提出了一个通用性质：如果某个代数结构允许隐藏因子分解，则该性质可作为陷阱门原理。
+>
+> **达到效果:** 基于此方法，设计了两种方案：一种签名方案和一种加密方案。
+>
+> **技术梗概:** 通过分析多项式环上的秘密因子分解来构建陷阱门机制，并据此提出了具体的密码学构造。
+
+---
+### [2026/800] Deploying decryption oracles for fun and non-profit: Backing up with friends and TEEs
+
+- **作者:** Kanav Gupta, Gabriel Kaptchuk, Ian Miers
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/800) | [PDF](https://eprint.iacr.org/2026/800.pdf)
+
+
+> **研究背景:** 现有的安全备份系统未能将前向保密性和后妥协安全性作为首要设计约束，且部分方案依赖可信执行环境的PKI来提供安全，这在部署中存在关键风险。
+>
+> **主要贡献:** 提出了一种新颖、高效且简单的安全备份系统，通过定期轮换备份服务器并独立采样密钥材料来解决这些问题，并引入了社会密钥恢复机制以增强灵活性。
+>
+> **达到效果:** 该设计已被证明是安全的并通过基准测试表明其可部署性，能够在普通硬件上运行而无需WhatsApp或苹果加密备份所需的资源。
+>
+> **技术梗概:** 通过定期更换备份服务器并独立采样密钥材料来实现密钥轮换，并设计了一种静默备份过程以减少服务器负载。
+
+---
+### [2026/801] Outsourced Private Set Intersection for Pairwise Analytics
+
+- **作者:** Ferran Alborch, Tangi De Kerdrel, Antonio Faonio, Melek Önen
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/801) | [PDF](https://eprint.iacr.org/2026/801.pdf)
+
+
+> **研究背景:** 研究背景：在多方持有敏感数据并希望计算全局统计信息而不泄露其数据的情况下，隐私保护的数据分析变得尤为重要。本文关注的是跨多个数据集对成对元素的共同数量（交集的基数）进行计算的问题，确保仅披露最终汇总结果而不会泄露任何中间信息。
+>
+> **主要贡献:** 主要贡献：提出了一种新的密码学原语——外包计算的秘密共享输出私有集合交集（CaOPSI-SS），并基于此设计了一个协议来实现多对一的聚合分析，能够计算多个参与方间交集基数之和。
+>
+> **达到效果:** 达到的效果：通过应用该框架到实际场景中，实现了大型组织内不同子公司间的隐私保护邮件分析，能够在不泄露敏感人力资源数据的情况下进行细粒度查询。同时，通过扩展差分隐私机制进一步保护了个体记录的隐私。
+>
+> **技术梗概:** 技术梗概：利用伪随机函数和两个非协作服务器来卸载计算任务，使得该解决方案适用于资源异构环境，并展示了其在大规模数据集上的可扩展性和实用性。
+
+---
+
 ## 更新: 2026-04-24 20:50
 
 *新增 18 篇论文 (编号 778--796)*
