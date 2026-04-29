@@ -5,6 +5,333 @@
 
 ---
 
+## 更新: 2026-04-29 19:49
+
+*新增 17 篇论文 (编号 802--822)*
+
+### [推荐] [2026/802] A Primer on Dependency in Polynomial Product: Identify, Exploit, and Trim
+
+- **匹配关键字:** lattice
+
+- **作者:** Yijian Liu, Jiangxia Ge, Yu Zhang, Jiabo Wang, Xianhui Lu
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/802) | [PDF](https://eprint.iacr.org/2026/802.pdf)
+
+
+> **研究背景:** 研究背景：许多基于格的加密方案允许非零但可忽略的解密失败率（DFR），这与正确性和安全性密切相关，并通过基于故障的攻击来衡量。现有的模块化格构造通常假设噪声在系数上是独立且均匀分布的，但在实际安全场景中这种假设可能过于乐观。
+>
+> **主要贡献:** 主要贡献：作者通过对二进制循环环中的多项式乘积进行范数分解，明确展示了由于卷积引入的结构依赖性，使得噪声向立方体而非球体扩散。这为理解多项式产品的重尾现象提供了精确解释，并揭示了基于独立性的估计与实际故障行为之间的差距。
+>
+> **达到效果:** 达到的效果：该研究不仅澄清了多项式乘积中的依赖关系，还为设计更安全的加密方案奠定了理论基础，有助于提高基于格的密码学的安全性和可靠性。
+>
+> **技术梗概:** 技术梗概：通过范数分解方法，将多项式乘积分为外项和内项，分别对应于噪声的半径部分和表面不均匀部分，并利用对角能量术语来捕捉卷积引起的依赖性。
+
+---
+### [推荐] [2026/807] When Data Movement Becomes the Bottleneck in Modern Workloads: Compute-in-Transit as an Architectural Model
+
+- **匹配关键字:** post-quantum, homomorphic encryption
+
+- **作者:** Flavio Bergamaschi
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/807) | [PDF](https://eprint.iacr.org/2026/807.pdf)
+
+
+> **研究背景:** 现代计算工作负载中，性能受限于数据移动的成本而非计算本身，特别是在大规模数据集的频繁转换场景下。
+>
+> **主要贡献:** 提出Compute-in-Transit架构模型，在数据传输过程中嵌入计算操作，减少中间存储和重复传输的需求。
+>
+> **达到效果:** 该模型通过将计算与数据流对齐，显著提高了系统效率，并为后量子密码学、全同态加密及人工智能等领域提供了新的解决方案。
+>
+> **技术梗概:** 采用光子技术直接在信号传输过程中执行转换操作，突破了传统电子架构的限制，实现计算与数据移动同步进行。
+
+---
+### [推荐] [2026/810] Decomposing Multiplication: A Vertical Packing Approach for Faster TFHE
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Rostin Shokri, Nektarios Georgios Tsoutsos
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/810) | [PDF](https://eprint.iacr.org/2026/810.pdf)
+
+
+> **研究背景:** 在全同态加密(FHE)中，尽管现代方案如TFHE能够高效处理非线性操作，但其乘法的时间复杂度仍然是性能瓶颈，特别是在需要大量密文-密文(CxC)和密文-明文(CxP)乘法的机器学习等应用中。
+>
+> **主要贡献:** 该研究提出了针对CxC和CxP乘法及点积的新算法，并通过垂直打包技术将乘法分解为一系列依赖精度的查找表操作，从而显著提高了FHE的性能。
+>
+> **达到效果:** 实验结果表明，与TFHE-rs默认实现及最近的先进工作相比，该方法实现了几倍于原来的执行速度，大幅加速了FHE在实际应用中的运行效率。
+>
+> **技术梗概:** 研究采用垂直打包技术，将乘法操作分解为一系列查找表操作，并通过优化这些操作来减少计算复杂度和提高执行效率。
+
+---
+### [推荐] [2026/811] Efficient Bootstrapping of Matrices in FHE
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Rostin Shokri, Nektarios Georgios Tsoutsos
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/811) | [PDF](https://eprint.iacr.org/2026/811.pdf)
+
+
+> **研究背景:** 近年来，全同态加密（FHE）因其在神经网络推理、私有信息检索和基因组分析等隐私保护应用中的实用性而受到广泛关注。然而，在FHE中高效实现矩阵乘法仍然是一个巨大的挑战。
+>
+> **主要贡献:** 本文首次提出了GL方案中矩阵乘法的高效Bootstrapping算法，解决了该方案特有的环结构所带来的问题，并支持CKKS的所有操作。
+>
+> **达到效果:** 通过引入新的编码策略和优化技术，该工作显著降低了评估密钥的大小，缩短了执行时间，并消除了对矩阵维度的限制，从而提高了FHE中深度学习推理的效率。
+>
+> **技术梗概:** 本文采用GL方案特有的环结构和3D DFT编码方法，并结合高效的NTT变换，设计了一种新颖的Bootstrapping算法以支持大规模深学习模型的计算。
+
+---
+### [推荐] [2026/814] Threshold Signatures as-a-Service: Achieving Threshold ML-DSA in One Online Round
+
+- **匹配关键字:** lattice
+
+- **作者:** Matthieu Rambaud, Sascha Roth, Antoine Urban
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/814) | [PDF](https://eprint.iacr.org/2026/814.pdf)
+
+
+> **研究背景:** 本文提出了Threshold Signatures as-a-Service (TSaaS)模型，旨在为工业中的钱包服务提供安全的阈值签名解决方案。
+>
+> **主要贡献:** 贡献在于定义了TSaaS，并提出了一种结合前两轮操作的ML-DSaaS方案，显著减少了在线阶段的时间消耗。
+>
+> **达到效果:** 实验表明，与[Celi et al., USENIX'26]相比，在线阶段的速度提高了两到三倍。
+>
+> **技术梗概:** 通过将客户端和参与方之间的通信集中化，并利用协调机器过滤请求来实现优化。
+
+---
+### [推荐] [2026/817] SOLMAE: Lightweight Post-Quantum Signature based on NTRU lattices with Hybrid Sampling
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Kwangjo Kim
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/817) | [PDF](https://eprint.iacr.org/2026/817.pdf)
+
+
+> **研究背景:** SOLMAE是一种基于NTRU格的轻量级后量子签名方案，旨在结合Falcon、Mitaka和Antrag等早期设计的优点，提供更高效的性能和更高的安全性。
+>
+> **主要贡献:** SOLMAE通过引入新颖的关键生成算法，增强了安全性并消除了Falcon中的僵化性，同时保持了参数的灵活性和快速的签名过程。
+>
+> **达到效果:** 该方案实现了与Falcon相似的安全性和紧凑的密钥及签名大小，同时提高了效率，并兼容最近的椭球高斯采样技术以减小签名大小。
+>
+> **技术梗概:** SOLMAE采用混合高斯抽样器在NTRU格上实现，并结合Mitaka的速度和并行性以及Falcon的安全性和紧凑性。
+
+---
+### [推荐] [2026/819] Topology-Driven Symbolic Verification of Post-Quantum Migration Paths Using Tamarin Prover
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Vishnu Ajith, Mohammed Ibrahim, Muhammed Sihan Haroon
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/819) | [PDF](https://eprint.iacr.org/2026/819.pdf)
+
+
+> **研究背景:** 研究背景：随着从经典公钥密码学向后量子密码学的过渡，协议层面的风险并未通过配置审查、性能基准测试或端点可达性测试得到充分解决。现有的抽象可能使部署看似操作正确，但实际上仍存在机密性、认证或前向保密方面的协议级违规问题。
+>
+> **主要贡献:** 主要贡献：提出了一种拓扑驱动的符号验证工作流，将分布式系统通信图转换为Tamarin模型进行分析，并基于图基部署表示推导出协议角色、通信约束和迁移策略，生成了可执行性、机密性、认证性和前向保密性的模型和相关引理。
+>
+> **达到效果:** 达到的效果：实验评估表明，该框架能够产生区分性强的符号验证结果而非统一失败报告。注册仅控制场景验证了所有报告的引理，其余场景表现出两种不同的反证模式：三个场景中的机密性和前向保密性失败，一个场景中认证失败。这些结果表明，符号验证为后量子迁移分析提供了补充保证层。
+>
+> **技术梗概:** 技术梗概：采用图基拓扑表示以确保从语义等价的输入生成确定性的模型，并使用Dolev--Yao对手模型进行分析，从而推导出协议角色、通信约束和迁移策略。
+
+---
+### [推荐] [2026/820] Improving Correlation Power Analysis on Masked CRYSTALS-Kyber with Lattice Attack
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Yen-Ting Kuo, Atsushi Takayasu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/820) | [PDF](https://eprint.iacr.org/2026/820.pdf)
+
+
+> **研究背景:** 针对掩码版CRYSTALS-Kyber的关联功率分析攻击，前人研究未能有效恢复全密钥，且所需的电容迹线数量较多。
+>
+> **主要贡献:** 本文提出了一种新的攻击方法，仅需400条电容迹线即可完全恢复密钥，显著减少了所需数据量。
+>
+> **达到效果:** 通过结合Kannan嵌入法和Bai-Galbra方法，成功实现了全密钥的恢复，并验证了该方法的有效性。
+>
+> **技术梗概:** 采用了非传统的嵌入技术，将部分已知信息与绝对值信息相结合以提高攻击效率。
+
+---
+### [2026/803] X24 Down: Cryptanalysis of Hankel-based Multivariate Signatures
+
+- **作者:** Alexandre Camelin, Thai Hung Le, Brice Minaud, Phong Q. Nguyen, Florian Tousnakhoff
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/803) | [PDF](https://eprint.iacr.org/2026/803.pdf)
+
+
+> **研究背景:** X24是一种由Di Muzio等人在PQCrypto 2026会议上提出的新型多变量签名方案，它提供了短小的签名并采用了一种不同于UOV和HFE框架的新设计方法。
+>
+> **主要贡献:** 作者提出了一种有效的X24密码分析方法，能够从公钥中恢复私钥，并将外代数应用于多变量密码分析，揭示了与之前楔形攻击不同的应用方式。
+>
+> **达到效果:** 该攻击在时间复杂度为$O(q \cdot \mathsf{poly}(n))$下成功实现了对X24的密钥恢复，在实际参数设置下仅需几分钟即可完成。
+>
+> **技术梗概:** 攻击利用了外代数，最终将X24的密码分析问题转化为基于Generalized Reed-Solomon码的McEliece方案的密码分析问题。
+
+---
+### [2026/804] Verifying Provenance of Digital Media: Security Analysis of C2PA and its Implementation
+
+- **作者:** Enis Golaszewski, Neal Krawetz, Alan T. Sherman, Edward Zieglar, Sai K. Matukumalli, Roberto Yus, Carson L. Kegley, Michael Barthel, William Bowman, Bharg Barot, Kaur Kullman
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/804) | [PDF](https://eprint.iacr.org/2026/804.pdf)
+
+
+> **研究背景:** 随着生成式AI和高级编辑工具的发展，恶意行为者可以创建高质量的伪造图像，用于欺诈、攻击声誉和操纵选举。因此，研究如何验证数字媒体的真实性变得尤为重要。
+>
+> **主要贡献:** 该论文分析了C2PA数字溯源系统的安全特性，并对其规范、实现和一致性计划进行了首次形式化方法分析，指出了现有系统中的安全缺陷。
+>
+> **达到效果:** 通过分析，作者识别并描述了C2PA在时间戳协议一致性、验证者一致性和文件完整性等方面的不足之处，为改进该系统提供了理论依据。
+>
+> **技术梗概:** 研究采用了规范分析、实现审查和形式化方法相结合的技术手段，对C2PA的多个组件进行了全面的安全评估。
+
+---
+### [2026/806] Spectre Without Dependent Load
+
+- **作者:** Can Aknesil, Andreas Lindner, Roberto Guanciale, Hamed Nemati
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/806) | [PDF](https://eprint.iacr.org/2026/806.pdf)
+
+
+> **研究背景:** 传统的暂态执行攻击假设需要一个多阶段的读取-传输机制，即先进行一次暂态加载以获取机密数据，然后通过侧信道泄露这些数据。然而，本文揭示了在电磁泄漏的情况下，这一假设并不成立。
+>
+> **主要贡献:** 作者证明了一个单一的暂态加载操作即可产生值相关的电磁泄漏，无需任何后续传输指令或依赖于预取机制。
+>
+> **达到效果:** 该研究扩展了可利用的小型化攻击载体集合，并指出即使是简单的Cortex-A53处理器也存在安全风险。
+>
+> **技术梗概:** 通过实验验证了在电磁观测下，单一暂态加载操作即可产生值相关的泄漏现象，无需依赖复杂的传输机制。
+
+---
+### [2026/808] New Techniques for Communication-Efficient Secure Comparison Protocols
+
+- **作者:** Koji Nuida, Satsuya Ohata
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/808) | [PDF](https://eprint.iacr.org/2026/808.pdf)
+
+
+> **研究背景:** 安全比较是安全多方计算中频繁使用的基本构建块，尤其是在安全机器学习等应用中。现有的基于秘密共享的安全比较协议通常在吞吐量上优于门控电路，但历史上传统上具有更高的在线轮次复杂度。
+>
+> **主要贡献:** 作者提出了两种新的两轮安全比较协议：一种通过多扇区门实现的协议将在线位复杂度降低到$O(n \log n)$；另一种则通过优化乘法技术将离线位复杂度从$O(n^3)$减少到$O(n^2)$，但增加了在线位复杂度。
+>
+> **达到效果:** 这些新协议显著降低了安全比较所需的通信量，并且在某些情况下达到了与门控电路相当的两轮复杂度。特别是在带宽优化方面，第三种协议将在线位复杂度从$8n$降低到$6n$。
+>
+> **技术梗概:** 作者利用了“round absorption”技术以及针对乘法的新优化方法来减少通信量，并且采用了基于三叉树和四进制整数的框架。
+
+---
+### [2026/809] Formal Verification, Integration and Physical Evaluation of Prime-Field Masking on Silicon
+
+- **作者:** Gaëtan Cassiers, Thorben Moos, Amir Moradi, Nicolai Müller, François-Xavier Standaert
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/809) | [PDF](https://eprint.iacr.org/2026/809.pdf)
+
+
+> **研究背景:** 研究背景：在理论上和实践中，基于奇素数有限域的掩码技术已被证明能够增强电路对抗侧信道和故障攻击的能力。然而，缺乏兼容Fp算术的自动化验证工具以及常量时间生成均匀分布随机数的有效方法仍然是其应用和发展中的障碍。
+>
+> **主要贡献:** 主要贡献：本文通过形式化验证、安全集成并物理评估了基于小-p平方实例的小素数掩码实现，解决了上述障碍，并提供了首个针对更高阶掩码实现的ASIC和PCB制造案例研究。
+>
+> **达到效果:** 达到的效果：成功实现了对小素数掩码技术的安全验证与实际应用，展示了其在硬件上的可行性和有效性，为后续相关研究奠定了基础。
+>
+> **技术梗概:** 技术梗概：采用形式化方法验证了小素数掩码的实现，并通过定制化的PCB和ASIC制造进行了物理评估，确保了算法在实际硬件环境中的安全与性能。
+
+---
+### [2026/815] Non-Adaptive Programmable PRFs and Applications to Stacked Garbling
+
+- **作者:** Vipul Goyal, David Heath, Abhishek Jain, Yibin Yang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/815) | [PDF](https://eprint.iacr.org/2026/815.pdf)
+
+
+> **研究背景:** 非适应性可编程伪随机函数（napPRFs）与堆叠遮蔽方案之间的关系，以及如何基于单向函数实现高效的napPRFs以支持大规模输入场景。
+>
+> **主要贡献:** 提出了一个基于单向函数的堆叠遮蔽方案，该方案适用于大规模输入，并且其遮蔽大小仅与单一分支的大小及其输入长度成正比（至对数因子），同时包含分支数量的附加项。
+>
+> **达到效果:** 通过引入非适应性可编程伪随机函数（napPRFs）的概念，实现了在保持安全性和效率的同时支持更大规模输入的堆叠遮蔽技术。
+>
+> **技术梗概:** 利用SGC文献中的技术构建了满足所需效率的napPRFs，并在此基础上进一步优化了堆叠遮蔽方案以达到预期效果。
+
+---
+### [2026/816] From Rerandtopia to Interceptopia, the Anamorphic Encryption Saga Rises
+
+- **作者:** Vincenzo Botta, Dario Catalano, Emanuele Giunta, Francesco Migliaro, Daniele Venturi, Ivan Visconti
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/816) | [PDF](https://eprint.iacr.org/2026/816.pdf)
+
+
+> **研究背景:** 本文探讨了在政府可能滥用解密基础设施进行大规模监控的背景下，如何设计一种名为anamorphic加密方案以防止这种威胁。
+>
+> **主要贡献:** 作者提出了新的定义并在极端场景下提供了积极的结果，特别是在Rerandtopia和Interceptopia两种情景中。
+>
+> **达到效果:** 通过双层加密机制，该研究提出了一种可重新随机化的适应性选择明文攻击(CCA)安全方案，并在假设数量和效率上超越了现有技术。
+>
+> **技术梗概:** 该方案采用了两层加密结构，在特定实现下达到了超越当前最优的CCA安全性。
+
+---
+### [2026/821] A spectral approach to arithmetic correlations for binary FCSR sequences with prime connection integers
+
+- **作者:** Feifei Yan, Pinhui Ke, Chenhuang Wu
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/821) | [PDF](https://eprint.iacr.org/2026/821.pdf)
+
+
+> **研究背景:** 研究了反馈进位移位寄存器(FCSR)序列的算术相关性，特别是当连接整数为素数且$2$模$p$的阶为奇数时的情况。
+>
+> **主要贡献:** 提出了统一的谱方法来表达和分析此类FCSR序列的算术相关性，并推导了其上界及取得较小值的条件。
+>
+> **达到效果:** 通过该方法，确定了当连接整数$p$对应的陪集数量为2、4或6时，算术相关性取小值的情况。
+>
+> **技术梗概:** 利用谱分析技术，结合群论中的子群和陪集概念，精确计算并优化FCSR序列的算术相关性。
+
+---
+### [2026/822] Maliciously Secure Exact Fixed-Point Multiplication over Power-of-Two Rings for Replicated 3PC
+
+- **作者:** Yutao Sun, Jianguo Xie, Guozhen Shi, Jiale Han, Huiyan Chen, Rongna Xie
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/822) | [PDF](https://eprint.iacr.org/2026/822.pdf)
+
+
+> **研究背景:** 在诚实多数恶意安全3PC设置下，现有工作未能同时提供跨环兼容性、精确语义和恶意安全性。
+>
+> **主要贡献:** 作者提出了一种通用的商数校正框架，将复杂的非线性跨环操作简化为高效的2位有界商提取问题，并构建了首个满足所有上述要求的端到端精确定点乘法协议。
+>
+> **达到效果:** 通过该框架和标准同环乘法的组合，实现了在复制3PC设置下具有精确语义和恶意安全性的精确定点乘法协议。
+>
+> **技术梗概:** 作者利用统一的代数结构，提出了商数校正框架，并将其实例化为精确截断和扩展的具体方案。
+
+---
+
 ## 更新: 2026-04-26 21:16
 
 *新增 5 篇论文 (编号 797--801)*
