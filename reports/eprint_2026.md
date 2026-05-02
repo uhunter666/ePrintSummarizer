@@ -5,6 +5,173 @@
 
 ---
 
+## 更新: 2026-05-02 20:26
+
+*新增 9 篇论文 (编号 823--833)*
+
+### [2026/823] TieredOMap: Skewness-Aware Oblivious Map
+
+- **作者:** Juan Li, Xinle Cao, Huazhen Yu, Weiqi Feng, Jian Liu
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/823) | [PDF](https://eprint.iacr.org/2026/823.pdf)
+
+
+> **研究背景:** 现有的Oblivious Map (OMAP)设计主要遵循均匀最坏情况原则，即每个记录的检索时间几乎相同，而不考虑查询频率。然而，在实际工作负载中，数据通常高度偏斜，一小部分热点数据占了大多数请求。
+>
+> **主要贡献:** TieredOMap是首个针对偏斜性的OAM框架，通过将热和冷记录分离到独立的OMAP中以提高对热记录的访问效率，同时不削弱标准OMAP的安全性保证。
+>
+> **达到效果:** 实验结果表明，基于偏斜性的访问并不必遵循均匀最坏情况行为，偏斜性感知结构为OAM设计提供了一个新的有前景的方向。
+>
+> **技术梗概:** TieredOMap通过分离热和冷记录并独立管理它们来优化性能，并且其设计支持在安全性的轻微放松下进一步提高性能。
+
+---
+### [2026/824] Better Usability: Leakage-Resistant AEADs from Single-length Blockciphers
+
+- **作者:** Chun Guo, Mustafa Khairallah, Kazuhiko Minematsu
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/824) | [PDF](https://eprint.iacr.org/2026/824.pdf)
+
+
+> **研究背景:** 现有抗侧信道AEAD方案大多不适用于单长度密钥块密码，本文旨在填补这一空白。
+>
+> **主要贡献:** 提出了UEDTDM和UEDTMX两种基于单长度密钥块密码的抗侧信道AEAD构造。
+>
+> **达到效果:** 这两种构造都实现了1/4速率的一次通过模式，并且在实际效率上使用了部分固定密钥块密码，达到了三级泄漏抵抗级别，并具有与当前最佳构造TEDT相当的安全边界，同时具备生日界限上下文绑定安全性。
+>
+> **技术梗概:** 引入了框架UEDT来扩展并统一证明EDT构造的可证明安全性结果，从而为UEDTDM和UEDTMX实例推导出具体的安全界。
+
+---
+### [2026/825] Scalable Secure Biometric Authentication without Auxiliary Identifiers
+
+- **作者:** Alexander Bienstock, Daniel Escudero, Antigoni Polychroniadou, Zhen Zeng, Pranav Bhat, Ashok Singal, Prashant Sharma, Manuela Veloso
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/825) | [PDF](https://eprint.iacr.org/2026/825.pdf)
+
+
+> **研究背景:** 随着生物特征认证系统的普及，其便捷性和安全性优势日益凸显。然而，现有的云数据库存储大量用户生物特征数据的系统存在安全风险和高计算成本问题。
+>
+> **主要贡献:** 本文提出了一种新的生物特征认证系统，结合了人工智能与高级加密技术，提供数据泄露防护的同时保持高效性，并且无需辅助标识符。
+>
+> **达到效果:** 该系统实现了大规模隐私保护生物特征认证的可行性，显著提升了用户体验和安全性。
+>
+> **技术梗概:** 通过创新地融合AI技术和加密方法，并进行多项优化，本文解决了现有系统的安全性和性能问题。
+
+---
+### [2026/826] Efficient Implementation of ARIA on ARMv8 via Cryptographic Extensions
+
+- **作者:** Myoungsu Shin, Dongjae Lee
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/826) | [PDF](https://eprint.iacr.org/2026/826.pdf)
+
+
+> **研究背景:** ARIA是一种广泛使用的对称加密算法，尽管它已经具备了硬件加速支持，但在现代ARMv8处理器上的高效实现仍然有限。
+>
+> **主要贡献:** 本文通过重新利用AESE/AESD指令扩展来并行处理16个块，实现了ARIA在ARMv8 NEON上的高效实现。
+>
+> **达到效果:** 该实现将ARIA-128的每字节周期数从5.845降低至1.483，并且多线程模式下达到了接近线性的可扩展性。
+>
+> **技术梗概:** 通过使用字节切片数据布局和64指令转置蝴蝶操作，作者实现了对ARIA S-boxes的有效处理。
+
+---
+### [2026/828] ZEE200: Zero Knowledge for Everything and Everyone @ 200 KHz
+
+- **作者:** Sunghyeon Jo, Vladimir Kolesnikov, Yibin Yang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/828) | [PDF](https://eprint.iacr.org/2026/828.pdf)
+
+
+> **研究背景:** ZEE200基于零知识执行高阶程序的现有框架，通过高效证明通用声明来实现，这些声明以实际程序表示。
+>
+> **主要贡献:** 该研究贡献了一种新的常数轮次零知识系统ZEE200，显著提高了验证速度。
+>
+> **达到效果:** 与ZEE相比，ZEE200在商品笔记本电脑上实现了约200 KHz的CPU速度，并且支持更丰富的指令集。
+>
+> **技术梗概:** 该技术通过结合最新的紧致零知识CPU和快速零知识RAM等关键进展来实现高效证明，并开发了更好的整数算术编码和多种低级优化。
+
+---
+### [2026/829] Beyond Binary: crosscorrelation of Quartic and Cubic Character Sequences
+
+- **作者:** Mriganka Dey, Sampa Dey, Sampurna Pal, Subhabrata Samajder, Rana Barua
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/829) | [PDF](https://eprint.iacr.org/2026/829.pdf)
+
+
+> **研究背景:** 研究非二进制伪随机序列的算术互相关性对于密码学和通信应用至关重要，但现有工作主要集中在二进制序列上，非二进制情况的研究尚属空白。
+>
+> **主要贡献:** 作者首次系统地研究了基于有限域高阶乘法字符构造的非二进制伪随机序列的算术互相关性，并建立了四次和三次序列的相关性上界。
+>
+> **达到效果:** 通过应用特征正交性、联合模式分布及Weil界，作者证明了两个互素周期为P和Q的四次序列在所有偏移τ下的互相关性的绝对值小于dP^(1/2)Q(log P)^2，并且得到了三次序列类似的结果。
+>
+> **技术梗概:** 研究采用了特征正交性、联合模式分布及Weil界等技术，首次提供了非二进制伪随机序列算术互相关的非平凡上界。
+
+---
+### [2026/830] DY* Unchained: Now with Composable Security Proofs and Precise Compromise Scenarios
+
+- **作者:** Théophile Wallez
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/830) | [PDF](https://eprint.iacr.org/2026/830.pdf)
+
+
+> **研究背景:** DY*协议验证框架旨在解决现实世界协议中难以分析的特性，如无界循环、数据结构和参与者数量。然而，该框架存在安全证明不可组合及妥协场景描述过于简单的局限性。
+>
+> **主要贡献:** 作者通过开发模块化定义追踪不变量的框架以及全面泛化安全性标签的概念，解决了DY*的安全证明不可组合性和妥协场景描述精度不足的问题。
+>
+> **达到效果:** 这些改进使得DY*能够分析大型协议，并且已被用于TreeKEM协议的安全性证明中。
+>
+> **技术梗概:** 通过引入模块化的追踪不变量定义和更通用的安全性标签概念，提高了DY*的灵活性和精确度。
+
+---
+### [2026/832] Private Delegation of (Non-)Membership Proof Updates in Cryptographic Accumulators
+
+- **作者:** Bence Soóki-Tóth, Botond Glasz, Alireza Kavousi, István András Seres
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/832) | [PDF](https://eprint.iacr.org/2026/832.pdf)
+
+
+> **研究背景:** 研究背景：在许多应用中，有效的（非）成员身份证明是访问服务的前提条件。然而，当客户端与服务器断开连接后重新连接时，由于需要频繁更新所有现有的（非）成员身份证明，这将导致客户端持有无效的证明。
+>
+> **主要贡献:** 主要贡献在于设计并实现了允许资源受限的客户端能够私下委托给不可信服务器更新其（非）成员身份证明的算法，并在RSA和双线性积聚器中进行了验证。
+>
+> **达到效果:** 达到的效果是，客户端可以保持有效的（非）成员身份证明，即使在网络连接不稳定的情况下也能访问服务。此外，在批量设置下研究了证明委托问题，并展示了在线客户端算法的时间复杂度与更新集大小无关。
+>
+> **技术梗概:** 技术梗概：利用RSA和双线性积聚器设计并实现了常数时间的在线客户端算法以及具有较小计算开销的私有委托算法。
+
+---
+### [2026/833] Scale, Round, Break: Simple Leakage Attacks on Secret Sharing Schemes
+
+- **作者:** Katharina Boudgoust, Mark Simkin
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/833) | [PDF](https://eprint.iacr.org/2026/833.pdf)
+
+
+> **研究背景:** 研究了$t$-out-of-$n$门限秘密共享方案在局部泄漏下的鲁棒性，特别是针对线性重建和有限域上的攻击。
+>
+> **主要贡献:** 提出了一个简单且完美的攻击方法，能够在$\lg t + \mathcal{O}(1)$比特的泄漏下完全破解任何线性重建的秘密共享方案。
+>
+> **达到效果:** 该研究揭示了更大的有限字段不一定能提高泄露鲁棒性，并表明提高Shamir方案中的重构阈值帮助不大。
+>
+> **技术梗概:** 提出了一种近似线性的尺度和舍入函数，将来自任意大域的份额映射到较小的环中，同时保持分离良好秘密的距离。
+
+---
+
 ## 更新: 2026-04-29 19:49
 
 *新增 17 篇论文 (编号 802--822)*
