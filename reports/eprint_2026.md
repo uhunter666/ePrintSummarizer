@@ -5,6 +5,201 @@
 
 ---
 
+## 更新: 2026-05-03 20:24
+
+*新增 10 篇论文 (编号 834--843)*
+
+### [推荐] [2026/834] Detecting Post-Quantum and Hybrid TLS Deployments via Raw TLS Record Inspection
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Muhammad Ibrahim, Vishnu Ajith, Muhammed Sihan Haroon
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/834) | [PDF](https://eprint.iacr.org/2026/834.pdf)
+
+
+> **研究背景:** 随着量子计算的发展，过渡到后量子密码学（PQC）以保护网络系统免受未来量子对手的攻击变得至关重要。然而，验证这些算法在实际系统中的正确部署仍然具有挑战性。
+>
+> **主要贡献:** 本文提出了一种通过直接检查原始TLS握手记录来检测后量子和混合TLS密钥交换机制的新方法，该方法能够准确地将端点分类为CLASSICAL_ONLY、PQC_ONLY和HYBRID_CONFIRMED状态。
+>
+> **达到效果:** 实验结果表明，在验证阶段1中，所有三个测试节点（包括一个具备PQC能力的应用服务器）都被正确地归类为CLASSICAL_ONLY状态；在验证阶段2中，随着OQS兼容的TLS前端升级，实现了100%的目标准确性，并确认了一个HYBRID_CONFIRMED的结果。
+>
+> **技术梗概:** 通过解析ServerHello消息并从密钥共享扩展中提取密钥组标识符来进行字节级解析，从而实现对端点状态的准确分类。
+
+---
+### [推荐] [2026/837] Trident: Efficient FPGA Acceleration of XMSS Tree in Post-Quantum Signature Scheme SLH-DSA
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Tianyou Bao, Joshua Ennis, Kirill Morozov, Jiafeng Xie
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/837) | [PDF](https://eprint.iacr.org/2026/837.pdf)
+
+
+> **研究背景:** 量子计算的发展对传统密码系统构成了重大威胁，需要在FPGA等硬件平台上高效加速后量子密码学（PQC），特别是XMSS树的计算密集型操作。
+>
+> **主要贡献:** Trident提出了三角哈希单元架构和优化的内存缓存方案，分别解决了XMSS树构建中的并行执行瓶颈和芯片内存需求问题。
+>
+> **达到效果:** 在所有参数集上实现了8.6倍的签名生成速度提升，并且提高了5.4倍的速度。
+>
+> **技术梗概:** 通过设计三角哈希单元实现三个哈希操作的同时进行，优化内存缓存管理以减少芯片内存使用。
+
+---
+### [推荐] [2026/838] On the Resilience Order of Weightwise Almost Perfectly Balanced Functions
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Martin Grenouilloux, Chunlei Li, Pierrick Méaux
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/838) | [PDF](https://eprint.iacr.org/2026/838.pdf)
+
+
+> **研究背景:** 研究背景：随着全同态加密(FHE)的发展，需要设计满足其特定要求的新一代定制密码学原语。FLIP密码中的布尔函数仅在$\mathbb{F}_2^n$的某些子集上进行评估，而Weightwise Almost Perfectly Balanced (WAPB)函数在这种背景下引起了关注，但其抗攻击性（尤其是正确性）仍需进一步研究。
+>
+> **主要贡献:** 主要贡献：本文首次系统地探讨了WAPB函数的抗攻击性，通过与限制沃尔什变换的关系揭示了Krawtchouk矩阵和范德蒙德矩阵之间的代数联系，并将确定WAPB函数正确性阶的问题归约为Prouhet-Tarry-Escott问题的一个特例。
+>
+> **达到效果:** 达到的效果：证明了对于无限多个整数$n$，在$n$个变量中的WAPB函数的正确性阶紧致上界为$n-1$的汉明重量。同时提出猜想认为这一观察对任意正整数$n$都成立，并验证了该猜想在$n \leq 62$时的有效性。
+>
+> **技术梗概:** 技术梗概：通过研究WAPB函数与限制沃尔什变换的关系，以及Krawtchouk矩阵和范德蒙德矩阵之间的联系，将复杂问题简化为Prouhet-Tarry-Escott问题的一个实例进行求解。
+
+---
+### [推荐] [2026/840] All You Need Is Addition
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Dimitrios Schoinianakis
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/840) | [PDF](https://eprint.iacr.org/2026/840.pdf)
+
+
+> **研究背景:** 本文提出了一种加速CKKS同态加密的框架，通过使用对数数值系统（LNS）来替代密文间的乘法运算，从而减少计算复杂度。
+>
+> **主要贡献:** 该工作贡献了一种新的执行策略，并在OpenFHE平台上实现了三种不同的执行方式，以适应不同的应用场景。
+>
+> **达到效果:** 实验结果显示，在注意力管道中，与线性基线相比，LNS方法能够显著提高速度并大幅减小密文大小，尤其是在深度较大的情况下效果更为明显。
+>
+> **技术梗概:** 该技术通过在需要累加的地方进行交互式刷新操作，并利用LNS来避免完全的重新密封过程。
+
+---
+### [推荐] [2026/841] HAKE: Efficient Hardware Accelerator for Key Generation of Post-Quantum Signature Scheme PERK
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Brendan Funk, Tianyou Bao, Loïc Bidoux, Jiafeng Xie
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/841) | [PDF](https://eprint.iacr.org/2026/841.pdf)
+
+
+> **研究背景:** 随着量子计算的进步，后量子密码学（PQC）成为研究热点，旨在开发能够抵御量子攻击的加密方案。PERK是NIST后量子签名方案标准制定过程中的候选算法之一。
+>
+> **主要贡献:** 本文贡献了两个版本的硬件加速器，分别基于PERK的旧版和新版规范设计，以提高密钥生成效率。
+>
+> **达到效果:** 通过优化硬件设计并分解密钥生成过程，HAKE显著提高了PERK签名方案的密钥生成速度，展示了在硬件平台上的高效实现能力。
+>
+> **技术梗概:** 通过对PERK算法进行详细分析，将密钥生成过程拆分为三个独立组件，并提出减少这些组件复杂性的创新方法，同时设计了专用的硬件微架构。
+
+---
+### [2026/835] Fault Injection Attacks Against zkSTARKs
+
+- **作者:** Alexander Dalton, Markus Schofnegger, Daniel Page
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/835) | [PDF](https://eprint.iacr.org/2026/835.pdf)
+
+
+> **研究背景:** 当前文献中针对零知识（ZK）属性方案的故障注入攻击相对较少，而最近有研究指出一种ZK签名方案存在此类漏洞。
+>
+> **主要贡献:** 本文首次详细探讨了针对Zero-Knowledge Scalable Transparent Argument of Knowledge (zkSTARK)证明者实施候选故障注入攻击的可能性，以破坏其零知识特性。
+>
+> **达到效果:** 通过提出针对不同算法基础组件的多种故障注入攻击方法，展示了对zkSTARK证明系统的潜在威胁，并填补了该领域的研究空白。
+>
+> **技术梗概:** 本文匹配STARK实现生态系统的多样性，提出了针对各种算法基础组件的不同故障注入技术。
+
+---
+### [2026/836] Privacy-Preserving Aggregate-Signatures: Generic Constructions and Practical Instantiations
+
+- **作者:** Xiaoyang Wei, Shuai Han, Shengli Liu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/836) | [PDF](https://eprint.iacr.org/2026/836.pdf)
+
+
+> **研究背景:** 现有聚合签名方案不支持密钥聚合且缺乏对签署者的强隐私保护，而DahLIAS虽解决了部分问题但未能提供聚合验证和隐私属性。
+>
+> **主要贡献:** 作者正式提出了带有可验证密钥聚合的聚合签名（ASvKA）概念，并提供了新的不可伪造性和隐私性定义，同时设计了一种通用转换方法将任何多签方案转化为具有可验证密钥聚合和隐私性的聚合签名方案。
+>
+> **达到效果:** 该研究实现了在保持高效的同时提供最强不可伪造性和隐私性的无配对方案PP-SpeedyASvKA，并通过实例化展示了其实用性。
+>
+> **技术梗概:** 作者采用了一种通用转换技术，将多签方案转化为具有可验证密钥聚合和隐私属性的聚合签名方案，从而提升了底层多签方案的安全性。
+
+---
+### [2026/839] Efficient Non-Interactive Key Refresh with Multiple Independent Refreshers for Threshold Cryptography
+
+- **作者:** Dragan Lambić
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/839) | [PDF](https://eprint.iacr.org/2026/839.pdf)
+
+
+> **研究背景:** 针对阈值密码学中单个经销商的集中信任问题，本文提出了一种新型的非交互式密钥刷新架构。
+>
+> **主要贡献:** 该设计通过引入多个独立第三方刷新者来实现密钥的异步分发和刷新，从而避免了协调交互的需求，并提高了系统的可用性。
+>
+> **达到效果:** 此方法确保在所有刷新者被攻破的情况下仍能保持保密性（只需一个诚实的签名方），并在最少参与下实现前瞻性的安全性。
+>
+> **技术梗概:** 通过将签名方与刷新操作分离，以及允许部分刷新者的缺席，该设计实现了高效的安全性，并减少了链上密钥轮换的成本。
+
+---
+### [2026/842] Secure Integrated Sensing and Communication: Information Theory Offers Insights
+
+- **作者:** Truman Welling, Onur Gunlu, Aylin Yener
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/842) | [PDF](https://eprint.iacr.org/2026/842.pdf)
+
+
+> **研究背景:** ISAC通过共享信号实现感测与通信的集成，提高了频谱和硬件使用效率，但也带来了新的安全挑战。
+>
+> **主要贡献:** 论文综述了信息论在确保ISAC安全中的应用，包括模型、性能指标及基本限制。
+>
+> **达到效果:** 研究明确了不同保护功能和对手模型下的安全ISAC形式化方法，并探讨了通信安全与感测安全的相互作用及其与隐私和隐蔽通信的关系。
+>
+> **技术梗概:** 通过信息论模型分析，论文揭示了在确保可靠通信、良好感测性能及安全性之间的权衡。
+
+---
+### [2026/843] Toward Practical Fair Data Exchange: Eliminating In-Circuit Public-Key Operations
+
+- **作者:** Dongwook Kim, Jihye Kim, Hyunok Oh
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/843) | [PDF](https://eprint.iacr.org/2026/843.pdf)
+
+
+> **研究背景:** 研究背景：现有的公平数据交换（FDE）协议在客户端验证时效率较低，而VECK\(^{\star}_{\mathrm{EL}}\)虽然提高了实用性，但在证明者成本方面仍有改进空间。
+>
+> **主要贡献:** 主要贡献在于提出了一种新的基于代码的FDE构造方法，去除了电路中ElGamal一致性检查的需求，并通过哈希掩码、KZG承诺和CP链接等技术实现了更高效的验证。
+>
+> **达到效果:** 达到的效果是显著降低了SNARK约束的数量，提高了证明者的效率，在基准实现中直接使用了BLS12-381曲线，而非VECK\(^{\star}_{\mathrm{EL}}\)所需的曲线循环。与之前的方案相比，证明者时间大幅减少。
+>
+> **技术梗概:** 技术梗概包括哈希掩码生成密文、KZG承诺验证一致性、CP链接绑定隐藏值以及一个小型的commit-and-prove SNARK来检查掩码、插值和公钥关系。
+
+---
+
 ## 更新: 2026-05-02 20:26
 
 *新增 9 篇论文 (编号 823--833)*
