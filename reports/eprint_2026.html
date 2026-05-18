@@ -79,6 +79,131 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-05-18 20:08</h2>
+<p><em>新增 6 篇论文 (编号 974--979)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/974] LoTRS: Practical Post-Quantum Structured Threshold Ring Signatures from Lattices</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Nikai Jagganath, Muhammed F. Esgin, Ron Steinfeld, Amin Sakzad, Markku-Juhani O. Saarinen, Dongxi Liu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/974">论文</a> | <a href="https://eprint.iacr.org/2026/974.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究提出了一个结构化阈值环签名（structured threshold ring signature，sTRS）的概念，并设计了基于格的$\mathsf{LoTRS}$方案，旨在减少交互次数并提高效率。</p>
+<p><strong>主要贡献:</strong> $\mathsf{LoTRS}$通过结合两层机制实现了这一目标：第一层是基于格的双签协议，第二层则是隐藏选择的$1$-out-of-$N$证明，从而避免了传统TRoS方案中需要的领导者和多轮交互。</p>
+<p><strong>达到效果:</strong> 该方案在保持匿名性的同时显著减少了通信开销，并且具体实例化使用了$\mathsf{DualMS}$协议和Esgin等人提出的基于格的一对多证明机制。</p>
+<p><strong>技术梗概:</strong> 技术上，$\mathsf{LoTRS}$通过分离签名关系和匿名机制来实现两轮交互，并利用$1$-out-of-$N$证明代替传统的$T$-out-of-$N$证明以提高效率。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/975] Functional Bootstrapping for a Single LWE Ciphertext with (\tilde{O}(1)) Polynomial Multiplications</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Xiaopeng Zheng, Hongbo Li, Dingkang Wang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/975">论文</a> | <a href="https://eprint.iacr.org/2026/975.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：Bootstrap技术是将层次同态加密转换为全同态加密的关键，但其效率仍然是一个主要瓶颈。现有方法虽然实现了近似常数复杂度，但在单个密文上的非分摊常数复杂度尚未实现。</p>
+<p><strong>主要贡献:</strong> 主要贡献：本文提出了一种基于BFV方案的稀疏打包多项式评估方法，实现了对大明文空间上任意函数的单个LWE密文的全同态加密功能，并支持小批量处理，总代价为近似常数级。</p>
+<p><strong>达到效果:</strong> 达到的效果：在128位安全性和单线程环境下，对于9位明文的单个密文进行任意函数评估耗时3.15秒，而对128个相同密文的小批量调用则需要3.77秒；对于16位明文，则分别耗时10.6秒和14.2秒。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过利用BFV密文中重复槽结构来评估任意多项式在m个加密输入上的值，总代价为近似线性级。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/979] Improved Dual Attack via Quantum Rejection Sampling</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Nicholas Zhao, Cong Ling</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/979">论文</a> | <a href="https://eprint.iacr.org/2026/979.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文重新审视了Pouly和Shen提出的双攻击框架，重点关注其中的格Lattice高斯采样步骤，这是整体攻击复杂度中的主要瓶颈。</p>
+<p><strong>主要贡献:</strong> 作者通过结合Wang和Ling对Klein算法分析中的下界与Ozols等人提出的量子拒绝采样(QRS)框架，将该采样步骤加速。</p>
+<p><strong>达到效果:</strong> 采用这种采样器替换原有的双攻击框架后，估计的攻击成本分别减少了9、4和13位密钥长度，适用于Kyber-512、Kyber-768和Kyber-1024。</p>
+<p><strong>技术梗概:</strong> 通过使用量子拒绝采样的技术，作者能够以二次减少的方式降低采样复杂度，并选择适当的截断半径确保截断分布与完整格高斯分布之间的总变异距离可忽略不计。</p>
+</blockquote>
+<hr />
+<h3>[2026/976] Revisiting DKLs Threshold ECDSA: Enhanced OT-based VOLE and Two-Party Signing</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Gilad Asharov</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/976">论文</a> | <a href="https://eprint.iacr.org/2026/976.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 阈值ECDSA签名已成为保护加密货币资产的标准构建块，Doerner等人的DKLs协议因其效率和广泛采用而成为领先解决方案。</p>
+<p><strong>主要贡献:</strong> 研究重新审视了DKLs协议的安全性和实现权衡，并改进了其子协议Vector Oblivious Linear Evaluation (VOLE)，提出了三种不同权衡的VOLE变体。</p>
+<p><strong>达到效果:</strong> 研究成果巩固了该协议的安全性，同时通过将大部分计算和通信移至预处理阶段，显著提高了在线阶段的效率，通信量减少了约600倍。</p>
+<p><strong>技术梗概:</strong> 研究通过对VOLE子协议进行彻底分析，并提出优化后的双方签名协议，实现了高效安全的阈值ECDSA签名过程。</p>
+</blockquote>
+<hr />
+<h3>[2026/977] ThriftyMPC: Reducing the Cost of Large-Scale MPC in the Cloud</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> David Inyangson, Sahbaaz Ansari, Tushar M. Jois, Rosario Gennaro, Gamze Gursoy, Gabriel Kaptchuk, Moti Yung, Diogo Barradas</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/977">论文</a> | <a href="https://eprint.iacr.org/2026/977.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着云计算成为大规模计算的标准，其弹性和按需资源超越了传统的本地能力。然而，许多涉及敏感数据的大规模计算（如全基因组关联研究GWAS）因隐私和监管限制而难以采用云服务，尽管多方计算等加密原语可以提供可证明的隐私保障，但高昂的成本仍然是主要障碍。</p>
+<p><strong>主要贡献:</strong> ThriftyMPC框架通过结合安全多方计算与预emption容忍执行，利用临时性云计算实例（spot instances）来解决成本和隐私问题。</p>
+<p><strong>达到效果:</strong> 在Google云平台上对现实中的GWAS工作负载进行评估表明，尽管存在临时实例的频繁变更，ThriftyMPC仍能实现稳健执行，并且相比传统使用按需实例运行的最先进的多方计算框架（MP-SPDZ）显著降低了成本。</p>
+<p><strong>技术梗概:</strong> ThriftyMPC通过提出在临时性计算条件下多方执行的形式模型，展示了如何处理spot实例的预emption同时保持密码学安全保证。</p>
+</blockquote>
+<hr />
+<h3>[2026/978] Verifying Consensus Protocols from LLM-assisted TLA$^+$: A Case Study of Byzantine Reliable Broadcast</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Shuhe Cao, Xin Wang, Chenxu Wang, Xiao Sui, Sisi Duan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/978">论文</a> | <a href="https://eprint.iacr.org/2026/978.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> TLA$^+$作为描述分布式系统的正式规范语言，但在编写时需要高深的专业知识。针对拜占庭容错共识协议（BFT），模拟恶意行为是基本挑战：简化模型会遗漏关键漏洞，而详细的模型会导致状态空间爆炸。</p>
+<p><strong>主要贡献:</strong> 本文提出TLAssist工具，通过大型语言模型辅助生成半自动化的TLA$^+$规范，特别适用于拜占庭可靠广播（RBC）协议。</p>
+<p><strong>达到效果:</strong> 在五个RBC协议案例研究中，TLAssist生成的规范优于许多开源TLA$^+$脚本，并能帮助专家发现深层次的设计缺陷。此外，非专家也能通过微调协议并利用生成的错误轨迹理解复杂情况。</p>
+<p><strong>技术梗概:</strong> 该工具提供了一种高度结构化的流程和领域特定的数据格式来改进LLM提示的质量。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-05-17 21:27</h2>
 <p><em>新增 25 篇论文 (编号 943--973)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/943] Optimized G+G Signature</h3>
