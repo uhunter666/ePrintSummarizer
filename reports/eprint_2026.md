@@ -5,6 +5,47 @@
 
 ---
 
+## 更新: 2026-05-23 09:59
+
+*新增 2 篇论文 (编号 1019--1020)*
+
+### [2026/1019] On the Security of Public Key Authenticated Encryption with Keyword Search with Sender-independent Search Complexity
+
+- **作者:** Takeshi Yoshida, Keita Emura
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1019) | [PDF](https://eprint.iacr.org/2026/1019.pdf)
+
+
+> **研究背景:** 研究背景：Li等人提出了一个无需代理的公钥认证加密方案，支持密文更新和关键词搜索（PAUKS），旨在提供高效的数据保护与检索机制。
+>
+> **主要贡献:** 主要贡献：作者揭示了该方案在密文更新过程中存在安全漏洞，即关键词信息可能泄露，并验证了攻击的有效性。
+>
+> **达到效果:** 达到的效果：证明了PAUKS方案的安全性不足，在实际应用中可能导致敏感信息的暴露风险。
+>
+> **技术梗概:** 技术梗概：通过分析密文更新过程中的加密机制，作者设计了一种新的攻击方法来检测并利用关键词信息泄露的问题。
+
+---
+### [2026/1020] On the Formal Verification of Authenticated Encryption of the MQTT Protocol
+
+- **作者:** Varsha Jarali, Shashi Kant Pandey
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1020) | [PDF](https://eprint.iacr.org/2026/1020.pdf)
+
+
+> **研究背景:** MQTT协议因其轻量级架构在物联网环境中广泛应用，但通过中央代理传输敏感医疗数据存在严重的隐私风险。
+>
+> **主要贡献:** 提出了一种高性能的端到端加密（E2EE）安全MQTT协议，该协议利用嵌套AES-GCM加密架构和HMQV密钥交换协议，确保消息内容对中间人攻击者不可见。
+>
+> **达到效果:** 通过ProVerif验证器在Dolev-Yao威胁模型下证明了该模型的安全性，提供了一种计算开销低且高度安全的解决方案。
+>
+> **技术梗概:** 设计采用了嵌套AES-GCM加密和MQTT v5.0增强认证密钥交换机制，结合Schnorr数字签名版本的HMQV协议进行一次性的Broker Nonce挑战响应验证。
+
+---
+
 ## 更新: 2026-05-21 20:24
 
 *新增 35 篇论文 (编号 980--1018)*
