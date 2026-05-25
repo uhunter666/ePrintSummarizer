@@ -79,6 +79,267 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-05-25 11:12</h2>
+<p><em>新增 13 篇论文 (编号 1021--1033)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1022] Thorns in Polynomial Convolution: Correlation, Large Deviations, and Applications</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Dongshu Cai, Yijian Liu, Jiabo Wang, Xianhui Lu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1022">论文</a> | <a href="https://eprint.iacr.org/2026/1022.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景在于，在基于结构化格的密码方案中，解密失败率（DFR）估计通常假设解密噪声系数是独立的，但在实践中，这些噪声包含由小多项式卷积产生的相关项，这会导致基于独立性的估计与实际失败率之间存在差距。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于首次系统地对具有高斯系数的卷积多项式的系数间相关性进行了刻画，并通过中心嵌入视角建立了大偏差结果。</p>
+<p><strong>达到效果:</strong> 研究结果显示，随着范数增长，卷积多项式系数渐近集中在有限个二维平面附近，导致n维联合概率密度出现方向性的尾部结构，称为棘刺。</p>
+<p><strong>技术梗概:</strong> 技术梗概包括使用中心嵌入视角来刻画相关性，并通过大偏差结果分析了这些棘刺的形成机制。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1029] Towards a Unified Memory-Less Framework for TCitH</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Jesús-Javier Chi-Domínguez, Décio Luiz Gazzoni Filho, Marco Palumbi, Luis Rivera-Zamarripa</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1029">论文</a> | <a href="https://eprint.iacr.org/2026/1029.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对NIST后量子签名竞赛中的TCitH和VOLEitH两种MPCitH变体，现有研究发现VOLEitH虽然具有更短的签名和更多的堆栈内存，但不适合受限设备。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种统一的无状态框架，旨在使基于TCitH的方案在嵌入式系统中可行，并贡献了一个常数时间、位切片实现的Rijndael-256，用于目标架构的GGM树扩展、PRG和Commit功能。</p>
+<p><strong>达到效果:</strong> 该框架实现了高达99%的堆栈使用率减少，同时具有最小的代码大小开销和可忽略不计的性能开销，并且设计为可扩展：只需实现底层问题的数学和多项式证明过程即可添加新方案。</p>
+<p><strong>技术梗概:</strong> 通过简化统一的零知识证明框架来覆盖所有基于TCitH的NIST竞赛提交，以及提供一种针对嵌入式架构的Rijndael-256常数时间位切片实现。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1031] Compact Quaternion Algorithms for SQIsign</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Won Kim, Changmin Lee, Hyunwoo Yoo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1031">论文</a> | <a href="https://eprint.iacr.org/2026/1031.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> SQIsign是一种基于_isogeny_的后量子签名方案，其公钥和签名极其紧凑。然而，由于该方案依赖于有理数域上的四元数代数算术，此前缺乏适用于固定精度整数算术的实现方法，这阻碍了在内存受限设备上的常时间实施与部署。</p>
+<p><strong>主要贡献:</strong> 本文提出了更紧凑的四元数算法，显著减少了SQIsign中固定精度整数算术所需的内存需求。通过修改和分析SQIsign中的四元数算法，并推导出改进后的最坏情况大小界，实现了公钥生成和签名过程中小整数值的精确度预算大幅降低。</p>
+<p><strong>达到效果:</strong> 经过优化后，NIST-I/III/V安全级别的精度预算分别从7026/10713/14150位减少到1774/2696/3555位，分别提高了74.75%、74.83%和74%，显著减少了内存占用并提升了在受限平台上的适用性。</p>
+<p><strong>技术梗概:</strong> 通过分析SQIsign中的四元数算法，并推导出改进后的最坏情况大小界来优化固定精度整数算术，从而减少所需的内存需求。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1032] When Removing Reductions Goes Wrong: Auditing Reduction Placement in Production ML-DSA Implementations</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Sunwoo Lee, Hyuk Lim, Seunghyun Yoon</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1032">论文</a> | <a href="https://eprint.iacr.org/2026/1032.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在生产环境中正确实现后量子签名仍然具有挑战性，即使经过标准化。ML-DSA实施依赖于基于NTT的多项式算术和延迟蒙哥马利约简，但省略约简可能是有效的优化或潜在的算术缺陷。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于证书的审计方法来审查生产环境中ML-DSA实现中的约简放置。该方法从保守的pq-crystals拓扑开始，分析系数边界并分类约简站点为冗余或必要。</p>
+<p><strong>达到效果:</strong> 应用该方法到八个ML-DSA库中，发现wolfSSL内存优化路径WOLFSSL-DILITHIUM-SMALL中存在的未报告缺陷：省略矩阵乘法后的约简导致溢出、非标准算术和签名失败，而这些错误通过现有KAT测试未被检测出来。</p>
+<p><strong>技术梗概:</strong> 关键的技术成分为稀疏挑战产品的精确整数恢复结果，将后InvNTT边界从(-Q,Q)紧缩到[-τη, τη]，区分了安全省略的稀疏产品路径和承载负载的密集产品站点。</p>
+</blockquote>
+<hr />
+<h3>[2026/1021] Schnorr-like Proofs of Knowledge for Hidden Oil Subspaces in UOV</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhiwei Wang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1021">论文</a> | <a href="https://eprint.iacr.org/2026/1021.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究针对UOV公钥密码体制中的隐藏油子空间，探讨了如何在不泄露信息的前提下证明对该子空间的知识。</p>
+<p><strong>主要贡献:</strong> 作者构建了一个类似于Schnorr的Sigma协议，用于证明对隐藏油子空间的知识而不揭示其内容。</p>
+<p><strong>达到效果:</strong> 通过该协议，证明者能够以计算上3-特殊完备性和计算上诚实验证者零知识的方式回应挑战，从而验证隐藏油子空间的存在性。</p>
+<p><strong>技术梗概:</strong> 该技术涉及构造满足特定条件的矩阵，并在响应挑战时进行线性掩码处理。</p>
+</blockquote>
+<hr />
+<h3>[2026/1023] Faster CoeffToSlot and SlotToCoeff for Sparsely Packed Ciphertexts with Application to CKKS Bootstrapping</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xiaopeng Zheng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1023">论文</a> | <a href="https://eprint.iacr.org/2026/1023.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> CKKS加密方案中的bootstrapping技术对于实现超越固定层次电路的同态计算至关重要，而CoeffToSlot和SlotToCoeff线性变换是其中的关键组成部分。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种利用稀疏打包设置中重复模式来优化这两个变换的方法，使得它们在保持乘法深度为1的同时减少了所需的同态操作数量。</p>
+<p><strong>达到效果:</strong> 通过这种方法，在特定条件下，CoeffToSlot和SlotToCoeff的计算成本显著降低；同时证明了新布局产生的辅助槽同样满足所需的统计特性。</p>
+<p><strong>技术梗概:</strong> 该研究利用重复模式简化了变换过程，并通过对变换过程中所需操作数的具体分析来优化算法效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/1024] Separating the Pebbling Model from the Random Oracle Model</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Susanna F. de Rezende, David Engström, Leonid Reyzin</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1024">论文</a> | <a href="https://eprint.iacr.org/2026/1024.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：在证明工作或空间的加密构造中，其安全性通常通过随机预言机模型来证明。该模型假设对手只能以黑盒方式访问预言机的功能，并且对于存储资源（如空间）的使用进行了进一步的理想化处理，即预言机输出仅能被完整存储或丢弃，而不能进行计算操作。然而，在某些情况下，这种理想化的限制可能并不充分，因为可以提取出对应于‘鹅卵石’的位串并对其进行计算。</p>
+<p><strong>主要贡献:</strong> 主要贡献：本文通过构建一系列在鹅卵石模型下的空间证明和内存硬函数，展示了允许对手将预言机输出视为位串并进行计算操作的算法可以在效率上显著优于仅限于使用鹅卵石模型的算法，从而解决了关于鹅卵石模型与随机预言机模型之间关系的长期开放问题。</p>
+<p><strong>达到效果:</strong> 达到的效果：证明了在特定情况下，鹅卵石模型不能准确地模拟对手的能力，并且存在一种更高效的算法可以在允许对手对预言机输出进行计算操作的情况下运行。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过设计一系列基于空间和内存硬函数的构造，并展示了如何利用这些构造来区分鹅卵石模型与随机预言机模型之间的差异，从而解决了该问题。</p>
+</blockquote>
+<hr />
+<h3>[2026/1025] Geometric Critical Point Screening: Clustering-Free Cryptanalytic Extraction of Neural Network Models</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ming Duan, Peiyao Tang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1025">论文</a> | <a href="https://eprint.iacr.org/2026/1025.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：神经网络模型提取已成为网络安全中的关键问题。现有方法通常采用计算优先、聚类后期的策略，导致查询和计算开销巨大。</p>
+<p><strong>主要贡献:</strong> 主要贡献：提出了一种基于几何关系的关键点筛选方法，通过在共面平行线上搜索关键点，快速分离第一隐藏层神经元的关键点，减少了签名提取的查询复杂度。</p>
+<p><strong>达到效果:</strong> 达到的效果：该方法仅需计算少量非目标关键点的签名，显著降低了查询复杂度，并提高了效率。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过在共面平行线上搜索关键点，快速分离第一隐藏层神经元的关键点；对于输入维度超过第一隐藏层维度的情况，在全激活空间内使用共面线段进一步高效筛选第二隐藏层关键点。</p>
+</blockquote>
+<hr />
+<h3>[2026/1026] Sparse Hermite Interpolation Method for Discrete-CKKS Functional Bootstrapping</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Andreea Alexandru, Andrey Kim, Yuriy Polyakov, Hongren Zheng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1026">论文</a> | <a href="https://eprint.iacr.org/2026/1026.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Discrete CKKS通过结合CKKS同态加密方案实现精确计算，其核心操作之一是功能自举，该过程允许在密文上执行任意函数并减少噪声。</p>
+<p><strong>主要贡献:</strong> 作者提出了“稀疏”三角Hermite插值方法，这是一种CKKS友好的高阶Hermite插值技术，能够有效克服现有方法的局限性，并实现更好的噪声降低效果。</p>
+<p><strong>达到效果:</strong> 该方法不仅保持了与先前最快方法相当的效率，还在噪声减少方面表现出色，从而提高了密文计算的准确性和效率。</p>
+<p><strong>技术梗概:</strong> 通过利用约束和系数的稀疏特性，作者开发了一种新的Hermite插值技术，能够在保持高效的同时实现显著的噪声降低。</p>
+</blockquote>
+<hr />
+<h3>[2026/1027] Computing Asymptotic Bounds for the Automated Coppersmith Method via Linear Programming</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhaopeng Ding, Zhaopeng Dai, Baofeng Wu, Yanshuo Zhang, Kejun Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1027">论文</a> | <a href="https://eprint.iacr.org/2026/1027.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Coppersmith's方法是用于求解模多项式方程的小根的基础技术，确定可恢复根的渐近界是其分析中的核心和挑战部分。</p>
+<p><strong>主要贡献:</strong> 作者将Automated Coppersmith方法中渐近界的计算转化为线性规划问题，从而获得一个证明正确且明确可计算的公式。</p>
+<p><strong>达到效果:</strong> 通过该方法，作者为五个密码分析场景提供了改进的渐近界：交换式Isogeny隐藏数字问题、模逆隐藏数字问题、椭圆曲线隐藏数字问题、未知乘数的一次线性同余生成器和具有提示的等级化Isogeny问题。</p>
+<p><strong>技术梗概:</strong> 该研究将Automated Coppersmith方法中的渐近界计算转化为线性规划问题，利用了线性编程技术来求解复杂的数学问题。</p>
+</blockquote>
+<hr />
+<h3>[2026/1028] Collusion-Resistant Asymmetric Anamorphic Encryption: Framework, Generic Construction, and Concrete Instantiations</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhikang Xie, Rupeng Yang, Man Ho Au, Zuoxia Yu, Willy Susilo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1028">论文</a> | <a href="https://eprint.iacr.org/2026/1028.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：论文针对Anamorphic加密技术，特别是其在非对称形式下的应用进行了深入探讨。该技术允许通过看似无害的密文进行隐蔽通信，即使在强审查环境下仍能保持秘密性。</p>
+<p><strong>主要贡献:</strong> 主要贡献是提出了首个通用框架以实现抗合谋攻击的非对称Anamorphic加密方案，并引入了新的密码学抽象——用于PKE的证人伪随机函数（witness PRF），以精确捕捉嵌入安全隐蔽信道所需的结构。</p>
+<p><strong>达到效果:</strong> 达到的效果是在不依赖于混淆技术的前提下，提供了一种统一且概念清晰的方法来构建非对称Anamorphic加密方案，并能适用于任何具有高最小熵密文的PKE方案。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过引入新的密码学抽象和基于此开发通用框架，论文解决了在合谋攻击下实现非对称Anamorphic加密的技术难题。</p>
+</blockquote>
+<hr />
+<h3>[2026/1030] Pushforward Problems and Applications to Isogeny-based Cryptography</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Luciano Maino, Christophe Petit</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1030">论文</a> | <a href="https://eprint.iacr.org/2026/1030.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究探讨了在超奇异椭圆曲线上的isogeny问题，特别是在无法高效表示N-扭子的情况下，如何通过推前算子oracle进行isogeny恢复。</p>
+<p><strong>主要贡献:</strong> 提出了一个新的框架来编码torsion信息，并展示了访问推前算子oracle可以实现高效的isogeny恢复实例。</p>
+<p><strong>达到效果:</strong> 该研究揭示了对Kim, Kim和Lee的阈值签名方案、Basso的盲伪随机函数以及Leroux和Roméas的可更新加密方案的安全性影响。</p>
+<p><strong>技术梗概:</strong> 通过引入推前算子oracle来处理不可高效表示的N-扭子问题，并证明了在某些实例下可以利用该oracle进行isogeny恢复。</p>
+</blockquote>
+<hr />
+<h3>[2026/1033] A New Construction Method for More Efficient Quadratic One-Time Noisy Multi-Client Functional Encryption Schemes</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jasmin Zalonis, Linda Scheu-Hachtel, Frederik Armknecht</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1033">论文</a> | <a href="https://eprint.iacr.org/2026/1033.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究旨在构建一种支持噪声二次函数的一次性多客户端功能加密方案，具备抗篡改性和标签功能，适用于隐私保护的机器学习等实际应用。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种不同于先前构造的新结构设计方法，使用更简单的组件实现更高的效率，并且安全性仅依赖于其基础构建块而无需额外的困难假设。</p>
+<p><strong>达到效果:</strong> 通过具体实例QUILT证明了该方案在性能上的显著优势，在私有逻辑回归训练中实现了4.8到6.8倍的速度提升。此外，与现有方案相比，该构造允许使用标签，从而减轻了一次性的限制。</p>
+<p><strong>技术梗概:</strong> 研究采用了一种不同于以往的结构设计方法，利用更简单的构建块实现高效性，并且不依赖于双线性群结构。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-05-23 09:59</h2>
 <p><em>新增 2 篇论文 (编号 1019--1020)</em></p>
 <h3>[2026/1019] On the Security of Public Key Authenticated Encryption with Keyword Search with Sender-independent Search Complexity</h3>
