@@ -5,6 +5,121 @@
 
 ---
 
+## 更新: 2026-05-26 07:52
+
+*新增 6 篇论文 (编号 1034--1039)*
+
+### [推荐] [2026/1037] On Publicly Verifiable Tokens in Group Signatures with Message-Dependent Opening
+
+- **匹配关键字:** lattice
+
+- **作者:** Takuma Watanabe, Keita Emura
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1037) | [PDF](https://eprint.iacr.org/2026/1037.pdf)
+
+
+> **研究背景:** 研究背景：组签名（GSs）允许成员匿名证明其身份，同时让特定的权威机构（开者）在必要时能够识别该成员。然而，在带有消息依赖性开启功能的组签名（GS-MDO）中，开者的权力被进一步限制，引入了另一个授权机构（准入者），发放与消息相关的令牌。现有方案中的这些令牌可以被视为签名，并且可以通过基础签名方案的验证算法进行公开验证。但尚未明确定义令牌的公开可验证性，即是否能够公开验证一个令牌是否有权用于开启组签名。
+>
+> **主要贡献:** 主要贡献：本文正式定义了令牌的公开可验证性，并建立了验证令牌作为签名与验证其开启能力之间的适当关系，通常需要开者的私钥。此外，作者证明了Ohara等人基于配对的GS-MDO方案、Libert等人基于格的GS-MDO方案以及Libert等人基于配对的GS-MDO方案均符合定义，表明该形式化是合理的。
+>
+> **达到效果:** 达到的效果：通过正式定义令牌的公开可验证性，作者澄清了隐含的安全属性，并证明现有方案满足这一定义，从而为理解GS-MDO的实际可行性提供了理论基础。
+>
+> **技术梗概:** 技术梗概：本文采用形式化方法定义并分析了令牌的公开可验证性，通过对比签名验证和开启验证之间的关系来确保安全性。
+
+---
+### [2026/1034] Vistrutah on FPGA: High-Throughput Pipelined Architecture and Comparison with Wider AES Variant
+
+- **作者:** Ahmet MALAL, Oğuz Yayla
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1034) | [PDF](https://eprint.iacr.org/2026/1034.pdf)
+
+
+> **研究背景:** 针对NIST 2024年对AES扩展变体的征集，该研究首次在FPGA上评估了Vistrutah，这是一种基于AES轮函数的新提出的宽块密码。
+>
+> **主要贡献:** 论文贡献了一种高吞吐量流水线架构，并与已发布的WAES-256进行了比较。
+>
+> **达到效果:** Vistrutah在256位全配置下实现了211.57 Gbps的吞吐率，频率为826.44 MHz，相比WAES-256分别低了2.6%和2.7%，同时功耗降低了33.2%，资源使用减少了17.7%。
+>
+> **技术梗概:** 设计采用FPGA实现，并通过与WAES-256的对比评估其性能和效率。
+
+---
+### [2026/1035] SoK: Rijndael-256
+
+- **作者:** Dessalegn Ayalneh, Anas Hlayhel, Setareh Sharifian, Alexander Tereschenko
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1035) | [PDF](https://eprint.iacr.org/2026/1035.pdf)
+
+
+> **研究背景:** 大多数依赖于PRP原语的对称加密模式在块大小上受到生日界限的限制，这使得它们无法处理超过$2^{n/2}$个块的数据。对于当前128位宽的块来说，在云系统中处理大量数据时可能会遇到严重的问题。
+>
+> **主要贡献:** 本文综述了Rijndael-256的安全理论和实践，并探讨了利用向量化AES-NI优化性能的实现方法，以克服这一限制。
+>
+> **达到效果:** 通过使用具有更宽块大小（如Rijndael-256）的模式，可以加密超过$2^{128}$个块的数据，从而解决了传统模式在处理大量数据时遇到的问题。
+>
+> **技术梗概:** 本文采用了理论分析和实际实现相结合的方法，重点介绍了如何利用向量化技术提高Rijndael-256的性能。
+
+---
+### [2026/1036] Resettable Non-Interactive Zero-Knowledge: Attacks and Defenses
+
+- **作者:** Behzad Abdolmaleki, Matteo Campanelli, Quang Dao, Shadman Mohammadi, Nahid Roustaeifar
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1036) | [PDF](https://eprint.iacr.org/2026/1036.pdf)
+
+
+> **研究背景:** 随着零知识证明在实际系统中的广泛应用，它们面临着超越传统理论保证的新安全威胁，特别是重置攻击。
+>
+> **主要贡献:** 研究提出了强重置零知识（srZK）的新定义，并展示了广泛使用的非交互式零知识构造对重置攻击的脆弱性。
+>
+> **达到效果:** 研究表明，包括Fiat-Shamir编译版本的各种NIZK构造都存在漏洞，且提出了一种通用防御方法来增强其安全性。
+>
+> **技术梗概:** 通过修改NIZK中的随机性生成过程，提出了一个简单的编译器来实现强重置零知识属性。
+
+---
+### [2026/1038] Scaling Intelligence: Verifiable Decision Forest Inference with $\textit{Remainder}$
+
+- **作者:** Makis Arsenis, Ryan Cao, Nick Cosby, Vishruti Ganesh, Ende Shen, Daniel Shorr, Benjamin Wilson
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1038) | [PDF](https://eprint.iacr.org/2026/1038.pdf)
+
+
+> **研究背景:** 本文提出了一种基于ZKML的可验证决策森林推理电路实现，利用结构化的GKR协议提高了证明效率和可扩展性。
+>
+> **主要贡献:** 贡献在于通过数据并行化和多项优化策略实现了高效的大规模决策森林推理证明，并显著降低了每棵树每个样本的证明时间。
+>
+> **达到效果:** 结果是成功构建了包含128棵高度为9的树、针对128个输入（每个有64个特征）的GKR证明，总证明时间低于54秒，展示了该方法在增加森林中的树木数量和批量处理样本时仍能保持亚线性的时间增长。
+>
+> **技术梗概:** 技术上采用了多阶段声明聚合优化策略，并将其应用于插值策略中，同时将线性时间验证者技术推广到数据并行场景，从而实现了高效的证明生成过程。
+
+---
+### [2026/1039] Related-Differential Distinguishers on up to 7 Rounds of AES
+
+- **作者:** Xueping Yan, Lin Tan, Wenfeng Qi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1039) | [PDF](https://eprint.iacr.org/2026/1039.pdf)
+
+
+> **研究背景:** 研究了圆减少版本的AES在密码方案设计中的应用，探讨其非随机属性和区分器是重要课题。尽管已知最长的秘密密钥区分器覆盖6轮AES，但在相关差异方向的研究仍有限。
+>
+> **主要贡献:** 作者通过交换和移位操作提供了对相关差异的新视角，并基于相关差异提出了5至7轮AES的新型非随机性质和秘密密钥区分器。
+>
+> **达到效果:** 在选择明文（CP）和自适应选择明文（ACP）设置中，改进了5轮AES的秘密密钥区分器的数据/时间复杂度分别为$2^{27.2}$/$2^{28.05}$和$2^{23.32}$/$2^{23.54}$。首次提出了7轮AES的秘密密钥区分器，其数据复杂度低于全码本。
+>
+> **技术梗概:** 通过结合一轮字节相关差异与四轮零差分性质，作者发现了5轮AES的新特性；利用一轮交换对角线相关差异和Bardeh及Rijmen给出的四轮相关差异，作者识别了7轮AES的第一个非随机性质。
+
+---
+
 ## 更新: 2026-05-25 11:12
 
 *新增 13 篇论文 (编号 1021--1033)*
