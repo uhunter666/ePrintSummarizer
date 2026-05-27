@@ -5,6 +5,123 @@
 
 ---
 
+## 更新: 2026-05-28 07:35
+
+*新增 6 篇论文 (编号 1048--1053)*
+
+### [推荐] [2026/1048] Unified Dual Attack Analyses: Covariance-Based Score Distribution Prediction for LWE
+
+- **匹配关键字:** post-quantum, LWE
+
+- **作者:** Yechen Li, Qunxiong Zheng
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1048) | [PDF](https://eprint.iacr.org/2026/1048.pdf)
+
+
+> **研究背景:** LWE问题支撑了包括NIST选定的CRYSTALS-KYBER和CRYSTALS-DILITHIUM在内的许多后量子密码系统，但现有的双攻击分析存在独立性假设错误的问题，导致方差估计过小。
+>
+> **主要贡献:** 作者提出了一种统一预测模型，用于估计三种类型的双攻击得分的期望和方差：原始双攻击、模切换双攻击以及解码双攻击（Crypto 2025）。
+>
+> **达到效果:** 该模型克服了现有方法中的理论缺口，提供了一个更准确的双攻击成功概率分析框架。
+>
+> **技术梗概:** 通过预测得分分布，作者利用余弦角度的不同来改进方差估计，并提出了一个统一的评估框架。
+
+---
+### [推荐] [2026/1051] Streamlined Symmetric Private Information Retrieval via Rényi Divergence
+
+- **匹配关键字:** post-quantum, LWE
+
+- **作者:** Alex Davidson, Nuno Nogueira, Samuel Pearson, João Ribeiro
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1051) | [PDF](https://eprint.iacr.org/2026/1051.pdf)
+
+
+> **研究背景:** 现有Symmetric PIR方案需要并行运行多个加密原语，且难以自然地适应后量子环境。
+>
+> **主要贡献:** 本文通过利用噪声泛滥维持数据库隐私性，首次直接从PIR导出SPIR，并采用基于Rényi散度的分析方法优化参数。
+>
+> **达到效果:** 实现了具有多项式噪声维度和密文模数（具体为64位）的后量子、轮次最优SPIR方案。
+>
+> **技术梗概:** 通过改进后的参数分析，简化了单服务器SPIR，并确保数据库的安全性。
+
+---
+### [2026/1049] Decomposition of the Ate Pairing and its Relation to Generalized Pairing Inversion
+
+- **作者:** Takakazu Satoh
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1049) | [PDF](https://eprint.iacr.org/2026/1049.pdf)
+
+
+> **研究背景:** 研究了特定有限域上椭圆曲线的Ate对的数量分解，并探讨其与广义配对逆运算的关系。
+>
+> **主要贡献:** 提出了将广义配对逆运算归约为根寻找问题的方法，特别适用于超奇异曲线。
+>
+> **达到效果:** 对于满足特定条件的超奇异曲线，算法中的根寻找调用次数理论上为线性增长。
+>
+> **技术梗概:** 基于Miller函数构成因子系统的观察，设计了无需固定参数配对逆运算的算法。
+
+---
+### [2026/1050] Guess-and-Determine Rebound Revisited: Full Collision Attack on AES-256 in DM Hash Mode
+
+- **作者:** Liyuan Tang, Lingyue Qin, Shiqi Hou, Xiaoyang Dong
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1050) | [PDF](https://eprint.iacr.org/2026/1050.pdf)
+
+
+> **研究背景:** 该研究基于Qin等人在CRYPTO 2025提出的一种结合了猜测与确定方法的反弹攻击，旨在通过量子和经典模型将半自由开始或自由开始碰撞攻击转化为针对DM哈希模式的碰撞攻击。
+>
+> **主要贡献:** 论文贡献了一种新的全碰撞攻击方法，首次实现了对AES-256-DM的全量子碰撞攻击，并改进了之前针对AES-128-DM和AES-192-DM的最佳攻击效果。
+>
+> **达到效果:** 该研究显著提升了对AES-256-DM的安全性评估，填补了在三大主流哈希模式中尚未有全碰撞攻击实现的空白。
+>
+> **技术梗概:** 通过引入经典和量子模型，将半自由开始或自由开始碰撞攻击转化为针对DM哈希模式的碰撞攻击，并具体实现了对AES-256-DM的全量子碰撞攻击。
+
+---
+### [2026/1052] Full Key Recovery of Masked PRESENT on an Out-of-Order RISC-V Processor: A First Reported Case Study
+
+- **作者:** Siddhartha Chowdhury, Nimish Mishra, Sarani Bhattacharya, Debdeep Mukhopadhyay
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1052) | [PDF](https://eprint.iacr.org/2026/1052.pdf)
+
+
+> **研究背景:** 研究背景：针对现代出序（OoO）处理器，假设基于屏蔽的对策如阈值实现和探针隔离非干扰性（PINI）能够保护密码学软件免受侧信道泄漏的影响。然而，在这种假设下，由于微架构后端效应导致的秘密份额之间的隔离可能被打破。
+>
+> **主要贡献:** 主要贡献：提出了一种名为	exttt{OoOLyzer}的基于跟踪的分析框架，用于从RISC-V流水线跟踪中重建物理寄存器重用和后端执行交互。该工作揭示了由于OoO注册表重命名导致的直接表示秘密份额之间的关联，并展示了如何利用这些关联恢复PRESENT子密钥。
+>
+> **达到效果:** 达到的效果：通过实验验证，成功从屏蔽的PRESENT实现中恢复出第一轮的子密钥，证明了基于物理寄存器重用的侧信道泄漏是主要来源。
+>
+> **技术梗概:** 技术梗概：该研究使用了一种新的分析方法来识别和利用OoO处理器中的微架构效应，通过模拟和实验验证了这些效应对屏蔽密码算法安全性的实际影响。
+
+---
+### [2026/1053] Beyond 128 Bits: The Concrete Security of EKE
+
+- **作者:** Jiawei Bao, Tibor Jager, Eike Kiltz, Aysan Nishaburi, Samin Nooripoor, Jiaxin Pan
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1053) | [PDF](https://eprint.iacr.org/2026/1053.pdf)
+
+
+> **研究背景:** 研究探讨了在NIST P-256椭圆曲线上实现的密码学原语是否可以达到超过128位的安全性。
+>
+> **主要贡献:** 贡献在于提出了一个新的方法来证明破解加密系统所需的计算假设数量，并引入了隐藏目标Diffie-Hellman (HTDH) 假设。
+>
+> **达到效果:** 结果表明，EKE协议在理想密码模型中的安全性等价于HTDH假设，从而实现了宣称的128+log_2(N)/2位的安全性水平。
+>
+> **技术梗概:** 技术上，通过分析破解概率与所需解决Diffie-Hellman实例数量之间的关系，证明了HTDH假设的有效性。
+
+---
+
 ## 更新: 2026-05-27 10:21
 
 *新增 8 篇论文 (编号 1040--1047)*
