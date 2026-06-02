@@ -5,6 +5,289 @@
 
 ---
 
+## 更新: 2026-06-02 20:13
+
+*新增 15 篇论文 (编号 1106--1125)*
+
+### [推荐] [2026/1107] KAT-Seeded Fuzzing of Stateful Hash-Based Signature Verification in liboqs
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Vishnu Ajith, Muhammad Ibrahim, Muhammed Sihan Haroon
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1107) | [PDF](https://eprint.iacr.org/2026/1107.pdf)
+
+
+> **研究背景:** 针对后量子密码学部署中的状态依赖哈希签名方案（如XMSS和LMS），其验证路径难以有效模糊测试，因为密钥生成远比验证昂贵。
+>
+> **主要贡献:** 提出了一种基于libFuzzer的结构化方法，利用预计算的已知答案测试(KAT)向量初始化公钥、签名和消息缓冲区，从而无需重复密钥生成即可高效地变异验证输入。
+>
+> **达到效果:** 通过此方法，在liboqs中实现了并上游了针对XMSS/XMSSMT和LMS/HSS-LMS验证路径的两个模糊测试框架，并发现了一个与OID混淆相关的堆溢出漏洞（CVE-2026-46344），并在liboqs 0.16.0版本中修复。
+>
+> **技术梗概:** 利用KAT向量初始化验证所需的缓冲区，减少重复密钥生成的开销，并通过轮询字段旋转策略解决短输入LMS模糊测试中的变异分布偏差问题。
+
+---
+### [推荐] [2026/1113] HRA-Secure Lattice-based Proxy Re-Encryption without Noise Flooding
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Haotian Yin, Jie Zhang, Yuji Dong, Dominik Wojtczak, Eng Gee Lim
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1113) | [PDF](https://eprint.iacr.org/2026/1113.pdf)
+
+
+> **研究背景:** 现有的基于格的代理重加密方案通常通过噪声泛滥来实现抵抗诚实重加密攻击的安全性，但这会显著增加密文中的噪声并导致参数增长。
+>
+> **主要贡献:** 本文提出了一种无需统计噪声泛滥即可达到诚实重加密攻击安全性的单跳所有者加密代理重加密方案（oePRE）。
+>
+> **达到效果:** 该方案通过引入确定性的填充误差而非隐藏继承的噪声，实现了高效重加密，并证明了其在计算上可模拟且满足HRA安全性。
+>
+> **技术梗概:** 文中引入了带噪音错误泄漏LWE（NEL-LWE）假设来形式化此方法，并基于Leaky-LWE框架定义了所有者加密代理重加密的计算再加密模拟性。
+
+---
+### [推荐] [2026/1122] Pseudo-Oil Subspaces and the Geometry of Underdetermined MQ Problems
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Massimo Ostuzzi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1122) | [PDF](https://eprint.iacr.org/2026/1122.pdf)
+
+
+> **研究背景:** 随着NIST后量子签名方案标准化进程的推进，多变量后量子签名方案的安全性受到越来越多的关注。
+>
+> **主要贡献:** 作者重新解释了Hashimoto算法，并设计了一种新的方法来解决欠定多元二次方程问题。
+>
+> **达到效果:** 该方法通过计算更丰富的伪油子空间结构，将初始问题分解为多个可独立求解的子问题，从而降低了针对MAYO和QR-UOV安全等级I参数集直接攻击的成本。
+>
+> **技术梗概:** 作者采用几何视角重新审视Hashimoto算法，并优化了一系列离散参数以平衡代数求解与组合搜索之间的权衡。
+
+---
+### [推荐] [2026/1125] Threshold Signatures in the Head
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Thibauld Feneuil, Matthieu Rivain, Damien Vergnaud, Auguste Warmé-Janville
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1125) | [PDF](https://eprint.iacr.org/2026/1125.pdf)
+
+
+> **研究背景:** 阈值密码学通过将信任分散在多个参与方中，使它们能够进行联合加密操作而不重构密钥。然而，基于MPC-in-the-Head (MPCitH) 原理的后量子签名方案要么导致分布式对称计算成本高昂，要么使得签名大小随着签署者数量增加而增长，这给实际应用带来了挑战。
+>
+> **主要贡献:** 作者提出了一种基于梅克尔树承诺的通用阈值MPCitH签名框架，并引入了阈值多项式承诺方案（TPCS）的概念及其实现方法。这种方法结合了PIOP、TPCS和算术黑盒，构建了一个通用的阈值签名方案，并证明其不可伪造性依赖于组件的安全性。
+>
+> **达到效果:** 通过使用具体的基于梅克尔树的TPCS，作者实现了适度的签名大小开销，最低可达到每个签署者200字节，在128位安全性水平下。这与之前基于GGM树的方法相比，每个签署者的开销大约为2kB。
+>
+> **技术梗概:** 该方法通过适应分布式环境中的PIOP+PCS范式，并引入和实例化了阈值多项式承诺方案（TPCS），结合了PIOP、TPCS和算术黑盒来构建一个通用的阈值签名方案。
+
+---
+### [2026/1106] AN EFFICIENT VALIDATED ASYNCHRONOUS BYZANTINE AGREEMENT PROTOCOL USING COMMITTEE
+
+- **作者:** Nasit Sarwar Sony
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1106) | [PDF](https://eprint.iacr.org/2026/1106.pdf)
+
+
+> **研究背景:** 针对多值拜占庭一致协议中存在的效率问题，本文提出了一种验证异步拜占庭一致协议，旨在减少不必要的广播并提高协议的执行效率。
+>
+> **主要贡献:** 该贡献在于通过随机选择部分节点进行请求广播，并在达成共识时仅考虑选定节点的请求，从而优化了资源使用和提高了协议性能。
+>
+> **达到效果:** 理论分析表明，此方法能有效降低消息传递和计算开销，但同时也增加了协议执行时间。
+>
+> **技术梗概:** 该协议采用随机选择部分节点进行广播，并在达成共识时仅考虑选定节点的请求，结合外部验证机制确保了协议的安全性和有效性。
+
+---
+### [2026/1108] A Comparative Evaluation of End-to-End-Encrypted Key Retrieval in Backup Protocols
+
+- **作者:** Dennis Funke, Kai Gellert
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1108) | [PDF](https://eprint.iacr.org/2026/1108.pdf)
+
+
+> **研究背景:** 研究背景：随着端到端加密（E2EE）在备份协议中的应用，用户数据的安全性得到了增强，但同时也带来了新的操作挑战，特别是在设备丢失后如何恢复E2EE保护的备份。
+>
+> **主要贡献:** 主要贡献：提出了一种结构化的框架来对比评估不同E2EE备份密钥检索方案在易用性、部署性和安全性方面的表现，并对现有简单恢复代码、实际部署和文献中的最新提案进行了分析。
+>
+> **达到效果:** 达到的效果：研究表明，依赖用户选择的低熵秘密进行恢复的方案可能比使用简单恢复代码的方法，在面对大规模攻击者时提供更弱的安全保护。
+>
+> **技术梗概:** 技术梗概：通过构建一个综合框架来系统地评估不同E2EE备份密钥检索方案，并明确区分了基于用户自选低熵秘密和高熵材料进行的恢复方法。
+
+---
+### [2026/1110] Exploiting Strong Key Bridges: Full-Fledged Automatic Rectangle Attacks on Deoxys-BC and SKINNY
+
+- **作者:** Ling Song, Yincen Chen, Qianqian Yang, Huimin Liu, Lei Wang, Lei Hu, Jian Weng
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1110) | [PDF](https://eprint.iacr.org/2026/1110.pdf)
+
+
+> **研究背景:** 本文针对TWEAKEY框架下的Deoxys-BC和SKINNY两个标准化密码算法，分析其密钥调度并发现强键桥依赖关系，利用这些依赖进行相关密钥矩形攻击。
+>
+> **主要贡献:** 作者开发了一种综合约束编程模型来搜索矩形攻击，并结合了状态测试技术、显式最后一轮计算以及强键桥等新组件，显著提升了对这两个算法的分析结果。
+>
+> **达到效果:** 在Deoxys-BC-384和Deoxys-BC-256上分别将时间复杂度降低了$2^{40}$和$2^{32}$倍，并且延长了现有最长攻击轮数。对于SKINNY，作者的攻击比之前最好结果多了一到两轮。
+>
+> **技术梗概:** 通过结合状态测试技术、显式最后一轮计算以及利用强键桥依赖关系，开发了一个统一的约束编程模型来寻找矩形攻击。
+
+---
+### [2026/1111] Identity-Based Revocable and Linkable Ring Signature
+
+- **作者:** Muyuan Wang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1111) | [PDF](https://eprint.iacr.org/2026/1111.pdf)
+
+
+> **研究背景:** 现有可撤销和可链接环签名（$\mathsf{RLRS}$）方案存在依赖于PKI带来的证书管理负担、计算或通信开销随环大小线性增长以及通常假设完全受信任的RA等问题，限制了其在大规模场景中的应用。
+>
+> **主要贡献:** 提出了基于身份的可撤销和可链接环签名（$\mathsf{IB\text{-}RLRS}$）的概念，并设计了一个无需可信设置、具有对数级签名字节大小的安全方案。
+>
+> **达到效果:** 该方案能够确保真实签名者的身份始终可以被提取，且恶意RA无法诬陷未参与签名生成的真实用户。
+>
+> **技术梗概:** 基于IEEE P1363标准，采用新颖的环签名构造方法，证明了其在随机预言模型下的安全性。
+
+---
+### [2026/1112] DeepProve: Verifiable End-to-End Large Language Model Inference
+
+- **作者:** Nicolas Gailly, Ismael Hishon-Rezaizadeh, Tianyi Liu, Nicholas Mainardi, Dimitrios Papadopoulos, Charalampos Papamanthou, Christodoulos Pappas, Shravan Srinivasan, Zack Youell, Yupeng Zhang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1112) | [PDF](https://eprint.iacr.org/2026/1112.pdf)
+
+
+> **研究背景:** 大语言模型（LLMs）在广泛的人工智能服务中取得了显著成功，但其巨大的计算和内存需求使其难以部署到本地硬件上。因此，用户通常依赖不可信的云基础设施提供商来执行模型推理，这导致了验证返回结果真实性的挑战。
+>
+> **主要贡献:** DeepProve 是首个能够在不可信云服务器上对整个大语言模型推理进行全面验证（即对于提示生成的所有标记）的系统，利用零知识证明（ZKPs）。它通过认证输出序列的正确性而非将昂贵的推理计算电路化来实现端到端验证。
+>
+> **达到效果:** DeepProve 通过使用求和检查协议和查找论证等核心构建块，实现了对 GPT-2 和 Gemma 等模型中所需的所有操作（如多头注意力和层归一化）正确性的高效证明，从而达到了全面验证大语言模型推理的目的。
+>
+> **技术梗概:** DeepProve 采用了求和检查协议和查找论证等技术，避免了将昂贵的推理计算电路化的需要，从而实现了在云服务器上对整个生成序列进行端到端验证。
+
+---
+### [2026/1114] Counterexamples to the Low-Norm Nullstellensatz Hypothesis
+
+- **作者:** Alex Lombardi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1114) | [PDF](https://eprint.iacr.org/2026/1114.pdf)
+
+
+> **研究背景:** 本文旨在通过构造反例来挑战Low-Norm Nullstellensatz Hypothesis（LNNH），该假设在多项式分解领域具有重要地位。
+>
+> **主要贡献:** 作者提供了多项式族的实例，证明了在特定条件下LNNH不成立，即存在系数$L^1$范数为1的多项式$f$，但其任何分解形式$\sum_i p_i \cdot q_i$都需满足$\sum_i ||q_i||_1 = 2^{\Omega(n)}$。
+>
+> **达到效果:** 这些反例揭示了当$d$为素数时，一类特定函数对于可能推翻LNNH至关重要。
+>
+> **技术梗概:** 通过构造指示函数$f(x) = f_C(x)$及其在$\mathbb Z_d^n$子空间上的推广形式来构建反例。
+
+---
+### [2026/1115] The Fact of the MATTER: Efficient Hardware Accelerators for Wide-Block Memory Encryption
+
+- **作者:** Shubham Namdeo Shende, Utsav Banerjee
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1115) | [PDF](https://eprint.iacr.org/2026/1115.pdf)
+
+
+> **研究背景:** 随着大数据应用如人工智能和机器学习的发展，需要新的大带宽内存技术，这推动了宽块内存加密的需求及其高效实现。
+>
+> **主要贡献:** 作者探索并比较了基于MATTER的不同硬件架构设计空间，包括基于轮次、展开和流水线的实现方式。
+>
+> **达到效果:** 研究结果提供了不同配置下MATTER在功率、性能、面积和能量消耗方面的详细对比分析。
+>
+> **技术梗概:** 使用7nm FinFET ASIC标准单元库进行数字综合，评估了针对新兴边缘计算系统特定内存加密硬件要求的架构适用性。
+
+---
+### [2026/1117] On the Secrecy of the Encapsulation Coin in ML-KEM
+
+- **作者:** Madjid G. Tehrani, William J Buchanan, Mouad Lemoudden
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1117) | [PDF](https://eprint.iacr.org/2026/1117.pdf)
+
+
+> **研究背景:** 研究背景：ML-KEM标准要求在每次封装过程中生成一个新的32字节密币，共享秘密是公钥和该密币的确定性函数。本文探讨了实际应用中密币的安全性保护情况。
+>
+> **主要贡献:** 主要贡献：通过实验分析了六个未修改库（OpenSSL 3.5, wolfSSL 5.9, AWS-LC, Go 1.26, Bouncy Castle 1.83, CIRCL）和一个从头开始的参考实现，揭示了密币恢复的可能性。
+>
+> **达到效果:** 达到的效果：研究发现，在未经过FIPS-140-3验证配置的情况下，密币的安全性依赖于惯例而非设计，允许外部不可见且参数可控的可预测性。
+>
+> **技术梗概:** 技术梗概：通过实验对比分析了不同库在密钥封装过程中的实现细节，并提出了两种方法来利用密币的可预测性。
+
+---
+### [2026/1119] Packed Pre-Constructed PVSS for Randomness Generation and E-Voting
+
+- **作者:** Karim Baghery, Eleftheria Makri, Dheeraj Kumar Suryakari
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1119) | [PDF](https://eprint.iacr.org/2026/1119.pdf)
+
+
+> **研究背景:** 预构建的可验证秘密共享（PPVSS）通过要求经销商发布共享秘密的承诺或加密，增强了传统的PVSS，提供了更高效的多种密码协议构造方法。
+>
+> **主要贡献:** 作者提出了Packed Pre-constructed PVSS (3PVSS)方案，允许经销商在一个多项式中编码多个秘密，同时保持预构建属性。
+>
+> **达到效果:** 通过两种不同的3PVSS构造，作者展示了如何在不同应用场景下优化通信和验证效率，并扩展了普遍可验证的随机数生成协议。
+>
+> **技术梗概:** 第一种构造使用单个承诺表示所有共享秘密，适用于需要高效通信的应用；第二种构造为每个秘密发布独立承诺，提供更高的灵活性以支持独立验证需求。
+
+---
+### [2026/1120] Pushing Collision Attacks on SHA-2 to 39 Steps
+
+- **作者:** Yingxin Li, Fukang Liu, Haifeng Qian, Jinwei Zhu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1120) | [PDF](https://eprint.iacr.org/2026/1120.pdf)
+
+
+> **研究背景:** SHA-2家族是美国联邦标准的一部分，主要包括SHA-256和SHA-512。尽管这些哈希函数在实际应用中至关重要，但Li等人在CRYPTO 2026提出的方法仅能针对37步SHA-2进行碰撞攻击，未能达到38步。
+>
+> **主要贡献:** 本文作者改进了搜索程序以找到适用于38步SHA-256和SHA-512的高质量差分特征，并利用特殊形状的差分特征采用meet-in-the-middle方法实现了内存高效的碰撞攻击。
+>
+> **达到效果:** 该研究首次成功实现了针对38步SHA-256和SHA-512的碰撞攻击，时间复杂度分别为$2^{104.3}$和$2^{125.4}$，且内存复杂度可忽略不计。此外，还改进了先前针对36步和37步SHA-2的碰撞攻击方法。
+>
+> **技术梗概:** 通过分析38步差分特征的独特形状，并利用meet-in-the-middle技术实现高效的内存使用，从而成功推进了SHA-2的碰撞攻击至39步。
+
+---
+### [2026/1121] Security Amplification via Robust Indistinguishability Combiners
+
+- **作者:** Benny Applebaum, Nir Bitansky, Nathan Geier
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1121) | [PDF](https://eprint.iacr.org/2026/1121.pdf)
+
+
+> **研究背景:** 研究旨在通过鲁棒不可区分组合器来增强密码学原语的安全性，特别是在统计和计算设置下，解决现有技术的局限性。
+>
+> **主要贡献:** 提出了一个新的鲁棒不可区分组合器框架，该框架扩展了先前工作的覆盖范围，并证明了其自然地充当安全放大器。
+>
+> **达到效果:** 结果包括在单次查询情况下将鲁棒组合器应用于计算环境中的功能加密，并首次实现了功能加密的安全放大器，解决了相关领域的开放问题。
+>
+> **技术梗概:** 通过构建新的鲁棒不可区分组合器框架，该框架能够处理多种候选构造并生成安全的最终构造，同时考虑了“好随机性”和“坏随机性”的影响。
+
+---
+
 ## 更新: 2026-06-01 14:21
 
 *新增 49 篇论文 (编号 1055--1105)*
