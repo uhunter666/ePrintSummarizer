@@ -79,6 +79,226 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-06-07 13:46</h2>
+<p><em>新增 11 篇论文 (编号 1126--1136)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1127] Verifiable Bootstrapping from Lattice-based Folding</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Amit Deo, Louis Tremblay Thibault</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1127">论文</a> | <a href="https://eprint.iacr.org/2026/1127.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文构建并测试了首个基于格的可验证初始化方案（IVC），利用折叠技术支持环上的自定义约束系统，以实现同态加密（FHE）的正确执行证明。</p>
+<p><strong>主要贡献:</strong> 作者引入了一种新颖的CCS关系，能够进行自同构稳定性检查，增强了环上CCS的表现力，并将其应用于折迭方案验证者和TFHE的密文评估操作的算术化。</p>
+<p><strong>达到效果:</strong> 实验表明，该方案与现有技术相比具有更小的证明大小，但证明者和验证者的运行时间显著增加。此外，作者还讨论了基于折叠的IVC方案的安全性，并提出了在随机预言机模型中知识完整性的论证。</p>
+<p><strong>技术梗概:</strong> 通过利用折叠技术实现环上的自定义约束系统，该研究实现了FHE的可验证执行，并通过算术化方法优化了证明过程。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1130] Reassessing the Security of LPN-C and its HHE-Oriented Variants</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Orr Dunkelman, Semira Einsele, Hans Heum, Morten Øygarden, Gerhard Wunder</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1130">论文</a> | <a href="https://eprint.iacr.org/2026/1130.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 文章重新评估了基于LPN-C及其面向HHE的变体的安全性，这些变体旨在通过结合对称和同态加密来提高效率。</p>
+<p><strong>主要贡献:</strong> 贡献在于量化了通过拒绝采样施加有界噪声的效果，并扩展了Arora-Ge风格的代数攻击以适应有界噪声环境，从而改进了参数选择的安全评估。</p>
+<p><strong>达到效果:</strong> 研究结果表明，某些参数设置比之前估计的更安全，而在其他情况下，新的代数策略提供了已知的最佳攻击方法。</p>
+<p><strong>技术梗概:</strong> 技术上采用了拒绝采样来控制噪声，并结合Arora-Ge风格的方法分析了有界噪声下的LPN实例解密问题。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1131] Public Key Encryption Secure Against Quantum Leakage</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Alper Cakan, Fuyuki Kitagawa, Ryo Nishimaki, Manasi Shingane, Takashi Yamakawa</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1131">论文</a> | <a href="https://eprint.iacr.org/2026/1131.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对现代密码方案中的侧信道攻击，现有研究主要集中在经典泄漏场景下的安全性，而忽视了量子泄漏的安全性。</p>
+<p><strong>主要贡献:</strong> 本文扩展了公钥加密在有界泄漏模型中对泄漏的抵抗定义，以包括量子泄漏，并提出了两种构造：一种使用量子密钥的PKE方案和另一种使用经典密钥的PKE方案。</p>
+<p><strong>达到效果:</strong> 前者能够在存在无界经典泄漏的同时容忍恒定速率（小于0.057）的量子泄漏；后者则在假设多项式安全后量子不可区分性混淆（iO）及单向函数（OWFs）存在的前提下实现了对有界量子泄漏的安全性。</p>
+<p><strong>技术梗概:</strong> 通过引入新的安全性定义并结合多项式安全后量子不可区分性混淆和单向函数等高级加密技术，本文解决了公钥加密在面对量子泄漏时的安全性问题。</p>
+</blockquote>
+<hr />
+<h3>[2026/1126] A correlation duet: Correlation attacks on correlation generators</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Antoine Joux</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1126">论文</a> | <a href="https://eprint.iacr.org/2026/1126.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对基于准阿贝尔综合征解码问题的伪随机相关生成器，首次在2025年Asiacrypt会议上使用压缩感知技术进行了攻击。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种新的相关攻击方法，这种方法比之前的攻击更加有效，并且能够恢复具有更大汉明重量的秘密错误多项式。</p>
+<p><strong>达到效果:</strong> 新攻击使得伪随机相关生成器的参数需要进行全面重新评估，特别是FOLEAGE方案。</p>
+<p><strong>技术梗概:</strong> 该研究使用了传统的密码分析工具——相关攻击，并结合了压缩感知技术来提高攻击效率和降低资源消耗。</p>
+</blockquote>
+<hr />
+<h3>[2026/1128] Optimized Point Addition Circuits for Elliptic Curve Discrete Logarithms</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> André Schrottenloher</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1128">论文</a> | <a href="https://eprint.iacr.org/2026/1128.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对Shor算法对量子计算机在破解RSA公钥加密中的主要威胁，研究者们致力于降低其实现成本。Babbush等人通过优化椭圆曲线离散对数的量子计算电路，在门数量和量子比特数量上实现了显著减少。</p>
+<p><strong>主要贡献:</strong> 本文详细描述了一种逻辑量子电路架构，该架构在secp256k1曲线上达到了与Babbush等人相似的效果，虽然量子比特略有增加但减少了Toffoli门的数量，并提供了通用变体的门计数结果。</p>
+<p><strong>达到效果:</strong> 通过优化点加电路设计，本文实现了对椭圆曲线离散对数问题的有效计算，验证了其在实际应用中的可行性。</p>
+<p><strong>技术梗概:</strong> 该研究采用了逻辑量子电路的设计方法，结合了特定椭圆曲线和通用变体的门计数分析，以实现更高效的量子算法。</p>
+</blockquote>
+<hr />
+<h3>[2026/1129] pSquare-hash: A Family of Tweakable Hash Functions for Physically Secure PQ Signatures</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Lorenzo Grassi, Mario Marhuenda-Beltrán, Thorben Moos, Fabian Schmid, Matthias Johann Steiner, Hailun Yan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1129">论文</a> | <a href="https://eprint.iacr.org/2026/1129.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对NIST推荐的基于哈希的抗量子签名方案，现有实例主要依赖SHA-2或SHA-3家族，但这些标准家族在物理安全方面并不理想。</p>
+<p><strong>主要贡献:</strong> 提出了pSquare-hash，一种专门设计的轻量级可调制哈希函数族，旨在更好地满足基于哈希的签名方案的需求和安全性要求。</p>
+<p><strong>达到效果:</strong> 通过减少置换大小或调用次数，pSquare-hash相比标准连接方法可能具有效率优势，并且其可调制特性有助于物理安全防护。</p>
+<p><strong>技术梗概:</strong> pSquare-hash基于算术化设计，选择特定的素数以优化性能并增强安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1132] Oblivious Garbling and its Applications</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Tomer Ashur, Carmit Hazay, Rahul Satish</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1132">论文</a> | <a href="https://eprint.iacr.org/2026/1132.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 传统的加法器方案虽然实现了函数与输入的分离，但暴露了执行方的功能信息，这在功能可能涉及机密或敏感逻辑的情况下成为障碍。</p>
+<p><strong>主要贡献:</strong> 提出了无知识加法器的新范式，在该框架中，加法人仅接收电路拓扑结构的信息并保持对其他一切内容的无知。</p>
+<p><strong>达到效果:</strong> 首次构建了这一概念实例，实现了线性复杂度且无需增加门电路大小，同时在恶意设置下没有渐近开销。</p>
+<p><strong>技术梗概:</strong> 通过设计一种新颖的方法来实现加法器方案中的无知识特性，确保功能信息不被泄露。</p>
+</blockquote>
+<hr />
+<h3>[2026/1133] SoK: PIOP-based SNARKs for General Computation</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yonghui Guan, Rihe Zhang, Bin Liu, Tianyu Zhao, Jialu Hao, Antonis Michalas</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1133">论文</a> | <a href="https://eprint.iacr.org/2026/1133.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现代SNARK构造通常结合了Polynomial Interactive Oracle Proof (PIOP)和适当的Polynomial Commitment Scheme (PCS)，通过交互式多项式查询和简洁的承诺来实现高效论证系统，包括紧凑的证明和高效的验证程序。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种统一框架，细化了SNARKs前端与后端的分离，并将其作为单一连贯结构进行分析，引入了lookup arguments和递归证明组合等关键组件。</p>
+<p><strong>达到效果:</strong> 该框架展示了如何将这些组件与前端和后端交互，从而提高效率和适用性。</p>
+<p><strong>技术梗概:</strong> 通过采用Thaler提出的SNARKs前端与后端分解，并在统一视图中整合lookup arguments和递归证明组合技术。</p>
+</blockquote>
+<hr />
+<h3>[2026/1134] SPIDER: Two Server Functionality for the Cost of Zero</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ofir Dvir, Kali Hale, Javin Zipkin, Divyakant Agrawal, Dahlia Malkhi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1134">论文</a> | <a href="https://eprint.iacr.org/2026/1134.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 文章介绍了SPIDER和baseSPIDER两种私有信息检索（PIR）方案，旨在改进现有PIR协议的通信复杂度和设计复杂性。</p>
+<p><strong>主要贡献:</strong> 贡献在于提出了baseSPIDER协议，实现了与最优复杂度相当但常数因子更低的性能；SPIDER则无需服务器配合，通过简单转换实现单服务器模式下的隐私保护。</p>
+<p><strong>达到效果:</strong> 结果是两种方案分别在不同场景下提高了PIR效率和适用性，尤其适用于大型数据库查询。</p>
+<p><strong>技术梗概:</strong> 技术上，baseSPIDER采用预处理和存储提示的方法优化通信复杂度；SPIDER通过简单转换适应默认服务器接口，简化设计并减少部署障碍。</p>
+</blockquote>
+<hr />
+<h3>[2026/1135] Private Information Retrieval: A Tutorial and Survey</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Pranav Shriram Arunachalaramanan, Yue Chen, Ling Ren</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1135">论文</a> | <a href="https://eprint.iacr.org/2026/1135.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 私有信息检索（PIR）是一种保护用户隐私的基本原语，使用户能够在不泄露查询内容的情况下从公共数据库中检索所需数据。</p>
+<p><strong>主要贡献:</strong> 文章总结了多个易于理解的PIR方案，并涵盖了关键词查询和批量查询等扩展功能。</p>
+<p><strong>达到效果:</strong> 通过对比不同PIR范式的具体效率，为实际选择提供了指导，并讨论了PIR的实际应用。</p>
+<p><strong>技术梗概:</strong> 文章描述了几种概念上简单的PIR方案，这些方案概括了主流设计范式的核心思想。</p>
+</blockquote>
+<hr />
+<h3>[2026/1136] Local Constraints Behind Fourier Analysis of Neural Distinguishers for SPECK32/64</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yunjae Hwang, Sunyeop Kim, Hanbeom Shin, Deukjo Hong, Seokhie Hong, Dongjae Lee, Jaechul Sung, Byoungjin Seok</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1136">论文</a> | <a href="https://eprint.iacr.org/2026/1136.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究了ARX密码体制中基于神经区分器的傅里叶分析方法，特别是针对SPECK32/64算法。</p>
+<p><strong>主要贡献:</strong> 提出了将局部模加约束与训练后的神经区分器傅里叶分析相结合的新框架，并揭示了主导的傅里叶项背后的特定局部条件和分支效应。</p>
+<p><strong>达到效果:</strong> 通过傅里叶分析，分离出值依赖型变体差分线性项和差异依赖的传统项，解释了它们的偏差；进一步在回转右四元组设置中扩展了分析，并揭示了主导的值依赖型傅里叶特征与具体的进位或借位约束之间的联系。</p>
+<p><strong>技术梗概:</strong> 结合局部模加约束和神经区分器的傅里叶分析技术，通过构建仅以原始密文对为输入的神经区分器进行研究。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-06-02 20:13</h2>
 <p><em>新增 15 篇论文 (编号 1106--1125)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1107] KAT-Seeded Fuzzing of Stateful Hash-Based Signature Verification in liboqs</h3>
