@@ -79,6 +79,201 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-06-15 07:53</h2>
+<p><em>新增 10 篇论文 (编号 1242--1251)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1248] Atlantis: Lattice-based Anonymous Tokens with Private Metadata Bit</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum, homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Foteini Baldimtsi, Aayush Yadav</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1248">论文</a> | <a href="https://eprint.iacr.org/2026/1248.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的匿名令牌与私有元数据位（ATPM）方案依赖于经典硬假设，缺乏后量子安全性。</p>
+<p><strong>主要贡献:</strong> 本文提出了首个基于格假设的ATPM方案Atlantis，实现了公开验证和部分知识下私有提取隐藏位的功能。</p>
+<p><strong>达到效果:</strong> Atlantis方案通过结合盲签名范式与格基线性同态加密技术实现，并使用Falcon-512和LNP22系统实例化，通信量为70 KB，令牌大小为129 KB。</p>
+<p><strong>技术梗概:</strong> 该方案采用了Fischlin盲签名框架并引入了基于格的线性同态加密方法来承载隐藏位。</p>
+</blockquote>
+<hr />
+<h3>[2026/1242] SoK: The Constant Time Model</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Billy Bob Brumley</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1242">论文</a> | <a href="https://eprint.iacr.org/2026/1242.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：常时间模型是抵御密码学实现中的定时攻击的主要防护手段，但学术界和工业界的定义存在差异。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于系统化地梳理了常时间模型及其演变过程，并识别出模型保护范围与规范假设之间的差距。</p>
+<p><strong>达到效果:</strong> 研究结果揭示了一个与私钥加载相关的规范级漏洞，并在OpenSSL和BoringSSL中确认了此泄漏现象。</p>
+<p><strong>技术梗概:</strong> 采用了一种进攻性方法来发现起源于加密原语边界之外的定时漏洞。</p>
+</blockquote>
+<hr />
+<h3>[2026/1243] LendLocked: Privacy &amp; Transparency for Digital Library Lending</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Boya Wang, Peter Hall, Sunoo Park</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1243">论文</a> | <a href="https://eprint.iacr.org/2026/1243.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 当前的数字图书馆借阅模式存在透明度低和隐私保护不足的问题，这限制了读者的信息访问自由。</p>
+<p><strong>主要贡献:</strong> 研究通过访谈揭示了现有系统的缺陷，并提出了LendLocked系统以实现与实体图书馆借阅相当的隐私性和透明性。</p>
+<p><strong>达到效果:</strong> LendLocked系统在随机预言模型下证明能够满足强安全、隐私和透明性的要求，显著提升了数字借阅的安全性。</p>
+<p><strong>技术梗概:</strong> 该系统基于密码学和可信硬件设计，并通过微基准测试验证了其关键加密功能的有效性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1244] Resource Estimation of a Distributed Quantum Algorithm for Elliptic Curve Discrete Logarithms</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> MohamadAli Khajeian</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1244">论文</a> | <a href="https://eprint.iacr.org/2026/1244.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：评估椭圆曲线密码系统的量子安全性需要精确估计在容错量子硬件上解决椭圆曲线离散对数问题（ECDLP）所需的资源，特别是在单块实现Shor算法时，逻辑量子比特的数量是一个主要限制。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者提出了一种分布式量子离散对数框架，并将其应用于椭圆曲线设置中，通过经典二分驱动协调器验证候选子集中的秘密标量，显著减少了所需的控制寄存器宽度。</p>
+<p><strong>达到效果:</strong> 达到的效果：结合最新的空间高效可逆模除电路模型，单节点逻辑量子比特要求从现有的单一实现大幅减少至约1080到1140个量子比特，低于现有技术。</p>
+<p><strong>技术梗概:</strong> 技术梗概：该研究采用分布式算法分解全局标量搜索空间，并通过经典二分法协调器进行验证，同时使用了Luo等人（2026）提出的高效可逆模除电路来压缩量子内存占用。</p>
+</blockquote>
+<hr />
+<h3>[2026/1245] Accountable Asynchronous Multi-Party Computation</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Pierre Civit, Rachid Guerraoui</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1245">论文</a> | <a href="https://eprint.iacr.org/2026/1245.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在非同步网络中，经典的分区论证表明，在故障数量达到$f \geq n - 2t$时，任何$t\text{-resilient}$协议无法确保许多功能的安全性。因此，需要构建问责制机制来检测并阻止安全违规行为。</p>
+<p><strong>主要贡献:</strong> 本文提出了首个具备问责制的异步多方计算（AAMPC）协议，能够在$f \leq t &lt; n/3$时保证目标超属性，并在故障数量位于$(t,\,t_{\mathrm{acc}}]$区间内提供强问责机制。</p>
+<p><strong>达到效果:</strong> 该协议确保了在指定条件下所有目标超属性的正确性、隐私性、输入独立性和输出交付，同时提供了针对部分故障情况的公开可验证证据。</p>
+<p><strong>技术梗概:</strong> 技术上，本文贡献了一种高效的可问责加法同态高阈值异步完全（可验证）秘密共享功能，具有摊销线性通信成本。这使得在线阶段的延迟为$O\big(\mathsf{Depth}(\mathcal{C})\big)$，并实现了高效的安全计算。</p>
+</blockquote>
+<hr />
+<h3>[2026/1246] A Note on Combined Attacks on Fallen Sanctuary</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Enanko Basak, Sayandeep Saha</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1246">论文</a> | <a href="https://eprint.iacr.org/2026/1246.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 泄漏抗性重钥方案旨在通过定期刷新临时密钥来维持加密安全性，即使在存在侧信道泄露的情况下。Fallen Sanctuary (LR4) 是一种高阶泄漏抗性重钥构造，能够在足够多的踪迹被积累之前实现指数级的安全放大。</p>
+<p><strong>主要贡献:</strong> 本文研究了 LR4 在结合故障攻击和侧信道攻击模型下的安全性。作者证明了针对计数器更新和验证机制的瞬态故障可以阻止重新初始化状态的进展，导致临时密钥重复使用。</p>
+<p><strong>达到效果:</strong> 结果表明，攻击者可以积累对应相同秘密状态的任意数量泄漏踪迹，从而将受保护原语的安全性降低到没有重钥的传统实现水平。</p>
+<p><strong>技术梗概:</strong> 通过模拟存在故障的实现来评估攻击，并分析其对 LR4 所宣称的泄漏抗性保证的影响。</p>
+</blockquote>
+<hr />
+<h3>[2026/1247] Practical Attacks on a Decentralized Secure Messenger Session</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kota Urushigaki, Hayato Kimura, Atsushi Tanaka, Takanori Isobe</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1247">论文</a> | <a href="https://eprint.iacr.org/2026/1247.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Session是一款注重用户匿名性和隐私性的去中心化即时通讯应用，采用独特的消息协议V1版本替代了广泛研究的Signal Protocol。然而，该协议存在设计漏洞，可能被利用进行攻击。</p>
+<p><strong>主要贡献:</strong> 作者通过实施驱动的安全分析发现了Session协议中的两个关键设计缺陷，并展示了三种实际可行的攻击方法：冒充攻击、消息时间戳伪造攻击以及消息丢弃和重放攻击。</p>
+<p><strong>达到效果:</strong> 这些攻击允许恶意服务器节点或未授权的内部人员替换公钥，静默删除或重复发送消息，篡改对话的时间顺序感知。研究结果强调了这些漏洞对协议基本安全保证的重大威胁。</p>
+<p><strong>技术梗概:</strong> 作者采用全面的安全分析方法，结合实际应用环境进行测试，揭示了Session协议中的根本性设计缺陷，并提出了即时的缓解策略以确保协议的安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1249] A family of invertible shift-invariant maps with strong arithmetic properties</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xiao-Xin Zhao, Deng Tang, Zhong-Xiao Wang, Qun-Xiong Zheng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1249">论文</a> | <a href="https://eprint.iacr.org/2026/1249.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：移不变映射在许多对称密码方案中被用于设计非线性层，如Keccak中的$\chi$-映射。本文探讨了基于无前缀后缀序列诱导的$n$元布尔函数的移不变映射族，这些映射定义于$\mathbb{F}_2^n$上，并研究其代数性质。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者证明了该映射族形成一个关于复合运算的交换幺半群，并且当$m mid n$时与特定多项式环的单位群同构，当$m\mid n$时则与另一个形式的多项式环的单位群同构。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过上述同构关系，作者将映射族的复合运算转化为多项式的乘法运算，并研究了$\rho=x_0+(x_1+a_1+1)(x_2+a_2+1)\cdots (x_m+a_m+1)$的具体性质。</p>
+<p><strong>技术梗概:</strong> 技术梗概：利用代数结构和同构关系，将移不变映射的复合运算转化为多项式的乘法运算，并通过多项式环的已有理论来研究这些映射的可逆性和周期结构等特性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1250] TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Tao Lu, Jipeng Zhang, Yanpei Guo, Xuanming Liu, Wenjie Qu, Zonghui Wang, Wenzhi Chen, Jiaheng Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1250">论文</a> | <a href="https://eprint.iacr.org/2026/1250.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> GPU Tensor Cores旨在加速矩阵乘法，已成为AI革命的主要驱动力。然而，现有的零知识证明（ZKPs）的GPU实现仅依赖通用SIMT内核，未能充分利用Tensor Cores的强大计算能力。</p>
+<p><strong>主要贡献:</strong> 作者首次提出了TensorZKP框架，将ZKP的关键模块重新设计为适用于Tensor Core的矩阵乘法任务，并开发了异步Warp特化框架以优化内存访问和操作流程。</p>
+<p><strong>达到效果:</strong> 实验结果表明，TensorZKP在大规模实例下表现出显著的效率提升，特别是在证明生成成本方面取得了突破性进展。</p>
+<p><strong>技术梗概:</strong> 通过重新设计有限域算术并将其映射到Tensor Core硬件上，并利用异步Warp特化框架来优化内存访问和操作流程，实现了高效的数据处理与计算加速。</p>
+</blockquote>
+<hr />
+<h3>[2026/1251] Related Differentials of $4\times4$ MDS Matrices: A Complete Characterization</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kamil Otal, Ali Mert Sülçe, Oğuz Yayla</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1251">论文</a> | <a href="https://eprint.iacr.org/2026/1251.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：相关差分是线性层中的一种特殊性质，与零差攻击密切相关。对于$4    imes4$ MDS矩阵，关于其是否允许存在相关差分的问题尚未完全解决。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于完整地刻画了所有$4    imes4$ MDS矩阵（除同构外）是否允许存在相关差分，并给出了明确的判别条件。</p>
+<p><strong>达到效果:</strong> 达到的效果是，通过15个具体的方程和280个显式多项式方程，全面解决了$4   imes4$ MDS矩阵是否存在相关差分的问题，这些方程具有独特的数学结构。</p>
+<p><strong>技术梗概:</strong> 技术梗概：采用代数几何方法，特别是射影几何中的点集理论，结合多项式方程的不可约性和互素性分析，确定了所有可能的条件。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-06-12 07:53</h2>
 <p><em>新增 14 篇论文 (编号 1225--1240)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1225] Towards Post-Quantum Secure eSIM Provisioning Protocols</h3>
