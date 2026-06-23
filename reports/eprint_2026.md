@@ -5,6 +5,67 @@
 
 ---
 
+## 更新: 2026-06-23 08:12
+
+*新增 3 篇论文 (编号 1286--1289)*
+
+### [推荐] [2026/1289] A Toolkit for Succinct Lattice-Based Zero Knowledge Proofs
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Beatrice Biasioli, Madalina Bolboceanu, Vadim Lyubashevsky, Antonio Merino-Gallardo, Michał Osadnik, Gregor Seiler, Patrick Steuer
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1289) | [PDF](https://eprint.iacr.org/2026/1289.pdf)
+
+
+> **研究背景:** 近年来，基于格问题的证明系统的开发取得了显著进展，这些系统以极快的速度运行且输出大小小于100KB。然而，在实现证词隐私方面仍存在挑战。
+>
+> **主要贡献:** 本文通过将Lyubashevsky等人提出的线性大小零知识证明集成到LaBRADOR协议中，首次实现了具有证词隐私的基于格的零知识证明系统。
+>
+> **达到效果:** 该系统的构建和实施显著提高了证明的效率和实用性，并为其他应用提供了易于使用的库。
+>
+> **技术梗概:** 通过整合Lyubashevsky等人的线性大小零知识证明技术，本文解决了实现证词隐私的技术挑战。
+
+---
+### [2026/1286] Multiple-of Property for Related-Differential Distinguishers on 5-Round AES
+
+- **作者:** Hanbeom Shin, Donggeun Kwon, Byoungjin Seok, Deukjo Hong, Jaechul Sung, Seokhie Hong, Dongjae Lee
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1286) | [PDF](https://eprint.iacr.org/2026/1286.pdf)
+
+
+> **研究背景:** 该研究探讨了针对5轮AES的依赖差分区分器，结合了一轮相关差分传播与四轮广义零差特征，旨在揭示AES在理想随机置换下的固有结构偏差。
+>
+> **主要贡献:** 作者证明了满足基本性质的有效四元组数量具有多重形式，并分析了不同配对方式下有效四元组的数量分布特性。
+>
+> **达到效果:** 研究结果表明，在选择明文设置中，不同的配对方式会影响区分器的性能，n_z=0表现最佳，而n_z=1次之，n_z=2几乎失效。
+>
+> **技术梗概:** 通过数学证明和统计分析，作者确定了有效四元组数量的具体形式，并比较了不同配对策略下的效果差异。
+
+---
+### [2026/1287] Towards a Doubly Efficient IP=PSPACE
+
+- **作者:** Liyan Chen, Matthew M. Hong, Yael Tauman Kalai, Zoe Xi
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1287) | [PDF](https://eprint.iacr.org/2026/1287.pdf)
+
+
+> **研究背景:** 研究旨在扩展双效交互证明系统的适用范围，以支持更长的时间复杂度问题。
+>
+> **主要贡献:** 贡献在于提出了一个直接构造的双效交互证明系统，适用于时间复杂度为 \(T(n) = n^{O(\log n)}\) 的PSPACE语言。
+>
+> **达到效果:** 结果是首次将双效证明系统的适用范围扩展到该时间复杂度区间，并且简化了证明过程。
+>
+> **技术梗概:** 技术上采用了一种直接构造方法，避免了间接构建批交互证明的步骤，从而简化了整体设计。
+
+---
+
 ## 更新: 2026-06-22 08:26
 
 *新增 26 篇论文 (编号 1259--1285)*
