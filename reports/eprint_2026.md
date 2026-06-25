@@ -5,6 +5,49 @@
 
 ---
 
+## 更新: 2026-06-26 07:43
+
+*新增 2 篇论文 (编号 1311--1312)*
+
+### [推荐] [2026/1312] Post-Quantum Security of Tweakable Key-Alternating Feistel Ciphers in the Multi-Key Setting
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Rentaro Shiba, Tetsu Iwata
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1312) | [PDF](https://eprint.iacr.org/2026/1312.pdf)
+
+
+> **研究背景:** 本文研究了在量子计算环境下，Tweakable Key-Alternating Feistel密码（TKAF）的安全性。
+>
+> **主要贡献:** 作者证明了带有公共随机函数的TKAF在Q1模型下的后量子安全性，并将其扩展到多密钥设置。
+>
+> **达到效果:** 研究表明3轮TKAF是后量子TPRP安全的，而4轮TKAF则是后量子STPRP安全的。
+>
+> **技术梗概:** 研究采用了基克拉底等人（ASIACRYPT 2025）关于非Tweakable Key-Alternating Feistel密码的安全性证明，并进行了适应性调整以涵盖Tweakable和多密钥环境。
+
+---
+### [2026/1311] The Relative Trace-Zero Subgroup of the Barreto-Naehrig Curves
+
+- **作者:** Julius Zhang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1311) | [PDF](https://eprint.iacr.org/2026/1311.pdf)
+
+
+> **研究背景:** 研究背景：本文探讨了Barreto-Naehrig (BN) 曲线上的相对迹零子群，该子群在配对密码学中具有重要地位。
+>
+> **主要贡献:** 主要贡献：作者证明了一个关于BN曲线配对子群的 folklore 特征描述，将其定义为$n$-次根点上相对迹映射的核。
+>
+> **达到效果:** 达到的效果：这一结果深化了对BN曲线结构的理解，并为相关密码学协议的设计提供了理论依据。
+>
+> **技术梗概:** 技术梗概：通过引入和分析相对迹映射，作者得出了一个简洁而有力的子群描述方法。
+
+---
+
 ## 更新: 2026-06-25 09:34
 
 *新增 21 篇论文 (编号 1290--1310)*
