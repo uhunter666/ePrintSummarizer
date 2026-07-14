@@ -5,6 +5,757 @@
 
 ---
 
+## 更新: 2026-07-14 19:48
+
+*新增 40 篇论文 (编号 1318--1404)*
+
+### [推荐] [2026/1318] Cryptanalysis of HAWK: a Guessing Game
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Ben Nelson, Joshua Limbrey, Cong Ling, Andrew Mendelsohn
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1318) | [PDF](https://eprint.iacr.org/2026/1318.pdf)
+
+
+> **研究背景:** HAWK是一种基于格同构问题（LIP）的后量子签名方案，但该研究提出了一种经典算法，能够在概率多项式时间内通过四个数论假设恢复其密钥。
+>
+> **主要贡献:** 研究人员提出了一个新颖的攻击策略，将HAWK底层的秩2模块-LIP实例归约到nrdPIP问题，并利用Lenstra-Silverberg算法解决特定条件下的实例以破解HAWK。
+>
+> **达到效果:** 该方法通过不断尝试不同的随机下三角单位矩阵U来构造新的Gram矩阵G'，并测试其是否容易求解，最终成功恢复了部分有效的HAWK私钥。
+>
+> **技术梗概:** 研究采用了一种新颖的“重新随机化”技术，即在固定模块-LIP实例的情况下，通过变换Gram矩阵来寻找易于解决的问题实例。
+
+---
+### [推荐] [2026/1322] Reliable Homomorphic Matching for Fuzzy Labeled PSI at Scale
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Erkam Uzun
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1322) | [PDF](https://eprint.iacr.org/2026/1322.pdf)
+
+
+> **研究背景:** FLPSI允许接收方了解与查询相似的已注册记录的标签，而不会透露其他信息。该研究关注于构建基于集合阈值减少的高效实现，并探讨其同态形式以提高性能。
+>
+> **主要贡献:** 作者识别并解决了现有内核中的可靠性问题，提出了CSTPSI方案来降低错误接受率，并确保了零或可忽略不计的可靠性误差。
+>
+> **达到效果:** 通过引入独立令牌轮次和匹配幂级数，研究实现了较低的错误接受率，并提高了同态模糊匹配协议的整体可靠性。
+>
+> **技术梗概:** 该方法结合了层次-BFV同态加密、门电路和秘密共享技术来决定加密下的匹配结果并释放记录标签。
+
+---
+### [推荐] [2026/1331] The Most Efficient Protocol for PAKE: What Exact Stuff Do You Need to Hash at the End?
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Jiayu Xu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1331) | [PDF](https://eprint.iacr.org/2026/1331.pdf)
+
+
+> **研究背景:** PAKE协议允许双方在仅共享低熵密码的情况下，共同建立一个加密会话密钥。OEKE-2F协议因其高效性和灵活性而受到关注，但在具体实现细节上存在争议，导致了多种潜在的变体。
+>
+> **主要贡献:** 作者对所有16种OEKE-2F变体进行了全面分析，并证明了每一种的安全性。研究结果揭示了不同变体之间的差异及其对KEM安全性的要求。
+>
+> **达到效果:** 研究表明，“哈希一切”版本需要KEM最少的安全属性，而移除哈希中的项目越多，则对KEM的要求越高。
+>
+> **技术梗概:** 通过形式化分析和证明技术，作者系统地评估了每个变体的UC安全性，并提供了详细的比较结果。
+
+---
+### [推荐] [2026/1333] Apples, Oranges, and Signatures: Pitfalls and Methodology in ML-DSA Benchmarking
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Sebastien Riou, Jong-Yeon Park, Liga Anwar, Axel Poschmann, Michael Hutter
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1333) | [PDF](https://eprint.iacr.org/2026/1333.pdf)
+
+
+> **研究背景:** 在后量子加密环境中，密码学迁移提出了显著的实践挑战，并需要可靠的数据支持工程决策。然而，现有的机器学习数字签名算法（ML-DSA）基准测试方法往往会产生误导性的或不可比较的结果，这使得迁移和加密灵活性的努力复杂化。
+>
+> **主要贡献:** 该研究分析了ML-DSA签名操作基准测试中的常见陷阱，包括在比较安全性级别时的细微不一致，并提出了基于标准化输入数据集和明确合格报告指标的稳健基准测试方法。
+>
+> **达到效果:** 通过这种方法，可以公平地跨硬件和软件实现进行比较，并支持实时系统设计者评估最坏情况执行时间。
+>
+> **技术梗概:** 该研究强调了使用标准化输入数据集的重要性，并提出了清晰界定的报告指标来解决由于拒绝采样和其他数据依赖组件导致的ML-DSA签名算法执行时间变异性问题。
+
+---
+### [推荐] [2026/1374] Analysing the Post-Quantum Security of S/MIME
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Sayan Das, Anupam Chattopadhyay
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1374) | [PDF](https://eprint.iacr.org/2026/1374.pdf)
+
+
+> **研究背景:** S/MIME作为一种基于证书的电子邮件签名和加密机制，其后量子迁移技术上可行，但仍存在安全保障问题。
+>
+> **主要贡献:** 论文通过将分析单位从证书转变为加密消息，提出了SMIME-PQCheck验证框架，确保了每条有效路径都符合活动迁移策略。
+>
+> **达到效果:** 该研究揭示了一个单一的ML-KEM接收者路径不足以保证后量子保密性，除非所有其他有效的经典路径都无法恢复相同的密钥。
+>
+> **技术梗概:** 通过结合X.509配置文件检查、CMS接收器结构分析以及基于政策的混合处理方法，实现了对S/MIME消息的安全验证。
+
+---
+### [推荐] [2026/1381] PriFT: Private Fine-Tuning using off-the-shelf MPC and HE libraries
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Qiuxuan Ma, Eleftheria Makri, Nusa Zisaric
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1381) | [PDF](https://eprint.iacr.org/2026/1381.pdf)
+
+
+> **研究背景:** 隐私保护机器学习（PPML）旨在整个机器学习管道中保持数据隐私，但在实践中，训练阶段的输入隐私加密计算仍具有较高的计算成本。
+>
+> **主要贡献:** PriFT框架通过结合多方计算(MPC)和同态加密(HE)，实现了在不泄露客户隐私的情况下对客户数据进行早期利用，并支持完全私有和半私有的训练模式。
+>
+> **达到效果:** 实验结果表明，MPC方法在半私有场景中显著优于HE方法，在性能上表现更佳。
+>
+> **技术梗概:** PriFT框架使用transformer作为特征提取器，并通过Crypten和TenSEAL这两个成熟的库来实现基于MPC和HE的安全训练技术。
+
+---
+### [推荐] [2026/1384] Lower Bounds for PIR with Preprocessing from Blackbox Cryptography
+
+- **匹配关键字:** LWE
+
+- **作者:** Alexander Hoover, Giuseppe Persiano, Kevin Yeo
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1384) | [PDF](https://eprint.iacr.org/2026/1384.pdf)
+
+
+> **研究背景:** 研究了单服务器私有信息检索（PIR）在预处理下的通信界限，特别是在黑盒密码学使用下，先前工作表明，具有亚线性通信的单服务器PIR需要每查询线性数量的服务器操作。
+>
+> **主要贡献:** 提出了任何利用黑盒密码学进行计算的单服务器PIR预处理方案的计算下界，证明了在线平均计算量必须为Ω(n/s)，即使在批量查询中也成立。
+>
+> **达到效果:** 结果表明，在客户端存储s比特的情况下，对于n比特数据库，每次查询的平均计算量至少为Ω(n/s)；否则，服务器需要执行至少Ω(n/s)次加密操作。这些下界是最佳的，因为存在满足其中一个要求但不满足另一个要求的PIR方案。
+>
+> **技术梗概:** 通过构建特定的客户端预处理方案和分析其通信复杂性和计算复杂性来证明下界，确保了结果的有效性和广泛适用性。
+
+---
+### [推荐] [2026/1386] Key-Recovery Attacks on TALUS: A Cryptanalytic Note
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Guilhem Niot
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1386) | [PDF](https://eprint.iacr.org/2026/1386.pdf)
+
+
+> **研究背景:** 文章针对TALUS（Kao和Chang提出的一种阈值ML-DSA构造）进行了密钥恢复攻击研究，揭示了其安全性的潜在缺陷。
+>
+> **主要贡献:** 作者发现了两种独立的攻击方法，分别适用于TALUS-MPC和TALUS-TEE/TALUS-MPC，并指出这些攻击利用了Feldman承诺中的可逆性以及签名过程中的错误项泄露问题。
+>
+> **达到效果:** 通过这两种攻击方法，研究者能够直接从密钥生成广播中恢复所有$s_1$的密钥份额，并从签名广播中独立地恢复聚合nonce $y$，从而计算出秘密值。此外，对于TALUS-TEE和TALUS-MPC，研究者还发现了一个持续存在的缺陷，即标准ML-DSA中的拒绝采样检查已被移除，导致每个签名泄露一个噪声线性方程在$s_2$中；通过在cyclotomic环上应用最小二乘恢复技术，可以从数百万个签名中恢复完整的秘密。
+>
+> **技术梗概:** 研究采用了密钥恢复和线性方程组求解的方法来攻击TALUS构造。对于TALUS-MPC，利用了Feldman承诺的可逆性和Gaussian消元法；而对于TALUS-TEE/TALUS-MPC，则通过最小二乘方法在cyclotomic环上进行恢复以提取秘密值。
+
+---
+### [推荐] [2026/1392] Slicing Boolean Functions with Inner Products
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Pierrick Méaux, Tim Seuré
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1392) | [PDF](https://eprint.iacr.org/2026/1392.pdf)
+
+
+> **研究背景:** 研究背景：具有额外结构的布尔函数在对称密码学中扮演重要角色，有助于实现强大的密码属性并促进高效实现。近期关于同态友好的对称原语的研究，特别是在混合同态加密背景下，强调了能够根据布尔立方体的结构化分区进行分解的布尔函数的兴趣。
+>
+> **主要贡献:** 主要贡献：本文通过用一般整数线性形式替换汉明权重，推广了这一观点，并研究了在每个v-切片上具有有界度的函数所需的切片数量及其结构特性。
+>
+> **达到效果:** 达到的效果：提供了由整数向量诱导的分区的边界和结构性质，并展示了这种表示如何在GSW类似设置中实现同态评估策略，同时给出了结果密文中的噪声估算。
+>
+> **技术梗概:** 技术梗概：通过使用不同向量家族对多种布尔函数进行直接推广，并实验性地评估了它们的代数度、代数免疫性和非线性。
+
+---
+### [推荐] [2026/1397] HANNS: Low-Storage Non-Interactive Approximate Private Nearest Neighbor Search with Sublinear Comparison Complexity
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Haowen Pan, Ruiqi Gan, Yunhao Fu, Yintai Sun, Zhou Zhang, Yuxiang Wang, Yi Chen, Bo Zhang, Haoyi Zhou, Yongxin Tong, Zhenyu Guan, Jin Dong, Song Bian
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1397) | [PDF](https://eprint.iacr.org/2026/1397.pdf)
+
+
+> **研究背景:** 随着对数据隐私的关注增加，私人最近邻搜索(PNNS)引起了越来越多的研究兴趣。现有的PNNS主要分为两类：交互式PNNS利用安全多方计算协议和索引结构实现亚线性复杂度；非交互式PNNS使用全同态加密以减少通信带宽但导致超线性计算复杂度。
+>
+> **主要贡献:** 我们提出了HANNS，一种具有亚线性加密比较次数的非交互式PNNS协议。该方案通过开发基于FHE的集群排序方案和引入同态产品量化(PQ)方案来实现这一目标。
+>
+> **达到效果:** 实验结果显示，与最新的非交互式方案相比，HANNS在速度上提高了41到277倍，并减少了12到31.7倍的存储空间；同时，在低带宽场景下，通信量降低了1,258到80,536倍，相对于交互式方案实现了8到119倍的速度提升。
+>
+> **技术梗概:** HANNS通过开发一种基于FHE的集群排序方案和引入同态产品量化(PQ)方案来减少加密比较次数，并实现粗略搜索和重新排名，从而显著降低计算和存储开销。
+
+---
+### [推荐] [2026/1399] CHIP: Efficient Homomorphic Encryption-Based CNN Batch Inference Using Channel-Interleaved Packing with Small Rotation Key Set
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Huan-Chih Wang, Ja-Ling Wu
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1399) | [PDF](https://eprint.iacr.org/2026/1399.pdf)
+
+
+> **研究背景:** 随着隐私问题的日益突出，法律法规要求机器学习应用必须遵守严格的隐私规定。现有的基于同态加密（HE）的推理解决方案在单样本和多样本场景下都存在显著的计算和内存开销，并且需要大量旋转密钥，限制了其在更广泛的应用场景中的实用性。
+>
+> **主要贡献:** 本文提出了一种名为CHIP的方法，通过将三维数据嵌入二维密文中实现同态卷积操作，并引入高效的二维卷积技术减少HE乘法次数，同时采用部分核和小批量策略提高计算密集型推理任务的性能。
+>
+> **达到效果:** 实验结果表明，在单样本和多样本场景下，与Lee等人（ICML'22）和Cheon等人（IEEE TDSC'24）提出的最先进的同态加密方法相比，本方法表现出更高的效率。使用ResNet18、VGG11和VGG16模型并设置批量大小为64时，我们的解决方案可实现高达4.7倍的速度提升。
+>
+> **技术梗概:** 通过通道交织打包（CHIP），将三维数据嵌入二维密文中，并结合通道聚合和密文旋转来执行同态卷积操作；引入了一种高效的二维卷积技术以减少HE乘法次数；采用部分核和小批量策略迭代处理切片内核和样本子集，最终汇总结果生成输出。
+
+---
+### [推荐] [2026/1400] What Happens When integrating Modulus Switching and Lossy Source Coding: A New Dual Attack Variant on LWE
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Yechen Li, Qunxiong Zheng
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1400) | [PDF](https://eprint.iacr.org/2026/1400.pdf)
+
+
+> **研究背景:** 随着大规模量子计算机对经典公钥密码学构成威胁，后量子密码方案的研发成为热点。LWE问题作为这些方案的安全基础，其破解方法如双筛FFT攻击备受关注。
+>
+> **主要贡献:** 本文提出了一种新的双筛FFT攻击变体，结合了模切换和有损源编码技术，显著降低了FFT步骤中的枚举大小。
+>
+> **达到效果:** 该方法在应用于KYBER时，虽然整体复杂度提升不大，但解码和FFT成本分别减少了1-6位和2-7位，在多目标攻击场景中具有实际意义。
+>
+> **技术梗概:** 通过理论分析，本文展示了如何有效整合模切换与有损源编码技术来优化双筛FFT攻击流程。
+
+---
+### [推荐] [2026/1401] A New Framework for Efficient Multivariate Functional Bootstrapping
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Kunyu Wu, Kuiyuan Duan, Dengfa Liu, Hongbo Li
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1401) | [PDF](https://eprint.iacr.org/2026/1401.pdf)
+
+
+> **研究背景:** 该研究致力于提高全同态加密(FHE)中可编程重采样(PBS)的效率，特别是在处理多变量函数时，通过减少查找表(LUT)的大小来优化计算过程。
+>
+> **主要贡献:** 作者提出了一种基于变量分离和加性内部表示的方法来压缩多变量LUT，并将其应用于非负整数除法，实现了在理论上最优参数下的盲旋转复杂度为$\widetilde{O}(1)$。同时，该方法还提供了模减法和截断除法的框架。
+>
+> **达到效果:** 实验结果表明，在$t=64$时，该方法在除法运算中提高了3.6倍的速度，并且对于汉明权重区间函数提高了1.9倍的速度。
+>
+> **技术梗概:** 研究采用了对数变换分解二元除法为两个一元对数PBS调用、一次同态减法和一次外层指数PBS调用。此外，通过模拟退火带重热的方法寻找具有小跨度的表示形式来进一步优化算法性能。
+
+---
+### [2026/1351] Hardware Private Cubic Circuits
+
+- **作者:** Frederik Reiter, Amir Moradi
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1351) | [PDF](https://eprint.iacr.org/2026/1351.pdf)
+
+
+> **研究背景:** 硬件加密实现经常通过侧信道泄露秘密信息，这可能导致攻击者在不利用算法漏洞的情况下窃取密钥等敏感数据。现有的防侧信道攻击技术如掩码技术虽然有效但会带来显著的面积、延迟和随机性开销。
+>
+> **主要贡献:** 本文提出了HPCC，一种低延迟的3输入乘法器Gadget，实现了任意字段下的常数周期延迟，并允许在单个周期内计算多个乘法操作，具有较低的额外开销。
+>
+> **达到效果:** 该工作填补了高阶PINI Gadget在实现复杂电路方面的空白，为硬件加密设计提供了新的工具和方法。
+>
+> **技术梗概:** HPCC通过巧妙地设计Gadget结构来保持恒定延迟，并利用共享计算技术优化多乘法操作的效率，同时确保安全性和实用性。
+
+---
+### [2026/1369] Algebraic Modelings of the Supersingular Isogeny Problem
+
+- **作者:** Alessio Caminata, Andrea Sanguineti, Silvia Sconza
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1369) | [PDF](https://eprint.iacr.org/2026/1369.pdf)
+
+
+> **研究背景:** 本文提出了一种新的超奇异曲线上同源问题的代数建模方法，将其表示为多元多项式方程组。该模型基于Renes公式，适用于通过2或3次同源连接的蒙哥马利形式或三角形形式的椭圆曲线。
+>
+> **主要贡献:** 作者们首次将超奇异曲线上同源问题转化为特定次数的多项式系统，并研究了这些系统的代数性质，证明了它们是零维的，并计算了最高次数部分的维度。
+>
+> **达到效果:** 实验结果表明，通过Gröbner基技术求解这些系统比使用模多项式方法更快。
+>
+> **技术梗概:** 该模型利用Renes公式将椭圆曲线表示为特定形式的多项式方程组，并分析了这些系统的代数特性。
+
+---
+### [2026/1370] smklhs: Succinct Multi key Linearly Homomorphic Signatures for Certified Statistics
+
+- **作者:** Diego F. Aranha, Cecilia Boschini, Hanna Ek, Elena Pagnin
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1370) | [PDF](https://eprint.iacr.org/2026/1370.pdf)
+
+
+> **研究背景:** 研究背景：在多个独立数据源贡献的数据集上认证统计声明的问题，需要一个不可信的服务器聚合签名数据记录并发布如总和、平均值或比率等声明。第三方可以验证这些声明是否正确，无需访问底层记录，同时保持证明大小和验证成本足够小以实现实际部署。
+>
+> **主要贡献:** 主要贡献：smklhs是一种多密钥线性同态签名方案，实现了在计算中涉及的不同签署者数量对最终签名大小的影响为对数级，而与输入消息总数无关的高效认证机制。
+>
+> **达到效果:** 达到的效果：证明了smklhs在随机Oracle和代数组模型下对适应性敌手的安全性，并使用高性能配对库RELIC实现了该方案，验证了其实用性。
+>
+> **技术梗概:** 技术梗概：通过设计一种新的多密钥线性同态签名方案，结合了高效的证明生成与验证算法，确保在大规模数据集上实现快速认证。
+
+---
+### [2026/1371] The Small-Field Turn in Succinct Proofs: A Systematization of Finite-Field Choice in Modern SNARKs and STARKs
+
+- **作者:** Christos Skatharoudis
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1371) | [PDF](https://eprint.iacr.org/2026/1371.pdf)
+
+
+> **研究背景:** 近年来，透明简洁论证系统从椭圆曲线上的256位标量域迁移到了较小的字段，如Goldilocks素数、BabyBear和KoalaBear素数等。本文旨在系统化这一‘小字段转向’现象。
+>
+> **主要贡献:** 作者将分析单位从证明系统或虚拟机转变为有限域，并根据机器字长匹配、二进制性、减少成本以及代数哈希的S-box自同构结构来组织这些领域，从而为生产证明器（Plonky2, Plonky3, Stwo, Binius及其后代）的选择提供依据。
+>
+> **达到效果:** 作者揭示了基础域宽度与Fiat-Shamir声学性所需的扩展次数之间的关系，并将其与非交互式FRI的猜想和可验证声学性的差距进行对比，从而填补了该领域最明显的实证空白。
+>
+> **技术梗概:** 通过分析有限字段的选择结构特性，本文为生产证明器的设计提供了指导，并展示了这些选择在实际系统中的实现方式。
+
+---
+### [2026/1372] Retrieve-Compute PIR and Its Applications
+
+- **作者:** Benny Applebaum, Shahar Shechter
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1372) | [PDF](https://eprint.iacr.org/2026/1372.pdf)
+
+
+> **研究背景:** 传统的两服务器私有信息检索（two-server PIR）虽然通信量可以任意小，但依赖于两个服务器不合作的强假设，这在实践中难以验证。
+>
+> **主要贡献:** 本文提出了一种新的两服务器PIR变体——Retrieve-Compute PIR (RC-PIR)，其中一个服务器充当标准计算服务器，另一个则作为检索限制的服务，仅提供数据库编码的块而不进行特定的PIR计算。
+>
+> **达到效果:** 基于学习噪声线性（LPN）假设，本文构建了具有任意小多项式通信和多项式存储的RC-PIR方案，并由此推导出多个应用，包括k服务器PIR和k服务器鲁棒PIR。
+>
+> **技术梗概:** 通过利用现有的静态内容或托管服务实例化检索限制的服务，将非合作假设与现实中的架构和部署约束相结合；基于LPN假设构造了RC-PIR方案，并进一步扩展到更广泛的多服务器场景。
+
+---
+### [2026/1373] Formalizing Privacy of Anonymous Credentials: A Provably Secure Framework with Predicate Proofs
+
+- **作者:** Yu Zhang, Zongbin Wang, Jian Hou
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1373) | [PDF](https://eprint.iacr.org/2026/1373.pdf)
+
+
+> **研究背景:** 现有匿名凭证系统要么不支持谓词证明，要么绑定于特定签名方案且缺乏形式化框架。
+>
+> **主要贡献:** 提出了首个具备内置谓词证明支持的构造性框架，并定义了实体、操作、对手模型和安全属性。
+>
+> **达到效果:** 该实例化版本满足所有安全属性并在标准硬件上具有实用性，凭证及证明通信成本适度增长，运行时间和存储优于基于CL的基础方案。
+>
+> **技术梗概:** 使用BBS签名、Pedersen承诺和环签名基础证明进行实例化，并在标准假设下形式化验证了其安全性。
+
+---
+### [2026/1375] MPC with Weighted and Fluid Participation
+
+- **作者:** Ghada Almashaqbeh, Sumedh Ghude
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1375) | [PDF](https://eprint.iacr.org/2026/1375.pdf)
+
+
+> **研究背景:** 现有的大多数MPC协议假设参与方是静态且等价的，但现代应用需要支持动态和加权的参与方式。
+>
+> **主要贡献:** 该研究开发了在静态和动态设置下都具有恶意安全性、支持加权参与的MPC协议。
+>
+> **达到效果:** 通过扩展加权斜率秘密共享方案并引入验证性和前瞻性功能，实现了加权MPC，并利用前瞻性特性支持委员会式MPC中的动态参与。
+>
+> **技术梗概:** 研究采用了加权斜率秘密共享和验证性技术来确保计算的正确性和安全性。
+
+---
+### [2026/1376] Secure and Efficient Federated Learning with Adaptive Differential Privacy and Verifiable Homomorphic Aggregation
+
+- **作者:** Mohaddese Seyedi, Farhad Rahmati, Zahra Seyedi
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1376) | [PDF](https://eprint.iacr.org/2026/1376.pdf)
+
+
+> **研究背景:** 现有的联邦学习框架虽然提供了数据保密性和聚合验证性，但缺乏正式的统计隐私保证；而基于差分隐私的方法通常依赖固定的噪声注入机制，导致在隐私-实用性权衡上表现不佳。
+>
+> **主要贡献:** 本文提出了一种名为HEAD-FL的安全高效联邦学习框架，结合了自适应差分隐私和可验证同态聚合技术。
+>
+> **达到效果:** 理论分析与实验结果表明，HEAD-FL相比固定噪声注入和基于梯度的聚合方法，在隐私-实用性权衡上表现更优，并且通信效率更高，适用于隐私敏感和带宽受限环境。
+>
+> **技术梗概:** 通过引入基于Renyi差分隐私框架下的自适应高斯扰动机制，并采用联邦平均算法替代基于梯度的聚合方式，实现了在保护隐私的同时减少通信开销。
+
+---
+### [2026/1377] HAWK ``Guessing Game'' is not Polynomial-Time
+
+- **作者:** Markku-Juhani O. Saarinen
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1377) | [PDF](https://eprint.iacr.org/2026/1377.pdf)
+
+
+> **研究背景:** 本文展示了对HAWK攻击的复杂性分析，指出其运行时间远高于作者最初声称的多项式时间。
+>
+> **主要贡献:** 研究发现了攻击算法实现中的错误假设，并通过实验验证了超多项式的复杂性。
+>
+> **达到效果:** 研究表明，攻击的实际复杂度可能为指数级，而非多项式级，从而提升了HAWK的安全性评估。
+>
+> **技术梗概:** 利用AI工具快速探索和试验高级攻击技术，展示了其在现代密码分析中的应用价值。
+
+---
+### [2026/1378] (R)Icy-DVRF: A Robust Distributed Verifiable Random Function based on ROAST signatures
+
+- **作者:** Ahmet Ramazan Ağırtaş, Oğuz Yayla, Melis Berçin Yılmaz
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1378) | [PDF](https://eprint.iacr.org/2026/1378.pdf)
+
+
+> **研究背景:** 现有的分布式可验证随机函数(DVRF)协议通常依赖于同步或半同步网络假设，这使得同时确保鲁棒性和活跃性成为一个挑战。
+>
+> **主要贡献:** (R)Icy-DVRF通过结合ROAST签名框架到基于FROST的机制中，实现了在异步网络上操作的同时保持恒定大小的证明，从而解决了这一问题。
+>
+> **达到效果:** 该协议能够在恶意行为者试图破坏过程、延迟加密份额或保持无响应的情况下，确保正确的操作和输出生成。
+>
+> **技术梗概:** 通过使用ROAST签名框架，(R)Icy-DVRF能够在异步网络中实现鲁棒性和活跃性，同时维持较小的证明大小。
+
+---
+### [2026/1379] Hierarchical Structure in Attribute-Based Inner-Product Functional Encryption
+
+- **作者:** Hirotomo Shinoki
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1379) | [PDF](https://eprint.iacr.org/2026/1379.pdf)
+
+
+> **研究背景:** 该研究旨在通过引入层次结构来扩展属性基内积功能加密（AB-IPFE）的访问控制能力和线性计算能力，从而将其分为两步生成密钥算法。尽管在层次身份加密和可委托属性加密中广泛研究了此类结构，但在AB-IPFE中的应用却很少见。
+>
+> **主要贡献:** 作者提出了一个框架来定义两级层次结构，并对现有方案进行了分类。特别地，他们关注适应性安全的方案，这些方案支持表达式访问控制，如公共索引设置下的算术程序和私有索引设置下的属性隐藏内积谓词。
+>
+> **达到效果:** 研究提出了一种新的基于配对的构造方法，实现了适应性安全性，并且在密钥大小和密码文本大小之间进行了权衡。
+>
+> **技术梗概:** 通过重新审视Abdalla等人提出的方法，作者提出了三种类型的构造方案，以平衡层次结构、加密体大小和秘密密钥的特性。
+
+---
+### [2026/1380] TIM: A Sensitive-Parameter-Privacy Blind Watermarking Based on Zero-Knowledge Proof
+
+- **作者:** Haoran Si, Xi Lin, Huiyan Chen
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1380) | [PDF](https://eprint.iacr.org/2026/1380.pdf)
+
+
+> **研究背景:** 现有的盲水印方案通常需要图像所有者在提取时透露水印种子和位置，这依赖于验证者的高度信任，并且一旦这些秘密被暴露，恶意的验证者可以伪造或移除水印。
+>
+> **主要贡献:** TIM提出了首个基于零知识证明的具有敏感参数隐私保护的公开可验证盲水印方案。
+>
+> **达到效果:** TIM通过将整幅图像提取过程分解为迭代证明、引入基于阈值的投票机制和分层状态更新机制，实现了良好的不可感知性和鲁棒性，并且在实际效率上达到了实用水平。对于4K图像，生成证明耗时5.61分钟，峰值内存使用量为9.61 GB。
+>
+> **技术梗概:** TIM结合了Nova和Spartan技术，将整幅图像的提取过程分解成迭代证明；采用基于阈值的投票机制以增强鲁棒性；引入分层状态更新机制来降低电路和内存成本。
+
+---
+### [2026/1382] Concrete Bit-Operation Cost of XL: For Solving Multivariate Quadratic Systems Using Wiedemann and Berlekamp-Massey
+
+- **作者:** Hülya Evkan, Ruben Niederhagen
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1382) | [PDF](https://eprint.iacr.org/2026/1382.pdf)
+
+
+> **研究背景:** 本文提出了一个针对使用Wiedemann线性代数和Berlekamp-Massey序列恢复求解多元二次系统XL算法的具体位操作成本模型。
+>
+> **主要贡献:** 贡献在于实现了电路导向的XL，并推导出XL、Wiedemann和Berlekamp-Massey步骤的成本公式，适用于GF(2)、GF(31)和GF(256)。
+>
+> **达到效果:** 实验表明，该模型能准确预测电路成本，并通过渐近分析验证了其收敛性。
+>
+> **技术梗概:** 技术上采用CryptAttackTester方法论，结合基线、常数系数和桶化矩阵评估变体进行建模。
+
+---
+### [2026/1383] Notes on the ideal arithmetic correlations of $N$-ary sequences
+
+- **作者:** Feifei Yan, Pinhui Ke
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1383) | [PDF](https://eprint.iacr.org/2026/1383.pdf)
+
+
+> **研究背景:** 研究背景：本文探讨了具有理想算术相关性的N元序列的非存在性，特别是在特定连接整数和序的情况下。
+>
+> **主要贡献:** 主要贡献：证明了当连接整数为奇素幂时，在某些条件下不存在具有理想算术自相关的三元、四元或六元序列。
+>
+> **达到效果:** 达到的效果：这些结果进一步表明，理想算术相关性在N元设置中是非常严格的限制条件。
+>
+> **技术梗概:** 技术梗概：通过证明特定序和连接整数组合下不存在具有理想算术自相关的N元序列来实现上述贡献。
+
+---
+### [2026/1385] Walsh LUT Evaluation on Lazy Bits for CKKS AES Transciphering
+
+- **作者:** Rostin Shokri, Nektarios Georgios Tsoutsos
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1385) | [PDF](https://eprint.iacr.org/2026/1385.pdf)
+
+
+> **研究背景:** 本文提出了一种针对CKKS的新型布尔查找表评估方法，利用电路XOR保持懒惰（即作为加法运算处理，最低有效位保持正确），并在Walsh基上表示LUT。
+>
+> **主要贡献:** 该方法通过CKKS二进制布什拉夫化进行刷新步骤，将打包的懒惰校验和放置在槽中，并清洁二进制噪声以保留干净的校验和。这种方法解耦了LUT大小与周围电路的乘法深度：较大的LUT可以通过清理选定的事实上的校验和符号并仅花费少量常数深度来重组。
+>
+> **达到效果:** 该框架被应用于AES-CTR转置加密，其中AES S盒使用字节拆分Walsh分解评估，在CPU实验中，Walsh S-box AES-CTR算法在相同1024块批次大小下比稀疏布什拉夫化XBOOT版本快3.25倍。
+>
+> **技术梗概:** 该技术通过将LUT表示为Walsh基，并利用CKKS二进制布什拉夫化进行刷新步骤，包括StC阶段、CtS阶段和$\mathsf{EvalMod}_{f_{\mathrm{BinBoot}}}$清理二进制噪声。
+
+---
+### [2026/1387] ZK-Audit: Proving Power Side-Channel Resilience in Synthesized Hardware
+
+- **作者:** Sakib Anwar Rieyan, Nektarios Georgios Tsoutsos
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1387) | [PDF](https://eprint.iacr.org/2026/1387.pdf)
+
+
+> **研究背景:** 现代硬件安全依赖于预合成算法保护能够在物理制造管道中保持不变的假设，但第三方EDA工具链可能会引入数据相关的电源侧信道漏洞。现有的前硅验证方法要求暴露高度敏感的门级IP给外部审计员以验证结构安全性。
+>
+> **主要贡献:** 本文提出了一种新型零知识硬件审计器（ZK-Audit），它提供数学保证的物理数据无关性，无需揭示底层电路网表。
+>
+> **达到效果:** 实验评估表明，该框架能够识别固有泄露逻辑并捕获EDA引起的不对称性，如在理论上无泄漏的设计中引入13%的泄露率。
+>
+> **技术梗概:** 通过将合成门级拓扑结构转换为自定义侧信道中间语言（SCIL），我们的架构映射物理动态切换活动到可在Halo2零知识虚拟机（zkVM）内执行的算术约束，从而实现了第一个基于零知识边界翻转评估（ZK-BTA）的实现。
+
+---
+### [2026/1388] Chimera: A Hybrid GPU Backend for Sumcheck Acceleration in Zero Knowledge Provers
+
+- **作者:** Kashfia Farheen, Nektarios Georgios Tsoutsos
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1388) | [PDF](https://eprint.iacr.org/2026/1388.pdf)
+
+
+> **研究背景:** 零知识证明系统越来越多地依赖Sumcheck协议来避免早期SNARK设计中FFT密集的结构，而Sumcheck非常适合GPU加速。
+>
+> **主要贡献:** Chimera提出了一种GPU-CPU框架，用于在Spartan风格的SNARK验证者中加速Sumcheck。
+>
+> **达到效果:** 在BN254 Spartan R1CS实例上，Chimera在\(N=2^{17}\)时，Committed-Sumcheck区域的速度提高了7.96倍，并在整个从\(2^{12}\)到\(2^{27}\)约束的验证运行中实现了1.27至1.64倍的整体加速。
+>
+> **技术梗概:** Chimera采用混合执行模型：大型多项式评估和折叠工作在GPU上进行，活跃的多项式状态在整个盈利轮次中保留在GPU上，紧凑的轮消息返回到Spartan的主机转录，并且小型领域则回退到CPU执行。
+
+---
+### [2026/1389] SC-DT: Scalable Constant Round Secure Comparison and its Application to Privacy Decision Tree Evaluation
+
+- **作者:** Qinghui Zhang, Xiaojun Chen, Yansong Zhang, Xudong Chen
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1389) | [PDF](https://eprint.iacr.org/2026/1389.pdf)
+
+
+> **研究背景:** 现有的基于安全多方计算（MPC）的隐私决策树评估协议主要集中在两方或三方场景，并且其核心构建块——安全门限比较，通常需要对数轮通信，这限制了大规模PDTE的应用。
+>
+> **主要贡献:** 本文提出了一种在诚实多数设置下使用Shamir秘密共享的可扩展常数轮次安全比较协议SC-DT，通过借鉴Falcon的方法实现了零检测，并将特征选择和路径评估重新定义为PLUT功能，从而实现高效的大型PDTE。
+>
+> **达到效果:** 实验结果表明，与现有方案相比，SC-DT在安全性、通信效率和计算成本方面均有所提升，特别是在大规模数据集上表现尤为明显。
+>
+> **技术梗概:** 通过随机洗牌减少检测所需的轮次，并将随机洗牌转换为随机位移以降低离线通信开销，同时结合PLUT功能优化了特征选择与路径评估过程。
+
+---
+### [2026/1390] A Separation Principle for Lookup-Based zkML: Activation-Function Structure Cannot Reduce Per-Lookup Proving Cost
+
+- **作者:** Min Jun Jo
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1390) | [PDF](https://eprint.iacr.org/2026/1390.pdf)
+
+
+> **研究背景:** 在零知识机器学习(zkML)中，生成证明的成本远高于运行模型本身，而这一成本主要集中在变压器必须评估的非线性函数上。
+>
+> **主要贡献:** 研究揭示了一个分离原则：激活函数结构无法减少每项查找证明的工作量，只能影响一次性的表项成本。
+>
+> **达到效果:** 通过在两个独立的证明系统(EZKL/halo2和Jolt Atlas)上的测量，展示了深度与成本之间的线性关系，并通过调整地址宽度实现了精确的证明者时间缩减。
+>
+> **技术梗概:** 研究采用了一种Shout风格的一热查找论证方法，分析了不同层数模型中LayerNorm增益1/σ对证明成本的影响。
+
+---
+### [2026/1391] 6G Sensing Security: Distributed Game-Theoretic RL for Urban Beamforming and Attacker Detection
+
+- **作者:** Parmida Geranmayeh, Onur Gunlu
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1391) | [PDF](https://eprint.iacr.org/2026/1391.pdf)
+
+
+> **研究背景:** 随着下一代网络的发展，无线基础设施不仅用于数据传输，还将具备环境感知能力，推动了集成传感与通信(ISAC)技术的兴起。
+>
+> **主要贡献:** 本文通过引入博弈论和强化学习方法，提出了分布式鲁棒波束成形策略，以检测城市环境中恶意攻击者的行为。
+>
+> **达到效果:** 仿真结果表明，该方法能够有效应对动态6G ISAC系统中的安全挑战，提高通信系统的安全性。
+>
+> **技术梗概:** 研究采用了基于效用的博弈论模型，并将其整合到强化学习框架中，实现了在复杂环境下的自适应波束成形和攻击检测。
+
+---
+### [2026/1393] On the Differential Uniformity of Polynomials over Galois Rings
+
+- **作者:** Sondre Rønjom, Arne Sandrib
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1393) | [PDF](https://eprint.iacr.org/2026/1393.pdf)
+
+
+> **研究背景:** 研究背景：随着高级密码学领域如多方计算和零知识协议设计的发展，对Galois环上S-box的 cryptographic 属性进行了探索。特别是关于这些函数的差分均匀性。
+>
+> **主要贡献:** 主要贡献：本文首次系统地研究了Galois环$\mathrm{GR}(p^k,m)$（其中$k,m\geq 2$）上的多项式的差分性质，并提供了$\mathrm{GR}(4,2)$中APN置换的分类。
+>
+> **达到效果:** 达到的效果：通过分析，本文为设计安全的哈希函数和块密码提供了理论依据，并填补了该领域研究的空白。
+>
+> **技术梗概:** 技术梗概：采用代数方法对多项式在Galois环上的差分行为进行了深入研究，利用等价变换进行分类。
+
+---
+### [2026/1395] Blind Trace-Only Segmentation of Cipher Implementations Without Algorithm Metadata
+
+- **作者:** Hyunjun Kim, Hwajeong Seo, Anupam Chattopadhyay
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1395) | [PDF](https://eprint.iacr.org/2026/1395.pdf)
+
+
+> **研究背景:** 盲侧信道分析（BSCA）能够通过未标记的泄漏迹线推断密钥，但实际应用仍需先对迹线进行结构化处理以定位重复计算和候选兴趣点。
+>
+> **主要贡献:** 作者提出了一种仅基于样本均值和标准差的两阶段方法来解决无算法元数据指导下的迹线唯一结构化问题。
+>
+> **达到效果:** 该方法在16个不同的块密码实现中，大多数情况下能够形成一致的重复窗口，并通过后处理分离出精确或边缘包容的计数匹配以及其他关系层次，Top-5候选区域通常能覆盖强S盒CPA热点。
+>
+> **技术梗概:** 第一阶段利用秩合并自相似性估计重复尺度、起始相位、锚支持稳定核心和周期候选；第二阶段将稳定核心堆叠成代表性的重复并分割为相对高分和低分段落。
+
+---
+### [2026/1396] Reliable TRNG and its Challenges
+
+- **作者:** Raja Adhithan Radhakrishnan
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1396) | [PDF](https://eprint.iacr.org/2026/1396.pdf)
+
+
+> **研究背景:** 研究旨在改进基于环振荡器（RO）的真随机数发生器（TRNG）的自调谐机制，并探讨长期运行中实现可靠稳定设计所面临的挑战。
+>
+> **主要贡献:** 贡献在于分析了应对这些挑战的方法，并通过NIST统计测试套件验证了其有效性。
+>
+> **达到效果:** 结果表明，提出的方法能够显著提高TRNG在长时间操作中的可靠性与稳定性。
+>
+> **技术梗概:** 技术上采用了自适应反馈机制来优化环振荡器的频率分布，并结合了多种噪声源以增强随机性。
+
+---
+### [2026/1398] How to Encrypt with Random Reversible Circuits
+
+- **作者:** Ran Canetti, Ji Luo, Yiding Zhang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1398) | [PDF](https://eprint.iacr.org/2026/1398.pdf)
+
+
+> **研究背景:** 该研究重新审视了构建公钥加密的一种自然范式，其中公钥是混淆的块密码。
+>
+> **主要贡献:** 贡献在于展示了如何通过特定条件下的混淆和功能扩展实现高级安全性和功能性。
+>
+> **达到效果:** 结果包括直接应用混淆后的块密码即可达到CCA2安全性，并且可以通过额外的功能增强实现模拟安全性和同态加密能力。
+>
+> **技术梗概:** 技术上依赖于可互换伪随机置换和随机可逆电路的性质，以及相应的混淆方法。
+
+---
+### [2026/1402] On Extending Integral Distinguishers
+
+- **作者:** Dachao Wang, Hosein Hadipour, Simon Gerhalter
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1402) | [PDF](https://eprint.iacr.org/2026/1402.pdf)
+
+
+> **研究背景:** 传统的积分区分器方法通常针对单一输出表达式进行分析，容易忽略多个输出组合后产生的区分器，并且难以捕捉到关键依赖的积分组合。
+>
+> **主要贡献:** 作者提出了一种Split-and-Cancel方法，通过结合精确扩展和预言机技术来确定哪些后缀单项式可以从选定结构中存活下来，并从中提取出关键独立的组合。
+>
+> **达到效果:** 该方法应用于SIMON、SIMECK、SPECK、PRESENT和GIFT等密码算法，显著增强了积分区分器的结果，在某些情况下增加了额外的一轮分析。
+>
+> **技术梗概:** Split-and-Cancel技术通过在短尾部分进行精确扩展，并利用预言机来确定哪些后缀单项式可以存活下来，从而从矩阵的左核中提取出关键独立的组合。
+
+---
+### [2026/1403] A polynomial-time key recovery attack of Facto-DSA
+
+- **作者:** Simon Abelard, Ludovic Perret, Hao Shi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1403) | [PDF](https://eprint.iacr.org/2026/1403.pdf)
+
+
+> **研究背景:** 该研究针对Facto-DSA签名方案提出了一种多项式时间的密钥恢复攻击，揭示了基于多元多项式因式分解构建稳健密码方案的潜在脆弱性。
+>
+> **主要贡献:** 研究人员开发了一种高效算法，在标准笔记本电脑上不到一分钟的时间内成功破解了所有已提出的参数集，包括最大的一组。
+>
+> **达到效果:** 此研究表明，使用多元多项式因式分解作为构建安全签名方案基础的有效性受到质疑。
+>
+> **技术梗概:** 攻击方法基于多项式时间复杂度的算法实现，通过利用特定结构的弱点来恢复密钥。
+
+---
+### [2026/1404] Anonymous Communication on Expander Networks
+
+- **作者:** Megumi Ando, Hannah Lynn, Anna Lysyanskaya, Eli Upfal
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1404) | [PDF](https://eprint.iacr.org/2026/1404.pdf)
+
+
+> **研究背景:** 研究背景：本文探讨了在扩张网络中实现匿名通信的方法，面对被动和主动两种强敌手模型。目标是在确保匿名性的同时，提高协议的效率。
+>
+> **主要贡献:** 主要贡献：提出了针对扩张网络的匿名通信方案，并证明了当路由路径中的每个跳点均匀随机选择时，在特定条件下可以抵抗被动敌手并实现匿名性。
+>
+> **达到效果:** 达到的效果：通过理论分析和模型验证，该研究为在实际网络中高效实现匿名通信提供了新的解决方案。
+>
+> **技术梗概:** 技术梗概：采用洋葱路由机制，并结合扩张网络的随机性质来增强匿名性，同时确保协议的安全参数λ与网络规模成线性关系。
+
+---
+
 ## 更新: 2026-06-26 07:43
 
 *新增 2 篇论文 (编号 1311--1312)*
