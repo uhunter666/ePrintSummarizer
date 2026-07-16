@@ -5,6 +5,221 @@
 
 ---
 
+## 更新: 2026-07-16 08:40
+
+*新增 11 篇论文 (编号 1405--1415)*
+
+### [推荐] [2026/1406] An $n^{n+o(n)}$-Time Algorithm for the Lattice Isomorphism Problem
+
+- **匹配关键字:** lattice
+
+- **作者:** Divesh Aggarwal, Kaijie Jiang, Zihan Li, Yinchen Liu
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1406) | [PDF](https://eprint.iacr.org/2026/1406.pdf)
+
+
+> **研究背景:** Lattice Isomorphism Problem 是一个重要的数学问题，涉及到判断两个格是否通过正交线性变换相关。此前的最佳算法由Haviv和Regev提出，运行时间为 $n^{O(n)}$。
+>
+> **主要贡献:** 本文提出了在决定、搜索及所有同构版本上的新算法，其时间复杂度为 $n^{n+o(n)}$ 乘以输入大小的多项式。这是通过引入高斯热论证和残余维度处理方法实现的。
+>
+> **达到效果:** 这些算法不仅提高了问题解决的时间效率，还解决了所有同构版本的问题，并且在量子随机存取机模型下，给出了更优的时间复杂度为 $n^{rac{2}{3}n+o(n)}$ 的量子变体。
+>
+> **技术梗概:** 主要技术包括高斯热论证处理凸体生成的最短向量、残余维度的手动化处理以及结合生日攻击恢复所有同构。
+
+---
+### [推荐] [2026/1408] Statistically Undetectable Backdoors in Deep Neural Networks
+
+- **匹配关键字:** LWE
+
+- **作者:** Andrej Bogdanov, Alon Rosen, Neekon Vafa
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1408) | [PDF](https://eprint.iacr.org/2026/1408.pdf)
+
+
+> **研究背景:** 研究展示了如何在大型前馈深度神经网络中植入统计上不可检测的后门，即使在白盒环境下，这些后门模型与正常训练模型之间的差异也极小。
+>
+> **主要贡献:** 贡献在于揭示了模型训练者和使用者之间的一种根本性的权力不对称性，并提出了实现此类后门的具体方法。
+>
+> **达到效果:** 结果表明，在没有后门的情况下，生成具有特定性质的对抗样本在多项式时间内是不可行的，证明了后门的有效性和隐蔽性。
+>
+> **技术梗概:** 技术上涉及利用不变性基底对抗样本来植入后门，并通过理论分析和初步实验验证了其效果。
+
+---
+### [推荐] [2026/1409] Accelerating FAEST Signing on GPU via Fused AES Constraint Generation and Batched Leaf Hashing
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Ha-Gyeong Kim, Si-Woo Eum, Seung-Won Lee, Ui-Jae Kim, Min-Ho Song, Hwa-Jeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1409) | [PDF](https://eprint.iacr.org/2026/1409.pdf)
+
+
+> **研究背景:** FAEST是一种基于密钥的后量子数字签名方案，作为NIST额外数字签名标准化过程中的第三轮候选者。其签名路径主要集中在两个操作上：按轮次生成约束以证明AES电路正确计算，以及有限域乘法以计算向量承诺的叶节点。
+>
+> **主要贡献:** 论文的主要贡献在于通过融合GPU路径和保持中间结果在设备内存中来加速AES圆约束生成，并通过批量处理独立的有限域乘法以减少叶节点哈希的时间开销。
+>
+> **达到效果:** 结合融合约束生成与批处理叶哈希，完整的GPU路径实现了约3倍的端到端签名速度提升。当在已经执行于GPU上的叶哈希基础上添加AES约束生成融合时，在五个评估的AES s/f变体中观察到了额外的签名延迟减少效果。
+>
+> **技术梗概:** 通过将三个连续阶段合并为一个融合的GPU路径，并保持中间结果驻留在设备内存中，减少了主机与设备之间的数据传输；同时批量处理独立的有限域乘法以提高叶节点哈希性能。
+
+---
+### [推荐] [2026/1410] A Memory-Efficient and Assembly-Optimized Implementation of NTRU+
+
+- **匹配关键字:** post-quantum
+
+- **作者:** SuBeen Cho, Jiwon Bang, Minjoo Sim, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1410) | [PDF](https://eprint.iacr.org/2026/1410.pdf)
+
+
+> **研究背景:** 针对ARM Cortex-M4微控制器实现NTRU+算法，优化其内存使用和运行速度，以满足嵌入式环境中的实际需求。
+>
+> **主要贡献:** 通过分析每个多项式缓冲区的实际存活时间并重构算法，仅在计算过程中保留单个缓冲区；同时，通过重新编写针对Cortex-M4混合基数结构的NTT（Number Theoretic Transform）指令集代码来显著提高速度。
+>
+> **达到效果:** 该方法将峰值堆栈减少了83-84%，并且所有三种操作的速度提高了1.8倍，使得实现既更小也更快。
+>
+> **技术梗概:** 通过内存优化和重新编写的NTT加速技术相结合，实现了在Cortex-M4上的高效运行。
+
+---
+### [推荐] [2026/1411] Improved Quantum Circuits for Information Set Decoding with Application to Code-Based Cryptography
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Hyunji Kim, Kyungbae Jang, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1411) | [PDF](https://eprint.iacr.org/2026/1411.pdf)
+
+
+> **研究背景:** 信息集解码(ISD)是代码基密码学中通用的解密攻击标准。针对Grover加速ISD的具体量子资源估算需要一个以高斯-约旦消元为主导组件的或acles。
+>
+> **主要贡献:** 改进了Perriello等人和Jang等人的消除电路，通过不更新后续主元或最终权重谓词不再读取的条目来减少操作数。
+>
+> **达到效果:** 与[15]相比，目标方案的量子比特数量减少了约22%，Toffoli门的数量分别减少了约20%对比[25]和[15]，深度减少了约67%对比[25]但增加了约0.3%对比[15]。
+>
+> **技术梗概:** 通过并行回代从综合寄存器恢复所需的结果向量，并优化高斯-约旦消元电路以减少量子资源需求。
+
+---
+### [推荐] [2026/1414] Evaluating Hybrid KEM/DSA for KpqC and NIST PQC on ARM Cortex-M4
+
+- **匹配关键字:** lattice
+
+- **作者:** Minjoo Sim, Minwoo Lee, Subeen Cho, Yulim Hyoung, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1414) | [PDF](https://eprint.iacr.org/2026/1414.pdf)
+
+
+> **研究背景:** 针对ARM Cortex-M4平台，传统的PQC基准测试不足以准确评估混合KEM/DSA方案的成本，因为共享哈希后端、随机化签名行为和固定的古典/封装工作都会影响测量性能。
+>
+> **主要贡献:** 本文通过实现一个通用的裸机Cortex-M4框架来对代表性的KpqC/NIST家族进行测量，并使用X25519和Bindel等人的混合签名AND组合器行，以统一基准记录的形式实现了综合成本归因。
+>
+> **达到效果:** 研究结果揭示了三种归因效应：替换Keccak-f[1600]可使SHAKE密集型签名加速2.16倍；中值仅签名表可能改变部署结论；本地SMAUG-T后端在独立模式下提高性能1.79-1.82倍，但在混合模式下的可见增益降至1.42-1.65倍。
+>
+> **技术梗概:** 研究采用了统一的基准记录方法来测量KEM和签名组合器行，并通过具体的实现案例展示了不同后端对综合成本的影响。
+
+---
+### [2026/1405] AsymSAE: Verifier-Based Asymmetric SAE Protocol for Personal Wi-Fi Networks
+
+- **作者:** Zhiqiang Zhao, Jingwei Jiang, Xuexian Hu, Wei Guo, Jiahui Gao, Yining Liu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1405) | [PDF](https://eprint.iacr.org/2026/1405.pdf)
+
+
+> **研究背景:** 在WPA3-Personal中，尽管Simultaneous Authentication of Equals (SAE)协议通过低熵密码实现了安全的Wi-Fi接入，但其对称密码认证机制使得所有关联站（STA）易受网络边缘接入点（AP）被攻破的影响。
+>
+> **主要贡献:** 本文提出了一种名为AsymSAE的验证者基础非对称SAE协议，旨在保留SAE的工作流程并增强安全性。
+>
+> **达到效果:** 通过验证者的非对称结构设计，AsymSAE实现了STA和AP之间的异步认证，并证明了其前向保密性和基于会话的离线字典攻击抵抗力。
+>
+> **技术梗概:** 该协议采用了IEEE Std 802.11-2024中规定的SAE流程，并通过验证者的非对称结构来实现异步认证，同时设计了一种验证者基础的安全模型来进行安全性证明。
+
+---
+### [2026/1407] HACC: A Scalable Hierarchical Accumulator with Sublinear Cost for Large Dynamic Sets
+
+- **作者:** Borui Chen, Liang Zhang, Dongliang Cai, Kexin Li, Jiamian Yan, Haibin Kan
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1407) | [PDF](https://eprint.iacr.org/2026/1407.pdf)
+
+
+> **研究背景:** 动态通用累加器能够为不断变化的数据集提供精简的集合承诺，但效率和可扩展性之间的平衡一直是个难题。特别是基于双线性配对（BP）的累加器虽然具有常数大小的见证更新和验证特性，但在全局集合容量增长时，其公共参数大小和动态操作成本却呈线性增长。
+>
+> **主要贡献:** 本文提出了一种无陷阱门的分层累加器（HACC），它保持了BP风格高效的见证更新和验证性能，同时避免了这种线性依赖关系。对于当前大小为$n$且预定义参数$t$（$t \ll n$）的集合，HACC仅需要$\mathcal{O}(t)$个公共参数，并支持在$\mathcal{O}(t\log_t n)$时间内进行添加、删除和见证生成操作。
+>
+> **达到效果:** 实验结果表明，在相同的安全预算下，与BP累加器相比，HACC在元素更新和见证生成方面的速度提高了$9.7\times$ -- $1803.4\times$，并且消耗的公共参数大小减少了$34.6\times$ -- $3679.4\times$。
+>
+> **技术梗概:** 通过集成多项式多重证明技术，HACC在读取密集型周期性设置中将见证验证减少到常数配对复杂度，并且具有$\mathcal{O}(\log_t n)$大小的见证，其平均更新成本为$\mathcal{O}(1)$。
+
+---
+### [2026/1412] Quantum Implementation and Analysis of Rijndael
+
+- **作者:** Gyeongju Song, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1412) | [PDF](https://eprint.iacr.org/2026/1412.pdf)
+
+
+> **研究背景:** 本文研究了Rijndael变体的量子实现和分析，针对NIST MAXDEPTH量子成本模型进行了资源估算。
+>
+> **主要贡献:** 作者扩展了AES量子加密Oracle，实现了包括单双SubWord、ShiftRows偏移和轮密钥在内的通用版本，并使用ProjectQ验证了这些Oracle。
+>
+> **达到效果:** 研究结果表明，不同Rijndael变体所需的量子比特数从1624到3240不等，且在NIST PQC MAXDEPTH限制下，Grover键恢复的量子比特成本也有所差异。
+>
+> **技术梗概:** 通过参数化扩展AES量子加密Oracle，并使用ProjectQ实现和验证了这些Oracle，确保标准化变体满足相应的AES基线要求。
+
+---
+### [2026/1413] Optimizing ARIA-GCM on GPUs
+
+- **作者:** Min-Ho Song, Si-Woo Eum, Seung-Won Lee, Ha-Gyeong Kim, Hwa-Jeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1413) | [PDF](https://eprint.iacr.org/2026/1413.pdf)
+
+
+> **研究背景:** 本文旨在优化ARIA-GCM在GPU上的实现，通过改进CTR模式下的ARIA-CTR和GHASH认证机制，以提高整体性能。
+>
+> **主要贡献:** 主要贡献在于提出了使用共享内存中的打包S盒、固定密钥的4位Shoup查找表等技术来分别优化ARIA-CTR和GHASH，并将两者整合为两核或融合单核AEAD。
+>
+> **达到效果:** 实验结果显示，这种优化使得在RTX 3090上的性能达到了924 Gb/s（CTR）、2,865 Gb/s（GHASH）和622 Gb/s（融合AEAD）。
+>
+> **技术梗概:** 技术上采用了合并S盒表、并行加密CTR计数块以及使用预计算的幂次进行W-方式霍纳插值等方法。
+
+---
+### [2026/1415] Optimized Implementation of Warp-Cooperative GPU HCTR2-ARIA Wide-Block Encryption
+
+- **作者:** Siwoo Eum, Minho Song, Seung-Won Lee, Hagyeong Kim, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1415) | [PDF](https://eprint.iacr.org/2026/1415.pdf)
+
+
+> **研究背景:** HCTR2是一种宽块加密模式，适用于磁盘加密场景，通过一次性加密整个消息来实现单个明文位的翻转重新随机化整个密文。
+>
+> **主要贡献:** 本文提出了一种细粒度内核，利用POLYVAL的线性特性，将长哈希计算拆分为连续的线程片段，并使用warp shuffle合并结果，实现了与单一CPU核心相当的消息加密延迟。
+>
+> **达到效果:** 通过优化后的内核实现，GPU在处理低队列深度时的表现显著提升，即使消息数量较少也能超越单个CPU核心的性能。
+>
+> **技术梗概:** 该方法利用了POLYVAL的线性特性，将哈希计算拆分为线程片段，并通过warp shuffle合并结果，从而实现了高效的消息加密。
+
+---
+
 ## 更新: 2026-07-14 19:48
 
 *新增 40 篇论文 (编号 1318--1404)*
