@@ -79,6 +79,289 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-07-21 19:48</h2>
+<p><em>新增 14 篇论文 (编号 1446--1459)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1447] Faster NTRU-based Bootstrapping with Extended and Sorting-based Techniques</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Jingwei Feng, Baofeng Wu, Dongdai Lin</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1447">论文</a> | <a href="https://eprint.iacr.org/2026/1447.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> NTRU基于的Bootstrapping提供了FHEW类似方案的一种高性能变体，尽管比其RLWE基对应物更简单，但在内存和时间效率上仍较为昂贵。关键计算瓶颈在于$q\mid 2N$约束，它将LWE密文模数$q$与NTRU维度$N$联系在一起。</p>
+<p><strong>主要贡献:</strong> 作者通过扩展技术消除了$q \mid 2N$的限制，并利用大模数$q$和较小的$N$维环来提高效率。此外，他们还使用排序技术去除不必要的操作以进一步提升时间性能。</p>
+<p><strong>达到效果:</strong> 在128位安全级别下，与FINAL方案（ASIACRYPT 2021）相比，单密钥Bootstrapping加速了1.82倍；与CHES 2024年的key unrolling方法相比，加速了1.24倍。对于多密钥Bootstrapping，相较于前人工作（ASIACRYPT 2024），实现了1.70倍的加速。同时，单密钥和多密钥算法的内存使用量分别减少了$\eta$倍。</p>
+<p><strong>技术梗概:</strong> 通过扩展技术移除了$q \mid 2N$的限制，并利用排序技术减少不必要的操作以提高时间性能。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1449] <code>ANSA-IBKEM</code>: Practical Quantum-Safe Identity-Based Key Encapsulation via Annular NTRU Trapdoors and Standardized PQC Arithmetic Reuse</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Zhaohui Cheng, Kaixin Xiong</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1449">论文</a> | <a href="https://eprint.iacr.org/2026/1449.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的身份基于加密方案（IBE）在实现后量子安全方面存在局限性，如高解密失败率和较大的私钥大小。为了克服这些限制，研究提出了一种新的方案ANSA-IBKEM。</p>
+<p><strong>主要贡献:</strong> ANSA-IBKEM通过重新设计陷阱门、提取过程、正确性和实现层，并围绕标准化后量子算术构建，实现了紧凑的身份关系并保持了较低的解密失败率。</p>
+<p><strong>达到效果:</strong> 该方案在选定压缩点下，产生的密文大小分别为3200字节和7168字节，且经过单向95%上限估计后的BCH尾部解密失败率分别低于(2^{-164})和(2^{-248})，从而达到了高效、安全的后量子加密效果。</p>
+<p><strong>技术梗概:</strong> ANSA-IBKEM结合了环NTRU陷阱门、混合采样提取、基于BCH的消息层以及在模数(q=8380417)上的密文压缩技术。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1451] Lightweight Hardware Accelerator for the UOV Signature Scheme with Oil Space Blinding</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Florian Krieger, Maciej Czuprynko, Sujoy Sinha Roy</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1451">论文</a> | <a href="https://eprint.iacr.org/2026/1451.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 面对量子计算带来的安全威胁，NIST正在寻找后量子时代的数字签名方案。UOV因其保守的设计、小型的签名以及高效的签名和验证过程而成为候选者。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种低内存占用的UOV硬件加速器架构，支持NIST的安全级别1至5，并通过负载平衡的数据路径优化关键矩阵操作。</p>
+<p><strong>达到效果:</strong> 该设计显著减少了UOV的最大内存消耗，并实现了灵活的运行时支持。同时，通过数据重新对齐和流水线高斯消元单元等技术提高了性能。</p>
+<p><strong>技术梗概:</strong> 采用分片技术和流式处理方法降低公钥和中间结果的内存需求，使用16通道负载平衡的数据路径来执行UOV的关键矩阵操作。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1457] Identity-Based Encryption from Isogenies</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Shweta Agrawal, Andrea Basso, Sikhar Patranabis</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1457">论文</a> | <a href="https://eprint.iacr.org/2026/1457.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文提出了首个基于Isogeny的标识基加密方案，该方案的安全性依赖于一个新颖假设——'CDH与匹配扭转假设'（CD-HwMT），该假设在代数Isogeny模型下归约到已知假设。</p>
+<p><strong>主要贡献:</strong> 作者引入了CD-HwMT假设，并基于此构建了一个具有匿名性的标识基加密方案，同时实现了首个基于Isogeny的精简性盲目传输和后量子安全的高泄漏率密钥及密文相关安全性公钥加密。</p>
+<p><strong>达到效果:</strong> 该方案在代数Isogeny模型下归约到已知假设，并且能够推测其具有后量子安全性。</p>
+<p><strong>技术梗概:</strong> 本文提出的技术包括CD-HwMT假设和新的构建方法，这些技术为未来基于Isogeny的高级密码学研究奠定了基础。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1459] Hybrid hash function based on the DLP and SIS problems</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Dimitri Koshelev, Francesc Sebé</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1459">论文</a> | <a href="https://eprint.iacr.org/2026/1459.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究提出了一种基于离散对数问题(DLP)和短整数解问题(SIS)的杂交哈希函数，旨在提供双重安全性以增强加密方案的整体安全性。</p>
+<p><strong>主要贡献:</strong> 作者提供了特定参数确保在256位模数下Lattice问题达到128位安全级别，并且这是首次对这种杂交版本进行明确分析。</p>
+<p><strong>达到效果:</strong> 该哈希函数结合了Pedersen和Ajtai的经典版本的安全特性，可能通过椭圆曲线和格密码学中的技巧实现显著优化。</p>
+<p><strong>技术梗概:</strong> 研究采用了一种将DLP和SIS问题相结合的方法来设计哈希函数，并提供了具体参数以确保安全级别。</p>
+</blockquote>
+<hr />
+<h3>[2026/1446] Quantum Circuit Optimization with LLMs under a Structured Guideline</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kyungbae Jang, Hyunji Kim, Hwajeong Seo, Anupam Chattopadhyay</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1446">论文</a> | <a href="https://eprint.iacr.org/2026/1446.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 量子密码分析的成本主要由目标密码的量子电路决定，因此需要构建并测量其qubit数量、Toffoli门数量及其深度来估算攻击成本。然而，这一过程依赖于专家知识且需针对每个密码和成本目标重新进行。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种使用大型语言模型（LLM）根据结构化指南优化量子电路的方法，并为多个通用密码生成了最小qubit数量和最小Toffoli深度的电路。</p>
+<p><strong>达到效果:</strong> 通过这种方法，实现了CRAFT、MANTIS、QARMA、mCrypton、EPCBC和Pyjamask等密码的量子电路实现，填补了这些密码在量子电路方面的空白。</p>
+<p><strong>技术梗概:</strong> 本文将跨多种密码适用的量子电路优化技术编写成指南，并指导LLM生成针对特定目标密码的两种电路：一种是qubit数量最少，另一种是Toffoli深度最小。</p>
+</blockquote>
+<hr />
+<h3>[2026/1448] Improving Skipping Fault Correction Attacks on Randomized Dilithium via MILP</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Haobo Ouyang, Chaoran Wang, Guowei Liu, Lixuan Wu, Meiqin Wang, Yanhong Fan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1448">论文</a> | <a href="https://eprint.iacr.org/2026/1448.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对Dilithium的随机化签名模式，现有研究未能完全解决其物理攻击抗性问题。Krahmer等人提出了一种利用故障注入的关键恢复攻击方法，该方法虽然操作简单但在实际应用中需要较多的有效故障来覆盖所有密钥系数。</p>
+<p><strong>主要贡献:</strong> 本文通过优化跳跃故障校正攻击，证明了全秩收集策略并非必要，并推导出最小故障数M_min及其与密钥依赖的趋势。</p>
+<p><strong>达到效果:</strong> 实验结果表明，在L2、L3和L5安全级别下，使用M_min可以实现较高的密钥恢复概率。</p>
+<p><strong>技术梗概:</strong> 本文采用混合整数线性规划（MILP）方法进行攻击优化，并通过随机行模型分析了秘密系数的覆盖范围及唯一有界解的概率条件。</p>
+</blockquote>
+<hr />
+<h3>[2026/1450] Optimizing Polynomial Multiplication and Fixed-Weight Sampling for HQC on ARM Cortex-M4</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jihoon Jang, Hanbeom Shin, Suhri Kim, Seokhie Hong, Donggeun Kwon</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1450">论文</a> | <a href="https://eprint.iacr.org/2026/1450.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文针对ARM Cortex-M4平台优化了Hamming Quasi-Cyclic (HQC)方案，旨在提高其在嵌入式设备上的性能和效率。</p>
+<p><strong>主要贡献:</strong> 作者通过优化多项式乘法、固定权重采样的支持扩展，并提出了一种缓存策略来重用公钥变换和基于固定密钥重新计算的哈希值，从而改进了HQC方案。</p>
+<p><strong>达到效果:</strong> 优化后的实现相比之前最快的两个实现，在密钥生成、封装和解封装上分别最多可减少33.1%、34.6%和29.8%，并进一步通过缓存策略减少了高达32.7%的开销。</p>
+<p><strong>技术梗概:</strong> 作者提出了一种脏位感知寄存器分配策略和XOR操作重排序，以减少VMOV指令计数；同时对支持扩展进行了重构，使用预测执行和四倍展开技术降低了每字节成本。</p>
+</blockquote>
+<hr />
+<h3>[2026/1452] Labeled Multi-Key Batched IBE</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Guru-Vamsi Policharla</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1452">论文</a> | <a href="https://eprint.iacr.org/2026/1452.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究了批量身份加密（Batched IBE）与多消息签名（Multi-Message Signatures，MMS）之间的关系及其应用。</p>
+<p><strong>主要贡献:</strong> 提出了从批量IBE构造多消息签名的方法，并展示了如何利用提取式见证加密来构建批量IBE方案。</p>
+<p><strong>达到效果:</strong> 该研究首次实现了支持每标签$q$个密钥查询的批量IBE方案，具有线性大小的公共参数和恒定大小的密文。</p>
+<p><strong>技术梗概:</strong> 通过分析现有批量IBE构造并提取可验证的多消息签名，获得了批量IBE内部机制的理解，并据此构建了新的方案。</p>
+</blockquote>
+<hr />
+<h3>[2026/1453] Celer: A Lookup Argument for Large-Scale Queries</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Wenjie Qu, Yanpei Guo, Zhen Xuan, Xuanming Liu, Jiaheng Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1453">论文</a> | <a href="https://eprint.iacr.org/2026/1453.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的查找论证大多针对查询大小小于表大小的场景进行了优化，但在实际应用中，查询大小远大于表大小的情况普遍存在，导致效率低下。</p>
+<p><strong>主要贡献:</strong> Celer通过减少承诺的数量使其证明者运行时间与查询大小成缓慢增长关系，从而提高了可扩展性。</p>
+<p><strong>达到效果:</strong> 实验结果表明，对于查询大小$m=2^{28}$和表大小$n=2^{16}$的场景，Celer相比plookup实现了25.9倍的证明者时间加速，并且比LogUp快9.4倍。</p>
+<p><strong>技术梗概:</strong> Celer通过减少承诺的数量并保持字段操作与查询大小线性关系来提高效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/1454] Batched Attribute-Based Encryption from Bilinear Pairings</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ramprasad Sarkar, Shayeef Murshid, Mriganka Mandal</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1454">论文</a> | <a href="https://eprint.iacr.org/2026/1454.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有批量身份基加密方案仅支持基于身份的访问控制，无法处理复杂的属性基策略。本文旨在扩展批量加密技术以适应属性基加密的需求。</p>
+<p><strong>主要贡献:</strong> 首次提出了批量属性基加密（B-ABE）概念，并构建了在不对称双线性群中的安全实现。此外，还引入了阈值批量属性基加密（TB-ABE），其中主密钥被分散给多个授权机构。</p>
+<p><strong>达到效果:</strong> B-ABE 能够使密钥权威一次性生成解密整个批次密文所需的密钥，并且该密钥的大小与批次大小无关，实现了高效安全的批量解密。TB-ABE 则进一步增强了系统的灵活性和安全性。</p>
+<p><strong>技术梗概:</strong> 通过在双线性配对群中设计新的加密和解密算法来实现B-ABE的安全性证明，并利用Shamir秘密共享方案实现TB-ABE中的多授权机构机制。</p>
+</blockquote>
+<hr />
+<h3>[2026/1455] Trout++: Robust Asynchronous Two-Round ECDSA for Arbitrary Thresholds</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ariel Nof, Luke Parker</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1455">论文</a> | <a href="https://eprint.iacr.org/2026/1455.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Trout++ 是一种基于 ECDSA 的签名方案，旨在提供灵活的门限设置和强大的安全保证，特别适用于异步环境下的数字签名。</p>
+<p><strong>主要贡献:</strong> 该研究通过引入预签功能并结合 ROAST 转换，实现了首个支持任意门限（包括恶意多数）的异步、稳健的 ECDSA 签名协议。</p>
+<p><strong>达到效果:</strong> Trout++ 在减少带宽和计算量方面进行了优化，并且在性能上显著优于其前身 Trout，同时保持了与领先方案相当的功能性和复杂性。</p>
+<p><strong>技术梗概:</strong> 研究采用了透明设置、两轮结构以及 ROAST 转换等技术，实现了协议的稳健性和异步特性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1456] QuantumScouter: Reinforcement Learning-Based Optimization of Variational Quantum Circuits for Differential Cryptanalysis</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Gilsang Ahn, Jiwoo Baek, Donggun Lee, Insung Kim, Changmin Lee, Seokhie Hong, Dongjae Lee</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1456">论文</a> | <a href="https://eprint.iacr.org/2026/1456.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 经典深度学习方法在差分密码分析中需要大量密文对，这使得攻击不可行或容易被检测到。</p>
+<p><strong>主要贡献:</strong> 该研究通过引入基于量子机器学习的量子差分区分器来克服数据限制，并提出了一种名为QuantumScouter的方法以优化变分量子电路。</p>
+<p><strong>达到效果:</strong> 实验结果显示，在SPECK32/64和SIMON32/64密码算法上，与先前方法相比，该研究提高了准确性并减少了所需量子比特的数量。</p>
+<p><strong>技术梗概:</strong> QuantumScouter利用强化学习来发现紧凑的量子电路，并明确针对门计数和电路深度等指标进行优化。</p>
+</blockquote>
+<hr />
+<h3>[2026/1458] A High-Speed Hardware Accelerator for QR-UOV Signature Scheme</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Renma Sugai, Hiroshi Amagasa, Rei Ueno, Naofumi Homma</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1458">论文</a> | <a href="https://eprint.iacr.org/2026/1458.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究针对QR-UOV多变量方案提出了一种高性能硬件加速器，旨在优化密钥生成、签名生成和验证三个核心操作的执行效率。</p>
+<p><strong>主要贡献:</strong> 贡献在于设计了专门用于加速多项式矩阵乘法的操作单元，并通过引入在线拒绝采样技术和压缩对称矩阵展开过程，进一步提升了系统性能。</p>
+<p><strong>达到效果:</strong> 实验结果表明，该硬件加速器显著提高了QR-UOV方案的整体处理速度和效率，特别在多项式矩阵操作上实现了加速。</p>
+<p><strong>技术梗概:</strong> 技术上采用了一个$D  imes D$的 systolic阵列来实现多项式乘加运算，并通过AES-CTR输出块的独立生成机制来保证数据流的连续性。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-07-18 16:31</h2>
 <p><em>新增 29 篇论文 (编号 1416--1445)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1416] Beyond Size: Do Hybrid PQC Certificates Actually Enforce the Classical–PQC Binding? A Cost-and-Security Study</h3>
