@@ -5,6 +5,289 @@
 
 ---
 
+## 更新: 2026-07-22 21:20
+
+*新增 15 篇论文 (编号 1460--1474)*
+
+### [推荐] [2026/1460] A Practical Key-Recovery Attack on GRAFHEN
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Jules Dumezy
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1460) | [PDF](https://eprint.iacr.org/2026/1460.pdf)
+
+
+> **研究背景:** GRAFHEN是一种基于群的全同态加密方案，其公共重写规则隐藏了用于解密的置换表示。本文研究了一种针对这种加密方案的关键恢复攻击方法。
+>
+> **主要贡献:** 作者提出了一种框架，并开发了一个实用的攻击HEnbane，能够成功破解所有已发布的挑战实例，包括推荐的基于$S_{11}$的半直积构造。
+>
+> **达到效果:** 通过该攻击，研究人员能够从公共呈现中恢复生成器表示，进而解密挑战密文。实验结果表明，在所有发布实例上均实现了实际的成功率。
+>
+> **技术梗概:** HEnbane攻击首先通过两种互补的方法推导出短结论：有界同余闭包和直接取消公共右侧的公共规则之间的内容。然后通过部分置换表驱动的冲突搜索重建一个生成器元组，并从公开混合关系中恢复第二个元组。
+
+---
+### [推荐] [2026/1464] Optimal Distributed Monotone-Policy Encryption for DNFs and More from Lattices
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Jeffrey Champion, David J. Wu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1464) | [PDF](https://eprint.iacr.org/2026/1464.pdf)
+
+
+> **研究背景:** 分布式密码学是一种新的加密范式，允许在无信任环境下实现细粒度的解密能力。单调策略加密方案允许多个用户基于共享的秘密生成公钥和私钥，并根据任意集合的公钥及访问策略进行消息加密。
+>
+> **主要贡献:** 该研究首次提出了基于分解LWE假设在随机预言模型下的首个针对DNF策略的最优分布式单调策略加密方案，实现了公共参数、用户公钥以及密文大小与策略无关，同时获得了一个可重用的DNF计算秘密共享方案。
+>
+> **达到效果:** 此工作显著提高了分布式加密效率和灵活性，并为复杂访问控制提供了新的解决方案。
+>
+> **技术梗概:** 研究采用了分解LWE假设及随机预言模型，通过巧妙设计实现了密文大小与策略无关的目标。
+
+---
+### [推荐] [2026/1465] On Reduction Probability Models in Lattice Sieving
+
+- **匹配关键字:** lattice
+
+- **作者:** Marc Stevens, Michael Yonli
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1465) | [PDF](https://eprint.iacr.org/2026/1465.pdf)
+
+
+> **研究背景:** 研究背景：在格筛法中，球模型假设筛选元素分布在均匀分布方向的球附近或其上。该模型广泛用于预测格筛法的行为，但实际算法的表现往往优于球模型的预测。
+>
+> **主要贡献:** 主要贡献：作者通过引入统一球和非统一球模型来扩展球模型，并分析了缩减概率分布，证明了输入分布仅影响总缩减概率而非输出长度分布的形式。
+>
+> **达到效果:** 达到的效果：研究结果表明，这种差距是渐近常数的，且新模型相对于球模型在缩减概率上的优势范围从1.5倍到8倍不等。
+>
+> **技术梗概:** 技术梗概：通过分析不同类型的球模型来改进缩减概率预测，并使用数学方法证明了输入分布对输出长度分布的影响有限。
+
+---
+### [推荐] [2026/1467] Quantum-Safe Cryptography: A Migration Framework for Legacy Systems Toward NIST PQC Standards with the Crypto-Agility Readiness Score
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Allan D. B. Costa
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1467) | [PDF](https://eprint.iacr.org/2026/1467.pdf)
+
+
+> **研究背景:** 随着NIST发布的ML-KEM和ML-DSA标准，后量子密码学（PQC）正逐步成为现实，但现有依赖RSA-2048和ECDH的系统仍面临量子计算机破解的风险。
+>
+> **主要贡献:** 该研究提出了Crypto-Agility Readiness Score (CARS)，一种评估遗留系统向PQC迁移准备度的方法，并定义了五个维度及其权重。
+>
+> **达到效果:** 在43个开源加密软件库中，总体CARS评分为34.1±15.0，表明大部分系统仍处于风险范围内。
+>
+> **技术梗概:** 通过两轮德尔菲过程确定权重，并评估PKI、TLS和HSM环境下的PQC迁移准备度。
+
+---
+### [2026/1461] The m=n+1 Boundary of EME: A Splicing Distinguisher for the Unrefreshed EME-Core Extension and Its Linear-Map Generalization
+
+- **作者:** Jiadong Han, Peng Wang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1461) | [PDF](https://eprint.iacr.org/2026/1461.pdf)
+
+
+> **研究背景:** EME是一种并行加密-混合-加密的宽块构造，仅在消息长度m<=n时被证明安全，其中n是基础分组密码的块长。Halevi和Rogaway通过给出一个区分器解决了m>=n+2的情况，但未解决m=n+1这一边界问题。
+>
+> **主要贡献:** 作者首次针对直接且未经刷新的EME-core扩展在m=n+1的情况下提出了一个区分器，并将其推广到Sarkar的EMME框架中，其中乘法由具有特定最小多项式的线性算子代替。
+>
+> **达到效果:** 当使用固定擦除键时，在进行两次加密查询和一次解密查询后，可以将此扩展与随机置换区分开来。这一结果适用于未经刷新的EME-core扩展，而EME*及IEEE EME2-AES等刷新变体则不在该区分器的作用范围内。
+>
+> **技术梗概:** 通过分析非首个系数的特殊表示和特定方程组求解，作者实现了对m=n+1情况下的取消加密所需的密文拼接。此外，这一机制也适用于Sarkar提出的EMME框架中，当乘法替换为具有相同最小多项式的线性算子时。
+
+---
+### [2026/1462] Power Reveals Timing Conceals - Side-Channel Attacks and Hiding Countermeasures for HQC's Fixed-Weight Vector Sampling
+
+- **作者:** Dina Hesse, Markus Krausz, Raagavan Murugananthan, Tabea Wollinger, Tim Güneysu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1462) | [PDF](https://eprint.iacr.org/2026/1462.pdf)
+
+
+> **研究背景:** 固定权重向量采样是许多后量子方案的核心组件，包括HQC密钥封装机制。早期实现中存在定时侧信道漏洞，导致密钥完全泄露。
+>
+> **主要贡献:** 研究展示了HQC中的固定权重向量采样易受电能侧信道攻击，并提出了两种实用的攻击方法。
+>
+> **达到效果:** 通过电能分析，成功以100%的成功率恢复了共享密钥；针对掩码软件实现的支持转换进行了单迹攻击，同样达到了100%的成功率。
+>
+> **技术梗概:** 研究构建了一个基于支持向量生成的电能区分器，并评估了基于假操作的隐藏对策效果。
+
+---
+### [2026/1463] Shortening Bounds for Reed-Solomon MCA
+
+- **作者:** Przemek Chojecki
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1463) | [PDF](https://eprint.iacr.org/2026/1463.pdf)
+
+
+> **研究背景:** 研究提出了一个显式的指数Ψ_ρ，用于限制Reed-Solomon MCA在固定相对半径下的坏斜率分子，改进了最小测试MDS指数，并提供了常数半径范围内的安全前沿证书。
+>
+> **主要贡献:** 贡献在于通过精确的大字段容量平台、改进的相邻阈值以及四个长度为512的安全光滑乘法证书，提高了Reed-Solomon MCA的安全性边界。
+>
+> **达到效果:** 结果是获得了严格的较小测试MDS指数改进和常数半径范围内的安全前沿证书，并且在挑战受限条件下通过渐近一半最小距离给出了精确的线性预算阈值。
+>
+> **技术梗概:** 技术上使用了Gowers-立方论证、图像归一化的Sidon支付以及可访问时刻序来证明基本的最大纤维平坦性，但未解决无限制次指数预算下的光滑/圆边界问题。
+
+---
+### [2026/1466] Scalable High-Throughput FPGA Architecture for SMAC Message Authentication Code
+
+- **作者:** Ahmet MALAL, Hakan Güler, Bahadır Aydoğan, Oğuz Yayla
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1466) | [PDF](https://eprint.iacr.org/2026/1466.pdf)
+
+
+> **研究背景:** SMAC是一种由Wang等人提出的基于AES轮函数的独立消息认证码，具有可扩展并行处理模式SMAC-1$\times n$。尽管最初为利用AES-NI指令的高性能CPU设计，其结构特性表明与硬件并行性兼容性强，但尚未有针对FPGA的系统研究。
+>
+> **主要贡献:** 本文提出了一种在Xilinx Kintex UltraScale+ KCU116平台上实现的可扩展SMAC FPGA架构，通过单周期评估$\Pi$变换和物理复制聚合通道实现了吞吐量缩放。
+>
+> **达到效果:** 所有至多16个聚合通道的配置均被实施并评估，后实施结果表明最高操作频率可达526 MHz，峰值吞吐量为731 Gbps。设计在八个通道内表现出接近线性的吞吐量缩放，并达到最大效率24.5 Mbps/片。
+>
+> **技术梗概:** 通过使用全组合逻辑AES轮函数在一个时钟周期内评估$\Pi$变换实现并行处理，同时通过物理复制聚合通道来实现吞吐量的可扩展性。
+
+---
+### [2026/1468] Side-Channel Attacks Revisited - an Optimization Problem Perspective: Bootstrapping and Space Reduction
+
+- **作者:** Erez Tamir, Osnat Keren, Itamar Levi
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1468) | [PDF](https://eprint.iacr.org/2026/1468.pdf)
+
+
+> **研究背景:** 研究背景：侧信道攻击依赖于目标设备的泄漏信息。通常假设通过XOR门实现的线性操作产生对称泄漏且不包含显著的侧信道信息，但在实际应用中，这种泄漏表现出复杂、非独立和时间变化的不对称行为。
+>
+> **主要贡献:** 主要贡献：提出了一种基于特征估计的攻击（FEbA），专门针对这些不对称特性进行攻击，并展示了其在掩码实现中的有效性，特别是在共享和刷新阶段。
+>
+> **达到效果:** 达到的效果：实验结果表明，使用最多20,000个来自单一XOR门的无中间值访问追踪数据可以将32位密钥的熵降低至低于1比特，而有中间值访问时则只需500个追踪数据即可实现相同效果。
+>
+> **技术梗概:** 技术梗概：该研究采用了一种优化问题视角的方法来提升侧信道攻击的效果，并通过特征估计技术来利用泄漏的不对称特性进行攻击。
+
+---
+### [2026/1469] MULTILINEAR POLYNOMIALS VIA TREE-BASED CIRCUIT AND THE SUMCHECK PROTOCOL
+
+- **作者:** ALI MKHIDA, Adil Iguider
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1469) | [PDF](https://eprint.iacr.org/2026/1469.pdf)
+
+
+> **研究背景:** 现有的多项式表示方法在多线性情况下导致了显著的性能瓶颈，尤其是在证明系统中。
+>
+> **主要贡献:** 提出了一种基于树结构的多线性多项式表示法，并将其与Sumcheck协议相结合，以提高证明效率。
+>
+> **达到效果:** 该方法实现了对系数向量的构造成本为nN个字段操作，并通过自底向上的折叠实现精确的N-1次乘法运算，达到了最优性能。
+>
+> **技术梗概:** 利用二叉树电路表示多线性多项式，每个节点遵循简洁的递归规则，具有固定深度、局部递归和无数据依赖分支的关键结构特性。
+
+---
+### [2026/1470] A Complexity-Theoretic Approach to Proofs of Space
+
+- **作者:** Marshall Ball, Jiaxin Guan
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1470) | [PDF](https://eprint.iacr.org/2026/1470.pdf)
+
+
+> **研究背景:** 证明空间（Proof of Space，PoS）是一种通过两阶段协议来验证证明者已分配大量持久内存存储某些信息的方法。
+>
+> **主要贡献:** 该研究提出了一个基于去随机化假设和密码学假设组合的框架，以构建PoS，并提供了几个简单的实例。
+>
+> **达到效果:** 研究成果表明非平凡的PoS可以从指数大小非确定性电路难解性和碰撞抗原像散列函数中推导出来；具有几乎最优参数和交互模式的PoS可以从中断定(a)和SNARGs推导出来。
+>
+> **技术梗概:** 该框架结合了去随机化假设和密码学假设，以构建基于空间证明的新协议实例。
+
+---
+### [2026/1471] Efficient Single-Round Obfuscation of Search and Result Patterns in Searchable Encryption
+
+- **作者:** Tung Le, Thang Hoang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1471) | [PDF](https://eprint.iacr.org/2026/1471.pdf)
+
+
+> **研究背景:** 现有的可搜索加密方案虽然能够保护数据的安全性，但暴露了查询和结果模式，容易导致敏感信息泄露。为了解决这一问题，研究者们提出了使用差分隐私（DP）来混淆这些模式的方法，但由于性能开销较大，实际应用受限。
+>
+> **主要贡献:** 本文提出了一种名为FROST的新颖差分隐私可搜索加密方案，能够在单轮交互中高效地混淆查询和结果模式，并且具备抵抗已知统计泄漏攻击的能力。
+>
+> **达到效果:** 实验结果显示，FROST在提供足够查询隐私保护的同时，显著降低了性能开销，适用于实际的搜索引擎负载。
+>
+> **技术梗概:** FROST的核心是重新随机化私有信息检索（RePIR）方案，该方案允许服务器端对加密的PIR查询响应进行重随机化处理。此外，还提出了一种仅使用简单算术操作来对可搜索加密结果应用差分隐私噪声的方法。
+
+---
+### [2026/1472] Vordr: Verifiable, Scalable and Anonymous Remote Attestation for Confidential Virtual Machines
+
+- **作者:** Nirajan Koirala, Kevin Vuong, Micah Brody, Jihye Kim, Hyunok Oh, Taeho Jung
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1472) | [PDF](https://eprint.iacr.org/2026/1472.pdf)
+
+
+> **研究背景:** 当前的CVM认证框架主要在云提供商和CVM所有者之间建立信任模型，仅保证启动时的状态。随着CVM承载更多公共工作负载并处理用户数据，这种单一的信任关系无法满足需求。
+>
+> **主要贡献:** Vordr通过引入基于进程的可信执行环境（Warden Enclave），实现了在整个CVM生命周期中移除云提供商和CVM所有者对最终用户的信任，同时允许工作负载级别的更新/安装并具备可审计性。
+>
+> **达到效果:** 该框架能够持续追踪运行时状态，并提供端到端的安全性和隐私保护，解决了现有方法中的静态锁定或依赖软件日志的问题。
+>
+> **技术梗概:** Vordr通过建立Warden Enclave与CVM之间的排他性管理绑定，严格限制了云提供商和所有者对CVM的直接操作，从而实现了上述目标。
+
+---
+### [2026/1473] An Exact Four-Wise Framework for Boomerang Cryptanalysis
+
+- **作者:** Chengcheng Chang, Kai Hu, Shuo Peng, Haoyang Wang
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1473) | [PDF](https://eprint.iacr.org/2026/1473.pdf)
+
+
+> **研究背景:** 文章针对Boomerang密码分析中的几何表示进行了改进，指出现有的3-wise框架在处理不等配对差分和不可能的Boomerang区分器时存在局限性。
+>
+> **主要贡献:** 作者提出了一种精确的4-wise几何框架，作为3-wise框架的严格泛化，能够统一描述不可能的Boomerang区分器和固定密钥下的Boomerang概率。
+>
+> **达到效果:** 该框架成功地发现了新的不可能Boomerang区分器，并计算了固定密钥下的Boomerang概率。
+>
+> **技术梗概:** 通过选择适应于Boomerang四元组的价值坐标和差分坐标的基底，作者消除了3-wise假设并提供了一种统一的过渡矩阵描述方法。
+
+---
+### [2026/1474] Mu-qt-PEGASIS: Interactive Aggregate Signatures from Effective Isogenies in the Programmable Random-Oracle Model
+
+- **作者:** Nouhou Abdou Idris, Mustapha Hedabou
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1474) | [PDF](https://eprint.iacr.org/2026/1474.pdf)
+
+
+> **研究背景:** Mu-qt-PEGASIS旨在解决传统聚合签名验证中的公钥空间结构问题，通过分层验证机制实现高效安全的聚合签名方案。
+>
+> **主要贡献:** 该研究贡献了一种基于有效类群作用的交互式聚合签名构造方法，并在可编程随机预言机模型下证明了其安全性。
+>
+> **达到效果:** Mu-qt-PEGASIS实现了固定重复参数t下的聚合签名大小与签名人数量无关，同时保持注册和聚合认证记录线性增长。
+>
+> **技术梗概:** 通过将验证分为证明认证层和转录一致性层，并使用Fiat–Shamir编译显式公共硬币Σ协议来实现公钥注册和链接聚合的认证。
+
+---
+
 ## 更新: 2026-07-21 19:48
 
 *新增 14 篇论文 (编号 1446--1459)*
