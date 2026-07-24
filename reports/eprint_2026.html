@@ -79,6 +79,324 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-07-24 19:21</h2>
+<p><em>新增 16 篇论文 (编号 1476--1492)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1483] MQ on my Hardware: Performance Analysis of MQOM on FPGA</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Stelios Manasidis, Quinten Norga, Suparna Kundu, Ingrid Verbauwhede</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1483">论文</a> | <a href="https://eprint.iacr.org/2026/1483.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 近期在MPCitH范式下的算法进步使得后量子数字签名方案更加高效，MQOM作为基于此的候选方案，在软件中与格基和多元基方案竞争。</p>
+<p><strong>主要贡献:</strong> 本文开发了针对MQOM的专用硬件加速器，并通过精心设计高吞吐量的对称原语引擎和高度优化的多项式算术核心，实现了无缓冲的全即时计算，减少了延迟并降低了内存需求。</p>
+<p><strong>达到效果:</strong> 我们的设计在NIST L1参数下仅需15,812/9,384 LUTs/FFs和4.5 BRAMs，在FPGA上0.46毫秒内完成签名生成，并显著减少了硬件成本。</p>
+<p><strong>技术梗概:</strong> 通过优化多项式算术核心和精心设计的对称原语引擎，实现了无缓冲计算，同时分析了不同参数集对硬件性能的影响。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1484] The SecureDrop Protocol: End-to-End Encrypted Whistleblowing for All</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Giulio Berra, Felix Linker, Luca Maier, Cory Francis Myers, Kenneth G. Paterson, Rowen Shane, Shannon Veitch</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1484">论文</a> | <a href="https://eprint.iacr.org/2026/1484.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> SecureDrop是一个用于保护举报人隐私和安全的匿名通信系统，广泛应用于新闻机构。然而，当前设计需要物理服务器托管在本地，云部署虽然能提高系统的易用性和访问性，但也引入了新的安全威胁，特别是缺乏端到端加密使得云服务提供商可能被胁迫泄露信息。</p>
+<p><strong>主要贡献:</strong> 本文提出并形式化分析了一个针对SecureDrop的新协议，该协议解决了离线部署的挑战，并通过结合后量子保证的加密方案和身份隐藏的消息获取机制提供了强大的匿名性保障。</p>
+<p><strong>达到效果:</strong> 我们的正式安全分析结合了Tamarin证明器进行符号分析和基于游戏的证明进行计算分析。基准测试表明，在浏览器环境中，该协议实现了实用级别的性能。</p>
+<p><strong>技术梗概:</strong> 通过设计端到端加密方案、提供消息级否认性和使举报人保持无状态来最小化对举报人的罪证，并使用Tamarin证明器结合符号分析和基于游戏的证明进行形式化验证。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1485] From PQC to HHE: Reusing a Co-Design Platform for Side-Channel-Protected PASTA</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum, homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Ahmet Malal, Tolun Tosun, Oğuz Yayla, Erkay Savas</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1485">论文</a> | <a href="https://eprint.iacr.org/2026/1485.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有硬件依赖专用的密码核且缺乏侧信道保护，使得在嵌入式设备上高效执行PASTA等后量子加密算法具有挑战性。</p>
+<p><strong>主要贡献:</strong> 提出了一种基于RISQrypt平台的PASTA硬件/软件协同设计方法，无需额外硬件即可实现第一阶算术遮蔽，并首次提供了侧信道保护的硬件加速PASTA实现。</p>
+<p><strong>达到效果:</strong> 在Artix-7 FPGA上进行的TVLA评估中，加掩码乘法未显示任何一阶泄漏；与同一核心上的纯软件基线相比，在去掩码和掩码配置下分别实现了9.68倍和9.85倍的速度提升。</p>
+<p><strong>技术梗概:</strong> 利用RISQrypt平台的算术和Keccak加速器执行PASTA的仿射层、S盒和SHAKE128抽样，并通过重用遮蔽加速器实现第一阶算术遮蔽，同时保持算术运算在处理器数据路径之外。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1488] Privacy-Preserving Counterfactual Explanations for Federated AI</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Sjoerd Berning, Vincent Dunning, Thijs Veugen, Kevin Witlox</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1488">论文</a> | <a href="https://eprint.iacr.org/2026/1488.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着AI在敏感领域中的应用增加，隐私保护的可解释人工智能(XAI)工具的需求日益增长。本文提出了一种隐私保护的反事实解释算法，旨在解决垂直分割数据集上的决策支持模型问题。</p>
+<p><strong>主要贡献:</strong> 该研究贡献了一种结合同态加密和秘密共享技术的隐私保护反事实解释算法，能够在不泄露任何单一参与方数据的情况下提供准确的解释。</p>
+<p><strong>达到效果:</strong> 实验结果表明，通过整合多个数据集，该方法在保持隐私的同时提高了模型性能，并且不会影响准确性。</p>
+<p><strong>技术梗概:</strong> 该算法利用了同态加密和秘密共享技术来保护多方数据隐私，在保证隐私的前提下实现了高效的反事实解释生成。</p>
+</blockquote>
+<hr />
+<h3>[2026/1476] Constructing new permutation polynomials by the AGW Criterion</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Qian Liu, Liwei Fang, Zhengbang Zha, Jing Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Secret-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1476">论文</a> | <a href="https://eprint.iacr.org/2026/1476.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文旨在通过AGW准则构造新的置换多项式，以扩展已知的置换多项式构建方法。</p>
+<p><strong>主要贡献:</strong> 作者提出了具有特定形式的置换多项式的多个新类，并证明了这些多项式不是已知多项式的准乘性等价物。</p>
+<p><strong>达到效果:</strong> 通过确定某些方程在( \mathbb{F}_{2^{2m}} )中的解数，作者成功地构造了一系列新的置换多项式。</p>
+<p><strong>技术梗概:</strong> 利用AGW准则和代数方法来确定特定形式的多项式的置换性质。</p>
+</blockquote>
+<hr />
+<h3>[2026/1477] PERSEPHONE: Zero-Knowledge Multiplicative Non-Negative Proof for Sequential Private Range Verification</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ivan Tjuawinata, Yann Fraboni, Darian Gunamardi, Jun Jie Sim, Zhenghao Wu, Hasventhran Baskaran, Chi-Hung Chi, Pu Duan, Kwok-Yan Lam</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1477">论文</a> | <a href="https://eprint.iacr.org/2026/1477.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在金融科技领域，零知识证明（ZKP）被用于验证信息而不泄露具体内容。然而，传统的范围验证需要访问账户余额等敏感信息，这引发了对私有范围验证的需求。</p>
+<p><strong>主要贡献:</strong> 本文提出了一个新颖的零知识证明方案——零知识乘法非负证明（ZK-MultNNP），并基于此构建了PERSEPHONE框架来解决序列化私有范围验证的问题。</p>
+<p><strong>达到效果:</strong> 实验结果显示，PERSEPHONE在性能上比基于ZKRPs的方法快3倍，并且能够更有效地处理连续的私有边界验证问题。</p>
+<p><strong>技术梗概:</strong> 该方案通过引入乘法非负证明技术，实现了对一系列值在序列化私有边界内进行高效验证，从而提高了交易系统的效率和稳定性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1478] Provable Recovery of RSA Private Exponents below (N^{11/42-\varepsilon})</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yiming Gao, Honggang Hu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1478">论文</a> | <a href="https://eprint.iacr.org/2026/1478.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：Wiener的连分数攻击为RSA私钥恢复提供了经典可证明界限，当(d \leq N^{11/42-\varepsilon})时，对于平衡的RSA实例（(e=\Theta(N))），可以在多项式时间内确定性分解其因子。</p>
+<p><strong>主要贡献:</strong> 主要贡献：本文提出了在更小私钥情况下恢复RSA私钥的方法，并证明了当私钥低于(N^{11/42-\varepsilon})时，可以实现确定性的恢复。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过改进的算法和技术，作者成功地扩展了Wiener攻击的有效范围，使得更多较小的私钥能够被有效恢复。</p>
+<p><strong>技术梗概:</strong> 技术梗概：利用先进的数论和分析方法，结合连分数逼近理论，设计了一种新的算法来精确估计RSA私钥，并证明了其在特定条件下的有效性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1479] Conjectures and Barriers for RS-MCA</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Przemek Chojecki</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1479">论文</a> | <a href="https://eprint.iacr.org/2026/1479.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究旨在进一步探讨Reed-Solomon MCA问题，并提出新的猜想和障碍，以完善已有的边界条件。</p>
+<p><strong>主要贡献:</strong> 作者提出了一个完整的有限Reed-Solomon MCA问题，并构建了基于极点的正密度轮廓包络猜想。</p>
+<p><strong>达到效果:</strong> 通过证明天花板归一化矩障碍、射影共线定理及基准维度诊断等，研究达成了多项理论成果。</p>
+<p><strong>技术梗概:</strong> 研究采用了精确的第一匹配编译器和实现图像矩与共现不等式来隔离安全证书所需的支付，并结合Sidon支付及Balog-Szemer\'edi-Gowers定理进行证明。</p>
+</blockquote>
+<hr />
+<h3>[2026/1480] Doubly-Efficient Secret-Key PIR with Low Storage Overhead</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Caicai Chen, Yuval Ishai, Aayush Jain, Tamer Mour, Alon Rosen, Chaoping Xing</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1480">论文</a> | <a href="https://eprint.iacr.org/2026/1480.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：秘密密钥私有信息检索（sk-PIR）允许客户端使用短的密钥从数据库中检索项目，同时隐藏请求的索引，并可能隐藏数据库本身。现有方案在存储效率上存在不足，本文旨在提供一种具有常数倍存储开销且在线服务器工作量接近最优的解决方案。</p>
+<p><strong>主要贡献:</strong> 主要贡献：提出了第一个候选的双高效秘密密钥PIR方案，实现了接近线性存储开销，并且通信和在线服务器工作量分别为$k^{o(1)}$和$k/   extrm{polylog}(k)$，显著优于现有技术。</p>
+<p><strong>达到效果:</strong> 达到的效果：该方案在保持常数倍的存储开销的同时，将在线服务器的工作量从$k/  extrm{polylog}(k)$降低至接近线性，从而大幅提高了效率，并且适用于大规模数据库。</p>
+<p><strong>技术梗概:</strong> 技术梗概：采用permuted-code蓝图进行设计，通过引入新的$t$-光滑局部可解码码族来优化率、局部性和平滑性之间的权衡，具体包括基于曲线串联的Reed-Muller编码的新局部解码器以及基于曲线上升编码的构造。</p>
+</blockquote>
+<hr />
+<h3>[2026/1481] 88-XOR Implementation of the AES MixColumns Matrix</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jérémy Jean</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1481">论文</a> | <a href="https://eprint.iacr.org/2026/1481.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文介绍了一种使用88个XOR门实现AES MixColumns矩阵的电路，相较于之前的最佳结果减少了4个XOR门。</p>
+<p><strong>主要贡献:</strong> 该工作通过优化电路设计，在减少硬件资源的同时保持了相同的功能性。</p>
+<p><strong>达到效果:</strong> 所提出的电路在XOR门的数量上实现了突破，达到了88个，比之前的最小值减少了6个XOR门。</p>
+<p><strong>技术梗概:</strong> 作者采用了一种新的逻辑优化技术，通过对矩阵操作的重新组织和简化来减少所需的XOR门数量。</p>
+</blockquote>
+<hr />
+<h3>[2026/1486] The supersingular isogeny problem in time and memory $p^{1/3+o(1)}$</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Benjamin Wesolowski</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1486">论文</a> | <a href="https://eprint.iacr.org/2026/1486.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：超奇异Isogeny问题被认为是后量子密码学中基于Isogeny的加密方案的安全性基础，解决该问题的成本是确定安全参数时的主要因素之一。</p>
+<p><strong>主要贡献:</strong> 主要贡献：证明了在合理的随机整数平滑度假设下，可以将超奇异Isogeny问题的时间和内存复杂度降低至$p^{1/3+o(1)}$，这比之前的最佳复杂度$p^{1/2} \cdot(\log p)^{O(1)}$有了显著改进。</p>
+<p><strong>达到效果:</strong> 达到的效果：该算法在理论上提供了更优的解决方案，但实际应用中由于超多项式因子和高内存需求的影响，对具体参数集的实际影响尚需进一步研究。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过分析随机整数的平滑性假设来优化Isogeny路径搜索的方法，从而实现了复杂度的降低。</p>
+</blockquote>
+<hr />
+<h3>[2026/1487] LightShark: Actively Secure Machine-Learning Inference Based on Lightweight Authenticated Distributed Comparison Function</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Chenkai Zeng, Qi Feng, Debiao He, Min Luo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1487">论文</a> | <a href="https://eprint.iacr.org/2026/1487.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：现有工作Shark在半诚实环境中提出了机器学习推理的安全方案，而Grotto则提出了一种具有更小密钥大小的变体分布式比较函数（DCF），但在恶意环境下的扩展性尚未解决。</p>
+<p><strong>主要贡献:</strong> 主要贡献：本文首次实现了适用于恶意环境的Grotto风格DCF方案，并基于此构建了高效支持ReLU、Spline和Truncation等基本操作及VGG-16、GPT、BERT等模型的LightShark框架。</p>
+<p><strong>达到效果:</strong> 达到的效果：与Shark相比，LightShark在Bert-base推理上的性能提升了1.49至2.69倍，并降低了66.7%的通信成本；对于更大的LLM模型，实验表明其表现优异。</p>
+<p><strong>技术梗概:</strong> 技术梗概：设计了基于相关GGM树的认证DCF方案，保持了半诚实环境下Grotto的密钥大小优势，并实现了高效的机器学习推理框架。</p>
+</blockquote>
+<hr />
+<h3>[2026/1489] SwitchFold: Code-Agnostic Succinct Polynomial Commitments via Recursive Code Switching</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Mingshu Cong, Tsz Hon Yuen, Siu-Ming Yiu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1489">论文</a> | <a href="https://eprint.iacr.org/2026/1489.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究旨在设计一种通用的、基于哈希的大规模多项式承诺方案（PCS），以减少证明者时间，同时保持polylogarithmic大小的证明和验证者时间。这为零知识简洁非交互知识论证（zkSNARKs）的应用提供了支持，如零知识机器学习（zkML）。</p>
+<p><strong>主要贡献:</strong> 提出了一种名为SwitchFold的技术，它通过递归代码切换从任意几何增长块长度序列的线性码构建多线性PCS。该方案利用了Brakedown码序列实现了具体实例，称为BrakeFold。</p>
+<p><strong>达到效果:</strong> SwitchFold成功地实现了polylogarithmic大小的证明和验证者时间，并且证明者时间仅依赖于编码时间。通过这种技术，多项式承诺可以编码数十亿参数，同时避免固定点算术中的溢出问题。</p>
+<p><strong>技术梗概:</strong> SwitchFold的核心是递归应用代码切换技术，将多线性扩展（MLE）声明从一个码简化为较短的码下的简单MLE声明。生成矩阵MLE声明通过累积方案进行证明，并最终通过递归进行验证。</p>
+</blockquote>
+<hr />
+<h3>[2026/1490] On the Formal Verification of Polynomial Commitments: two KZG constructions and the Algebraic Group Model</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Tobias Rothmann</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1490">论文</a> | <a href="https://eprint.iacr.org/2026/1490.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文旨在通过形式化验证多项式承诺方案（PCSs），特别是Kate, Zaverucha和Goldberg（KZG）构造的两个变体，来加强密码学协议的安全性证明。</p>
+<p><strong>主要贡献:</strong> 作者使用Isabelle/HOL中的CryptHOL框架，首次正式验证了多项式承诺方案及其安全性的证明，并引入了一种新的代数组模型（AGM）形式化方法。</p>
+<p><strong>达到效果:</strong> 通过这种方法，作者成功地验证了标准的（DL-）KZG和批量KZG两种具体PCS构造的知识安全性证明，这是在Isabelle中进行的第一个此类正式验证工作。</p>
+<p><strong>技术梗概:</strong> 研究采用了Shoup的序列游戏方法，并结合机器检查转换来完成证明，确保了高度的形式化和可靠性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1491] Exploiting Load/Store Leakage of Sparse Vectors for Key Recovery in HQC</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Gustavo Banegas, Benjamin Smith, Jad Zahreddine</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1491">论文</a> | <a href="https://eprint.iacr.org/2026/1491.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> HQC作为一种基于码的密钥封装机制被NIST选中进行标准化，因此其对实施攻击的抵抗力至关重要。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种侧信道攻击方法，利用HQC稀疏秘密向量中的加载/存储泄漏来恢复密钥。</p>
+<p><strong>达到效果:</strong> 通过电磁测量区分机器字为零或非零，并将恢复出的零位置转化为解码提示，从而将HQC密钥恢复问题简化为一个缩短后的综合解码问题。实验验证了预测的高低半部不对称性，并成功在32位粒度上恢复了一个HQC-1密钥。</p>
+<p><strong>技术梗概:</strong> 通过对Cortex-M4参考实现进行分析，识别出由于编译器生成的寄存器溢出导致的不同强度的高低半部泄漏，并利用这些泄漏构造了一个简单的零字区分器。</p>
+</blockquote>
+<hr />
+<h3>[2026/1492] Proof of Demand Is Not Proof of Work: On the Limits of Demand-Weighted Consensus under Free Pseudonyms</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ömer Demirel</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1492">论文</a> | <a href="https://eprint.iacr.org/2026/1492.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究探讨了在自由匿名环境下，需求加权共识机制的有效性边界，特别是证明有用工作的局限性。</p>
+<p><strong>主要贡献:</strong> 作者定义并区分了工作声学、任务绑定和需求外生性三个属性，并提出了两个无条件的结果来揭示这些属性之间的差距。</p>
+<p><strong>达到效果:</strong> 研究表明，在自由匿名环境中，基于需求的共识机制无法确保经济独立请求者的证明真实性，从而限制了其安全性。进一步推导出一个稳健性上限：在零需求路径上仍需保持活跃的去许可化机制不能依赖服务收据中的需求组件。</p>
+<p><strong>技术梗概:</strong> 研究通过形式化的定义和严格的数学论证来区分不同属性，并利用联盟控制下的请求者与工作者之间的支付关系进行分析。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-07-23 20:51</h2>
 <p><em>新增 1 篇论文 (编号 1475--1475)</em></p>
 <h3>[2026/1475] Partial Derandomization for Leakage-Resilient Shamir's Secret Sharing over Composite Order Fields</h3>
