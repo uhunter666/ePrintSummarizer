@@ -79,6 +79,349 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-07-25 10:27</h2>
+<p><em>新增 17 篇论文 (编号 1493--1511)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1493] Bob DyLean: A Framework for the Symbolic Analysis of Cryptographic Protocols in Lean</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Théophile Wallez, Cas Cremers</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1493">论文</a> | <a href="https://eprint.iacr.org/2026/1493.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 近年来，形式化的Dolev-Yao方法被广泛应用于安全协议的分析中，为诸如TLS 1.3、电子投票协议、EMV和MLS等广泛应用的安全系统提供了有效的验证手段。然而，现有的工具如Tamarin和ProVerif虽然提供了自动化支持用户自定义的等式理论，但缺乏灵活性；而DY*则较为灵活且模块化，但固定了威胁模型并不支持自定义等式理论。</p>
+<p><strong>主要贡献:</strong> DyLean框架在Lean定理证明器中实现了通用形式化的安全协议分析方法，并允许用户自定义语义和等式理论。此外，它还提供了一种基于迹不变量的证明方法，继承了DY*的优点并进一步增强了其灵活性和可扩展性。</p>
+<p><strong>达到效果:</strong> DyLean框架能够处理包含未绑定循环或数据结构的协议分析，并在多种场景下组合安全证明。通过允许用户定义等式理论和威胁模型，提高了协议分析的灵活性和适用范围。</p>
+<p><strong>技术梗概:</strong> DyLean采用了灵活的一般性形式化语义，并结合了基于迹不变量的具体证明方法，使得其既具有DY*的优点又增强了对自定义理论的支持。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1494] On $k$-way split multiplication algorithms</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Mehmet Özgün Cihangir, Oğuz Yayla</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1494">论文</a> | <a href="https://eprint.iacr.org/2026/1494.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究聚焦于高效多项式乘法和Toeplitz矩阵向量乘积（TMVP）算法，这些算法在计算代数与现代密码学中至关重要。特别是在基于格的后量子密码学（PQC）方案中，利用Number Theoretic Transform (NTT)-不友好的环需要高度优化的亚二次时间复杂度乘法算法。</p>
+<p><strong>主要贡献:</strong> 研究提出了广义k-方式分裂多项式乘法和TMVP算法的一般化数学框架，并构造了广义k-方式Schoolbook和Karatsuba乘法算法，引入了一种新颖的利用最优评估点和矩阵行反转技术的k-方式TMVP算法。</p>
+<p><strong>达到效果:</strong> 研究证明了这种广义公式严格达到了理论插值下界，需要恰好2k-1个子问题，并且具有亚二次渐近复杂度O(n^{\log_k(2k-1)})。此外，确定了k-方式Karatsuba和Schoolbook算法的最佳连续应用序列，证明了峰值效率完全由n的质因数分解驱动。</p>
+<p><strong>技术梗概:</strong> 研究通过构建广义k-方式乘法算法并引入新型TMVP算法，利用数学证明方法严格达到理论下界，并确定算法优化策略以实现最佳性能。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1495] Oblivious Sorting under Fully Homomorphic Encryption: A Comprehensive Survey and Performance Analysis</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Omar Ahmed, Rostin Shokri, Nektarios Georgios Tsoutsos</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1495">论文</a> | <a href="https://eprint.iacr.org/2026/1495.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在外包计算至云服务提供商时，数据隐私成为主要问题，促使研究者转向全同态加密(FHE)以保护数据隐私。然而，在FHE环境中实现排序算法带来了显著的性能挑战。</p>
+<p><strong>主要贡献:</strong> 本文综述了基于FHE的排序算法现状，并提出了一种新的复杂性度量标准——FHE-Effort，用于评估同态电路效率。此外，还对18种不同算法在三种主要FHE方案中的表现进行了基准测试。</p>
+<p><strong>达到效果:</strong> 研究结果表明，在当前技术条件下，TFHE是最适合排序应用的FHE方案；同时，奇偶归并排序网络和Bitonic排序网络提供了最优的算法架构选择。</p>
+<p><strong>技术梗概:</strong> 通过引入FHE-Effort度量标准，并使用统一代码库对多种算法进行跨方案基准测试，本文为FHE环境下的高效排序设计提供了指导。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1500] How to Define Expected Quantum Polynomial-Time Zero Knowledge Simulation</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Zhengnan Lai, Nicholas Spooner, Max Tromanhauser</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1500">论文</a> | <a href="https://eprint.iacr.org/2026/1500.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：在后量子计算时代，为了正确模拟量子验证者，需要将模拟器升级至量子多项式时间（QPT）。然而，Chia等人证明了一个负面结果，表明对于常数轮协议，既要求严格QPT又要求自然的期望量子多项式时间（EQPT）黑盒模拟是不可能实现非平凡零知识（ZK）的。因此，Lombardi等提出了一个新颖的EQPT概念——相干运行时EQPT（EQPT_c），并证明了[GMW86,FS90,GK96]协议允许EQPT_c模拟。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者识别出EQPT_c定义中的根本问题，并提出了解决方案。具体而言，他们展示了EQPT_c计算不一定是高效的，并且实际上可以决定任何经典决策问题。通过谨慎限制选择有效的量子信道的酉扩张方式，作者提出了修订后的定义，并证明了该定义保留了[GMW86,FS90,GK96]协议的零知识特性。</p>
+<p><strong>达到效果:</strong> 达到的效果：修订后的EQPT_c定义确保了在后量子计算环境中，经典零知识协议依然能够保持其零知识性质。这一工作为设计和实现安全有效的零知识证明系统提供了新的理论基础。</p>
+<p><strong>技术梗概:</strong> 技术梗概：作者通过分析EQPT_c的自由度问题，并提出限制选择有效量子信道酉扩张方式的方法来修订定义。这种方法确保了在保留协议零知识特性的同时，提高了模拟器的效率。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1502] Efficient Privacy-Preserving LSTM Inference on Encrypted Sequential Data</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Qiang He, Jingwei Chen, Wenyuan Wu, Yong Feng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1502">论文</a> | <a href="https://eprint.iacr.org/2026/1502.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着全同态加密(FHE)技术的发展，直接在加密数据上进行隐私保护的机器学习成为可能。然而，现有的基于FHE的LSTM推理方案仍然存在高延迟和可扩展性差的问题。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于FHE的高效隐私保护LSTM推理协议，通过引入轻量级归一化模块并结合混合Remez和最小二乘策略实现Sigmoid、Tanh和反平方根函数的低阶多项式近似，从而在保持准确性的前提下提高了效率。</p>
+<p><strong>达到效果:</strong> 实验表明，在标准文本分类基准上，所提出的加密LSTM模型与明文模型相比具有竞争力，并且始终优于最先进的FHE方法，速度提升最高可达4.7倍。</p>
+<p><strong>技术梗概:</strong> 该协议通过使用Lattigo库实现，并结合了密文打包优化、旋转最小化和SIMD并行化技术来提高性能。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1506] SM4th and uBlockith: VOLE-based Post-Quantum Signature Schemes from Chinese Block Ciphers</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Weihan Li, Yuchen Wang, Zhelei Zhou, Cheng Hong, Tao Wei</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1506">论文</a> | <a href="https://eprint.iacr.org/2026/1506.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> FAEST是一种基于VOLE-in-the-Head的后量子签名方案家族，是九个进入NIST额外数字签名过程第三轮候选名单的方案之一。</p>
+<p><strong>主要贡献:</strong> 作者提出了SM4th和uBlockith两个后量子签名方案系列，分别针对128位和256位的经典安全性，并使用中国设计的块密码进行实例化。</p>
+<p><strong>达到效果:</strong> 评估结果显示，在Intel平台上，带有内置SM4支持的SM4th变体性能与相应的FAEST-128变体相当；而在Hygon平台上，SM4th变体比FAEST-128慢约3倍。uBlockith系列方案则大约慢3到4倍于FAEST-256。</p>
+<p><strong>技术梗概:</strong> 该方案基于FAEST框架，并针对中国设计的块密码（如SM4、uBlock和Ballet）定制了约束系统，提供了指令集意识优化实现。</p>
+</blockquote>
+<hr />
+<h3>[2026/1496] Floor-IT: Information-Theoretic BFT in Partial Synchrony with Two Round Good Case Latency and Optimal Resilience</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ittai Abraham, Yuval Efron, Jovan Komatovic, Alejandro Ranchal-Pedrosa, Gilad Stern</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1496">论文</a> | <a href="https://eprint.iacr.org/2026/1496.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：在信息论模型中，各方通过发送者认证的点对点信道进行通信，但不使用数字签名或其他可转移的加密证书；对手是计算能力无限制的。</p>
+<p><strong>主要贡献:</strong> 主要贡献：Floor-IT协议是一个适用于部分同步环境的信息论拜占庭容错协议，在良好情况下延迟为两轮，并实现了在该设置下的最优鲁棒性界限$n = 5f - 1$。</p>
+<p><strong>达到效果:</strong> 达到的效果：当实际网络延迟$\delta \leq \Delta$后，协议实现稳健的良好情况延迟$2\delta$；最坏情况下视图延迟不超过$2\Delta + 2\delta$。每个节点仅需$O(1)$大小的持久存储，每次视图涉及$O(n^2)$条消息，每条消息大小为$O(1)$。</p>
+<p><strong>技术梗概:</strong> 技术梗概：Floor-IT协议通过在视图中操作和保证最坏情况下的视图延迟来实现其目标，同时优化了节点的存储需求和消息传递效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/1497] Updatable Private Set Union: Generic Construction with Efficient Instantiation</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Seongbong Choi, Hyung Tae Lee</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1497">论文</a> | <a href="https://eprint.iacr.org/2026/1497.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的私有集合并集（PSU）协议在任一参与方的数据集发生变化时，必须从头重新计算整个并集，这在数据频繁更新的情况下变得非常低效。</p>
+<p><strong>主要贡献:</strong> 该研究提出了首个支持高效增量更新的标准双方可更新私有集合并集（uPSU）协议，并对其可能的更新场景进行了系统分类。</p>
+<p><strong>达到效果:</strong> 通过这种分类和泄漏基线分析，研究人员提供了一种基于现有PSI和标记变体PSU构建块的通用构造方法，证明了其在模拟模型中的半诚实对手安全性，并确保增量更新不会泄露比标准PSU协议更多关于更新后集合的信息。</p>
+<p><strong>技术梗概:</strong> 该研究通过分类所有可能的更新场景并建立泄漏基线来实现高效更新，同时利用现有的PSI和标记变体PSU作为构建块进行构造。</p>
+</blockquote>
+<hr />
+<h3>[2026/1498] Multilevel Amortized Gaussian Elimination in Information-Set Decoding: Applications to HQC and PCG</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kévin Carrier, Valérian Hatey, Laura Luzzi, Jean-Pierre Tillich</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1498">论文</a> | <a href="https://eprint.iacr.org/2026/1498.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对依赖于亚线性解码难题的密码系统，已知的最佳攻击方法基于信息集解码(ISD)，但在特定应用如HQC和PCG中，高斯消元的成本变得不可忽略，影响了整体攻击复杂度。</p>
+<p><strong>主要贡献:</strong> 作者改进并扩展了Kim和Lee的Reduce-and-Prange技术，并提出MAGE-Stern算法，这是一种Stern算法的多级摊销高斯消元变体。</p>
+<p><strong>达到效果:</strong> MAGE-Stern显著降低了HQC的最佳已知攻击的时间复杂度约3位，并减少了内存复杂度约12位。对于标准化的HQC类别I参数集，估计安全性约为140位，低于NIST的安全目标约3位。</p>
+<p><strong>技术梗概:</strong> 通过分支过程技术重新评估了部分重用主元的技术复杂性，并将其应用于Stern算法以提高效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/1499] BF²: A Bloom-Filtered Brute-Force Framework for Multi-Target Password Recovery</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Cansu Karakuzu Aslan, Wenzel Pünter, Christian Dörr</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1499">论文</a> | <a href="https://eprint.iacr.org/2026/1499.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对大规模泄露哈希集的离线暴力破解攻击，尤其是多目标攻击，需要高效且可扩展的框架来评估实际密码安全性。</p>
+<p><strong>主要贡献:</strong> BF²框架通过结合密码候选生成器、流水线NT哈希核心、布隆过滤器阶段以及主机侧多线程组件，实现了多目标密码恢复加速。</p>
+<p><strong>达到效果:</strong> BF²在低成本NiteFury II板上实现，16个并行管道以100 MHz频率运行时，每秒生成$1.6    imes10^9$个哈希值，实验显示其吞吐量比John the Ripper高7.5倍，并将功耗降低了90%。</p>
+<p><strong>技术梗概:</strong> BF²采用布隆过滤器快速排除不匹配的候选密码，利用完美哈希函数进行精确成员检查，同时在FPGA和CPU之间进行了模块化设计以提高灵活性和可扩展性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1501] Phishing in the Noise: Analysis of CT-based Phishing Detection Performance on Free Hosting Platforms</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Maksymilian Nowak, Wojciech Mazurczyk, Ewa Syta</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1501">论文</a> | <a href="https://eprint.iacr.org/2026/1501.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究探讨了免费托管平台（FHP）上的证书透明度（CT）基于的钓鱼网站检测性能，分析了X.509、CT和URL特征在不同类型的网站之间的差异。</p>
+<p><strong>主要贡献:</strong> 贡献在于揭示了托管提供商特性对钓鱼网站指标的影响，并指出现有CT基钓鱼检测方法在面对这种部署环境时存在的局限性。</p>
+<p><strong>达到效果:</strong> 结果表明，托管平台状态比钓鱼状态更强烈地关联于提取的X.509、CT和URL特征，且相关性最高达到0.54，远超钓鱼相关的0.31。</p>
+<p><strong>技术梗概:</strong> 研究通过分析不同类型的网站（FHP钓鱼、FHP良性、非FHP钓鱼及主流良性）的数据，并将证书级数据与域名级数据分开进行关联分析来实现上述目标。</p>
+</blockquote>
+<hr />
+<h3>[2026/1503] The Consensus Number of Untraceable Cryptocurrencies</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Christian Cachin, David Lehnherr, Juan Villacis, François-Xavier Wicht</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1503">论文</a> | <a href="https://eprint.iacr.org/2026/1503.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究了不可追踪加密货币中发送者不可追踪性对同步的影响，通过区分线性和常量状态方案来探讨其在共识层次中的位置。</p>
+<p><strong>主要贡献:</strong> 提出了线性和常量状态的不可追踪资产转移对象（LUAT和CUAT），并分析了它们在不同不可追踪性假设下的共识数量。</p>
+<p><strong>达到效果:</strong> 发现线性不可追踪资产转移对象具有2的共识数，而常量状态不可追踪资产转移对象在弱不可追踪性下共识数无界，在强不可追踪性下则与共享掩码集的账户历史相关。</p>
+<p><strong>技术梗概:</strong> 通过形式化定义和冲突图来分析不同设计对同步的影响，并探讨了垃圾回收机制以优化存储效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/1505] Conditional-Affine Redundant Clauses for SHA-256 Differential SAT</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jiqiang Feng, Kun Gao</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1505">论文</a> | <a href="https://eprint.iacr.org/2026/1505.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究针对SHA-256非线性函数Ch和Maj的标准Tseitin编码，探讨如何通过冗余条件子句增强布尔约束传播（BCP）的效果，以揭示受控差分投影。</p>
+<p><strong>主要贡献:</strong> 提出了一种基于条件仿射冗余子句的方法，用于表征所有控制下的差分线性形式，并生成了特定数量的Ch和Maj子句，旨在加强BCP过程。</p>
+<p><strong>达到效果:</strong> 实验结果显示，这种机制在某些情况下确实提高了性能，但并未证明能普遍加速求解器或产生新的密码分析攻击。</p>
+<p><strong>技术梗概:</strong> 通过应用一个定理来识别所有最小控制投影，并将其转化为具体的CNF子句，这些子句不引入新变量且严格增强了BCP过程。</p>
+</blockquote>
+<hr />
+<h3>[2026/1507] Analyzing Cryptography in Context: A Cryptography-Native Approach to Threat Modeling</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ran Canetti, Julie Ha, Gabriel Kaptchuk</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1507">论文</a> | <a href="https://eprint.iacr.org/2026/1507.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有密码学规范未要求分析人员记录部署系统应具备的社会技术属性，本文旨在通过开发框架将社会技术维度引入对加密系统的分析中，特别是在基于广泛接受的密码学建模技术进行‘情境化’分析方面提供支持。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种新的框架，能够使社会技术因素在密码学系统分析中得到考虑，并以苹果2021年CSAM扫描提案为例验证了该框架的有效性。</p>
+<p><strong>达到效果:</strong> 通过使用该框架，研究团队揭示了许多对苹果提案的批评意见，并识别出了提案中的一个未被记录的重要属性。</p>
+<p><strong>技术梗概:</strong> 该框架结合了广泛接受的密码学建模技术，并引入了社会技术维度进行‘情境化’分析，从而提高了分析的全面性和准确性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1509] Efficient Unclonable Encryption from Pauli Eigenstates</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Seyoon Ragavan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1509">论文</a> | <a href="https://eprint.iacr.org/2026/1509.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文提出了首个基于Pauli本征态的一次性信息论安全性高效不可克隆加密方案，用于单个经典位的加密。</p>
+<p><strong>主要贡献:</strong> 该工作避免了以往研究中安全损失和效率低下的问题，首次在标准模型下实现了多项式长度消息的多次使用安全的1到2不可克隆加密。</p>
+<p><strong>达到效果:</strong> 此方案通过随机非恒等相位Pauli算子实现，加密与解密操作复杂度为O(n)，且具有指数安全性，恢复比特的概率上限为1/2 + O(2^(-n/2))。</p>
+<p><strong>技术梗概:</strong> 该技术利用了在精确谱意义上平衡的交换-反对称结构，从而实现了高效的安全性保证。</p>
+</blockquote>
+<hr />
+<h3>[2026/1510] Quantum Lazy Sampling and Path Recording for Any Group</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ben Foxman, Alex Lombardi, Fermi Ma, Barak Nehoran, John Wright</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1510">论文</a> | <a href="https://eprint.iacr.org/2026/1510.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：在量子算法分析和密码学中，如何高效模拟具有随机群元素或acles访问权限的算法是一个核心挑战。经典方法通过懒惰采样来处理这类问题，而本文旨在提出一种适用于任何闭合子组的量子版本懒惰采样技术。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者定义并分析了一种通用且可解释的路径记录oracle，能够完美模拟任意封闭子组$U(N)$中的随机元素。这种路径记录oracle存储了$t$个输入输出对的叠加态，透明地记录了算法可能从查询中学到的信息。</p>
+<p><strong>达到效果:</strong> 达到的效果：该工作提供了一种新的量子数据结构，使得在理论上可以更清晰地理解并分析具有随机群元素访问权限的量子算法的行为和信息获取情况。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过构建一种路径记录oracle，作者实现了对查询过程的透明记录，并且这种oracle能够适用于任何封闭子组中的随机元素模拟。</p>
+</blockquote>
+<hr />
+<h3>[2026/1511] Unconditional Unclonable Encryption</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Prabhanjan Ananth, Amit Sahai</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1511">论文</a> | <a href="https://eprint.iacr.org/2026/1511.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文提出了首个基于信息论完全安全的一次性私钥不可克隆加密方案，适用于单比特消息的加密与解密。</p>
+<p><strong>主要贡献:</strong> 该研究首次构建了此类加密方案，并证明其具有指数级小的不可克隆区分优势。</p>
+<p><strong>达到效果:</strong> 实验表明，在理想条件下，该方案能够提供无条件的安全性保障。</p>
+<p><strong>技术梗概:</strong> 通过引入新的技术方法，实现了高效的加密与解密过程。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-07-24 19:21</h2>
 <p><em>新增 16 篇论文 (编号 1476--1492)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1483] MQ on my Hardware: Performance Analysis of MQOM on FPGA</h3>
