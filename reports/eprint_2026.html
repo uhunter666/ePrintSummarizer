@@ -79,6 +79,245 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-07-28 08:33</h2>
+<p><em>新增 12 篇论文 (编号 1512--1524)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1512] The McEliece Cryptosystem After Nearly Five Decades: A Survey of Security, Cryptanalysis, and Future Directions</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Shabnam Jafarzade Mojaveri, Adel Khosravi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1512">论文</a> | <a href="https://eprint.iacr.org/2026/1512.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 麦凯尔维密码系统自引入以来近五十年，尽管存在公钥大小和参数安全性等问题，其基于二元Goppa码的核心结构仍能抵抗已知的实际攻击。</p>
+<p><strong>主要贡献:</strong> 文章回顾了该系统的演进，并对五十多年来的各种攻击进行了分类整理，强调了不同攻击之间的区别。</p>
+<p><strong>达到效果:</strong> 研究表明，尽管存在多种攻击和参数更新，Classic McEliece仍然保持其安全性，这反映了其保守的数学基础。</p>
+<p><strong>技术梗概:</strong> 通过将攻击分为通用解码、结构恢复、紧凑变体攻击等类别来系统地分析了该系统的安全性。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1523] Catching Many Traitors in Threshold Traitor Tracing: Lower Bounds and Constructions</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Dan Boneh, Aditi Partap, Mark Zhandry</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1523">论文</a> | <a href="https://eprint.iacr.org/2026/1523.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 传统的$t$-out-of-$n$门限解密方案通过将解密密钥分发给$n$个参与方，使得任何$t$个参与方可以联合解密一个密文，而少于$t$个的参与方则无法获取明文信息。然而，这些传统方案缺乏追踪能力：一个包含$t$或更多参与方的联盟可以通过组合他们的密钥份额构建一个海盗解码器来解密任意有效的密文，而不必担心被追溯。</p>
+<p><strong>主要贡献:</strong> - 该研究提出了门限追踪下界：所有现有追踪技术的密文大小必须足够大以允许接近追踪$t$个参与者。- 研究还提供了上界结果，并探讨了指纹编码在其中的作用。</p>
+<p><strong>达到效果:</strong> 研究表明，要追踪$t-O(1)$个参与者，密文大小至少为$\Omega(t)$；要追踪$a \leq t-\omega(1)$个参与者时，密文大小需按比例缩放至$\Omega(\frac{a-1}{t-a+1})$。对于依赖指纹编码的方案，研究还给出了更强的下界结果。</p>
+<p><strong>技术梗概:</strong> 该研究通过数学证明和理论分析来确定追踪门限下的密文大小限制，并探讨了不同技术在实现这些限制时的有效性。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1524] A Note on Single-Server QPIR from One-Way Functions</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Prabhanjan Ananth, Divyanshu Bhardwaj, Aditya Gulati</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1524">论文</a> | <a href="https://eprint.iacr.org/2026/1524.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：本文探讨了在假设存在后量子单向函数的情况下，如何实现具有多项对数通信量的单服务器量子私有信息检索（QPIR）系统。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者通过结合[Kerenidis-Wolf STOC'03]中的编译技术和[Gilboa-Ishai EUROCRYPT'14]中的分布式点函数，证明了在后量子安全性的假设下可以实现单服务器QPIR。</p>
+<p><strong>达到效果:</strong> 达到的效果：该研究提供了一种基于后量子单向函数的高效单服务器QPIR方案，通信复杂度为多项对数级。</p>
+<p><strong>技术梗概:</strong> 技术梗概：本文的技术核心在于利用编译技术和分布式点函数来构造高效的QPIR协议，并确保其在量子计算环境下的安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1513] STEBR: A Timed-Erasure, Threshold-Gated Backup Ratchet</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Shaurya Pratap Singh</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1513">论文</a> | <a href="https://eprint.iacr.org/2026/1513.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的加密备份通常依赖单一静态密钥，一旦泄露会暴露所有历史数据，缺乏自我恢复机制。</p>
+<p><strong>主要贡献:</strong> STEBR通过引入自毁哈希链、阈值秘密共享和交互式确认门控技术，解决了这一问题。</p>
+<p><strong>达到效果:</strong> 该方案能够在密钥泄露时仅暴露有限的历史记录，并且需要多因素验证才能访问备份数据。</p>
+<p><strong>技术梗概:</strong> STEBR采用自毁哈希链确保密钥泄露的影响范围受限，使用阈值秘密共享增强安全性，通过交互式确认机制防止单点攻击。</p>
+</blockquote>
+<hr />
+<h3>[2026/1514] Distributed Vector Commitments and Their Applications</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Rui Gao, Huaqun Wang, Zhiguo Wan, Yuncong Hu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1514">论文</a> | <a href="https://eprint.iacr.org/2026/1514.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的向量承诺（VC）方案主要用于中心化环境，无法应用于分布式系统，特别是在输入向量分布在多个节点的情况下。</p>
+<p><strong>主要贡献:</strong> 提出了首个适用于分布式系统的向量承诺（DVC）方案HLE-DVC，并解决了在分布式环境中承诺和证明依赖于整个向量的问题。</p>
+<p><strong>达到效果:</strong> HLE-DVC实现了紧凑的证明大小为O(log M)，并允许每个节点在一个通信轮次内生成其所有位置证明，具有较低的通信成本和计算成本。此外，该方案支持批量验证、证明聚合以及高效更新。</p>
+<p><strong>技术梗概:</strong> 通过利用M个节点并行处理长度为N的分布式向量v，其中每个节点持有长度为N/M的子向量来实现上述目标。</p>
+</blockquote>
+<hr />
+<h3>[2026/1515] Exponentially Fewer-Server PIR from Sparser $S$-Decoding Polynomials</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Aparna Gupte, Seyoon Ragavan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1515">论文</a> | <a href="https://eprint.iacr.org/2026/1515.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文研究了如何通过减少服务器数量来实现私有信息检索（PIR），特别是在指数级通信复杂度下的优化。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种新的$s$-server PIR协议，其通信复杂度为$\exp(O((\log n)^{1/s} (\log \log n)^{1-1/s}))$，显著减少了所需的服务器数量。</p>
+<p><strong>达到效果:</strong> 该研究不仅在理论上证明了新协议的有效性，还通过实验证明了其可行性，并使结果在$s \leq 15$时无条件成立。</p>
+<p><strong>技术梗概:</strong> 作者利用匹配向量家族和特殊稀疏的$S$-解码多项式构造方法，解决了先前提出的开放问题，并进一步优化了通信复杂度。</p>
+</blockquote>
+<hr />
+<h3>[2026/1516] Complex-Multiplication Terminals for Supersingular Isogeny Path-Finding</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zheng Tao, Zhi Hu, Yijing Zhang, Changan Zhao</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1516">论文</a> | <a href="https://eprint.iacr.org/2026/1516.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究针对超奇异伊瑟戈尼路径寻找中的子域搜索阶段提出了基于复乘法（CM）的补充停止策略，以解决Delfs-Galbraith/SuperSolver算法中的瓶颈问题。</p>
+<p><strong>主要贡献:</strong> 作者通过引入预计算的CM超奇异顶点集来扩展可识别终端集合，并提出了一种新的停止策略，从而提高了路径寻找效率。</p>
+<p><strong>达到效果:</strong> 该方法在不改变基本搜索复杂度的前提下，显著减少了子域搜索的时间和资源消耗，同时保持了算法的整体性能。</p>
+<p><strong>技术梗概:</strong> 通过构造CM终端表并利用希尔伯特类多项式的根来识别额外的超奇异顶点，从而实现高效的路径寻找。</p>
+</blockquote>
+<hr />
+<h3>[2026/1517] ConvertInput-Free Vector Homomorphic Secret Sharing and Its Applications</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Fan Yang, Fucai Luo, Xingfu Yan, Haining Yang, Zheng Gong, Wing W. Y. Ng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1517">论文</a> | <a href="https://eprint.iacr.org/2026/1517.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究提出了一种基于决策复合残余性（DCR）假设的新颖向量同态秘密共享方案（Vector-HSS），旨在高效执行高维向量计算，同时避免昂贵的ConvertInput操作。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于引入了以向量为中心的计算范式，并通过Chinese Remainder Theorem (CRT)开发了一种批处理机制，支持并行跨多个向量的计算。</p>
+<p><strong>达到效果:</strong> 实验结果表明，该方案在批量内积评估中分别比先前的HSS方案快280倍和70倍。应用于隐私保护图像检索时，实现了亚秒级检索时间，并表现出色。</p>
+<p><strong>技术梗概:</strong> 技术梗概包括向量同态秘密共享的设计、批处理机制以及支持欧几里得/余弦距离计算、比较和矩阵-向量乘法的安全协议模块。</p>
+</blockquote>
+<hr />
+<h3>[2026/1518] Practical Equivalent-Key Recovery in GRAFHEN</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Remi Geraud-Stewart</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1518">论文</a> | <a href="https://eprint.iacr.org/2026/1518.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> GRAFHEN是一种基于群的同态加密提案，其公钥为重写系统，而私钥则为置换表示。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种名为Maverick的等效密钥恢复攻击方法。</p>
+<p><strong>达到效果:</strong> 该攻击成功破解了所有已发布的GRAFHEN挑战实例，并且在推荐参数下重建了一个等效密钥并正确解密了20,000个标签化的密文。</p>
+<p><strong>技术梗概:</strong> Maverick通过将选定的公有重写规则转换为群关系，使用Todd-Coxeter枚举方法重构正则作用，识别置换表示，并利用公共标记加密来校准等效解密器。</p>
+</blockquote>
+<hr />
+<h3>[2026/1519] Classic Full Plaintext Recovery Attacks on Low Round Generalized Feistel Networks</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yubing Zhu, Jianhong Shi, Yunteng Yang, Yonghui Yang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1519">论文</a> | <a href="https://eprint.iacr.org/2026/1519.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：通用分组Feistel网络（GFN）是广泛标准化的块密码的基础，但其对全明文恢复攻击的抵抗力尚未得到充分探索。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者扩展了标准Feistel密码的全明文攻击框架至多分支场景，并针对Type-I和Type-II GFN提出了经典全明文恢复攻击方法。</p>
+<p><strong>达到效果:</strong> 达到的效果：对于Type-I GFN，提出了一种在选择明文攻击（CPA）下的$d+1$次加密查询及在 chosen-ciphertext attack （CCA）下$d$次解密查询的攻击；对于Type-II GFN，在CPA下$3$次加密查询和CCA下$1$次加密加$2$次解密查询的攻击。</p>
+<p><strong>技术梗概:</strong> 技术梗概：所有攻击将轮函数视为黑盒处理，表明弱点在于GFN拓扑而非具体的设计。</p>
+</blockquote>
+<hr />
+<h3>[2026/1520] Quintus: Two-round Good-case Information Theoretic BFT for $n=5f+1$</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Chenyang Liu, Dahlia Malkhi, Kartik Nayak, Nibesh Shrestha</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1520">论文</a> | <a href="https://eprint.iacr.org/2026/1520.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Quintus旨在为$n=5f+1$的多方环境提供信息论意义上的拜占庭容错（BFT）协议，以应对少于$f &lt; n/5$个拜占庭故障。</p>
+<p><strong>主要贡献:</strong> Quintus提出了两种协议：Quintus-Fixed和Quintus-Responsive，分别在固定视图和响应式视图下优化了消息复杂度和延迟。</p>
+<p><strong>达到效果:</strong> Quintus-Fixed实现了在乐观情况下$O(n^2)$的消息复杂度和$2\delta$的时间延迟；而Quintus-Responsive则提供了$2\Delta + 2\delta$的最坏情况视图延迟，并保持了$O(n^2)$的消息效率。</p>
+<p><strong>技术梗概:</strong> Quintus通过在固定视图中使用3$\Delta$时间周期来推进视图，以及在响应式视图中优化消息传递机制，实现了上述性能目标。</p>
+</blockquote>
+<hr />
+<h3>[2026/1522] Efficient Ternary Computation of Optimal Ate Pairing on BLS27 Curves</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Walid Haddaji</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1522">论文</a> | <a href="https://eprint.iacr.org/2026/1522.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在BLS27曲线上计算最优Ate对偶对于实现256位安全级别至关重要，特别是在最近Number Field Sieve及其变体(exTNFS, SexTNFS)进展的背景下。传统的二进制方法未能充分利用(\Fpk{27})的三级扩展塔。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种高效的三进制Miller循环版本，并将种子表示限制为稀疏的三进制数字({0, 1})，以简化点运算并消除昂贵的除法。此外，还生成了两个新的参数种子，分别针对exTNFS和SexTNFS安全级别。</p>
+<p><strong>达到效果:</strong> 与Fouotsa等人(2020)提出的二进制方法相比，在总体最优Ate对偶计算成本上取得了22%的改进。同时，所提SexTNFS种子确保了更高的安全性，能够抵御最先进的NFS变体。</p>
+<p><strong>技术梗概:</strong> 通过限制种子表示为稀疏三进制数字来简化点运算，并在Miller循环中消除昂贵的除法操作；生成两个新的参数种子以适应exTNFS和SexTNFS的安全级别要求。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-07-25 10:27</h2>
 <p><em>新增 17 篇论文 (编号 1493--1511)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1493] Bob DyLean: A Framework for the Symbolic Analysis of Cryptographic Protocols in Lean</h3>
