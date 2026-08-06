@@ -5,6 +5,29 @@
 
 ---
 
+## 更新: 2026-08-06 14:37
+
+*新增 1 篇论文 (编号 1588--1588)*
+
+### [2026/1588] Strided Frobenius Additive FFT and its Application to HQC
+
+- **作者:** Ming-Shing Chen, Tun-You Chien, Chun-Ming Chiu, Cesare Huang, Han-Hsuan Lin, Chun-Tao Peng, Bo-Yin Yang
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1588) | [PDF](https://eprint.iacr.org/2026/1588.pdf)
+
+
+> **研究背景:** HQC密钥封装机制中的布尔多项式乘法是主要的计算瓶颈。
+>
+> **主要贡献:** 作者通过环论视角重新定义FAFFT，提出了SFAFFT，减少了蝶形阶段并使用更稀疏的CRT模数。
+>
+> **达到效果:** SFAFFT在所有测试平台上均优于先前的所有FAFFT实现，并在几乎所有设置下为HQC设定了新的速度记录。
+>
+> **技术梗概:** 通过环同态和中国剩余定理重新框架FAFFT，自然地导出了SFAFFT。
+
+---
+
 ## 更新: 2026-08-04 07:53
 
 *新增 42 篇论文 (编号 1526--1587)*
