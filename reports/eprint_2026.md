@@ -5,6 +5,107 @@
 
 ---
 
+## 更新: 2026-08-11 09:38
+
+*新增 5 篇论文 (编号 1625--1631)*
+
+### [推荐] [2026/1625] AES-Based Grinding for MPC-in-the-Head Signatures
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Matthieu Rivain
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1625) | [PDF](https://eprint.iacr.org/2026/1625.pdf)
+
+
+> **研究背景:** 研究背景：Grinding技术通过在Fiat-Shamir变换中引入工作量证明，使得伪造证明需要更多的计算成本。该技术已在FAEST、MQOM和SDitH三种MPC-in-the-Head签名方案中使用，并且这些方案已进入NIST后量子签名标准的第三轮评审过程。
+>
+> **主要贡献:** 主要贡献：作者提出了基于AES的工作量证明方案，该方案在现代CPU上比Keccak更快，同时与这些方案中的其他组件兼容，进一步完善了Grinding技术的理论框架。
+>
+> **达到效果:** 达到的效果：通过证明，在理想密码和随机预言模型下，攻击者在进行Q_E次密文查询时，成功破解的概率最多为4/3 * ε * Q_E / 2^w（忽略次要项）。此外，作者还提出了一个通用构造方法，每次迭代使用更多次的密文调用，使得常数趋于1。
+>
+> **技术梗概:** 技术梗概：该研究通过定义Grinding方案的形式化概念和协议无关的安全性概念，并提出了一种每轮迭代进行两次密文调用的具体构造方法，证明了其在理想密码和随机预言模型下的安全性。
+
+---
+### [推荐] [2026/1627] Adaptively Secure Threshold Decryption from LWE with Polynomial Modulus
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Yunxin Zhang, Yunxiao Zhou, Shuai Han, Shengli Liu, Xinyi Huang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1627) | [PDF](https://eprint.iacr.org/2026/1627.pdf)
+
+
+> **研究背景:** 现有阈值解密(TD)方案大多仅在静态篡改下实现CPA安全，而实际中更强且更合理的安全性是适应性篡改下的CCA安全。尽管许多基于格的TD方案追求后量子安全，但尚未有同时具备适应性和多项式模数的方案。
+>
+> **主要贡献:** 本文提出了三个基于LWE假设的适应性安全阈值解密方案(TD)，分别为TD0、TD1和TD2，均实现了多项式模数，并分别在异步模型下实现适应性CPA安全以及适应性CCA安全。
+>
+> **达到效果:** 通过这些方案，首次实现了同时具备适应性和多项式模数的后量子安全阈值解密，在实际应用中提供了更强的安全保障。
+>
+> **技术梗概:** 本文采用LWE假设，并结合适当的设置来设计多项式模数下的适应性安全阈值解密方案，确保了在不同同步和异步场景下的安全性。
+
+---
+### [推荐] [2026/1630] Quasipolynomial Cryptanalysis of the  McEliece Cryptosystem (or: PIR Meets McEliece)
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Ashrujit Ghoshal, Yuval Ishai, Aayush Jain, Nuozhou Sun
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1630) | [PDF](https://eprint.iacr.org/2026/1630.pdf)
+
+
+> **研究背景:** McEliece密码系统基于二元Goppa码，被认为是后量子安全的最早期公钥加密方案之一。
+>
+> **主要贡献:** 作者提出了一种简单的经典拟多项式时间区分器，适用于经典的McEliece参数集，并提供了改进的实际攻击估算。
+>
+> **达到效果:** 该算法能够以$n^{{\mathcal O}(\log n)}$的时间复杂度区分McEliece公钥与$\mathbb F_2^{k\times n}$中的均匀分布，并且在NIST过程中考虑的所有参数集中均有效。
+>
+> **技术梗概:** 攻击起源于尝试从代数局部可解码码构建双重高效私有信息检索（PIR）协议的失败，可以从PIR的角度直观解释该算法。
+
+---
+### [2026/1626] Adaptive-Input-Secure Updatable Private Set Union
+
+- **作者:** Seongbong Choi, Jiseung Kim, Hyung Tae Lee
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1626) | [PDF](https://eprint.iacr.org/2026/1626.pdf)
+
+
+> **研究背景:** 现有PSU协议仅在单次运行场景下进行分析，而实际应用中往往需要支持多轮适应输入的动态更新。
+>
+> **主要贡献:** 该研究首次提出了首个半诚实、适应输入安全的可更新PSU协议，并结合了新颖的可更新密钥值存储（uOKVS）和伪随机函数（PRF），以实现高效的安全性。
+>
+> **达到效果:** 实验结果显示，即使在面对适应输入对手的情况下，该协议的泄漏仅限于集合大小和更新数量，且在线每轮运行时间随着参与方数量增加而线性增长。
+>
+> **技术梗概:** 通过设计分布式擦除规则的新颖uOKVS，并结合持久密钥下的伪随机函数（PRF），实现了高效的PSU协议构建。
+
+---
+### [2026/1631] Preprocessed Private Function Evaluation: Achieving Sublinear Online Complexity for Lookup Tables
+
+- **作者:** Tanping Zhou, Xiaoyi Wang, Yi Qu, Wenchao Liu, Long Chen, Zhenfeng Zhang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1631) | [PDF](https://eprint.iacr.org/2026/1631.pdf)
+
+
+> **研究背景:** 私有函数评估(PFE)允许在不泄露函数和输入的情况下安全地计算私有函数，这在隐私保护的医疗系统和信用检查等领域具有重要应用。然而，现有的PFE方案往往效率低下，即使是简单的查找表操作也难以高效处理。
+>
+> **主要贡献:** 提出了一种新的PFE变体——预处理私有函数评估(PPFE)，通过预处理技术显著提高了在线计算效率。该方法特别针对查找表操作进行了优化设计。
+>
+> **达到效果:** 实验结果表明，对于大小为$2^{24}$的查找表，在线查询处理时间仅为3毫秒，相比现有方案性能提升了至少一个数量级，并且具有良好的扩展性。
+>
+> **技术梗概:** 通过引入特定构造来利用预处理技术，PPFE在在线计算阶段实现了亚线性复杂度。
+
+---
+
 ## 更新: 2026-08-07 08:34
 
 *新增 33 篇论文 (编号 1589--1624)*
