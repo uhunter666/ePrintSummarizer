@@ -5,6 +5,199 @@
 
 ---
 
+## 更新: 2026-08-13 08:25
+
+*新增 10 篇论文 (编号 1632--1641)*
+
+### [推荐] [2026/1634] MAYO Lite: a Low-RAM Implementation of the MAYO Signature Scheme
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Sven Bauer, Fabrizio De Santis, Florian Wilde
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1634) | [PDF](https://eprint.iacr.org/2026/1634.pdf)
+
+
+> **研究背景:** MAYO是一种基于不平衡油醋(UOV)构造的签名方案，是NIST标准制定过程中的后量子签名方案候选者之一。
+>
+> **主要贡献:** 作者提出了一种内存优化的纯C语言实现方法，显著减少了RAM使用量，并通过特定的设计选择提高了运行效率。
+>
+> **达到效果:** 该实现使得MAYO签名验证能够在智能卡和小型微控制器上运行，这些设备通常只有少量的RAM可用。
+>
+> **技术梗概:** 技术上，作者通过按需展开公钥向量、重新排列矩阵乘积SPS的计算顺序以及直接将每个P-向量的预计算倍数添加到结果中来减少内存使用。
+
+---
+### [推荐] [2026/1636] How to use Polynomially-Hard iO: Turing Machine Obfuscation and More
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Jesko Dujmovic, Yao-Ching Hsieh, Abhishek Jain, Willy Quach
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1636) | [PDF](https://eprint.iacr.org/2026/1636.pdf)
+
+
+> **研究背景:** 本文重新审视了Cook理论PV中基于多项式难的iO方案（PViO）的概念，该方案用于具有未绑定输入长度的图灵机，并保证对于可证明等价的一对机器的安全性。
+>
+> **主要贡献:** 作者首次提出了基于多项式难的iO和标准假设构建PViO的方法，并进一步展示了如何用EFiO替换iO，从而获得基于可验证假设的构造。
+>
+> **达到效果:** 通过新的编程技术改进了已有的穿孔编程方法，实现了对整个输入域的一次性编程，而非逐个输入。这种方法使得在两个应用中去除了复杂性杠杆的作用：无等级全同态加密和自适应安全简洁非交互式论证。
+>
+> **技术梗概:** 本文的关键贡献在于对穿孔编程技术的新颖应用，并引入了函数秘密共享的概念以支持这一创新方法。
+
+---
+### [推荐] [2026/1638] Anamorphic Messaging: Analyzing the Double Ratchet, Triple Ratchet, PQ3, and MLS
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Hien Chu, Alessandro Corsi, Paul Rösler
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1638) | [PDF](https://eprint.iacr.org/2026/1638.pdf)
+
+
+> **研究背景:** 该研究针对独裁者允许使用加密但要求用户公开其密钥的情况，提出了通过在现有协议的随机非易失性中隐藏秘密消息的方法。
+>
+> **主要贡献:** 作者首次利用了通信协议的状态特性，引入连续更新的双重状态，从而实现了前向安全性。
+>
+> **达到效果:** 研究在Signal的双链节算法、Triple Ratchet、PQ3以及MLS的两方核心中发现了隐藏信息的位置，并证明了即使敌手获取所有流量和部分密钥材料，也无法检测到隐蔽消息的存在。
+>
+> **技术梗概:** 通过形式化定义并覆盖鲁棒性和真实性，在新的模型下分析了四个主要的消息协议，并识别出其中的信息隐藏点。
+
+---
+### [推荐] [2026/1639] LUNA+: More Succinct Post-Quantum ZK-SNARKs from Computational Privacy
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Yuki Kume, Ron Steinfeld, Amin Sakzad, Mert Yassi
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1639) | [PDF](https://eprint.iacr.org/2026/1639.pdf)
+
+
+> **研究背景:** 研究背景：LUNA+是对LUNA方案的改进，旨在通过新的隐私分析方法提高零知识简洁论证系统的实用性，特别是在后量子安全方面。
+>
+> **主要贡献:** 主要贡献在于提出了一种基于计算硬性的新隐私分析方法，替代了原有的统计隐私分析，从而减少了噪声并优化了参数设置。
+>
+> **达到效果:** 达到的效果是实现了更短的证明长度和更小的证明及公共参考字符串大小，同时保持了安全性。
+>
+> **技术梗概:** 技术梗概：通过将电路隐私的安全性基于计算硬性的MH-MLWE问题，并引入Coset Error Knapsack MH-MLWE新问题来优化参数设置。
+
+---
+### [2026/1632] Counters and Nonces for Mitigating Ciphertext Side Channels
+
+- **作者:** Moritz Peters, Jens Alich, Ashwin Jha, Gregor Leander, Yuval Yarom, Tim Güneysu
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1632) | [PDF](https://eprint.iacr.org/2026/1632.pdf)
+
+
+> **研究背景:** 研究背景：近期工作揭示了确定性内存加密（如AMD SEV）的安全隐患，攻击者可通过观察内存内容的变化来泄露敏感信息。现有的缓解措施范围有限且未解决根本问题。
+>
+> **主要贡献:** 主要贡献：提出了一种高效的方法，通过复用ECC内存区域存储随机非ces或计数器，以减少获取新鲜度的开销。
+>
+> **达到效果:** 达到的效果：实现了较低的整体性能开销（约2%），同时提供了良好的安全保证，并展示了如何集成内存完整性和标记机制。
+>
+> **技术梗概:** 技术梗概：通过在ECC内存中存储随机非ces或计数器，减少每次内存访问时获取新鲜度的开销，从而提高效率并减轻性能影响。
+
+---
+### [2026/1633] Rotational-Quasidifferential Framework - A Geometric Approach to Rotational-XOR Cryptanalysis
+
+- **作者:** Myungkyu Lee, Byoungjin Seok, Dongjae Lee, Deukjo Hong, Jaechul Sung, Seokhie Hong
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1633) | [PDF](https://eprint.iacr.org/2026/1633.pdf)
+
+
+> **研究背景:** 旋转-XOR (RX) 演化分析扩展了旋转分析，通过结合旋转关系和XOR变换来分析对称密钥原语，即使存在破坏对称性的常数也能进行分析。然而，现有方法在估计特征概率时通常依赖独立性假设，这可能导致不准确的概率评估甚至特征不兼容。
+>
+> **主要贡献:** 本文首次将几何方法应用于RX演化分析，并基于Beyne和Rijmen的拟微分框架开发了RX特征的代数表示，建立了固定密钥RX特征概率的确切公式。
+>
+> **达到效果:** 通过该框架，无需依赖轮独立性假设即可分析RX特征。实验验证了SIMON和SIMECK等AND-RX原语中理论预测的有效性，并重新审视了SIMECK48/96和SIMECK64/128的不兼容RX特性。
+>
+> **技术梗概:** 通过将密钥调度纳入状态空间，本文进一步推导出了预期旋转-XOR概率 (ERXP) 的确切表达式，这是RX特征的概率度量。
+
+---
+### [2026/1635] Limber: Low Overhead SNARKs for Integers from Any PCS
+
+- **作者:** Jessica Chen, Lucas Xia, Wilson Nguyen, Benedikt Bünz
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1635) | [PDF](https://eprint.iacr.org/2026/1635.pdf)
+
+
+> **研究背景:** 非原生算术是SNARK设计中的一个关键瓶颈，会导致大量开销，并迫使应用设计师通过使用非标准的、友好的哈希函数或其他方法（如椭圆曲线周期）来避免。此外，非原生电路算术化还会导致实现错误。
+>
+> **主要贡献:** 我们提出了Limber，这是一种具有最小开销的SNARK方案，能够通用处理非原生算术，并且可以与任何标准字段多项式承诺方案结合使用。
+>
+> **达到效果:** 通过Limber和PIOP的结合，我们的方案达到了接近线性的验证时间和常数级别的乘法承诺开销，展示了其实用性。
+>
+> **技术梗概:** Limber的核心技术在于通过指纹化方法将整数关系转化为随机素域上的等价关系，并且在PCS设置完成后再选择随机素数以保证安全性和有效性。
+
+---
+### [2026/1637] Multi-Diagonal Truncated Differentials and Ciphertext-Only Attacks on Reduced-Round AES
+
+- **作者:** Orhun Kara, Can Balıkçı
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1637) | [PDF](https://eprint.iacr.org/2026/1637.pdf)
+
+
+> **研究背景:** 该研究针对AES进行了首次仅密文攻击，并扩展了5轮和6轮AES的攻击范围，特别是在ASCII编码英文明文分布下的攻击效果。
+>
+> **主要贡献:** 作者提出了一种新的分析框架，用于估计5轮AES中截断差分概率，填补了该领域在多活跃对角线配置方面的空白。
+>
+> **达到效果:** 研究实现了针对5轮AES的区分攻击，并且能够在所有密钥长度下对6轮AES进行密钥恢复攻击，特别是在ASCII编码英文明文分布下的效果显著。
+>
+> **技术梗概:** 通过结合精确计算MDS级过渡概率和系统枚举截断差分特征类，作者能够结构化地聚合概率贡献，从而覆盖单活跃对角线明文和任意被动逆对角线密文等多种配置。
+
+---
+### [2026/1640] Qlapoti+ and More: Optimizing Isogeny-based Signatures
+
+- **作者:** Yi-Fu Lai
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1640) | [PDF](https://eprint.iacr.org/2026/1640.pdf)
+
+
+> **研究背景:** 本文针对Asiacrypt'25中的Qlapoti理想寻找程序进行优化，以提升现代基于曲率的签名方案性能。
+>
+> **主要贡献:** 作者提出了一系列改进措施，应用于NIST Round-2 SQIsign实现，并扩展至JoC上的PRISM实现。
+>
+> **达到效果:** 这些优化显著提升了密钥生成和签名的速度，在不同安全级别下分别提高了1.17到2.05倍不等。
+>
+> **技术梗概:** 技术上涉及了针对Broadwell基准的特定优化策略，包括算法重构与参数调整。
+
+---
+### [2026/1641] Design and Analysis of Four-State Quantum Public-Key Encryption Scheme
+
+- **作者:** Rahul Kumar, Vikas Srivastava
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1641) | [PDF](https://eprint.iacr.org/2026/1641.pdf)
+
+
+> **研究背景:** 量子公钥加密（QPKE）是抵御量子对手的通信安全的重要方向。
+>
+> **主要贡献:** 作者分析了Liu等人提出的四态QPKE方案，并提出了一种新的简单量子公钥加密方案$\mathsf{sQPKE}$。
+>
+> **达到效果:** 通过证明正确性、分析安全性并使用Qiskit进行实现和资源估算，该研究显著提升了QPKE的安全性。
+>
+> **技术梗概:** 作者利用XOR、计算基测量等基本操作设计了$\mathsf{sQPKE}$方案，并对其进行了安全性和有效性验证。
+
+---
+
 ## 更新: 2026-08-11 09:38
 
 *新增 5 篇论文 (编号 1625--1631)*
