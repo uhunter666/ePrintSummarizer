@@ -5,6 +5,241 @@
 
 ---
 
+## 更新: 2026-08-19 06:12
+
+*新增 12 篇论文 (编号 1707--1718)*
+
+### [推荐] [2026/1710] Auditable Continuous Group Key Agreement
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Easwar Vivek Mangipudi, Maddie Gorman, Sasha Levinshteyn
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1710) | [PDF](https://eprint.iacr.org/2026/1710.pdf)
+
+
+> **研究背景:** Continuous Group Key Agreement (CGKA)是MLS协议的核心，用于管理大规模的端到端加密群聊中的密钥。然而现有方案缺乏审计机制，导致监管严格的行业无法使用纯加密解决方案。
+>
+> **主要贡献:** 我们提出了可审计连续组密钥协商（Au-CGKA），该协议在每个确认的时期包含一个证明，确保每个成员都能验证其密钥材料是否可通过阈值审计委员会恢复。
+>
+> **达到效果:** 通过引入这种机制，Au-CGKA实现了在MLS框架下的后量子安全协议Π_A，使用STARK证明来绑定每个时期的密钥材料与可由审计委员会恢复的秘密。
+>
+> **技术梗概:** 我们设计的方案中，提交者将时期秘密托管给审计委员会，并以STARK友好的方式加密Shamir份额，确保其在MLS提交时电路内验证的有效性。
+
+---
+### [推荐] [2026/1711] A Descent to Hades: Attacks on PKP and PEP over Extension Fields
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Alessandro Budroni, Jesús-Javier Chi-Domínguez, Jorge Chavez-Saab, Andre Esser
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1711) | [PDF](https://eprint.iacr.org/2026/1711.pdf)
+
+
+> **研究背景:** 研究背景：Permutation Code Equivalence Problem (PEP) 和 Permuted Kernel Problem (PKP) 是用于构建后量子数字签名方案的两个著名计算问题。尽管传统上在素域中分析，但最近的研究如PERK和SETH等建议使用扩展域以提高效率和紧凑性。
+>
+> **主要贡献:** 主要贡献：作者通过利用到结构化Regular Syndrome Decoding Problem (RSD) 的约简，揭示了PKP和PEP的新多项式时间参数范围，并提出了一种将广义PEP实例归约为图同构问题的方法，从而提供了解决这些实例的多项式时间算法。
+>
+> **达到效果:** 达到的效果：研究结果否定了在大多数情况下使用扩展域中的PEP的安全性，并为扩展域中PKP的安全性提供了新的见解。
+>
+> **技术梗概:** 技术梗概：通过利用到RSD的约简，作者开发了针对PKP衍生实例的新算法，并改进了现有最佳方法；还提出了一种将PEP实例归约为图同构问题的方法。
+
+---
+### [推荐] [2026/1712] Statistical Inference from Noisy Randomness Leakage for ML-DSA Attacks
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Niklas Paskarbeit, Carsten Schubert, Marian Margraf, Jean-Pierre Seifert
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1712) | [PDF](https://eprint.iacr.org/2026/1712.pdf)
+
+
+> **研究背景:** 研究背景：ML-DSA是一种基于拒绝采样的NIST后量子签名标准，其安全性依赖于泄露的签名与秘密密钥无关。然而，Liu等人和Damm等人的研究表明，每次签名中随机掩码泄露一个比特即可破坏这一假设，使得攻击者能够从所谓的信息关系中恢复子密钥。
+>
+> **主要贡献:** 主要贡献：作者提出了一种基于二分混合模型的方法来估计比特错误率，并证明了该方法在低泄漏率下仍能有效工作。此外，还提供了一个噪声估算器以适应不对称情况。
+>
+> **达到效果:** 达到的效果：通过这种方法，攻击者可以在较低的泄漏指数下（如ML-DSA-44和ML-DSA-87为4，ML-DSA-65为5）进行攻击，并且在中等数量的信息关系下（约25,000个），即使在低泄漏率情况下也能获得可接受的精度。
+>
+> **技术梗概:** 技术梗概：作者利用$ j $-独立性变换后从干净比特和翻转比特提取值是绝对值互补的特点，推导出一个适用于所有泄漏情况的两组分混合模型，并据此开发了一种仅需现有攻击收集的信息关系的方法来估计比特错误率。
+
+---
+### [推荐] [2026/1713] Exposing SIMD Parallelism in SQIsign: An AVX-512 Implementation
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Weize Wang, Chutong Wang, Yu Wu, Qifan Xue, Jieyu Zheng, Yunlei Zhao
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1713) | [PDF](https://eprint.iacr.org/2026/1713.pdf)
+
+
+> **研究背景:** 现代基于isogeny的密码系统在有限域、椭圆曲线和更高维度的isogeny算术中花费了大量时间，但利用这些计算中的SIMD并行性并不容易。
+>
+> **主要贡献:** 作者通过重新组织高阶原语的算术依赖图，而非单独矢量化字段乘法，展示了如何在SQIsign中恢复显著的SIMD并行性。
+>
+> **达到效果:** 该实现针对NIST安全级别I的关键生成、签名和验证分别实现了1.76倍、1.71倍和3.18倍的速度提升；结合Qlapoti后，关键生成和签名速度进一步提高至2.90倍和2.69倍。
+>
+> **技术梗概:** 技术上包括项目xDBLADD调度的蒙哥马利梯度，批量点加倍在多种坐标系统中，矢量化双标量梯度，融合立方算术配对步骤以及批量一维和二维isogeny评估。
+
+---
+### [推荐] [2026/1715] How Compact Can NTRU Encryption Be? Heuristic Frontiers and Practical Schemes
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Yijian Liu, Yu Zhang, Xianhui Lu, Yao Cheng, Yongjian Yin
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1715) | [PDF](https://eprint.iacr.org/2026/1715.pdf)
+
+
+> **研究背景:** NTRU作为一种经过长期测试的基于格的公钥加密家族，被认为是(R/M)-LWE的一种紧凑替代方案。尽管已有多年研究，其紧凑性潜力仍待进一步探索。
+>
+> **主要贡献:** 作者提出了一种统一的方法来量化紧凑性和效率之间的关系，并引入了Free Candidate Localization (FCL) 方法以优化NTRU的解密过程。
+>
+> **达到效果:** 通过这种方法和FCL的应用，研究人员在ML-KEM中实现了10%更小的密文大小，尽管整体运行时间略有增加。
+>
+> **技术梗概:** 研究采用了两阶段解密框架，并结合了编码技术和陷阱门技术来优化NTRU的实现。
+
+---
+### [推荐] [2026/1716] Silent Threshold Encryption from Lattices
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Jeffrey Champion, David J. Wu, Shota Yamada
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1716) | [PDF](https://eprint.iacr.org/2026/1716.pdf)
+
+
+> **研究背景:** 研究背景：沉默门限加密是一种扩展的门限加密，其公共密钥是用户个体公钥的确定性函数。现有构造通常依赖于双线性映射或使用如见证加密和不可区分混淆等重型工具。
+>
+> **主要贡献:** 主要贡献：作者提出了一种基于分解学习误差（DLWE）假设的沉默门限加密方案，使得单比特加密的密文大小为$\tilde{O}(T) + \mathsf{poly}(\lambda, \log N)$，其中$N$是用户总数，$T$是门限值，$\lambda$是安全参数。
+>
+> **达到效果:** 达到的效果：该方案在所有$T = N^\varepsilon$（任何常数$\varepsilon < 1$）的门限时实现了非平凡的简洁性，并且可以扩展到任何单调策略族中具有简洁秘密共享方案的策略；在这种情况下，密文大小与最多被破坏份额的最大数量成比例。
+>
+> **技术梗概:** 技术梗概：核心构建块是一种新的有界合谋注册功能加密（FE）方案，具有简洁的密文。
+
+---
+### [推荐] [2026/1718] On Post-Quantum Multi-Key Security of GCM
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Akinori Hosoyamada
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1718) | [PDF](https://eprint.iacr.org/2026/1718.pdf)
+
+
+> **研究背景:** 文章研究了Galois/Counter Mode（GCM）在量子理想密码模型中的后量子多密钥安全性，特别是在实际应用中广泛使用的加密系统通常基于多个独立密钥的背景下。
+>
+> **主要贡献:** 作者证明，在某些额外损失项的前提下，可以将安全度量从线性关系改进为平方根级别的关系，从而显著提高了GCM的安全性边界。
+>
+> **达到效果:** 当最大重复nonce的数量远小于密钥数量时，新的安全性界限优于传统的多密钥界限，特别是在后量子计算环境中更为明显。
+>
+> **技术梗概:** 研究采用了量子理想密码模型来分析GCM的安全性，并通过引入额外的损失项来改进安全度量。
+
+---
+### [2026/1707] Quantum Resource Optimization for CSIDH
+
+- **作者:** Yan Huang, Yongjie Li, Xiuyu Qiu, Zijian Zhou, Fangguo Zhang, Chao Chen, Wei Yu
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1707) | [PDF](https://eprint.iacr.org/2026/1707.pdf)
+
+
+> **研究背景:** 针对CSIDH的量子资源优化研究一直是活跃的研究领域，Peikert在Eurocrypt 2020提出了三个关于优化相应量子资源的问题。
+>
+> **主要贡献:** 本文主要解决了前两个问题：优化理想类群中的量子资源以及选择压缩基数，并通过减少T门复杂性实现了显著改进。
+>
+> **达到效果:** 对于CSIDH-512，将类群操作的T门复杂度从$2^{52.6}$降低到$2^{51.7}$；在四路置换构造模型下，选择了最优压缩基数$r = 4$以优化经典和量子资源。
+>
+> **技术梗概:** 通过引入Peikert提出的隐藏位移量子算法，实现了至少85%的T门减少，并详细分析了不同压缩基数下的经典与量子资源配置。
+
+---
+### [2026/1708] Prepared Episodes for Short Online Hash Based Signatures
+
+- **作者:** Chongxu Ren, Kaiyi Zhang, Haorui Cui, Hongbo Yu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1708) | [PDF](https://eprint.iacr.org/2026/1708.pdf)
+
+
+> **研究背景:** SPHINCS+虽然提供了无状态签名和自我包含验证，但其签名大小较大，每次消息都需要携带一个完整的WOTS+/Merkle认证链。
+>
+> **主要贡献:** 提出了准备期签名的概念，并具体实例化为SPHINCS-PE，通过预先计算上层树来减少签名的大小。
+>
+> **达到效果:** 与匹配的FIPS 205 SLH-DSA配置文件相比，SPHINCS-PE在短配置文件中将完整签名尺寸减少了3%到12%，在快速配置文件中减少了25%到40%；在线签名尺寸也相应减小。
+>
+> **技术梗概:** 通过预先计算上层树并使用较少的、较高的层数来减少WOTS+块的数量，从而实现更小的签名大小。
+
+---
+### [2026/1709] Ring Signatures with Personalized Anonymity
+
+- **作者:** Kyosuke Yamashita, Keisuke Hara
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1709) | [PDF](https://eprint.iacr.org/2026/1709.pdf)
+
+
+> **研究背景:** 传统的环签名在保持匿名性和可追溯性之间存在挑战，现有扩展通常对所有潜在签署者应用统一的规则。
+>
+> **主要贡献:** 本文提出了一种新型的个性化匿名环签名（PARS），允许不同角色或权限的用户获得不同的匿名权利。
+>
+> **达到效果:** 该方案通过引入组管理员进行密钥发放，并确保签署者在签署时可自由选择环，同时满足组织治理中成员与权威用户的双重需求。
+>
+> **技术梗概:** 作者提供了一种基于标准密码学原语（如数字签名、一次性签名、公钥加密和非交互式零知识证明）的通用构造方法。
+
+---
+### [2026/1714] Rigorous Statements and Proofs of the Lemmas in Simon's Algorithm for the Dihedral Coset Problem and Their Underlying Hypothesis
+
+- **作者:** Yuchen Guo, Shuo Yang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1714) | [PDF](https://eprint.iacr.org/2026/1714.pdf)
+
+
+> **研究背景:** 本文旨在对Simon算法中关于二面体共轭问题的四个引理进行严谨表述和证明，特别是针对前三个仅提供草图证明的引理。
+>
+> **主要贡献:** 作者为这三个引理提供了明确陈述并给出了完整证明，修正了原论文中的假设，并完善了相关推导过程。
+>
+> **达到效果:** 通过严格的数学证明，作者确认了Simon算法在二面体共轭问题上的正确性，但指出算法的正确性依赖于一个未验证的假设。
+>
+> **技术梗概:** 使用精确的二次矩计算和解析恒等式进行证明，并对球入盒模型中的协方差进行了精确计算。
+
+---
+### [2026/1717] Verifiable Compression of Images
+
+- **作者:** Yue Zhang, Mingxun Zhou, Benedikt Bünz
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1717) | [PDF](https://eprint.iacr.org/2026/1717.pdf)
+
+
+> **研究背景:** AI图像生成导致了图像误传的问题，而现有的C2PA标准通过数字签名来验证图像的来源。然而，实际中发布的通常是经过压缩的图片，这使得原有的签名无效。
+>
+> **主要贡献:** 作者提出了SPEG系统，这是首个能够在个人设备上支持完整图像传输管道的有效证明系统，并且能够支持JPEG压缩的同时验证原始图像上的C2PA签名。
+>
+> **达到效果:** 通过SPEG系统，实现了在保持通信效率的同时验证图像的完整性和来源，增强了图像的安全性与可信度。
+>
+> **技术梗概:** 该系统采用了两种协议来支持JPEG压缩：一种兼容任意哈希算法（使用Poseidon提高效率），另一种则牺牲速度要求C2PA使用多项式承诺机制。
+
+---
+
 ## 更新: 2026-08-18 20:25
 
 *新增 5 篇论文 (编号 1702--1706)*
