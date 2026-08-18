@@ -5,6 +5,105 @@
 
 ---
 
+## 更新: 2026-08-18 20:25
+
+*新增 5 篇论文 (编号 1702--1706)*
+
+### [推荐] [2026/1703] Post-Quantum TLS Migration: A Systematization of Hybrid Handshakes, PSKs, KeyUpdate, and Certificate Strategies
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Hridoy Roy
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1703) | [PDF](https://eprint.iacr.org/2026/1703.pdf)
+
+
+> **研究背景:** 本文探讨了在TLS协议中引入后量子密码学（PQC）的系统化方法，指出传统的替换密钥交换算法的方法过于简化，忽略了TLS协议中多个安全功能的不同需求和约束。
+>
+> **主要贡献:** 作者通过构建一个功能性框架，对混合握手、PSK模式、KeyUpdate机制、ML-KEM、ML-DSA与SLH-DSA、认证策略、X.509/PKIX迁移及信任锚点迁移等进行了系统化分析，并分类证据以明确其机制、安全目标等特性。
+>
+> **达到效果:** 研究得出了四个分析结论，包括保密性迁移和认证性的具体实现路径，为后量子TLS的迁移提供了全面的技术指导。
+>
+> **技术梗概:** 通过构建功能性框架并分类证据，作者详细探讨了后量子TLS迁移中的各种技术和策略，并明确区分了标准化标准与正在发展的草案及实施特定证据。
+
+---
+### [推荐] [2026/1705] New Attacks on Mersenne Number-Based Cryptosystems: Relaxing Size Constraints
+
+- **匹配关键字:** lattice
+
+- **作者:** Mengce Zheng, Abderrahmane Nitaj
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1705) | [PDF](https://eprint.iacr.org/2026/1705.pdf)
+
+
+> **研究背景:** 2017年，Aggarwal等人提出了基于梅森数的AJPS加密系统，该系统被认为对量子攻击具有抵抗力。然而，本文重新审视了其安全性，并提出了一种新的攻击方法。
+>
+> **主要贡献:** 作者通过结合连续分数方法和格基求解策略，针对模多项式方程设计了新颖的攻击手段，从而放宽了未知私钥大小的限制条件。
+>
+> **达到效果:** 实验结果表明，该方法不仅消除了对未知数上界估计的需求，还扩大了脆弱弱密钥的攻击范围，并在非平衡参数设置下提高了成功概率。
+>
+> **技术梗概:** 本文采用连续分数方法和格基求解策略来解决模多项式方程，而不是直接使用格约简算法。
+
+---
+### [2026/1702] Parallel Repetition for Entangled Games with Gap Exponent Three
+
+- **作者:** Zhao Song
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1702) | [PDF](https://eprint.iacr.org/2026/1702.pdf)
+
+
+> **研究背景:** 研究提出了一个关于纠缠游戏中并行重复的定理，改进了之前对于间隙依赖性的理解。
+>
+> **主要贡献:** 贡献在于证明了一个新的并行重复结果，将之前的十三次幂差距降低到三次幂，并与经典霍伦斯坦的一般界限相匹配。
+>
+> **达到效果:** 结果是证明了纠缠游戏中并行重复的指数衰减速度为$\exp(-\Omega(\frac{\epsilon^3}{\epsilon+ \ell }n))$，显著提高了理论上的效率和精度。
+>
+> **技术梗概:** 技术上采用了平滑软标签代替量子相关采样中的随机偏移对数网格，减少了状态描述之间的距离平方误差，并避免了平均问题时的詹森损失。
+
+---
+### [2026/1704] A decrementally-improved algorithm for Boolean MQ
+
+- **作者:** Charles Bouillaguet, Julia Sauvage
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1704) | [PDF](https://eprint.iacr.org/2026/1704.pdf)
+
+
+> **研究背景:** MQOM签名方案是NIST额外签名竞赛的第三轮候选者，基于MPC-in-the-Head范式，并依赖于MQ问题的难度。尽管大字段上的MQ在过去十年相对稳定，但布尔MQ领域取得了显著进展。
+>
+> **主要贡献:** 本文提出了一种新的算法，结合了Lokshtanov等人的多项式方法和Dinur的第二算法，实现了对MQOM参数性能1-4位的小幅改进。
+>
+> **达到效果:** 该算法能够利用解验证Oracle解决PGOW-MQ问题，提高了安全性。
+>
+> **技术梗概:** 该算法采用了一种混合策略，结合了多项式方法和Dinur的第二算法，并通过移除部分机制实现了性能的小幅度提升。
+
+---
+### [2026/1706] Comment on ‘Quantum public key encryption scheme with four states key’
+
+- **作者:** Nithik R
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1706) | [PDF](https://eprint.iacr.org/2026/1706.pdf)
+
+
+> **研究背景:** 该论文针对Liu等人提出的基于四态公钥的量子公开密钥加密方案进行评论，指出其宣称的信息论安全性存在缺陷。
+>
+> **主要贡献:** 作者通过数学推导证明了该方案的加密映射特性，并揭示了其实现机制与信息论安全性的矛盾。
+>
+> **达到效果:** 研究表明，尽管明文在密文中以计算基分布再现，但明文0和1状态可以被完美区分，因此不能实现信息论安全性。
+>
+> **技术梗概:** 作者使用量子门操作和测量理论分析了该方案，并通过概率幅的变换展示了其缺陷。
+
+---
+
 ## 更新: 2026-08-17 07:20
 
 *新增 50 篇论文 (编号 1647--1701)*
