@@ -79,6 +79,934 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-08-24 07:51</h2>
+<p><em>新增 47 篇论文 (编号 1724--1772)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1730] New Techniques for Fast and Shallow FHE Bootstrapping and Beyond</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Aayush Jain, Huijia Lin, Zeyu Liu, Sagnik Saha</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1730">论文</a> | <a href="https://eprint.iacr.org/2026/1730.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 全同态加密(FHE)的瓶颈在于其解密刷新(bootstrapping)步骤的高延迟和成本，这限制了其在实际应用中的可行性。</p>
+<p><strong>主要贡献:</strong> 作者提出了两种创新方法：一种是利用稀疏小范数LWE秘密假设减少算术复杂度；另一种是引入新的RLWE变体，通过无重新线性化乘法技术显著降低电路深度。</p>
+<p><strong>达到效果:</strong> 这些新方法在实际参数设置中实现了4.5至7.5倍的门级和功能解密加速，并将FHEW/TFHE的解密刷新所需的NTT/INTT层从超过500减少到仅3层。</p>
+<p><strong>技术梗概:</strong> 通过优化LWE秘密假设和设计新的RLWE变体，作者减少了全同态加密中解密刷新步骤的计算复杂度和电路深度。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1734] Key Recovery from Residue-Confined Errors in the Pradhan CRT-RLWE Construction</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Lukasz Olejnik, Bartosz Naskrecki</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1734">论文</a> | <a href="https://eprint.iacr.org/2026/1734.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究揭示了Pradhan等人的CRT-FHE方案在假设的误差分布范围内存在安全漏洞，特别是在处理特定类型的错误时。</p>
+<p><strong>主要贡献:</strong> 作者证明了当公钥乘数为单位时，可以通过单次环逆运算从公钥恢复秘密密钥，并且可以在没有密钥的情况下从任意密文恢复明文，从而获得选择明文攻击的优势。</p>
+<p><strong>达到效果:</strong> 研究结果表明，普通Ring-LWE到CRT-RLWE的转换并未保持误差分布的一致性，这使得CRT-RLWE的安全性不能保证至少与Ring-LWE相当。</p>
+<p><strong>技术梗概:</strong> 通过分析中国剩余定理（CRT）函数在特定模数下的行为，揭示了误差被限制在一个子空间内的机制，从而破坏了原有的安全假设。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1735] Adapting AES-Oriented Optimizations to Rijndael-256: Cortex-M4, ARMv8-A, and CUDA</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Siwoo Eum, Minho Song, Minjoo Sim, Anupam Chattopadhyay, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1735">论文</a> | <a href="https://eprint.iacr.org/2026/1735.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Rijndael-256 (R256)作为AES的256位块变体，在NIST标准讨论和后量子签名候选方案中具有实际意义，其独特的状态布局和非标准ShiftRows偏移挑战了现有AES优化方法的有效性。</p>
+<p><strong>主要贡献:</strong> 研究提出了针对Cortex-M4、AArch64和CUDA平台的具体适应策略，分别为更宽的经典位切片、重用与重新排列以及错配的摊销。</p>
+<p><strong>达到效果:</strong> 实现了在Cortex-M4上具有秘密无关控制流和内存访问模式的位切片实现（每块4,962周期），AArch64预混洗设计可达到最高6.52 GB/s，CUDA共享内存T表实现达到了81.16 GiB/s；通过在四个NIST PQC参考代码库中替换R256核心实现了签名加速1.18倍至114.3倍和验证最多155.6倍。</p>
+<p><strong>技术梗概:</strong> 针对不同平台，分别采用更宽的经典位切片、重用与重新排列以及错配的摊销等策略进行优化。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1736] Copy-Protection with Correlated Challenges: Point Functions and More via Decisional Coset Monogamy</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Amit Behera, Alper Çakan, Vipul Goyal</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1736">论文</a> | <a href="https://eprint.iacr.org/2026/1736.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：论文致力于解决量子信息在密码学中的一项主要应用——版权保护问题，特别是在面对两个同时使用同一挑战的对手时的安全性。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于提出了一个新的安全概念——相关挑战安全性，并证明了其等价于所有先前的安全定义，包括相同的挑战安全性。</p>
+<p><strong>达到效果:</strong> 达到的效果是首次在无假设模型中实现了具有相同挑战的安全单解密者加密，并为点函数的版权保护提供了解决方案。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过引入相关挑战安全性和假设不可区分混淆（iO）和单向函数，证明了其在版权保护中的应用。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1738] Noisy Subset Product</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Trey Li</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1738">论文</a> | <a href="https://eprint.iacr.org/2026/1738.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：该论文延续了对子集乘积问题的研究，这是一个自1978年以来就已知的NP完全问题。本文在前人工作的基础上，探讨了一个带噪声的模运算变体，并将其应用于构建后量子非交替密钥交换方案。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者证明了几种相关变体之间的等价关系，并基于此提出了一个无需额外校正明文的后量子非交替密钥交换方案，直接将安全性归约到噪声子集乘积问题的搜索版本上。</p>
+<p><strong>达到效果:</strong> 达到的效果：该方案提供了一种自然的一方解释作为密钥封装机制的新方法，并且不依赖于其他基于噪声的方案如格基方案中所需的额外校正明文。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过引入一个抽象框架，作者系统地研究了未知系数多元指数系统的难度问题，并将其应用于具体设置中的带噪声子集乘积问题，从而构建了一个后量子非交替密钥交换方案。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1743] Notes on Short-Limb Modular Multiplication Techniques: Barrett, Montgomery, Plantard, and the Explicit CRT</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Bo-Yin Yang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1743">论文</a> | <a href="https://eprint.iacr.org/2026/1743.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该论文总结了在实施基于格的密码学中使用的短模数位大小的模乘技术，包括Barrett、Montgomery和Plantard方法及其变体。</p>
+<p><strong>主要贡献:</strong> 作者整理并详细分析了这些技术的具体实现细节，涵盖了误差范围、正确性和规范性等关键方面。</p>
+<p><strong>达到效果:</strong> 通过详细的数值验证和随机搜索，确保了所有给出的常数和范围的准确性，并纠正了一些传播的错误。</p>
+<p><strong>技术梗概:</strong> 论文采用了压缩形式，详细描述了Barrett、Montgomery和Plantard算法及其变体的技术细节。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1750] Threshold Lattice-Based Zero-Knowledge Proofs</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Scott Griffy, Victor Youdom Kemmoe, Ngoc Khanh Nguyen, Tjerand Silde</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1750">论文</a> | <a href="https://eprint.iacr.org/2026/1750.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的基于格的零知识证明虽然已足够高效，但所有已知构造中单一证明者持有全部见证信息，成为系统单点故障。</p>
+<p><strong>主要贡献:</strong> 本文首次构建了适用于精确关系的基于格的阈值零知识证明系统，使得任何t个参与者可以联合生成证明且保持验证不变性。</p>
+<p><strong>达到效果:</strong> 通过阈值化Attema等人和Esgin等人的证明系统，并利用Hint-MLWE实现无拒绝抽样的验证过程，同时在阈值同态加密上进行评估。</p>
+<p><strong>技术梗概:</strong> 定义了基于承诺与证明的阈值协议及其相应的零知识性和模拟可提取性概念，并证明了这些构造在被动对手对抗下的安全性。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1752] L-BAS: A Lattice-Based Blind Adaptor Signature Scheme</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Amin Mohammadali, Riham AlTawy</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1752">论文</a> | <a href="https://eprint.iacr.org/2026/1752.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着数字货币的兴起和对隐私保护数字交互的需求增加，基于格的盲签名引起了广泛关注。然而，在不损害隐私的前提下实现公平性仍然是一个挑战。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于格的盲适配器签名方案（L-BAS），该方案结合了公平性和盲签密的隐私保证。</p>
+<p><strong>达到效果:</strong> 与基础的基于格的盲签名相比，L-BAS 的构建仅增加了约 5.2 KB 的签名大小，并且在效率上保持了原有系统的大部分特性。</p>
+<p><strong>技术梗概:</strong> 通过利用 ABDLOP 提出的承诺和证明框架中的二分结构来实现适配器功能。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1755] QuaILLL: Quaternion Ideal LLL and BKZ</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Joshua Limbrey, Cong Ling, Christian Porter</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1755">论文</a> | <a href="https://eprint.iacr.org/2026/1755.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 当前针对LIP方案的通用破译技术仅在实数嵌入中调用SVP算子，忽视了通过将秩为2模块LIP归约到 quaternion 高斯整环上的主理想问题（nrd-PIP）所获得的四元结构。</p>
+<p><strong>主要贡献:</strong> 首次提出并描述了基于四元环的格规约算法，并扩展了经典的LLL算法以利用四元序的代数性质和新颖的后处理步骤。进一步将块大小为2的BKZ算法推广到任意块大小。</p>
+<p><strong>达到效果:</strong> 通过这些方法，研究人员设计了一种在子格中寻找最优边界的算法以及一种牺牲输出质量但能提供原始格真基的算法。这种方法被应用于理想格，特别是来自nrd-PIP实例如Hawk等。</p>
+<p><strong>技术梗概:</strong> 利用四元序的独特性质和后处理技术改进了LLL算法，并通过调整标准嵌入方法来应用这些算法于特定的理想格中。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1756] Fully Homomorphic Encryption with Chosen-Ciphertext Security from LWE</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Rupeng Yang, Zuoxia Yu, Willy Susilo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1756">论文</a> | <a href="https://eprint.iacr.org/2026/1756.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文构建了首个基于LWE假设在标准模型下具备选择密文安全性的全同态加密方案，填补了该领域的重要空白。</p>
+<p><strong>主要贡献:</strong> 该工作首次将循环安全的LWE假设与全同态加密相结合，并设计了一种特殊的简洁论证来验证FHE密文的有效性。</p>
+<p><strong>达到效果:</strong> 所提出的方案不仅实现了严格强于CCA1的安全性，而且在安全性证明上更为简洁和高效。</p>
+<p><strong>技术梗概:</strong> 采用Naor-Yung双层加密范式，结合批处理论证和新颖的谓词可提取承诺等技术来实现全同态加密。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1761] Lightweight Lattice-based Single-Party Public-Key Authenticated Key Exchange</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Alex Aïdan, Sébastien Canard, Emmanuel Fouotsa, Nyiang Melchisedech Mbeng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1761">论文</a> | <a href="https://eprint.iacr.org/2026/1761.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在资源受限的物联网环境中，轻量级且后量子安全的认证密钥交换（AKE）协议至关重要。现有的后量子AKE协议通常追求更强的安全性，如IND-CCA加密方案，这与物联网设备的需求不匹配。</p>
+<p><strong>主要贡献:</strong> 本文通过改进确定性的 OW-CPA 方案并将其应用于 HBE 帕累托中，证明了其OW-CCA安全性，并修改了 Bai 等人的高效后量子 OW-CPA 方案以支持 OW-CCA 构造。此外，作者还扩展了 SPAKE 框架以支持提出的 OW-CCA 构造。</p>
+<p><strong>达到效果:</strong> 通过上述贡献，本文提出了一种轻量级的、基于格的单方公钥认证密钥交换协议，能够在不牺牲安全性的情况下显著减少计算开销和通信成本。</p>
+<p><strong>技术梗概:</strong> 研究采用了 HBE 帕累托和 OW-CPA 方案，并结合了 Fujisaki–Okamoto 变换来实现 OW-CCA 安全性。此外，还对 SPAKE 框架进行了扩展以支持新的构造方法。</p>
+</blockquote>
+<hr />
+<h3>[2026/1724] Data-Dependent Memory-Hard Functions: Sustained Space and Cumulative Complexity Trade-offs in the Parallel Random Oracle Model</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jeremiah Blocki, Blake Holman</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1724">论文</a> | <a href="https://eprint.iacr.org/2026/1724.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 数据依赖的内存硬函数（dMHF）旨在提供密码学保护，防止低熵秘密如密码被暴力破解。理想情况下，需要确保并行攻击者必须在整个过程中维持$\Theta(N)$的内存，并且函数可以在顺序时间内计算为$\Theta(N)$。然而，这一目标在动态分片模型中难以实现。</p>
+<p><strong>主要贡献:</strong> Blocki和Holman提出了DEGSample，这是一种新的数据依赖MHF，并首次直接在平行随机预言模型（PROM）中证明了dMHFs的SSC/CMC权衡。</p>
+<p><strong>达到效果:</strong> 在动态分片模型中，DEGSample实现了与先前工作相同的理想权衡：任何动态分片策略要么在整个过程中维持$\Omega(N)$内存，要么面临最大累计记忆复杂度惩罚$\Omega(N^{3-\epsilon})$。在PROM中，我们证明了任何攻击者要么在整个过程中维持$\Omega(N)$内存……</p>
+<p><strong>技术梗概:</strong> DEGSample的设计利用了数据依赖性来实现SSC和CMC之间的权衡，并通过形式化分析证明了其在PROM中的安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1726] Jacobi Signatures, Revisited</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yansong Feng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1726">论文</a> | <a href="https://eprint.iacr.org/2026/1726.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究重新审视了Jacobi签名在模$N=p^2q$下的单向性证明，移除了Boneh--Lipton的猜想依赖。</p>
+<p><strong>主要贡献:</strong> 贡献在于直接将Damgård提出的伪随机生成器的一方性与标准数论问题联系起来。</p>
+<p><strong>达到效果:</strong> 结果是简化了Jacobi签名的安全性证明，并提高了其理论基础的可靠性。</p>
+<p><strong>技术梗概:</strong> 技术上采用了一种新的方法，不依赖于复杂的猜想，而是基于基本的数论难题。</p>
+</blockquote>
+<hr />
+<h3>[2026/1727] Enhancing Capital Efficiency in DeFi Lending and Liquidity Provision</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Adam Smehyl, Ivan Homoliak</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1727">论文</a> | <a href="https://eprint.iacr.org/2026/1727.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> DeFi领域正经历快速增长，但大量资本在基于池的借贷储备中闲置或流动性提供位置不活跃，导致效率低下。</p>
+<p><strong>主要贡献:</strong> 提出了两种扩展方案以提高DeFi协议中的资本效率：一种是通过增加分配层将未使用的流动性部署到外部收益生成策略；另一种是通过自动化范围迁移管理流动性位置，解决集中流动性位置的不活动问题。</p>
+<p><strong>达到效果:</strong> 评估结果显示，在特定外部收益率假设下，借贷分析表明供应商收益率显著提升；而范围迁移分析则关注执行时间和成本敏感性。</p>
+<p><strong>技术梗概:</strong> 通过设计机制、预期效果、实施方法和实际限制来探讨解决方案，并基于原型基准测试验证了这两种机制可以作为模块化扩展实现，但也揭示了额外的gas开销和特定的风险因素。</p>
+</blockquote>
+<hr />
+<h3>[2026/1728] A Controlled Case Study of Design Trade-offs in DeFi Lending Protocols</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jan Findra, Zdenek Lapes, Ivan Homoliak</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1728">论文</a> | <a href="https://eprint.iacr.org/2026/1728.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究探讨了去中心化金融（DeFi）借贷协议的设计权衡，包括gas成本、资本效率、清算行为和风险分配。</p>
+<p><strong>主要贡献:</strong> 贡献在于通过对比Aave V3, SparkLend, Compound III 和 Morpho Blue四种协议，在匹配的以太坊分叉测试中评估了它们在特定条件下的表现。</p>
+<p><strong>达到效果:</strong> 结果表明，Morpho Blue在交互调用路径gas消耗最少且借款容量最高，但风险选择被转移到隔离的去许可市场；Aave V3和SparkLend提供了更广泛的市场抽象但gas成本较高。</p>
+<p><strong>技术梗概:</strong> 技术上采用了以太坊分叉测试套件进行重复测量，并通过Foundry工具比较借贷设计权衡。</p>
+</blockquote>
+<hr />
+<h3>[2026/1729] A Unified Framework for Contract-Validated Benchmarking of Zero-Knowledge Proving Systems</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Matej Hulek, Martin Peresini, Ivan Homoliak</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1729">论文</a> | <a href="https://eprint.iacr.org/2026/1729.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文旨在提供一个统一的框架来基准测试零知识证明系统，以解决现有基准测试结果难以解读的问题。</p>
+<p><strong>主要贡献:</strong> 该框架通过隔离容器化的代理和方案适配层实现了异构证明系统的统一执行与报告方法。</p>
+<p><strong>达到效果:</strong> 评估了多种基于电路、透明、GPU加速、折叠及zkVM的系统，并使用六个具有相似语义的主要工作负载进行测试，揭示了不同系统在各种部署标准下的表现差异。</p>
+<p><strong>技术梗概:</strong> 通过公共执行和报告机制确保后端在相同声明的公开声明下进行比较，即使它们的电路、轨迹或客机管道存在差异。</p>
+</blockquote>
+<hr />
+<h3>[2026/1731] Generic Ring-Signature Transforms for Fiat-Shamir with Aborts and Hash-and-Sign with Retry</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Haruhisa Kosuge, Koutarou Suzuki</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1731">论文</a> | <a href="https://eprint.iacr.org/2026/1731.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：环签名提供了一种匿名性，适用于任意集合的公钥。尽管Abe-Ohkubo-Suzuki (AOS)转换对普通的 Fiat--Shamir 和 hash-and-sign 签名有很好的理解，但对于它们的拒绝采样变体Fiat--Shamir with aborts (FSwA)和hash-and-sign with retry (HSwR)，则缺乏相应的研究。</p>
+<p><strong>主要贡献:</strong> 主要贡献：本文首次形式化了AOS环签名转换对于 FSwA 和 HSwR，并在量子随机预言模型中分析了其安全性；证明了在适应性环签名查询下的不可伪造性，同时处理适应性作恶需要模拟属性的有效性；对于强不可伪造性，FSwA 需要响应唯一性和特殊诚实性，而 HSwR 则需要第二原像抗性和非可逆性。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过形式化和分析，本文填补了Fiat--Shamir with aborts (FSwA) 和 hash-and-sign with retry (HSwR) 的环签名转换研究空白；证明了这些方案在量子随机预言模型下的安全性和适用条件。</p>
+<p><strong>技术梗概:</strong> 技术梗概：采用了形式化方法和安全性分析，特别是在适应性查询和作恶处理上使用了模拟属性，并通过案例研究验证了方案的有效性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1732] Indifferentiability of Public-Key Encryption: Theory Meets Practice</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Taiyu Wang, Cong Zhang, Hong-Sheng Zhou, Jiayi Ai, Zhihong Jia, Wenli Wang, Jian Liu, Xin Wang, Li Lin, Kui Ren, Chun Chen</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1732">论文</a> | <a href="https://eprint.iacr.org/2026/1732.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 公钥加密（PKE）是现代密码学中的基本构建块，许多PKE方案已被标准化并广泛部署。然而，现有理论在复杂和高度组合的环境中验证其安全性时存在局限性。</p>
+<p><strong>主要贡献:</strong> 研究识别了理想PKE模型中的一个障碍，并重新定义了PKE的理想化模型以去除伪随机性的要求；提出了实现公钥加密非等价性的标准化方案。</p>
+<p><strong>达到效果:</strong> 通过修订后的理想PKE模型，证明稍微增强的基于组的标准化PKE方案可以实现可证明的非等价性。</p>
+<p><strong>技术梗概:</strong> 研究重新审视了Zhandry和Zhang的理想PKE定义，并提出了去除伪随机性要求的新模型；设计并分析了两个实际可行的公钥加密方案以验证其非等价性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1733] TEE Server-Assisted Aggregated Offline Deployment Scheme for Multiplication Triples</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Puyu Wang, Ruidan, Zhenshen Liu, Ruiqi Yang, Hui Li</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1733">论文</a> | <a href="https://eprint.iacr.org/2026/1733.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着数据密集型应用中安全多方计算（MPC）的部署增长，生成和分发认证乘法三元组的离线过程已成为关键的可扩展性瓶颈。现有的软件预处理协议如MASCOT和LowGear，在参与者数量或需求增加时会带来显著的交互和计算成本。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于可信执行环境（TEE）服务器辅助聚合离线部署方案，将昂贵的交互式预处理过程移至远程验证的保护区域内，并通过认证加密通道分发参与者的特定认证三元组份额。</p>
+<p><strong>达到效果:</strong> 实验结果表明，该方案在生成速率和可扩展性方面优于MASCOT和LowGear的MP-SPDZ实现。具体而言，与MASCOT相比，生成速率达到其三倍，并且具有线性可扩展性直至10万个参与者。此外，通过采用流式处理策略，实现了高效的分发过程。</p>
+<p><strong>技术梗概:</strong> 该方案设计了从远程验证、单个参与者的会话建立到加密分发的端到端工作流程。保护区域充当TEE支持下的伪随机关联随机数生成器（PCG），输出用于MPC的一次性交付认证相关随机数。</p>
+</blockquote>
+<hr />
+<h3>[2026/1737] From Mechanical Lock-Picking to Autonomous Driving Deception: A Comprehensive Review of Vehicle Attacks, Cyberattacks, and Defenses</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Karim Lounis</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1737">论文</a> | <a href="https://eprint.iacr.org/2026/1737.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着现代汽车演变成高度互联的软件定义的物理信息系统(CPS)，它们集成了嵌入式电子设备、无线通信、人工智能和高级驾驶辅助系统(ADAS)。虽然这些技术进步显著提高了车辆的安全性、效率和自动驾驶水平，但也引入了日益扩大的网络安全威胁面。</p>
+<p><strong>主要贡献:</strong> 该论文通过统一且独立的分类法对现代汽车攻击与防御机制进行了全面综述，将文献划分为四个研究方向：车身及物理系统攻击、车辆访问与启动系统攻击、电子与软件系统攻击以及自动驾驶系统攻击。</p>
+<p><strong>达到效果:</strong> 综述系统地回顾和分析了每个方向的安全问题、代表性攻击和现有对策，并识别了当前的研究趋势，指出了现有的研究空白并讨论了未来挑战。</p>
+<p><strong>技术梗概:</strong> 采用统一且独立的分类法对现代汽车攻击与防御机制进行了全面综述，通过系统性地审查和分析，为汽车网络安全提供了深入见解。</p>
+</blockquote>
+<hr />
+<h3>[2026/1739] Prop RFQ: Proprietary Request for Quote as Pressure-Aware Exit Pricing for Redeemable Real-World Asset Tokens</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Daniel Rolnik, Theodore Georgas, Ivan Homoliak</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1739">论文</a> | <a href="https://eprint.iacr.org/2026/1739.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：可赎回现实世界资产代币可以在区块链上更快地交易，但其背书资产的销售或结算速度较慢。立即退出机制不能将报告的净资产价值（NAV）视为完全流动。</p>
+<p><strong>主要贡献:</strong> 主要贡献：提出了一种Proprietary Request for Quote (Prop RFQ)，这是一种链上的退出报价设施，通过结合NAV、订单大小曲线、资金流动性墙、衰减卖压和重复出售的节奏响应来定价退出，并减轻但不消除拆分订单激励。</p>
+<p><strong>达到效果:</strong> 达到的效果：在参考参数下，节奏减少了9.67%的整体拆分优势，改善了40种常见工作负载中的34种，并将最坏情况下的剩余储备从10.49%提高到17.66%。没有简单的策略或Prop RFQ的消融版本在其比较中在常用指标上优于参考配置。</p>
+<p><strong>技术梗概:</strong> 技术梗概：该设计通过考虑NAV、订单大小曲线、资金流动性墙、衰减卖压和重复出售的节奏响应来保持孤立的小退出有用，同时限制储备耗尽并减少集中退出带来的收益。</p>
+</blockquote>
+<hr />
+<h3>[2026/1740] Non-Local Search-to-Decision Reduction over $\mathbb{F}_2$</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Prabhanjan Ananth</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1740">论文</a> | <a href="https://eprint.iacr.org/2026/1740.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：该论文探讨了非局部搜索到判定问题，即两个不通信的实体能否通过共享编码信息预测随机值而不进行本地测量恢复原信息。</p>
+<p><strong>主要贡献:</strong> 主要贡献：证明了在最优本地测量概率为p的情况下，双方正确回答共同挑战的概率最多为1和0.5+5p^(1/22)中的较小者。</p>
+<p><strong>达到效果:</strong> 达到的效果：该结果对非局部问题的理解有重要影响，并促进了不可克隆密码学的应用研究，如不可克隆加密和量子复制保护领域的发展。</p>
+<p><strong>技术梗概:</strong> 技术梗概：证明方法基于信息论，未提供有效提取器，且在开发过程中借助了高级AI助手进行辅助。</p>
+</blockquote>
+<hr />
+<h3>[2026/1741] One Proof to Rule Them All: Practical, Sublinear Verification for Actively Secure MPC on $\mathbb{Z}_{2^k}$ with Dishonest Majority and a Dealer (Full Version)</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Andreas Brüggemann, Ariel Nof, Thomas Schneider</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1741">论文</a> | <a href="https://eprint.iacr.org/2026/1741.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究旨在弥合被动安全与主动安全多方计算(MPC)之间的差距，特别是在具有恶意多数派和经销商的情况下，在环$\mathbb{Z}_{2^k}$上实现高效且子线性验证。</p>
+<p><strong>主要贡献:</strong> 提出了一种新颖的单个分布式零知识(DZK)证明方法，能够在保持被动安全协议的同时，实现主动安全性，并特别适用于环$\mathbb{Z}_{2^k}$上的计算。</p>
+<p><strong>达到效果:</strong> 该方法将通信复杂度从$\mathcal{O}(n \cdot \log m)$降低到$\mathcal{O}(n + \log m)$环元素，显著提高了验证效率。</p>
+<p><strong>技术梗概:</strong> 通过设计一种新型DZK证明机制，确保所有参与方共同行为的正确性，从而实现单个证明覆盖整个验证过程。</p>
+</blockquote>
+<hr />
+<h3>[2026/1742] Unclonable encryption from BB84 states: a simultaneous Goldreich-Levin reduction</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Andrea Coladangelo, Qipeng Liu, Ziyi Xie</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1742">论文</a> | <a href="https://eprint.iacr.org/2026/1742.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：Goldreich-Levin约简在密码学中广泛使用，能够将猜测隐藏字符串的能力转化为提取该字符串的完全信息。本文探讨了如何利用量子纠缠态增强加密方案的安全性。</p>
+<p><strong>主要贡献:</strong> 主要贡献：提出了一个同时的Goldreich-Levin约简方法，适用于两个具备特定挑战响应能力的实体，从而提升了基于BB84状态的最简单候选不可复制加密方案至满足黄金标准的不可复制区分安全性。</p>
+<p><strong>达到效果:</strong> 达到的效果：证明了基于BB84态的最简单不可复制加密方案达到了不可复制的区分安全性标准。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过设计一种新的同时Goldreich-Levin约简，结合量子纠缠态和特定的安全性假设，实现了上述目标。</p>
+</blockquote>
+<hr />
+<h3>[2026/1744] Improved Collision Attack on RIPEMD-160</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhengrong Lu, Hongbo Yu, Yingxin Li, Xindi Zhang, Xiaoen Lin</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1744">论文</a> | <a href="https://eprint.iacr.org/2026/1744.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> RIPEMD-160作为一种基于Merkle-Damgård结构的ISO/IEC哈希函数标准，尽管已有多种针对其减少轮数的攻击方法，但之前的最佳成果仅实现了40步的实际碰撞攻击。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种新的差分特征结构，通过在每条分支中使用一个连续的差分特征覆盖第1到2轮，从而减少了需要注入差异的消息字数量，并成功地识别出了三个42步RIPEMD-160哈希函数碰撞消息对。</p>
+<p><strong>达到效果:</strong> 该方法显著提高了攻击的有效性，将针对RIPEMD-160的最佳实际碰撞攻击步骤数从40步提升至42步。</p>
+<p><strong>技术梗概:</strong> 研究利用了基于高性能并行SAT求解器PRS的自动搜索工具，通过更严格的条件控制、差异注入和传播概率来识别合适的差分特征。</p>
+</blockquote>
+<hr />
+<h3>[2026/1745] Round-Preserving Compilers for Super-Rushing Secure MPC</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Michele Ciampi, Divya Ravi, Mingrui Zou</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1745">论文</a> | <a href="https://eprint.iacr.org/2026/1745.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：现有的同步多方计算（MPC）协议在实践中要求各方在接收到所有预期消息后立即进入下一通信轮次，这与理论模型中设定的每轮次需等待超时时间不同。为了弥合这一差距，提出了超级冲刺型敌手模型。</p>
+<p><strong>主要贡献:</strong> 主要贡献：本文首次探讨了计算复杂性MPC协议在面对超级冲刺型敌手时的安全性，并设计了一种保持通信轮次不变的编译器，将标准同步MPC协议转换为能够抵御超级冲刺型敌手攻击的协议。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过这种编译方法，实现了在不增加通信轮次的情况下提高MPC协议的安全性，确保了即使在网络中存在超级冲刺型敌手时也能保持协议的有效性和安全性。</p>
+<p><strong>技术梗概:</strong> 技术梗概：采用了一种新颖的圆保留编译策略，通过对标准同步MPC协议进行改造，在理论模型和实际应用之间建立桥梁，确保在面对超级冲刺型敌手攻击时仍能保持通信效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/1746] Chasing QuOCCAs in a Quantum World: Type-2 Oracles for CCA-Secure PKE</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Barbara Jiabao Benedikt, Tommaso Gagliardoni, Patrick Struck</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1746">论文</a> | <a href="https://eprint.iacr.org/2026/1746.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：针对公钥加密(PKE)方案的安全性，Gagliardoni等人提出了基于量子超位置的qIND-qCPA安全性概念，但该概念仅适用于特定类型的PKE方案，并且在扩展到选择密文攻击(CCA)场景时面临挑战。</p>
+<p><strong>主要贡献:</strong> 主要贡献：本文通过引入类型2算子理论，定义了适用于所有PKE方案（包括强解码可处理的）的量子超位置安全性概念，在CPA和CCA设置下无需使用Zhandry压缩oracle技术。</p>
+<p><strong>达到效果:</strong> 达到的效果：成功扩展了基于量子超位置的安全性定义至更广泛的PKE方案，并通过引入‘净化’变换，为所有PKE方案提供了一种通用方法来实现这种安全性。</p>
+<p><strong>技术梗概:</strong> 技术梗概：首先证明了直接将Gagliardoni等人技术推广到一般情况的不可能性，然后定义了一个新的PKE方案子类（强解码可处理），并引入‘净化’变换以克服障碍。</p>
+</blockquote>
+<hr />
+<h3>[2026/1747] Extending Distinguishing to Key Recovery for Subfield Subcodes of GRS codes</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kirill Vedenev</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1747">论文</a> | <a href="https://eprint.iacr.org/2026/1747.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：Ghoshal等人最近提出了针对GRS子码（包括戈帕码）的新颖准多项式时间区分器，但尚未解决如何将其转化为完整的密钥恢复攻击的问题。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者提出了一种方法，将上述区分器转化为全密钥恢复攻击，并验证了该方法在$\mathbb{F}_4$上的戈帕码上是有效的。</p>
+<p><strong>达到效果:</strong> 达到的效果：实验表明，此方法适用于$\mathbb{F}_4$上的戈帕码，并推测其可能也适用于二元戈帕码的密钥恢复。</p>
+<p><strong>技术梗概:</strong> 技术梗概：该攻击利用了区分器的结果进行多次执行来实现密钥恢复，从而克服了直接应用区分器无法完成密钥恢复的问题。</p>
+</blockquote>
+<hr />
+<h3>[2026/1748] SafeHub: End-to-end encrypted Git hosting system</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Easwar Vivek Mangipudi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1748">论文</a> | <a href="https://eprint.iacr.org/2026/1748.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有Git托管系统在传输和静止状态下对代码库进行加密，但代码库内容仍可被托管服务提供商读取。SafeHub旨在提供端到端加密的Git托管解决方案，确保代码库及其元数据的安全性。</p>
+<p><strong>主要贡献:</strong> SafeHub通过将仓库内容及语义元数据（如文件名、提交信息等）加密，使得托管方仅能看到密文和不透明标识符，从而保护用户隐私。每个仓库被设计为一个MLS组，提供管理员调解的成员资格管理等功能。</p>
+<p><strong>达到效果:</strong> SafeHub实现了对Git对象哈希链接的保护，并通过加密设备签名的清单记录引用，确保了在恶意服务器和适应性成员篡改情况下的功能完整性。实验结果表明其性能良好。</p>
+<p><strong>技术梗概:</strong> SafeHub采用了MLS协议组机制、量子随机预言模型假设下的安全擦除技术以及理想功能规格化方法来实现系统设计与安全性证明。</p>
+</blockquote>
+<hr />
+<h3>[2026/1749] CAKE-HI - Compact Authenticated Key Exchange Hiding Identities</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Uri Blumenthal, Gene Itkis, Roger Khazan, Brandon Luo, Sean O'Melia, Brian Proulx, David Stott, Gabriel Torres, David A. Wilson</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1749">论文</a> | <a href="https://eprint.iacr.org/2026/1749.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 面对量子计算对现代公钥密码学的威胁，研究转向了能抵抗量子攻击的算法。然而，这些算法导致密钥长度增加、加密数据和数字签名变大，这对带宽或功率有限的设备提出了挑战。</p>
+<p><strong>主要贡献:</strong> 提出了一种名为CAKE-HI的新协议，旨在减少在资源受限环境下使用量子抗性算法时的开销，同时保持安全性。</p>
+<p><strong>达到效果:</strong> 与传统的TLS双向认证相比，CAKE-HI显著减少了握手消息大小和计算成本，证明了其在符号和计算模型中的安全属性。</p>
+<p><strong>技术梗概:</strong> 通过形式化分析框架Verifpal和CryptoVerif验证了CAKE-HI的安全性，并将其应用于评估协议的效率和安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1751] Efficient Dynamic Group Signatures with Forward Security</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Amin Mohammadali, Riham AlTawy</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1751">论文</a> | <a href="https://eprint.iacr.org/2026/1751.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 动态群签名方案（GSS）需要确保新加入成员不能伪造过去时间的签名，并且即使管理者也无法将签名归咎于合法用户。然而，大多数现有方案要么缺乏非归咎性，要么在更新密钥以保证前向安全时效率低下。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种具有前向安全性的动态群签名方案并确保了非归咎性，并提供了一个更高效的替代方案。</p>
+<p><strong>达到效果:</strong> 通过证明和实验结果表明，所提出的方案在计算和通信效率方面与现有文献相当或优于现有文献。</p>
+<p><strong>技术梗概:</strong> 提出了有效的撤销机制以避免重新注册现有用户，并提出了一种批量验证技术来提高验证过程的效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/1753] Linear Distance for Fixed-Row-Weight Expand--Accumulate Codes over Arbitrary Fields</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Majid Khabbazian</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1753">论文</a> | <a href="https://eprint.iacr.org/2026/1753.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：Expand–accumulate (EA) 码是构建相关伪随机性和领域无关简洁论证的基础稀疏线性码。Block等人在CRYPTO 2024中提出了一个关于固定行重EA组件的猜想，认为其能实现恒定相对距离。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于证明了该猜想，并以更强的形式进行了证明：对于任意有限域，存在固定的行重EA组件，能够达到任意指定的可靠性指数。</p>
+<p><strong>达到效果:</strong> 研究结果表明，单个固定行重EA组件在所有足够大的块长度上都是渐近良好的，并且其多项式可靠性指数可以通过增加行重常数来任意增大。</p>
+<p><strong>技术梗概:</strong> 技术梗概：证明通过区分稀疏消息和高权重消息进行。稀疏消息通过扩展和累加器取消的紧凑分析处理，而高权重消息则通过大域上的线性约束过剩和有界域上的随机累加器分析控制。</p>
+</blockquote>
+<hr />
+<h3>[2026/1754] SoK: Why Optimal Cryptographic Combiners Do Not Get Deployed: Security, Complexity, and Adoption of Hybrid KEMs</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Merland Chrislain Chadrel BAFOUETILA, Anis BKAKRIA</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1754">论文</a> | <a href="https://eprint.iacr.org/2026/1754.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究探讨了为何最优密码组合器未被部署，分析了认证强度、标准成熟度和实现复杂性对加密采用的影响。</p>
+<p><strong>主要贡献:</strong> 提出了(A, P, φ)框架来量化这些因素，并应用于七类组合器和44个库中，首次提供了可验证的定量模型预测加密技术的采纳情况。</p>
+<p><strong>达到效果:</strong> 研究表明，实现复杂性是影响加密技术采纳的主要因素之一，最安全的构造未必是最易部署的。</p>
+<p><strong>技术梗概:</strong> 通过引入(A, P, φ)框架，结合软件工程指标进行分析，并通过实际代码行数验证了实施复杂性的影响力。</p>
+</blockquote>
+<hr />
+<h3>[2026/1758] $\textsf{Sluice}$: Prove-Phase Bounded-Memory Groth16 via Read-Write Streaming</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kyeongtae Lee, Jihye Kim, Hyunok Oh</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1758">论文</a> | <a href="https://eprint.iacr.org/2026/1758.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文提出了一种基于读写流式计算的Groth16证明者$\textsf{Sluice}$，旨在减少证明阶段的随机访问工作内存需求，同时保持标准接口不变。</p>
+<p><strong>主要贡献:</strong> $\textit{Split-Butterfly-Merge}(\mathsf{SBM})$算法是本文的关键技术贡献，该算法在读写流式模型中实现了$\mathcal{O}(\log N)$的内存使用。</p>
+<p><strong>达到效果:</strong> 实验结果表明，在相同的证明规模下，$\textsf{Sluice}$能够在较低的工作内存限制（8GB）下成功运行，而传统方法则需要更高的内存支持或更长的时间来完成证明。</p>
+<p><strong>技术梗概:</strong> 通过结合SBM算法、稀疏R1CS评估和分块Pippenger MSM技术，$\textsf{Sluice}$实现了验证器兼容的证明路径，并在存储需求与时间消耗之间进行了权衡。</p>
+</blockquote>
+<hr />
+<h3>[2026/1759] Revisiting the Transferability of Chosen- to Known-plaintext Attacks and Applications to Round-reduced AES</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xiaomeng Sun, Eik List, Wenying Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1759">论文</a> | <a href="https://eprint.iacr.org/2026/1759.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对许多分组密码的最佳已知攻击方法通常是基于差分的，但这些攻击通常要求对手能够选择明文或密文以满足差分轨迹。然而，在实际应用中，对手往往无法直接选择输入。</p>
+<p><strong>主要贡献:</strong> 本文研究了差分攻击在随机已知明文模型(RKP)下的应用，并针对AES的所有版本提出了最佳现有鉴别器和攻击方法，至少比之前的结果多了一轮。</p>
+<p><strong>达到效果:</strong> 研究表明，Demirci-Selcuk的中间相遇攻击（MITM）结合差异枚举，在不需要接近完整码本的情况下也能有效工作。对于某些攻击，展示了在选择数据模型下最优的攻击复杂度下的路径可能在RKP模型中表现不佳，并可被更优的路径替代。</p>
+<p><strong>技术梗概:</strong> 通过分析差分轨迹和改进现有技术，本文提出了适用于随机已知明文模型的新攻击方法。</p>
+</blockquote>
+<hr />
+<h3>[2026/1760] Midpoint Reset: A Full-Round Poseidon Collision from an Adaptively Chosen MDS Matrix</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Sunghyeon Jo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1760">论文</a> | <a href="https://eprint.iacr.org/2026/1760.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：本文针对KoalaBear Poseidon实例中的28轮进行了全轮次的碰撞攻击，探讨了固定轮常数与后续选择线性层之间的适应性相关性。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于提出了一个明确的压缩碰撞构造方法，适用于所有28轮，并且该方法揭示了一种仅通过矩阵检查无法捕捉到的固定轮常数和随后选择线性层之间的适应性关联。</p>
+<p><strong>达到效果:</strong> 达到的效果是成功在KoalaBear实例的所有16个输出坐标中找到了碰撞，验证了所提出的方法的有效性。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过追踪中间值和半差分，在每两个轮次块中利用特定的线性层图像来抵消中间值，并重用额外的图像将半差分恢复到同一一维子空间，最终确定轨迹约束并使用标量递归完成差异传播。</p>
+</blockquote>
+<hr />
+<h3>[2026/1762] Pilaf: Fully Tight Two-Round Threshold Signatures with Adaptive Corruptions</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Chen Qian, Xingyu Zhao, Hao Cheng, Zengpeng Li, Puwen Wei, Quan Yuan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1762">论文</a> | <a href="https://eprint.iacr.org/2026/1762.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对适应性恶意节点攻击的阈值签名方案，现有方法要么增加轮次、依赖代数或知识假设，要么在猜测破坏模式、关键会话或最终传输时付出非紧致的安全损失。</p>
+<p><strong>主要贡献:</strong> 提出$\mathsf{TPilaf}$，首个结合部分非交互式签名和完全适应性攻击紧致证明的两轮阈值签名方案。</p>
+<p><strong>达到效果:</strong> 该方案在随机预言模型中基于$\mathsf{MDDH}$假设构建，无需配对运算，任意阈值集合的签名人可以聚合其第二轮份额生成单一公开可验证签名。</p>
+<p><strong>技术梗概:</strong> 通过引入线性同态双模式承诺并结合目标可开启特性，以及使用按配置零和掩码后完成技术来实现上述成果。</p>
+</blockquote>
+<hr />
+<h3>[2026/1763] Multidimensional Hill Cipher Substitution– Permutation Network</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Porter E. Coggins, III</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1763">论文</a> | <a href="https://eprint.iacr.org/2026/1763.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究提出了一种结合多级扩散混排层、记忆硬KDF和同时多重度量经验评估的Hill密码变体——MD-Hill-SPN。</p>
+<p><strong>主要贡献:</strong> 其创新性地将这些组件整合，首次实现了从理论上构造到实际通过定义明确的经验评估套件的转变。</p>
+<p><strong>达到效果:</strong> 实验结果显示了全面的雪崩效应、差异概率采样、线性偏差探针、代数度下界饱和以及在单一密钥和已知明文条件下满足Singleton（MDS）分支数量，所有这些都达到了理论上限。</p>
+<p><strong>技术梗概:</strong> 研究采用了Hill密码的基本原理，并通过多级扩散混排层、记忆硬KDF和多重度量经验评估的技术来增强其安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/1764] Two Novel Multidimensional Affine Variations of the Hill Cipher</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Porter Eldridge Coggins</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1764">论文</a> | <a href="https://eprint.iacr.org/2026/1764.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 文章提出了希尔密码的一种新颖的多维仿射变体，旨在增强加密方案的安全性。</p>
+<p><strong>主要贡献:</strong> 作者通过引入不同阶数的关键矩阵和独或操作，扩展了希尔密码的应用范围，并增强了其安全性。</p>
+<p><strong>达到效果:</strong> 这两种新方法显著提高了加密强度，但同时也存在一些潜在弱点需要进一步研究。</p>
+<p><strong>技术梗概:</strong> 技术上，文章采用了2×2、4×4和8×8阶的可逆密钥矩阵，并结合独或操作来处理明文块。</p>
+</blockquote>
+<hr />
+<h3>[2026/1765] Exact linear correlations and the cost of Walsh-transform key recovery, with application to SPEEDY</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Guoqiang Liu, Bing Sun</p>
+</li>
+<li>
+<p><strong>分类:</strong> Secret-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1765">论文</a> | <a href="https://eprint.iacr.org/2026/1765.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究了在SPEEDY密码算法中，当两个S盒层之间没有密钥添加时，圆周相关性的计算方法与传统乘积法则的不同之处。</p>
+<p><strong>主要贡献:</strong> 提出了精确的一轮算法，并开发了依赖图分解、覆盖数界以及沃尔什支持标准等工具。</p>
+<p><strong>达到效果:</strong> 修正了对SPEEDY的线性密码分析结果，提高了五轮攻击的重量上限，并指出全圆攻击所需的密文数量增加。</p>
+<p><strong>技术梗概:</strong> 通过精确计算内部圆周和，改进了线性路径权重边界，并引入沃尔什支持标准来确定密钥恢复变换的成本。</p>
+</blockquote>
+<hr />
+<h3>[2026/1766] Eavesdropper-Blind Remote State Preparation and Applications to Quantum Public-Key Encryption</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kaniuar Bacho, Alexandru Cojocaru</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1766">论文</a> | <a href="https://eprint.iacr.org/2026/1766.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 远程状态准备（RSP）是量子密码学中的核心机制，允许经典方通过经典通信远程构建量子态。</p>
+<p><strong>主要贡献:</strong> 作者引入了一种较弱形式的远程状态准备——旁观者盲远程状态准备（EB-RSP），并证明了其在构造具有经典公钥和量子密文的量子公钥加密方面的应用价值。</p>
+<p><strong>达到效果:</strong> 通过基于特定的一方向群操作构建两消息EB-RSP协议，作者为基于假设不依赖于陷阱门的RSP型原语迈出了第一步。</p>
+<p><strong>技术梗概:</strong> 该研究采用旁观者仅需对公开协议转录内容保持盲目的模型，并从具体的一方向群操作中构造了两消息EB-RSP协议。</p>
+</blockquote>
+<hr />
+<h3>[2026/1767] Circle-Linear Cryptanalysis: Bibrace Characters and Weak-Key Linear Distinguishers for CRAFT</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Roberto Civino</p>
+</li>
+<li>
+<p><strong>分类:</strong> Secret-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1767">论文</a> | <a href="https://eprint.iacr.org/2026/1767.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：线性密码分析衡量了一种密钥流与加密算法中使用的字符之间的相关性。当使用二元bibrace结构替代传统的元素阿贝尔群时，可接受的掩码不再是普通的标量乘积，而是被限制为半数是线性的，另一半是非线性的。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者提出了Circle-Linear密码分析方法，并应用于Craft算法，揭示了Midori/Craft S盒在特定bibrace群上的四个概率性关系，从而发现了弱密钥区分器。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过完全枚举而非启发式方法解决了最小重量码字问题，成功找到了18轮以内的弱密钥区分器，并证明Craft的圆常数对密钥无任何限制。</p>
+<p><strong>技术梗概:</strong> 技术梗概：作者使用贝恩斯几何方法在任意有限阿贝尔群上发展了线性密码分析，并将其应用于特定bibrace群，通过最小重量码字问题精确求解来确定最佳路径。</p>
+</blockquote>
+<hr />
+<h3>[2026/1768] Constant-round MPC protocols with Fall-back Security</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Anasuya Acharya, Aditya Patankar, Arpita Patra, Divya Ravi, Raghavendra Vernekar</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1768">论文</a> | <a href="https://eprint.iacr.org/2026/1768.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：本文探讨了在阈值恶意攻击设置下，具有降级安全性的多方计算（MPC）协议的轮次复杂度。此前的工作大多要求轮次复杂度与参与方数量和计算规模成线性关系。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于提出了适用于最优阈值的常数轮次协议：在无认证字符串模型中，对于$t &lt; rac{n}{2}$恶意攻击者情况，提出了一种3轮半诚实降级安全协议；在有认证字符串模型中，同样针对$t &lt; rac{n}{2}$恶意攻击者情况，提出了4轮恶意行为降级安全且满足一致终止的协议，并进一步扩展为5轮协议以实现公平性。</p>
+<p><strong>达到效果:</strong> 达到的效果是显著降低了常数轮次MPC协议在特定阈值下的通信复杂度和计算效率，特别是在无认证字符串模型中实现了前所未有的低轮次数。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过引入新的设计技术和安全证明方法，在保持降级安全性的同时大幅减少了协议的轮次复杂度。</p>
+</blockquote>
+<hr />
+<h3>[2026/1769] Rank Measures and Exponential Lower Bounds for Multilinear Secret Sharing</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Shahram Khazaei</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1769">论文</a> | <a href="https://eprint.iacr.org/2026/1769.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：多线性秘密共享方案通过分摊秘密维度上的密份额大小，可能推翻一维线性方案中的已知下界。此前，对于多线性方案的最佳显式下界为准多项式级别。</p>
+<p><strong>主要贡献:</strong> 主要贡献：证明了Razborov--G\'al秩度量在分摊后仍然有效，并结合Pitassi和Robere的秩证据，给出了一个完美多线性方案族，其平均和最大信息比率为$2^{\Omega(n)}$。</p>
+<p><strong>达到效果:</strong> 达到的效果：对于任意重构算法且在对下界隐私低于一的情况下，该结果扩展到具有多项式级秘密维度的方案，从而得到每个固定重构度数下的指数下界。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过利用秩度量和秩证据，结合分摊分析，证明了多线性秘密共享方案的信息比率下限，并推广至更广泛的场景。</p>
+</blockquote>
+<hr />
+<h3>[2026/1770] How Many Traces Suffice? PAC Guarantees for Profiled and Non-profiled Side-Channel Analysis</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Seyedmohammad Nouraniboosjin, Fatemeh Ganji</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1770">论文</a> | <a href="https://eprint.iacr.org/2026/1770.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 侧信道分析（SCA）通常通过报告减少正确密钥排名所需的踪迹数量来进行评估，但这种评估仍具有经验性，并未解释足够踪迹的数量、单独的建模和攻击数据如何贡献以及额外的踪迹是否能克服较弱的密钥区分度。</p>
+<p><strong>主要贡献:</strong> 本文通过概率近似正确（PAC）形式化方法解决了上述问题，将候选密钥评分作为共同的密码分析对象，并分离有限样本估计与正确的密钥和竞争假设之间的固有差异。</p>
+<p><strong>达到效果:</strong> 实验表明，在ASCAD-f和ASCAD-r上，建模攻击在数十个攻击踪迹中实现了精确恢复，而非建模单攻击排名证书保证了约1000个踪迹的精确恢复。这些结果与最近的ASCAD攻击具有竞争力，并且在非建模设置下显著低于先前研究中识别出的最小踪迹数量，同时提供了有限样本保证。</p>
+<p><strong>技术梗概:</strong> 本文采用代表性的建模和非建模攻击实例进行分析，通过PAC框架分离了候选密钥评分作为密码分析对象，并将有限样本估计与固有区分度分开处理。</p>
+</blockquote>
+<hr />
+<h3>[2026/1771] New Lower Bounds for Rows of $d$-Disjunct Matrices via Recursive Potentials</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xiaopeng Zhao</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1771">论文</a> | <a href="https://eprint.iacr.org/2026/1771.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：非适应性组合组测试中，目标是在不超过d个阳性的情况下，通过最少的组合测试来识别n个项目。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者通过引入列删除递归方法，并使轻重阈值随递归状态z变化，改进了先前的下界证明。</p>
+<p><strong>达到效果:</strong> 达到的效果：新的下界为$T(d) \ge 0.9283d^2 - O(d)$，比之前的结果更加精确。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过分析一阶微分方程，并利用区间算术验证方法确保解满足所需接触点条件。</p>
+</blockquote>
+<hr />
+<h3>[2026/1772] Multi-PGBF: Efficient Oblivious Key-Value Store and Application to Private Set Intersection</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Mingli Wu, Tsz Hon Yuen, Man Ho Au, Siu-Ming Yiu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/1772">论文</a> | <a href="https://eprint.iacr.org/2026/1772.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：密文委托存储（Oblivious Key-Value Store）是一种能够安全地编码和解码$n$个键值对的数据结构，且在编码后无法区分这些键值对与其他输入域中的键值对。</p>
+<p><strong>主要贡献:</strong> 主要贡献是提出了Peelable Garbled Bloom Filter (PGBF) 和 Multi-PGBF 技术，以提高密文委托存储的效率和安全性。</p>
+<p><strong>达到效果:</strong> 达到的效果是在编码时间和解码速度上显著提升，其中Multi-PGBF将RR（CCS’22）的编码时间提高了65.1%至77.6%，而C-Multi-PGBF则进一步提升了编码效率。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过递归地组合多个PGBFs进行分层编码和解码，以及将大集合聚类为小集合以加快编码过程。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-08-21 06:57</h2>
 <p><em>新增 1 篇论文 (编号 1719--1719)</em></p>
 <h3>[2026/1719] Matrix Hoeffding and Bernstein Bounds with Sharp Constants for Markov Chains</h3>
