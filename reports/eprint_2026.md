@@ -5,6 +5,271 @@
 
 ---
 
+## 更新: 2026-08-24 16:02
+
+*新增 14 篇论文 (编号 1774--1787)*
+
+### [推荐] [2026/1776] Cofactor-torsion attacks on hinted scalar multiplications in SNARK circuits
+
+- **匹配关键字:** lattice
+
+- **作者:** Youssef El Housni
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1776) | [PDF](https://eprint.iacr.org/2026/1776.pdf)
+
+
+> **研究背景:** 在SNARK电路中，通过提示验证椭圆曲线标量乘法可以显著降低成本。然而，现有技术依赖于隐含的素数阶假设，这在具有非平凡因子的曲线上是不成立的。
+>
+> **主要贡献:** 作者发现了针对这些提示机制的两种具体伪造类：一种是适应标量攻击，另一种是选择性标量攻击。
+>
+> **达到效果:** 这两种攻击使得验证器接受带有非零挠点的输出作为有效结果，从而破坏了验证过程的安全性。实验验证了这些攻击在广泛部署的曲线上是可行的。
+>
+> **技术梗概:** 作者通过调整分解和利用小阶数的性质来构造伪造实例，并提出了一个更经济的解决方案以确保标量乘法的有效性。
+
+---
+### [推荐] [2026/1783] Compiling Sparse Keys for Bootstrapping FHEs: Algorithms, Hardware Acceleration, and Beyond
+
+- **匹配关键字:** LWE
+
+- **作者:** Binwu Xiang, Songyu Wu, Baoyu Li, Xinwei Qiang, Benqiang Wei, Yu Yu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1783) | [PDF](https://eprint.iacr.org/2026/1783.pdf)
+
+
+> **研究背景:** 在基于TFHE的同态加密方案中，盲旋转是主要的计算瓶颈，现有方法通常需要评估$O(n)$个外部乘积操作，导致延迟较大且NTT/iNTT操作繁多。
+>
+> **主要贡献:** 本文提出了一种新的NTRU基同态加密编译框架，通过Cuckoo哈希将稀疏二元LWE密钥转换为一热表示法，从而将盲旋转的顺序复杂度从$O(n)$降低到$O(h)$。此外还设计了针对稀疏秘密的模切换方法。
+>
+> **达到效果:** 实验结果显示，该方法在CPU和GPU上均实现了最先进的同态加密性能，在单个AVX-512 CPU线程中，布尔门、4位和6位同态加法器的执行时间分别为0.83ms、1.75ms和2.65ms，分别比TFHE-rs快3.31倍、4.18倍和20.47倍。
+>
+> **技术梗概:** 该方法利用Cuckoo哈希将稀疏二元LWE密钥转换为一热表示法，并设计了一种针对稀疏秘密的模切换方法，同时探索了无NTT变体以减少盲旋转中的在线NTT/iNTT操作。
+
+---
+### [推荐] [2026/1784] Faster Post-Quantum zkSNARK Provers Using the LCH Polynomial Basis
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Mohammadtaghi Badakhshan, Susanta Samanta, Guang Gong
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1784) | [PDF](https://eprint.iacr.org/2026/1784.pdf)
+
+
+> **研究背景:** 研究背景：基于不可约多项式交互知识证明（IOPs）的单变量多项式plausibly后量子零知识简短论证系统（zkSNARKs），依赖于在二进制扩展域$\mathbb{F}_{2^m}$上的多项式算术，其中大域评估和子空间消失多项式的除法是证明者的主要开销。
+>
+> **主要贡献:** 主要贡献：提出了一种直接在LCH多项式基上进行多项式除法的分而治之算法，适用于任意$\mathbb{F}_2$-基元素，实现了最优的$O(n \log n)$复杂度，并且通过原生LCH基算术和辅助优化在整个Aurora IOP阶段进行了集成。
+>
+> **达到效果:** 达到的效果：在Preon（一个基于Aurora的NIST后量子加密标准候选方案）上的端到端签名速度分别提高了5.0倍和5.8倍，仅多项式变换就快了12.6至17.9倍。
+>
+> **技术梗概:** 技术梗概：通过直接在LCH基上操作并结合原生算术优化，消除了基于一般基的加法和乘法转换阶段，从而显著提高了证明者的效率。
+
+---
+### [推荐] [2026/1785] The Power of Rerandomization in Obfustopia: Collision-Resistant Hash, Somewhere-Extractable BARGs, and More
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Shafik Nassar
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1785) | [PDF](https://eprint.iacr.org/2026/1785.pdf)
+
+
+> **研究背景:** 研究背景：基于不可区分混淆（iO）和单向函数（OWFs），可以构建广泛的安全机制。然而，Asharov和Segev证明了在黑盒模型下无法从这些基本组件构造碰撞抗性哈希（CRH）函数或更强大的相关原语，如全同态加密（FHE）和部分可提取批验证论证（seBARGs）。
+>
+> **主要贡献:** 主要贡献：作者提出了直接且简单的方案，利用iO和重随机化OWFs构造了首个CRH。此外，通过相同的方法，还构建了一个比CRH更强的原语——完美分割哈希（PPH），同样基于iO和重随机化承诺。
+>
+> **达到效果:** 达到的效果：该工作展示了如何使用iO和重随机化承诺构建更强大的非交互式证明系统，如具有统计提取性的seBARGs，并通过结合率1全同态加密进一步增强了这些系统的功能。
+>
+> **技术梗概:** 技术梗概：利用iO的不可区分性以及OWFs的重随机化特性，作者设计了新的构造方案来突破Asharov和Segev设置的障碍，从而实现了CRH及其增强版本PPH的构建。
+
+---
+### [2026/1774] Multi-Party Private Set Intersection with Optimal Online Round Complexity and Updatability
+
+- **作者:** Jiadi Zhang, Hao Wang, Ye Su, Xiaochao Wei, Lei Wu, Zhi Li
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1774) | [PDF](https://eprint.iacr.org/2026/1774.pdf)
+
+
+> **研究背景:** 多方私有集合交集（MPSI）协议允许多个参与方在不泄露除交集外任何信息的情况下安全地计算其私人数据集的交集。然而，随着参与者数量的增加，性能受到显著影响，交互轮数成为关键瓶颈。
+>
+> **主要贡献:** 本文提出了一种新型的具有最优在线交互轮次的MPSI协议及其可更新扩展，并基于函数秘密共享和盲键值存储实现。
+>
+> **达到效果:** 该构造在半诚实模型下保证安全性，当领导者诚实时抵抗任何$n-1$方合谋，在领导者被篡改时抵抗任何$n-2$方合谋。此外，提出的多方可更新私有集合交集（MUPSI）协议允许高效计算动态更新的数据集的交集，并且在处理不平衡数据集和大量参与者群体时表现出优越性能。
+>
+> **技术梗概:** 通过结合函数秘密共享和盲键值存储技术实现最优一次过的在线交互，并确保计算和通信复杂度仅与更新大小相关，而非整个数据集大小。
+
+---
+### [2026/1775] A Note on the Security Proof of SQIsign
+
+- **作者:** Maher Mamah, David Jao
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1775) | [PDF](https://eprint.iacr.org/2026/1775.pdf)
+
+
+> **研究背景:** SQIsign的安全性证明首次由Aardal等人在CRYPTO 2025中提出，但存在因应用宽松的最小熵边界而导致的平方根损失问题。
+>
+> **主要贡献:** 作者证明了SQIsign的最小熵是最佳的，即$\mathcal{O}(1/p)$，尽管这并未提供完整的$\lambda$-比特安全性，但保留了预期安全性的三分之二。
+>
+> **达到效果:** 改进后的证明解决了原证明中的平方根损失问题，使得在当前参数下仍能保持较高的安全性。
+>
+> **技术梗概:** 通过分析信息论中SQIsign零知识模拟的缺陷，作者提出了一种新的证明技术来提高安全性。
+
+---
+### [2026/1777] Dynamic and Optimal Function Inversion in the Small-Time Regime
+
+- **作者:** John Kuszmaul, William Kuszmaul
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1777) | [PDF](https://eprint.iacr.org/2026/1777.pdf)
+
+
+> **研究背景:** 研究背景：经典的函数反转问题通常在小空间大时间的环境下进行研究，即使用空间$S$为$N^{1 - \Omega(1)}$位，并且查询时间为$N$的小多项式。相比之下，对于小时间大空间的情况（$S = (N \log N) / t$），研究较少。
+>
+> **主要贡献:** 主要贡献：本文提出了在小时间环境下最优的解决方案，实现了空间$S = O(N \log N / t)$和时间$O(t)$的效果，并且首次匹配了Yao给出的下界（对于一般函数而言）。此外，该方案还支持点更新操作，同样在$O(t)$时间内完成。
+>
+> **达到效果:** 达到的效果：本文的研究成果不仅解决了小时间环境下的函数反转问题，还在点更新方面取得了突破性进展，并且扩展了Fiat和Naor的经典解决方案。
+>
+> **技术梗概:** 技术梗概：通过设计新的数据结构$\mathcal{D}_2$来补充已有数据结构$\mathcal{D}_1$的功能，从而支持高效的逆查询操作以及点更新功能。
+
+---
+### [2026/1778] HOVER: Higher-Order Vanishing Endomorphism Recovery
+
+- **作者:** Markku-Juhani O. Saarinen
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1778) | [PDF](https://eprint.iacr.org/2026/1778.pdf)
+
+
+> **研究背景:** HOV是一种用于区分Goppa码的技术，已被扩展应用于McEliece密钥恢复。现有方法中HOV的低秩方向搜索步骤成本较高，本文提出了一种新的HOVER技术以提高效率。
+>
+> **主要贡献:** HOVER通过替换HOV中的低秩方向搜索步骤为快速线性代数步骤，实现了更高效的攻击。该技术基于公共HOV核的第一卡特莱坦定义了一个收缩张量，并计算保持此张量关系的系数自同态。
+>
+> **达到效果:** 实验中，HOVER成功破解了五个TII挑战密钥，包括当时未被破解的最高难度密钥TII-252。然而，该分析表明HOVER当前形式不会对经典McEliece参数构成威胁。
+>
+> **技术梗概:** HOVER技术通过识别公共HOV核的第一卡特莱坦定义的收缩张量，并计算保持这些关系的系数自同态来实现攻击。此外，它还提供了一种基于不变基的构造、可能矩阵代数输出的结构分类以及明确的容错接受条件。
+
+---
+### [2026/1779] Bootstrapping using Ring Switching without Slot Recovery
+
+- **作者:** Zhaoyang Liang, Dan Ding
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1779) | [PDF](https://eprint.iacr.org/2026/1779.pdf)
+
+
+> **研究背景:** 在基于环的FHE方案中，bootstrapping是性能瓶颈，而ring switching通过将计算从大环转移到小环来降低成本。然而，对于SIMD打包的密文，ring switching通常需要后续的slot recovery步骤以恢复原始槽布局，这消耗了大量“噪声容量”，导致剩余容量不足以支持后续操作并阻碍并行性。
+>
+> **主要贡献:** 作者证明了CKKS和BGV/BFV bootstrapping在没有slot recovery的情况下也能正确运行。对于任意实数输入的CKKS，作者证明了一个连续槽间函数可以在ring-switched叶子上独立评估当且仅当该函数是仿射的。
+>
+> **达到效果:** 通过利用较小环之间的固有并行性、降低校正界限以及随着槽数减少而减少CoeffToSlot和SlotToCoeff的复杂度，作者的结果显著提高了bootstrapping性能。对于特定参数设置，与直接bootstrapping相比，吞吐量提升了99.7%至113.5%，使用稀疏秘密封装时甚至达到了121.3%。
+>
+> **技术梗概:** 该研究采用了一种新颖的方法来证明在没有slot recovery的情况下某些FHE方案的正确性，并通过减少校正界限和优化CoeffToSlot及SlotToCoeff操作的技术细节，实现了性能提升。
+
+---
+### [2026/1780] The Limits of $t$-Private Share Conversion
+
+- **作者:** Bar Alon
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1780) | [PDF](https://eprint.iacr.org/2026/1780.pdf)
+
+
+> **研究背景:** 该研究探讨了基于$t$-私密共享方案的转换在构建信息论最优的私有信息检索（PIR）协议中的局限性。
+>
+> **主要贡献:** 作者通过分析$t$-私密共享方案与解码多项式的结合，揭示了此类PIR协议设计的理论限制。
+>
+> **达到效果:** 研究证明，在某些条件下，即使初始转换是基于$t$-私密共享方案的，最终得到的PIR协议也可能无法达到理想的安全性和效率水平。
+>
+> **技术梗概:** 通过抽象出解码多项式和分享转换的概念，作者分析了不同环与有限域之间的转换过程及其对PIR协议性能的影响。
+
+---
+### [2026/1781] Efficient Additive Randomized Encodings for String Oblivious Transfer: A Core Primitive for General Functions
+
+- **作者:** Masaya Yoshimura, Kyoichi Asano, Yugo Kasashima, Mitsugu Iwamoto, Yohei Watanabe
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1781) | [PDF](https://eprint.iacr.org/2026/1781.pdf)
+
+
+> **研究背景:** 研究背景：现有的通用函数的Additive Randomized Encodings (AREs)最终依赖于高效的字符串Oblivious Transfer (SOT)，使得SOT成为效率瓶颈。
+>
+> **主要贡献:** 主要贡献在于提出了改进的SOT ARE构造方法，包括直接构建单向ARE和基于非配对假设的无配对ARE。
+>
+> **达到效果:** 达到的效果是实现了完美正确的统计单方面安全OSARE，并且构造了大小为$\mathcal{O}(\lambda)$、具有可忽略正确性误差的无配对SOT ARE。
+>
+> **技术梗概:** 技术梗概：通过优化现有PKE基方法直接构建所需的单向SOT ARE，以及基于Squaring DDH假设的新颖无配对ARE构造。
+
+---
+### [2026/1782] EA Codes Approaching Singleton Bound (with Application to Field-Agnostic SNARKs)
+
+- **作者:** Chongrong Li, Runtian Xu, Yun Li, Yu Yu, Yuncong Hu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1782) | [PDF](https://eprint.iacr.org/2026/1782.pdf)
+
+
+> **研究背景:** 研究背景：现有的基于纠错码的SNARKs需要同时支持快速编码和大相对距离的代码，而Reed--Solomon码虽然实现了最优的率-距权衡，但其快速编码依赖于FFT友好的域，限制了它们在通用领域构建中的应用。
+>
+> **主要贡献:** 主要贡献：作者重新审视了EA码，并证明了当稀疏扩展矩阵从精确权重集合中采样时，这些代码能够在足够大的有限域上以高概率实现接近Singleton边界的率-距权衡。
+>
+> **达到效果:** 达到的效果：基于这些结果，作者构建了一个名为	extsf{Flare}的新通用领域多项式承诺方案，并通过高效的交互式证明系统和代码切换及随机线性折叠技术实现了更小的证明大小。
+>
+> **技术梗概:** 技术梗概：该工作利用EA码及其高效编码特性，在任意域上实现接近Singleton边界的率-距权衡，并结合了交互式证明系统、代码切换和随机线性折叠等技术来优化多项式承诺方案。
+
+---
+### [2026/1786] Bit Operation Cost of ``Holdout'' Key-Recovery Attacks Against Classic McEliece
+
+- **作者:** Markku-Juhani O. Saarinen
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1786) | [PDF](https://eprint.iacr.org/2026/1786.pdf)
+
+
+> **研究背景:** 该研究针对经典McEliece密码体制中的二进制Goppa码，通过结合Holdout构造和异构Hasse乘性、Lucas最小导数级别等技术，提出了一种自包含的条件算术模型和算法规范，旨在评估潜在的关键恢复攻击的成本。
+>
+> **主要贡献:** 研究贡献在于提供了一个精确且可保证维度的攻击参数配置方法，并通过分析不同参数设置下的电路门数量，揭示了Holdout构造在经典McEliece密码体制中的实际攻击成本。
+>
+> **达到效果:** 结果显示，在选定的配置下，模型中所需的电路门数量范围从$2^{172.13}$到$2^{235.09}$不等；对于mceliece348864参数设置，特定配置需要$2^{61.7}$比特的保留状态以支持递归求解器的工作。
+>
+> **技术梗概:** 研究采用了条件算术模型和算法规范，结合Holdout构造、异构Hasse乘性、Lucas最小导数级别等技术，并通过供应商计费机制和局部标志重建方法来优化攻击过程。
+
+---
+### [2026/1787] A Practical Optimization for Wiedemann XL
+
+- **作者:** Tung Chou, Ruben Niederhagen
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1787) | [PDF](https://eprint.iacr.org/2026/1787.pdf)
+
+
+> **研究背景:** Wiedemann XL是XL算法的一种变体，广泛应用于代数攻击中。通常其成本估计为3N^2 ω，其中N为Macaulay矩阵的宽度，ω为Macaulay矩阵的平均行重。
+>
+> **主要贡献:** 本文提出了一种实用优化方法，显著降低了第三阶段的成本，使其相对于第一阶段的成本变得几乎可以忽略不计。
+>
+> **达到效果:** 通过这种方法，整体成本得到了有效控制，提高了算法的实际应用效率。
+>
+> **技术梗概:** 该优化利用了只需少量核向量即可获得多元系统的解这一事实来减少计算负担。
+
+---
+
 ## 更新: 2026-08-24 07:51
 
 *新增 47 篇论文 (编号 1724--1772)*
