@@ -5,6 +5,121 @@
 
 ---
 
+## 更新: 2026-08-27 07:53
+
+*新增 6 篇论文 (编号 1793--1798)*
+
+### [推荐] [2026/1793] Exact CVP Is NP-Complete for Principal Cyclotomic Ideals
+
+- **匹配关键字:** lattice
+
+- **作者:** Jiaqi Liu, Yansong Feng, Yanbin Pan
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1793) | [PDF](https://eprint.iacr.org/2026/1793.pdf)
+
+
+> **研究背景:** 研究证明了在主cyclotomic理想系数格上，精确的欧几里得决策CVP问题是NP完全的。
+>
+> **主要贡献:** 贡献在于通过从Exact Cover by 3-Sets问题到CVP实例的确定性归约，首次展示了该问题的NP难度。
+>
+> **达到效果:** 结果表明，在主cyclotomic理想和主循环理想系数格上，精确决策CVP问题是NP完全的，而精确搜索CVP问题是NP难的。
+>
+> **技术梗概:** 技术方法包括使用X3C问题进行归约，并通过环结构的旋转和平移变换将问题从一个环转移到另一个环。
+
+---
+### [2026/1794] Ideal Secret Sharing Schemes over Small Domains
+
+- **作者:** Amos Beimel, Aner Ben-Efraim, Oriol Farràs, Adriana Moya
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1794) | [PDF](https://eprint.iacr.org/2026/1794.pdf)
+
+
+> **研究背景:** 理想秘密共享方案中，每个份额的大小至少与秘密大小相等。对于特定域大小$k$的理想秘密共享方案，其接入结构的特征化是一个长期未解的问题，仅在$k=2$和$k=3$时被解决。
+>
+> **主要贡献:** 本文解决了$k=4$和$k=6$的情况，证明了$k=4$的理想性等价于$\mathbb{F}_4$上线性的理想性，并且$k=6$的方案可以构建$k\geq 2$的所有理想方案。
+>
+> **达到效果:** 对于$k=4$，研究确定了理想的接入结构特征；对于$k=6$，证明了其在所有较大域上的通用性。
+>
+> **技术梗概:** 通过利用理想秘密共享方案与格的联系以及基于拉丁方的新技术来实现上述结果。
+
+---
+### [2026/1795] On Removing Interaction from Quantum Proofs
+
+- **作者:** Nicholas Spooner, Max Tromanhauser
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1795) | [PDF](https://eprint.iacr.org/2026/1795.pdf)
+
+
+> **研究背景:** 研究背景：量子密码学中一个重要的开放问题是构建适用于QMA的公开可验证非交互零知识证明(NIZKs)，而经典情况下可通过Fiat–Shamir变换将NP的诚实验证者零知识(SVZK) Σ协议转化为NIZK。
+>
+> **主要贡献:** 主要贡献：作者通过形式化论证表明，在量子随机 oracle 模型中，如果存在类似 Fiat–Shamir 的通用编译器，则会导致 QMA 等于 BQP。
+>
+> **达到效果:** 达到的效果：证明了将量子 Ξ 协议直接编译为 NIZKs 在当前技术框架下是不可行的，从而揭示了经典 Fiat–Shamir 变换在量子环境中的局限性。
+>
+> **技术梗概:** 技术梗概：作者利用量子信息理论和复杂性类的研究方法，通过构建假设与反证法相结合的方式，得出了上述结论。
+
+---
+### [2026/1796] UdMAC: Efficiently Updatable Message Authentication Codes
+
+- **作者:** Debrup Chakraborty, Avishek Majumder
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1796) | [PDF](https://eprint.iacr.org/2026/1796.pdf)
+
+
+> **研究背景:** 消息认证码（MAC）在对称密钥设置中用于确保消息的真实性，是不可或缺的工具。本文旨在为MAC引入可更新功能，即能够在不重新计算整个消息标签的情况下，随着消息的每次更新而更新其标签。
+>
+> **主要贡献:** 作者提出了一个新的MAC类别——可更新消息认证码（UdMAC），并系统地开发了此类MAC，提供了形式化的安全概念，并提出了一种新的安全性模型。
+>
+> **达到效果:** 通过设计两种构造方法$\mathsf{concatu}$和$\mathsf{xoru}$，分别支持连接和异或差分两种消息更新方式，实现了在不重新计算整个消息标签的情况下进行高效的消息更新。
+>
+> **技术梗概:** 作者提出了UdMAC的概念，并详细分析了两种构造方法的安全性，在新的安全性模型下证明了它们的有效性。
+
+---
+### [2026/1797] High-Precision Lewis Weights via Fourth-Moment Control and Local Bregman Acceleration
+
+- **作者:** Zhao Song
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1797) | [PDF](https://eprint.iacr.org/2026/1797.pdf)
+
+
+> **研究背景:** 研究旨在通过黑盒精确实数全向量杠杆得分或acles模型，优化计算$p \geq 4$下的$\ell_p$-Lewis权重的精度，减少所需的自适应或acles轮次数量。
+>
+> **主要贡献:** 贡献在于提出了一个改进算法，将计算误差为$\epsilon$的$\ell_p$-Lewis权重所需自适应或acles轮次从$O(p^2\log(m/\epsilon))$降低至$O(p\log(mp)+\sqrt{p}\log(1/\epsilon))$。
+>
+> **达到效果:** 结果是通过控制非线性Hessian中的归一化四阶矩算子，实现了全局阶段的复杂度为$O(p\log(mp))$，并在接近最优解后采用重启加速Bregman梯度方法进一步优化。
+>
+> **技术梗概:** 技术上，通过分析和重置四阶矩算子来控制更新过程，并结合使用了重启加速Bregman梯度方法以提高局部搜索效率。
+
+---
+### [2026/1798] Generalized Greedy Algorithms for Synthesizing Low-depth CNOT Circuits
+
+- **作者:** Tung Chou
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1798) | [PDF](https://eprint.iacr.org/2026/1798.pdf)
+
+
+> **研究背景:** 研究背景：CNOT电路是量子计算中的一种基本构建块，其深度优化对于提高量子算法的效率至关重要。现有贪婪算法虽然有效，但仍有改进空间。
+>
+> **主要贡献:** 主要贡献：作者提出了两种新的贪婪算法，作为现有算法的扩展版本，并受到一篇关于AES量子电路低深度线性层的新结构论文的启发。
+>
+> **达到效果:** 达到的效果：尽管尚未进行大规模实验，小规模实验表明新算法至少与现有算法具有同等甚至更强的能力。
+>
+> **技术梗概:** 技术梗概：通过引入新的贪婪策略和优化条件，新算法能够更有效地合成低深度CNOT电路。
+
+---
+
 ## 更新: 2026-08-26 20:58
 
 *新增 5 篇论文 (编号 1788--1792)*
