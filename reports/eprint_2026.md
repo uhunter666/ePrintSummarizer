@@ -5,6 +5,103 @@
 
 ---
 
+## 更新: 2026-08-26 20:58
+
+*新增 5 篇论文 (编号 1788--1792)*
+
+### [推荐] [2026/1790] Lithium: Making Iterative Rejection Sampling Practical for Compact Lattice Signatures
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Jipeng Zhang, Pengfei Chen, Long Chen, Cong Zhang, Jiaheng Zhang
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1790) | [PDF](https://eprint.iacr.org/2026/1790.pdf)
+
+
+> **研究背景:** 后量子密码学部署需要同时具备快速和小巧的签名方案，现有方案如ML-DSA虽具实用性但签名仍较大，影响带宽、证书大小及存储成本。
+>
+> **主要贡献:** Lithium通过综合设计参数、离散高斯采样器、ApproxExp评估、迭代拒绝采样及rANS编码，使理论上的紧凑签名方案得以实用化。
+>
+> **达到效果:** 实验表明，Lithium的最快实现比ML-DSA-44签名速度快约166k vs 191k周期，并生成约一半大小的签名：1,187字节对比2,420字节。与HAETAE-120相比，Lithium-120更紧凑且签名速度提高约7.5倍。
+>
+> **技术梗概:** Lithium引入了算法和向量化优化，并提供了可移植的参考实现及AVX2、AVX-512向量化实现。
+
+---
+### [2026/1788] Cryptanalysis of the DIZY Stream Cipher with Provable Security
+
+- **作者:** Zhengting Li, Lin Ding, Xinhai Wang, Zheng Wu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1788) | [PDF](https://eprint.iacr.org/2026/1788.pdf)
+
+
+> **研究背景:** 随着日常生活中对资源受限设备需求的增加，设计具有小内部状态的安全超轻量级流密码变得至关重要。DIZY是一种使用截断伪随机置换（TPP）的小状态流密码，但在初始化过程中存在弱点，容易被攻击者利用以选择初始向量（IVs）的方式达到弱状态。
+>
+> **主要贡献:** 本文提出了针对DIZY-80和DIZY-128的有效密钥恢复攻击，并通过构建Hellman表进一步改进了这些攻击方法。
+>
+> **达到效果:** 实验结果表明，DIZY-80和DIZY-128仅能提供65/86比特的安全级别，远低于设计者声称的80/112比特安全级别。此外，提出了一种改进版本DIZYa，以增强其抵抗已知攻击的能力。
+>
+> **技术梗概:** 通过选择特定的初始向量（IVs）来诱导中间弱状态，并利用Hellman表进行密钥恢复攻击。
+
+---
+### [2026/1789] HRFPRE: Fast Proxy Re-encryption for Multi-RSU Outsourcing and Hardware-assisted Revocation in the IoV.
+
+- **作者:** Tingting Li, Leyou Zhang, Qing Wu, Fei Zhou, Yuxing Wei
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1789) | [PDF](https://eprint.iacr.org/2026/1789.pdf)
+
+
+> **研究背景:** 在IoV中，基于属性的数据共享对于提升驾驶安全和用户体验至关重要。然而，IoV网络的动态性和分布式特性导致了未经授权的数据访问和信息传播效率低等问题。现有的部分PRE方案虽有所缓解，但仍存在计算成本高、云侧开销大以及撤销机制不完善等不足。
+>
+> **主要贡献:** 本文提出HRFPRE，一种基于多RSU外包和硬件辅助撤销的高效代理重加密机制，解决了传统方案中的多项问题，并提供了常量大小的公钥参数及轻量级用户端解密功能。
+>
+> **达到效果:** 实验结果表明，HRFPRE在动态IoV场景下能够有效降低计算成本，减轻云侧负担，并支持无限属性空间，同时保证消息可靠恢复。
+>
+> **技术梗概:** HRFPRE利用对称配对友好曲线实现轻量级用户端解密，并通过RSU提供外包重加密、密钥生成辅助和解密服务来优化资源受限的车载单元计算任务。
+
+---
+### [2026/1791] DIME: Query-Efficient Framework for Membership Inference on Diffusion Models
+
+- **作者:** Tue Do, Daniel Alabi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1791) | [PDF](https://eprint.iacr.org/2026/1791.pdf)
+
+
+> **研究背景:** 现有针对扩散模型的成员推理攻击多为启发式方法，需要大量的查询预算。
+>
+> **主要贡献:** DIME框架提供了一种理论基础和查询高效的成员推理方法，通过分析去噪器的隐含重构误差来揭示成员信息泄露机制。
+>
+> **达到效果:** 在CIFAR-10/100、STL10-U、CelebA和ImageNet数据集上，DIME显著优于先前攻击，在相似或更低的查询成本下提高了TPR，特别是在1% FPR下的提升高达3倍；其两查询变体甚至超越了现有的30查询基线。
+>
+> **技术梗概:** 通过精确表征有限训练集上的最优去噪器，并分解重构误差为偏差项和局部拥挤项，DIME利用模型查询高效估计这两种信号以实现攻击。
+
+---
+### [2026/1792] Beyond Linear Subspace Trails: Nonlinear Subspaces for Gr\"obner Basis Attacks on Poseidon/Poseidon2 and Neptune
+
+- **作者:** Enyan Li, Fukang Liu, Gaoli Wang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1792) | [PDF](https://eprint.iacr.org/2026/1792.pdf)
+
+
+> **研究背景:** Poseidon/Poseidon2和Neptune是零知识证明系统中的关键组件，通过部分S盒层和低次有限域操作减少了算术电路的成本。因此，代数攻击成为其安全性分析的核心部分，而格基方法则是研究此类攻击的主要工具。
+>
+> **主要贡献:** 本文扩展了现有的线性子空间轨迹框架至非线性子空间，并提出了一种参数化的Macaulay矩阵方法，将寻找降低次数增长的代数约束转化为求解参数系统的任务。此外，给出了一种针对$Ec$额外约束条件下的CICO问题的具体约束模式，以延长非线性子空间轨迹并抑制更多内部部分轮次中的次数增长。
+>
+> **达到效果:** 通过引入新的方法和构造模式，本文成功地扩展了代数攻击的范围，并提高了对Poseidon/Poseidon2和Neptune的安全评估能力。
+>
+> **技术梗概:** 该研究采用参数化的Macaulay矩阵方法来构建更长的非线性子空间轨迹，从而在更多内部部分轮次中抑制次数增长。
+
+---
+
 ## 更新: 2026-08-24 16:02
 
 *新增 14 篇论文 (编号 1774--1787)*
