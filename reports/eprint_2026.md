@@ -5,6 +5,179 @@
 
 ---
 
+## 更新: 2026-08-31 09:07
+
+*新增 9 篇论文 (编号 1824--1833)*
+
+### [推荐] [2026/1828] WeaveTLS: High-Throughput Cross-Connection ML-DSA Authentication in Mutual TLS
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Ganqin Liu, Hao Cheng, Jipeng Zhang
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1828) | [PDF](https://eprint.iacr.org/2026/1828.pdf)
+
+
+> **研究背景:** 互认证TLS（mTLS）在每次连接上都涉及后量子签名成本，而并发握手则暴露了独立的ML-DSA操作，但联合执行这些操作具有挑战性。
+>
+> **主要贡献:** WeaveTLS提出了一种透明架构，能够在并发TLS连接中执行ML-DSA身份验证，并通过结合拒绝感知槽填充和请求扩展密钥句柄支持不同客户端密钥或共享发行商密钥。
+>
+> **达到效果:** 在AMD Ryzen 9 9950X3D上，WeaveTLS将单核nginx mTLS吞吐量分别提高了2.81-4.31倍和2.19-3.29倍，并且在原语边界处，扩展密钥八请求验证比匹配缓存AVX2快1.65-2.23倍。
+>
+> **技术梗概:** WeaveTLS通过无堆栈OpenSSL继续执行，允许nginx工作进程暂停身份验证、展示其他连接的工作并通过优化的一次请求、四次请求或八次请求AVX-512内核执行兼容操作来实现这一目标，无需使用纤维或跨线程传递。
+
+---
+### [推荐] [2026/1829] Decomposed LWE is Equivalent to Succinct LWE
+
+- **匹配关键字:** LWE
+
+- **作者:** Damiano Abram, Gal Arnon, Valerio Cini, Paul Lou, Giulio Malavolta, Lawrence Roy
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1829) | [PDF](https://eprint.iacr.org/2026/1829.pdf)
+
+
+> **研究背景:** 研究背景：文章证明了Succinct Learning with Errors (Succinct LWE) 和Decomposed Learning with Errors (Decomposed LWE) 在适当参数设置下等价，填补了这两者之间关系的空白。
+>
+> **主要贡献:** 主要贡献：作者通过证明Decomposed LWE可以推导出Succinct LWE，完成了对这两种假设等价性的双向证明。
+>
+> **达到效果:** 达到的效果：该研究确认了两种假设之间的等价性，为密码学中的假设选择提供了更多灵活性和可靠性。
+>
+> **技术梗概:** 技术梗概：作者利用代数工具和技术，分析了两个假设的参数设置，并通过严格的数学论证建立了它们之间的双向推导关系。
+
+---
+### [推荐] [2026/1832] Universally Composable Hybrid PAKE Secure Against Harvest-Now-Decrypt-Later Attacks
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Yasmine Vazirinejad, Feng Hao, You Lyu, Shengli Liu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1832) | [PDF](https://eprint.iacr.org/2026/1832.pdf)
+
+
+> **研究背景:** 本文旨在提出一种混合密码认证密钥交换(PAKE)协议，以应对量子对手发起的收获后解密(HNDL)攻击，并在Lyu和Liu提出的并行组合框架下实现通用可组合性。现有的PAKE构造通常将经典PAKE与后量子(PQ)PAKE结合，但确定哪种PAKE更安全并不容易。
+>
+> **主要贡献:** 作者提出了一种新的混合编译器方法：将经典的PAKE封装在一个标准的PQ密钥封装机制(KEM)中，从而避免了PQ密码处理的脆弱性并消除了HNDL攻击的风险。作为具体实例，该协议结合了J-PAKE和一个后量子KEM，并证明了其在不依赖理想密码、哈希到曲线或可信设置假设的情况下仍具有实用性。
+>
+> **达到效果:** 通过实验验证，该混合构造的完整握手过程仅需2.81毫秒，展示了其实用性。同时，在Lyu-Liu框架下，作者证明J-PAKE满足Full DH型PAKE的概念。
+>
+> **技术梗概:** 该方法的核心在于将经典PAKE与PQ KEM进行模块化分离，从而在保持安全性的同时提高了协议的灵活性和实用性。
+
+---
+### [2026/1824] Comparing Privacy-Preserving Revocation for the EUDI Wallet
+
+- **作者:** Andrea Flamini, Anja Lehmann, Giada Sciarretta, Mario Scuro, Nicola Smaniotto, Alessandro Tomasi, Silvio Ranise
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1824) | [PDF](https://eprint.iacr.org/2026/1824.pdf)
+
+
+> **研究背景:** 文章旨在对比欧洲数字身份钱包中用于隐私保护撤销的四种构造，这些构造分别来自两种不同的技术家族：动态正向累加器和签名对。
+>
+> **主要贡献:** 作者通过统一处理这两种技术家族，展示了尽管它们在文献中的描述不同，但可以使用标准累加器语法来表达签名对，并定义了一个通用的撤销机制，使得这四种构造能够相互比较。
+>
+> **达到效果:** 研究测量了所有四种构造在整个凭证生命周期内的性能，包括服务器级硬件上的状态管理器和智能手机上的持证人及验证者的性能表现，参数来源于一个实际的国家电子身份方案。
+>
+> **技术梗概:** 通过将签名对技术转化为标准累加器语法，并定义了一个通用撤销机制来实现不同构造之间的比较。
+
+---
+### [2026/1825] Enhanced Differential-linear Cryptanalysis of Forr\'{o} with MILP
+
+- **作者:** Zhengting Li, Lin Ding, Xinhai Wang, Honglei Wang, Jiang Wan, Fan Zhang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1825) | [PDF](https://eprint.iacr.org/2026/1825.pdf)
+
+
+> **研究背景:** ARX结构因其在软件中的高效性成为现代密码算法的主要构建块，Forr\'{o}作为一种新型的ARX基流密码被提出以提供比ChaCha更高的安全裕度。
+>
+> **主要贡献:** 作者提出了一个名为MinForr\'{o}的全自动混合整数线性规划（MILP）模型来推导Forr\'{o}中的线性近似，并发现了Forr\'{o}的第一个3轮差分链，从而改进了4到6.5轮Forr\'{o}的区分器。
+>
+> **达到效果:** 通过结合MinForr\'{o}获得的线性近似和3轮差分链，作者提出了针对4至6.5轮Forr\'{o}的改进型差分-线性区分器，复杂度分别为${2^{32.44}}$、${2^{46}}$、${2^{50}}$、${2^{64.32}}$、${2^{87.12}}$、${2^{117.92}}$和${2^{174.92}}$，其中针对4、5、5.25及5.5轮Forr\'{o}的区分器显著提升了现有结果。
+>
+> **技术梗概:** 该研究采用了两阶段策略来搜索高差分相关性的单比特差分链，并通过MILP模型自动推导线性近似，从而实现对Forr\'{o}的有效分析。
+
+---
+### [2026/1827] AVXPoS: Reducing Consensus Verification Cost in the Ethereum Proof-of-Stake Client
+
+- **作者:** Ganqin Liu, Hao Cheng, Georgios Fotiadis, Jipeng Zhang, Chen Qian
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1827) | [PDF](https://eprint.iacr.org/2026/1827.pdf)
+
+
+> **研究背景:** 在Ethereum Proof-of-Stake (PoS)客户端中，必须频繁验证大量的Boneh--Lynn--Shacham (BLS)签名以确保共识过程的顺利进行。这种持续的成本限制了客户端处理突发负载的能力。
+>
+> **主要贡献:** AVXPoS框架通过重新组织协议请求为原生批处理状态，从而在API、工作线程和本地后端边界上暴露SIMD并行性，实现了BLS验证的加速。
+>
+> **达到效果:** AVXPoS在资源受限的两核Intel主机上，在选定的小批量大小下获得了1.44-2.10倍的速度提升，并在控制容量扫面中达到3.18倍的加速效果。
+>
+> **技术梗概:** 该框架结合了Go语言端范围形成与C语言端自适应宽度调度，为BLS12-381后端提供了AVX-512支持。
+
+---
+### [2026/1830] The Extended Wedge Attack
+
+- **作者:** John Baena, Javier Verbel, Luis Villota
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1830) | [PDF](https://eprint.iacr.org/2026/1830.pdf)
+
+
+> **研究背景:** 研究背景：Wedge攻击通过利用UOV公钥在特征为二的域上的公共映射的极形式是交替的事实来恢复秘密油空间。该攻击已被多种方向扩展，每种扩展都带有不同的代数工具。
+>
+> **主要贡献:** 主要贡献：作者提供了一种基于油-醋多项式对偶分解的更简单的攻击描述，并将其与原始Wedge攻击及其奇特征对应物作为特殊情况进行了恢复。
+>
+> **达到效果:** 达到的效果：该框架导致了扩展Wedge攻击的一般化，作者识别出两个明确参数条件以确保攻击成功恢复秘密空间。同时证明了扩展Wedge攻击矩阵在Furue-Ikematsu攻击中与截断Macaulay矩阵的置换等价性。
+>
+> **技术梗概:** 技术梗概：通过直接处理油-醋映射的多项式，基于对偶分解重新描述了攻击，并使用特定参数条件确保成功恢复秘密空间。
+
+---
+### [2026/1831] Silent-Share: Decoupling Hidden Threshold Matching from Pairing Operations via Group-Valued Oblivious Key-Value Stores
+
+- **作者:** Jie Zhang, Xiaohong Li, Ruitao Feng, Guangdong Bai
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1831) | [PDF](https://eprint.iacr.org/2026/1831.pdf)
+
+
+> **研究背景:** 现有的匹配加密方案将接收方的授权成本与策略大小绑定在一起，这在一方持有大型隐藏策略而另一方仅持有小型属性集时尤为成问题。
+>
+> **主要贡献:** Silent-Share通过结合单向隐藏阈值策略基密钥封装机制（PB-KEM）和稀疏组值盲键值存储（GOKVS），解耦了策略表示与基于配对的授权过程，从而实现了双边隐蔽策略访问控制协议。
+>
+> **达到效果:** 该方案使得接收方持有属性集$\mathcal{A}$时进行精确的$2|\mathcal{A}|$次配对操作，独立于策略大小$|\mathcal{P}|$和阈值$d$。此外，证明了一边KEM保密性和策略隐藏性，并扩展到双边组合中。
+>
+> **技术梗概:** Silent-Share采用稀疏组值盲键值存储来紧凑地编码依赖于策略的组元素，从而实现高效的授权过程。
+
+---
+### [2026/1833] On the Fault Injection Security of White-box Ciphers
+
+- **作者:** Md Alamgir Alam, Avik Chakraborti, Takanori Isobe, Sajani Kundu, Sayandeep Saha
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1833) | [PDF](https://eprint.iacr.org/2026/1833.pdf)
+
+
+> **研究背景:** 研究背景：白盒安全假设攻击者拥有软件实现和内部计算的完全可见性和控制权，泄漏基于攻击通过本地被动攻击（如恶意软件）提取机密信息并传输到远程服务器。然而，在对称密钥设置中，能够执行故障注入的主动攻击者尚未受到充分关注。
+>
+> **主要贡献:** 主要贡献：本文首次正式研究了白盒环境中的数据仅篡改主动对手，并定义了一个新的安全概念来分析其对当前基于表的白盒实现的影响。
+>
+> **达到效果:** 达到的效果：研究表明，即使在保持控制流不变的情况下，篡改者仍可以通过精确和可重复地操纵查找表值来削弱实施并使错误的密文显著更容易解密。
+>
+> **技术梗概:** 技术梗概：通过形式化定义主动篡改对手，并研究其对现代基于表的白盒实现的影响，揭示了两种主要设计范式之间的结构差异：Feistel基白盒密码。
+
+---
+
 ## 更新: 2026-08-30 13:02
 
 *新增 24 篇论文 (编号 1799--1823)*
