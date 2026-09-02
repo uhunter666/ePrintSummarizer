@@ -5,6 +5,255 @@
 
 ---
 
+## 更新: 2026-09-02 10:08
+
+*新增 13 篇论文 (编号 1834--1846)*
+
+### [推荐] [2026/1836] Improved Conversion for Gao-Zheng FHE Scheme with $O(1)$ Bootstrapping
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Yuchen Wei, Kaisheng Ma, Mingyu Gao, Hongren Zheng
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1836) | [PDF](https://eprint.iacr.org/2026/1836.pdf)
+
+
+> **研究背景:** 研究背景：在全同态加密（FHE）中，支持同时进行算术运算和逻辑运算对于实现通用的隐私保护计算至关重要。Gao 和 Zheng 提出了一种三角编码方法，用于机器字长 $n$ 的算术计算，并实现了 $O(1)$ 级别的 CKKS 重加扰操作成本。然而，将这种编码转换为离散-CKKS 编码以支持逻辑运算时的成本问题尚未解决。
+>
+> **主要贡献:** 主要贡献：本文提出了一种新的方法，用于在单个密文的三角编码与离散-CKKS 编码之间进行转换，并且该方法仅需 $O(1)$ 个 CKKS 重加扰操作和额外的 $O(\log n)$ 级别消耗。
+>
+> **达到效果:** 达到的效果：结合现有刷新和转换方法，本文提出的方法使得全同态加密方案能够支持 SIMD 算术逻辑单元（ALU）运算，并实现了 $O(1)$ 的重加扰操作成本。
+>
+> **技术梗概:** 技术梗概：该研究通过引入一种新的转换机制，在保持高效性的前提下解决了单个密文的三角编码向离散-CKKS 编码转换的问题，从而优化了 FHE 方案的整体性能。
+
+---
+### [推荐] [2026/1841] Avoiding Product-Denominator Blowup in Lattice-Folding Extraction
+
+- **匹配关键字:** lattice
+
+- **作者:** Xiang Wang, Shihui Fu, Michał Osadnik
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1841) | [PDF](https://eprint.iacr.org/2026/1841.pdf)
+
+
+> **研究背景:** 该研究针对在基于格的折叠提取中，由于产品分母膨胀导致的问题，提出了一种新的方法以避免这一问题。
+>
+> **主要贡献:** 作者通过保留局部归一化直到比较两个提取元组，并使用同步机制来实现对比，从而减少了整体的提取损失并降低了重试调用的复杂性。
+>
+> **达到效果:** 这种方法使得在顺序交互设置中能够更有效地进行坐标星的同步，同时保持了挑战的一致性。
+>
+> **技术梗概:** 技术上，该方法通过局部归一化和共同乘数下的多项式整量化来收集局部挑战松弛，并将其整合为全局产品，从而避免了分母膨胀的问题。
+
+---
+### [推荐] [2026/1844] Discrete Gaussian Sampling Meets BDGL Decoding: Solving the Shortest Vector Problem in $2^{0.5596n+o(n)}$ Time
+
+- **匹配关键字:** lattice
+
+- **作者:** Yiming Gao, Yansong Feng, Honggang Hu
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1844) | [PDF](https://eprint.iacr.org/2026/1844.pdf)
+
+
+> **研究背景:** 研究背景：短矢量问题（SVP）是密码学中的一个基本难题，传统的算法时间复杂度较高。本文通过结合离散高斯采样和BDGL解码技术来提高求解效率。
+>
+> **主要贡献:** 主要贡献在于提出了将随机超晶格离散高斯采样框架与单层BDGL产品码解码相结合的新方法，从而显著降低了SVP的时间复杂度。
+>
+> **达到效果:** 达到了在$2^{0.5596n+o(n)}$时间内解决SVP的效果，比之前的方法有了明显改进。
+>
+> **技术梗概:** 技术梗概：通过将离散高斯采样的输出分为两部分，并利用BDGL产品码解码层来识别特定的矢量对，从而避免了全面枚举所有差值对。
+
+---
+### [推荐] [2026/1845] Lattice-based NIKE with optimal tightness
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Roman Langrehr, Si An Oliver Tran
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1845) | [PDF](https://eprint.iacr.org/2026/1845.pdf)
+
+
+> **研究背景:** 本文提出了一种基于学习误差假设的非交互式密钥交换方案，并证明了其安全性，安全损失仅线性依赖于用户数量。
+>
+> **主要贡献:** 该工作提供了首个针对基于格的NIKE方案的安全紧致归约下界，表明安全损失是优化的（至多常数因子差异）。
+>
+> **达到效果:** 新方案在处理超多项式模噪比和可忽略正确性误差以及更复杂的多项式模噪比和逆多项式正确性误差设置方面表现出色。
+>
+> **技术梗概:** 通过证明一个自然类基于格的NIKE方案的安全紧致下界，该研究改进了先前所有基于格的NIKE方案的安全损失。
+
+---
+### [推荐] [2026/1846] Covert Federated Learning under Regulation based on Threshold Anamorphic Encryption
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Wenxuan Xu, Huaqun Wang, Debiao He
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1846) | [PDF](https://eprint.iacr.org/2026/1846.pdf)
+
+
+> **研究背景:** 在受严格外部监管的通信系统中，权威机构可能监控所有传输信息并迫使用户交出密钥，这会破坏用户的自主性和密钥的安全性。现有的基于格的变形加密方案虽然能够实现隐蔽通信，但通常依赖于格陷阱门技术，这对实际后量子密码系统如Kyber的部署提出了限制。
+>
+> **主要贡献:** 本文提出了一种新的阈值变形加密（TAE）机制，它将接收者-变形加密扩展到N-out-of-N阈值设置中，只有通过所有参与者合作才能恢复隐蔽信息。此外，基于KyberPKE框架构建了具体的实例TAKyber。
+>
+> **达到效果:** TAKyber通过在密文的随机性而非公钥矩阵结构中嵌入隐蔽信息，避免了格陷阱门技术对高长宽比的要求，并能够部署于包括Kyber在内的其他基于格的加密方案中。
+>
+> **技术梗概:** 该研究采用了阈值设置和基于KyberPKE框架的技术，通过在密文随机性中嵌入隐蔽信息来实现隐蔽通信，避免了传统方法中的参数限制问题。
+
+---
+### [2026/1834] Quantum Pessiland
+
+- **作者:** Boyang Chen, Tomoyuki Morimae, Takashi Yamakawa
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1834) | [PDF](https://eprint.iacr.org/2026/1834.pdf)
+
+
+> **研究背景:** 研究背景：Pessiland是一个NP问题在平均情况下难解但不存在单向函数（OWFs）的世界，这几乎意味着在这个世界中没有经典的密码学工具。然而，量子密码学可以在不存在OWFs的情况下存在。因此，是否存在一个量子版本的Pessiland，在这个世界上NP问题在平均情况下对量子多项式时间算法和量子建议硬解，但辅助输入EFI对或OWPuzzs不存在？
+>
+> **主要贡献:** 主要贡献：作者证明了这样的世界是存在的，并展示了相对于某些量子和经典预言机，$UP\cap coUP$问题是平均难解的，但相应的量子和经典密码学工具不存在。
+>
+> **达到效果:** 达到的效果：这些结果表明，在这些预言机下几乎不存在量子或经典密码学工具。此外，相对于经典预言机，SampBQP = SampBPP，这意味着在量子Pessiland中没有基于采样的量子优势。
+>
+> **技术梗概:** 技术梗概：作者使用了平均难解性、预言机技术和复杂性类的分离等方法来构建这些结果。
+
+---
+### [2026/1835] Wagner's $k$-Tree Revisited: Memory-Time Costs of Preimage Attacks on Incremental Hashes
+
+- **作者:** Rui Ding, Lili Tang, Shaomin Chen, Xiaorui Gong
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1835) | [PDF](https://eprint.iacr.org/2026/1835.pdf)
+
+
+> **研究背景:** Wagner的$k$-树算法解决了广义生日问题，并应用于随机化后组合增量哈希（如iSHAKE、LtHash和AdHash）的预象攻击。
+>
+> **主要贡献:** 作者扩展了单链后的检索方法至$k$-树算法，减少了峰值工作内存同时增加了线性恢复时间开销。
+>
+> **达到效果:** 对于小$k$值，指数条目尚未主导，因此恢复开销超过了节省；而对于大$k$值，节省占主导地位，将优化的$\log_2 \mathsf{MT}$从$4\sqrt{n}$降低至$2\sqrt{2n}$。
+>
+> **技术梗概:** 通过引入自由$\delta$级缓存减少时间因子而不增加内存成本，并重新评估$k$-树算法在内存-时间乘积度量下的列表项缩减场景。
+
+---
+### [2026/1837] Enhanced Differential-Linear Cryptanalysis of ChaCha Based on Bit Puncturing
+
+- **作者:** Xinhai Wang, Lin Ding, Zhengting Li, Honglei Wang, Jiang Wan, Bin Hu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1837) | [PDF](https://eprint.iacr.org/2026/1837.pdf)
+
+
+> **研究背景:** ChaCha作为一种广泛部署的对称密码，其安全性直接影响到许多轻量级安全协议和受限设备的操作系统的安全性。
+>
+> **主要贡献:** 提出了一种新颖的猜密钥覆盖技术，并基于此构建了结合分组技术和两阶段精炼策略的改进差分-线性分析框架ReBitP。
+>
+> **达到效果:** 该方法在7-和7.5轮ChaCha256上实现了增强的关键恢复攻击，时间复杂度分别为$2^{142.08}$和$2^{242.02}$。
+>
+> **技术梗概:** 通过结合分组技术、猜密钥覆盖技术和两阶段精炼策略，ReBitP在第一阶段利用精心选择的函数进行初步筛选，从而降低时间成本和第二阶段构造精炼表的时间复杂度。
+
+---
+### [2026/1838] How to prove more false statements: Fiat–Shamir limitations on (generated) R1CS
+
+- **作者:** Giacomo Fenzi
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1838) | [PDF](https://eprint.iacr.org/2026/1838.pdf)
+
+
+> **研究背景:** Fiat–Shamir (FS)变换是一种将交互式协议转换为非交互式协议的技术，但在实际哈希函数实例化中可能不安全。
+>
+> **主要贡献:** 作者扩展了对基于程序生成实例的协议类的攻击，并展示了当转换过程足够表达时，攻击者可以破坏非交互式证明系统的健全性。
+>
+> **达到效果:** 研究结果表明，任何允许作恶证明者准备接受传输的协议都可能受到此类攻击的影响。
+>
+> **技术梗概:** 通过分析并利用程序生成实例中的漏洞，作者提出了一种新的攻击方法来破坏FS变换的安全性。
+
+---
+### [2026/1839] Quasar: A Field-Agnostic Polynomial Commitment Scheme with Polylogarithmic Verification from Quasi-Abelian Codes
+
+- **作者:** Yuhao Jia, Zhe Li, Chaoping Xing, Yizhou Yao, Chen Yuan
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1839) | [PDF](https://eprint.iacr.org/2026/1839.pdf)
+
+
+> **研究背景:** 多项式承诺方案（PCSs）是现代零知识证明系统zkSNARKs的基本构建块，通常主导着实际的证明者和验证者成本。
+>
+> **主要贡献:** $\mathsf{Quasar}$结合了准阿贝尔码（QA codes）与BaseFold方法，通过代码切换技术，提出了一种适用于多线性多项式的领域无关PCS方案。
+>
+> **达到效果:** 对于长度为$N$的安全参数为$\lambda$的多项式，$\mathsf{Quasar}$实现了快速的$O(N\log N)$承诺时间、$O(N)$评估时间和$O(\lambda\log^2 N)$大小和验证时间的证明。
+>
+> **技术梗概:** 通过利用QA编码算法并提出高效的编码导向论证方法，$\mathsf{Quasar}$同时享有QAPCS快速证明的优势以及BaseFold的多项式验证效率。
+
+---
+### [2026/1840] Arithmetic-to-Boolean Conversion in ALU with O(1) Bootstrapping via Overflow Cancellation
+
+- **作者:** Xuan Shen, Zhihao Li, Ruida Wang, Xianhui Lu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1840) | [PDF](https://eprint.iacr.org/2026/1840.pdf)
+
+
+> **研究背景:** 文章探讨了在基于CKKS的同态加密算术逻辑单元(ALU)中，如何通过溢出取消技术实现常数时间(即O(1))的重新密封操作，以提高密文处理效率。
+>
+> **主要贡献:** 作者扩展了三角编码至通用基数，并引入共享溢出取消方法，使得能够在单次功能重新密封过程中同时评估所有选定边界上的余数，并通过相减消除溢出系数，从而实现并行进位传播。
+>
+> **达到效果:** 该方法显著减少了密文处理中的重新密封次数，提高了加密计算的效率和速度，特别适用于长消息的转换操作。
+>
+> **技术梗概:** 文中提出的技术包括基数扩展三角编码与共享溢出取消机制，通过这些技术实现了在ALU中进行常数时间功能重新密封的操作。
+
+---
+### [2026/1842] Arion: Arithmetization-Oriented Hashing for Zero-Knowledge Proof Systems
+
+- **作者:** Luca Campa, Arnab Roy, Matthias Johann Steiner, Stefano Trevisani
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1842) | [PDF](https://eprint.iacr.org/2026/1842.pdf)
+
+
+> **研究背景:** 文章提出了基于置换的设计方法的arithmetization-oriented (AO)哈希函数Arion，旨在为零知识证明系统提供一种新的哈希方案。
+>
+> **主要贡献:** 贡献在于设计了一种新型的代数框架，用于构造密码学置换，并据此定义了两种哈希模式：Sponge和Trunc。
+>
+> **达到效果:** 结果是提供了Arion的安全性分析，特别强调了基于代数技术的方法，如插值、多项式系统求解等，并首次将安全性分析明确地基于底层理想的理想商环维度。
+>
+> **技术梗概:** 技术上采用了最近提出的广义三角形多项式系统来定义置换Arion-π，并通过Sponge和Trunc模式构建哈希函数。
+
+---
+### [2026/1843] APEX: AFS-based Permutation family for Efficiency and eXtensibility (feat. the APEX Suite)
+
+- **作者:** Zhiguang Yan, Yongzhuang Wei
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1843) | [PDF](https://eprint.iacr.org/2026/1843.pdf)
+
+
+> **研究背景:** ARX基密码原语因其高效的软件实现而受到广泛关注，但长期以来，如何构建具有可证明抵抗单路径差分和线性分析能力的ARX密钥流密码仍是一个难题。
+>
+> **主要贡献:** 本文通过引入基于AFS家族的APEX置换族，解决了大型状态S盒的设计与分析问题，实现了高效实现与强多迭代差分及线性界限之间的平衡。
+>
+> **达到效果:** APEX置换族在64至1536位的不同状态宽度下提供了高效的加密性能，并且具有良好的可扩展性。
+>
+> **技术梗概:** 该研究采用了AFS家族作为非线性组件，结合了Long Trail Strategy (LTS)策略，以系统化的方式设计和分析大型状态S盒。
+
+---
+
 ## 更新: 2026-08-31 09:07
 
 *新增 9 篇论文 (编号 1824--1833)*
