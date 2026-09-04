@@ -5,6 +5,275 @@
 
 ---
 
+## 更新: 2026-09-04 09:45
+
+*新增 14 篇论文 (编号 1847--1861)*
+
+### [推荐] [2026/1847] Order-Four Symmetry in BGV Bootstrapping: Faster Digit Extraction for Large Primes
+
+- **匹配关键字:** lattice, homomorphic encryption
+
+- **作者:** Zhenyu Xiong, Mingsheng Wang, Zhedong Wang, Han Wang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1847) | [PDF](https://eprint.iacr.org/2026/1847.pdf)
+
+
+> **研究背景:** BGV Bootstrapping的计算瓶颈在于大明文素数时的数字提取阶段，现有方法通过通用Paterson--Stockmeyer算法以$O(\sqrt{d})$的成本评估减少后的多项式。
+>
+> **主要贡献:** 作者提出了两种代数优化，同时解决了数字提取和线性变换两个阶段的问题，显著提高了效率。
+>
+> **达到效果:** 在标准NTT友好的大素数集上实现了1.85倍的数字提取加速（从20.06秒到10.81秒）以及1.27倍的整体薄重铸加速（从42.3秒到33.3秒）。
+>
+> **技术梗概:** 通过选择辅助基数$A$使得$A^2\equiv -1\pmod{p}$，引入了四阶字符滤波器，并提供了首个非二进制循环的伽罗瓦结构混合基数蝴蝶分解的具体实例。
+
+---
+### [推荐] [2026/1854] Distributed Key Generation for NTRU
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Patrick Hough, Jérôme Nguyen, Caroline Sandsbråten, Tjerand Silde
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1854) | [PDF](https://eprint.iacr.org/2026/1854.pdf)
+
+
+> **研究背景:** NTRU加密因其紧凑的密钥和密文以及非交互式分布式解密特性，成为阈值全同态加密、阈值签名及电子投票等应用的基础。然而，现有所有协议均假设由可信经销商共享秘密密钥，这限制了其广泛应用。
+>
+> **主要贡献:** 本文首次提出了针对NTRU的专用分布式密钥生成（DKG）协议，通过联合公开样本定义公共密钥，并结合乘到加转换实现非交互式解密，显著降低了计算成本并提高了安全性。
+>
+> **达到效果:** 该协议在少量轮次内运行，并且是主动安全的，具有可中止性。此外，我们展示了如何基于此协议构建NTRU-Encrypt的阈值变体，并证明其实现的安全性和具体参数的选择。
+>
+> **技术梗概:** 核心在于乘到加转换，我们提供了两种高效的基于格的认证构造方法：一种来自可加同态NTRU加密，另一种来自同态秘密共享，这两种方法可能具有独立的研究价值。
+
+---
+### [推荐] [2026/1856] SVP Is NP-Hard for Some Rank-2 Cyclotomic Modules
+
+- **匹配关键字:** lattice
+
+- **作者:** Jiaqi Liu, Yansong Feng, Yanbin Pan
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1856) | [PDF](https://eprint.iacr.org/2026/1856.pdf)
+
+
+> **研究背景:** 本文探讨了在某些秩为2的cyclotomic模上，最短向量问题（SVP）在$\ell_2$范数下的NP难性。
+>
+> **主要贡献:** 作者通过从3集精确覆盖问题（X3C）到确定多项式时间内归约证明了该结论，并解决了模块闭包下非零向量的障碍。
+>
+> **达到效果:** 研究结果表明，对于特定形式的cyclotomic模，SVP问题是NP完全的。这为基于此类结构的设计提供了理论基础。
+>
+> **技术梗概:** 通过映射Bennett--Peikert Reed--Solomon格子到主cyclotomic理想，并利用Wan的点计数估计来证明coset中包含许多二进制系数代表，从而克服了障碍。
+
+---
+### [推荐] [2026/1857] LatticeBlindFold: A Lattice-Based Analogue of NovaBlindFold
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Luca Dall'Ava
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1857) | [PDF](https://eprint.iacr.org/2026/1857.pdf)
+
+
+> **研究背景:** LatticeBlindFold旨在解决折叠方案在保持零知识性方面的不足，特别是在基于 lattice 的系统中实现类似 NovaBlindFold 协议的功能。
+>
+> **主要贡献:** 该研究提出了第一个基于 lattice 的、可能后量子安全的盲折叠协议 LatticeBlindFold，并采用了 ABDLOP 承诺方案作为核心技术。
+>
+> **达到效果:** LatticeBlindFold 在交互式设置中实现了零知识证明，但仅限于简化场景，未来工作将扩展其实现范围。
+>
+> **技术梗概:** 通过使用 Libra 风格的多项式掩码和 ABDLOP 承诺方案进行同态验证，并结合拒绝采样技术来实现折叠实例与证人的模拟性。
+
+---
+### [推荐] [2026/1859] Finding a Shortest Vector and More in $2^{n/2+o(n)}$ Time using $q$-ary Coset Difference Tree
+
+- **匹配关键字:** lattice
+
+- **作者:** Minki Hhan
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1859) | [PDF](https://eprint.iacr.org/2026/1859.pdf)
+
+
+> **研究背景:** 本文提出了一种新的随机化算法，用于解决精确最短向量问题。该算法在时间与空间复杂度上达到了$2^{n/2+o(n)}$的性能，显著提高了处理高维格问题的能力。
+>
+> **主要贡献:** 作者通过引入$q$-元余子差树的概念，并结合Wagner广义生日算法的思想，提出了一个创新性的解决方案。
+>
+> **达到效果:** 该算法不仅解决了最短向量问题，还能够在相同的时间和空间复杂度下解决最近邻向量问题，对于随机目标和随机格的实例表现尤为突出。
+>
+> **技术梗概:** 作者利用周期高斯函数在最短向量$v$处的梯度近似于$v$（考虑到符号）这一特性，并通过一系列中间格逐步计算相关余子差来实现算法。
+
+---
+### [推荐] [2026/1861] Anonymous Attribute-Based Signcryption: Definitions, Constructions, and Applications
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Yongkang Lang, Fangguo Zhang, Zhiyuan An, Xinyi Huang, Xiaofeng Chen
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1861) | [PDF](https://eprint.iacr.org/2026/1861.pdf)
+
+
+> **研究背景:** 该研究旨在扩展基于属性的签密（ABSC）的概念，引入了匿名属性基签密（A$^2$BSC），以增强隐私保护并满足实际应用需求。
+>
+> **主要贡献:** 作者提出了A$^2$BSC的形式化定义及其安全概念，并构建了一个适用于通用策略的Special A$^2$BSC方案，该方案基于简洁的学习误差假设和基扩展短整数解假设，在标准模型中实现了后量子安全性。
+>
+> **达到效果:** 通过这种方法，研究不仅提供了一种新的签密形式，还为匹配加密（ME）和安排匹配加密（AME）提供了通用策略下的构造，并增强了其安全性。
+>
+> **技术梗概:** 该方案基于简洁的学习误差假设和基扩展短整数解假设构建，利用布尔电路模型表示策略，并通过技术手段实现了对无限联盟的保护。
+
+---
+### [2026/1848] A Quasidifferential Analysis of the Wrong-Key Randomization Hypothesis
+
+- **作者:** Tim Beyne, Gregor Leander, Mariia Mutkovina, Ricardo Rodriguez Reveco
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1848) | [PDF](https://eprint.iacr.org/2026/1848.pdf)
+
+
+> **研究背景:** 研究背景：WKR假设在差分密码分析中用于估计数据复杂度，即错误密钥猜测的行为类似于随机置换。然而，精确计算固定密钥的差分概率直到最近才变得可行。
+>
+> **主要贡献:** 主要贡献是使用拟微分路径来计算PRESENT-like SPNs中的键恢复映射的具体错误密钥分布，并通过掩码优先重新表述揭示沃尔什-哈达玛结构，从而显著降低了计算成本。
+>
+> **达到效果:** 达到的效果是在玩具密码、PRESENT和GIFT中计算出的分布是非单模态的，无法用泊松或二项式定律拟合，因此WKR假设对于所有目标都是形式上错误的；然而，这种偏差不影响王对14轮差分攻击的安全性。
+>
+> **技术梗概:** 技术梗概：通过掩码优先重新表述和沃尔什-哈达玛结构的应用，结合SMT引导路径枚举，有效降低了计算复杂度。
+
+---
+### [2026/1849] Private and Verifiable Outsourcing of Open-Weight LLM Inference
+
+- **作者:** Kanav Gupta, Jonathan Katz, Ian Miers
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1849) | [PDF](https://eprint.iacr.org/2026/1849.pdf)
+
+
+> **研究背景:** 现有开放权重模型允许客户端本地运行大语言模型，以保持数据隐私。然而，这需要大量的硬件和存储资源，限制了小型设备如智能手机上的执行能力。
+>
+> **主要贡献:** 本文提出了一种高效协议，使客户端能够将大型语言模型推理任务安全且可验证地外包给两台恶意但不串通的服务器。
+>
+> **达到效果:** 与前人工作相比，该协议在保持隐私的同时提供了验证功能，并且比现有最佳方案快约11-14倍，同时不对服务器增加额外开销。此外，它支持更大规模的模型执行。
+>
+> **技术梗概:** 通过结合零知识证明和同态加密技术，实现了数据隐私性和结果可验证性之间的平衡。
+
+---
+### [2026/1850] A Code-Based $(k,n)$-Threshold Secret Sharing Scheme with Integrity Verification
+
+- **作者:** Sapna Jyoti Patel, Sumit Kumar Debnath
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1850) | [PDF](https://eprint.iacr.org/2026/1850.pdf)
+
+
+> **研究背景:** 现有的秘密共享方案通常受限于较小的秘密尺寸、非阈值访问结构或缺乏验证份额真实性和重构后秘密完整性的机制。
+>
+> **主要贡献:** 本文提出了一种基于线性最大距离可分码的$(k,n)$-阈值秘密共享方案，该方案通过矩阵表示秘密并利用MDS码的线性特性实现了高效的份额生成和恢复，并引入了哈希函数以增强可靠性。
+>
+> **达到效果:** 实验评估表明，所提出的构造在支持较大秘密尺寸、可扩展性和实际运行时间方面优于现有基于编码的秘密共享方案。
+>
+> **技术梗概:** 该方案通过将秘密表示为有限域上的矩阵并利用MDS码的线性特性来实现高效的份额生成和恢复，并使用哈希函数进行份额认证和重构后秘密完整性的验证。
+
+---
+### [2026/1851] Open EM Side-Channel Dataset for ML-KEM (Kyber) Implementations
+
+- **作者:** Alain Alyosha Magazin, Karim M. Abdellatif
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1851) | [PDF](https://eprint.iacr.org/2026/1851.pdf)
+
+
+> **研究背景:** 该研究旨在提供一个公开的电磁(EM)侧信道数据集，用于评估ML-KEM（Kyber）算法在不同实现下的安全性。
+>
+> **主要贡献:** 贡献在于提供了针对CRYSTALS参考实现、Cortex-M4优化实现和第一级屏蔽实现的20万次窗口化EM迹线，并公开了屏蔽实现中两个份额的数据以支持更细致的研究。
+>
+> **达到效果:** 结果是研究人员能够使用这些数据进行ML-KEM的安全性分析，而无需访问测量设备，从而扩展了侧信道攻击的研究范围。
+>
+> **技术梗概:** 技术上采用了STM32F407 Cortex-M4微控制器和近场EM探针来捕获电磁迹线，并以分块NumPy数组的形式发布敏感变量数据。
+
+---
+### [2026/1852] Jacobian Diagnostics for Under-Constrained Zero-Knowledge Circuits
+
+- **作者:** Vijay Singh
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1852) | [PDF](https://eprint.iacr.org/2026/1852.pdf)
+
+
+> **研究背景:** 研究背景：在零知识应用中，欠约束的算术电路会导致安全性失效问题，即恶意证明者可能以多种方式分配敏感线而仍满足电路。现有工具通过求解器检查、直接多项式求解、抽象解释或模糊测试来解决这一唯一性问题。
+>
+> **主要贡献:** 主要贡献：提出了一种基于精确雅可比线性代数的补充代数诊断方法，区分了三个常被混淆的概念，并提供了一种在给定赋值下验证无限小自由度的方法。
+>
+> **达到效果:** 达到的效果：该方法在初步测量中能够处理6k至60k约束范围内的\texttt{gnark} R1CS实例，并通过可检查的次数预算（$m<\log_2 p$二次约束）来满足分离性假设，从而解决了组件级别的唯一性问题。
+>
+> **技术梗概:** 技术梗概：该方法基于约束雅可比矩阵的核空间分析，结合了微分表示和三角级数计算，以确定局部刚性目标的数量级限制。
+
+---
+### [2026/1853] Automated Reasoning for Indistinguishability in the CCSA
+
+- **作者:** Simon Jeanteur, Laura Kovács, Matteo Maffei, Michael Rawson
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1853) | [PDF](https://eprint.iacr.org/2026/1853.pdf)
+
+
+> **研究背景:** 研究背景：密码协议是安全数字通信的基础，但其设计仍易出错，历史上广泛采用的协议也存在漏洞。形式化验证涵盖符号和计算模型，尽管符号技术能够实现自动化和扩展性，但无法提供计算安全性保证；而计算模型虽然稳健，却难以正式化和自动化。
+>
+> **主要贡献:** 主要贡献：提出了一种新的方法以在CCSA模型中自动化证明不可区分性，并在CryptoVampire2自动证明器中实现了该方法。
+>
+> **达到效果:** 达到的效果：通过设计golgge逻辑扩展了CryptoVampire，成功实现了对不可区分性的自动化验证，填补了现有工具的空白。
+>
+> **技术梗概:** 技术梗概：利用CCSA模型和BC逻辑支持跟踪属性与不可区分性，并设计了一种新的证明方法以应对非经典计算、部分归纳推理等复杂挑战。
+
+---
+### [2026/1855] Delegatable Anonymous Credentials from Legacy Credentials using Recursive zk-SNARKs
+
+- **作者:** Leandro Rometsch, Philipp-Florens Lehwalder, Sebastian Faust, Stefan Schulte
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1855) | [PDF](https://eprint.iacr.org/2026/1855.pdf)
+
+
+> **研究背景:** 随着数字身份系统的普及，尤其是欧洲数字身份证（EUDI）钱包等监管措施的推动，现有系统通常缺乏匿名凭证提供的强大隐私保护。
+>
+> **主要贡献:** 本文提出了一种直接基于传统凭证构建的可委托匿名凭证方案，无需发行方基础设施变更，并实现了常量大小的凭证和链上全不可链接性及各层级的选择属性披露。
+>
+> **达到效果:** 该方案能够支持用户将受限凭证传递给另一方，同时保持所有参与者的匿名性，且凭证大小与层次深度无关。
+>
+> **技术梗概:** 我们使用Plonky2作为递归证明后端，并贡献了一个安全的电路中JWT解析器以弥补先前工作中的漏洞。
+
+---
+### [2026/1858] On the Mismatch between Neural-Discovered Differential-Linear Features and Long-Round Distinguisher Construction
+
+- **作者:** Thomas Peyrin, Zilong Wang, Liu Zhang, Chenlu Zheng
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1858) | [PDF](https://eprint.iacr.org/2026/1858.pdf)
+
+
+> **研究背景:** 现有神经网络辅助的差分-线性分析尚未在多轮优势上超越最强的经典分析方法。研究表明，这些神经网络提取的特征可以被解释为经典的差分-线性掩码，这提示了利用经典方法进行更长轮次分析的可能性。
+>
+> **主要贡献:** 研究者通过修改神经网络模型，并将其应用于Speck32/64和SipHash，展示了神经网络提取的掩码与经典差分-线性逼近之间的关系。
+>
+> **达到效果:** 研究表明，神经网络提取的掩码主要集中在高相关性的差分-线性逼近中，包括一些最强的经典候选者。这些结果为后续长轮次分析提供了基础。
+>
+> **技术梗概:** 研究采用了一种名为Conv1DFully的技术来改进特征提取过程，并通过与SipHash的全面评估进行对比，验证了神经网络方法的有效性。
+
+---
+
 ## 更新: 2026-09-02 10:08
 
 *新增 13 篇论文 (编号 1834--1846)*
