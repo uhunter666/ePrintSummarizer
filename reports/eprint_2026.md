@@ -5,6 +5,259 @@
 
 ---
 
+## 更新: 2026-09-07 09:34
+
+*新增 13 篇论文 (编号 1862--1875)*
+
+### [推荐] [2026/1862] HEAT: Faster Fully Homomorphic Inference via Approximations-Weights Co-Adaptation
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Alessandro Zirilli, Davide Marincione, Evgenios M. Kornaropoulos, Giuseppe Ateniese, Emanuele Rodolà
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1862) | [PDF](https://eprint.iacr.org/2026/1862.pdf)
+
+
+> **研究背景:** 当前的全同态加密(FHE)方法在处理深度学习模型时速度过慢，因为非线性操作需要通过迭代方法近似实现，并且每次迭代都会消耗有限的乘法深度并触发昂贵的重新启动操作。
+>
+> **主要贡献:** HEAT提出了一种细调方法，使得每个非线性操作的迭代次数可学习，允许模型在推理过程中适应遇到的近似误差而无需进行架构更改或从头开始重新训练。
+>
+> **达到效果:** 在加密GPT-2解码任务中，HEAT减少了3.1倍的迭代次数、1.6倍的重新启动次数，并将端到端延迟降低了1.4倍，同时提高了解码的一致性。
+>
+> **技术梗概:** 通过优化每个非线性的学习迭代次数，使得模型权重和迭代次数在训练期间协同适应，从而实现更高效的全同态加密推理。
+
+---
+### [推荐] [2026/1864] Subring VOLE over Galois Rings with Applications to ZK over $\mathbb{Z}_{p^k}$
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Ignacio Cascudo, Xiang Liu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1864) | [PDF](https://eprint.iacr.org/2026/1864.pdf)
+
+
+> **研究背景:** Vector oblivious linear evaluation (VOLE)在多方计算(MPC)和零知识证明(ZK)中广泛应用，其生成效率的提高促进了基于VOLE的ZK研究的发展。然而，现有工作主要集中在有限域上，而整环上的构造则较少且不理想，尤其是在通信量和公共可验证性方面。
+>
+> **主要贡献:** 本文提出了两个恶意安全的子环VOLE (srVOLE)协议：一个是类似PCG的协议，实现了极低的平均通信量；另一个是兼容VOLEitH技术的SoftSpoken-like协议，可用于构建公开可验证的基于VOLE的ZK。
+>
+> **达到效果:** 基于srVOLE构造，本文改进了Moz$\mathbb{Z}_{2^k}$arella中的指定验证者零知识协议为公开可验证的版本，并对QuickSilver进行了适应性调整以增强其性能。
+>
+> **技术梗概:** 通过引入子环VOLE (srVOLE)这一新原语，结合PCG和SoftSpokenOT技术，本文解决了有限域外构造效率低的问题，并实现了高通信效率和公共可验证性的ZK协议。
+
+---
+### [推荐] [2026/1866] Peeling Nonlinear Layers: Algebraic Cryptanalysis of Full-Round Iasta
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Chandan Dey, Abul Kalam, Santanu Sarkar
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1866) | [PDF](https://eprint.iacr.org/2026/1866.pdf)
+
+
+> **研究背景:** Iasta是一种为混合同态加密（HHE）设计的流密码，声称其Iasta-3和Iasta-4实例具有128位的安全性。然而，该研究首次对其进行了全面分析。
+>
+> **主要贡献:** 研究人员通过利用非随机性和结构化构造的线性层矩阵，揭示了Iasta-3、Iasta-4/5实例中的弱点，并提出了剥除非线性层的方法。
+>
+> **达到效果:** 对于某些特定的nonce，可以剥离最终的Cube变换，将秘密密钥系数转换为最多$2^{d-1}$次方程；进一步地，通过剥离初始和最终的线性层，将方程的最高次数降低到$2^{d-2}$。
+>
+> **技术梗概:** 该研究利用了有限矩阵空间的特点，通过代数密码分析技术解决多项式方程，并引入额外的线性化变量来优化攻击复杂度。
+
+---
+### [推荐] [2026/1870] Terrazzo: Memory-Aware GPU Framework for Private Transformer Inference
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Rostin Shokri, Nektarios Georgios Tsoutsos
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1870) | [PDF](https://eprint.iacr.org/2026/1870.pdf)
+
+
+> **研究背景:** 全同态加密（FHE）允许服务器直接在密文数据上运行推理，这为私有变压器推理提供了有前景的基础。然而，其主流方案CKKS不支持矩阵乘法，而GL方案虽然支持但因其密文、明文和评估密钥的庞大尺寸，导致直接GPU实现需要大量VRAM。
+>
+> **主要贡献:** Terrazzo框架通过跨加密学、算法和内核的设计，实现了在普通GPU上进行私有推理。该框架特别针对GL方案进行了优化，确保非线性层不会持有完整的密文，并且每个模型权重都保持其明文大小。
+>
+> **达到效果:** Terrazzo在BERT-base模型上的全输入占用下，于32 GB RTX 5090实现了7.04秒的平均推理时间。在A100上，这一时间为29.98秒，比之前的单A100系统快了2.20到20.09倍。
+>
+> **技术梗概:** Terrazzo通过将启动过程转换为紧凑的Y解码表示、切片处理GL独立调度的密文片段以及限制模管理仅在应用级别进行，并且保持每个模型权重在其明文大小，实现了高效运行。
+
+---
+### [推荐] [2026/1871] PEEV: Parse Encrypt Execute Verify - A Verifiable FHE Framework
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Omar Ahmed, Charles Gouert, Nektarios Georgios Tsoutsos
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1871) | [PDF](https://eprint.iacr.org/2026/1871.pdf)
+
+
+> **研究背景:** 传统的云服务虽然提供了便捷的数据存储和计算资源，但用户数据的安全性问题日益凸显。现有的加密技术如同态加密虽能保护数据的隐私，但在执行过程中无法保证结果的真实性和完整性。
+>
+> **主要贡献:** PEEV框架通过结合解析、加密、执行与验证四个步骤，解决了上述问题，使得开发者能够编写处理加密数据的应用程序，并确保计算结果的正确性。
+>
+> **达到效果:** 该框架实现了低性能开销下的可验证隐私保护计算，支持使用高级语言表达加密程序，简化了开发过程并提高了实用性。
+>
+> **技术梗概:** PEEV框架利用同态加密技术和零知识证明来实现数据在云端的安全处理与验证，确保即使云服务提供商不可信也能保证结果的正确性。
+
+---
+### [推荐] [2026/1872] DNSPIR: Private Information Retrieval Optimized for Privacy-Preserving DNS Lookups
+
+- **匹配关键字:** LWE
+
+- **作者:** Lea Nürnberger, Simon Pohmann, Mattia Veroni, Christian Weinert
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1872) | [PDF](https://eprint.iacr.org/2026/1872.pdf)
+
+
+> **研究背景:** 传统的DNS系统在设计时主要考虑了可靠性和效率，但对隐私保护关注不足。现有的解决方案多侧重于传输过程中的保密性或网络层面的匿名性，而未充分解决查询内容在处理过程中被服务器直接观察的问题。
+>
+> **主要贡献:** 本文提出了一种新的单服务器PIR协议DNSPIR，专门针对DNS查询进行优化，旨在通过私有化DNS查找实现对所有参与服务器的隐私保护。
+>
+> **达到效果:** 实验结果显示，对于包含20亿条记录的大规模数据库，客户端可以以约80KB的通信量和不到5秒的服务器计算时间完成一次PIR查询，优于现有方案在通信成本上的表现，并且仅略微增加了运行时长。
+>
+> **技术梗概:** 该协议采用了NTTlessPIR的思想，并设计了一种新的算法来高效执行基于RLWE的矩阵向量乘法，无需使用NTT友好的密文模数，仅需一个密钥切换密钥，从而显著降低了噪声增长。
+
+---
+### [推荐] [2026/1874] Collusion-Resistant Constrained PRFs for Compute-&-Compare Predicates from LWE
+
+- **匹配关键字:** post-quantum, LWE
+
+- **作者:** Jiaqi Cheng, Rishab Goyal
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1874) | [PDF](https://eprint.iacr.org/2026/1874.pdf)
+
+
+> **研究背景:** 本文旨在设计一种针对计算-比较谓词和限定范围约束的首个抗合谋的约束伪随机函数（CPRFs），基于标准LWE问题，填补了该领域在后量子安全性和表达性约束支持方面的空白。
+>
+> **主要贡献:** 贡献在于提出了新的纯化功能框架，以系统地消除零化攻击，这是破解多种高级密码对象的有效方法之一。同时，设计的CPRF还具有几乎键同态性质，并且能够应用于双向谓词加密和功能性加密。
+>
+> **达到效果:** 结果是实现了首个抗合谋的计算-比较类CPRFs，并在对称密钥设置下获得了此类双向PE/FE方案，填补了内积谓词之外的空白。
+>
+> **技术梗概:** 技术上基于LWE问题设计了新的框架来纯化功能，以抵抗零化攻击，并结合了抗合谋性和键同态性质。
+
+---
+### [2026/1863] OptiMix: Scalable and Distributed Approaches  for Latency Optimization in Modern Mixnets
+
+- **作者:** Mahdi Rahimi
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1863) | [PDF](https://eprint.iacr.org/2026/1863.pdf)
+
+
+> **研究背景:** 现有的混合网络（Mixnets）虽然提供了匿名性，但增加了通信延迟，限制了其在延迟敏感应用中的适用性。
+>
+> **主要贡献:** OptiMix 提出了一种通用的低延迟混合网络模型，并提出了节点布置、战略路由和负载均衡算法以优化延迟。
+>
+> **达到效果:** 通过 OptiMix 的方法，在不同混合网络设计中实现了显著的延迟降低，同时保持了较低的匿名性损失。
+>
+> **技术梗概:** OptiMix 引入了一种高效的分布式协议来安排节点，并提出了新的战略路由方案和负载均衡算法以优化通信延迟。
+
+---
+### [2026/1865] Polytopic Sieving: Practical Low-Data Key-Recovery Attacks on Reduced-Round AES
+
+- **作者:** Stefan Kölbl
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1865) | [PDF](https://eprint.iacr.org/2026/1865.pdf)
+
+
+> **研究背景:** 研究背景：在对减少轮数的分组密码进行秘密密钥恢复攻击时，降低所需的数据复杂度是一个基本问题。
+>
+> **主要贡献:** 主要贡献是提出了Polytopic Sieving框架，并将其应用于减少轮数的AES中，通过分析锚字节的代数依赖性，显著限制了可实现的子密钥空间。
+>
+> **达到效果:** 达到了在仅使用3个选择明文的情况下，在$2^{40}$的时间复杂度下进行有效的密钥恢复，或在少于$2^{34}$的时间复杂度下使用4个选择明文。这为多面攻击的数据效率设定了新的基准，并优于其他近期技术如子空间轨迹密码分析和混合积分攻击。
+>
+> **技术梗概:** 技术梗概：通过表征锚字节的代数依赖性，利用跨列和跨行几何一致性来限制可实现的子密钥空间，并结合分割半途而击方法进一步减少数据和时间复杂度。
+
+---
+### [2026/1867] A Simple Compiler for CCA2-Secure Pseudorandom Codes in the Standard Model
+
+- **作者:** Nico Döttling, Antoine Joux, Venkata Koppula, Mahesh Sreekumar Rajasree, Hendrik Waldner
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1867) | [PDF](https://eprint.iacr.org/2026/1867.pdf)
+
+
+> **研究背景:** 研究背景：公共密钥伪随机码（PRC）结合了两个看似矛盾的特性，其编码字在计算上与均匀随机字符串不可区分，但秘密键解码器可以在受到Hamming距离限制的情况下恢复编码消息。Döttling等人展示了如何通过基于Koppula-Waters提示式伪随机生成器框架的通用编译器，在标准模型中实现适应性选择密文（CCA2）攻击下的安全PRC。
+>
+> **主要贡献:** 主要贡献：本文提出了一种更为简单的黑盒编译器，从任何适应性α-稳健、CPA-伪随机PRC出发，仅使用一个安全的伪随机生成器和几乎完全正确的IND-CCA2-安全公钥加密方案，构造了一个适应性α/2-稳健、α/2-CCA2-伪随机PRC。
+>
+> **达到效果:** 达到的效果：编译后的PRC具有与基础PRC两倍长度的编码字，并因此在相对解码半径上仅损失因子二；特别是它保持了恒定的相对解码半径。
+>
+> **技术梗概:** 技术梗概：该编译器利用伪随机生成器和几乎完全正确的IND-CCA2-安全公钥加密方案，通过简单的构造方法实现了适应性选择密文攻击下的安全PRC。
+
+---
+### [2026/1868] Zero-Knowledge PCPs of Quasilinear Size via Locally Simulatable Sheaf Codes
+
+- **作者:** Tom Gur, Nicholas Spooner, Hadas Zeilberger
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1868) | [PDF](https://eprint.iacr.org/2026/1868.pdf)
+
+
+> **研究背景:** 本文旨在改进现有零知识PCP的长度和查询复杂性，通过引入局部可模拟sheaf码的新技术来实现这一目标。
+>
+> **主要贡献:** 作者提出了一种基于局部可模拟sheaf码的零知识PCP构造方法，使得证明长度达到准线性大小，并且查询次数为多项式级别。
+>
+> **达到效果:** 该研究严格改进了Gur等人（STOC 2024；STOC 2025）的工作，实现了更短的证明长度和更低的查询复杂度。
+>
+> **技术梗概:** 通过结合Ben-Sasson和Sudan以及Dinur的工作，并利用局部可模拟sheaf码的新技术来证明零知识属性。
+
+---
+### [2026/1869] High-Precision Homomorphic ALU over Arbitrary Moduli with $O(1)$ Bootstrapping
+
+- **作者:** Jiaming Liu, Shihe Ma, Anyu Wang, Xiaoyun Wang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1869) | [PDF](https://eprint.iacr.org/2026/1869.pdf)
+
+
+> **研究背景:** 该研究针对大整数上的同态计算，需要同时支持算术和非算术操作。现有方法在处理任意模数时存在复杂度较高或限制于特定模数的问题。
+>
+> **主要贡献:** 第一项贡献是提出了一种高效的支持任意明文模数的同态算术框架；第二项贡献是一种使用O(1)次同态计算完成的算术到数字转换方法。
+>
+> **达到效果:** 该研究实现了对任意模数的大整数进行同态运算，并且在两种操作类型上都达到了O(1)次同态重新加密，显著提高了效率。
+>
+> **技术梗概:** 通过结合CVP方法寻找条件良好的定义多项式和使用同态蒙哥马利乘法技术，该研究有效降低了计算复杂度并扩展了模数的适用范围。
+
+---
+### [2026/1875] Equivalence Classes of BOGI-Based Ciphers for Differential and Linear Cryptanalysis
+
+- **作者:** Insung Kim, Seonggyeom Kim, Sunyeop Kim, Donggeun Kwon, Byoungjin Seok, Deukjo Hong, Jaechul Sung, Seokhie Hong, Sangjin Lee, Dongjae Lee
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1875) | [PDF](https://eprint.iacr.org/2026/1875.pdf)
+
+
+> **研究背景:** 研究了基于BOGI的密码设计空间，通过结合4位S盒和满足“不良输出必须映射到良好输入”原则的比特置换，扩展了GIFT的设计范围。
+>
+> **主要贡献:** 定义了DC/LC等价性，并根据置换特性和轨迹反转给出了充分条件，将41,472个参数代表划分为864类（BOGI-64）和5,184类（BOGI-128）。
+>
+> **达到效果:** 通过分类，发现至少有59类在第19轮达到双重阈值，比GIFT-128早三轮。此外，与GIFT相比，在硬件和软件中进行了性能比较。
+>
+> **技术梗概:** 使用重量保持双射定义了差分和线性轨迹集之间的等价关系，并通过置换特性和轨迹反转给出了充分条件来决定初始单词置换的存在性。
+
+---
+
 ## 更新: 2026-09-04 09:45
 
 *新增 14 篇论文 (编号 1847--1861)*
