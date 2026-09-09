@@ -5,6 +5,303 @@
 
 ---
 
+## 更新: 2026-09-09 19:35
+
+*新增 16 篇论文 (编号 1876--1893)*
+
+### [推荐] [2026/1876] AH-BKZ: A Lattice Reduction Algorithm with Asynchronous Hybrid Processing
+
+- **匹配关键字:** lattice
+
+- **作者:** Renya Hashimoto, Junji Shikata, Atsushi Takayasu, Yuntao Wang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1876) | [PDF](https://eprint.iacr.org/2026/1876.pdf)
+
+
+> **研究背景:** 研究背景：评估最短向量问题（SVP）的难度对于选择基于格的密码学中的安全参数至关重要。当前最快的SVP求解器基于G6K变体，但其巨大的内存消耗限制了高维执行。
+>
+> **主要贡献:** 主要贡献：提出了AH-BKZ算法，通过异步运行多个SVP或acles来利用预处理阶段未充分利用的计算资源，从而加速基础约简过程。
+>
+> **达到效果:** 达到的效果：与基于ProPnjBKZ的预处理相比，在相同峰值内存约束下，AH-BKZ将整体运行时间最多减少了23.1%，平均减少了18.6%（针对维度124-148的成功运行）。
+>
+> **技术梗概:** 技术梗概：AH-BKZ算法通过在预处理阶段异步运行多个SVP或acles来优化内存使用，从而加速基础约简过程。
+
+---
+### [推荐] [2026/1885] Compact Lattice-Based NIZK Arguments for Set Membership and Ring Signatures without RO
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Nam Tran, Khoa Nguyen, Dongxi Liu, Josef Pieprzyk, Willy Susilo
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1885) | [PDF](https://eprint.iacr.org/2026/1885.pdf)
+
+
+> **研究背景:** 零知识证明在集合成员身份验证中是隐私保护构造如环签名和匿名凭证的基础。现有的简洁构造主要依赖Fiat-Shamir变换并在随机预言模型下实现，而基于后量子假设的标准模型非交互式证明要么通用且低效，要么理论上紧凑但实际不可行。
+>
+> **主要贡献:** 作者提出了第一个在标准模型下的基于格的集合成员身份零知识论证，并实现了对数级的证明大小，与基于累加器的随机预言模型构造相当，同时达到了后量子安全性而无需随机预言机。
+>
+> **达到效果:** 该构造使环签名的大小达到$O(\log R)\cdot \widetilde{O}(\lambda^{2})$位，相较于Chatterjee等人（CRYPTO 2021）的原始模型构建，在安全参数$\lambda$上的依赖性提高了两倍。
+>
+> **技术梗概:** 技术上，作者引入了一种新的带有陷阱门的$\Sigma$协议，支持在多个异构模数下处理线性关系，无需进行模数同化，从而实现了模块化的紧凑证明方法，并兼容格累加器。
+
+---
+### [2026/1877] Otter: A Provably MEV-Resilient Automated Market Maker via Surplus Redistribution
+
+- **作者:** Elaine Shi, Mengqian Zhang, Hao Chung, Yuhao Li
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1877) | [PDF](https://eprint.iacr.org/2026/1877.pdf)
+
+
+> **研究背景:** 研究背景：自动做市商（AMM）中的矿工可提取价值（MEV）问题允许矿工通过交易排序和注入交易获利，这增加了用户成本并促进了矿工中心化。
+>
+> **主要贡献:** 主要贡献是提出Otter机制，这是一种双资产批量AMM，在共识层提供抗审查性且区块空间未拥堵的情况下，能够证明其对MEV的抵抗力，并使用户和矿工的最佳行为成为占优策略。
+>
+> **达到效果:** 达到的效果包括确保矿工无法通过战略性偏离获利（如重新排序报价或注入伪节点报价），并且机制在满足所需博弈论属性的同时最大化了社会福利。
+>
+> **技术梗概:** 技术梗概：Otter引入了一种新的范式——盈余再分配，通过将剩余盈余重定向到更广泛的社区来证明防止残余盈余被作为MEV捕获。
+
+---
+### [2026/1879] Peel and Vote: A Paper Ballot Design for Publicly Verifiable Risk-Limiting Audits
+
+- **作者:** Jack Nolan, Yasmine Vazirinejad, Siamak Shahandashti, Feng Hao
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1879) | [PDF](https://eprint.iacr.org/2026/1879.pdf)
+
+
+> **研究背景:** 现有的风险限制审计（RLA）方法依赖于选举当局在存储和抽样过程中的诚实行为，这使得选民无法验证。
+>
+> **主要贡献:** 本文提出了一种新的可验证批量级RLA方案，通过移除对单张选票的跟踪需求，将信任锚点从选举当局转移到了选民。
+>
+> **达到效果:** 该方案利用可剥离和投票的设计，使每个批次中的加密代碼相互关联，并在选举前随机分布在各个选区中，从而提高了审计过程的透明度和公正性。
+>
+> **技术梗概:** 通过引入带有预打印密码图形的可剥离票面设计，选民选择候选人后保留收据，并将相同的密码图形发布到公告板上，实现了批量级的可验证审计。
+
+---
+### [2026/1880] Private Quantised Neural Network Inference
+
+- **作者:** Hendrik Eerikson, Sven Laur, Pille Pullonen-Raudvere
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1880) | [PDF](https://eprint.iacr.org/2026/1880.pdf)
+
+
+> **研究背景:** 在许多分类问题中，基于神经网络的机器学习模型被广泛应用，但其使用过程中的隐私问题尚未得到充分解决。
+>
+> **主要贡献:** 作者提出了适用于私有量化神经网络推理的协议，并将其应用于Sharemind MPC安全计算框架中。
+>
+> **达到效果:** 通过这些协议，实现了在不泄露敏感信息的情况下进行神经网络推理，提高了模型参数的安全性和效率。
+>
+> **技术梗概:** 该研究基于PyTorch的张量量化方案，将浮点数模型参数映射为8位整数值，并提出了常数轮次的整数卷积和矩阵乘法协议。
+
+---
+### [2026/1881] Constant-Time Conditions for Left-to-Right Scalar Multiplication
+
+- **作者:** Sergey Agievich
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1881) | [PDF](https://eprint.iacr.org/2026/1881.pdf)
+
+
+> **研究背景:** 研究了从最显著位到最小显著位处理椭圆曲线上的标量乘法中的例外情况，以确保常时间执行并防止定时攻击。
+>
+> **主要贡献:** 提出了常时间条件下左至右标量乘法的条件，并证明了Comb方法三种变体在轻微限制下满足这些条件。
+>
+> **达到效果:** 通过使用不需要异常处理的快速公式进行所有加倍和中间加法，确保了所有三种变体的常时间行为。
+>
+> **技术梗概:** 分析了点添加和加倍过程中的例外情况，并通过标量重编码算法优化了SAB-Set变体。
+
+---
+### [2026/1882] A Reproducible Security–Performance Benchmark Protocol for Lightweight AEAD on Resource-Constrained IoT Nodes
+
+- **作者:** Atul, Vivek Shukla, Mehul Kumar Das, Varun Shukla, Divya Mishra
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1882) | [PDF](https://eprint.iacr.org/2026/1882.pdf)
+
+
+> **研究背景:** 针对资源受限的物联网节点，必须在有限的处理能力、内存和电池容量下保护传输数据的安全性和性能。
+>
+> **主要贡献:** 提出了ASCON-Edge协议，用于评估标准化Ascon-AEAD128在资源受限的IoT节点上的安全性、性能、内存成本及直接测量的能量成本。
+>
+> **达到效果:** 该协议通过与AES 128-GCM和ChaCha20-Poly1305进行比较，定义了确定性工作负载、唯一性和重放策略等，实现了可重复的研究方法。
+>
+> **技术梗概:** 采用标准化的工作流程和技术规范，确保研究结果的可复现性，并分离AEAD保证与应用层的责任。
+
+---
+### [2026/1883] More Efficient (Hintless) Keyword Private Information Retrieval
+
+- **作者:** Minzhang Li, Feng-Hao Liu, Guangbei Yi
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1883) | [PDF](https://eprint.iacr.org/2026/1883.pdf)
+
+
+> **研究背景:** 传统私有信息检索（PIR）允许客户端从数据库中检索与特定索引相关的信息而不泄露查询的索引。关键词私有信息检索（Keyword PIR）进一步扩展了这一概念，使得客户端可以保持查询关键词的隐私性地检索关联值。现有方案存在性能和安全性上的局限性。
+>
+> **主要贡献:** 本文提出了一种新的关键词PIR框架，该框架基于Luo等人提出的无提示KsPIR方案，并结合线性同态技术及特殊的实现方法来加速计算过程。
+>
+> **达到效果:** 实验结果表明，在使用相同索引-PIR方案的情况下，与现有通用框架相比，本文提出的方法平均在线速度提高了2.65倍。
+>
+> **技术梗概:** 该方案利用了Peikert和Pepin提出的线性同态技术，并设计了一种基于Galois理论的分步实现方法来加速同态评估过程。
+
+---
+### [2026/1884] Corrigendum to: Computing Optimal Ate Pairings on Elliptic   Curves with Embedding Degree 9, 15 and 27
+
+- **作者:** Walid Haddaji
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1884) | [PDF](https://eprint.iacr.org/2026/1884.pdf)
+
+
+> **研究背景:** 本文修正了关于计算嵌入度为9、15和27的椭圆曲线最优Ate配对的相关错误，特别是针对BLS27曲线在256位和192位安全级别的种子参数问题。
+>
+> **主要贡献:** 作者提供了经过验证并纠正的种子参数，确保了$r(x)$和$p(x)$均为素数，满足构建适合计算Ate配对的椭圆曲线的要求。
+>
+> **达到效果:** 通过详尽搜索得到的修正后的种子参数，在SageMath中验证后确认了其正确性，并且所有其他原始结果保持不变。
+>
+> **技术梗概:** 该研究采用了详尽搜索的方法来找到满足条件的种子参数，确保了配对计算所需的数学性质。
+
+---
+### [2026/1886] Symplex: Improved Pairing-Based zkSNARK using Partial Fraction Techniques
+
+- **作者:** Charanjit S. Jutla, Arnab Roy
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1886) | [PDF](https://eprint.iacr.org/2026/1886.pdf)
+
+
+> **研究背景:** 研究背景：Symplex 是一种基于配对的零知识可证明正确性论证（zkSNARK），针对R1CS问题进行了优化，保持了Groth16的简洁语法，并通过减少证明者的成本实现了性能提升。
+>
+> **主要贡献:** 主要贡献在于使用部分分数技术预计算输出线选择多项式，从而减少了证明者的工作量，同时验证者流程保持不变。
+>
+> **达到效果:** 达到的效果是对于约束数量n、线数量m和公共输入数量ℓ，Symplex的证明者仅需进行四次FFT操作，而Groth16则需要六次；并且在BLS12-381原型中实现了SHA-256电路验证速度提升约1.84倍。
+>
+> **技术梗概:** 技术梗概：通过部分分数方法优化了输出线选择多项式的计算，使得证明者仅需处理左右线向量的FFT操作，而验证者流程保持与Groth16相同。
+
+---
+### [2026/1887] VERA: VERifiable Microarchitectural Monitoring for Adversarially Robust Edge AI
+
+- **作者:** Soumi Chatterjee, Debadrita Talapatra, Nimish Mishra, Debdeep Mukhopadhyay
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1887) | [PDF](https://eprint.iacr.org/2026/1887.pdf)
+
+
+> **研究背景:** 随着机器学习向边缘设备迁移，模型所有者必须信任在不受其直接控制的输入上产生的预测。然而，精心构造的对抗性输入可以诱导错误的预测，现有防御手段虽能检测这些输入但缺乏隐私保护机制以验证检测结果。
+>
+> **主要贡献:** VERA框架结合了轻量级硬件性能计数器（HPC）监控与零知识范围证明（ZKRPs），实现了边缘设备上的可验证且隐私保护的对抗性检测。
+>
+> **达到效果:** VERA能够在资源受限的设备上以毫秒级时间进行非交互式验证，有效抵御多种针对MNIST和CIFAR-10的数据攻击。
+>
+> **技术梗概:** VERA通过使用HPC测量值来捕捉由对抗性扰动引起的内部激活模式变化，并利用ZKRPs证明这些值落在预设的良性范围内，而不泄露具体数值。
+
+---
+### [2026/1888] BMuSig2: Schnorr-Compatible Blind Multi-Signatures
+
+- **作者:** Kanchan Bisht, Keerthi Aiswarya Varshini, Shivam Sethi, Maria Francis, R. Kabaleeshwaran
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1888) | [PDF](https://eprint.iacr.org/2026/1888.pdf)
+
+
+> **研究背景:** 盲签名和多签密钥是已知的密码学原语，但将两者结合的盲多签密钥（BMS）直到最近才被正式化。BMuSig2旨在提供一种既能保持标准Schnorr签名兼容性又能实现盲多签功能的设计方案。
+>
+> **主要贡献:** BMuSig2提出了一种两轮并发安全的盲多签方案，其签名和验证过程与标准Schnorr签名一致，使得使用Schnorr签名的系统可以无缝集成该方案。
+>
+> **达到效果:** 通过结合MuSig2多签密钥技术和最近的盲签密钥技术，BMuSig2实现了并发安全性，并且在形式化证明中依赖于MuSig2的不可伪造性和基础NIZK及PKE组件的安全性。
+>
+> **技术梗概:** BMuSig2采用了基于非交互式零知识论证（NIZK）和公钥加密（PKE）的技术，以实现并发安全性和与标准Schnorr签名的兼容性。
+
+---
+### [2026/1890] Rogue: Updatable Matrix Lookup Arguments and Applications to Verifiable Databases
+
+- **作者:** Christodoulos Pappas, Zhuo Cai, Dimitrios Papadopoulos
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1890) | [PDF](https://eprint.iacr.org/2026/1890.pdf)
+
+
+> **研究背景:** 现有方案在证明大数据集上部分计算的正确性时，通常需要将整个数据集加载到SNARK中，导致高昂的预处理成本。然而，某些计算仅需访问一小部分数据（如数据库查询），因此需要一种能够高效验证这些计算且具有子线性证明者复杂度和更新机制的方法。
+>
+> **主要贡献:** Rogue是首个在任何时候进行更新时都只需按实际更改数量比例的时间完成的矩阵查找论证方案。它支持整个行查找，时间仅与行数成正比（与行大小无关），从而显著提高了效率。
+>
+> **达到效果:** 实验结果显示，对于一个$2^{20}	imes 2^7$的矩阵和$2^{10}$次行访问，Rogue实现了约21-942倍和76-30000倍的速度提升。
+>
+> **技术梗概:** Rogue通过引入一种新的矩阵查找论证机制，结合了动态更新技术和高效的查询处理方法，确保了证明者时间和更新时间的线性增长特性。
+
+---
+### [2026/1891] Improved Related-Key Boomerang Distinguisher for Full-Round FUTURE
+
+- **作者:** Guoqiang Liu, Suping Liu, Wuyou Zhang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1891) | [PDF](https://eprint.iacr.org/2026/1891.pdf)
+
+
+> **研究背景:** FUTURE是一种针对低延迟硬件设计的轻量级分组密码，具有64位块大小、128位密钥和10轮结构。
+>
+> **主要贡献:** 研究提出了一种改进的相关密钥Boomerang区分器，并优化了子密码和中间层的一起工作。
+>
+> **达到效果:** 该区分器的概率为$2^{-35.54}$，数据量成本为$2^{37.54}$查询和XOR操作，在普通个人电脑上运行约63.9小时即可实现，比之前的最佳全轮相关密钥Boomerang区分器提高了$2^{10.26}$倍。
+>
+> **技术梗概:** 采用位级别约束模型，结合差分分布表的确切权重和Boomerang连接性表的精确条目，优化了目标函数值为$36$的全轮区分器。
+
+---
+### [2026/1892] Dynasaurs: Efficient Universal Dynamic zkSNARKs from Sparse Linear Arguments
+
+- **作者:** Martí Batista, Álvaro Montes, Nikitas Paslis, Carla Ràfols
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1892) | [PDF](https://eprint.iacr.org/2026/1892.pdf)
+
+
+> **研究背景:** Dynasaurs研究了动态零知识证明（zkSNARKs）的高效实现，特别是针对稀疏线性关系的情况。现有的解决方案要么需要电路特定设置，要么发送大量组元素并要求大量的对价格运算。
+>
+> **主要贡献:** 该研究提出了两种主要贡献：一种基于全证人依赖论证和有理编码矩阵构建的稀疏线性关系zkSNARK；以及一个编译器将任何稀疏线性关系论证转换为动态论证，同时保持...
+>
+> **达到效果:** Dynasaurs通过上述贡献，在保证证明效率的同时，实现了通用动态zkSNARKs，并显著减少了通信量和计算成本。
+>
+> **技术梗概:** 研究采用了一种新的论证方法，结合了全证人依赖的论证技术和有理编码矩阵，以实现对稀疏线性关系的有效处理。
+
+---
+### [2026/1893] Bounded Gaps Between Primes: An Upper Bound of 236
+
+- **作者:** Zhao Song, Song Yue
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1893) | [PDF](https://eprint.iacr.org/2026/1893.pdf)
+
+
+> **研究背景:** 研究质数间隔的上界是解析数论中的经典问题，自张益唐首次证明了存在无限多对相差小于700万的质数组合以来，这一领域取得了显著进展。
+>
+> **主要贡献:** 本文通过改进现有的技术方法，将质数间隔的上界进一步缩小至236，这是对该领域的又一重要贡献。
+>
+> **达到效果:** 研究结果表明，在无限多对相邻质数中，它们之间的最大间隔不超过236，这一发现接近于孪生素数猜想中的理论极限值。
+>
+> **技术梗概:** 作者采用了一种新的筛法技术，并结合了Maynard的方法来优化参数设置和选择策略，从而实现了更小的上界估计。
+
+---
+
 ## 更新: 2026-09-07 09:34
 
 *新增 13 篇论文 (编号 1862--1875)*
