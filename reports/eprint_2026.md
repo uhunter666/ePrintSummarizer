@@ -5,6 +5,643 @@
 
 ---
 
+## 更新: 2026-09-15 07:17
+
+*新增 34 篇论文 (编号 1984--2018)*
+
+### [推荐] [2026/1985] Post-Quantum Private Set Intersection for Small Sets
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Junxin Liu, Mike Rosulek, Ni Trieu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1985) | [PDF](https://eprint.iacr.org/2026/1985.pdf)
+
+
+> **研究背景:** 当前的私有集合交集（PSI）协议在处理小型数据集时表现出色，但它们面临量子计算带来的安全挑战。现有协议如RT21虽然适用于小规模集合，但在后量子时代存在兼容性问题。
+>
+> **主要贡献:** 本文通过修改RT21协议以适应后量子密钥封装机制（ML-KEM），并提出了一种直接扩展理想置换的方法，从而解决了其在后量子安全方面的局限性。
+>
+> **达到效果:** 实验结果显示，在标准的后量子原语支持下，该协议实现了低至0.25毫秒/项的延迟和1.67千字节/项的通信量，性能损失在1.25倍到5.92倍之间。
+>
+> **技术梗概:** 通过引入新的盲键值存储抽象，并结合Keccak置换家族构建大规模理想置换，本文提出的方法使得PSI协议能够在后量子环境中更加实用。
+
+---
+### [推荐] [2026/1988] Wasp: Succinct Non-Interactive Zero-Knowledge Proofs from VOLE
+
+- **匹配关键字:** lattice
+
+- **作者:** Zhanpeng Guo, Zhelei Zhou, Yun Li, Chenkai Weng, Cheng Hong, Tao Wei
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1988) | [PDF](https://eprint.iacr.org/2026/1988.pdf)
+
+
+> **研究背景:** 基于向量模糊线性评估（VOLE）的零知识证明（ZKP）在验证者效率方面表现出色，但通常需要线性通信和验证。现有技术如Antman和Antman++虽然减少了通信成本，但仍保持交互性和非精简的验证者。
+>
+> **主要贡献:** 本文提出了一个名为Wasp的简洁非交互式零知识证明系统，通过增强信息论多项式认证码（IT-PAC）为通用函数提供完整的多项式承诺方案支持，并构建了基于Antman的SIMD电路和基于Plonkish约束系统的通用zkSNARK。
+>
+> **达到效果:** Wasp实现了非交互式的ZKP，验证者时间和证明大小均为常数级。与现有技术相比，Wasp显著减少了通信成本并提高了验证效率。
+>
+> **技术梗概:** 通过引入支持通用评估开口的多项式承诺方案（PCS），优化了SIMD到通用编译器，并利用稀疏矩阵表示和扩展预处理技术来实现上述目标。
+
+---
+### [推荐] [2026/1991] Towards Practical Iterative Rejection Sampling: A Compact and Efficient Signature over Module Lattices
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Yifan Ming, Jipeng Zhang, Zihan Liu, Guofeng Tang, Pengfei Chen, Yutao Sun, Si Gao, Cong Zhang, Long Chen
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1991) | [PDF](https://eprint.iacr.org/2026/1991.pdf)
+
+
+> **研究背景:** 现有的基于模块格的签名方案在紧凑性、实现简单性和依赖标准格假设之间存在严格权衡。
+>
+> **主要贡献:** SHUTTLE通过引入三项关键技术，实现了更小的签名尺寸和更快的执行速度：确定性的迭代采样循环替换秘密相关的拒绝机制；将过渡逻辑重新表述为简单的整数区间比较；以及采用不对称拉伸-压缩机制来抵消MLWE参数扩展。
+>
+> **达到效果:** SHUTTLE在NIST Level I实现了1175字节的签名尺寸（合并后2167字节），分别比ML-DSA-44和HAETAE-120减少了51%和20%，同时实现了常数时间执行，签名速度约为HAETAE-120的3倍，并且验证速度优于ML-DSA-44。
+>
+> **技术梗概:** 通过确定性的迭代采样循环替换秘密相关的拒绝机制；将过渡逻辑重新表述为简单的整数区间比较；以及采用不对称拉伸-压缩机制来抵消MLWE参数扩展。
+
+---
+### [推荐] [2026/1992] Bridging the Cryptographic Transition: A Unified Framework for Post-Quantum Key Exchange
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Benjamin Dowling, Bhagya Wimalasiri
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1992) | [PDF](https://eprint.iacr.org/2026/1992.pdf)
+
+
+> **研究背景:** 鉴于Google宣布了2029年完成后量子密码学(PQC)迁移的内部目标，比NIST和美国政府设定的2035年期限提前了六年，本文旨在通过构建统一的安全框架来简化现有依赖经典密钥交换机制的互联网协议向后量子密钥交换的过渡。
+>
+> **主要贡献:** 作者提出了一种统一的框架，将经典的密钥交换构造迁移到其对应的后量子版本，并进行了形式化分析以确保安全性。
+>
+> **达到效果:** 该框架能够有效地支持现有协议的安全迁移至后量子时代，从而缓解紧迫的时间压力。
+>
+> **技术梗概:** 通过形式化验证和安全分析技术，本文设计了一种统一的框架来实现经典密钥交换向后量子密钥交换的平滑过渡。
+
+---
+### [推荐] [2026/2003] NP-Hardness of Ideal Lattice Problems
+
+- **匹配关键字:** lattice
+
+- **作者:** Daniel E. Martin
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2003) | [PDF](https://eprint.iacr.org/2026/2003.pdf)
+
+
+> **研究背景:** 研究背景：本文探讨了理想格问题（如最短向量问题SVP和最近向量问题CVP）在$\ell_2$范数下的最坏情况复杂性。
+>
+> **主要贡献:** 主要贡献：作者通过提供一个保持维度的确定多项式时间归约，将这些理想格问题与通用格问题联系起来。
+>
+> **达到效果:** 达到的效果：证明了理想格问题在最坏情况下的难度等同于通用格问题，从而为基于格的密码系统提供了理论支持。
+>
+> **技术梗概:** 技术梗概：通过构造嵌入数域的理想格来近似输入格，并利用其判别式和整环性质实现归约。
+
+---
+### [推荐] [2026/2009] On Succinct Obfuscation via Propositional Proofs
+
+- **匹配关键字:** LWE
+
+- **作者:** Abhishek Jain, Zhengzhong Jin, Surya Mathialagan, Omer Paneth
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2009) | [PDF](https://eprint.iacr.org/2026/2009.pdf)
+
+
+> **研究背景:** 研究旨在最小化混淆程序的大小，特别是在输入等价程序中去除输入大小依赖性。
+>
+> **主要贡献:** 提出了完全简洁的IO新概念，并基于特定类别的程序构建了此类混淆。
+>
+> **达到效果:** 成功实现了与公有部分和输入大小无关的增长的混淆程序大小，并通过简洁密码学原语将其扩展到通用IO安全。
+>
+> **技术梗概:** 利用Cook理论PV中的等价性证明，结合超级多项式硬电路和LWE，构造了完全简洁的pv-IO，并基于这些原语进行进一步的构建。
+
+---
+### [推荐] [2026/2010] Beasley: Efficient Zero-Knowledge Proofs for Lattice-based Round-Optimal Oblivious Pseudorandom Functions
+
+- **匹配关键字:** lattice
+
+- **作者:** Baiyu Li, Ting-Yuan Wang, Jiapeng Zhang
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2010) | [PDF](https://eprint.iacr.org/2026/2010.pdf)
+
+
+> **研究背景:** 现有可验证的不可知态伪随机函数(VOPRF)主要依赖于易受量子攻击的安全假设。尽管存在理论上同时实现轮最优和恶意安全性的格基构造，但缺乏实际实施，因为证明基于格基伪随机函数正确评估的零知识证明极其昂贵。
+>
+> **主要贡献:** Beasley首次实现了基于标准格假设的轮最优、恶意安全的VOPRF原型。通过引入两个核心优化：一是扩展Boneh-Lewi-Montgomery-Raghunathan (BLMR13)伪随机函数，二是使用环切换多项式检查协议替代LaBRADOR风格证明，并高效实现OPRF计算的算术化。
+>
+> **达到效果:** Beasley显著降低了评估深度和运行时间，同时保持了安全性和性能。通过采用较大的环维数（512），实现了快速的环算术、紧凑的密钥以及高效的精确范围证明。
+>
+> **技术梗概:** 该设计结合了BLMR13伪随机函数的并行处理技术和环切换多项式检查协议，有效降低了评估深度和运行时间，并通过优化算术化提高了性能。
+
+---
+### [推荐] [2026/2011] CauchyFold: Residue-Optimal High-Arity Lattice Folding via Scaled Cauchy Challenges
+
+- **匹配关键字:** lattice
+
+- **作者:** Xiang Wang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2011) | [PDF](https://eprint.iacr.org/2026/2011.pdf)
+
+
+> **研究背景:** 研究背景：现有的直接高元二次折叠协议在处理大量输入时，暴露了过多的混合交互项，这限制了其效率和安全性。CauchyFold旨在通过优化挑战机制来减少这些交互项，从而提高折叠协议的效果。
+>
+> **主要贡献:** 主要贡献：提出了CauchyFold协议，利用缩放柯西挑战实现最优余数高元二次折叠，减少了混合状态的必要宽度，提高了折叠效率和安全性。
+>
+> **达到效果:** 达到的效果：通过优化后的挑战机制，CauchyFold成功实现了仅需线性关系的折叠过程，并且在特定假设下保证了节点级的知识健全性。
+>
+> **技术梗概:** 技术梗概：CauchyFold利用多项式载体进行承诺，在柯西挑战后确定混合部分的二次关系，并通过字段级别的检查将折叠的关系转化为承诺的线性关系，从而实现高效安全的折叠协议。
+
+---
+### [推荐] [2026/2012] Universally Composable Reverse Firewalls for Oblivious Linear Evaluation and Applications
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Suvradip Chakraborty, Kiran Deep Ghosh, Satrajit Ghosh, Subha Kar, Divyam Katiyar, Sougata Mandal, Soumit Pal, Amlan Sinha
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2012) | [PDF](https://eprint.iacr.org/2026/2012.pdf)
+
+
+> **研究背景:** 传统的多方计算(MPC)假设各方在可信赖的机器上执行协议，但在设备被黑的情况下，这一假设会失效。为应对这种威胁，引入了反防火墙(RF)，通过外部方式安全地处理消息，而不依赖于内部执行环境的信任。
+>
+> **主要贡献:** 研究提出了首个适用于半诚实对手的、基于通用可组合性框架下的抗篡改算术MPC协议，并针对Oblivious Linear Evaluation(OLE)功能进行了形式化定义和实现。
+>
+> **达到效果:** 通过设计并证明了两种不同安全模型下的OLE协议，实现了在加性同态加密(AHE)基础上的半诚实对手下通用可组合安全性。
+>
+> **技术梗概:** 采用了基于类群组的关键可塑AHE方案，并结合了包装化去污OLE技术，在保证性能的同时增强了协议的安全性和实用性。
+
+---
+### [推荐] [2026/2017] On the eCK Security of MQV-Style LWE-Based Authenticated Key Exchange
+
+- **匹配关键字:** post-quantum, LWE
+
+- **作者:** Ruoyu Ding, Tianrun Yu, Yanbin Pan, Chi Cheng, Jian Weng
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2017) | [PDF](https://eprint.iacr.org/2026/2017.pdf)
+
+
+> **研究背景:** 研究旨在设计直接基于学习误差(LWE)假设的认证密钥交换(AKE)协议，以克服现有通用构造的安全性不足，并解决在密钥重用情况下可能引入额外泄漏的问题。
+>
+> **主要贡献:** 作者提出了新的信号泄漏攻击方法，能够突破ZZDSD-AKE和GDLL-KE等MQV风格AKE协议的安全性限制，通过几何视角的方法揭示了这些协议在强扩展Canetti-Krawczyk(eCK)模型下的安全性问题。
+>
+> **达到效果:** 研究结果表明，即使采取随机化噪声对策以抵御密钥重用攻击，GDLL-KE协议仍然存在秘密依赖泄漏，从而证明了现有对策的有效性不足。
+>
+> **技术梗概:** 通过分析协议中的临时密钥泄露，并采用几何方法推导出静态密钥，作者成功地设计了一种新的信号泄漏攻击策略。
+
+---
+### [2026/1984] Improving GIJS Key Recovery for Classic McEliece
+
+- **作者:** Stephen A. Weis
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1984) | [PDF](https://eprint.iacr.org/2026/1984.pdf)
+
+
+> **研究背景:** 该研究改进了GIJS密钥恢复方法，针对经典McEliece公钥提出了更有效的攻击手段。
+>
+> **主要贡献:** 作者提出了一种新的密钥提取方法，并降低了GIJS区分器的成本估计。
+>
+> **达到效果:** 通过两种方法成功从区分器计算中提取出秘密密钥，降低了解密成本并提高了攻击效率。
+>
+> **技术梗概:** 第一种方法利用了梯度子码的特性进行线性代数运算；第二种方法直接从单次运行中读取支持信息。
+
+---
+### [2026/1986] Two-Anchor Holdout/Hermite: Solving the TII-254 McEliece Key Recovery Challenge
+
+- **作者:** Markku-Juhani O. Saarinen
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1986) | [PDF](https://eprint.iacr.org/2026/1986.pdf)
+
+
+> **研究背景:** 该研究解决了TII-254 McEliece密钥恢复挑战，这是目前在原始暴力破解度量标准下最难解决的挑战。
+>
+> **主要贡献:** 作者提出了一种十三步方法来解决此问题，并详细描述了其中的启发式和非启发式选择。
+>
+> **达到效果:** 通过这种方法，研究人员成功地识别出了87个可见定位器，并最终确定了完整的支持和多项式，显著提高了破解效率。
+>
+> **技术梗概:** 研究采用了计算两个121维关系核、结合隔离核心对、去除公共干扰空间以及识别剩余维度为有限几何的方法。
+
+---
+### [2026/1987] Bonsai: Scalable Private Payments
+
+- **作者:** Patrick O'Grady, Lúcás Críostóir Meier, Guru-Vamsi Policharla
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1987) | [PDF](https://eprint.iacr.org/2026/1987.pdf)
+
+
+> **研究背景:** 现有的私密支付系统通过公开每个交易的nullifier来防止双重支付，但随着交易量激增，nullifier集的增长对存储和隐私管理提出了挑战。
+>
+> **主要贡献:** Bonsai提出了一种基于账户的私密支付方案，通过验证者仅存储单个账户承诺并允许用户私有地维护收到的nullifiers，从而解决了大规模吞吐量下的隐私保护问题。
+>
+> **达到效果:** 该系统能够在不增加证明大小和几乎无额外证明者开销的情况下实现零知识证明，并结合批处理验证策略，原型在M5 MacBook Pro上每秒验证超过一百万次操作。
+>
+> **技术梗概:** Bonsai通过引入零知识证明技术并优化验证流程，实现了高效的大规模私密支付验证，同时保持了较低的资源消耗和较高的隐私保护水平。
+
+---
+### [2026/1989] Angular Watermarking: Sharp Leakage Bounds and Public Subspace Validation
+
+- **作者:** Bin He
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1989) | [PDF](https://eprint.iacr.org/2026/1989.pdf)
+
+
+> **研究背景:** 研究背景：该论文探讨了基于角度的水印技术，特别是在高维空间中精确度量隐藏信息泄漏边界的方法。
+>
+> **主要贡献:** 主要贡献在于推导出高斯隐秘模型下精确的四阶特征，并提出了公钥验证方向来估计候选载体的相关性。
+>
+> **达到效果:** 达到了在固定探针学习者下，观测数量与秩、准确性和置信度之间的关系，并提供了无密钥情况下对候选载体相关性的有限样本下界。
+>
+> **技术梗概:** 技术梗概：通过精确的四阶张量协方差边界来分析几何压缩和验证方差之间的权衡，并使用独立验证方向进行公钥验证。
+
+---
+### [2026/1990] Bounded Information: PAC Certification of Multivariate Side-Channel Traces
+
+- **作者:** Kuheli Pratihar, Nimish Mishra, Debdeep Mukhopadhyay
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1990) | [PDF](https://eprint.iacr.org/2026/1990.pdf)
+
+
+> **研究背景:** 侧信道泄漏认证旨在量化攻击者从观测到的泄漏中能学到多少关于秘密变量的信息，现有的信息论估计方法如感知信息、假设信息和非参数互信息，在高维迹线中变得不稳定且无法提供最佳攻击者的有限样本证书。
+>
+> **主要贡献:** 研究提出了Bounded Information (BI)，这是一种可能近似的有限样本认证方法，能够上界固定攻击者范围在未见迹线上的精确恢复成功率，并定义了$\mathrm{BI}^{\mathrm{loc}}(\varepsilon)$来限制与套件中模型得分差异不超过$\varepsilon$的攻击者的恢复成功。
+>
+> **达到效果:** 通过八个侧信道基准测试，BI提供了无需密度估计的稳定证书，并且其紧度诊断帮助评估者判断认证值是泄漏的真实测量还是保守边界。
+>
+> **技术梗概:** 该方法采用了KL-二项置信区间与固定套件上的并集界，将标准化攻击评价转化为可审计的证书，具有明确的攻击范围和置信水平。
+
+---
+### [2026/1993] Network-Agnostic VSS with Quadratic Communication in Computational Setting
+
+- **作者:** Yusong Yao, Qi Feng, Cong Peng, Min Luo, Debiao He
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1993) | [PDF](https://eprint.iacr.org/2026/1993.pdf)
+
+
+> **研究背景:** Verifiable Secret Sharing (VSS)是多方计算（MPC）中的核心机制，Bhimrajka等人提出了首个在计算模型下具有网络无关性的VSS和基于VSS的MPC方案。
+>
+> **主要贡献:** 本文重新审视了网络无关性VSS架构，并提出了一种更高效且通用的网络无关性VSS结构，引入了一种新的虚拟节点策略以提高效率并减少通信量。
+>
+> **达到效果:** 该方案在单次分享中通信成本为$O(n^2)$比特，在逐轮分享中使用争议控制技术通信成本为$O(n)$比特，实现了首个具有摊销线性通信复杂度的计算模型下的网络无关性VSS协议。
+>
+> **技术梗概:** 本文的关键技术是一种新的虚拟节点策略，通过引入更多节点进行重建以减少实际参与节点数，并结合争议控制技术优化了通信效率。
+
+---
+### [2026/1994] Data-strophy: When Your Integrity Goes Wild, So Does Your Data!
+
+- **作者:** Ya-Nan Li, Yaqing Song, Qiang Tang, Moti Yung, Yuan Zhang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1994) | [PDF](https://eprint.iacr.org/2026/1994.pdf)
+
+
+> **研究背景:** 研究背景：Proton Docs/Sheets 是一个支持实时协作编辑的文档服务，声称提供端到端的安全性。然而，本文揭示了其在实际应用中的安全漏洞。
+>
+> **主要贡献:** 主要贡献：作者发现了三种针对 Proton Docs/Sheets 的完整性攻击方法，这些攻击能够篡改历史记录、修改上下文和进行审查，并且能够在服务器行为正常或恶意的情况下实施。
+>
+> **达到效果:** 达到的效果：通过这些攻击，可以绕过现有的检测机制，对文档内容进行未授权的更改，从而威胁用户的数据安全与隐私。
+>
+> **技术梗概:** 技术梗概：作者通过对开源 Web 客户端和网页代码的分析，发现了 Proton Docs/Sheets 在设计上的缺陷，并提出了相应的缓解措施。
+
+---
+### [2026/1995] Symmetric Models for Syndrome Decoding
+
+- **作者:** Elisa Gorla, Simone Trebiani
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1995) | [PDF](https://eprint.iacr.org/2026/1995.pdf)
+
+
+> **研究背景:** 该研究旨在通过引入基于基本对称多项式的新型多项式模型，为二元情况下的 Syndrome Decoding 问题提供一种精确解法。
+>
+> **主要贡献:** 贡献在于提出了两种不同复杂度的多项式模型，并估计了求解这些模型所需的计算复杂性。
+>
+> **达到效果:** 研究表明，新模型在某些情况下比现有方法更高效，特别是在特定实例上。
+>
+> **技术梗概:** 技术上，通过分析相关理想上的正则度和解决度来估算计算复杂性。
+
+---
+### [2026/1996] One More A: Sharper Tails Without Scaling
+
+- **作者:** Majid Khabbazian
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1996) | [PDF](https://eprint.iacr.org/2026/1996.pdf)
+
+
+> **研究背景:** RAA码在无随机坐标缩放的情况下，其最小距离与块长成线性关系。然而，对于特定的重复因子和块长度范围，未缩放的RAA码和缩放的RAA码之间存在可靠性上的权衡。
+>
+> **主要贡献:** 作者提出了一种新的三重累加器结构（RAAA），通过增加一个额外的累加器，实现了在不使用随机缩放的情况下，显著提高可靠性。
+>
+> **达到效果:** 对于特定重复因子和块长度范围内的RAAA码，其最小距离低于给定比例的概率与未缩放的RAA码相比有了更大幅度的减少，从而提高了编码效率和可靠性。
+>
+> **技术梗概:** 通过引入第三个累加器，作者证明了这种新的RAAA结构能够在保持固定特征域的基础上，显著提高编码的可靠性，并减少了所需的计算复杂度。
+
+---
+### [2026/1997] LibFWHT: From Exact Walsh Spectra to Key Dependence in Differential-Linear Correlations
+
+- **作者:** Hosein Hadipour, Saleh Khalaj Monfared, Jens Alich, Jan Vorloeper
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1997) | [PDF](https://eprint.iacr.org/2026/1997.pdf)
+
+
+> **研究背景:** LibFWHT旨在提供一种通用工具，用于加速大规模数组的批次操作，特别是在沃尔什-哈达玛变换（WHT）中，以支持差分线性密码分析等复杂任务。
+>
+> **主要贡献:** 该库通过结合矢量化、多核和图形处理器后端，提供了比现有工具更快的性能，并且首次实现了对SIMON-32、KATAN-32、BEANIE、KeeLoq和RC5-16等32位块密码体制的精确差分线性区分器。
+>
+> **达到效果:** LibFWHT在单个CPU核心上比FFTW快2.5到3.3倍，在NVIDIA H200图形处理器设备上实现了每秒1.8万亿次操作，并且能够显著提高针对特定密钥依赖性的分析速度。
+>
+> **技术梗概:** 该库利用沃尔什-哈达玛变换和矢量化技术，通过批处理操作优化了大规模数据的处理效率。
+
+---
+### [2026/1998] A Low-Communication Garbled RAM from Homomorphic Secret Sharing
+
+- **作者:** Chase Fickes, Jinye He, Wei-Kai Lin
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1998) | [PDF](https://eprint.iacr.org/2026/1998.pdf)
+
+
+> **研究背景:** 研究背景：门控电路是现代密码学和安全多方计算中的基本组成部分。对于自然以随机存取机（RAM）模型表示的实际程序，门控RAM是门控电路的RAM对应物，避免了将整个程序编译成电路的成本，通信复杂度成为主要效率指标。
+>
+> **主要贡献:** 主要贡献：本文构建了一个适用于运行时间T、内存大小为N个W位字的公有程序的门控RAM方案，实现了O(T·(W+λ)·log N)+poly(λ)比特的通信量。对于足够大的字长W≥λ和运行时间T≥poly(λ)，通信量达到O(T W log N)，几乎与最优的盲存取存储器带宽匹配。
+>
+> **达到效果:** 达到的效果：该方案在保持内存访问隐蔽性的同时，实现了接近最优的通信效率，为实际程序的安全执行提供了新的解决方案。
+>
+> **技术梗概:** 技术梗概：本文基于Ishai等人（Crypto'25）和Li等人（Eurocrypt'26）最近提出的简洁门控电路，并利用同态秘密共享技术构建了该方案。
+
+---
+### [2026/1999] Revisiting Single-Color Initial Structures in Meet-In-The-Middle Attacks
+
+- **作者:** Shiyao Chen, Jian Guo, Wenjie Nan, Danping Shi, Tianyu Zhang
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/1999) | [PDF](https://eprint.iacr.org/2026/1999.pdf)
+
+
+> **研究背景:** Meet-in-the-middle攻击框架是预象、密钥恢复和碰撞攻击中最具影响力的密码分析技术之一。
+>
+> **主要贡献:** 作者提出了一种改进的单色初始结构技术和扩展了部分目标前象到碰撞转换方法，用于MITM基碰撞攻击。
+>
+> **达到效果:** 这些技术被应用于AES-like构造的(伪)预象、(选择前缀)碰撞和引导攻击中，并取得了优于现有最佳结果的效果。
+>
+> **技术梗概:** 通过利用常量空间在MITM攻击中的自由度来改进单色初始结构，同时扩展了用于构建选择前缀碰撞和钻石结构的部分目标前象到碰撞转换方法。
+
+---
+### [2026/2000] Information-Theoretic Hiding in Quantum Marginal Fibers
+
+- **作者:** Jaroslav Hruby
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2000) | [PDF](https://eprint.iacr.org/2026/2000.pdf)
+
+
+> **研究背景:** 研究探讨了在对手拥有无限制量子处理能力但仅对声明子系统之一有物理访问权限的情况下，信息论意义上的隐藏机制。
+>
+> **主要贡献:** 贡献在于通过固定边际集组织迹距离直径、正交零错误填充和精确相干子空间隐藏，并区分基态边缘等价性与量子纠错的交叉项条件。
+>
+> **达到效果:** 结果包括对这些隐藏技术在特定条件下的效果进行了分析，揭示了经典编码字在纤维中的完美隐藏机制。
+>
+> **技术梗概:** 采用信息论方法和技术来研究量子边际纤维中的隐藏问题，并通过数学工具进行验证。
+
+---
+### [2026/2002] Derivatives of Quantum Randomness: Separating Pseudorandom Unitaries from Pseudorandom (Function-like) States
+
+- **作者:** Minki Hhan
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2002) | [PDF](https://eprint.iacr.org/2026/2002.pdf)
+
+
+> **研究背景:** 量子计算引入了新的伪随机态和酉算子原语，如伪随机态生成器（PRSG）、伪随机函数似态生成器（PRFSG）和伪随机酉算子（PRU）。本文探讨了这些原语之间的分离问题。
+>
+> **主要贡献:** 作者展示了在最强态观念与最弱酉观念之间存在全单位元Oracle分离：即使适应性安全、量子可访问的PRFSG也不能推导出非适应性安全、单向的PRU，即便其实现允许是非酉且使用任意数量辅助量子比特。
+>
+> **达到效果:** 这一分离揭示了量子态和量子酉算子伪随机性的根本区别。通过研究候选PRU构造对状态生成Oracle的映射及其导数，作者利用低秩结构区分了生成的单位元与真正随机的单位元。
+>
+> **技术梗概:** 作者将候选PRU构造视为从基础Oracle态到实现酉算子的映射，并研究该映射的导数。由于这些导数本质上是低秩的，作者通过这一特性来区分生成的单位元和真正的随机单位元。
+
+---
+### [2026/2004] Exact Error-Compensated Pruning in Matrix Multiplication Time
+
+- **作者:** Xiaoyu Li
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2004) | [PDF](https://eprint.iacr.org/2026/2004.pdf)
+
+
+> **研究背景:** 研究背景：本文探讨了在矩阵乘法运算中精确误差补偿剪枝的算术复杂性，旨在优化计算效率并保持精度。
+>
+> **主要贡献:** 主要贡献在于提出了一个递归执行方法，该方法能够以可控的方式进行权重移除和错误传播，同时保留关键决策信息。
+>
+> **达到效果:** 达到的效果是对于特定维度的矩阵层，通过精确误差补偿剪枝可以实现接近理论下界的操作复杂度，并且在平方维度情况下验证了多种选择规则的有效性。
+>
+> **技术梗概:** 技术梗概：利用源到目标因子消去机制和局部系数提取论证来比较指数，确保即使在包含比较和平方根操作的情况下也能精确计算。
+
+---
+### [2026/2005] SoK: Private Transformer Inference Across Systems, Models, and Cryptography
+
+- **作者:** Andes Y. L. Kei, Sherman S. M. Chow
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2005) | [PDF](https://eprint.iacr.org/2026/2005.pdf)
+
+
+> **研究背景:** 研究背景：私有推理旨在保护用户查询和模型权重，无需依赖可信硬件或统计隐私放松。然而，变压器结合了大规模的秘密矩阵乘法、昂贵的非线性操作以及顺序自回归执行，这使得实现私有推理面临挑战。
+>
+> **主要贡献:** 主要贡献在于系统化分析了2022年至2026年间58个加密私有变压器框架，并从三个交互层面（系统、模型和密码学）进行分类，揭示了跨后端适用性的两个重复约束条件。
+>
+> **达到效果:** 达到的效果是识别出四个类别的安全问题影响了五个框架，并综合了恶意安全设计中的组合边界。此外，发现16个框架依赖于经验校准或特定分布机制，21个需要额外训练，限制了一般化和跨框架可比性。
+>
+> **技术梗概:** 技术梗概涉及从系统执行与优化、模型的密码学-机器学习协同设计及适应到加密操作的安全实现三个层面进行分类分析，并通过对比不同框架来识别安全问题和组合边界。
+
+---
+### [2026/2006] Beyond DCR: HSS and PCFs from Subgroup Indistinguishability
+
+- **作者:** Sebastian Hasler
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2006) | [PDF](https://eprint.iacr.org/2026/2006.pdf)
+
+
+> **研究背景:** 该研究在群论框架下构建了同态秘密共享（HSS）和伪随机相关函数（PCFs），基于Brakerski和Goldwasser引入的子群不可区分性（SgI）假设，扩展了能够推导出HSS和PCFs的安全假设集合。
+>
+> **主要贡献:** 贡献在于提出了一种新的分布式离散对数算法（DDLog），并在特定条件下实现了在任意群中的高效计算，并且通过分而治之的优化提高了性能。此外，还引入了公共硬币子群不可区分性（PC-SgI）的概念，并基于此构建了多种类型的伪随机相关函数。
+>
+> **达到效果:** 研究成果包括：1) 提出了一种适用于任意群的新DDLog算法；2) 构建了OLE和二阶相关性的伪随机相关函数，同时依赖稀疏的线性近似噪声（LPN）假设；3) 扩展了能够推导HSS和PCFs的安全假设集合。
+>
+> **技术梗概:** 技术上采用了群论框架、子群不可区分性假设以及分布式离散对数算法，并通过分而治之的方法优化了DDLog的性能。
+
+---
+### [2026/2007] Sharp Minimum-Distance Tails for BAA Codes
+
+- **作者:** Majid Khabbazian
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2007) | [PDF](https://eprint.iacr.org/2026/2007.pdf)
+
+
+> **研究背景:** 研究背景：针对BAA码的最小距离尾部概率提供了定量保证，这对于伪随机相关生成器和基于代码的证明系统中的快速随机线性码至关重要。
+>
+> **主要贡献:** 主要贡献：确定了固定长度构成元素最小距离为d≥2时，全局最小距离下尾部的概率表达式，并证明了线性域增长是N^(1-d)定律的确切阶数。
+>
+> **达到效果:** 达到的效果：对于特定的MDS块矩阵，在大字段情况下，验证了已知标记的一块系数是实际失败概率的主要常数；并提供了接近精确的双侧有限证书，证实了发布的大型领域基准的有效性。
+>
+> **技术梗概:** 技术梗概：通过支持依赖加权间隔估计控制每个活动块计数和每层取消，并将全块间隙事件分组以限制其相关性来实现上述结果。
+
+---
+### [2026/2008] New Imperfect High Threshold and Slice Secret Sharing Schemes
+
+- **作者:** Andrej Bogdanov, Yanbo Chen
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2008) | [PDF](https://eprint.iacr.org/2026/2008.pdf)
+
+
+> **研究背景:** 本文提出了针对短秘密的新颖的(n-t+1)-out-of-n门限和切片秘密共享方案，特别关注于不完美安全性。
+>
+> **主要贡献:** 贡献在于设计了ε-差异私密的秘密共享方案与ε-统计私密的位秘密共享方案，前者在有限域中因子分解猜想的支持下实现了更小的份额大小，后者提供了计算安全性的替代选择。
+>
+> **达到效果:** 结果是成功构建了满足特定门限条件且具有较小份额大小的安全秘密共享方案，并讨论了其与秘密共享对偶性相关联的应用。
+>
+> **技术梗概:** 技术上依赖于在有限域中因子分解的猜想，以及通过优化份额大小来实现不完美安全性的方法。
+
+---
+### [2026/2013] Revisiting Differential-Linear Cryptanalysis via a Walsh-Transform Perspective
+
+- **作者:** Jiahui He, Kai Hu, Zhongfeng Niu, Bart Preneel, Meiqin Wang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2013) | [PDF](https://eprint.iacr.org/2026/2013.pdf)
+
+
+> **研究背景:** 研究背景：差分-线性密码分析（SDL）已经发展成熟，包括SDL连接表（SDLCT）框架、多轮中间部分扩展以及基于CP的搜索模型。然而，旋转差分-线性（RDL）和内部差分-线性（IDL）变体尚未被充分研究。
+>
+> **主要贡献:** 主要贡献：作者统一了SDL、RDL和IDL，并提出了一个基于差异转换函数（DTF）的沃尔什变换框架，实现了这些方法之间的技术转移，提高了相关性计算和区分器搜索的有效性。
+>
+> **达到效果:** 达到的效果：对于ARX原语，作者推导出单模加法的$2\times 2$矩阵乘积公式，并解决了Niu等人提出的一个开放问题。在应用该框架时，作者为\(\xoodoo-p\)、\(\ascon-p\)、\(\alzette\)等提供了新的区分器。
+>
+> **技术梗概:** 技术梗概：通过沃尔什变换视角重新审视差分-线性密码分析，统一了SDL、RDL和IDL，并利用差异转换函数（DTF）进行相关性计算和区分器搜索。
+
+---
+### [2026/2014] Quantum Discrete Logarithms on Elliptic Curves with $5n/2+o(n)$ Logical Qubits and $\widetilde O(n^2)$ Toffoli Gates
+
+- **作者:** Sunghyeon Jo, Gye Jin Lee
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2014) | [PDF](https://eprint.iacr.org/2026/2014.pdf)
+
+
+> **研究背景:** 该研究旨在提出一种量子算法，用于解决椭圆曲线上基于素数字段的离散对数问题，以提高量子计算效率。
+>
+> **主要贡献:** 作者通过优化逻辑量子比特和Toffoli门的数量，降低了空间复杂度，并改进了中间余数和系数存储的方法。
+>
+> **达到效果:** 研究实现了在近二次时间复杂度下使用较少逻辑量子比特解决椭圆曲线离散对数问题的算法。
+>
+> **技术梗概:** 采用精确就地模逆运算和基于测量的未计算技术，以及Hua恒等式减少变量平方乘法需求，从而优化了点加操作。
+
+---
+### [2026/2015] A Unified Analysis of Refresh Gadgets in the Random Probing Model
+
+- **作者:** Sonia Belaïd, Victor Normand, Matthieu Rivain
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2015) | [PDF](https://eprint.iacr.org/2026/2015.pdf)
+
+
+> **研究背景:** 研究背景：掩码技术是一种标准的对抗侧信道攻击的方法，其安全性通常在随机探针模型下进行分析。近年来，基于通用/基数随机探针可组合性（RPC）框架出现了多种掩码编译器，但大多数方法依赖于特定设计的刷新小部件，这些小部件与安全分析紧密相关。
+>
+> **主要贡献:** 主要贡献：作者正式定义了两种刷新小部件家族——直接和零编码基底刷新，并在显式随机性和均匀性条件下定义了理想构造；引入了一个原子刷新函数来统一表达和分析现有构造，并推导出它们的通用/基数RPC边界，从而获得多个构造的解析公式。
+>
+> **达到效果:** 达到的效果：通过系统比较理想的和实际的刷新小部件，作者为AES和Raccoon加密实现提供了系统的对比结果，增强了对掩码技术安全性的理解。
+>
+> **技术梗概:** 技术梗概：采用形式化方法定义理想构造，并利用原子刷新函数统一分析现有构造，推导出其边界条件，从而提供了一种系统化的评估框架。
+
+---
+### [2026/2016] Refining Leakage Diagram Analyses for Random Probing Security
+
+- **作者:** Sonia Belaïd, Ghozlane Boukacem, Gaëtan Cassiers, Victor Normand, Mélissa Rossi
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2016) | [PDF](https://eprint.iacr.org/2026/2016.pdf)
+
+
+> **研究背景:** 研究背景：掩码技术被广泛用于抵御侧信道攻击，通过将敏感变量拆分为随机份额来防止中间计算的信息泄露。然而，在随机探针模型下构建实现随机探针安全性（RPS）的大规模电路具有挑战性。
+>
+> **主要贡献:** 主要贡献：本文重新审视并改进了TCHES 2023年发表的泄漏图方法，形式化并泛化证明以表明泄漏图中轨道的概率上限了攻击者的RPS优势，并细化了乘法小部件中边包含概率的分析，从而获得了更紧的安全性边界。
+>
+> **达到效果:** 达到的效果：通过详细研究小型案例和较大的结构属性，改进了轨道的组合分析，最终提高了安全性的证明强度。
+>
+> **技术梗概:** 技术梗概：本文提出了对泄漏图方法进行形式化和泛化的证明，并通过细致的研究和新的结构性质来优化乘法小部件中边包含概率的分析。
+
+---
+### [2026/2018] On the (Im)possibility of Asynchronous Proactive Secret Sharing
+
+- **作者:** Erica Blum, Yingzi Gao, Julian Loss, Yuan Lu, Zhenliang Lu, Qiang Tang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2018) | [PDF](https://eprint.iacr.org/2026/2018.pdf)
+
+
+> **研究背景:** 本文系统研究了在完全异步认证网络中主动秘密共享（APSS）的可能性和不可能性，特别是在缺乏全局时钟的情况下，不同的敌手模型带来的复杂性。
+>
+> **主要贡献:** 作者首次形式化了一级自然移动敌手模型，用于异步PSS，并通过展示通用攻击建立了新的不可能结果，从而确定了相应的抗毁上限。
+>
+> **达到效果:** 此外，作者还展示了在每个模型中实现最优抗毁性的显式APSS协议，证明了这些界限的紧致性。
+>
+> **技术梗概:** 研究采用了敌手建模、协议设计和安全性分析等技术来探讨异步网络中的主动秘密共享问题。
+
+---
+
 ## 更新: 2026-09-14 07:15
 
 *新增 29 篇论文 (编号 1955--1983)*
