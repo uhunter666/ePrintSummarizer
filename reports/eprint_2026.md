@@ -5,6 +5,367 @@
 
 ---
 
+## 更新: 2026-09-18 07:23
+
+*新增 19 篇论文 (编号 2036--2057)*
+
+### [推荐] [2026/2042] On Solving Ideal-SVP and Ideal-BDD with Group Representations
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Hongyuan Qu, Guangwu Xu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2042) | [PDF](https://eprint.iacr.org/2026/2042.pdf)
+
+
+> **研究背景:** 研究背景：理想格问题在后量子密码学中至关重要，特别是在NIST标准化的Kyber和Dilithium方案中。理解理想格问题如唯一最短向量问题（Id-uSVP）和有界距离解码（Id-BDD）的难度是必要的。
+>
+> **主要贡献:** 主要贡献：作者提出了一种基于群表示理论的方法来解决Id-uSVP和Id-BDD问题，通过利用子域中的分解群构造缩放投影算子，将高维问题分解为低维问题进行求解。
+>
+> **达到效果:** 达到的效果：对于Id-BDD实例，证明了可以通过独立求解每个低维实例并重组解决方案来解决原问题；对于Id-uSVP，在满足一定唯一性条件下，最短向量至少在一个非零子空间中存在。
+>
+> **技术梗概:** 技术梗概：利用已知的伽罗华群及其稳定的理想理想体构造缩放投影算子，将高维空间分解为线性子空间，并通过这些子空间求解低维度问题。
+
+---
+### [推荐] [2026/2045] Practical Key Recovery Attacks on Full DuX and Reduced-Round YuX
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Xingwei Ren, Bo Xu, Zhenyu Xiong, Yongqiang Li, Mingsheng Wang
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2045) | [PDF](https://eprint.iacr.org/2026/2045.pdf)
+
+
+> **研究背景:** DuX和YuX是为高效评估全同态加密设计的密钥流密码家族，它们通过四个块保持十六个大有限字段中的词，并且具有低阶块间S盒和循环线性层。
+>
+> **主要贡献:** 作者提出了基于零和和多项式方程组的新攻击方法，成功恢复了DuX和YuX的部分或全部密钥。
+>
+> **达到效果:** 在实验中，他们从$2^{32}$个选择的密文恢复了满十二轮DuX的主密钥，并降低了对YuX-16的密钥恢复数据复杂度。
+>
+> **技术梗概:** 通过引入全块结构、廉价坐标消除和加权矩来构建方程组，从而实现密钥恢复。
+
+---
+### [推荐] [2026/2046] Square Root of All Evil: The Dangers of Falcon's Superfluous Square Roots
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Hiroto Kaihara, Calvin Abou Haidar, Mehdi Tibouchi, Masayuki Abe
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2046) | [PDF](https://eprint.iacr.org/2026/2046.pdf)
+
+
+> **研究背景:** Falcon是一种由NIST选定的后量子签名方案，尽管其紧凑和高效，但由于复杂的浮点运算（尤其是平方根计算），实现起来非常困难且不安全。
+>
+> **主要贡献:** 作者指出这些不必要的平方根计算可以被移除，并提出了一个简化但同样快速或更快的算法版本。
+>
+> **达到效果:** 通过在ARM Cortex-M4微控制器上进行实验，证明了注入单个故障即可导致100%成功恢复密钥，并且生成的伪造签名难以与正常签名区分，这使得针对Falcon的这种故障攻击成为迄今为止最致命的一种。
+>
+> **技术梗概:** 研究采用了一种基于故障注入的方法来评估算法的安全性，并通过实际实验验证了其有效性。
+
+---
+### [推荐] [2026/2047] ROSETTA: Efficient and Accurate Privacy-Preserving LLM Decoding via Hybrid CKKS/TFHE Evaluation
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Jiangrui Yu, Baosheng Zhang, Liang Kong, Lin Ding, Yi Chen, Ye Yu, Mingzhe Zhang, Meng Li
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2047) | [PDF](https://eprint.iacr.org/2026/2047.pdf)
+
+
+> **研究背景:** 现有的全同态加密(FHE)框架在评估非线性操作时效率低下，这限制了它们在生成式大型语言模型(LLMs)中的应用。
+>
+> **主要贡献:** ROSETTA通过结合CKKS和TFHE技术，提出了一个适应性分段查找表协议以及一种方案感知的操作选择框架，以高效准确地评估非线性操作并最小化端到端解码延迟。
+>
+> **达到效果:** 实验结果表明，ROSETTA在Softmax加速方面可达4.8倍，并且在端到端速度上比当前最佳框架CacheMir快1.5至2.1倍。
+>
+> **技术梗概:** ROSETTA采用TFHE实现非线性操作的高效评估，并通过CKKS和TFHE之间的智能分配来优化整个解码过程。
+
+---
+### [推荐] [2026/2049] Tighter and Friendlier Integer Bounds for Quaternion Algorithms - Application to SQIsign
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Maciej Czuprynko, Anisha Mukherjee, Sujoy Sinha Roy
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2049) | [PDF](https://eprint.iacr.org/2026/2049.pdf)
+
+
+> **研究背景:** SQIsign是一种候选的后量子数字签名方案，具有最小的密钥和签名大小。然而，其签名过程依赖于复杂的四元数算术层，其中涉及大整数的中间计算可能显著超过最终输出。
+>
+> **主要贡献:** 作者通过分析四元数算术层中的整数边界，提出了一种新的矩阵求逆算法，并展示了使用高斯整数代替普通整数表示这些格的方法，从而改进了SQIsign的实现。
+>
+> **达到效果:** 改进后的SQIsign实现了更紧凑的密钥和签名大小，同时提高了固定精度和常时间实施的安全性与效率。
+>
+> **技术梗概:** 通过利用四元数算术层中格的结构包含性质，作者设计了一种新的矩阵求逆算法，并使用了二维高斯整数表示法代替传统的四维整数表示法。
+
+---
+### [推荐] [2026/2051] PyuQuMuQu: Attacks on MQ-Based Linkable Ring Signatures and a New 5-Pass Construction
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Freeman Slaughter
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2051) | [PDF](https://eprint.iacr.org/2026/2051.pdf)
+
+
+> **研究背景:** 链可关联环签名（LRS）允许成员匿名地代表一组进行签名，同时确保任何两个相同签名人发出的签名可以被公众链接起来。这种机制在电子投票和加密货币中是重要组成部分。
+>
+> **主要贡献:** 作者提出了针对基于多项式方程组（MQ）的链可关联环签名方案的新攻击，并构建了一个新的5轮构造PyuQuMuQu，该构造具有更强的安全性。
+>
+> **达到效果:** 通过攻击分析，作者揭示了现有两个基于MQ的LRS方案中的安全漏洞。同时，PyuQuMuQu方案在匿名性和安全性方面取得了显著效果。
+>
+> **技术梗概:** 使用和集攻击方法对签名协议进行分析，并设计了一个包含5轮交互的新构造，采用多维向量挑战和加性分割挑战技术来增强安全性。
+
+---
+### [推荐] [2026/2055] A Locality-Sensitive Hashing Framework for Reducing Bounded Distance Decoding to EDCP
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Ryann Cartor, Felice Manganiello, William Youmans
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2055) | [PDF](https://eprint.iacr.org/2026/2055.pdf)
+
+
+> **研究背景:** Bounded Distance Decoding (BDD) 是后量子密码学中代码和格基的核心基础，先前的研究通过几何结构将 BDD 与 Learning With Errors (LWE) 和 Extrapolated Dihedral Coset Problem (EDCP) 连接起来，但这些方法并未自然地扩展到编码理论度量。
+>
+> **主要贡献:** 本文提出了一种通用的量子框架，从有限阿贝尔群上具有平移不变度量的 BDD 减少到 EDCP，仅需存在适当的位置敏感哈希族。
+>
+> **达到效果:** 该框架实例化后为汉明度量、秩度量和 $p$-李度量下的解码提供了新的减少方法；对于汉明度量和秩度量，在参数区域中，我们的减少只能在已知解码算法效率高的情况下提供非微不足道的 EDCP 状态数量。
+>
+> **技术梗概:** 通过结合已知的等价关系，本文框架内恢复了格基 CVP/BDD 在 $\ell_p$ 范数与 $p$-李度量解码之间的 LWE 到 EDCP 的减少。
+
+---
+### [2026/2036] Backdooring the AI-Native Air Interface: One Poisoned Supply Chain Hijacks CSI Feedback and Beam Management
+
+- **作者:** Rong Qian, Yu Cheng, Hongbo Zhao, Yuchang Zhang, Zengli Guo
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2036) | [PDF](https://eprint.iacr.org/2026/2036.pdf)
+
+
+> **研究背景:** 本文研究了在5G-Advanced的AI原生空中接口中，通过第三方供应链植入后门攻击的可能性。
+>
+> **主要贡献:** 首次提出了针对此接口的跨用例后门研究，并展示了如何仅通过少量数据污染实现100%的成功率。
+>
+> **达到效果:** 成功地将后门植入CRNet和CsiNet模型中，使攻击者能够操控基站波束方向并大幅降低受害者的数据传输速率。
+>
+> **技术梗概:** 利用微弱的物理触发器（如2比特可控反射表面）污染训练数据，并通过调整码字统计特性来欺骗检测机制。
+
+---
+### [2026/2038] Seven Bindings: A Machine-Checked Map of the Assumptions Behind Lightning's BOLT 12
+
+- **作者:** Rong Qian, Mengrun Chen, Yu Cheng, Yuchang Zhang, Zengli Guo
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2038) | [PDF](https://eprint.iacr.org/2026/2038.pdf)
+
+
+> **研究背景:** BOLT 12作为闪电网络协议套件的重要组成部分，其隐私性和完整性依赖于一系列假设条件。为了确保这些假设的正确性并提供正式验证，研究人员对其进行了全面的形式化处理和机器检查。
+>
+> **主要贡献:** 研究团队通过ProVerif模型对BOLT 12的所有生命周期环节进行了形式化建模，并确认了七个关键绑定假设，为协议的安全性和隐私性提供了理论依据。
+>
+> **达到效果:** 研究成果揭示了BOLT 12在不受限会话和损坏路径节点情况下仍能保持接收方匿名性和付款人与收款人间的不可链接性；同时指出最新机制支付收据隐藏着精确的信息披露边界。
+>
+> **技术梗概:** 研究采用了ProVerif等形式化验证工具，对BOLT 12进行了全面的形式化建模和机器检查，确保了假设条件的有效性。
+
+---
+### [2026/2039] ZK-JPEG: Zero-knowledge Image Editing and Compression
+
+- **作者:** Samuel Dittmer, Steve Lu, Kimberlee Model, Joseph Near
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2039) | [PDF](https://eprint.iacr.org/2026/2039.pdf)
+
+
+> **研究背景:** 随着生成虚假照片工具的普及，图像认证工具变得尤为重要，用于验证数字图像是否由物理相机产生。然而，这些工具必须能够应对图像的合理变换，如压缩和编辑。
+>
+> **主要贡献:** \zkjpeg 提出了一种基于零知识证明的方法，能够在JPEG压缩过程中验证图像的正确性，并支持一系列图像变换。
+>
+> **达到效果:** 该系统实现了快速、灵活的图像认证与编辑验证，在保持图像隐私的同时确保了其真实性和完整性。
+>
+> **技术梗概:** 通过将Python图像编辑代码转换为LPZK零知识证明电路，\zkjpeg 实现了高效且可扩展的图像压缩和验证机制。
+
+---
+### [2026/2040] Succinct Arguments for QMA from Collapsing Hash Functions
+
+- **作者:** James Bartusek, Giulio Malavolta
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2040) | [PDF](https://eprint.iacr.org/2026/2040.pdf)
+
+
+> **研究背景:** 本文证明了在假设存在崩溃哈希函数的情况下，可以实现简洁的量子验证者归约类（QMA）论证系统。这是首个仅依赖于未结构化的‘密钥加密假定’的工作，这些假定目前尚不能推导出公钥加密的存在性。
+>
+> **主要贡献:** 主要贡献在于提出了一种基于经典通信的量子简洁爪态生成协议，能够将少量的量子相关性扩展为任意数量的爪态相关性。
+>
+> **达到效果:** 该工作实现了从单向函数出发的量子简洁盲量子计算委托协议，并通过与[2026年欧密会论文]中的通信压缩编译器结合，最终得到了QMA的简洁论证系统。
+>
+> **技术梗概:** 技术上采用了经典通信辅助下的量子简洁爪态生成方法，显著提高了轮次复杂度并确保了在标准模型下运行，简化了整体设计。
+
+---
+### [2026/2041] A Unified Framework for Statistical Side-Channel Distinguishers: From Leakage Assessment to Key Recovery
+
+- **作者:** Quentin L. Meunier
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2041) | [PDF](https://eprint.iacr.org/2026/2041.pdf)
+
+
+> **研究背景:** 侧信道分析（SCA）通常分为密钥恢复攻击和泄漏评估方法两大类，尽管它们在处理由中间值或密钥假设划分的踪迹分布方面有共同点，但传统上被视为独立的技术。
+>
+> **主要贡献:** 作者提出了一种统一的统计框架，将侧信道区分器分解为子密钥诱导泄漏分区、分布比较统计量（分为二元和多元比较操作符）、成对分布比较的聚合操作以及全局决策规则等基本构建块。
+>
+> **达到效果:** 该研究评估了18个统计度量在不同实验配置下的表现，包括针对AVR XMEGA和ARM Cortex-M4目标、未掩码和掩码AES，在受控和自动化POI场景下，展示了如何将统计泄漏测试转化为功能完整的密钥恢复攻击。
+>
+> **技术梗概:** 该框架通过非参数统计（如Kolmogorov-Smirnov、Anderson-Darling、MMD、Energy Distance）与合适的聚合操作相结合，自然地引入了新的区分器。
+
+---
+### [2026/2043] Failure Is Not Silent: Attacks on Blind Signatures
+
+- **作者:** Maksymilian Gorski, Lucjan Hanzlik
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2043) | [PDF](https://eprint.iacr.org/2026/2043.pdf)
+
+
+> **研究背景:** 文章揭示了盲签名和OPRFs在匿名令牌和隐私保护协议中的广泛应用，但现有的一些关于其盲性和请求隐私性的声明在标准安全定义下是不成立的。
+>
+> **主要贡献:** 作者提出了恶意签名者/评估者的具体攻击方法，证明了几种现有构造（如Qin等人提出的ECDSA盲签名方案和可验证暗物质OPRF）的安全性定理并不成立。
+>
+> **达到效果:** 通过这些攻击，可以将隐藏消息的验证结果转化为一个关于隐藏消息的一比特测试或acles，揭示了先前证明中隐含使用加密隐藏或承诺隐藏设置中的漏洞。
+>
+> **技术梗概:** 攻击利用了一个简单的但被忽视的渠道：恶意签名者可以通过构造响应使得诚实用户在验证时根据隐藏消息是否满足特定条件而决定是否中断验证过程。
+
+---
+### [2026/2044] On Sparkle+ and its Security Claims
+
+- **作者:** Andrea Gangemi, Massimiliano Sala, Lorenzo Viganò
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2044) | [PDF](https://eprint.iacr.org/2026/2044.pdf)
+
+
+> **研究背景:** 本文重新审视了2023年首次出现的Sparkle+门限 Schnorr 签名方案的安全边界，该方案经过多次更新和修正。
+>
+> **主要贡献:** 作者详细检查了2025年6月版本中定理1和2的最终边界，并指出了与之前声明的不同之处。
+>
+> **达到效果:** 通过证明正确的边界条件，作者确定了在两种情况下各自更紧的边界条件。
+>
+> **技术梗概:** 研究采用了细致推导中间不等式的技巧，并结合门限 Schnorr 签名方案的安全性理论进行分析。
+
+---
+### [2026/2048] Linear list size bounds for Reed-Solomon beyond the Johnson radius
+
+- **作者:** Ariel Gabizon
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2048) | [PDF](https://eprint.iacr.org/2026/2048.pdf)
+
+
+> **研究背景:** 研究提出了关于Reed-Solomon码在超过Johnson半径情况下的线性列表大小边界，基于better.codes自研究项目中的技术发现。
+>
+> **主要贡献:** 贡献在于展示了当要求与接收词的分数一致率达到$\alpha$时，Reed-Solomon码具有$C\cdot n$的列表大小上限，其中$C,\alpha$仅依赖于率$\rho$且$\alpha<\sqrt{\rho}$。
+>
+> **达到效果:** 结果表明，在足够大的特征域上，对于给定的速率$\rho$和块长度$n$的Reed-Solomon码，当要求与接收词达到分数一致率$\alpha$时，列表大小上限为线性增长。
+>
+> **技术梗概:** 技术方法基于better.codes自研究项目中发现的技术，并补充了最近突破性的研究成果[BCPZZ26, Jeronimo26]关于一致率$\rho+\epsilon$的$n^c$列表大小边界。
+
+---
+### [2026/2050] A Polynomial-Time Attack on the McEliece Cryptosystem on Elliptic Codes with Arbitrary Divisors
+
+- **作者:** Artyom Kuninets, Ekaterina Malygina, Evgeniy Melnichuk
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2050) | [PDF](https://eprint.iacr.org/2026/2050.pdf)
+
+
+> **研究背景:** 针对基于代数几何码的McEliece密码系统，尽管已有一些结构性攻击，但仍有参数集未被任何已知攻击所覆盖。本文提出了一种新的结构性攻击方法，适用于带有任意有效除子的椭圆码。
+>
+> **主要贡献:** 该研究提出了一个新颖的攻击框架，能够在多项式时间内恢复整个除子，而无需依赖错误数量，并且还提供了一个优化版本，仅需有限的信息即可实现等效密钥恢复。
+>
+> **达到效果:** 通过此攻击方法，可以在给定椭圆曲线、公共生成矩阵和三个评估点后，在多项式时间内成功恢复整个除子，从而显著降低了系统的安全性。
+>
+> **技术梗概:** 该技术利用了曲线的自同构作用，并将已知三点简化为单个字段元素对的枚举过程，以减少计算复杂度并提高攻击效率。
+
+---
+### [2026/2052] One Scalar to Fold Them All, and in the Commitment Bind Them: Reduced Logarithmic ElGamal Shuffle Proofs
+
+- **作者:** Freeman Slaughter
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2052) | [PDF](https://eprint.iacr.org/2026/2052.pdf)
+
+
+> **研究背景:** 该研究旨在优化Xue等人提出的ElGamal同态重随机化可验证混排协议，通过减少证明的通信量和计算成本。
+>
+> **主要贡献:** 作者观察到重新随机化向量仅通过标量与多项式的一致性方程相关联，并将其绑定至KZG承诺中，从而简化了证明过程。
+>
+> **达到效果:** 通过这种优化，证明大小从原来的$(2\log N+11) \mathbb{G}_1 + 8 \mathbb{F}$减少到$(2\log_2 N+8) \mathbb{G}_1 + 5 \mathbb{F}$或更小，验证者的工作量也相应减少。
+>
+> **技术梗概:** 研究采用了将标量绑定至KZG承诺的技术，并引入了一种单向折叠证明来替代原有的两向一致性论证。
+
+---
+### [2026/2056] Reed-Solomon Codes Beyond Johnson: Efficient Decoding and Smaller Cryptographic Proofs
+
+- **作者:** Quang Dao, Scott Duke Kominers, Justin Thaler
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2056) | [PDF](https://eprint.iacr.org/2026/2056.pdf)
+
+
+> **研究背景:** Reed-Solomon码的列表解码及其在密码学证明中的应用是编码理论和零知识证明领域的重要问题。
+>
+> **主要贡献:** 作者提出了精确的量化边界，改进了隐微导数方法，并提供了高效的确定性解码算法，适用于加密域。
+>
+> **达到效果:** 这些结果提高了证明系统的效率并减小了证明大小，同时在所有速率下统一地细化了先前的结果。
+>
+> **技术梗概:** 通过使用隐微导数方法和更高阶的导数，作者获得了严格低于约翰逊界限的协议阈值，并提供了更精确的插值和候选计数。
+
+---
+### [2026/2057] Low-Space Quantum Discrete Logarithms on Genus-Two Jacobians
+
+- **作者:** Yan Huang, Yuling Chen, Fangguo Zhang
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2057) | [PDF](https://eprint.iacr.org/2026/2057.pdf)
+
+
+> **研究背景:** 研究背景：通用的除子加法公式在有限阿贝尔群中使用少量算术工作空间，但在处理例外输入时会失效。本文通过随机化方法解决了这一问题。
+>
+> **主要贡献:** 主要贡献在于提出了一种随机化减少技术，使得除子加法公式可以在量子相位计算中有效应用。
+>
+> **达到效果:** 达到的效果是，在特定条件下，该方法能够控制总失败概率和量子信道的误差率，并成功应用于高 genus 的 Jacobian 上。
+>
+> **技术梗概:** 技术梗概包括随机化减少、独立均匀分布处理、有用样本概率估计以及高效的量子计算实现策略。
+
+---
+
 ## 更新: 2026-09-17 10:57
 
 *新增 17 篇论文 (编号 2019--2035)*
