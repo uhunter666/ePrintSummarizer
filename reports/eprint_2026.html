@@ -79,6 +79,349 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-09-17 10:57</h2>
+<p><em>新增 17 篇论文 (编号 2019--2035)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2021] Silk: Computation-Efficient and Post-Quantum-Friendly Randomness Beacon</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Binyang Hou, Jiamian Yan, Liang Zhang, Borui Chen, Haibin Kan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2021">论文</a> | <a href="https://eprint.iacr.org/2026/2021.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的随机性信标依赖于秘密共享机制，通常需要昂贵的配对或群组操作来验证份额，并且其底层假设容易受到量子攻击。此外，为每个输出运行单独的拜占庭容错（BFT）共识实例会导致重复的计算和通信成本。</p>
+<p><strong>主要贡献:</strong> Silk通过引入Mulberry协议实现了批处理异步可验证秘密共享带部分输出（bAVSS-PO），并进一步在一批输出上共用BFT共识，仅需一次BFT实例即可。</p>
+<p><strong>达到效果:</strong> 实验结果显示，在广域网环境下使用121个副本分布在八个AWS区域中，Silk的吞吐量达到5.414次/秒，分别是Rondo和Spurt的1.53倍和4.18倍。</p>
+<p><strong>技术梗概:</strong> Mulberry协议利用哈希验证份额来降低计算成本，并在部分同步环境下确保了bAVSS-PO属性；Silk则通过共用BFT共识实例来减少重复的成本开销，同时保持了信标的确定性。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2026] A unified reduction from RLWE to MP-LWE</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Alice Pellet-Mary, Wenwen Xia</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2026">论文</a> | <a href="https://eprint.iacr.org/2026/2026.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究旨在统一从环学习误差问题（RLWE）到中间产品学习误差问题（MP-LWE）的约简方法，这两种问题是密码学中重要的数学基础。</p>
+<p><strong>主要贡献:</strong> 作者提出了一个参数化为一对字段元素$(y_a,y_s) \in K^2$的统一约简方法，该方法能够覆盖先前的所有实例，并且优化了选择以适用于所有符合条件的数域。</p>
+<p><strong>达到效果:</strong> 通过这种方法，首次实现了对所有满足特定条件的数域K = ℚ[X]/f(X)中的RLWE到MP-LWE的约简，这在以前的研究中是不存在的。</p>
+<p><strong>技术梗概:</strong> 该研究使用了多项式和数论的技术来优化参数选择，并且证明了新的约简方法的有效性。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2028] Dimension Reduction for Theta Series of Ideal Lattices</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Runkun Liu, Zhaoyang Liang, Dan Ding</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2028">论文</a> | <a href="https://eprint.iacr.org/2026/2028.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Theta系列是记录晶格向量长度的基本函数，连接了晶格几何与高斯质量等量纲。对于理想嵌入下的理想晶格，算术坐标通常耦合在一起，使得固定子集的theta系列计算和相关高斯计算在高维空间中变得困难。</p>
+<p><strong>主要贡献:</strong> 我们展示了显式可验证的相对基条件可以将每个固定子集的n维theta系列分解为ℓ个独立的n₀维度因子计算。这种分解适用于所有高斯参数，无需近似或平滑假设。</p>
+<p><strong>达到效果:</strong> 该方法显著降低了每种子集计算的维度，实现了最高335倍、215.45倍和7.9倍的速度提升，分别对应于固定子集theta系列评估、数值平滑参数评估和顺序高斯采样。</p>
+<p><strong>技术梗概:</strong> 通过验证特定条件下的相对基，将高维问题分解为低维度因子的组合计算。这种方法适用于多种循环和非循环扩展，并提供了具体的公式表示。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2033] Efficient Single-Server Online-Offline PIR without Periodic Preprocessing</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Hoang-Dung Nguyen, Jorge Guajardo, Thang Hoang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2033">论文</a> | <a href="https://eprint.iacr.org/2026/2033.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 传统的私有信息检索（PIR）协议要求服务器在每次客户端查询时进行昂贵的计算，这使得在线成本很高。为降低这一成本，提出了在线-离线PIR（OO-PIR），允许客户端预先计算一个与查询无关的提示表，从而实现子线性时间的在线查询复杂度。然而，现有的OO-PIR协议要么需要非合谋的双服务器设置，要么在单服务器设置中需要昂贵的周期性预处理，这导致了极高的带宽或计算开销。</p>
+<p><strong>主要贡献:</strong> 我们提出了ESCAPE，一种针对单服务器设置的新颖OO-PIR协议，完全消除了昂贵的周期性预处理，支持无限在线查询并在子线性时间内以低常数响应带宽运行。</p>
+<p><strong>达到效果:</strong> ESCAPE通过结合新的提示采样策略与线性同态加密（LHE）来隐藏任何提示和任何在线查询之间的相关性，并允许在子线性时间内在客户端上实时刷新消耗的提示，从而实现了这一目标。我们全面实现并评估了ESCAPE协议。</p>
+<p><strong>技术梗概:</strong> ESCAPE的核心创新在于结合了一种新的提示采样策略与线性同态加密（LHE），以隐藏任何提示和任何在线查询之间的相关性，并允许在子线性时间内在客户端上实时刷新消耗的提示，同时设计了一个随机采样结构，使其能够利用高效LHE实例化的简化预处理。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2034] Barely Doubly-Efficient PIR from Quadratic Residuosity</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Keewoo Lee</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2034">论文</a> | <a href="https://eprint.iacr.org/2026/2034.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> DEPIR方案允许客户端从远程服务器托管的数据库中检索数据而不泄露访问位置，现有的DEPIR方案大多基于格理论，尚未有非格基础的DEPIR方案。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于二次剩余假设的CRS模型下的DEPIR方案，并在每次查询时实现亚线性时间响应。</p>
+<p><strong>达到效果:</strong> 该方案通过利用Williams的矩阵-向量乘法预处理技术，结合Legendre符号的伪随机性来保证隐私，同时解决了每次查询使用新模数的问题。</p>
+<p><strong>技术梗概:</strong> 采用二次剩余假设和Legendre符号的伪随机性证明，结合矩阵-向量乘法预处理技术和子线性时间模数缩减的数据结构。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2035] Maliciously Secure Shuffled Distributed OPRF with Applications to Private Set Operations</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Aron van Baarsen, Aarushi Goel, Lisa Kohl, Peihan Miao, Phuoc Van Long Pham, Peter Scholl, Satvinder Singh</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2035">论文</a> | <a href="https://eprint.iacr.org/2026/2035.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有私有集合交集（PSI）协议在恶意设置下效率显著低于半诚实设置，主要瓶颈在于缺乏高效且安全的混排分布式不可区分伪随机函数（SH-DOPRF）。</p>
+<p><strong>主要贡献:</strong> 本文提出了首个线性复杂度的恶意安全SH-DOPRF构造，并应用于实现多种私有集合操作。</p>
+<p><strong>达到效果:</strong> 基于双线性对和暗物质PRF变体构建了两种实例，实现了高效且安全的多查询逆私有成员测试协议，进而支持私有集合操作。</p>
+<p><strong>技术梗概:</strong> 该技术主要依赖于对称密钥技术，仅在评估伪随机函数输出时使用少量公钥运算。</p>
+</blockquote>
+<hr />
+<h3>[2026/2019] The Residue Is the Resource: Exact Fresh-State Complexity, Reconstruction Limits, and Optimal Challenge Design in Folding</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xiang Wang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2019">论文</a> | <a href="https://eprint.iacr.org/2026/2019.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：折叠协议必须在公开展示挑战之前保留足够的输入相关信息，以支持所有必要的后挑战输出。本文探讨了这种边界处的精确保留宽度，并分析了不同挑战支持下的重建限制和最优挑战设计。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于确定了残余目标的空间维度作为所需新鲜标量信息的确切保留宽度，并通过秩来表征有限域上坐标乘法的最佳重构低于此宽度的情况。</p>
+<p><strong>达到效果:</strong> 达到的效果包括：明确了不同挑战支持下的精确宽度，揭示了基于Reed-Solomon域的直接宽度差异；并为多项式乘法提供了前三个缺陷的精确几何确定。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过分析残余目标的空间维度和秩来表征最优重构，并考虑了双线性侧信息引入的兼容性约束，从而确定不同挑战支持下的重建轮廓。</p>
+</blockquote>
+<hr />
+<h3>[2026/2020] Removing the Human, Keeping the Doors Unlocked: A Cross-Tool Formal Analysis of GSMA SGP.32 eSIM IoT Provisioning</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Rong Qian, Yu Cheng, Hongbo Zhao, Yuchang Zhang, Zengli Guo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2020">论文</a> | <a href="https://eprint.iacr.org/2026/2020.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：GSMA SGP.32通过远程管理器的签名替代了消费者eSIM配置中的本地用户确认，以实现无人值守物联网设备的安全配置。</p>
+<p><strong>主要贡献:</strong> 主要贡献：首次对SGP.32进行了形式化安全分析，并揭示了RSP家族三代产品中的漏洞。</p>
+<p><strong>达到效果:</strong> 达到的效果：发现了六个规范级攻击，包括一个涉及两次未认证本地操作的10步管理平面接管攻击；验证了协议在网络对手面前具有抵抗力；提出了两种修复措施并证明其有效性。</p>
+<p><strong>技术梗概:</strong> 技术梗概：使用Tamarin和ProVerif对SGP.32 v1.3管理平面进行建模，通过形式化方法分析安全性和可行性。</p>
+</blockquote>
+<hr />
+<h3>[2026/2022] A Partial Injection from Unsatisfiable to Uniquely Satisfiable Quadratic Systems</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Gabriele Radici, Massimiliano Sala</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2022">论文</a> | <a href="https://eprint.iacr.org/2026/2022.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：本文探讨了从无解的二次方程系统到唯一解的二次方程系统的部分映射问题，这是密码学中一个重要但未解决的问题。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于提出了一个可计算且无需预处理或提示的映射τ，该映射在特定子集上是单射，并且其逆过程等价于求解多项式方程组的零点问题。</p>
+<p><strong>达到效果:</strong> 达到的效果是在无解二次方程系统中找到了一个大于74.5%的概率保证下可单射到唯一解系统的子集，这为构建基于多项式方程的安全方案提供了新的可能性。</p>
+<p><strong>技术梗概:</strong> 技术梗概：映射τ通过在系数表示上进行三次点译码支持的平坦空间添加修正项来实现，并证明了其随机自约简性质。</p>
+</blockquote>
+<hr />
+<h3>[2026/2023] Robust Side Channel Analysis with Blocking and Quantification of Leakage</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Alicja Kario, George Pantelakis</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2023">论文</a> | <a href="https://eprint.iacr.org/2026/2023.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有侧信道分析(SCA)方法尽管理论基础强大，但在实际应用中往往忽视了重要的现实因素。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种新的SCA方法BLAQ，旨在弥合理论模型与不完美的测试环境之间的差距。</p>
+<p><strong>达到效果:</strong> 通过使用BLAQ方法，可以更准确地量化泄漏并提高分析的鲁棒性。</p>
+<p><strong>技术梗概:</strong> BLAQ方法通过阻塞和量化的手段来处理数据点，并提供正式边界以衡量测量精度。</p>
+</blockquote>
+<hr />
+<h3>[2026/2024] Optimistic History-Independent Sleepy Atomic Broadcast</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Kwok-Yan Lam, Zhenliang Lu, Qiang Tang, Xinrui Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2024">论文</a> | <a href="https://eprint.iacr.org/2026/2024.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有睡眠共识协议的延迟已显著提高，但大多数依赖于历史消息访问的假设或未在乐观条件下优化性能。</p>
+<p><strong>主要贡献:</strong> 作者设计了一种新的历史无关型睡眠原子广播协议，并提出了一个乐观条件下的原子广播协议。</p>
+<p><strong>达到效果:</strong> 新协议在最多1/5故障情况下实现了确认延迟为$2\Delta$和最优延迟$\Delta$，并在领导者诚实时实现了最好情况延迟$2\Delta$并容忍至多1/6的故障。</p>
+<p><strong>技术梗概:</strong> 通过引入乐观分级协议$OptimisticGA$，实现动态乐观半数集，并据此构建了新的原子广播协议。</p>
+</blockquote>
+<hr />
+<h3>[2026/2025] Optimal Amplification via Bias-Resilient Combiners</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Benny Applebaum, Nathan Geier</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2025">论文</a> | <a href="https://eprint.iacr.org/2026/2025.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：密码学中的组合器通过将多个候选方案结合，确保至少有k个是安全的即可实现整体的安全性。然而，在标准安全性概念下，弱候选者可能持续泄露部分信息而非完全失败，这使得直观的安全性放大假设失效。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者提出了一个新的专门框架——抗偏差区分组合器，克服了现有方法在误差率和放大阈值上的不足，并且不依赖于$\delta &lt; 0.5$的限制。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过这种新框架，研究人员能够实现更优的安全性放大效果，并且在弱候选者的错误参数上减少了大约$2^{n-k}$的损失。</p>
+<p><strong>技术梗概:</strong> 技术梗概：该研究采用了抗偏差的技术来设计组合器，确保即使输入中有偏差或部分信息泄露的情况下也能保持整体安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/2027] Leopard: A High-Performance Framework for Updatable Private Set Intersection</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xiaowei Li, Shi-Feng Sun, Yanxue Jia, Hao Li, Dawu Gu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2027">论文</a> | <a href="https://eprint.iacr.org/2026/2027.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> UPS Intersection (UPSI)扩展了传统的PSI协议，使其适用于动态场景，在这种场景中，输入集会随时间发生变化。现有的UPS方案虽然允许在不完全重新执行整个协议的情况下进行更新，但仍然存在实用性问题。</p>
+<p><strong>主要贡献:</strong> Leopard框架通过利用不平衡的PSI设计来实现无需完整重执行即可处理插入和删除操作的UPSI，同时兼容任何不平衡的PSI协议，并通过跨更新重用内部数据结构进一步提高性能。</p>
+<p><strong>达到效果:</strong> 实验结果表明，与Badrinarayanan等人（ASIACRYPT 2024）和Alborch等人（ACNS 2026）相比，Leopard实例将计算成本最多减少了111.28倍，并至少减少了1.48倍；通信成本最多减少了118.97倍，并最多减少了522.01倍。</p>
+<p><strong>技术梗概:</strong> Leopard框架通过在不平衡的PSI中增量更新某些数据结构而不是完全重建它们来实现性能提升，提供了一个基于FHE的实例以展示通过这种数据结构重用获得的显著性能改进。</p>
+</blockquote>
+<hr />
+<h3>[2026/2029] It's Not Just a Phase: Understanding Function Dependence in MPC Preprocessing</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Andreas Brüggemann, Kasra Edalatnejad, Jan Filipp, Philipp Kusterer, Thomas Schneider</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2029">论文</a> | <a href="https://eprint.iacr.org/2026/2029.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 安全多方计算(MPC)是实现隐私保护应用的关键技术。为了在输入提供后实现低延迟，许多高效协议利用了预处理，并且预处理方法的景观正在变得多样化和复杂化。</p>
+<p><strong>主要贡献:</strong> 研究系统化了不同类型的函数依赖性，并将其与效率之外的实际需求联系起来，填补了现有文献在这方面关注不足的问题。</p>
+<p><strong>达到效果:</strong> 通过区分不同的函数依赖类型及其实际影响，为设计更高效的MPC预处理方案提供了理论基础和指导。</p>
+<p><strong>技术梗概:</strong> 通过对已有工作的分析和总结，识别并分类了多种函数依赖性，并探讨了它们在实际应用中的意义。</p>
+</blockquote>
+<hr />
+<h3>[2026/2030] New Pseudorandom Correlation Functions and Exponent VRFs from DCR</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Archisman Dutta, Lisa Kohl, Lawrence Roy, Peter Scholl</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2030">论文</a> | <a href="https://eprint.iacr.org/2026/2030.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究旨在设计一种新的伪随机关联函数(PCFs)，以实现两个参与者之间基于短相关密钥生成大量可局部评估的关联随机性。</p>
+<p><strong>主要贡献:</strong> 作者首次提出了在任意模数$M$下针对协盲传输(COT)和向量协盲线性评价(VOLE)关联性的PCF构造，并且引入了扩展幂DDH问题的新家族及其与标准DCR假设之间的关系。</p>
+<p><strong>达到效果:</strong> 通过这些构造，研究者实现了高效的PCFs，并证明其安全性基于DCR假设。此外，还提出了一种基于离线/在线同态秘密共享的公开可验证eVRF。</p>
+<p><strong>技术梗概:</strong> 该技术基于DCR假设，并且包含一个轻量级的两轮分布式设置协议。</p>
+</blockquote>
+<hr />
+<h3>[2026/2031] Mind Small Integers in MDS Matrix: Collision Attacks on Round-Reduced Reinforced Concrete</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jiamin Cui, Fukang Liu, Jianqiang Ni, Willi Meier</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2031">论文</a> | <a href="https://eprint.iacr.org/2026/2031.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对零知识证明(ZKP)的快速发展，设计了ZK友好的哈希函数，并采用小查找表(LUTs)构建非线性变换(称为Bars层)，以增强其安全性和性能。</p>
+<p><strong>主要贡献:</strong> 作者发现由MDS矩阵包围的Bars层可能导致更弱的差分特性，从而提出了一种针对Reduced Reinforced Concrete的新碰撞攻击方法。</p>
+<p><strong>达到效果:</strong> 该研究成功实现了对4.5轮Reduced Reinforced Concrete的碰撞攻击，并验证了3.5轮的具体碰撞实例。</p>
+<p><strong>技术梗概:</strong> 通过分析Bars层和随后的Concrete层以及Bricks层之间的差分特性，作者提出了一种新颖的技术来绕过这些复杂结构。</p>
+</blockquote>
+<hr />
+<h3>[2026/2032] Tight Constants in Talagrand's Boolean Convolution Inequality</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhao Song</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2032">论文</a> | <a href="https://eprint.iacr.org/2026/2032.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究旨在确定Talagrand布尔卷积不等式中的最优维度无关常数$C_*(a)$，该不等式描述了噪声算子$T_a$作用于非负函数$f$在均匀测度$\mu$下的概率上界。</p>
+<p><strong>主要贡献:</strong> 作者提出了每个$a\in(0,1)$的具体上界，并证明了当$a$接近1时，常数$C_*(a)/\sqrt{\kappa_a}$的极限上界小于0.3577。</p>
+<p><strong>达到效果:</strong> 同时，通过构建特定函数序列，作者还给出了该常数的下界估计，表明其极限下界大于等于0.3570。</p>
+<p><strong>技术梗概:</strong> 研究采用了构造性方法来建立这些边界，并结合了概率论和凸分析中的技术。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-09-15 07:17</h2>
 <p><em>新增 34 篇论文 (编号 1984--2018)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/1985] Post-Quantum Private Set Intersection for Small Sets</h3>

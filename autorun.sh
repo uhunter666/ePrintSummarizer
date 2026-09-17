@@ -27,7 +27,7 @@ done
 
 # Run the pipeline
 log "Running cli.py ..."
-if python cli.py >> "$LOG_FILE" 2>&1; then
+if python3 cli.py >> "$LOG_FILE" 2>&1; then
     log "cli.py finished successfully"
 else
     log "cli.py failed with exit code $?"
