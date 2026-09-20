@@ -5,6 +5,441 @@
 
 ---
 
+## 更新: 2026-09-20 19:36
+
+*新增 23 篇论文 (编号 2058--2080)*
+
+### [推荐] [2026/2058] Trace-Factored BigSwitch for Matrix-Friendly FHE
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Dong Jin Park, Hyunseok Jeong, Minwook Jeong, Jaeky Oh, Yongwoo Lee, Young-Sik Kim
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2058) | [PDF](https://eprint.iacr.org/2026/2058.pdf)
+
+
+> **研究背景:** 在矩阵友好的全同态加密（FHE）中，评估密钥是主要的内存和初始化瓶颈。Gentry–Lee (GL)框架中的Trace乘积生成了四个组件的密文，其BigSwitch过程需要两个扩展环密钥，其中大部分由巨大的产品秘密密钥(sXsY → sX)占据。
+>
+> **主要贡献:** 本文提出了Trace-Factored BigSwitch（TFB），通过利用Trace生成密钥的一秩张量结构，消除了这一产品秘密评估密钥，从而实现了精确的评估密钥内存节省，并引入了FRee-L以进一步减少后处理噪声注入和延迟开销。
+>
+> **达到效果:** 在OpenFHE链接的原型中（n = 256），TFB将系数域BigSwitch密钥大小从768.0 MiB减少到385.5 MiB（49.80%），峰值RSS减少了15.31%，冷密钥准备时间减少了51–63%。对于真实的GPT-2注意力核（K = 4），FRee-L将TFB的配对开销降低到5.90%，进一步降至0.1933%（K = 160）。
+>
+> **技术梗概:** TFB通过路由产品秘密通过sY → sX开关，然后是标准基环(s^2)X → sX重新线性化来实现精确的评估密钥内存节省。FRee-L将K个Trace产品的组件在四元组域中累积，并仅在每个输出瓷砖处调用一次BigSwitch，从而减少后处理噪声注入次数并摊销延迟开销为O(1/K)。
+
+---
+### [推荐] [2026/2064] Area-Time Efficient NTRU Prime Decapsulation: ASIC Evaluation of the First Five-Way Char-3 Multiplier
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Esra Yeniaras
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2064) | [PDF](https://eprint.iacr.org/2026/2064.pdf)
+
+
+> **研究背景:** Streamlined NTRU Prime (sntrup761)作为一种基于格的密钥封装机制，尽管不是NIST标准的一部分，在关键互联网基础设施中仍被广泛应用。其解封装操作涉及在特征三环上的多项式乘法，因此优化这一操作可以显著提升协议性能。
+>
+> **主要贡献:** 研究贡献在于首次将Yeniaras-Cenk 5-way multiplier (U1-hybrid)应用于ASIC设计，并与Peng等人提出的并行学校书算法进行了比较。结果显示，在乘法器级别和sntrup761解封装核心中，前者分别比后者表现优异。
+>
+> **达到效果:** 在面积-时间积（ADP）方面，Yeniaras-Cenk 5-way multiplier优于Peng的schoolbook方法，分别提高了6.8倍和1.27倍。此外，在sntrup761解封装核心中，该算法完成所需周期减少了1358个。
+>
+> **技术梗概:** 研究采用了Yeniaras-Cenk提出的5-way乘法器（U1-hybrid），这是一种在特征三环上具有最低算术复杂度的方法，并通过Nangate 45 nm库进行了综合设计。
+
+---
+### [推荐] [2026/2066] Optimizing HAETAE and SMAUG-T on Cortex-M4 for Resource-Constrained IoT Devices
+
+- **匹配关键字:** post-quantum
+
+- **作者:** JunHyeok Choi, DongHyun Shin, Seog Chung Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2066) | [PDF](https://eprint.iacr.org/2026/2066.pdf)
+
+
+> **研究背景:** 针对物联网(IoT)设备优化后量子密码学(PQC)算法的实现，特别是在Cortex-M4这种资源受限嵌入式微控制器上的优化是必要的，因为这直接关系到操作周期数和通信成本。
+>
+> **主要贡献:** 作者通过修正现有HAETAE算法中的错误，并提出ASNE技术来替代多项式的FFT计算，同时对SMAUG-T算法进行系数范围分析和最优NTT应用等优化措施，实现了显著的性能提升。
+>
+> **达到效果:** 在Cortex-M4上实现的HAETAE和SMAUG-T算法经过优化后，在KeyGen、Sign/Verify以及Encaps/Decaps操作中分别取得了高达309.1%、4.8%至6.0%，266.7%、348.9%及341.0%的性能改进。
+>
+> **技术梗概:** 通过静态分析和度量检测，作者优化了关键内核，并未发现存在定时泄露现象。
+
+---
+### [推荐] [2026/2067] Maltese: Succinct Polynomial Commitment from Lattices
+
+- **匹配关键字:** lattice
+
+- **作者:** Katarina Cheng, Wilson Nguyen, Nirvan Tyagi
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2067) | [PDF](https://eprint.iacr.org/2026/2067.pdf)
+
+
+> **研究背景:** 简洁多项式承诺方案是构建简洁非交互知识论证(SNARKs)的关键组件。现有的基于格的简洁多项式承诺方案采用'分裂和折叠'策略，利用同态性将证明大小压缩至$O(	ext{polylog} N)$量级。
+>
+> **主要贡献:** Maltese 提出了一种新颖的基于格的简洁多项式承诺方案，该方案通过梅克尔树承诺实现，并结合了折叠策略和新的求和检查基约简方法来管理树承诺中的范数增长。
+>
+> **达到效果:** Maltese 在标准模-SIS假设下安全，对于大小为$N=2^{30}$的多项式生成开销证明为335KB；相比前人工作，证明大小减少了约300倍，同时保持了对数验证复杂度，但略大于其他工作所依赖的较大验证复杂度或更强结构假设。
+>
+> **技术梗概:** Maltese 采用了基于梅克尔树承诺的折叠策略，并提出了新的求和检查基约简方法来管理树承诺中的范数增长。
+
+---
+### [推荐] [2026/2073] Revisiting ML Training under Fully Homomorphic Encryption: Convergence Guarantees, Differential Privacy, and Efficient Algorithms
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Yvonne Zhou, Mingyu Liang, Ivan Brugere, Danial Dervovic, Yue Guo, Antigoni Polychroniadou, Min Wu, Dana Dachman-Soled
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2073) | [PDF](https://eprint.iacr.org/2026/2073.pdf)
+
+
+> **研究背景:** 研究旨在探讨在全同态加密(FHE)下机器学习训练的理论收敛性，并结合差分隐私(DP)算法以提高计算效率和保持数据隐私。
+>
+> **主要贡献:** 贡献包括证明了使用多项式逼近激活函数和损失函数的近似梯度下降法的收敛性，以及提供了一种无需逐样本梯度裁剪即可实现差分隐私的方法。
+>
+> **达到效果:** 结果表明，在FHE下训练机器学习模型的同时保持了与标准DP-GD相当的实用性，并且通过理论分析优化了超参数选择和多项式逼近策略。
+>
+> **技术梗概:** 技术上，采用了多项式逼近方法来兼容FHE，并结合差分隐私算法以提高效率和隐私保护。
+
+---
+### [推荐] [2026/2076] Symmetry-Graded Digit Extraction Framework for Faster BGV Bootstrapping
+
+- **匹配关键字:** lattice, homomorphic encryption
+
+- **作者:** Zhenyu Xiong, Mingsheng Wang, Zhedong Wang, Han Wang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2076) | [PDF](https://eprint.iacr.org/2026/2076.pdf)
+
+
+> **研究背景:** BGV同态加密的瓶颈在于其bootstrapping阶段，尤其是大明文素数$p$下的digit extraction步骤。现有方法分别通过降低digit-extraction多项式的次数和减少评估深度来加速此过程。
+>
+> **主要贡献:** 本文提出了一种对称分级框架，将两种不同的评估途径视为作用于digit-extraction多项式上的交换群操作，并识别出一种新的秩为二的晶格结构，从而推导出更稀疏的order-six digit-extraction多项式。
+>
+> **达到效果:** 该框架不仅统一了现有方法，还通过引入特定的对称性实现了更低的成本评估，特别地，在Mersenne素数下可以实现order-six对称性。
+>
+> **技术梗概:** 通过对digit extraction多项式的对称分级处理，本文提出的方法能够同时优化多项式次数和评估深度，从而在保持较低成本的同时提高bootstrapping效率。
+
+---
+### [推荐] [2026/2077] Practical Group Signatures from Tag-Based NTRU Sampler
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Corentin Jeudy
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2077) | [PDF](https://eprint.iacr.org/2026/2077.pdf)
+
+
+> **研究背景:** 随着后量子密钥协议和签名方案的迁移已取得进展，研究转向了其他缺乏高效解决方案的基本属性和原语。其中，隐私增强原语如组签名为重要领域之一。尽管近期有所进步，但大多数紧凑的格基构造要么计算密集，要么密钥材料庞大，或者两者兼有。
+>
+> **主要贡献:** 作者提出了一种新的基于标签的NTRU采样器，结合了NTRU的紧凑性和陷阱门框架的优势，实现了高效且紧凑的组签方案，并提出了两种独立假设来支持其安全性。
+>
+> **达到效果:** 该方案达到了紧凑的签名和密钥大小，同时在所有操作中都保持了高效的运行时间。此外，所提出的假设为更复杂的隐私驱动原语提供了理论基础。
+>
+> **技术梗概:** 通过设计一种新的基于标签的NTRU采样器，作者成功地将NTRU的优点与先进的格基构造相结合，从而实现了高效且紧凑的组签方案。
+
+---
+### [推荐] [2026/2078] Radical Ring-LWR: Efficient Key Encapsulation and Signatures from Structured Rounding
+
+- **匹配关键字:** lattice, LWE, LWR
+
+- **作者:** Joost Renes, Joppe W. Bos, Haochen Huang, Selim Kirbiyik, Alberto Ovena, Sujoy Sinha Roy, Frederik Vercauteren, Peng Wang, Fangyu Zheng, Chenxin Zhong
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2078) | [PDF](https://eprint.iacr.org/2026/2078.pdf)
+
+
+> **研究背景:** 现有基于格的密码学需要具有幂次为二的cyclotomic域，这限制了可实现的安全级别；或者需要模块结构，其成本随着模块秩的平方增长。
+>
+> **主要贡献:** 提出了Radical Ring-LWR（RR-LWR），这是一种基于误差采样和舍入的新机制，并提供了安全性的理论证明。
+>
+> **达到效果:** 通过RR-LWR机制，设计了Mithril（IND-CCA KEM）和Octarine（EF-CMA签名方案），并在量子随机 oracle 模型中给出了安全性归约。
+>
+> **技术梗概:** 基于幂次为二的radical环算术，该方法有利于采样、舍入和屏蔽，并提供了针对RR-LWR设置的具体失败概率估计解决方案。
+
+---
+### [2026/2059] On Aborts in Differential Privacy
+
+- **作者:** Fredrik Meisingseth
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2059) | [PDF](https://eprint.iacr.org/2026/2059.pdf)
+
+
+> **研究背景:** 研究背景：随着多方协议中差分隐私（DP）的应用日益广泛，特别是在分布式环境中，如何在减少信任假设的同时确保数据隐私成为关键问题。然而，现有文献较少关注协议中弃权行为对差分隐私保证的影响及其对诚实参与方输出的性质分析。
+>
+> **主要贡献:** 主要贡献：作者提出了一种理想化的弃权模型，并界定了不同信息泄露情况下弃权对差分隐私机制执行效果的影响边界；首次证明了公平执行相较于安全-弃权执行为诚实参与方提供了更强的差分隐私保证，且单一输出功能在实现上具有类似性质。
+>
+> **达到效果:** 达到的效果：通过上述分析，作者揭示了弃权行为对多方协议中差分隐私保障的具体影响，并提出了更严格的差分隐私实现标准；这些结果不仅适用于基于通用多方计算（MPC）的差分隐私机制，也为其他方法评估差分隐私协议提供了理论依据。
+>
+> **技术梗概:** 技术梗概：作者采用理想化模型来研究弃权对差分隐私的影响，并通过形式化分析和证明方法界定了不同信息泄露情况下的影响边界；利用这些结果分析了公平执行与安全-弃权执行之间的差异，以及单一输出功能的性质。
+
+---
+### [2026/2060] DelegProof: A Machine-Checked Security Analysis of EIP-7702 Delegation
+
+- **作者:** Rong Qian, Yu Cheng, Lingyu Gao, Yuchang Zhang, Zengli Guo
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2060) | [PDF](https://eprint.iacr.org/2026/2060.pdf)
+
+
+> **研究背景:** EIP-7702允许外部账户通过单一签名委托执行权给任意合约代码，但存在安全风险，如恶意合约利用和跨链重放攻击等。
+>
+> **主要贡献:** DelegProof首次对EIP-7702授权语义与ERC-4337 EntryPoint管道进行了形式化分析，并发现了多种机器验证的攻击模式。
+>
+> **达到效果:** 通过Tamarin模型，研究确认了临时委托捆绑包可能失效、重新委托导致存储混淆以及ERC-1271签名替代攻击等安全问题，并提出了相应的缓解措施。
+>
+> **技术梗概:** 使用Tamarin进行符号形式化分析，验证推荐的安全对策的有效性，确保模型和证明公开透明。
+
+---
+### [2026/2061] Normal Alignment: Improved Cryptanalytic Sign Recovery on Hard-Label Networks
+
+- **作者:** Shi Tang, Zirui Chen, Yongjia Su, Zhengchao Gao, Lingyue Qin, Xiaoyang Dong
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2061) | [PDF](https://eprint.iacr.org/2026/2061.pdf)
+
+
+> **研究背景:** 在2025年的EUROCRYPT会议上，Carlini等人提出了对硬标签DNN进行签名和符号恢复的突破性方法，但其符号恢复方法仅在初始阶段具有微弱优势，在深层网络中容易产生高置信度的错误预测，导致昂贵的指数级时间枚举。
+>
+> **主要贡献:** 本文提出了一种新颖的统计符号恢复方法——Normal Alignment，通过决策面相邻切片投影法向量长度差异进行符号推断，显著提高了投票准确率，并将错误预测推至低置信度级别，从而实现更高效的结合方法eSOE + Alignment。
+>
+> **达到效果:** 实验表明，该方法在深层网络中特别有效。例如，在CIFAR-10和MNIST模型（架构分别为192-64×8-10和64-96×3-32-10）中，可以实现符号的完全恢复，而Carlini等人提出的方法则需要进行指数级时间的枚举。
+>
+> **技术梗概:** Normal Alignment方法基于决策面相邻切片投影法向量长度差异进行符号推断，并结合硬标签扩展eSOE与该技术相结合，实现了无冗余的精确多项式时间符号恢复。
+
+---
+### [2026/2062] Hamming Ideals and Grobner Bases for ISD-like Syndrome Decoding
+
+- **作者:** Roberto La Scala, Marco Marchesin, Sharwan K. Tiwari
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2062) | [PDF](https://eprint.iacr.org/2026/2062.pdf)
+
+
+> **研究背景:** 本文探讨了基于Hamming重量约束的Syndrome解码问题的代数方法，通过重新表述Hamming变种并结合信息集解码范式来解决这一问题。
+>
+> **主要贡献:** 作者提出了一个ISD-like解码策略，并通过GBDecode算法实现，该算法仅固定信息集中的一部分元素，从而减少组合搜索空间。
+>
+> **达到效果:** 实验结果表明，在NIST安全类别1参数设置下，针对随机二进制线性代码实例的Syndrome解码问题，该方法提供了可调的组合搜索与代数求解之间的平衡。
+>
+> **技术梗概:** 通过利用卷积恒等式和Lucas身份进行因子分解，作者获得了具有辅助变量且多项式度数受限的等价模型，并使用MultiSolve算法处理多变量非线性系统。
+
+---
+### [2026/2063] Witness Encryption for NP from SNARGs and Groups
+
+- **作者:** Zhengzhong Jin
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2063) | [PDF](https://eprint.iacr.org/2026/2063.pdf)
+
+
+> **研究背景:** 本文构建了首个基于简洁非交互式论证（SNARGs）和群组模型的NP类证人加密方案。
+>
+> **主要贡献:** 贡献在于首次将电路满足性问题转化为线性码的最小距离问题，并结合现有框架实现了首个无条件可提取的NP类证人加密方案。
+>
+> **达到效果:** 该方案在通用群组模型下有效，适用于任意具有亚指数声学性和多项式对数在线验证时间（预处理后）的SNARGs。
+>
+> **技术梗概:** 通过适应Hair和Sahai最近关于GapSVP难度结果的方法，实现了将电路满足性问题转化为线性码最小距离问题的关键技术。
+
+---
+### [2026/2065] Differentially Oblivious Resizing for Group-By Aggregations
+
+- **作者:** James Bell-Clark, Albert Cheu, Adria Gascon, Jonathan Katz, Lukas Gerlach
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2065) | [PDF](https://eprint.iacr.org/2026/2065.pdf)
+
+
+> **研究背景:** 针对私有分组聚合系统（如计算直方图、最小值/最大值或平均值），需要确保虚拟机的内存访问模式不泄露过多的私人信息给不可信主机。现有方案如使用Oblivious RAM虽然能保证隐私但性能较差且需预留大量内存以应对最坏情况数据流。
+>
+> **主要贡献:** 提出ROGA，一种可扩展的私有分组聚合方案，结合了改进的Oblivious单访问机和新颖的差异性遗忘重置机制，确保分配的内存接近非遗忘解决方案所用内存，并能高效并行化处理。
+>
+> **达到效果:** 通过Rust实现并使用Binsec/Rel验证ROGA的操作、重置估算器及固定工作噪声采样器的踪迹不可干涉性，证明了在相同公有参数下不同秘密输入具有相同的分支目标和内存地址踪迹。唯一依赖数据的分支是差异隐私化的重置决策。相比现有最先进的遗忘方案，ROGA性能更优。
+>
+> **技术梗概:** ROGA利用扩展的Oblivious单访问机技术提高性能，并引入了差异性遗忘机制以动态调整内存分配，同时支持多核并行处理以提升效率。
+
+---
+### [2026/2068] Distributed SNARGs Resilient to Corrupt Verifiers
+
+- **作者:** Elette Boyle, Lalita Devadas
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2068) | [PDF](https://eprint.iacr.org/2026/2068.pdf)
+
+
+> **研究背景:** 分布式认证是一种监测分布式系统正确性的方法，其中包含一个中央证明者和网络中的多个验证器。现有的方案主要关注信息论意义上的声学性，并最近发展到计算声学性，实现了分布式可局部验证的简洁非交互式论证(SNARGs)。
+>
+> **主要贡献:** 本文引入并探讨了在证明者可能与网络中某些节点合谋的情况下仍保持计算声学性的鲁棒分布式SNARGs (rdSNARGs)的概念，并为此类语言构建了具有简短证书大小和通信的构造。
+>
+> **达到效果:** 该工作为任何分布式的P语言构建了鲁棒分布式SNARGs，证明者可以与网络中的一些节点合谋时仍保持计算声学性保证。
+>
+> **技术梗概:** 通过扩展版本的RAM SNARGs来实现具有简短证书大小和通信的构造，从而解决了验证器作弊带来的挑战。
+
+---
+### [2026/2069] Default Correct: A New Fault Surface in the Comparison Booleanisation of Kyber-KEM
+
+- **作者:** Anirudh Jaiswal, Abhilash Kumar Das, Dhiman Saha
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2069) | [PDF](https://eprint.iacr.org/2026/2069.pdf)
+
+
+> **研究背景:** 研究背景：Fujisaki–Okamoto (FO)变换保护Kyber-KEM免受选择密文攻击，基于比较步骤。然而，在主流实现中，该比较过程被细分为多个独立可故障的阶段，包括字节级不匹配累积、补码布尔化和条件移动指令。
+>
+> **主要贡献:** 主要贡献：作者揭示了在比较过程中未被充分研究的“布尔化”阶段作为新的攻击面。证明了一次亚指令时钟瞬变可以强制错误标志失败，导致解密接受任意密文。
+>
+> **达到效果:** 达到的效果：该研究展示了对ARM Cortex-M4（ChipWhisperer-Lite）上的pqm4、PQClean和Kyber-512/768/1024参考实现的攻击成功，表明现有防御措施无法抵御此类攻击。
+>
+> **技术梗概:** 技术梗概：通过在比较过程中引入时钟瞬变故障注入，直接作用于布尔化阶段，绕过了现有的默认失败条件移动指令防护机制。
+
+---
+### [2026/2070] Polynomial Time Algorithms for the Kadison-Singer Problem
+
+- **作者:** Zhao Song, Song Yue
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2070) | [PDF](https://eprint.iacr.org/2026/2070.pdf)
+
+
+> **研究背景:** 该研究解决了Kadison-Singer问题的存在性，提供了一类秩至多为一的Hermitian矩阵的多项式时间算法。
+>
+> **主要贡献:** 贡献了两种算法：一种确定性算法和一种随机化算法，以找到满足特定条件的符号序列。
+>
+> **达到效果:** 确定性算法在$\widetilde O(mn^2+n^{56})$次算术运算中实现了常数因子为3.3443的结果；随机化算法期望下在$\widetilde O(mn^2+n^{5.88})$次算术运算中达到了更好的常数因子。
+>
+> **技术梗概:** 通过分析矩阵和向量的性质，设计了高效的数值计算方法来解决Kadison-Singer问题。
+
+---
+### [2026/2071] Soft Analytical Side-Channel Attacks on SHA-2 and HMAC
+
+- **作者:** Maxime Lecomte, Julien Maillard, Antoine Moran, Guénaël Renault, Benjamin Smith
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2071) | [PDF](https://eprint.iacr.org/2026/2071.pdf)
+
+
+> **研究背景:** 研究旨在利用位级软分析侧信道攻击（SASCA）技术，通过Sentence Decision Diagrams克服经典信念传播方法在处理多字模组加法时的计算难题，以恢复SHA-256哈希函数的秘密输入和HMAC-SHA-256的秘密密钥。
+>
+> **主要贡献:** 贡献在于开发了一种无需控制或了解输入信息的针对HMAC的攻击方法，并通过全面模拟评估了攻击者对SHA-256和HMAC-SHA-256恢复能力。
+>
+> **达到效果:** 结果表明，该攻击能够有效利用加载指令的侧信道特性，在STM32F303RET6微控制器上的多位置EM探针设置中评估其对抗软件实现的HMAC-SHA-256的能力。
+>
+> **技术梗概:** 技术上采用了Sentence Decision Diagrams来改进信念传播方法，以处理复杂的模组加法操作，并通过模拟和实际硬件测试验证了攻击的有效性。
+
+---
+### [2026/2072] Sunshine Systems: Enabling Privacy-Preserving Compliance with Freedom of Information Laws
+
+- **作者:** Aarushi Goel, Gabriel Kaptchuk, Yuange Li
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2072) | [PDF](https://eprint.iacr.org/2026/2072.pdf)
+
+
+> **研究背景:** 阳光系统旨在通过加密框架解决自由信息法合规性问题，防止政府机构在面临调查时隐瞒不当行为的证据。
+>
+> **主要贡献:** 该研究贡献了一种名为Sunshine系统的零知识证明机制，能够使政府部门以安全的方式验证其已完整且准确地响应了信息公开请求。
+>
+> **达到效果:** 实验结果表明，即使是在资源有限的小型政府机构中，该系统也具有实际可操作性，并能有效增强信息透明度和问责制。
+>
+> **技术梗概:** Sunshine系统基于最近在查找论证方面的进展构建，能够在低成本硬件上实现并评估其效果。
+
+---
+### [2026/2074] Revisiting Malicious Private Aggregation: Formalization, Weaknesses, and Enhancements
+
+- **作者:** Ananya Appan, Pranav Shriram Arunachalaramanan, David Heath, Ling Ren
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2074) | [PDF](https://eprint.iacr.org/2026/2074.pdf)
+
+
+> **研究背景:** 私有聚合方案允许在不泄露任何单个客户端输入的情况下，将敏感数据汇总。这些方案广泛应用于隐私保护的联邦学习、私有热门项识别以及匿名系统中。
+>
+> **主要贡献:** 作者提出了几种私有聚合的理想功能，并正式化了一个常见的先前私有聚合方案背后的范式。
+>
+> **达到效果:** 通过正式处理，研究揭示了现有私有聚合方案的安全缺陷或不足之处，并提供了模块化的修改建议以确保这些方案在客户端可能具有不可靠网络的情况下安全实现所定义的私有聚合功能。
+>
+> **技术梗概:** 该研究采用形式化方法来重新审视恶意私有聚合，并通过识别和填补关键细节，增强了现有方案的安全性。
+
+---
+### [2026/2075] Bounding the Excess Risk for Linear Models Trained on Marginal-Preserving, Differentially-Private, Synthetic Data
+
+- **作者:** Yvonne Zhou, Mingyu Liang, Ivan Brugere, Danial Dervovic, Antigoni Polychroniadou, Min Wu, Dana Dachman-Soled
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2075) | [PDF](https://eprint.iacr.org/2026/2075.pdf)
+
+
+> **研究背景:** 随着机器学习模型的广泛应用，人们越来越担心这些模型可能会泄露个人隐私信息。为了保护敏感数据不被泄露，研究者们提出了使用差分隐私（DP）生成的合成训练数据来替代真实数据进行模型训练的方法。
+>
+> **主要贡献:** 本文的主要贡献是为线性模型在保持低阶边际的情况下训练于差分隐私合成数据上提供了连续和Lipschitz损失函数下的新颖的上界和下界估计，从而更好地理解了这种训练方式的风险控制能力。
+>
+> **达到效果:** 通过理论分析与实验验证，研究者们证明了所提出的方法能够有效限制线性模型在差分隐私保护下的过拟合风险，并且这些结果对于实际应用中的数据隐私保护具有重要意义。
+>
+> **技术梗概:** 本文采用概率论和统计学习理论相结合的方法，构建了基于合成数据训练的线性模型的风险评估框架，并通过严格的数学推导给出了具体的误差边界。
+
+---
+### [2026/2079] Period-Aligned Secure Cosine Evaluation Based on Two-Party Computation
+
+- **作者:** Qingyu Mo
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2079) | [PDF](https://eprint.iacr.org/2026/2079.pdf)
+
+
+> **研究背景:** 在机器学习应用中，余弦函数的评估对秘密共享数据具有挑战性。传统方法使用多项式逼近或查找表，但随着输入域增大成本显著增加。最新的协议首先将私有输入模余余弦周期，但在安全执行此模运算时也会产生较大开销。
+>
+> **主要贡献:** 提出了一种基于两方计算的对齐周期安全余弦评估协议。该协议利用余弦加法规则重新缩放每个份额，使得输入模数的一个循环对应完整的$2\pi$周期，并且不会改变重组后的余弦值。
+>
+> **达到效果:** 实验结果表明，在合成数据和私有RFF基的RBF-SVM预测中，与Xing等人(NDSS 2025)和Guo等人(USENIX Security 2026)的协议相比，该协议表现出更好的效率。
+>
+> **技术梗概:** 该协议仅使用两个跨方乘法运算和一个固定点输出转换来实现安全计算，每个参与方在其份额上本地评估正弦和余弦函数。
+
+---
+### [2026/2080] Lightweight Cryptography for Secure UAV Data Integrity Using Ascon-XOF128 and SHAKE128
+
+- **作者:** Mehul Kumar Das, Varun Shukla, Prabhavi Tripathi, Vivek Shukla, Divya Mishra, Atul
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2080) | [PDF](https://eprint.iacr.org/2026/2080.pdf)
+
+
+> **研究背景:** 随着无人机在通信、监控及其他关键任务应用中的部署增加，确保数据完整性的高效机制需求日益增长。
+>
+> **主要贡献:** 论文研究了使用Ascon-XOF128和SHAKE128两种扩展输出函数来保障无人机数据完整性，并开发了一个数学框架进行分析。
+>
+> **达到效果:** 通过比较两种XOF的性能指标，如执行时间、吞吐量、计算成本等，确定了它们在资源受限环境下保证数据完整性的实际权衡。
+>
+> **技术梗概:** 研究基于海绵结构处理和安全性属性，通过消息大小和输出长度变化进行对比评估。
+
+---
+
 ## 更新: 2026-09-18 07:23
 
 *新增 19 篇论文 (编号 2036--2057)*
