@@ -5,6 +5,49 @@
 
 ---
 
+## 更新: 2026-10-07 07:28
+
+*新增 2 篇论文 (编号 2339--2340)*
+
+### [推荐] [2026/2339] Pseudorandom Codes from LWE
+
+- **匹配关键字:** LWE
+
+- **作者:** Keewoo Lee
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2339) | [PDF](https://eprint.iacr.org/2026/2339.pdf)
+
+
+> **研究背景:** Pseudorandom代码（PRC）是一种纠错码，其码字在没有秘密钥的情况下看起来是均匀随机的。它们不仅是独立研究的对象，还具有如不可检测的人工智能生成内容水印等有趣的应用。
+>
+> **主要贡献:** 本文提出了从Learning with Errors (LWE)构建Pseudorandom代码的方法，提供了一种替代的基础。
+>
+> **达到效果:** 该构造简单：码字是经过舍入处理的LWE样本，并被随机字符串遮掩。我们证明了其鲁棒性，使用傅里叶分析表明即使在非线性的舍入情况下也能保持伪随机特性。
+>
+> **技术梗概:** 通过将Pseudorandom代码与Learning with Errors (LWE)结合，利用傅里叶分析证明了构造的鲁棒性，基于标准LWE或亚指数LWE，并考虑了种植的$t$-SUM问题的难度。
+
+---
+### [2026/2340] Optimizing Montgomery Arithmetic for RSA on Cortex-M0+ and Cortex-M3
+
+- **作者:** Minoo Sim, Minwoo Lee, Seungwon Lee, SuBeen Cho, Jiwon Bang, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2340) | [PDF](https://eprint.iacr.org/2026/2340.pdf)
+
+
+> **研究背景:** 针对需要在小型处理器上执行RSA私钥操作的密码学令牌，优化了Montgomery乘法和平方算法以提高效率。
+>
+> **主要贡献:** 提出了适用于Cortex-M0+和Cortex-M3处理器的Montgomery乘法和平方优化方法，并将其集成到基于中国剩余定理的RSA-2048和RSA-3072私钥操作中。
+>
+> **达到效果:** 在1024位和1536位运算宽度下，M0+版本减少了Montgomery乘法和平方的周期数；M3版本通过减少缓冲区遍历次数进一步优化了平方运算。
+>
+> **技术梗概:** 使用15位肢体进行包裹求和和累积块商以精确恢复进位，并在平方调度中结合平方和约简列而不存储完整平方。
+
+---
+
 ## 更新: 2026-10-06 07:17
 
 *新增 52 篇论文 (编号 2286--2338)*
