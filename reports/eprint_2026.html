@@ -79,6 +79,626 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-10-07 15:39</h2>
+<p><em>新增 30 篇论文 (编号 2341--2371)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2341] Measuring Parallel Execution of Classical–PQC Component Pairs in Hybrid TLS 1.3</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Siwoo Eum, Minho Song, Seung-Won Lee, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2341">论文</a> | <a href="https://eprint.iacr.org/2026/2341.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文研究了在TLS 1.3中将密钥交换和复合ML-DSA签名操作拆分为经典组件和后量子密码学(PQC)组件的效果，以评估并行执行这些组件是否能减少握手过程的延迟。</p>
+<p><strong>主要贡献:</strong> 作者通过使用TLS握手阶段的工作负载而非完整的TLS连接来衡量在两个pthread工作线程上同时运行这两个组件与顺序执行相比是否可以降低延迟。</p>
+<p><strong>达到效果:</strong> 实验结果表明，在ARM和x86环境中，所有六种条件下并行执行都比串行执行更快，速度提升从1.041×到1.281×不等。但在低功耗x86环境下，源代码反而在所有六个条件下的运行速度较慢。</p>
+<p><strong>技术梗概:</strong> 研究采用了一种方法，即保持操作顺序不变，仅并行化组件对，并将同步成本包含在内进行计时分析。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2342] Deploying Native-Rust KpqC: Pluggable Post-Quantum KEMs and Signatures across TLS, Space Links, and the OQS Ecosystem</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Yulim Hyoung, Doyun Park, Hyunji Kim, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2342">论文</a> | <a href="https://eprint.iacr.org/2026/2342.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着量子计算的发展，后量子密码学的部署成为了一个新的挑战，需要将标准化方案集成到实际协议栈中，并在资源受限的目标上运行，同时保持内存安全性。</p>
+<p><strong>主要贡献:</strong> 本文通过使用原生Rust实现KpqC竞赛中的标准方案，并提供一个可插拔的提供商接口，使得这些方案可以在TLS 1.3、OQS兼容的C ABI以及卫星通信链路模型中进行评估。</p>
+<p><strong>达到效果:</strong> 实验结果表明，在受限空间链路上，SMAUG-T的关键交换更小更快；所有七个KpqC KEM参数集和四种签名方案均得到了验证。</p>
+<p><strong>技术梗概:</strong> 通过将Rust代码与OQS API的C ABI接口相结合，本文实现了一个内存安全的后量子密钥封装机制，并在实际应用场景中进行了端到端测试。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2343] Post-Quantum Command Authentication for Unmanned Systems: A KpqC Feasibility Study under Real-Time and Bandwidth Constraints</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Yulim Hyoung, Daeun Lim, Jiwon Bang, Doyun Park, Hagyeong Kim, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2343">论文</a> | <a href="https://eprint.iacr.org/2026/2343.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对无人机和地面无人车辆（UAVs、UGVs）的命令与认证通道仍依赖于经典公钥加密，而大规模量子计算机对其构成威胁。因此，将这些通道迁移到后量子密码学（PQC）变得至关重要。</p>
+<p><strong>主要贡献:</strong> 本文研究了韩国PQC算法（KpqC：HAETAE, AIMer, SMAUG-T, NTRU+）在ROS2/DDS-Security中的应用，将其作为命令通道大小-延迟预算问题进行探讨。</p>
+<p><strong>达到效果:</strong> 通过在一个统一的测试平台上对经典→NIST→KpqC三种方式进行对比分析，本文定义了一个可行性边界，指明了每种算法可以满足的信道条件，并通过模拟受限链路上的身份验证握手测量进行了验证。</p>
+<p><strong>技术梗概:</strong> 使用NIST标准（ML-KEM, ML-DSA, SLH-DSA）作为参考基准，并以经典ECDSA/ECDH为迁移基线，进行单个一致测试平台上的三向对比分析。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2345] Randomness-Anchored Runtime Discovery of Cryptographic Operations on Linux Using eBPF</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Sumin Jeong, Yulim Hyoung, Hagyeong Kim, Huiju Kang, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2345">论文</a> | <a href="https://eprint.iacr.org/2026/2345.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景在于，随着后量子密码学的迁移，不仅需要识别系统中存在哪些加密库，还需要了解在运行时实际执行了哪些算法。现有的静态二进制分析可以回答前者问题，但后者则需动态观察。</p>
+<p><strong>主要贡献:</strong> 主要贡献是提出了一种基于eBPF用户空间探针的Linux运行时密码学发现系统，能够检测经典和后量子操作，并通过随机性观测作为时间锚点来提高检测置信度。</p>
+<p><strong>达到效果:</strong> 达到的效果包括：精确识别算法执行、低延迟（中位数28 μs）且在高负载下仍能稳定工作、对随机性依赖配置的四轮调优不敏感，同时保持较低的开销。</p>
+<p><strong>技术梗概:</strong> 技术梗概是利用eBPF用户空间探针检测随机性生成和封装操作，并将这些观察作为时间锚点来关联后续的加密调用，从而生成带有置信度评分的事件流。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2347] HyBind: Structural Analysis of PQ/T Hybrid Cryptographic Usage</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Jongbeom Ahn, Minseo Kim, Moonsun Heo, Subeen Cho, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2347">论文</a> | <a href="https://eprint.iacr.org/2026/2347.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 面对量子计算对传统公钥密码学的威胁，研究提出了HyBind框架以分析PQ/T混合加密算法的使用情况。</p>
+<p><strong>主要贡献:</strong> HyBind通过Python源代码分析提供了一种方法来检查联合验证结构，并确保在迁移过程中正确处理传统和后量子算法的结合。</p>
+<p><strong>达到效果:</strong> HyBind成功地匹配了50个受控测试用例的结果，并且在33个程序中，包括15个使用原生加密API的程序中也达到了预期的效果。</p>
+<p><strong>技术梗概:</strong> 该框架利用注册的API合同进行函数返回和执行效果检查，并通过内部存在的基于特征的启发式方法来区分联合与省略的秘密贡献结构。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2348] Verifier-Aligned Canonical Source Binding for Homomorphic Encryption Computations</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Subeen Cho, Jiwon Bang, Minseo Kim, Seungwon Lee, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2348">论文</a> | <a href="https://eprint.iacr.org/2026/2348.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有同态加密计算中，验证者在不同路径上的结果缺乏统一的源标识，导致验证过程存在不一致性。</p>
+<p><strong>主要贡献:</strong> 提出了一种验证者对齐的公共输入传输程序，将异构认证组件链接到单一的标准源关系上，确保了跨验证路径的一致性。</p>
+<p><strong>达到效果:</strong> 该方法使得全输入实施能够处理524,288个系数，并显著减少了约束数量和证明时间，同时保持了证明主体大小不变。</p>
+<p><strong>技术梗概:</strong> 通过从实际声明、根节点、批准的验证密钥及认证位置重建挑战和目标，结合分块电路共同验证源和遮罩承诺，实现了一种高效的一致性验证机制。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2349] Output Policies for Anomaly Detection with Homomorphic Encryption: Threshold Resolution, Decision Preservation, and Numerical Stability</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Subeen Cho, Jiwon Bang, Minseo Kim, Seungwon Lee, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2349">论文</a> | <a href="https://eprint.iacr.org/2026/2349.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：异或检测中的异常分数计算需保护隐私，同时保持决策的一致性。现有方法在输出策略上存在信息泄露和决策预测准确性下降的问题。</p>
+<p><strong>主要贡献:</strong> 主要贡献：提出了一种新的输出策略，能够在限制数值阈值信息的同时保留现有决策，并且不影响其他输入的决策预测能力。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过实验验证了该策略的有效性，在45组不同配置下均能生成包含阈值的信息区间；同时在128个仅决策响应的训练中实现了0.817的平均平衡准确率，表明其具有良好的泛化性能。</p>
+<p><strong>技术梗概:</strong> 技术梗概：采用同态加密计算异常分数，并通过区分内部评分和发布评分来制定输出策略，确保了决策的一致性并限制了阈值信息的泄露程度。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2350] Optimized NEON Implementation of MAYO on Apple M1</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Minwoo Lee, Minjoo Sim, Siwoo Eum, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2350">论文</a> | <a href="https://eprint.iacr.org/2026/2350.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> MAYO是NIST后量子签名标准过程中的候选者之一，其第三轮规范引入了新的参数和验证方程项，需要重新优化实现以适应新规范。</p>
+<p><strong>主要贡献:</strong> 作者提出了针对Apple M1的优化NEON实现，并改进了多个关键内核的效率，特别是在线性项处理上取得了显著进步。</p>
+<p><strong>达到效果:</strong> 优化后的MAYO在多项性能指标上超越了上游实现，尤其是在签名和验证速度方面提升了20%至37%，并且通过常数时间测试验证了算法的安全性。</p>
+<p><strong>技术梗概:</strong> 利用NEON指令集优化了多个GF(16)内核，并采用常量时间和八路交错AES技术提高了计算效率。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2351] Batched LSH on ARMv8 NEON and Its Application to K-SPHINCS+</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Ji-Won Bang, Su-Been Cho, Yu-Lim Hyoung, Ha-Gyeong Kim, Hwa-Jeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2351">论文</a> | <a href="https://eprint.iacr.org/2026/2351.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着FIPS 205标准化后量子签名方案，以及ARMv8覆盖移动、嵌入式和服务器平台，针对ARM的快速哈希基签名变得尤为重要。由于这些方案主要依赖于哈希调用，因此哈希优化对性能影响重大。</p>
+<p><strong>主要贡献:</strong> 研究贡献在于重新实现了三种已发布的LSH优化技术，并首次将四消息LSH批处理核心集成到SPHINCS+的WOTS+链、FORS叶节点和Merkle树计算中。</p>
+<p><strong>达到效果:</strong> 结果表明，单一消息NEON实现无法超越KISA便携式C代码编译后的性能（0.75–0.90倍）。然而，消息并行批处理显著提升了LSH-256的吞吐量，在NEON通道上同时哈希两个或四个独立消息可达到1.53–1.66倍和约2.0倍的顺序C代码吞吐量。</p>
+<p><strong>技术梗概:</strong> 技术方案包括手写AArch64 NEON汇编实现2019年、2023年和2024年的LSH优化，并测试了来自2022年Keccak/SPHINCS+论文的NEON调度指导是否适用于LSH。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2353] N2SF-Based Post-Quantum Cryptography Migration Framework for Data in National and Public Institutions</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Do-Yun Park, Yu-Lim Hyoung, Hwa-Jeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2353">论文</a> | <a href="https://eprint.iacr.org/2026/2353.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究针对国家和公共机构中的数据提出了一种基于N2SF的后量子密码学(PQC)迁移框架，旨在确保在量子计算威胁下数据的安全性。</p>
+<p><strong>主要贡献:</strong> 贡献在于制定了数据保护要求与加密依赖关系之间的决策标准，并将操作分为允许、延迟或拒绝执行。</p>
+<p><strong>达到效果:</strong> 通过参考实现，在225项策略试验中验证了这些决策的有效性，未发现未经授权的完成或读取行为；九次中断试验也证实了恢复机制的有效性。</p>
+<p><strong>技术梗概:</strong> 技术上采用了PQC迁移框架，并结合N2SF保护要求，区分了负载保留、密钥重封装、重新加密、通信迁移和签名更新等操作。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2354] Processing-Time Effects on PQC-Based Over-the-Air Rekeying over CCSDS TC/TM Links</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Ha-Gyeong Kim, Hwa-Jeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2354">论文</a> | <a href="https://eprint.iacr.org/2026/2354.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究探讨了在CCSDS TC/TM链路中，后量子密码学（PQC）基于的空中密钥更新（OTAR）处理时间效应的影响。</p>
+<p><strong>主要贡献:</strong> 贡献在于通过具体实例化并对比了无处理时间和有处理意识模型之间的差异，特别是在特定条件下OTAR协议执行路径和最终传输结果的变化。</p>
+<p><strong>达到效果:</strong> 研究结果显示，在某些TM-only条件下，不同处理规模下存在双向的最终传输结果不一致现象；同时，有限接触时间的不同也影响了协议的执行状态。</p>
+<p><strong>技术梗概:</strong> 采用了一个三重KEM参考实现，并在七个逻辑阶段测量服务时间，通过对比无处理和有处理模型，在三个观察级别上进行评估。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2356] BOLT-FHE: An Efficient Unified Framework for GPU-based TFHE Bootstrapping via On-Chip Local Tiling Strategies</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Yanren Chen, Fangyu Zheng, Guang Fan, Jiankuo Dong, Wenxu Tang, Tian Zhou, Jingqiang Lin, Jiwu Jing</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2356">论文</a> | <a href="https://eprint.iacr.org/2026/2356.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在全同态加密(FHE)中，盲旋转和外部乘积链的协调执行是性能瓶颈，尤其是在GPU资源受限的情况下。</p>
+<p><strong>主要贡献:</strong> BOLT-FHE框架通过强调块本地执行、片上平铺以及统一的大内核支持，实现了这一目标，并提供了可选的支持技术以提高效率。</p>
+<p><strong>达到效果:</strong> 在NVIDIA RTX 4090上，BOLT-FHE达到了每秒40,166次的启动加速，展示了在普通GPU上的高吞吐量TFHE启动加速。与VeloFHE相比，在带有小工具分解的情况下，速度提高了1.85到2.92倍。</p>
+<p><strong>技术梗概:</strong> 通过固定执行模板融合NTT/INTT、外部乘积和累加器更新，并使用WPP和IPT两个编译时参数控制多战列合作和每个线程的寄存器占用，实现了统一的内核结构。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2359] Area-Efficient Hardware Architecture of the Post-Quantum HQC Cryptosystem with Side-Channel Protection</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Kamal Raj, Peizhou Gan, Sayan Das, Anupam Chattopadhyay</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2359">论文</a> | <a href="https://eprint.iacr.org/2026/2359.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> HQC作为NIST标准的PQC KEM算法，尽管在数学上具有安全性，但其物理实现仍易受侧信道攻击（SCA）影响。现有的防护措施如遮罩和混排会增加硬件资源消耗并引入额外性能开销。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于HQC的低面积常时间硬件架构，并采用新颖的空闲硬件重用策略作为SCA防护手段，实现了小于0.5%的面积开销。</p>
+<p><strong>达到效果:</strong> 该设计全面参数化以支持不同安全级别的HQC算法，并在Artix-7 FPGA上实现，验证了功能正确性并通过TVLA确认显著抑制了侧信道泄漏。</p>
+<p><strong>技术梗概:</strong> 通过故意重用KECCAK硬件生成解码过程中的动态功耗来混淆与密钥相关的功率相关性，从而实现有效的SCA防护。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2360] One-Round Threshold XMSS and SPHINCS+ from Fully Homomorphic Encryption</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum, homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Jung Hee Cheon, Kevin Choi, Hyeoncheol Joo, Taeseong Kim</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2360">论文</a> | <a href="https://eprint.iacr.org/2026/2360.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的基于哈希的签名方案如XMSS和SPHINCS+在后量子密码学中已得到广泛应用，但它们缺乏可分解结构，难以直接应用于分布式系统中的门限化处理。</p>
+<p><strong>主要贡献:</strong> 本文首次提出了一个单一回合的门限XMSS和SPHINCS+协议，并通过全同态加密方案实现了签名算法的同态评估。</p>
+<p><strong>达到效果:</strong> 该协议允许任意$t$-of-$n$参与方协作生成签名，且与现有标准兼容。实验结果显示，SHAKE256/256的评估时间被优化至每哈希3.4毫秒，而在线门限XMSS签名完成时间为0.69秒。</p>
+<p><strong>技术梗概:</strong> 通过开发高效的同态SHAKE评估技术，并结合批量处理和同态查找，实现了从数据依赖选择到最终电路的构建。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2365] On the Instantiability of the Fujisaki–Okamoto Transform for Trapdoor Functions</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Carter Luck, Xinyu Mao, Adam O'Neill</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2365">论文</a> | <a href="https://eprint.iacr.org/2026/2365.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：Fujisaki–Okamoto (FO) 变换是将弱安全的公钥加密转换为选择密文安全性的标准方法，广泛应用于包括ML-KEM在内的许多实际后量子密钥封装方案。尽管已有大量工作关注于哈希函数H的安全性，但本文聚焦于关键步骤G，并探讨了在保持其安全性的同时如何实例化该变换的问题。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者证明了消息仅隐式拒绝变体$\UmIR$的一般不可实例化，并提出了在基于TDF的FO混合加密形式下实例化哈希函数G的充分条件，引入了分布注入等概念。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过分析和证明，本文揭示了在FO变换中实例化关键步骤G所面临的挑战，并为实现安全的公钥密码方案提供了新的理论依据。</p>
+<p><strong>技术梗概:</strong> 技术梗概：研究采用了假设标准LWE和亚指数安全混淆以及可穿刺伪随机函数的方法，构建反例以证明$\UmIR$的一般不可实例性，并通过引入分布注入等概念来探讨FO变换的实例化条件。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2371] DP-Guided Schedule Selection for $\mathbb{F}_2[x]$ Multiplication across ISAs</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Junyu Zhou, Xiao Lan, Jing Wang, Hao Ren, Weiran Liu, Si Gao</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2371">论文</a> | <a href="https://eprint.iacr.org/2026/2371.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在经典和后量子密码学软件中，$\mathbb{F}_2[x]$上的高效乘法是核心组件。随着ARM和RISC-V架构在开源加密库中的应用日益广泛，如OpenSSL和liboqs，算术内核需要针对更广泛的指令集架构（ISA）进行重新调整。</p>
+<p><strong>主要贡献:</strong> 本文将递归$\mathbb{F}_2[x]$乘法问题表述为调度选择问题，并利用动态规划（DP）方法在紧凑的ISA概要中优化分解策略，该概要考虑了基本乘法、异或操作、内存流量和递归开销。</p>
+<p><strong>达到效果:</strong> 通过这种方法，在x86-64、ARM64、RISC-V64和RP2040平台上实现了1.04–1.18倍的几何平均加速，特别是在HQC和BIKE集成中，分别获得了1.06–1.21倍和1.01–1.70倍的整体端到端加速。</p>
+<p><strong>技术梗概:</strong> 该研究利用了递归规则空间中的最优子结构特性，通过动态规划（DP）方法在紧凑的ISA概要中优化分解策略，并将生成的调度表或固定大小的内核进行材料化处理。</p>
+</blockquote>
+<hr />
+<h3>[2026/2344] Role-Specific Signature Placement in TLS 1.3: Cost Propagation and PQC Migration</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Moonsun Heo, Subeen Cho, Jongbeom Ahn, Minseo Kim, Hwajeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2344">论文</a> | <a href="https://eprint.iacr.org/2026/2344.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在TLS 1.3中，证书颁发和每连接签名的成本不同，认证成本取决于签名算法分配到根、中间和叶角色的方式。PQC迁移需要考虑算法性能外，还需考虑角色放置、证书结构、网络条件和服务负载。</p>
+<p><strong>主要贡献:</strong> 研究评估了固定算法组合下所有可能的角色排列方式（13³种），涵盖加密操作、证书颁发、路径验证、TLS认证、混合传统-PQC链路、网络配置文件、会话恢复和并发负载，以优化PQC迁移的成本传播。</p>
+<p><strong>达到效果:</strong> 在286个包含三种不同算法的组中，TLS延迟的最大/最小比率为2.085，证书主体大小为4.310，路径验证成本为4.551。直接从根到中间的角色互换导致TLS比率中位数为1.003，而涉及叶节点的互换则为1.775-1.788。</p>
+<p><strong>技术梗概:</strong> 通过固定算法组合并改变角色顺序来评估所有可能的角色排列方式，并综合考虑了加密操作、证书颁发、路径验证等多方面因素以优化PQC迁移的成本传播。</p>
+</blockquote>
+<hr />
+<h3>[2026/2346] Public-coin Differing-input Obfuscation from KOALA and iO</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Liyan Chen, Vinod Vaikuntanathan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2346">论文</a> | <a href="https://eprint.iacr.org/2026/2346.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文基于最近提出的证人加密方案，展示了其在Knowledge of Orthogonality Assumption（KOALA）下的提取性公共硬币证人加密特性，并进一步将其应用于获得公共硬币不同输入混淆功能。</p>
+<p><strong>主要贡献:</strong> 贡献在于首次将KOALA假设与证人加密相结合，从而实现公共硬币不同输入混淆，这是一种重要的密码学工具，用于保护程序的机密性而不泄露其内部结构。</p>
+<p><strong>达到效果:</strong> 通过上述技术，作者成功地从KOALA和indistinguishability obfuscation（iO）中推导出了public-coin differing-input obfuscation (diO)，增强了对不同输入程序的混淆能力。</p>
+<p><strong>技术梗概:</strong> 该研究利用了KOALA假设下的证人加密机制，并结合公共硬币技术，实现了高效且安全的不同输入混淆方案。</p>
+</blockquote>
+<hr />
+<h3>[2026/2352] X-Wing on Cortex-M85: Architecture-Aware Integration and End-to-End Evaluation</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Do-Yun Park, Hwa-Jeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2352">论文</a> | <a href="https://eprint.iacr.org/2026/2352.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 该研究旨在为Cortex-M85微控制器集成并评估一种结合了ML-KEM-768和X25519的混合密钥建立方案，以优化嵌入式设备中的密码学性能。</p>
+<p><strong>主要贡献:</strong> 研究人员通过调整系数表示法、存储顺序以及数据格式转换和X25519算术运算，实现了对现有ML-KEM路径的适应性集成，并提出了B8和B8S两种改进型实现方案。</p>
+<p><strong>达到效果:</strong> 研究结果显示，在相同的执行环境中，与基线A0相比，B8在密钥生成、封装、重用扩展密钥的解封装以及包含种子扩展的解封装方面分别实现了18.61%、18.89%、12.25%和15.22%的时序减少。非易失性存储空间增加了35,692 B，其中包括一个大小为33,024 B的固定基表。</p>
+<p><strong>技术梗概:</strong> 研究采用了系数表示法调整、存储顺序优化以及数据格式转换等技术，并在封装过程中共享了两个X25519结果中的一个逆运算。</p>
+</blockquote>
+<hr />
+<h3>[2026/2355] GPU-Assisted FAEST v3 Signing: Challenge Grinding and CPU–GPU Pipelining</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ha-Gyeong Kim, Si-Woo Eum, Seung-Won Lee, Min-Ho Song, Hwa-Jeong Seo</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2355">论文</a> | <a href="https://eprint.iacr.org/2026/2355.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：FAEST v3签名算法在GPU辅助下的实现不仅需要利用并行计算，还需要解决挑战生成的问题，并且要在不同的执行条件下评估单签时间和多签吞吐量。</p>
+<p><strong>主要贡献:</strong> 主要贡献在于实现了GPU辅助的挑战过滤和CPU-GPU流水线技术，提高了特定参数集下的单签时间和多签吞吐量。</p>
+<p><strong>达到效果:</strong> 达到的效果是在六种非EM FAEST v3参数集中，有四种参数集在CPU-GPU路径下具有较低的代表性单签延迟；对于多签吞吐量，在18种参数-批次大小组合中有9种情况下CPU-GPU路径表现更好。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过GPU并行筛选连续计数范围内的候选值，而CPU按顺序执行最终接受检查，并构建了交替签名状态的CPU-GPU混合流水线以优化工作分配。</p>
+</blockquote>
+<hr />
+<h3>[2026/2357] Rare-Event Decorrelation for Linear Tests of Low-Complexity Pseudorandom Functions</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Nikolas Melissaris</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2357">论文</a> | <a href="https://eprint.iacr.org/2026/2357.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：低复杂度伪随机函数（PRF）面临线性测试的基本障碍，尤其是当这些函数基于低深度电路和秘密线性或仿射映射时。现有工作未能完全解决这类函数抵抗多项式查询数的非自适应线性攻击的问题。</p>
+<p><strong>主要贡献:</strong> 主要贡献：通过利用稀有局部事件的相关性论证，作者解决了Ball等人提出的候选PRF对于任意多项式数量非自适应查询的开放问题，并为Boyle等人的Sipser基弱PRF家族提供了线性攻击抵抗保障。</p>
+<p><strong>达到效果:</strong> 达到的效果：针对Ball等人的候选PRF，在固定参数下证明了其对多项式查询数的非自适应线性测试具有极小偏置。对于Boyle等人基于Sipser的PRF家族，随机样本数量在一定范围内的情况下，所有线性攻击的偏置也显著降低。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过重复应用Cauchy--Schwarz不等式将原始相关性转化为稀有事件指示器的偶校验相关性，同时保持由底层线性形式提供的独立性。利用二阶独立性获得更强的抵消效果。</p>
+</blockquote>
+<hr />
+<h3>[2026/2358] Glimpsing the Leakage Flow for Deep Learning-Based Side-Channel Analysis using Stochastic Leakage Model</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Trevor Yap, Shivam Bhasin</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2358">论文</a> | <a href="https://eprint.iacr.org/2026/2358.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 深度学习已成为侧信道分析中最占主导地位的方法，即使在存在强大防护措施的情况下也能成功恢复密钥。然而，现有方法大多为黑盒操作，无法解释各层特征表示中的泄漏信息。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种名为GlimpseDNN的模型无关框架，能够逐层可视化深度神经网络如何处理物理泄漏踪迹以实现密钥恢复过程。</p>
+<p><strong>达到效果:</strong> 通过在模拟数据和公开数据集上的验证，证明了即使原始泄漏未被捕捉，GlimpseDNN也能通过考虑训练良好的深层网络来发现这些泄漏。</p>
+<p><strong>技术梗概:</strong> 该框架利用随机泄漏模型对各层中间特征中的潜在泄漏进行表征，并通过学习权重实现解释性分析。</p>
+</blockquote>
+<hr />
+<h3>[2026/2361] Optimized LLL Algorithm</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhengjun Cao, Lihua Liu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2361">论文</a> | <a href="https://eprint.iacr.org/2026/2361.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> LLL算法在向量基的缩减和交换过程中存在不足，可能导致第一个向量比其他向量更长或某些向量未能充分缩减。</p>
+<p><strong>主要贡献:</strong> 作者提出了一种优化后的LLL算法，该算法独立于正交化过程，并将复杂度从O(n^4)降低到O(n^3)。</p>
+<p><strong>达到效果:</strong> 通过概率论的论证，新算法在多项式时间内运行。</p>
+<p><strong>技术梗概:</strong> 优化后的算法避免了传统方法中的正交化步骤，从而简化了计算流程并提高了效率。</p>
+</blockquote>
+<hr />
+<h3>[2026/2362] The Geometry of Witness-Update Tradeoffs in Additive Positive Accumulators</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Wei Qi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2362">论文</a> | <a href="https://eprint.iacr.org/2026/2362.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：加性正累积器通过一个简短的公共摘要表示不断增长的集合，每个插入元素都有一个成员资格证明，该证明可能需要在后续插入后更新。现有理论主要关注最大和总更新次数的下界，但未能完全描述这些更新如何分布。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者引入了左深度向量和凸向上区域的概念，并证明了对于多项式时间更新规范，存在一个树分布$\Pi_{\lambda,\delta}$，使得所有标记坐标的期望更新向量受到约束。</p>
+<p><strong>达到效果:</strong> 达到的效果：通过这一理论，研究者能够更精确地理解和预测累积器中成员资格证明的刷新模式，从而优化累积器的设计和实现。</p>
+<p><strong>技术梗概:</strong> 技术梗概：作者利用二叉树的左深度向量和凸向上区域来刻画更新向量，并通过概率方法推导出期望更新向量的下界。</p>
+</blockquote>
+<hr />
+<h3>[2026/2363] MiniSHAKE</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Guido Bertoni, Joan Daemen, Seth Hoffert, Silvia Mella, Michaël Peeters, Gilles Van Assche, Ronny Van Keer</p>
+</li>
+<li>
+<p><strong>分类:</strong> Secret-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2363">论文</a> | <a href="https://eprint.iacr.org/2026/2363.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> MiniSHAKE旨在为处理大量短消息提供一种更高效的选择，通过使用较小的Keccak-p[800, (n_r=12)]置换来实现这一目标。</p>
+<p><strong>主要贡献:</strong> 该研究贡献了一种新的哈希函数变体，能够在保持安全性的同时减少计算资源的需求。</p>
+<p><strong>达到效果:</strong> MiniSHAKE在处理短消息时表现出色，提供了与标准Keccak相当的安全性保证。</p>
+<p><strong>技术梗概:</strong> 通过调整Keccak的置换宽度并优化轮数，MiniSHAKE实现了更高效的哈希函数设计。</p>
+</blockquote>
+<hr />
+<h3>[2026/2364] Comparative Evaluation of Open-Source Gröbner Basis Implementations for Small-Scale AES Polynomial Systems over GF(2)</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Pavel Holý, Martin Jureček</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2364">论文</a> | <a href="https://eprint.iacr.org/2026/2364.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究评估了20个开源Gröbner基实现方法在小规模AES多项式系统（GF(2)域）上的实际性能，以Magma作为私有参考。</p>
+<p><strong>主要贡献:</strong> 贡献在于通过Easy、Medium和Hard三个实验对比分析这些实现方法在不同输入实例下的墙钟时间、峰值内存使用量、成功率及CPU占用情况。</p>
+<p><strong>达到效果:</strong> 结果显示，在某些输入系统下，开源实现如msolve和Singular的slimgb可以与Magma竞争，并且其性能取决于具体输入系统的特点。</p>
+<p><strong>技术梗概:</strong> 技术上采用了基于AES多项式系统的实验设计，通过比较多种指标来评估不同实现方法的表现差异。</p>
+</blockquote>
+<hr />
+<h3>[2026/2366] Multiplying Not-So-Big Integers with FFTs: Finding and Pushing the Crossover on Large Modern OoO ARM CPUs</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Cesare Huang, Daisy Meng-Wei Liu, David Shu-Yu Wu, Bow-Yaw Wang, Bo-Yin Yang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2366">论文</a> | <a href="https://eprint.iacr.org/2026/2366.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究探讨了在现代大型ARM CPU上，快速傅里叶变换(FFT)乘法与传统乘法的性能交叉点，并通过优化实现进一步降低此阈值。</p>
+<p><strong>主要贡献:</strong> 作者开发了一种新的乘法器实现方法，该方法利用优化后的代码和验证技术，在5.6k位以下实现了NTT乘法的优势。</p>
+<p><strong>达到效果:</strong> 研究成果被集成到OpenSSL RSA中，显著提升了公钥操作的整体速度。</p>
+<p><strong>技术梗概:</strong> 通过使用ARMv8+ Neon技术和优化的Barrett余数减少方法，实现了更高效的多精度整数乘法器。</p>
+</blockquote>
+<hr />
+<h3>[2026/2367] Simple Extremely Lossy Functions from Small-Exponent Hashing</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Damiano Abram, Agni Datta, Archisman Dutta, Lawrence Roy</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2367">论文</a> | <a href="https://eprint.iacr.org/2026/2367.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 极损失函数（ELFs）是一种标准模型原语，用于捕捉随机预言机的许多有用属性。现有的ELF构造大多基于DDH或$k$-Lin假设，并且需要从仅对固定大小对手安全的序列中进行二次构建，这使得它们复杂且效率低下。</p>
+<p><strong>主要贡献:</strong> 作者提出了极损失可逆哈希（ELTDH），这是一种更强的概念，可以推导出所有已知的ELF变体。通过直接构造ELTDH而无需从仅对固定大小对手安全的方案中进行二次构建，简化了设计并提高了效率。</p>
+<p><strong>达到效果:</strong> 该研究实现了在单一假设下同时满足ELTDH的安全性，即指数安全的小幂次离散对数和多项式安全的决策复合残差性（DCR），这使得其比现有ELF构造更加简洁高效。</p>
+<p><strong>技术梗概:</strong> 通过利用小幂次离散对数的指数安全性以及决策复合残差性的多项式安全性，作者设计了一种直接构造ELTDH的方法，避免了传统的二次构建过程。</p>
+</blockquote>
+<hr />
+<h3>[2026/2368] Low-Latency Parallel Digit Decomposition and Sign Evaluation for CKKS</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jung Hee Cheon, Kyungah Cho, Junyoung Jung, Junho Lim</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2368">论文</a> | <a href="https://eprint.iacr.org/2026/2368.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在CKKS同态加密方案中，非线性函数如符号、比较和ReLU通常通过多项式近似来评估。然而，现有方法逐位提取实数值输入的数字位，导致高成本。</p>
+<p><strong>主要贡献:</strong> 提出了一种新的并行数字分解技术，能够在单次bootstrapping中同时获取所有u个数字位，并直接处理符号函数以减少模数消耗。</p>
+<p><strong>达到效果:</strong> 该方法显著减少了所需的模数位数和深度，从而提高了评估非线性函数的效率。实测结果显示，系数-整数数字分解的速度提升了2.04倍。</p>
+<p><strong>技术梗概:</strong> 通过并行生成每个数字位，并利用carry look-ahead技术纠正所有进位，实现了高精度输入值的有效区分。</p>
+</blockquote>
+<hr />
+<h3>[2026/2370] Extract-Amplify-Measure: Single-Sided and Tight O2H with Applications to CCA Security in the Quantum Random Oracle Model</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jiangxia Ge, Kang Yang, Yu Yu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2370">论文</a> | <a href="https://eprint.iacr.org/2026/2370.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究背景：One-Way-to-Hiding (O2H) 定理是分析量子随机预言机模型（QROM）中重编程的有效工具，但现有的 Measure-Rewind-Extract O2H (MRE-O2H) 定理仍存在紧致性不足的问题。</p>
+<p><strong>主要贡献:</strong> 主要贡献：作者提出了两种新的 Extract-Amplify-Measure (EAM) O2H 定理，分别是 Single-Sided EAM-O2H 和 Double-Sided EAM-O2H，分别解决了 MRE-O2H 的单侧访问需求和 q-依赖损失问题。</p>
+<p><strong>达到效果:</strong> 达到的效果：Single-Sided EAM-O2H 实现了与 MRE-O2H 相同的紧致性上界 $O(\sqrt{q}\cdot\epsilon)$，而 Double-Sided EAM-O2H 则去除了 q-依赖损失，达到了更紧致的 $O(\epsilon)$ 上界。</p>
+<p><strong>技术梗概:</strong> 技术梗概：通过引入 Single-Sided 和 Double-Sided 的访问策略，并结合放大和测量的技术，作者改进了 O2H 定理的紧致性。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-10-07 07:28</h2>
 <p><em>新增 2 篇论文 (编号 2339--2340)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2339] Pseudorandom Codes from LWE</h3>
