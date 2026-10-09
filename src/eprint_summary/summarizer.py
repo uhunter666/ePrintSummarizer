@@ -111,6 +111,12 @@ def summarize_paper(paper: Paper, config: LLMConfig) -> Summary:
         if config.api_key:
             kwargs["api_key"] = config.api_key
 
+        # Qwen3-family / reasoning models: pass through the think toggle so the
+        # model does not burn its token budget on a reasoning trace (which
+        # leaves `content` empty and breaks JSON parsing).
+        if getattr(config, "think", None) is not None:
+            kwargs["think"] = config.think
+
         response = litellm.completion(**kwargs)
         raw = response.choices[0].message.content
         return _parse_summary_response(raw)

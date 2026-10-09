@@ -50,6 +50,10 @@ class LLMConfig(BaseModel):
     temperature: float = 0.3
     max_tokens: int = 1024
     request_delay: float = 1.0
+    # Reasoning-model control. For Qwen3-family models set think=False:
+    # otherwise the model spends the whole token budget on its reasoning
+    # trace and returns empty content (summaries fail to parse).
+    think: Optional[bool] = None
 
 
 class EmailConfig(BaseModel):
