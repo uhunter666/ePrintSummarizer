@@ -5,6 +5,479 @@
 
 ---
 
+## 更新: 2026-10-09 09:50
+
+*新增 34 篇论文 (编号 2372--2406)*
+
+### [推荐] [2026/2373] PairSwitch: Efficient Galois-Paired Key Switching for Gentry–Lee Matrix FHE
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Zhenyu Xiong, Mingsheng Wang, Han Wang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2373) | [PDF](https://eprint.iacr.org/2026/2373.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2375] PoP! Goes the VOLE: Shorter Proofs of Possession for KEM Certificates
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Slim Bettaieb, Alexandre Augusto Giron, Mukul Kulkarni, Marco Palumbi
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2375) | [PDF](https://eprint.iacr.org/2026/2375.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2377] MIKE: a fast and compact post-quantum NIKE
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Andrea Basso, Pierrick Dartois, Max Duparc, Jonathan Komada Eriksen, Sabrina Kunzweiler, Michael Meyer, Giacomo Pope, Krijn Reĳnders, Damien Robert, Ryan Rueger, Sina Schaeffler
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2377) | [PDF](https://eprint.iacr.org/2026/2377.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2380] The Graded Monoidal Action for Cryptography
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Jonathan Komada Eriksen, Emil August Hovd Olaisen
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2380) | [PDF](https://eprint.iacr.org/2026/2380.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2381] The Lattice Isomorphism Problem with Hints
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Mélissa Rossi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2381) | [PDF](https://eprint.iacr.org/2026/2381.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2384] A Security-Aware PQC Benchmarking Framework on Dual-Core Xtensa Silicon
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Gertrude Nabasirye, Hristina Mihajloska Trpcheska, E. Fatih Yetkin
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2384) | [PDF](https://eprint.iacr.org/2026/2384.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2385] SkrrtPIR: Doubly-Stateless Batch PIR from Single-Key RLWE Unpacking
+
+- **匹配关键字:** LWE
+
+- **作者:** Keewoo Lee, Yongha Son
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2385) | [PDF](https://eprint.iacr.org/2026/2385.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2386] Provable Subexponential Algorithms for NIST Third-Round Lattice Families
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Yiming Gao, Xuyuan Han, Honggang Hu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2386) | [PDF](https://eprint.iacr.org/2026/2386.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2388] Faster Provable Lattice Sieving with Spherical Codes
+
+- **匹配关键字:** lattice
+
+- **作者:** Divesh Aggarwal, Aditya Morolia, Noah Stephens-Davidowitz
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2388) | [PDF](https://eprint.iacr.org/2026/2388.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2394] Post-Quantum Dropout-Resilient Verifiable Secure Aggregation for Federated Learning
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Fateme Sadat Azimi, Hossein Pilaram, Javad Mohajeri
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2394) | [PDF](https://eprint.iacr.org/2026/2394.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2400] Simple Byzantine Lattice Agreement in $O(\frac{\log f}{\log \log f})$ Rounds
+
+- **匹配关键字:** lattice
+
+- **作者:** Yuval Efron, Jovan Komatovic
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2400) | [PDF](https://eprint.iacr.org/2026/2400.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2402] Revisiting Lattice-based Blind Signatures Again
+
+- **匹配关键字:** lattice
+
+- **作者:** Yi-Fu Lai, Yu Yu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2402) | [PDF](https://eprint.iacr.org/2026/2402.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2403] Practical and Efficient MPC from FHE, without ZKPoKs
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Kelong Cong, Nigel P. Smart, Titouan Tanguy, MIchael Walter
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2403) | [PDF](https://eprint.iacr.org/2026/2403.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2372] K-LMS: Design, Implementation, and Evaluation of Leighton–Micali Signatures with Korean Cryptographic Primitives
+
+- **作者:** Huiju Kang, Yulim Hyoung, Hagyeong Kim, Sumin Jeong, Hangsin Cho, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2372) | [PDF](https://eprint.iacr.org/2026/2372.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2374] Shorter Few-Time Signatures from Hash Chains and Blockwise Forced Pruning
+
+- **作者:** Lizheng Wang, Qi Liu, Hongrui Cui, Yuncong Hu, Yu Yu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2374) | [PDF](https://eprint.iacr.org/2026/2374.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2376] Truffle: Maliciously Secure Three-Party Shuffles with Applications to Parsing
+
+- **作者:** Nidhish Bhimrajka, Yashvanth Kondi, Daniel Noble, Bhavish Raj Gopal
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2376) | [PDF](https://eprint.iacr.org/2026/2376.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2378] AsyncLS: an iUC Framework for Wallet-Based Asynchronous Ledger Services
+
+- **作者:** Keyang Liu, Li Duan
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2378) | [PDF](https://eprint.iacr.org/2026/2378.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2379] Settling Conjectures on Linear Structures of Inverse ChiChi Generalizations Four Proofs and a Counterexample
+
+- **作者:** Hui Wang, Ricardo Rodriguez Reveco, Kai Hu
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2379) | [PDF](https://eprint.iacr.org/2026/2379.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2382] Differential-Neural Cryptanalysis of ChaCha and Related ARX Stream Ciphers
+
+- **作者:** Nimai Parsa, Nitin Kumar Sharma
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2382) | [PDF](https://eprint.iacr.org/2026/2382.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2387] Quantum Time-Lock Puzzles in the Quantum Random Oracle Model
+
+- **作者:** Prabhanjan Ananth, Yao-Ting Lin
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2387) | [PDF](https://eprint.iacr.org/2026/2387.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2389] Lifting Bounded-Collusion Security to Full Security in Pairing-Based Encryption Schemes
+
+- **作者:** Roy Stracovsky, Brent Waters, David J. Wu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2389) | [PDF](https://eprint.iacr.org/2026/2389.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2390] A Universal Forgery Attack on the Origami Signature Scheme from the Public Key Alone
+
+- **作者:** Hugo Louiso, Hao Guo, Peigen Li, Pierre Pébereau, Siyong Tao, Jintai Ding
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2390) | [PDF](https://eprint.iacr.org/2026/2390.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2391] Retention Choices for Quantum CHAM Key Search under a Global Qubit Budget
+
+- **作者:** Minseo Kim, Seungwon Lee, Subeen Cho, Hwajeong Seo
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2391) | [PDF](https://eprint.iacr.org/2026/2391.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2392] Fair and Efficient Helper-Aided MPC with Cheater Identification
+
+- **作者:** Maximilian Kamps, Protik Paul, Divya Ravi
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2392) | [PDF](https://eprint.iacr.org/2026/2392.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2393] Round Optimal MPC With Provable Cheater Identification
+
+- **作者:** Yashvanth Kondi, Divya Ravi, Jure Sternad, Sophia Yakoubov
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2393) | [PDF](https://eprint.iacr.org/2026/2393.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2395] The Price of Privacy: Randomness Complexity of Graph-Based Multi-Secret Sharing
+
+- **作者:** Piotr Marszalik
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2395) | [PDF](https://eprint.iacr.org/2026/2395.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2396] Hide Now, Trace Later: Retrospective Attribution in Issuer-Hiding Credentials
+
+- **作者:** Stephan Krenn, Doryan Lesaignoux, Omid Mir, Gabriele Spini
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2396) | [PDF](https://eprint.iacr.org/2026/2396.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2397] Hashing Beats Trees: Practical Oblivious Dictionaries in SGX
+
+- **作者:** Erik-Oliver Blass, Travis Mayberry
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2397) | [PDF](https://eprint.iacr.org/2026/2397.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2398] Note on Extractability of PST Polynomial Commitment Scheme
+
+- **作者:** Janno Siim, Pritam Pal
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2398) | [PDF](https://eprint.iacr.org/2026/2398.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2399] A Note on Extractable Witness Encryption in Generic Groups
+
+- **作者:** Matteo Campanelli
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2399) | [PDF](https://eprint.iacr.org/2026/2399.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2401] New infinite families of APN functions from the switching construction in even dimension
+
+- **作者:** Tor Helleseth, Nadiia Ichanska, Nikolay Kaleyski
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2401) | [PDF](https://eprint.iacr.org/2026/2401.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2404] The Geometry of Collusion Leakage in Inner-Product Functional Encryption
+
+- **作者:** Ferdinando Zullo
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2404) | [PDF](https://eprint.iacr.org/2026/2404.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2405] Game-Theoretically Fair Coin Toss from Random Walk Against $n-1$ Corruptions
+
+- **作者:** Zirui Wang, Ke Wu
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2405) | [PDF](https://eprint.iacr.org/2026/2405.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [2026/2406] Time-Space Tradeoffs For Probabilistic Proofs
+
+- **作者:** Alessandro Chiesa, Ziyi Guan, Omer Paneth, Nicholas Spooner
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2406) | [PDF](https://eprint.iacr.org/2026/2406.pdf)
+
+
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+
 ## 更新: 2026-10-07 15:39
 
 *新增 30 篇论文 (编号 2341--2371)*
