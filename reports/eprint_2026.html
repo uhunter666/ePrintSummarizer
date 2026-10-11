@@ -79,6 +79,245 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-10-12 07:22</h2>
+<p><em>新增 12 篇论文 (编号 2407--2419)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2409] Mercury: Fuzzy Private Set Intersection with Communication and Computation Logarithmic in the Threshold</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Qi Liu, Kang Yang, Binwu Xiang, Xiaojie Guo, Cheng Hong, Yu Yu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2409">论文</a> | <a href="https://eprint.iacr.org/2026/2409.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 模糊私有集合交集（FPSI）旨在在公共距离阈值下识别近似交集元素，但降低其计算与通信开销仍是当前挑战。</p>
+<p><strong>主要贡献:</strong> 本文提出了名为 Mercury 的新协议，利用双方持有的交集与点对相关性，结合同态加密与安全多方计算的混合协议及“掩码后比较”技术，实现了关于阈值(\delta)的对数级复杂度。</p>
+<p><strong>达到效果:</strong> 在局域网设置下，Mercury-SP 相比 Dang et al. (CCS'25) 的 FPSI 协议在平衡二维输入场景中运行速度提升 9.0 至 63.9 倍，通信量减少 8.7 至 26.1 倍；在不平衡实验的全网设置下，相比 Piske et al. (CCS'25) 的运行速度提升 55.7 至 132.4 倍。</p>
+<p><strong>技术梗概:</strong> 该协议通过混合同态加密与安全两方计算构建“掩码后比较”机制，高效识别邻近点对，从而在保证隐私的同时显著优化了资源消耗。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2411] Average-Case Hardness of Lattice Problems in Special Genera of Fixed Rank</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Koen de Boer, Maxime Bombar, Aurel Page, Wessel van Woerden</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2411">论文</a> | <a href="https://eprint.iacr.org/2026/2411.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 格同构问题（LIP）的区分变体$\Delta$LIP构成了日益增长的基于格的密码方案安全证明的基础，其中特殊类作为格的最强有效可计算不变量，允许用同类的随机格替换原格进行安全性分析。</p>
+<p><strong>主要贡献:</strong> 本文在广义黎曼假设（GRH）下，针对固定秩$r \geq 2$的环面域上厄米特格任意特殊类$\mathcal{G}$，建立了从最坏情况到平均情况的归约，涵盖了(H)SVP、HCVP、(Δ)BDD、DSP及DGS等核心格问题。</p>
+<p><strong>达到效果:</strong> 研究证明在自然分布下求解随机类$\mathcal{G}$中的上述问题，其难度等同于求解该特殊类中最坏情况下的格问题，代价仅为近似因子增加一个与域次数$d$及格行列式相关的多项式因子$p$。</p>
+<p><strong>技术梗概:</strong> 归约算法基于Kneser $\mathfrak{p}$-邻接图上的随机游走，利用谱界分析关联Hecke算子以证明游走能快速均匀分布，从而在保持实例接近度的同时实现问题实例的转移与等价性转化。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2412] Barely Sublinear RAM-FHE from Plain LWE</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Keewoo Lee</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2412">论文</a> | <a href="https://eprint.iacr.org/2026/2412.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> RAM-FHE 允许服务器以低于线性于内存大小 $N$ 的每步成本对加密数据进行 RAM 程序求值，而标准 FHE 每次访问均需读取整个内存。Lin、Mook 和 Wichs (STOC 2023) 基于环 LWE 假设给出了首个且唯一的构造方案。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于普通 LWE（plain LWE）的 RAM-FHE 方案，实现了每步 $o(N/\log N)$ 的时间复杂度，突破了此前认为无法从非结构化 LWE 获得亚线性增益的认知。</p>
+<p><strong>达到效果:</strong> 该方案在标准模型下去除了公共参考串（CRS），并独立展示了如何从普通 LWE 构建无 CRS 的双效私有信息检索（DEPIR）方案。</p>
+<p><strong>技术梗概:</strong> 研究通过扩展 DEPIR 框架实现 RAM-FHE，并解决了 Lee (Crypto 2026) 方案中依赖的不兼容 CRS 问题，从而在标准模型下完成了基于普通 LWE 的构造。</p>
+</blockquote>
+<hr />
+<h3>[2026/2407] Language Modeling is Monotone Compression</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Noam Mazor, Andrew Morgan, Rafael Pass</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2407">论文</a> | <a href="https://eprint.iacr.org/2026/2407.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 人工智能与神经科学长期假设智力与信息压缩能力密切相关，近期实验证实大型语言模型（LLMs）的压缩性能与其在知识与推理基准上的表现高度相关。</p>
+<p><strong>主要贡献:</strong> 本文首次从理论层面建立了 LLMs（形式化为下一个 token 预测器）与单调压缩算法之间的等价性，证明二者可在保持误差仅相差常数 2 的前提下相互构造；同时揭示了该等价性成立当且仅当存在密码学单向函数。</p>
+<p><strong>达到效果:</strong> 研究得出 LLMs 作为单调压缩算法的理论等价性结论，并推导出关于分布下一位伪熵（计算类比熵）与单调不可压缩性等价的新颖密码学结果。</p>
+<p><strong>技术梗概:</strong> 通过将 LLMs 建模为下一个 token 预测器，结合单调压缩算法的构造方法，利用信息论与计算复杂性理论分析二者间的转换关系及单向函数存在性条件。</p>
+</blockquote>
+<hr />
+<h3>[2026/2408] Separating One-Way Functions from Verifiable Delay Functions</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Hamza Abusalah, Nicholas Brandt, Ziyi Guan, Kristina Hostáková</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2408">论文</a> | <a href="https://eprint.iacr.org/2026/2408.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 时序密码学旨在捕获那些即使存在并行计算也必然需要规定时间的运算，Verifiable Delay Functions (VDFs) 作为此类原语，要求评估过程消耗大量串行时间且输出可公开高效验证。</p>
+<p><strong>主要贡献:</strong> 本文通过研究 VDFs 与单向函数（OWFs）之间的关系，证明了两者之间不存在全黑盒及相对化归约的蕴含关系，从而确立了二者在任意方向上均无黑盒关联。</p>
+<p><strong>达到效果:</strong> 结合随机预言机模型下无法构造 VDFs 的既有结论，本研究最终证实了 VDFs 与 OWFs 之间不存在任何形式的全黑盒单向或双向推导。</p>
+<p><strong>技术梗概:</strong> 证明过程提出了一种新颖的预言机分离技术，该技术结合了随机预言机与受柯尔莫哥洛夫复杂度启发的精心设计的计算复杂性理论预言机。</p>
+</blockquote>
+<hr />
+<h3>[2026/2410] KIFA: Kernel-based Integral Fault Analysis on GIFT-Family Ciphers</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Hanbeom Shin, Yunjae Hwang, Donggeun Kwon, Byoungjin Seok, Deukjo Hong, Jaechul Sung, Seokhie Hong, Dongjae Lee</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2410">论文</a> | <a href="https://eprint.iacr.org/2026/2410.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有针对 GIFT 家族密码的积分故障攻击受限于混合整数线性规划（MILP）方法在处理预定义小输入结构时的效率瓶颈，且尚未充分利用基于核函数的平衡性质挖掘技术。</p>
+<p><strong>主要贡献:</strong> 本文提出了 KIFA（基于核的积分故障分析）框架，利用 Hwang 等人提出的基于核的矿工替代 MILP 来高效挖掘平衡性质，并针对 GIFT-64/128 及 BAKSHEESH 等算法实现了超越先前最佳记录的故障渗透深度。</p>
+<p><strong>达到效果:</strong> 在 DEFAULT 模式下，该框架将随机位置字节故障下的故障渗透深度从 FP 8 提升至 FP 10，并在简单密钥调度下仅遗留一个主密钥候选者；同时首次对 GIFT-128 实现了 FP 7/8 的攻击，并将 BAKSHEESH 的无控制故障位置攻击深度从 FP 7 扩展至 FP 8。</p>
+<p><strong>技术梗概:</strong> 研究采用基于核的矿工（kernel-based miner）替代传统 MILP 方法，专门处理由故障模型提供的固定小输入结构以提取平衡性质，并结合不同故障渗透深度下的密钥调度分析策略缩小密钥空间。</p>
+</blockquote>
+<hr />
+<h3>[2026/2413] Fast Polynomial Arithmetic in the Exponent without Roots of Unity</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Diane Ducrocq, Pierrick Gaudry</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2413">论文</a> | <a href="https://eprint.iacr.org/2026/2413.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 基于离散对数困难性的密码学协议中，指数域上的多项式算术是关键操作，尤其在涉及高次多项式的承诺与零知识证明中至关重要。传统基于数论变换（NTT）的加速方法依赖于群阶在有限域 GF(q) 中存在单位根，限制了其通用性。</p>
+<p><strong>主要贡献:</strong> 本文提出了一套无需群阶具备特定代数性质即可保持傅里叶变换准线性复杂度的指数域多项式算术算法。作者形式化了群系数多项式的代数结构，并设计了受 Schönhage-Strassen 算法启发的新方案，将其成功适配于批处理 KZG 承诺证明及 Bayer-Groth 可验证混网等先进协议。</p>
+<p><strong>达到效果:</strong> 所提出的算法在无需单位根的情况下实现了指数域上的快速多项式乘法，其运行速度约为 NTT 的两倍慢，但显著提升了协议的通用性与部署灵活性。该成果为不满足特定数论条件的密码学系统提供了高效的计算基础。</p>
+<p><strong>技术梗概:</strong> 研究通过构建群系数多项式的代数形式体系，将经典的分治与 FFT 思想迁移至指数域运算场景。核心创新在于设计了一种不依赖单位根存在的快速乘法算法，并验证了其在批量 KZG 承诺及可验证混网等实际协议中的适用性。</p>
+</blockquote>
+<hr />
+<h3>[2026/2414] Reverse-Bleichenbacher: Bleichenbacher Attacks are Practical Again</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Youheng Lü, Lorenz Hetterich, Riccardo Zanotto, Cas Cremers, Michael Schwarz, Lukas Gerlach</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2414">论文</a> | <a href="https://eprint.iacr.org/2026/2414.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Bleichenbacher 于 1998 年提出的针对 RSA PKCS#1 v1.5 的填充预言机攻击在 TLS 协议中多次重现，尽管现代浏览器倾向于使用 TLS 1.3，但许多服务器和客户端仍为向后兼容性允许 RSA 密钥交换，使得主动网络攻击者能够解密录制的会话。</p>
+<p><strong>主要贡献:</strong> 本文提出了 Reverse-Bleichenbacher，一种新颖的 Bleichenbacher 算法变体，该算法与以往方法不同，优先恢复最低有效字节并在目标秘密被恢复时立即终止搜索。</p>
+<p><strong>达到效果:</strong> 结合改进的修剪器和覆盖优化的搜索策略，该方法将针对符合标准的 2048 位 PKCS#1 v1.5 预言机的预言机查询中位数从 11.428 次减少至 1801 次，整体成功率达到 84.8%。</p>
+<p><strong>技术梗概:</strong> 该研究采用了自底向上的秘密恢复策略、优化的修剪器（trimmers）以及针对覆盖率的搜索优化技术，显著降低了在单服务器条件下进行中间人攻击所需的查询次数。</p>
+</blockquote>
+<hr />
+<h3>[2026/2415] The Power of Multislices in Monotone Computation</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Amos Beimel, Oded Nir</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2415">论文</a> | <a href="https://eprint.iacr.org/2026/2415.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 受秘密共享领域近期构造与障碍的启发，研究聚焦于由宽度参数 $w$ 定义的单调多切片函数，该类函数在汉明权重低于基准值 $k$ 时输出 0，高于 $k+w$ 时输出 1，并在中间区间保持单调性。</p>
+<p><strong>主要贡献:</strong> 论文首先证明了当宽度 $w \ll n$ 时，多切片门无法降低最坏情况下的公式计算复杂度，并给出了一个显式的单调函数下界；同时展示了利用宽度为 0 的切片门通过简单的剥离递归构造实现任意宽度 $w$ 多切片函数的方法。</p>
+<p><strong>达到效果:</strong> 研究确立了基于随机化 Karchmer-Wigderson 协议的明确下界，表明计算特定单调函数所需的多切片公式大小为 $2^{\Omega\left(n/((w+1)\log^2 n)\right)}$；此外，证明了利用切片门可实现大小至多 $2n^{w+1}$ 且深度为 $(w+1)$ 的公式，并扩展至单调真实公式与电路模型。</p>
+<p><strong>技术梗概:</strong> 核心技术包括对多切片门公式的一般化分析、基于随机化 Karchmer-Wigderson 协议的摊销下界证明，以及利用简单剥离递归（peeling recursion）将宽多切片函数分解为窄切片门组合的构造方法。</p>
+</blockquote>
+<hr />
+<h3>[2026/2416] New Constructions of Quadratic and Cubic Permutations Admitting Optimal Threshold Implementations</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhaole Li, Deng Tang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2416">论文</a> | <a href="https://eprint.iacr.org/2026/2416.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 阈值实现（TI）是抵御侧信道攻击的关键技术，对于代数次数为 t 的函数，其理论下界要求至少 t+1 个份额，但在无新鲜随机性条件下达到该下界极具挑战性。</p>
+<p><strong>主要贡献:</strong> 本文提出了四种针对双射 S-盒的最优阈值实现构造方法，包括利用恒等坐标函数、推导二次置换的矩阵判据、引入加权插值构造以及提出导数均匀框架。</p>
+<p><strong>达到效果:</strong> 研究证实了 5 位 30 元域上的置换群 $\mathcal{Q}_{30}^5$ 支持最优阈值实现，并发现了新的具有最优属性的 6 位二次置换类及非线性幂置换实例，推翻了 Piccione 等人关于非线性幂置换无法达到下界的猜想。</p>
+<p><strong>技术梗概:</strong> 核心方法涵盖恒等坐标函数邻接技术、基于矩阵条件的二次置换分类判据、加权插值构造法以及导数均匀性分析框架。</p>
+</blockquote>
+<hr />
+<h3>[2026/2417] Unpredictability from Parity: Understanding Linear Correctors for Markovian Sources</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Maciej Skorski, Johannes Mittmann</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2417">论文</a> | <a href="https://eprint.iacr.org/2026/2417.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 线性校正器通过奇偶校验（XOR）降低随机比特的偏差，但现有保证主要基于独立比特假设，而许多物理熵源违背该假设。</p>
+<p><strong>主要贡献:</strong> 本文推导了马尔可夫链下依赖比特奇偶偏差的精确公式，并针对次比特不可预测性修正了指数项，将 n 位偏差界限收紧约 $2^{\lfloor(n-1)/\rfloor}/\beta$ 倍，同时证明了有界记忆的必要性。</p>
+<p><strong>达到效果:</strong> 在单比特上下文下偏差衰减满足 $|\mathrm{bias}|\le\beta^{\lceil n/2\rceil}$，而在 m 比特上下文中达到最优每比特速率的约 $1.44$ 倍因子（即 $\approx3^{1/3}\beta^{1/(m+1)}$），且该衰减非单调需逐长度认证。</p>
+<p><strong>技术梗概:</strong> 研究利用扭曲转移核乘积刻画马尔可夫链的奇偶偏差，结合噪声线性反馈移位寄存器（LFSR）构造匹配方案，并分析条件偏差 $\beta$ 对衰减率的支配作用。</p>
+</blockquote>
+<hr />
+<h3>[2026/2419] Optimal Statistical Oblivious RAM and Search Tree in the External-Memory Model</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Andrew Krapivin, Elaine Shi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2419">论文</a> | <a href="https://eprint.iacr.org/2026/2419.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 统计安全 oblivious RAM (ORAM) 和搜索树在外部存储模型下长期受限于对数平方开销，尤其在块大小适中时难以突破该理论瓶颈。</p>
+<p><strong>主要贡献:</strong> 本文首次打破了统计安全 ORAM 与搜索树的对数平方诅咒，分别在 $B \geq \log^{1+\epsilon} N$ 和 $B \geq \log^{2+\epsilon} N$ 参数范围内实现了最优的对数级块传输开销。</p>
+<p><strong>达到效果:</strong> 研究证明了在广泛参数域内可构造统计安全的 ORAM 方案及搜索树结构，其平均请求成本严格达到理论下界 $O(\log_B N)$。</p>
+<p><strong>技术梗概:</strong> 通过设计新型 oblivious 数据结构与访问模式混淆机制，结合外部存储模型特性优化了块转移策略以消除平方级冗余操作。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-10-09 09:50</h2>
 <p><em>新增 34 篇论文 (编号 2372--2406)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2373] PairSwitch: Efficient Galois-Paired Key Switching for Gentry–Lee Matrix FHE</h3>
