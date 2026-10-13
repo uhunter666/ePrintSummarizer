@@ -5,6 +5,277 @@
 
 ---
 
+## 更新: 2026-10-13 09:19
+
+*新增 14 篇论文 (编号 2420--2434)*
+
+### [推荐] [2026/2420] Provable Subexponential Algorithms for Module-SIS and Module-LWE
+
+- **匹配关键字:** LWE
+
+- **作者:** William Youmans
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2420) | [PDF](https://eprint.iacr.org/2026/2420.pdf)
+
+
+> **研究背景:** Ducas 等人近期将 Wagner 广义生日算法转化为非结构化短整数解（Module-SIS）的可证明次指数时间高斯采样器，并衍生出低样本决策学习误差（LWE）算法。
+>
+> **主要贡献:** 本文将该框架扩展至二进位分圆环上的模块矩阵，涵盖素数模数的所有剩余次数，并针对固定秩情形给出了具体的复杂度界限。
+>
+> **达到效果:** 研究证明了在特定对数参数约束下，可在次指数时间内解决 Module-SIS 决策与搜索问题，且当样本量满足特定标量响应条件时，仅需少量样本即可实现算法目标。
+>
+> **技术梗概:** 核心方法基于 Wagner 广义生日算法的扩展，结合二进位分圆环上的模块矩阵结构，利用可证明次指数时间复杂度分析来评估攻击可行性及 NIST 安全目标的达成情况。
+
+---
+### [推荐] [2026/2422] Verifiable Computation on Encrypted Data from Homomorphic Encryption over Random Encodings
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Jiayi Kang, Erik Pohle, Jannik Spiessens
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2422) | [PDF](https://eprint.iacr.org/2026/2422.pdf)
+
+
+> **研究背景:** 盲证明（blind proofs）虽能利用同态加密在密文上实现可验证计算，但存在反应攻击风险，导致恶意服务器可推断客户端输入、中间值或输出信息，无法保障强隐私性。
+>
+> **主要贡献:** 本文提出基于随机编码的同态加密（HERE），形式化了存在编码相等性预言机下的选择明文攻击不可区分性（IND-CPA-E）安全定义，并证明结合该方案与盲证明可构建具备强隐私性的 vCOED 协议。
+>
+> **达到效果:** 针对有界度数 d 的函数，利用 (d+1) 个评估点的 Shamir 秘密共享及 (d+1) 个不同同态密钥实例化 HERE 方案，在矩阵向量乘法（d=1）应用中，联合 vCOED 协议的证明开销低至 2 倍。
+>
+> **技术梗概:** 核心技术包括引入随机编码机制以抵御反应攻击、定义新型 IND-CPA-E 安全模型、基于 Shamir 秘密共享构建 HERE 方案以及将盲证明应用于编码域的可验证计算。
+
+---
+### [推荐] [2026/2423] Magnetar: High-speed post-quantum RV64 zkVM from standard hashes
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Srinath Setty
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2423) | [PDF](https://eprint.iacr.org/2026/2423.pdf)
+
+
+> **研究背景:** 现有通用zkVM多依赖电路友好型代数哈希函数或椭圆曲线/格假设，且部分标称基于哈希的方案仍存在安全位不足或依赖未证实猜想的问题。
+>
+> **主要贡献:** 本文提出Magnetar，首个同时满足通用程序证明、标准哈希后量子安全及高效递归三大特性的RV64I zkVM，并实现了对EVM智能合约的兼容证明。
+>
+> **达到效果:** 实验表明Magnetar在提供120位可证明安全性的同时，利用BinarySpartan引擎将验证工作主导为标准的SHA-256/SHA-3哈希计算，实现了高效递归与低开销验证。
+>
+> **技术梗概:** 系统基于RV64I指令集实现透明证明架构，采用标准哈希函数构建后量子安全基础，并设计专用二进制Spartan证明引擎以优化位导向计算的递归效率。
+
+---
+### [推荐] [2026/2425] Sample-Preserving Search-to-Decision Reduction for Noisy Linear Equations over Large Moduli
+
+- **匹配关键字:** LWE, LWR
+
+- **作者:** Andrej Bogdanov, Kel Zin Tan, Prashant Nalini Vasudevan
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2425) | [PDF](https://eprint.iacr.org/2026/2425.pdf)
+
+
+> **研究背景:** 噪声线性方程问题（Noisy Linear Equations）是学习带误差（LWE）、学习带舍入（LWR）及带噪奇偶学习（LPN）等密码学基础问题的泛化形式，旨在有限域上求解含噪随机线性系统。
+>
+> **主要贡献:** 本文提出了一种针对噪声线性方程的新样本保持型搜索到决策归约（sample-preserving search-to-decision reduction），该算法在模数 $q$ 呈指数级大且信噪比非可忽略时，仍能实现多项式时间的归约。
+>
+> **达到效果:** 对于素数模数，该归约保持了问题参数不变；对于合数模数，则输出解的小倍数列表，从而显著优化了以往归约算法在噪声幅度或模数因子上的复杂度依赖。
+>
+> **技术梗概:** 研究采用基于格密码学中的搜索到决策归约技术，通过构造多项式时间算法处理大模数下的线性方程组，确保在有限域上从搜索问题高效转化为决策问题。
+
+---
+### [推荐] [2026/2426] Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Haoxing Lin, Prashant Nalini Vasudevan
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2426) | [PDF](https://eprint.iacr.org/2026/2426.pdf)
+
+
+> **研究背景:** 针对小样本数下的有界误差学习带错误（LWE）问题，现有算法通常需依赖大量样本或复杂的格链分析。
+>
+> **主要贡献:** 本文提出了一种基于傅里叶统计量低阶矩界定的朴素变体算法，能够在亚指数时间内解决决策与搜索 LWE 问题。
+>
+> **达到效果:** 该算法在仅需 $n+O(n/\ln\ln n)$ 个样本的情况下，即可处理模数为 $q=n^{\kappa+o(1)}$ 且误差受 $\exp((\ln n)^{o(1)})$ 界定的 LWE 实例。
+>
+> **技术梗概:** 研究摒弃了传统的格链解释框架，转而采用傅里叶分析技术对统计量的低阶矩进行严格界定以证明安全性边界。
+
+---
+### [推荐] [2026/2432] Lattice Bingo: Asynchrony and One-Shot Adaptivity in Verifiable Secret Sharing via Erasure Code Commitments
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Ittai Abraham, Aniket Kate, Aditi Partap, Ertem Nusret Tas
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2432) | [PDF](https://eprint.iacr.org/2026/2432.pdf)
+
+
+> **研究背景:** 异步可验证秘密共享（AVSS）是拜占庭容错协议的基础构建模块，现有基于格的方案在通信效率与抗量子安全性之间面临权衡。
+>
+> **主要贡献:** 本文提出了 Lattice Bingo 协议，实现了兼具二次通信复杂度与线性打包能力的格基异步可验证秘密共享，并首次达成了单步自适应保密性。
+>
+> **达到效果:** 该协议能在容忍 f 个拜占庭节点的前提下，于 k≥(3+ε)f 个参与方间共享 Θ(k) 个秘密，总通信量仅为 O(k²·poly(λ)) 字。
+>
+> **技术梗概:** 核心技术包括利用擦除码承诺构建高效打包机制，结合格密码学原语以同时满足后量子安全要求与强自适应安全性。
+
+---
+### [推荐] [2026/2434] Witness-Succinct UC-Secure SNARKs with Weaker Trust Assumptions
+
+- **匹配关键字:** lattice
+
+- **作者:** Nahid Roustaeifar, Maryam Zarezadeh, Neel Mehendale, Behzad Abdolmaleki, Mahshid Delavar, Stefan Köpsell
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2434) | [PDF](https://eprint.iacr.org/2026/2434.pdf)
+
+
+> **研究背景:** 零知识简洁非交互式论证（zkSNARKs）是支持隐私保护与可验证计算的基础密码学原语，但现有构造多依赖强信任假设（如完全可信设置），难以在敌对或去中心化环境中应用。
+>
+> **主要贡献:** 本文首次提出基于新原语“可更新密钥多项式承诺”（KU-pCom）的框架，将任意模拟可提取的 zkSNARK 编译为具备通用组合性（UC）安全性的变体，仅需一次诚实更新即可实现公开可验证的承诺密钥更新。
+>
+> **达到效果:** 该框架在基于 KZG 结构化可信设置及 Hwang 等人提出的格基承诺两种场景中均得到实例化，实验表明其能同时兼顾 UC 安全性、简洁性与实际效率，优于以往为换取简洁性而牺牲安全性的非交互式零知识证明方案。
+>
+> **技术梗概:** 核心技术包括设计支持公开验证的密钥更新机制 KU-pCom，并构建通用编译器将模拟可提取的 zkSNARK 与 KU-pCom 组合以达成 UC 安全性，同时结合结构化椭圆曲线承诺与格基承诺两种底层原语进行实例化实现。
+
+---
+### [2026/2424] Counterexamples to Beyond-Johnson Proximity Gaps over Binary Fields
+
+- **作者:** Quang Dao, Scott Duke Kominers, Justin Thaler, Kai Zhe ZHeng
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2424) | [PDF](https://eprint.iacr.org/2026/2424.pdf)
+
+
+> **研究背景:** 基于哈希的证明系统依赖 Johnson 阈值（约 $\sqrt\rho$）附近的邻近间隙来保证可靠性，然而现有将此类间隙扩展至该阈值以下的技术尚未在二进制域上得到验证。
+>
+> **主要贡献:** 本文证明了在二进制域上不存在超越 Johnson 阈值的邻近间隙，并构建了在特定扩展挑战域下同时匹配码字比例低于 25% 但组合接近 50% 阈值的反例构造。
+>
+> **达到效果:** 该构造排除了任何形式为 $\mathrm{poly}(N)/|\mathbb F|$ 的异常概率下界，并在 Binius64 的实际参数设置下实现了超过 $2^{-30}$ 概率达到 49.4% 的一致性，同时否定了 Johnson 阈值以下存在多项式大小解码列表的可能性。
+>
+> **技术梗概:** 研究采用加法域（二进制线性子空间）填充常数比例的包含域，通过设计特定长度的码字组合来突破传统邻近间隙的界限。
+
+---
+### [2026/2427] RM-KLPT: Algebraic Pathfinding for Superspecial Abelian Surfaces with Maximal Real Multiplication
+
+- **作者:** Mingjie Chen, Thomas Decru, Péter Kutas, Mickaël Montessinos, Sebastian A. Spindler, Nicolas Swanson
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2427) | [PDF](https://eprint.iacr.org/2026/2427.pdf)
+
+
+> **研究背景:** Charles 等人于 2009 年研究了具有最大实乘法（RM）的超奇异阿贝尔曲面的等容图，并证明了其具备 Ramanujan 性质及最优扩张特性。
+>
+> **主要贡献:** 本文从密码学视角重新审视这些图，将其视为二维超奇异 $\ell$-等容图的天然推广，并提出了基于实二次域上四元数代数理想范数方程求解的 RM-KLPT 算法以解决代数路径查找问题。
+>
+> **达到效果:** 该算法利用高维 Deuring 对应关系生成了显著更短的路径（约 $p^3$），并揭示了已知初始曲面代数描述即可对 RM-CGL 哈希函数发起二次原像攻击。
+>
+> **技术梗概:** 研究核心在于设计并实现 RM-KLPT 算法，通过求解实二次域上四元数代数的理想范数方程来高效遍历等容图，同时提供了 RM-CGL 哈希函数的概念验证实现与攻击演示。
+
+---
+### [2026/2428] Beyond-Birthday MAC Security for Encrypted Wegman-Carter and EWCDMD
+
+- **作者:** Yuxiang Wang, Chun Guo, Sihuang Hu
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2428) | [PDF](https://eprint.iacr.org/2026/2428.pdf)
+
+
+> **研究背景:** 尽管 EWCDM 和 EWCDMD 旨在实现超越生日界限（BBB）的安全性，但前者曾遭受生日区分攻击，后者虽被提出作为新候选方案却也面临类似的区分攻击威胁，然而这些攻击尚未转化为伪造攻击，其 MAC 安全性问题长期悬而未决。
+>
+> **主要贡献:** 本文首次证明了在尊重 nonce 的设置下，Encrypted Wegman-Carter (EWC) 和 EWCDMD 均具备超越生日界限的不可伪造性（unforgeability），从而以肯定答案解决了这一长期开放问题。
+>
+> **达到效果:** 基于 $n$ 比特块密码和 $O(2^{-n})$-AXU 哈希族，我们证明两种构造在 MAC 查询量达 $2^{5n/6}$ 且验证查询量接近 $2^n$ 时均保持安全。
+>
+> **技术梗概:** 为规避生日区分攻击，证明过程直接通过以哈希值和消息为索引的辅助实验分析伪造事件；针对 EWC 额外采用条件置换分析及结合 KL 散度的碰撞多重性界，而针对 EWCDMD 则利用 Hellinger 距离与傅里叶分析。
+
+---
+### [2026/2429] Rapid mixing in superspecial isogeny graphs
+
+- **作者:** Maria Corte-Real Santos, Harun Kır, Olivier Taïbi, Benjamin Wesolowski
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2429) | [PDF](https://eprint.iacr.org/2026/2429.pdf)
+
+
+> **研究背景:** 高维超奇异同构图在基于同构的公钥密码学中日益关键，其扩张性质直接影响安全算法的设计与效率。
+>
+> **主要贡献:** 本文证明了维度 $g \geq 2$ 下含任意层结构（level structure）的超奇异同构图的扩张性质，给出了谱间隙的显式界并精细刻画了由层结构引起的连通性与周期性障碍。
+>
+> **达到效果:** 在无层结构的特例中，所得界显著优于现有最优结果，并将原本基于猜想的先驱工作转化为严格算法，首次实现了任意维度下超奇异主极化阿贝尔簇自同态环的计算，复杂度为 $\tilde O(p^{g-1})$。
+>
+> **技术梗概:** 研究采用代数几何与谱图理论相结合的方法，通过精确分析同构图的拉普拉斯算子特征值分布及层结构诱导的群作用轨道，建立了严格的扩张性下界。
+
+---
+### [2026/2430] Distinguishers for the Squeezing of the Alternating Sponge and Duet
+
+- **作者:** Gaëtan Leurent, César Mathéus
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2430) | [PDF](https://eprint.iacr.org/2026/2430.pdf)
+
+
+> **研究背景:** 针对 ICCS 下一代商业密码算法计划（NGCC）中的哈希函数候选者，本文深入分析了基于交替海绵模式（ASP）构建的 Duet 函数的操作机制。
+>
+> **主要贡献:** 研究首先提出了针对 ASP 模式的区分器，揭示了其在非平凡参数域内违背了宣称的不可区分性界限；随后针对 Duet 设计了仅需常数个输出块即可实现的区分器及状态恢复攻击。
+>
+> **达到效果:** 尽管这些攻击未影响 Duet 声称的碰撞与预像抵抗安全性，但它们证明了多块输出并非随机分布，若将其用作扩展输出函数（XOF）或密钥派生函数（KDF）将产生严重后果，且状态恢复攻击还实现了长度扩展。
+>
+> **技术梗概:** 核心技术包括利用 $b=r+c$ 比特置换的内外部分裂结构构建区分器，并针对 $h \leq c$ 的输出块参数空间执行了高效的状态恢复与多块输出随机性破坏分析。
+
+---
+### [2026/2431] Flying, Not Floating: Precise Fixed-Point Falcon on Embedded Processors
+
+- **作者:** Stef Halmans, Amit Kumar, Tim Güneysu
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2431) | [PDF](https://eprint.iacr.org/2026/2431.pdf)
+
+
+> **研究背景:** Falcon数字签名方案（FN-DSA）的安全性依赖于数值精度，此前De Almeida Braga等人在CRYPTO 2026展示了在64位主机上使用64.64定点算术实现Falcon-512的可行性。
+>
+> **主要贡献:** 本文首次提出了适用于微控制器的32.64定点FN-DSA签名器，针对Cortex-M4架构实现了恒定时间的汇编代码，并创新性地通过保持倒数、平方根倒数及小常数的高位宽并在消费端仅进行一次舍入来恢复定点运算的精度。
+>
+> **达到效果:** 实验表明，该方案在Falcon-512/1024上的签名周期数比双精度模拟减少约45%，且测量精度分别支持$2^{99.7}$和$2^{96.7}$次查询（远超双精度的$2^{61.5}$/$2^{58.7}$及目标$2^{64}$），尽管RAM占用从59n增至83n字节。
+>
+> **技术梗概:** 研究采用了宽字长中间表示与延迟舍入技术以平衡精度与性能，同时推导了Falcon-1024的密钥生成界限（接受72.3%的密钥）并为NIST规划的定点FN-DSA提供了实施建议。
+
+---
+### [2026/2433] Succinct Arguments with (almost) Minimal Time and Space Overheads from Symmetric-Key Primitives
+
+- **作者:** Alexander R. Block, Caleb Geren, Pratik Soni
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2433) | [PDF](https://eprint.iacr.org/2026/2433.pdf)
+
+
+> **研究背景:** 针对由时间-T、空间-S随机存取机判定的NP关系，研究旨在构建基于对称密钥原语的公币简洁零知识交互式论证，以优化证明者时间与空间开销及证明大小之间的权衡。
+>
+> **主要贡献:** 本文遵循Block等人提出的流式PIOP+PCS框架，将高效论证构造问题转化为流式多元多项式承诺（MLPCS）方案的设计，并基于Brakedown和BaseFold开发了两种启发式的码本流式MLPCS。
+>
+> **达到效果:** 基于Brakedown的构造实现了O(log T)轮交互、\widetilde O(\sqrt T)大小的证明及验证时间，并提供了两类互补的证明者配置：一类在最优空间\widetilde O(S)下消耗\widetilde O(T^{3/2})时间，另一类在近乎最优时间\widetilde O(T)下消耗\widetilde O(S+\sqrt T)空间。
+>
+> **技术梗概:** 研究假设碰撞抵抗哈希函数的存在，利用行稀疏、列稀疏及Reed-Solomon编码器的流式MLPCS方案，结合通用PIOP+MLPCS编译器生成零知识论证，最终通过Fiat-Shamir变换从对称密钥原语（即碰撞抵抗哈希）导出高效(zk)SNARKs。
+
+---
+
 ## 更新: 2026-10-12 07:22
 
 *新增 12 篇论文 (编号 2407--2419)*
