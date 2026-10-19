@@ -5,6 +5,421 @@
 
 ---
 
+## 更新: 2026-10-19 08:23
+
+*新增 22 篇论文 (编号 2500--2522)*
+
+### [推荐] [2026/2500] Threshold Post-Quantum E-Voting from Lattice Commitments
+
+- **匹配关键字:** lattice, post-quantum, LWE
+
+- **作者:** Jalal Alizadeh
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2500) | [PDF](https://eprint.iacr.org/2026/2500.pdf)
+
+
+> **研究背景:** 基于格同态承诺的选举协议（如 EVOLVE）虽能保障投票隐私与计票可验证性，但要求所有权威机构参与计票，且仅对单一权威保密。
+>
+> **主要贡献:** 本文提出 T-EVOLVE 方案，通过将选票在承诺消息空间上进行 Shamir 共享，实现了任意 t 个 n 个权威即可完成计票，同时支持对抗 t-1 个合谋者的隐私保护及全量合谋下的可验证性。
+>
+> **达到效果:** 该方案在经典随机预言机模型下证明了隐私、可验证性、个体可验证性及鲁棒性，C 语言实现显示四权威场景下单张选票仅需 109 KB，单核处理一万张选票约需三分钟。
+>
+> **技术梗概:** 核心技术包括基于 LWE 的可公开开启加密接口、Reed-Solomon 码字证明、无通信开销的奇偶校验检查以及通过插值公共列和进行计票以避免范数膨胀。
+
+---
+### [推荐] [2026/2502] Shorter Hash-Based Signatures via Guarded Sharing in a DAG Model
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Chongxu Ren, Hongbo Yu
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2502) | [PDF](https://eprint.iacr.org/2026/2502.pdf)
+
+
+> **研究背景:** 无状态哈希签名是后量子密码学中最关键的方案之一，尽管已被 NIST 标准化，但其签名长度依然庞大，尤其是其中的少次签名组件备受关注。
+>
+> **主要贡献:** 本文提出了一种名为“受保护共享（guarded sharing）”的新技术，将传统的树状模型扩展为有向无环图（DAG）模型，并构建了新的 BGS-CC 签名方案。
+>
+> **达到效果:** 该方案在 128 位安全级别和 $Q=2^{24}$ 的使用配额下，生成了长度为 2,228 字节的完整签名，首次实现了比标准化格基方案 ML-DSA-44（2,420 字节）更短的 SPHINCS 基无状态签名。
+>
+> **技术梗概:** 研究结合了受保护共享、桶变薄（bucket thinning）、哈希链及拒绝采样技术，通过优化 DAG 结构显著提升了签名效率与紧凑性。
+
+---
+### [推荐] [2026/2506] Efficient Two-Dimensional Representation Evaluation via Dual Isogenies with Applications to Isogeny-Based Cryptography
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Jianming Lin, Saiyu Wang, Chang-An Zhao, Yuhao Zheng
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2506) | [PDF](https://eprint.iacr.org/2026/2506.pdf)
+
+
+> **研究背景:** 二维同构表示评估是许多基于同构的密码方案（如 POK'E、PIKE 及 SQIsign2D 系列）的核心操作，但现有算法依赖耗时的离散对数计算和挠点基生成，严重制约了协议性能。
+>
+> **主要贡献:** 本文提出一种利用对偶同构性质的新颖算法，彻底消除了昂贵的离散对数计算需求，并针对 POK'E、SQIsign2D 及其变体提供了优化的 C 语言实现。
+>
+> **达到效果:** 实验基准测试表明，结合新提出的技术，NIST-I 安全级别下的 POK'E 快变体在 CPU 时钟周期上实现了高达 3.47 倍的性能提升。
+>
+> **技术梗概:** 该方法通过深入分析对偶同构的代数特性，重构了二维表示评估流程，显著降低了计算复杂度并优化了签名阶段的执行效率。
+
+---
+### [推荐] [2026/2508] Power Analysis on SQIsign via Ideal Reconstruction from Quaternion Leakages
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Won Kim, Jaeho Jeon, JeongHwan Lee, Suseong Lee, Young-Sik Kim, Changmin Lee
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2508) | [PDF](https://eprint.iacr.org/2026/2508.pdf)
+
+
+> **研究背景:** SQIsign 作为 NIST 后量子数字签名标准化的 Round-3 候选方案，其抗侧信道攻击能力尚存评估空白，且现有研究多局限于 Round-1 版本或仅针对玩具参数进行实验验证。
+>
+> **主要贡献:** 本文揭示了 Round-3 SQIsign 签名流程中的五项侧信道漏洞，提出了多项式时间的代数算法以从泄露的中间值恢复秘密密钥，并实现了针对部分比特泄露的完整密钥重构及实际电源分析攻击。
+>
+> **达到效果:** 研究成功提取了各漏洞所需的泄露信息或局部信息，证明了在现实实现中从部分泄露数据恢复完整秘密密钥的可行性，填补了 SQIsign 侧信道分析的实践空白。
+>
+> **技术梗概:** 结合理想重构（Ideal Reconstruction）技术处理四元数泄露，设计多项式时间代数算法解决部分比特泄露问题，并通过电源分析攻击从源代码中提取实际泄露数据。
+
+---
+### [推荐] [2026/2511] I Want to Ride My BIKE:  Customizing Bit-Flipping Decoders for Ephemeral Key KEMs
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Davide De Zuane, Marco Gianvecchio, Alessandro Annechini, Paolo Santini, Marco Baldi, Alessandro Barenghi, Gerardo Pelosi
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2511) | [PDF](https://eprint.iacr.org/2026/2511.pdf)
+
+
+> **研究背景:** 基于码的后量子密钥封装机制（如 BIKE）面临公钥和密文尺寸过大的部署障碍，而降低解码失败率（DFR）通常需增加参数规模。瞬态密钥对场景允许利用单次解包特性限制解密失败观测机会，从而探索新的权衡策略以减小通信开销。
+>
+> **主要贡献:** 本文首次实现了优化的 BF-max 比特翻转解码器，并结合文献中的其他解码器提出了多种解码策略，旨在平衡 DFR、执行时间、公钥及密文尺寸之间的权衡。
+>
+> **达到效果:** 实验表明，相较于专为瞬态密钥设计的 LeanBIKE 变体，所提设计将公钥和密文尺寸分别降低了 7.8%，同时保持了相近的执行时间和解码失败率。
+>
+> **技术梗概:** 研究聚焦于定制比特翻转解码器（BF-max），通过优化其计算结构以增强纠错能力，并集成多种解码策略以适应不同资源约束下的后量子密码系统需求。
+
+---
+### [推荐] [2026/2513] Fully Homomorphic Encryption for Small Batches of Complex Numbers
+
+- **匹配关键字:** homomorphic encryption, LWE
+
+- **作者:** Jules Dumezy
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2513) | [PDF](https://eprint.iacr.org/2026/2513.pdf)
+
+
+> **研究背景:** 现有近似同态加密方案在处理复数小批量数据时，面临计算层级有限及精度衰减过快的问题。
+>
+> **主要贡献:** 提出了一种基于新型形状取整（shaped rounding）的近似同态加密新方案，通过利用未使用槽位构建保护带并引入复制布局以维持旋转下的形状不变性。
+>
+> **达到效果:** 在环次数为 $2^{15}$ 且目标 128 位安全性的参数下，该方案支持 16 或 64 个值的密文在经历 21 次连续乘法后恢复 21 个层级并保留约 22.8 位最小精度，其单线程执行 16 层引导运算的速度比稀疏 CKKS 快 3.6 倍。
+>
+> **技术梗概:** 核心技术包括基于公环元素 $g$ 倍数的误差控制、推广 CKKS 缩放因子的多项式缩放因子 $g^{-1}\Delta$、以及利用小分圆子环单位实现旋转不变性的复制布局技术。
+
+---
+### [推荐] [2026/2519] DPA-style Attacks on VOLE-in-the-Head Signature Schemes
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Jinnuo Li, Shu Han, Yunyan Zou, Fan Zhang, Puwen Wei, Weijia Wang, Hao Cheng
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2519) | [PDF](https://eprint.iacr.org/2026/2519.pdf)
+
+
+> **研究背景:** VOLE-in-the-Head (VOLEitH) 已成为后量子签名设计的重要范式，其中 FAEST 和 SDitH 两个方案已晋级 NIST PQC 标准化第三轮，但其抗功耗侧信道攻击的综合性安全性分析尚显不足。
+>
+> **主要贡献:** 本文提出了首个针对 VOLEitH 签名的 DPA 风格攻击框架，旨在恢复秘密见证人（secret witness）以实现对任意消息的有效签名生成，并系统分析了敏感中间值计算中的泄漏与其假设之间的关联。
+>
+> **达到效果:** 研究构建了包含两类垂直攻击和四类水平攻击的六种攻击类别，并通过模拟不同噪声条件下的泄漏以及在三款 ARM Cortex-M4 设备上的实测验证，证实了这些攻击在仿真与实际环境中的有效性。
+>
+> **技术梗概:** 该技术框架聚焦于 VOLE 相关性计算中敏感中间值的泄漏特征，通过建立泄漏数据与秘密见证人假设的映射关系，实现了对 FAEST 和 SDitH 方案的系统性侧信道分析。
+
+---
+### [2026/2503] SwiftAuth: Conditional Privacy-Preserving UAV Authentication with Multi-Source Credential Aggregation and Non-Interactive Authorization
+
+- **作者:** Mingwei Zeng, Qingyang Zhang, Jie Cui, Hong Zhong, Fengqun Wang
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2503) | [PDF](https://eprint.iacr.org/2026/2503.pdf)
+
+
+> **研究背景:** 针对动态终端访问多方第三方服务时面临的交互式凭证签发及条件隐私保护认证挑战，现有匿名认证系统难以兼顾离线授权与多源凭证聚合需求。
+>
+> **主要贡献:** 本文提出了一种可追踪且可聚合的标签见证签名（TA-TWS）方案，并基于此构建了高效的隐私保护匿名认证框架 SwiftAuth，实现了异步凭证分发机制以解耦签发与获取过程。
+>
+> **达到效果:** SwiftAuth 通过压缩多源凭证为常数大小表示显著降低了并发多服务访问的通信与验证开销，同时利用监管陷门在保障合法用户默认匿名的前提下支持对违规恶意行为的可追踪性。
+>
+> **技术梗概:** 该方案采用异步凭证分发机制、多源凭证聚合压缩技术及基于监管陷门的条件隐私保护设计，并在形式化证明中确立了 TA-TWS 方案的不可伪造性与见证隐藏属性。
+
+---
+### [2026/2504] Byzantine Broadcast in $\widetilde{O}(n^2)$ Communication
+
+- **作者:** Yuval Efron, Jovan Komatovic, Ling ren
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2504) | [PDF](https://eprint.iacr.org/2026/2504.pdf)
+
+
+> **研究背景:** 拜占庭容错协议旨在在存在恶意故障节点的网络中达成共识，而经典的 Dolev-Strong 协议虽然确定性但通信复杂度较高。
+>
+> **主要贡献:** 本文提出了一种针对 $t<n$ 个故障节点的确定性 $n$ 方拜占庭广播协议，显著优化了通信开销并保持了轮数效率。
+>
+> **达到效果:** 该协议的通信复杂度为 $O(n^2\log^4(n)\lambda)$，轮数为 $O(t)$，其中 $\lambda$ 为安全参数，优于 Dolev-Strong 协议的基准性能。
+>
+> **技术梗概:** 协议结合了确定性共识机制与优化的消息传递策略，在保障安全性的前提下实现了接近二次方的通信复杂度下界。
+
+---
+### [2026/2505] AVX-512 Acceleration of SQIsign 3.0 Verification
+
+- **作者:** Yunqi Wen, Xuzhe Liu, Zhi Hu, Saiyu Wang, Chang-An Zhao
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2505) | [PDF](https://eprint.iacr.org/2026/2505.pdf)
+
+
+> **研究背景:** SQIsign 是一种紧凑的基于同构的数字签名方案，旨在提供高效的验证性能。
+>
+> **主要贡献:** 本文提出了针对安全等级 I、III 和 V 的完整 SQIsign 3.0 验证器的低延迟 AVX-512 实现，涵盖了曲线侧验证及 Superglue 转换，并引入了针对 $2^\ell$ 次同构链和 theta 模型 $(2,2)$ 同构链的动态规划策略。
+>
+> **达到效果:** 在 Intel Core i7-11800H 处理器上，该实现相较于 Broadwell 参考验证器（优化的 64 位汇编实现）分别实现了 2.14 倍、2.08 倍和 2.34 倍的性能加速。
+>
+> **技术梗概:** 核心技术包括利用 AVX-512 指令集进行向量化曲线运算、动态规划优化同构链计算，以及针对批量点评估和 SIMD 数据准备的专用数据处理策略。
+
+---
+### [2026/2507] safeRNSgcd: Accelerating Falcon key generation with RNS in SafeGCD
+
+- **作者:** Cesare Huang, Bo-Yin Yang
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2507) | [PDF](https://eprint.iacr.org/2026/2507.pdf)
+
+
+> **研究背景:** Falcon 签名方案中 NTRU 求解器的深层计算依赖于从两个以剩余数系统 (RNS) 表示的大整数结果式中获取一个 Bézout 系数。
+>
+> **主要贡献:** 本文提出了 safeRNSgcd，一种在保持大状态处于 RNS 的同时计算所需系数的新算法，其核心在于利用中心化显式中国剩余定理 (CRT) 结合单字定点算术精确恢复 SafeGCD 批处理所需的低位信息。
+>
+> **达到效果:** 该算法集成至 ntrugen 库后，在 Raspberry Pi 5 及 x86-64 处理器上显著降低了求逆与私钥基生成的计算开销，性能优于原始实现及省略未用系数的变体。
+>
+> **技术梗概:** 研究采用了剩余数系统 (RNS) 表示法、中心化显式中国剩余定理 (CRT) 重构以及单字定点算术技术以优化大整数运算效率。
+
+---
+### [2026/2509] Sparse Secrets, Dense Problems: Efficiently Masking HQC in Hardware
+
+- **作者:** Fabian Buschkowski, Niklas Höher, Tim Güneysu
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2509) | [PDF](https://eprint.iacr.org/2026/2509.pdf)
+
+
+> **研究背景:** HQC 已被 NIST 选为基于码的 ML-KEM 替代方案，但针对其硬件实现的掩码防御研究尚属空白。
+>
+> **主要贡献:** 本文提出了一种利用混合布尔与算术掩码技术安全利用秘密操作数稀疏性的新颖掩码方案，并集成了高效的隐藏对抗措施以抵御水平侧信道攻击。
+>
+> **达到效果:** 该可配置且高度并行化的掩码设计在保持相同内存宽度的前提下，仅比未保护乘法器多消耗 3% 的时钟周期，每周期仅需 81 比特随机数且额外延迟仅为 1.7%。
+>
+> **技术梗概:** 研究基于混合布尔与算术掩码（Mixed Boolean-Arithmetic Masking）技术实现了第一阶安全性的过渡与故障鲁棒探测模型证明及 PINI 可组合性，并原生集成了针对水平侧信道攻击的隐藏对抗机制。
+
+---
+### [2026/2510] Secure Compilation of Probabilistic Side-Channel Countermeasures
+
+- **作者:** Gilles Barthe, Gaëtan Cassiers, Henri Dohmen, Marc Gourjon, Benjamin Grégoire, Nora Khayata, Thomas Schneider, Finn Schubert
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2510) | [PDF](https://eprint.iacr.org/2026/2510.pdf)
+
+
+> **研究背景:** 概率性侧信道防护机制虽能有效保护程序，但编译器在优化过程中常意外破坏其安全性，而直接证明编译器保持此类安全性质需处理分布的完美模拟问题，这超出了常规编译器正确性验证的范畴。
+>
+> **主要贡献:** 本文提出了一种与语言和泄漏模型无关的形式化框架，通过形式化确定性泄漏保持关系来推导概率性安全性质的保持（包括 d-NI、d-SNI 及常数时间执行），从而避免了复杂的概率证明义务。
+>
+> **达到效果:** 该框架在 Rocq 证明助手中被验证适用于 Jasmin 编译器的核心管道及多个优化阶段，确保在存在故障的数值探测模型下保持安全性，并支持通过轻量级注解抵御转换泄漏。
+>
+> **技术梗概:** 研究将安全保持问题转化为逐阶段的确定性迹模拟论证，结合 Rocq 形式化方法构建了包含任意阶掩码 gadget 的开源库 libmasking，实现了从 Jasmin 到 ARM/RISC-V 汇编的安全编译及 C 语言绑定。
+
+---
+### [2026/2512] SLEEK: Sparse Quasi-Cyclic Codes with Closed-Form DFR Key Encapsulation
+
+- **作者:** Alessandro Annechini, Alessandro Barenghi, Marco Gianvecchio, Gerardo Pelosi
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2512) | [PDF](https://eprint.iacr.org/2026/2512.pdf)
+
+
+> **研究背景:** 基于码的密钥封装机制（KEMs）在带宽效率、执行时间及解码失败率方面仍面临严峻挑战。
+>
+> **主要贡献:** 本文提出了 SLEEK 方案，一种基于准循环中等密度校验和（QC-MDPC）码的 KEM，通过并行比特翻转解码器与解析形式的解码失败率（DFR）估计实现了参数优化与安全变换支持。
+>
+> **达到效果:** SLEEK 提供了针对长期密钥的 IND-CCA 安全变体（SLEEK-LT）及支持前向秘密性的临时密钥 IND-CPA 安全变体（SLEEK-E），并在 $128$、$192$、$256$ 位及嵌入式平台的 $80$ 位安全级别下提供了经过优化的参数集。
+>
+> **技术梗概:** 核心技术包括利用解析 DFR 估计实现具有分析有界失败概率的参数选择，结合三次迭代的并行比特翻转解码算法，并对多项式求逆与并行解码进行深度优化以平衡公钥/密文尺寸与安全强度。
+
+---
+### [2026/2514] Analysis of the Multi-Key Optimization for SPECK
+
+- **作者:** Marco Baldi, Michele Battagliola, Rahmi El Mechri, Paolo Santini, Riccardo Schiavoni
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2514) | [PDF](https://eprint.iacr.org/2026/2514.pdf)
+
+
+> **研究背景:** SPECK 是一种基于置换核问题（PKP）与置换码等价问题（PEP）关联性的代码本数字签名方案，利用 PEP 作为 PKP 的陷门实现了比 LESS 更快的性能，但受限于零知识协议每轮较高的可信度误差导致签名尺寸较大。
+>
+> **主要贡献:** 本文正面回答了多密钥优化技术在 SPECK 中应用的可行性，通过深入剖析其底层安全顾虑，明确了将多个密钥安全集成到协议中的具体条件与参数约束。
+>
+> **达到效果:** 研究确立了在满足特定代数结构与参数限制下，利用多密钥机制有效降低零知识证明可信度误差、从而显著缩减签名长度的安全实现路径。
+>
+> **技术梗概:** 该方法基于群作用下的代码本结构，通过重构 SPECK 协议以适配传统的群作用知识证明框架，规避了直接应用多密钥优化带来的具体安全风险。
+
+---
+### [2026/2515] CHAMP: Cayley HAshing with Matrix Products
+
+- **作者:** Alexander Demin, Alexey Ovchinnikov, Vladimir Shpilrain
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2515) | [PDF](https://eprint.iacr.org/2026/2515.pdf)
+
+
+> **研究背景:** Cayley哈希函数通过将消息比特映射为半群元素并进行乘积运算，从而具备同态特性。
+>
+> **主要贡献:** 本文提出了基于有限域上2x2矩阵乘积的CHAMP Cayley哈希函数，并深入分析了其安全性、实现方案及性能表现。
+>
+> **达到效果:** 该方案在保持Cayley哈希函数固有同态性质的同时，通过矩阵运算结构优化了计算效率与存储需求。
+>
+> **技术梗概:** 研究采用有限域上的2x2矩阵代数结构构建哈希映射，利用矩阵乘积替代传统半群运算以增强密码学安全性。
+
+---
+### [2026/2516] Watermarking Proofs with Provenance-Binding ZK-SNARKs
+
+- **作者:** Wenhao Wang, Fan Zhang, Charalampos Papamanthou
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2516) | [PDF](https://eprint.iacr.org/2026/2516.pdf)
+
+
+> **研究背景:** 随着外包证明服务、去中心化 prover 网络及 prover 市场生态的兴起，零知识证明（ZK-SNARKs）面临新的安全需求：必须在证明中嵌入溯源信息（如 prover 身份和新鲜 nonce），以防止攻击者利用预计算或重用旧工作来伪造针对新请求的证明。
+>
+> **主要贡献:** 本文首次形式化定义了“溯源绑定”ZK-SNARKs，揭示了将溯源信息嵌入 Fiat-Shamir 挑战的现有方案（如 Succinct Network）存在预处理攻击漏洞，并针对 KZG-PLONK 实例化了此类攻击；同时提出了一种通用构造方法，通过增强基于码的多项式承诺（如 BaseFold 和 FRI）来实现安全的溯源绑定。
+>
+> **达到效果:** 该工作证明了现有嵌入策略在预处理攻击下的不安全性，并构建了首个满足严格安全定义的溯源绑定 ZK-SNARKs 方案，确保 prover 在面对预计算攻击时仍需执行与从头计算相当的新鲜工作量。
+>
+> **技术梗概:** 研究采用形式化安全定义刻画溯源绑定属性，结合多项式承诺技术（BaseFold、FRI）设计通用构造，并通过在 Fiat-Shamir 挑战中的预处理攻击分析验证了传统方案的脆弱性。
+
+---
+### [2026/2517] Zippel: A Language, Compiler, Runtime, and Analyzer for ZK Proof Systems
+
+- **作者:** Sebastian Angel, Sydnie-Shea Cohen, Eleftherios Ioannidis, Pratyush Mishra, Alex Ozdemir, Yuxiang Qiu, Alireza Shirzad
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2517) | [PDF](https://eprint.iacr.org/2026/2517.pdf)
+
+
+> **研究背景:** 零知识证明系统的开发长期受限于繁琐的手动实现过程，导致协议转录不同步、Fiat-Shamir 变换应用错误等漏洞频发。
+>
+> **主要贡献:** 本文提出了 Zippel，一种涵盖语言、编译器、运行时及分析器的完整框架，旨在通过模仿密码学伪代码的语法降低开发门槛，并利用类型系统与运行时机制从架构上消除整类漏洞。
+>
+> **达到效果:** 评估表明，Zippel 编写的程序在多核硬件上的性能与手写实现相当，成功实现了包括 Sumcheck、Groth16、Bulletproofs 在内的 35 个证明系统，在保障安全性的同时未引入显著的性能开销。
+>
+> **技术梗概:** 该技术栈集成了自动化的静态分析以验证协议的完备性与健全性，并能在运行时自动同步协议转录及正确执行 Fiat-Shamir 变换等关键密码学原语。
+
+---
+### [2026/2518] Associated-Data Correlations in Eevee: Deterministic Forgeries against Nonce-Misuse Security
+
+- **作者:** Takanori Isobe, Mostafizar Rahman
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2518) | [PDF](https://eprint.iacr.org/2026/2518.pdf)
+
+
+> **研究背景:** Eevee 的 Umbreon 和 Espeon 模式声称在重用 nonce 的情况下具备在线认证加密安全性，但存在关联数据相关性导致的确定性伪造风险。
+>
+> **主要贡献:** 研究独立分析了通过三次加密查询和一次验证查询即可实现概率为一的非空消息伪造的攻击路径，并系统性地提出了针对部分最终消息块的仿射处理方法，将所需查询次数优化至 n-r+2。
+>
+> **达到效果:** 所构建的攻击方案均满足填充检查且以概率一成功，适用于任意长度的一般消息，同时验证了官方 ForkSkinny 原语下的完整块攻击及未修改公共模式下的两查询攻击。
+>
+> **技术梗概:** 核心技术包括利用两个仅含关联数据的标签揭示掩码差异以转换密文至另一关联数据值，以及结合自适应源明文选择与部分最终片段长度 r 的仿射处理策略。
+
+---
+### [2026/2520] GPU Acceleration for Boyar-Peralta Algorithm in High Dimensional Linear Layers
+
+- **作者:** Xiao Huang, Chao Sun, Ge Wu, Liquan Chen
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2520) | [PDF](https://eprint.iacr.org/2026/2520.pdf)
+
+
+> **研究背景:** 轻量级密码方案的高效线性层电路实现依赖于最小化异或门数量，而求解最短线性程序（SLP）问题中的Boyar-Peralta（BP）算法虽为经典启发式方法，但其现有实现在处理高维稠密矩阵时存在显著的性能瓶颈。
+>
+> **主要贡献:** 本文从理论层面引入中间相遇（MITM）策略以降低 BP 算法及其变体的时间复杂度，并在实践层面重构了算法框架以充分利用 GPU 并行计算能力，同时提出了候选剪枝机制以进一步减轻计算负载。
+>
+> **达到效果:** 相较于原有实现，该方法显著加速了高维线性层的 SLP 求解过程，大幅缩短了基向量异或和计算、二分搜索及距离更新等关键步骤的执行时间。
+>
+> **技术梗概:** 研究综合运用了中间相遇（MITM）算法优化理论复杂度，结合 GPU 并行架构重构实现框架，并设计了针对 GPU 侧的候选剪枝机制以提升整体求解效率。
+
+---
+### [2026/2521] Eﬃcient Fixed-Point Implementation of Mitaka
+
+- **作者:** Shiduo Zhang, Paul Kirchner, Xiuhan Lin, Yang Yu
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2521) | [PDF](https://eprint.iacr.org/2026/2521.pdf)
+
+
+> **研究背景:** Mitaka 作为 Falcon (FN-DSA) 的变体，虽具备并行化签名流程的优势，但其替代方案 MitakaZ 因避免浮点运算而缺乏实际落地实现。
+>
+> **主要贡献:** 本文提出了一种高效的定点数 Mitaka 签名算法实现，通过优化 Gaussian 采样器并采用定点平方 Cholesky 分解替代积分 Gram 根分解，显著降低了整数采样成本。
+>
+> **达到效果:** 在 Intel Core i7-1360P 平台上，AVX2 原生实现生成 Mitaka-512/Mitaka-1024 签名的平均开销分别为 361/707 kcycles；ARM Cortex-M4F 平台对应开销为 4.0/7.8 Mcycles。
+>
+> **技术梗概:** 研究通过形式化证明中间值界限与表示误差，基于分布分析将整数 Gaussian 调用建模为输入精确操作，并提供了 C 语言实现的定点算法及硬件性能事件测量验证。
+
+---
+### [2026/2522] Superspecial points on Humbert surfaces and the probability of (N,N)-splitting
+
+- **作者:** Tanush Shaska
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2522) | [PDF](https://eprint.iacr.org/2026/2522.pdf)
+
+
+> **研究背景:** 在二维超奇异等变问题（superspecial isogeny problem）中，针对判别式素数 $p \equiv 3 \pmod 4$ 的超 principally polarized abelian surfaces，此前关于其最优 $(N,N)$-分裂比例的研究仅依赖实验数据或单侧界限。
+>
+> **主要贡献:** 本文确立了以 Richelot 随机游走平稳测度加权的超奇异曲面上最优 $(N,N)$-分裂比例的精确渐近公式，并显式计算了 $2 \leq N \leq 7$ 时的二阶因子矩常数 $c_N$。
+>
+> **达到效果:** 研究证明当 $p  mid N$ 时，期望分裂数精确为 $5NJ_2(N)(p-1)/(p^2+1)$，且固定 $N$ 下分裂曲面比例收敛于 $5NJ_2(N)/p + O_N(p^{-2})$，从而为二维超奇异等变检测攻击提供了准确的平稳目标密度。
+>
+> **技术梗概:** 核心方法在于证明超奇异曲面以 Siegel 权重采样其细化 Humbert 不变量所属的亏格，进而利用 Siegel 关于亏格平均值的定理将几何上界转化为精确概率估计。
+
+---
+
 ## 更新: 2026-10-16 10:02
 
 *新增 61 篇论文 (编号 2435--2499)*
