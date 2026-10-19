@@ -5,6 +5,221 @@
 
 ---
 
+## 更新: 2026-10-20 07:08
+
+*新增 11 篇论文 (编号 2523--2533)*
+
+### [推荐] [2026/2523] GKS FHE: Security Analysis
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** John Graham, Delaram Kahrobaei, Soundes Marzougui, Milos Pavlovic, Vladimir Shpilrain
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2523) | [PDF](https://eprint.iacr.org/2026/2523.pdf)
+
+
+> **研究背景:** 传统加密方案存在必须解密才能使用的根本性操作漏洞，而现有的全同态加密（FHE）方案因需执行昂贵的引导或去线性化操作，严重限制了其实际部署。
+>
+> **主要贡献:** 本文对Gribov-Kahrobaei-Shpilrain (GKS) 私钥全同态加密方案进行了形式化安全分析，并验证了其在无需引导、支持位精确解密及原生加密搜索方面的优势。
+>
+> **达到效果:** 该方案成功消除了传统加密的解密依赖，同时克服了现有FHE在深度扩展上的限制，实现了可扩展至无界深度的安全计算。
+>
+> **技术梗概:** 研究采用了基于GKS方案的私钥全同态加密架构，通过避免去线性化步骤和引导操作，结合位精确解码技术以支持高效的加密数据搜索与深层电路评估。
+
+---
+### [推荐] [2026/2524] Homomorphic Encryption for High-precision Arithmetic of Approximate Numbers
+
+- **匹配关键字:** lattice, homomorphic encryption
+
+- **作者:** Shihe Ma, Jiaming Liu, Anyu Wang, Xiaoyun Wang
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2524) | [PDF](https://eprint.iacr.org/2026/2524.pdf)
+
+
+> **研究背景:** CKKS 全同态加密方案虽能高效处理复数运算，但其乘法操作需消耗大量模数以维持精度，从而限制了支持的电路深度与精度。
+>
+> **主要贡献:** 本文提出了广义 CKKS (GCKKS) 方案，通过以槽位数量换取模数消耗的降低，有效解决了 CKKS 在精度与电路深度上的瓶颈问题。
+>
+> **达到效果:** 实验表明，GCKKS 方案实现了 7 个级别的精度（对应 1000 比特参数），且通过新颖的编码格式简化了解密过程，显著降低了计算开销与噪声负担。
+>
+> **技术梗概:** 该方案采用改进的 SIMD 版本 Costache-Smart-Vivek 编码，将复数舍入至分圆整数并转化为最接近向量 (CVP) 问题实例，利用格中的短向量构造稀疏编码以存储高精度的复数值。
+
+---
+### [推荐] [2026/2525] Enjoy FAEST on Hardware: Efficient and Novel Hardware Acceleration of Emerging Post-Quantum Digital Signature Scheme FAEST
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Brendan Funk, Jiafeng Xie
+
+- **分类:** Unknown
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2525) | [PDF](https://eprint.iacr.org/2026/2525.pdf)
+
+
+> **研究背景:** 随着美国国家标准与技术研究院（NIST）后量子密码学（PQC）标准化进程的推进，新兴签名方案如 NIST 第三轮附加方案竞赛中的 FAEST 在硬件加速领域仍需深入探索。
+>
+> **主要贡献:** 本文针对 FAEST 方案中计算密集型操作进行了详尽的算法分析，提出了新颖的硬件设计策略与构建高效基础模块的整体加速器架构，并专门设计了 L1-EM-fast 加速器扩展。
+>
+> **达到效果:** 评估结果表明，所提出的设计方案在性能上显著优于现有的完整签名、部分签名及单安全级别 MPC-in-the-head 签名加速方案。
+>
+> **技术梗概:** 研究采用了算法级操作分析、高效硬件基础模块构建以及优化的操作流程工作流等关键技术，实现了 FAEST 的高效且新颖的硬件加速。
+
+---
+### [推荐] [2026/2526] Faster ABE for Turing Machines from Circular Evasive LWE
+
+- **匹配关键字:** LWE
+
+- **作者:** Valerio Cini, Hoeteck Wee
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2526) | [PDF](https://eprint.iacr.org/2026/2526.pdf)
+
+
+> **研究背景:** 属性基加密（ABE）旨在支持对复杂计算模型的解密，但现有方案在效率上往往受限。
+>
+> **主要贡献:** 本文提出了一种基于循环规避学习错误（Circular Evasive LWE）假设的新颖 ABE 方案，专门针对图灵机及更广泛的迭代局部计算模型。
+>
+> **达到效果:** 该方案实现了与计算时间 T 成线性比例的加密复杂度 O(T) 和密文大小 O(T)，同时仅需常数量级 O(1) 的密钥大小。
+>
+> **技术梗概:** 研究改进了 Agrawal 等人近期构造，通过摒弃循环张量学习错误（circular tensor LWE）假设，在保持安全性的前提下显著降低了加密开销、密文体积及密钥尺寸。
+
+---
+### [推荐] [2026/2527] How Secure are NTRU+ Keys? Analysing the Best Module Attacks
+
+- **匹配关键字:** lattice
+
+- **作者:** Paola de Perthuis, Filip Trenkić
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2527) | [PDF](https://eprint.iacr.org/2026/2527.pdf)
+
+
+> **研究背景:** 近期针对环面域上模格格的模块-BKZ 算法分析预测了亚指数级加速，这对韩国密钥封装标准 NTRU+ 及其相关方案构成潜在威胁。
+>
+> **主要贡献:** 本文引入了相对典范嵌入与相对系数嵌入概念，刻画了两者在特定导数条件（$\mathrm{rad}(c)/\mathrm{rad}(\ell) \in \{1,2\}$）下的一致性，并量化了嵌入转换中的失真以识别最优子域。
+>
+> **达到效果:** 基于模拟模型评估表明，最佳模块攻击仅能节省 4–10 个块大小，在 Core-SVP 模型下最多使 NTRU+ 密钥损失 3 比特安全性。
+>
+> **技术梗概:** 研究结合了相对嵌入理论、导数关系分析以及基于模拟的攻击成本估算，并将过拉伸 NTRU 体制的分析扩展至模块设置以评估疲劳点。
+
+---
+### [推荐] [2026/2532] HERMES: High-Performance Private Decoding for Large Language Models
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** MohammadHossein Olyaiy, Cora Shao, Dingqing Yang, Mohammad Shahrad, Mieszko Lis
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2532) | [PDF](https://eprint.iacr.org/2026/2532.pdf)
+
+
+> **研究背景:** 隐私保护推理（PI）虽能防止用户提示泄露，但现有系统主要优化首字延迟，难以满足多令牌自回归生成场景下以每输出令牌时间（TPOT）为主导的负载需求。
+>
+> **主要贡献:** HERMES 首次针对真实提示下的多令牌答案生成进行 PI 解码研究，通过替换高轮次非线性协议及引入新型同态加密矩阵乘法协议，有效解决了通信开销大与密文容量利用率低两大瓶颈。
+>
+> **达到效果:** 在 Llama 3.1 8B Instruct 模型上评估显示，HERMES 将每输出令牌时间（TPOT）最高降低 2.7 倍，总隐私保护延迟最高降低 2.1 倍。
+>
+> **技术梗概:** 系统采用计算与带宽密集型替代方案减少通信轮次，并利用基于同态加密的矩阵乘法协议在服务器端保持 KV 缓存加密状态，结合分组查询注意力（GQA）机制提升密文利用效率。
+
+---
+### [2026/2528] Revisiting the Security of VDOO
+
+- **作者:** Siyu Li, Hao Guo, Peigen Li, Siyong Tao
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2528) | [PDF](https://eprint.iacr.org/2026/2528.pdf)
+
+
+> **研究背景:** VDOO 是一种提交至下一代商用密码算法计划（NGCC）的多变量签名方案，其安全性需针对提交参数集进行重新评估。
+>
+> **主要贡献:** 本文将该方案重构为多层 Rainbow 结构，并通过仅保留最后一层油空间将其转化为广义 UOV 实例，进而应用现有的楔形攻击进行分析。
+>
+> **达到效果:** 针对目标 512 比特安全性的参数集，分析估算出调和与交集变体的攻击成本分别为 $2^{432}$ 和 $2^{379}$ 门电路，均低于宣称的安全级别及规范中报告的攻击成本。
+>
+> **技术梗概:** 研究仅基于广义 UOV 结构展开，指出多层结构的额外信息可能为后续改进提供空间，并强调需进一步研究在抗已知攻击与签名效率之间取得平衡的参数选择。
+
+---
+### [2026/2529] The Covering Radius of $\text{RM}(1,9)$ is Precisely $242$
+
+- **作者:** Xiang-dong Hou, Evelyn Sabo, Freeman Slaughter
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2529) | [PDF](https://eprint.iacr.org/2026/2529.pdf)
+
+
+> **研究背景:** Reed-Muller 码的覆盖半径$ho(1,n)$对应于$n$元布尔函数的最大非线性，对于奇数$n$，当$n=9$时该值的精确确定长期是一个开放性问题。
+>
+> **主要贡献:** 本文利用计算机辅助证明给出了$	ext{RM}(1,9)$覆盖半径的精确值为 242，并通过排除非线性的可能取值完成了严格论证。
+>
+> **达到效果:** 研究确立了$ho(1,9)=242$这一确切结论，解决了该参数在$n=9$情形下的长期悬而未决问题。
+>
+> **技术梗概:** 技术路线结合了沃尔什谱的可除性性质、轨道分类理论以及独立实现的穷举计算，并提供了可复现的验证代码库。
+
+---
+### [2026/2530] Computing endomorphisms of superspecial principally polarized abelian surfaces in time and memory \(p^{4/5+o(1)}\)
+
+- **作者:** Marc Houben, Lam L. Pham
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2530) | [PDF](https://eprint.iacr.org/2026/2530.pdf)
+
+
+> **研究背景:** 在有限域上的超特殊主极化阿贝尔曲面的密码分析中，计算其自同态是评估椭圆曲线及阿贝尔簇安全性的关键步骤。
+>
+> **主要贡献:** 本文提出了一种针对此类曲面自同态的高效算法，旨在突破现有计算复杂度瓶颈。
+>
+> **达到效果:** 在标准启发式假设下，该算法能以 $p^{4/5+o(1)}$ 的预期时间和空间复杂度找到非标量极化自同态。
+>
+> **技术梗概:** 该方法结合了有限域上阿贝尔曲面的算术几何性质与优化搜索策略，实现了时间与内存复杂度的显著降低。
+
+---
+### [2026/2531] High-Precision CKKS with fixed Modulus Consumption
+
+- **作者:** Jung Hee Cheon, Junho Lee
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2531) | [PDF](https://eprint.iacr.org/2026/2531.pdf)
+
+
+> **研究背景:** 在CKKS同态加密方案中，提升精度通常需要增大缩放因子，这会导致算术运算时的模数消耗增加，并在固定模数预算下压缩可用于自举操作的剩余模数空间。
+>
+> **主要贡献:** 本文提出了Focused CKKS架构，通过基于分圆单位的聚焦重缩放与密钥切换技术，将未使用的SIMD槽位转化为精度增益，并设计了适配该架构的优化自举流程。
+>
+> **达到效果:** 该方法仅需使用1/n比例的槽位即可在同等参数设置下获得约n倍的精度提升，且高精度乘法运算仅需单次同态乘法操作，同时支持跨槽位的差异化精度需求。
+>
+> **技术梗概:** 核心技术包括利用分圆单位进行聚焦重缩放与密钥切换以抑制选定槽位的误差积累，以及采用仅底层基模数随目标精度增长、其余计算层维持恒定模数消耗的自举策略。
+
+---
+### [2026/2533] Off-Key: Inconsistent MAC Keys Compromise Privacy in SPDZ-Family MPC
+
+- **作者:** Marcel Keller, Sela Navot, Nirvan Tyagi
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2533) | [PDF](https://eprint.iacr.org/2026/2533.pdf)
+
+
+> **研究背景:** SPDZ 家族的多方计算协议依赖全局共享密钥下的消息认证码（MAC）来保护秘密共享值，其安全性严格依赖于所有预处理及运算必须基于同一密钥进行认证。
+>
+> **主要贡献:** 本文提出了
+>
+> **达到效果:** 研究证实了 MP-SPDZ、SCALE-MAMBA 和 FANNG-MPC 等现有实现中存在此类密钥不一致漏洞，并提出了通过识别并维持预处理协议中的特定状态以复用密钥来防御该类攻击的方法。
+>
+> **技术梗概:** 该攻击利用 MAC 检查协议的变体，允许恶意方在观察到掩码检查结果成功与否时推断秘密值或验证猜测，从而在不破坏理论安全证明的前提下实际泄露隐私信息。
+
+---
+
 ## 更新: 2026-10-19 08:23
 
 *新增 22 篇论文 (编号 2500--2522)*
