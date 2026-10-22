@@ -5,6 +5,275 @@
 
 ---
 
+## 更新: 2026-10-22 11:45
+
+*新增 14 篇论文 (编号 2560--2573)*
+
+### [推荐] [2026/2561] SALUS: Large-Scale Homomorphic Circuit Synthesis via Logic-Aware LUT Optimization
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Ran Mao, Zhou Zhang, Zian Zhao, Zhenyu Guan, Peng Yin, Song Bian
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2561) | [PDF](https://eprint.iacr.org/2026/2561.pdf)
+
+
+> **研究背景:** 针对全同态加密（FHE）电路中布尔函数评估效率受限的问题，现有基于功能自举（FBS）的方法难以满足大规模电路的计算需求。
+>
+> **主要贡献:** 本文提出了 SALUS 框架，利用逻辑感知的查找表（LUT）优化自动合成并评估门级图，通过二进制决策图重排序、多值刷新及启发式合并算法显著提升了复杂 LUT 的评估效率。
+>
+> **达到效果:** 实验表明，SALUS 在 EPFL 和 ISCAS 基准电路测试中，相比最先进方法将计算延迟最高降低了 26 倍；在图像滤波和矩阵乘法等真实应用中，平均加速比为 8.6 倍（最高达 24 倍）。
+>
+> **技术梗概:** 核心技术包括基于同态多路选择器操作的 LUT 评估、结合 BDD 重排序与多值刷新的高效复杂 LUT 评估策略，以及将电路中的 LUT 合并为多输出 LUT 的启发式算法。
+
+---
+### [推荐] [2026/2562] A New Approach to Reducing Modulus Requirements in Homomorphic Computation: Precision Allocation in CKKS
+
+- **匹配关键字:** homomorphic encryption, LWE
+
+- **作者:** Zhaoyang Liang, Runkun Liu, Jingwei Fang, Dan Ding
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2562) | [PDF](https://eprint.iacr.org/2026/2562.pdf)
+
+
+> **研究背景:** 全同态加密（FHE）中的 CKKS 方案支持近似算术运算，但在满足 RLWE 安全约束的前提下，如何在给定输出精度要求下降低密文模数 $Q$ 仍是核心挑战，现有方法通常仍受限于最高精度需求。
+>
+> **主要贡献:** 本文提出一种基于精度分配的新方法，将模数预算的决策依据从最大精度需求转变为平均精度需求，从而在解密正确性约束下实现基线成本的显著降低。
+>
+> **达到效果:** 该方案在保持标准 CKKS 密文格式以兼容现有优化、并继承 IND-CPA 安全性的同时，针对 64 位平均精度需求成功转移了 75 位精度，有效克服了加密噪声带来的成本限制。
+>
+> **技术梗概:** 通过在独立值间任意分配输出精度，量化因精度差异产生的模数节省量，该方法在不引入额外密码学假设的前提下优化了模数管理策略。
+
+---
+### [推荐] [2026/2565] Further Elaborations on the Provable Dual Attack
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Kaveh Bashiri
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2565) | [PDF](https://eprint.iacr.org/2026/2565.pdf)
+
+
+> **研究背景:** 对误差学习（LWE）问题的双攻击是主要攻击策略之一，近期研究致力于在最少启发式假设下进行可证明分析。
+>
+> **主要贡献:** 本文提出了一种无需任何启发式假设的可证明双攻击方案，统一并消除了先前工作中残留的非正式假设，同时推导了成功概率的显式下界。
+>
+> **达到效果:** 该方案在仅对结构化矩阵持一个启发式假设的前提下，将针对 ML-KEM 的首个可证明双攻击强度提升了 22 至 52 位；若满足子格秩有界条件，则进一步提升 47 至 100 位。
+>
+> **技术梗概:** 核心技术包括从约化基的前几向量张成的子格中采样双向量，以及基于特定陪集精确均匀分布的首阶矩估计以排除错误候选者。
+
+---
+### [推荐] [2026/2566] Fault-Induced Nonce Repetition in Threshold Lattice Signatures: A Reveal-Structure Criterion, Cross-Scheme Analysis, and Detection Boundaries
+
+- **匹配关键字:** lattice
+
+- **作者:** Yulong Meng
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2566) | [PDF](https://eprint.iacr.org/2026/2566.pdf)
+
+
+> **研究背景:** 阈值多实例数字签名算法（Threshold ML-DSA）旨在消除单点密钥风险，但现有安全分析主要假设协议参与者恶意或受损，尚未系统评估诚实参与者设备遭受物理故障引发的威胁。
+>
+> **主要贡献:** 本文提出了针对阈值格签名的故障诱导随机数重复攻击模型，揭示了仅通过故障 t 台设备即可在无需触发防篡改机制（如 RNG 回滚）的情况下恢复完整签名密钥，并建立了基于“揭示结构”的跨方案分析标准与检测边界。
+>
+> **达到效果:** 在 Mithril 实现上对两种版本、六种 (t,n) 配置及全部统计扫描组进行了端到端验证，实现了零残差误差的精确密钥恢复，并利用协调者可见转录成功生成了通过 FIPS 204 验证器的伪造签名。
+>
+> **技术梗概:** 研究采用故障注入诱导跨会话样本重放攻击，结合格密码学中的线性方程求解与统计扫描技术，在保持单个签名有效且未触发 Hedged Nonce、Commitment/Session Binding 及 Fail-Closed 验证机制的前提下完成密钥恢复。
+
+---
+### [推荐] [2026/2568] Efficient NTRU+ Implementations on Cortex-M
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Subeen Cho, Minjoo Sim, Seungwon Lee, Anupam Chattopadhyay, Wai Kong Lee, Hwajeong Seo
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2568) | [PDF](https://eprint.iacr.org/2026/2568.pdf)
+
+
+> **研究背景:** 嵌入式设备上的后量子密码学需要高效的实现以在有限的计算和内存资源内执行加密操作，而基于3路NTT（结合基数2和基数3层）的晶格基KEM方案在此领域的实现研究相对匮乏。
+>
+> **主要贡献:** 本文针对Arm Cortex-M系列处理器提出了NTRU+的高效实现，通过定制层融合、模运算及指令调度策略，并创新性地引入ω折叠前层技术以在无需模约减的情况下处理三元输入的前两层NTT。
+>
+> **达到效果:** 实验表明，速度优化版本相比官方C实现最高降低52.43%的执行时间，而内存优化版本在减少82.60%峰值栈用量的同时，在所有KEM操作中均快于官方优化C实现。
+>
+> **技术梗概:** 核心技术包括针对特定参数集和核心配置的层融合与指令调度、利用ω折叠技术加速前两层NTT计算、以及通过复用单一多项式工作区并分段再生操作数来平衡速度与内存占用的策略。
+
+---
+### [2026/2560] Graphs and cycles in curve-based collision walks
+
+- **作者:** Sebastiano Boscardin, Jolijn Cottaar, Monika Trimoska
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2560) | [PDF](https://eprint.iacr.org/2026/2560.pdf)
+
+
+> **研究背景:** 本文针对椭圆曲线及超奇异曲线的等变路径查找问题，重点研究多用户场景下同时恢复大量公开密钥的碰撞攻击，旨在突破独立攻击各密钥的时间总和限制。
+>
+> **主要贡献:** 作者首先综述了针对上述三类问题的现有 van Oorschot 和 Wiener 风格攻击，随后提出了无需额外限制的、更适合等变路径查找问题的伪随机游走新算法。
+>
+> **达到效果:** 分析表明，在超奇异 $\mathbb{F}_{p^2}$-曲线问题上，利用 $L$ 个有效碰撞即可提取全部 $L$ 个公开密钥且无需内陷者；而在超奇异 $\mathbb{F}_p$-曲线问题上，结合内陷者可提取约 $0.75L$ 个密钥。
+>
+> **技术梗概:** 研究核心在于改进适用于等变图结构的伪随机游走算法，并深入分析其在多用户设置下的碰撞性质，对比了无内陷者与启发式及内陷辅助策略在效率与增益方面的权衡。
+
+---
+### [2026/2563] Regular Syndrome Decoding Is Easier Than Previously Estimated
+
+- **作者:** Jiseung Kim, Minkyu Kim, Changmin Lee, Hochang Lee
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2563) | [PDF](https://eprint.iacr.org/2026/2563.pdf)
+
+
+> **研究背景:** 正则化伴随式解码（RSD）问题作为经典伴随式解码的结构化变体，是零知识协议、伪随机相关生成器及 MPC-in-the-Head 签名等高效密码构造的基础。尽管 RSD 通常被认为计算困难，但近期研究表明代数攻击在关键参数区间内可优于信息集解码（ISD）。
+>
+> **主要贡献:** 本文通过改进的混合代数攻击重新评估了 RSD 的具体安全性，揭示了先前被忽视的复杂度来源：零坐标猜测与基于伴随式的变量消除的联合块级放置。该方法协调所有正则区块中的猜测阶段与线性消元，在平衡猜测惩罚的同时保留足够方程以实现线性化，从而确立了贯穿猜测 - 缩减 - 求解流程的系统性块平衡原则。
+>
+> **达到效果:** 重新评估 Ferret、Wolverine 及提交式 VOLE 等应用后，发现至少一种参数集的安全强度低于其设定的 128 比特目标，安全损失接近 67 比特。
+>
+> **技术梗概:** 研究采用 refined hybrid-algebraic attack（改进混合代数攻击），核心在于将零坐标猜测与伴随式变量消除在正则区块层面进行协同优化，实现块级平衡以最大化线性化可行性并最小化计算开销。
+
+---
+### [2026/2564] Regular Syndrome Decoding Is Easier Than Previously Estimated
+
+- **作者:** Jiseung Kim, Minkyu Kim, Changmin Lee, Hochang Lee
+
+- **分类:** Attacks and cryptanalysis
+
+- **关键词:** regular syndrome decoding, algebraic attack, linearization
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2564) | [PDF](https://eprint.iacr.org/2026/2564.pdf)
+
+
+> **研究背景:** 正则化伴随式解码（RSD）问题作为经典伴随式解码的结构化变体，构成了零知识证明、伪随机相关生成器及 MPC-in-the-Head 签名等多种高效密码构造的基础。尽管 RSD 普遍被认为具有计算硬度，但近期研究表明代数攻击在关键参数区间内已能超越信息集解码的性能。
+>
+> **主要贡献:** 本文通过改进的混合代数攻击重新评估了 RSD 的具体硬度，揭示了先前被忽视的复杂度来源：零坐标猜测与伴随式变量消除的联合块级放置机制。该方法协调所有正则块的猜测阶段与线性消元过程，在平衡猜测惩罚的同时保留足够的方程以实现线性化，从而确立了贯穿猜测 - 缩减 - 求解流程的系统性块平衡原则。
+>
+> **达到效果:** 研究重新评估了 Ferret、Wolverine 及承诺式 VOLE 等多个基于 RSD 的应用场景，结果显示许多广泛使用的参数集的实际难度远低于先前估计，部分损失接近 67 位安全强度。具体而言，至少有一个应用实例的参数集被证明低于其设定的 128 位目标安全级别。
+>
+> **技术梗概:** 核心技术在于构建一种 refined hybrid-algebraic attack，通过跨正则块的协同优化来平衡猜测惩罚与方程保留量。该技术将原本分离的猜测阶段和线性消元整合为统一的块级策略，确保在消除变量的同时维持系统方程组的可解性，从而显著提升攻击效率。
+
+---
+### [2026/2567] A Systematic Evaluation of Fault Attacks and Countermeasures on ML-DSA Rejection Sampling
+
+- **作者:** Yulong Meng
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2567) | [PDF](https://eprint.iacr.org/2026/2567.pdf)
+
+
+> **研究背景:** ML-DSA（FIPS 204）标准中的拒绝采样机制存在潜在故障攻击面，特别是针对多项式系数校验的跳变可能导致私钥恢复。
+>
+> **主要贡献:** 论文系统评估了专利 WO2025261784A1 提出的三种检查机制的独立性，证明其第三重校验冗余且无法独立抵御第二重校验被跳过的故障攻击。
+>
+> **达到效果:** 实验证实所有六种实施例对直接恢复私钥的 z-范数检查跳变检测率为零，并在随机化签名场景下成功从受保护的实现中完全恢复了 1024 个系数的私钥 s_1。
+>
+> **技术梗概:** 研究基于线性代数恒等式 Az - ct = Ay - c·s_2 = r 分析校验逻辑，结合大规模故障注入实验（30,000 次）构建了涵盖三种故障模型与两种实现变种的完整评估矩阵。
+
+---
+### [2026/2569] Optimal Proofs of Sequential Work
+
+- **作者:** Krzysztof Pietrzak, Leonid Reyzin
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2569) | [PDF](https://eprint.iacr.org/2026/2569.pdf)
+
+
+> **研究背景:** 顺序工作证明（PoSW）是时间密码学的核心原语，旨在通过仅使用哈希函数在随机预言机模型下，使验证者确信证明者完成了$T$个串行计算步骤。
+>
+> **主要贡献:** 本文首先确立了基于图标记的 PoSW 的下界，证明任何高效的此类构造若要达到$(\delta, \lambda)$-soundness，证明者必须发送$\Omega((\lambda\log T)/\delta)$个标签输出。
+>
+> **达到效果:** 研究揭示了在现有图标记架构中，安全性与通信开销及计算复杂度之间的理论限制，为优化 PoSW 协议提供了关键的基准参考。
+>
+> **技术梗概:** 作者通过将 PoSW 的安全性归约至割深度博弈（cut-depth game）并利用相关技术进行界分析，从而推导出了上述通信复杂度的下界结论。
+
+---
+### [2026/2570] Membership Inference in Privacy-Preserving Vector Search
+
+- **作者:** Georg Fuchsbauer, Carter Luck, Adam O'Neill, Ian Rapko
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2570) | [PDF](https://eprint.iacr.org/2026/2570.pdf)
+
+
+> **研究背景:** 向量检索系统在处理敏感嵌入数据库时，若采用后端兼容的保护机制（如 Scale-and-Perturb），虽能保持搜索算法不变，但会泄露向量间的几何距离信息。
+>
+> **主要贡献:** 本文揭示了在已知明文条件下针对此类几何泄露的会员推断攻击可行性，并提出了 Rotate-and-Perturb (RAP) 方案以提供完美隐私保护，同时量化了不同噪声参数下攻击优势与已知明文对数需求的关系。
+>
+> **达到效果:** 实验表明，针对 MS-MARCO 数据集，现有 SAP 方案在无已知明文时仍面临高达 0.997 的攻击优势；而 RAP 方案在均匀球面数据上实现了无已知明文时的完美隐私，但在固定噪声参数下，攻击优势随已知明文对数与数据库规模的对数关系显著变化。
+>
+> **技术梗概:** 研究结合了理论证明与实证分析，利用几何泄露特性构建会员推断攻击模型，并通过引入旋转扰动机制（Rotate-and-Perturb）在保持搜索兼容性的同时增强隐私保护强度。
+
+---
+### [2026/2571] A Spectral Theory of Local-to-Global Leakage
+
+- **作者:** Rei Ueno
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2571) | [PDF](https://eprint.iacr.org/2026/2571.pdf)
+
+
+> **研究背景:** 本文研究有限阿贝尔群上加法秘密共享中局部泄露如何表征全局泄露，这是线性秘密共享与侧信道掩码的特例。现有文献仅通过局部互信息（MI）刻画全局泄露，忽略了潜在的结构性参数。
+>
+> **主要贡献:** 论文首先给出了加法秘密共享泄露的精确分解，揭示了互信息无法捕捉的结构参数，并证明该参数对区分具有相同局部 MI 但全局泄露呈指数级差异的通道至关重要。此外，作者建立了分离定理及其可实现性，指出局部互信息甚至无法决定同态组合下泄露消失的指数速率。
+>
+> **达到效果:** 研究证实，即使所有置换不变标量局部泄露度量一致，全局泄露仍可能表现出指数级的衰减率差异，从而完全刻画了局部到全局泄露的现象。
+>
+> **技术梗概:** 核心方法包括对加法秘密共享泄露进行精确分解以识别互信息之外的结构性参数，以及利用谱对齐因子分析泄露在不同份额间的频谱分布特性。
+
+---
+### [2026/2572] DISCO*: DIstributed and SCalable Oblivious Joins and Oblivious Primitives
+
+- **作者:** Apostolos Mavrogiannakis, Xian Wang, Ioannis Demertzis, Dimitrios Papadopoulos, Minos Garofalakis
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2572) | [PDF](https://eprint.iacr.org/2026/2572.pdf)
+
+
+> **研究背景:** 可信执行环境（TEEs）虽允许客户端将计算外包至不可信云端，但仍易受侧信道及泄漏滥用攻击的威胁；现有结合硬件飞地与非透明计算的方案在提供强安全保证的同时，难以满足实际部署对性能与可扩展性的严苛需求。
+>
+> **主要贡献:** 本文提出了 DISCO，首个兼具可扩展性、分布式架构且完全非透明的数据库系统，通过融合硬件飞地与前沿非透明原语及新颖优化手段，显著降低了服务器间通信开销；其独特的分布式框架体系解锁了并行计算能力，从根本上革新了分布式非透明系统的设计范式，实现了此前方案无法企及的大规模实用化部署。
+>
+> **达到效果:** 在合成数据与真实世界数据集上的全面评估表明，该设计大幅缩小了理论与现实的差距，在非外键连接场景下（N=2^25），其性能较 Jodes 提升 88 倍、较 SODA 提升 180 倍；研究首次报告了太字节级数据规模的计算结果，验证了系统在处理海量数据时的有效性。
+>
+> **技术梗概:** DISCO 采用分布式架构整合硬件飞地与先进非透明原语，利用新颖优化策略大幅削减跨服务器通信开销；其核心在于构建了一套分布式框架以支持并行计算，从而突破了传统分布式非透明系统在扩展性上的瓶颈，实现了从理论模型到大规模实际应用的跨越。
+
+---
+### [2026/2573] Hidden parabolic subgroups of $\mathrm{GL}_n$ over finite chain rings
+
+- **作者:** Muhammad Imran
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2573) | [PDF](https://eprint.iacr.org/2026/2573.pdf)
+
+
+> **研究背景:** 在有限链环上的广义线性群 GL_n(R) 中，寻找隐藏抛物线子群是代数结构分析的关键问题，尤其在密码学基础领域具有重要应用价值。
+>
+> **主要贡献:** 本文提出了一种有界错误量子多项式时间算法，能够高效提取用于通过预言机查询获取信息的辅助群元素或子群（称为探测）。
+>
+> **达到效果:** 该算法以至少 1-ε 的概率输出生成元，运行时间为 poly(n, log|R|, log(1/ε))，并成功扩展至 GL_n(Z/NZ) 及数域理想商环情形。
+>
+> **技术梗概:** 核心技术包括利用初等阿贝尔 socle 探测恢复模极大理想的完全旗、通过傅里叶采样与子集学习解决有限域多重移位问题，以及针对 q=2 情形沿同余滤过提升共轭抛物线子群并结合线性系统确定其模正规化方向。
+
+---
+
 ## 更新: 2026-10-21 10:44
 
 *新增 26 篇论文 (编号 2534--2559)*
