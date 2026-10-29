@@ -5,6 +5,329 @@
 
 ---
 
+## 更新: 2026-10-29 11:09
+
+*新增 17 篇论文 (编号 2655--2671)*
+
+### [推荐] [2026/2656] Falcon Key Recovery from Joint Sampler Leakages
+
+- **匹配关键字:** lattice
+
+- **作者:** Youngchang Kim, Yongseong Park, Jaeho Jeon, Young-Sik Kim
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2656) | [PDF](https://eprint.iacr.org/2026/2656.pdf)
+
+
+> **研究背景:** Falcon 及即将推出的 FN-DSA 标准在基于离散高斯采样生成签名时，功耗侧信道会泄露与秘密值相关的中间变量信息。
+>
+> **主要贡献:** 本文提出了一种统一的密钥恢复框架，通过融合 SamplerZ 调用中的有符号指数类、随机符号位及多类提议幅度等三种观测值，构建保持幅度的区间约束并直接映射至秘密键的板状与半空间约束。
+>
+> **达到效果:** 在 ARM Cortex-M4 上针对 PQClean Falcon-512 (O3) 的测试中，17 类中心分类器在未签名集上达到 99.34% 的调用级准确率，成功恢复全部 50 个独立评估密钥，平均每个密钥的后分类恢复耗时仅 17.54 秒。
+>
+> **技术梗概:** 该方法利用无模循环时的精确公钥线性关系，结合平滑 softplus 区间回归与有界整数重构技术，完全规避了 LLL 或 BKZ 等计算密集的格约化算法。
+
+---
+### [推荐] [2026/2658] Unshuffling Fisher-Yates: Practical Recovery of Length-128 Permutations and Application to ML-DSA
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Jonas Schupp, Anna Baumeister, Antonia Wachter-Zeh, Georg Sigl
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2658) | [PDF](https://eprint.iacr.org/2026/2658.pdf)
+
+
+> **研究背景:** 在基于格的抗量子密码方案（如 ML-DSA）中，洗牌是抵御数论变换（NTT）侧信道攻击的标准隐藏对策，但针对长度 128 的排列恢复研究尚显不足。
+>
+> **主要贡献:** 本文提出了一种针对 Fisher-Yates 算法的软件实现攻击，能够从单次迹中恢复 128 长序列的排列，并识别出由拒绝采样引起的时序变化及汉明权重泄露。
+>
+> **达到效果:** 通过将泄露信息编码为带软目标函数的约束规划问题，成功枚举高概率排列，并在 ML-DSA-44 的 NTT 应用中直接恢复了秘密多项式 s1 或仅差少数系数。
+>
+> **技术梗概:** 该方法结合了时序分析、汉明权重提取以及约束规划求解技术，有效利用了单次洗牌迹中的算法泄露与身份泄露信息。
+
+---
+### [推荐] [2026/2659] Alg\{Ossa\}: Decentralized Secure Aggregation with Rotating Committees and Eventual Delivery
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Xiangyu Su, Yuma Tamagawa, Mario Larangeira, Zengpeng Li, Keisuke Tanaka
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2659) | [PDF](https://eprint.iacr.org/2026/2659.pdf)
+
+
+> **研究背景:** 安全聚合技术允许客户端仅揭示其私有贡献的总和，从而支持隐私保护感知、协作分析和联邦学习等多种应用。现有方案如 OPA 和 Willow 虽采用单服务器与委员会辅助模型，但缺乏角色选择机制及交付保证。
+>
+> **主要贡献:** 本文提出了 AlgOssa，一种将通用安全聚合构造集成至 Algorand 风格共识骨干的协议，通过密码学抽签动态选举新鲜潜在领导者、验证者委员会及刷新解密委员会。该方案在恶意服务器下实现了针对非选择性中止的安全性，并显式界定了所选服务器为诚实节点的概率下界。
+>
+> **达到效果:** AlgOssa 确保每轮产生非空聚合结果的概率被限制在一个正常数之下，从而在重复轮次中实现最终交付保证。这种可变交付节奏适配延迟容忍的统计感知，结合持久缓冲与过时控制，支持异步联邦学习场景。
+>
+> **技术梗概:** 协议核心采用模块化安全分析框架，整合了基于链状态密钥历元的解密委员会刷新机制及服务器从潜在领导者中的动态选择策略。架构同时支持经典与后量子实例化路径，并针对局部经典轮次进行了完整评估。
+
+---
+### [推荐] [2026/2660] Towards Quantum Sensing for Side-Channel Analysis
+
+- **匹配关键字:** lattice, post-quantum
+
+- **作者:** Oliver Butowski, Paul Haas, Jonas Hasenkrug, Niklas Mathes, Emanuele Strieder, Michael Kunzer, Jan Jeske, Nisha Jacob Kabakci, Marc Stöttinger
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2660) | [PDF](https://eprint.iacr.org/2026/2660.pdf)
+
+
+> **研究背景:** 旁道分析是评估密码算法实现漏洞的成熟领域，其中电磁近场作为与集成电路（IC）中数据相关电流成正比的信号，是主要的攻击向量。基于氮 - 空位（NV）中心的量子传感技术已在空间分辨宽场磁强计分析 IC 准静态磁场方面展现出应用潜力。
+>
+> **主要贡献:** 本研究首次利用基于 NV 中心的射频光谱仪对 IC 的动态电磁旁道进行谱时域联合分析，实现了无需傅里叶变换或频率扫描的实时频谱探测。该传感器具备 1.1 GHz 的可调实时带宽，能够直接通过 NV 中心相互作用在时域内探测频率谱。
+>
+> **达到效果:** 研究成功应用该光谱仪分析了 RSA 解密过程中的电磁辐射，并实现了对运行于 Cortex M4 微控制器上的数论变换（NTT）软件实现的旁道泄漏检测。这一成果证明了量子传感技术在处理高频动态电磁信号以识别后量子密码算法关键构建块漏洞方面的可行性。
+>
+> **技术梗概:** 核心技术为基于 NV 中心的射频光谱仪，该技术直接在时域通过 NV 中心相互作用探测频率谱，从而规避了传统傅里叶变换或频率扫描带来的计算延迟与带宽限制。
+
+---
+### [推荐] [2026/2664] Rerandomizable Garbling Beyond BHHO-KMHE and a Construction from LWE
+
+- **匹配关键字:** lattice, post-quantum, homomorphic encryption, LWE
+
+- **作者:** Raphael Heitjohann, Jonas von der Heyden, Tibor Jager
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2664) | [PDF](https://eprint.iacr.org/2026/2664.pdf)
+
+
+> **研究背景:** 可重随机化混淆方案（RGS）是构建多跳同态加密、iO组合器及YOSO风格多方计算等高级密码协议的基础原语，但现有实例均依赖离散对数假设下的BHHO方案及其配对变体。
+>
+> **主要贡献:** 本文提出一种新型混淆技术，将隐藏同态变换的负担从加密方案转移至混淆过程本身，从而摆脱了对按位加密和基于置换的同态的依赖；同时给出了基于学习错误（LWE）问题的具体格基可重随机化混淆方案实例。
+>
+> **达到效果:** 该工作实现了从具有更弱性质的KMHE方案构建RGS，并支持利用加性同态等其他类型的同态操作进行构造，显著扩展了RGS的底层假设空间与实现灵活性。
+>
+> **技术梗概:** 核心方法包括将同态变换的隐蔽性内化于混淆机制、设计不依赖按位加密的新型KMHE结构，以及基于LWE问题的格密码学实例化以替代传统的离散对数基础。
+
+---
+### [推荐] [2026/2666] Efficient SIMD SHAKE through Cost-Aware Permutation Scheduling
+
+- **匹配关键字:** lattice
+
+- **作者:** Hang Zhang, Ya Shi, Ying Liu, Xianhui Lu
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2666) | [PDF](https://eprint.iacr.org/2026/2666.pdf)
+
+
+> **研究背景:** 基于格的密码学利用 SHAKE 算法将种子扩展为字节串以支持矩阵生成与采样，而 SIMD Keccak 实现因流长度差异及输入依赖关系难以充分利用并行处理能力。
+>
+> **主要贡献:** 本文提出一种感知成本的置换调度方法，通过将就绪流分组并将长流分段重组，结合置换调用、状态迁移及初始化等模型优化流组选择、分段长度与状态放置策略。
+>
+> **达到效果:** 在 Apple M5、Cortex-A72 及 Intel Core i5-11500 平台上评估 ML-KEM 和 HAETAE 算法时，封装操作速度提升最高达 1.31 倍，解封装达 1.44 倍；签名与验证操作分别提升 1.28 倍和 1.26 倍。
+>
+> **技术梗概:** 该方法采用成本感知调度策略，利用流分组与分段重组技术，并基于置换调用、状态移动、初始化及输入准备的综合模型指导资源分配与执行规划。
+
+---
+### [2026/2655] OblivDGL: Oblivious Deep Graph Learning Made Practical
+
+- **作者:** Yiming Qin, Xiaoning Liu, Shangqi Lai, Joseph K. Liu, Xingliang Yuan
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2655) | [PDF](https://eprint.iacr.org/2026/2655.pdf)
+
+
+> **研究背景:** 图神经网络（GNN）在机器学习即服务（MLaaS）平台的广泛部署引发了对敏感图数据及专有模型泄露的隐私担忧，而现有安全计算协议难以同时兼顾安全性、功能性与可扩展性。
+>
+> **主要贡献:** 本文提出了 OblivDGL 框架，通过提炼 GNN 的安全计算模式并引入新颖的 oblivious 消息传递范式，实现了安全的 GNN 训练与推理；该框架设计了新的 oblivious 图表示方法，并基于轻量级函数秘密共享（FSS）技术构建。
+>
+> **达到效果:** OblivDGL 在隐私保护强度上优于现有系统，仅泄露节点和边的总数而不暴露其他私有信息，同时显著提升了处理加密数据的可扩展性。
+>
+> **技术梗概:** 核心技术包括将 GNN 安全计算模式泛化为通用形式、基于函数秘密共享（FSS）实现 oblivious 图表示以及创新的 oblivious 消息传递机制。
+
+---
+### [2026/2657] Poly2MsgLeaks: Certified Key Recovery from Polynomial-to-Message Leakage
+
+- **作者:** Yongseong Park, YoungChang Kim, Jeongdo Kim, Young-Sik Kim
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2657) | [PDF](https://eprint.iacr.org/2026/2657.pdf)
+
+
+> **研究背景:** 针对 SMAUG-T 公钥加密方案在 TiMER 参数集下的多项式到消息（P2M）泄露场景，现有防御机制难以抵御基于功耗分析的侧信道攻击。
+>
+> **主要贡献:** 本文提出了 Poly2MsgLeaks 攻击框架，通过刻画所有可行的 P2M 谓词并利用精确权重耦合局部块，实现了从多项式系数到完整私钥的认证恢复。
+>
+> **达到效果:** 实验表明，该攻击在六条物理迹数据下以平均 7.021 次执行的代价成功恢复了第二组全部 1,000 个密钥，且未产生任何误接受情况，理论证明错误密钥泄露概率低于 $2^{-2095.6}$。
+>
+> **技术梗概:** 该方法采用波形评分保留所有 81 种局部状态、基于均匀矩阵模型进行校准成本区域枚举，并结合验证者驱动的搜索策略以消除信道模型依赖。
+
+---
+### [2026/2661] Radical isogenies on every model
+
+- **作者:** Thomas Decru
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2661) | [PDF](https://eprint.iacr.org/2026/2661.pdf)
+
+
+> **研究背景:** 现有的根式同余公式（Radical isogeny formulae）仅能在 Tate 正规形式下计算包含一个 $N$ 次根的循环链，且通常依赖扭点采样。
+>
+> **主要贡献:** 本文提出了一种模型无关的方法，直接在短韦尔斯、蒙哥马利、扭曲 Edwards 等九种曲线模型及 Kummer 线、具有有理 2 阶点的曲线上实现任意奇数度 $N$ 的根式同余步骤。
+>
+> **达到效果:** 该方法在 Tate 正规形式下将每步乘法成本从 $12.5N$ 降低至 $10N$，并在短韦尔斯和扭曲 Edwards 等模型上实现了接近最优的计算效率，同时所有算法均无需平方根运算。
+>
+> **技术梗概:** 核心技术包括利用核生成元的 $x$ 坐标通过移位递归获取 Tate 正规形式数据，并通过定位特定点的像来恢复目标域，全程采用无逆元操作并提供了精确的运算次数统计。
+
+---
+### [2026/2662] Tractable, Not Truncated: Colored-Noise TRNG Security via Fractional Brownian Motion
+
+- **作者:** Maciej Skórski, Nathalie Bochard, Licinius Benea
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2662) | [PDF](https://eprint.iacr.org/2026/2662.pdf)
+
+
+> **研究背景:** 基于振荡器的真随机数生成器（TRNG）利用热噪声和闪烁噪声产生的时序波动获取随机性，但随着工艺进步导致晶体管缩小，闪烁噪声占比显著增加；现有模型往往忽略或截断其长时记忆效应，从而高估了系统安全性。
+>
+> **主要贡献:** 本文提出了一种涵盖白噪声与闪烁噪声的有色噪声严谨且可计算的框架，通过分数布朗运动建模振荡器相位并证明了准更新性质，实现了从测量到采样需求的闭式解计算，无需仿真即可一致地估计有限样本下的噪声参数。
+>
+> **达到效果:** 实验表明在 FPGA 和 ASIC 平台上闪烁噪声占主导地位，其方差在约 100 个周期内即满足白噪声水平，贡献了目标 0.99 最小熵率背后超过 99% 的不确定性，且引入闪烁噪声模型可使比特率提升两个至三个数量级。
+>
+> **技术梗概:** 研究采用分数布朗运动（Fractional Brownian Motion）对振荡器相位进行建模，利用准更新性质推导闭式最坏情况最小熵与采样需求，并将谱分析与阿伦方差分析扩展至有限样本场景以实现对噪声参数的无偏估计。
+
+---
+### [2026/2663] Quantum Multi-Collision Lower Bounds for Arbitrary Bounded Types
+
+- **作者:** Tianci Peng, Shiqi Hou, Xiaoyang Dong
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2663) | [PDF](https://eprint.iacr.org/2026/2663.pdf)
+
+
+> **研究背景:** 本文针对具有特定精确类型（即输出值数量及每个值的原像数固定）的函数，研究量子碰撞查找问题的下界。
+>
+> **主要贡献:** 作者提出了压缩置换预言机（CPO）的新方法，建立了中间碰撞计数的递推关系并控制误差，同时扩展了分析以涵盖任意精确类型且无需特定类大小线性出现的情况。
+>
+> **达到效果:** 证明了在给定范围内寻找 r 重碰撞的最坏情况有界错误量子查询复杂度为特定的紧确下界，并通过采样归约将碰撞下界与稀疏 k-区分实例相关联。
+>
+> **技术梗概:** 核心技术包括利用压缩置换预言机（CPO）及其改进的健全性估计、基于 Belovs 转移框架的独立分析以验证指数结果，以及将数据库尾部界限转化为函数查询下界的转换机制。
+
+---
+### [2026/2665] Shor's algorithm compiled on cat qubits: 22 593 qubits for RSA-2048 in 3.14 days
+
+- **作者:** Axel Pappalardo, Dahmun Goudarzi, Victor Hertz, Hugo Jacinto, Larissa Kroell, André Schrottenloher, Peter Shanahan, Élie Gouzien, Rémi de La Vieuville, Vivien Londe
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2665) | [PDF](https://eprint.iacr.org/2026/2665.pdf)
+
+
+> **研究背景:** 本文针对超导猫量子比特架构，对用于破解 RSA-2048、ECDLP 及 FFDLP 问题的 Shor 算法进行了从数学描述到物理量子比特调度的端到端资源估算。
+>
+> **主要贡献:** 研究提出了基于重复猫码和 LDPC 猫码两种架构的编译方案，设计了适用于猫量子比特的奇偶-CNOT 门并扩展了多目标 CNOT 门及主动注入程序，同时适配了 Gidney 提出的加法器与 FeMoco 的资源估算方法。
+>
+> **达到效果:** 在假设纠错周期为 1μs、反应时间为 10μs 且仅存在概率为 5×10⁻⁴ 的相位翻转噪声条件下，完整编译的配置仅需约 23,000 个猫量子比特即可在 3.14 天内完成 RSA-2048 分解。
+>
+> **技术梗概:** 核心技术包括将 Shor 算法主导子程序编译至物理操作层、针对猫码架构定制逻辑电路以平衡资源开销，以及结合工厂设计与查找表编译生成具体的芯片布局与执行时间表。
+
+---
+### [2026/2667] Faster complete formulas and their application to curves with efficient endomorphisms
+
+- **作者:** Diego F. Aranha, Paulo L. Barreto
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2667) | [PDF](https://eprint.iacr.org/2026/2667.pdf)
+
+
+> **研究背景:** 针对具有高效自同态的素数曲线（如 secp256k1、BN 及 BLS 曲线族），研究旨在优化标量乘法在完整公式下的性能表现。
+>
+> **主要贡献:** 提出了一种创新的完整加法公式，将运算次数从 12 次降至 11 次（混合坐标下为 10 次），并设计了同等成本的高效三倍点公式及无异常宽度-3 $\tau$-NAF 算法。
+>
+> **达到效果:** 在 libsecp256k1 库中实现了 5.2% 的常数时间定点基标量乘法加速，并在 RELIC 库的 BLS 曲线族上验证了该方案相比 GLV/GLS 基线分别提升 9-13% 和 7-9% 的性能。
+>
+> **技术梗概:** 核心方法包括利用三维叉积优化加法公式、构建六点预计算表，以及结合无异常宽度-3 $\tau$-NAF（其中 $\tau = 1 - \omega$）与完整/不完整三倍点公式的混合策略。
+
+---
+### [2026/2668] An Algebraic Polynomial Evaluation Datastructure for Fields of Large Characteristic
+
+- **作者:** Hiroki Okada, Rachel Player, Simon Pohmann
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2668) | [PDF](https://eprint.iacr.org/2026/2668.pdf)
+
+
+> **研究背景:** 现有文献中关于多变元多项式求值数据结构的最佳构造（如 Bhargava 等人 2024 年的工作）依赖于将素域元素提升至整数环，因此不具备代数性质。
+>
+> **主要贡献:** 本文提出了一种适用于大特征域的多变元多项式求值代数数据结构，通过沿代数曲线进行一元多项式插值来重构多项式，从而在代数计算模型下实现了最优的数据结构与查询复杂度。
+>
+> **达到效果:** 该构造在大特征域上成功实现了数据结构和查询复杂度的最优性（忽略多项式因子），并验证了基于代数曲线插值的策略的有效性。
+>
+> **技术梗概:** 核心方法包括利用一元多项式插值沿代数曲线重构多变元多项式，以及结合代数计算模型以替代非代数的整数提升技术。
+
+---
+### [2026/2669] PIR through the Lens of Probabilistic Inference
+
+- **作者:** Dana Dachman-Soled
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2669) | [PDF](https://eprint.iacr.org/2026/2669.pdf)
+
+
+> **研究背景:** 经典的信息论私有信息检索（PIR）协议虽实现了客户端计算与通信复杂度的次线性，但要求服务器端计算复杂度随数据库规模线性增长。
+>
+> **主要贡献:** 本文建立了信息论 PIR 中服务器计算与概率推断之间的新联系，提出“推断复杂度”形式化概念，证明高效精确的概率推断算法可直接转化为更优的 PIR 服务器算法。
+>
+> **达到效果:** 该框架显著降低了多类结构化数据库（如一次算术公式、有界树宽图模型及电路）上的服务器计算开销，同时保持通信复杂度与隐私保证不变。
+>
+> **技术梗概:** 研究将 Chor et al. 协议与 Ambainis 递归协议中的服务器操作建模为乘积分布的边缘概率计算，并借助概率推断理论分析其复杂度边界。
+
+---
+### [2026/2670] Barriers to Identity-Based Encryption in Generic Group-Action Models
+
+- **作者:** Sikhar Patranabis
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2670) | [PDF](https://eprint.iacr.org/2026/2670.pdf)
+
+
+> **研究背景:** 身份基加密（IBE）要求仅通过多项式大小的公共参数支持超多项式大小的身份空间，这一压缩需求构成了通用群模型中 IBE 的已知障碍。尽管基于同构的密码学等群作用模型支持多种高级原语，但尚未存在从基本群作用接口构建 IBE 的通用方案，且现有通用群障碍无法直接迁移至群作用模型。
+>
+> **主要贡献:** 本文在两种通用群作用模型变体中建立了首个关于 IBE 的紧界：在类型安全模型中证明了公共参数包含 n 个非原点作用集元素句柄时，IBE 方案最多仅能支持 n 个身份，且该界限对身份秘密密钥中的句柄数量无关。研究进一步将这一紧刻画扩展至随机表示通用群作用模型下的自然 IBE 类方案，涵盖针对表示敏感攻击者的安全性。
+>
+> **达到效果:** 研究证实了在类型安全通用群作用模型下，IBE 方案的支撑身份数上限严格等于公共参数中非原点作用集元素句柄的数量，并通过匹配构造证明了该界限的紧性。在随机表示模型中，只要身份密钥不保留隐藏的作用集编码且丢弃的私有编码无残留信息，前述紧界同样成立。
+>
+> **技术梗概:** 论文采用通用群作用模型框架，结合类型安全与随机表示两种变体，利用代数几何中的同构结构分析群作用接口的表达能力。通过构造性证明与非构造性下界推导相结合，量化了公共参数压缩对身份空间扩展的根本限制。
+
+---
+### [2026/2671] Beyond the Event Horizon of Keccak, Extending the Observation from 2011 and applications
+
+- **作者:** Danilo Gligoroski
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2671) | [PDF](https://eprint.iacr.org/2026/2671.pdf)
+
+
+> **研究背景:** 早在 2011 年，研究者发现从全零容量比特状态出发并返回该状态的单一路径可生成无限多的第二原像族，对于 SHA3-256（c=512）而言，寻找此类路径的成本约为 $2^{c/2}$，处于安全边界之外。
+>
+> **主要贡献:** 本文提出了三个新颖定理：定理 1 证明任意容量值 x 均可通过两区块的中间相遇攻击构建无限第二原像族；定理 2 将结论推广至 k 区块循环及容量映射循环；定理 3 则利用桥接结构实现了与 Joux 风格相关的低成本多碰撞构造，且搜索成本独立于碰撞数 k。
+>
+> **达到效果:** 研究在 Keccak-f[200] 和 Keccak-f[1600]（c=32）上验证了全轮实例，并基于 Keccak 桥接的铸造与伪造非对称性设计了新型工作量证明协议及其他安全应用。
+>
+> **技术梗概:** 核心技术包括中间相遇攻击、容量映射循环分析、单状态桥接构造以及 Joux 风格的多碰撞放大技术，旨在揭示海绵结构中的内在弱点并拓展其密码学应用边界。
+
+---
+
 ## 更新: 2026-10-28 07:06
 
 *新增 3 篇论文 (编号 2652--2654)*
