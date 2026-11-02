@@ -79,6 +79,239 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-11-02 09:46</h2>
+<p><em>新增 12 篇论文 (编号 2672--2685)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2685] Quasi-polynomial time algorithms for block basis reduction of linear codes</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Kolesnikov N.S., Novoselov S.A.</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2685">论文</a> | <a href="https://eprint.iacr.org/2026/2685.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Ghentiyala 和 Stephens-Davidowitz 提出的块码基约简算法（BKZ）在弱复杂度界限下需要指数次调用最小权重码字（MWC）预言机，且理论界远差于朴素枚举法，尽管实践中表现优异。</p>
+<p><strong>主要贡献:</strong> 本文提出了针对固定参数 $eta$ 的准多项式及多项式复杂度块码基约简算法，通过截断版本、弱限制条件以及借鉴格约简思想的 DeepBKZ 算法，显著降低了 MWC 预言机的调用次数。</p>
+<p><strong>达到效果:</strong> 实验实现支持处理 $2-24$ 及以上维度的块大小，并在随机线性码的低权重码字问题上提供了具体的复杂度估计及近似因子分析。</p>
+<p><strong>技术梗概:</strong> 主要技术包括对原始 BKZ 算法的截断与修改、引入基的弱限制条件以加速收敛，以及从格约简领域移植并适配的 DeepBKZ 算法框架。</p>
+</blockquote>
+<hr />
+<h3>[2026/2672] Nenya: Efficient zkSNARKs for Integer Rings Z/2kZ via Reverse Multiplication-Friendly Embeddings</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Tianyu Zhang, Nikita Borisov, Yupeng Zhang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2672">论文</a> | <a href="https://eprint.iacr.org/2026/2672.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有零知识简洁非交互式论证（zkSNARKs）方案主要支持基于大素数或其扩域的有限域算术，导致在证明涉及固定宽度整数类型的高层编程语言计算时产生显著开销。</p>
+<p><strong>主要贡献:</strong> 本文提出了 Nenya，这是首个支持在整数环 $\mathbb{Z}/2^k\mathbb{Z}$ 上进行原生算术计算的实用 SNARK 方案，并设计了基于纠错码的多项式承诺方案以支持高效的良构性检查与打包旋转操作。</p>
+<p><strong>达到效果:</strong> 实验表明，对于大小为 $2^{25}$ 的 R1CS 数据并行计算，Nenya 的证明者时间仅为 4.8 秒，比现有 $\mathbb{Z}/2^k\mathbb{Z}$ 上的最先进方案快四个数量级。</p>
+<p><strong>技术梗概:</strong> 该方案核心在于利用反向乘法友好嵌入（RMFEs）将整数环上的秩 -1 约束系统归约至伽罗瓦环约束，并结合支持良构性检查与打包旋转的多项式承诺技术实现亚线性验证时间。</p>
+</blockquote>
+<hr />
+<h3>[2026/2673] Beyond the Scope of This Paper: Practical Flash-Accelerator and Cache-Collision Timing Attacks on Microcontrollers</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Colin O'Flynn</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2673">论文</a> | <a href="https://eprint.iacr.org/2026/2673.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 尽管自2005年以来针对AES的缓存及缓存碰撞攻击已广为人知，但先前的研究受限于微控制器（如Cortex-M架构）缺乏显式缓存的假设，往往低估了闪存存储架构本身引入的时序侧信道风险。</p>
+<p><strong>主要贡献:</strong> 本文揭示了闪存架构中普遍存在的时序碰撞机制可作为有效的攻击通道，并提出了开源工具FlashWhisperer以辅助评估微控制器、密码库及应用的安全性，同时探讨了包括位切片在内的现有防御措施。</p>
+<p><strong>达到效果:</strong> 研究成功在六种流行密码库、八种架构及二十多种设备上，仅需750次采样即可恢复AES密钥，并验证了针对SPI引导加载程序、以太网应用、CTAP2 USB协议及802.15.4无线协议等高层应用的实际攻击可行性。</p>
+<p><strong>技术梗概:</strong> 该技术利用闪存读取操作的时序差异构建碰撞侧信道，结合开源工具FlashWhisperer对微控制器生态进行系统性评估，并分析了位切片实现及其他现有密码库提供的防御策略。</p>
+</blockquote>
+<hr />
+<h3>[2026/2675] High Precision Noise Cleaning for CKKS with Application to Asynchronous Threshold CKKS</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhihao Li, Cheng Hong, Tao Wei</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2675">论文</a> | <a href="https://eprint.iacr.org/2026/2675.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 离散 CKKS 方案中的噪声清洗技术利用 Hermite 插值在保留密文消息的同时降低输入误差，但基于噪声淹没的应用场景对清洗后误差上限提出了更严苛的要求，且现有方法受限于同态评估（如密钥切换和重缩放）引入的误差累积。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种针对 CKKS 的高精度噪声清洗方法，能够同时保持加密整数消息并满足预设的归一化输出噪声界；该方法通过联合优化清洗多项式与评估参数以全面考量输入噪声及同态评估误差，并利用低次 Hermite 多项式的组合替代单次高次多项式，在同等噪声控制下显著降低了密文模数需求与计算开销。</p>
+<p><strong>达到效果:</strong> 实验表明，该方案有效抵消了辅助幂次引入的误差项以降低密文张量次数，并通过多值功能自举提取整数消息比特后清洗重组，实现了比传统方法更优的噪声抑制效果与资源效率。</p>
+<p><strong>技术梗概:</strong> 核心技术包括基于完整误差界的多参数联合选择、低次 Hermite 多项式组合策略、利用含噪辅助幂次构造多项式表示以消除特定误差项，以及针对整数消息的多值功能自举提取与重组机制。</p>
+</blockquote>
+<hr />
+<h3>[2026/2676] Optimality and Efficiency of Higher-Order Rank-Based Side-Channel Attacks against Inner Product Masking Schemes</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Haitao Zhan, Wei Cheng, Yuejun Liu, Jingdian Ming, Sylvain Guilley, Yongbin Zhou</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2676">论文</a> | <a href="https://eprint.iacr.org/2026/2676.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 高阶斯皮尔曼相关系数分析（HO-SPA）因其对单调非线性泄露的有效性，在非侧信道攻击中备受关注，然而其在布尔掩码（BM）和内积掩码（IPM）下的最优形式及阶数组合仍缺乏系统研究。</p>
+<p><strong>主要贡献:</strong> 本文提出了针对高阶泄露模型的高阶调整斯皮尔曼相关系数分析（HO-ASPA）新变体，并推导了其在汉明重量泄露模型下针对两股共享掩码的最优形式与上界理论。</p>
+<p><strong>达到效果:</strong> 研究揭示了 HO-ASPA 与高阶相关功率分析（HO-CPA）在性能表现上的显著差异，即在高阶攻击中 HO-ASPA 并未像 HO-CPA 那样表现出随阶数增加而性能提升的趋势。</p>
+<p><strong>技术梗概:</strong> 技术核心在于将斯皮尔曼相关系数分析扩展至高阶矩以保留共享泄露的中心积组合，同时建立了秩变换域内信噪比与最优相关系数的关系并推广至 IPM 场景。</p>
+</blockquote>
+<hr />
+<h3>[2026/2677] Smoothness of Shortest Isogenies to Frobenius Conjugatess</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yi Ouyang, Wei Wei, Zheng Xu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2677">论文</a> | <a href="https://eprint.iacr.org/2026/2677.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文研究超奇异椭圆曲线几何同构类中，从随机选取的曲线 E 到其 Frobenius 共轭曲线 E^(p) 的最短等置映射度数的光滑性概率。</p>
+<p><strong>主要贡献:</strong> 作者确立了该度数平滑概率的上界与下界，无条件地证实了 Wesolowski 提出的 p^(1/3+o(1)) 攻击在超奇异端同态环问题上的有效性，并推导了存在连接等置映射的概率的渐近公式。</p>
+<p><strong>达到效果:</strong> 研究结果表明，最短等置映射度数的平滑概率具有特定的界限，且当 n 趋于无穷时，存在连接等置映射的概率主项可由 Dirichlet L-值精确表达。</p>
+<p><strong>技术梗概:</strong> 主要技术涉及超奇异椭圆曲线理论、等置映射度数分析以及解析数论中的 Dirichlet L-值计算。</p>
+</blockquote>
+<hr />
+<h3>[2026/2678] From Quantum Mechanics to the Hidden Subgroup Problem: an Overview from Finite to Infinite Groups</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Federico Di Concilio, Ramón Flores, Delaram Kahrobaei, Marialaura Noce</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2678">论文</a> | <a href="https://eprint.iacr.org/2026/2678.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 隐藏子群问题（HSP）是量子计算与计算群论中的核心难题，其求解效率直接决定了Shor算法等关键量子算法在整数分解与离散对数问题上的优势。</p>
+<p><strong>主要贡献:</strong> 本文综述了从有限群到无限群的HSP理论框架，系统梳理了该问题的背景知识、近期研究成果及未解难题，旨在为理解非阿贝尔情形下的量子算法潜力提供基础。</p>
+<p><strong>达到效果:</strong> 研究明确了阿贝尔情形下基于量子傅里叶变换的高效可解性，并指出非阿贝尔情形的复杂性仍是当前活跃的研究前沿，揭示了群结构在获取计算优势中的本质作用。</p>
+<p><strong>技术梗概:</strong> 文章采用综述方法，结合群论与量子算法理论，重点分析了量子傅里叶变换在非阿贝尔群扩展中的局限性及潜在突破方向。</p>
+</blockquote>
+<hr />
+<h3>[2026/2679] Cryptanalysis and Enhancement of VTBSAE: Provably Secure Verifier-Based PAKE Protocols for the Industrial Internet of Things</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jiahui Gao, Zhiqiang Zhao, Xuexian Hu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2679">论文</a> | <a href="https://eprint.iacr.org/2026/2679.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Verifier-based PAKE 协议允许客户端与服务器利用低熵密码建立高熵会话密钥，且无需服务器存储明文密码，其非对称设计降低了因服务端凭证泄露导致客户端被冒充的风险，特别适用于工业物联网（IIoT）场景。</p>
+<p><strong>主要贡献:</strong> 本文分析了近期提出的 VTBSAE 协议，指出其在抵抗服务端受损后的客户端冒充攻击方面存在缺陷，并提出了改进方案 E-VTBSAEv1 及挑战式变体 E-VTBSAEv2。</p>
+<p><strong>达到效果:</strong> 实验结果表明，E-VTBSAEv1 在保持与原始 VTBSAE 相当的通信和存储开销的同时，实现了可比的运行性能，并在随机预言机模型下基于 CDH 假设被形式化证明具备前向安全性及抗服务端验证文件泄露后的客户端冒充攻击能力。</p>
+<p><strong>技术梗概:</strong> 改进方案通过将客户端生成的点 $E_1$ 绑定至新鲜的服务端随机数来修复漏洞，并辅以随机预言机模型下的形式化安全证明以及基于树莓派等设备的实际部署性能评估。</p>
+</blockquote>
+<hr />
+<h3>[2026/2680] (Balanced) Boolean Functions on 375 Variables with Nonlinearity Exceeding the Patterson-Wiedemann Direct-Sum Bound</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Deng Tang, Subhamoy Maitra</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2680">论文</a> | <a href="https://eprint.iacr.org/2026/2680.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Patterson 和 Wiedemann 在 1983 年构建了 15 元布尔函数，其非线性度超越了 bent 拼接界，而 Schmidt 随后证明了渐近最大非线性度的理论上限。</p>
+<p><strong>主要贡献:</strong> 本文针对 375 元布尔函数，提出了一种超越 Patterson-Wiedemann 函数与 360 元 bent 函数直接求和构造的新方法，显著提升了非线性度指标。</p>
+<p><strong>达到效果:</strong> 所构造的 375 元布尔函数非线性度严格大于 $2^{374}-2^{187}+20\cdot2^{180}$，较传统直接求和构造方案提高了超过 $2^{168}$ 的量级。</p>
+<p><strong>技术梗概:</strong> 该方法基于有限域 $\mathbb F_{2^{375}}$ 中特定阶乘子群的陪集支撑结构，利用高斯和评估简化计算复杂度，并将子集存在性问题转化为 0-1 线性可行性问题加以求解。</p>
+</blockquote>
+<hr />
+<h3>[2026/2681] Improving Code Rate and Query Complexity for the Ligero-IOP System</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ignacio Cascudo, Carmit Hazay, Muthu Venkitasubramaniam</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2681">论文</a> | <a href="https://eprint.iacr.org/2026/2681.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文针对 Ligero 风格的零知识证明系统，旨在解决其原有的码率与查询复杂度限制问题。</p>
+<p><strong>主要贡献:</strong> 研究首先在不修改协议的前提下，通过分析列表解码区域证明了互相关一致性足以提升健全性保证并降低查询复杂度；其次提出了一种引入域外采样的新变体，实现了 Reed-Solomon 码率超过 1/2 且保持完美诚实验证者零知识。</p>
+<p><strong>达到效果:</strong> 新方法在维持 Ligero IOP 常数轮交互结构与内存高效证明兼容性的同时，显著提升了系统的健全性边界与编码效率。</p>
+<p><strong>技术梗概:</strong> 核心技术包括列表解码区域的互相关一致性分析及域外采样策略的引入，结合 Reed-Solomon 码的高码率特性优化了证明系统性能。</p>
+</blockquote>
+<hr />
+<h3>[2026/2682] A Quantitative Evaluation of Constant-Time Analysis Tools</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhenzhi Lai, Zhiyuan Zhang, Tian Qiu, Van-Thuan Pham, Udaya Parampalli</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2682">论文</a> | <a href="https://eprint.iacr.org/2026/2682.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 恒定时间编程策略旨在保护密码学代码免受时序侧信道攻击，但即便对经验丰富的开发者而言，编写符合该策略的代码仍极具挑战性。尽管已发布超过 50 种恒定时间（CT）分析工具以辅助识别违规，现有研究多依赖定性观察与案例研究，缺乏系统的量化评估。</p>
+<p><strong>主要贡献:</strong> 本文提出了 AutoBench-CT，这是一个模块化基准测试框架，首次在 64 个密码学任务中通过人工验证确立了每条违规的基准真值，并建立了统一的量化指标体系以评估工具的运行性能、检测质量及可用性。</p>
+<p><strong>达到效果:</strong> 定量分析揭示了为何首个发布于 2010 年的 CT-grind 工具至今仍是最流行的选择，同时阐明了现有工具普遍存在的局限性及其成因。</p>
+<p><strong>技术梗概:</strong> 研究采用模块化基准测试架构，结合人工验证的基准真值与多维量化指标，对七种主流 CT 分析工具进行了全面评估，并据此提出了一种复合流水线以最大化实际部署中的恒定时间安全性保证。</p>
+</blockquote>
+<hr />
+<h3>[2026/2683] Stop Calling Them Provers: The Case for Calling ProVerif and Tamarin Symbolic Protocol Analyzers</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Nadim Kobeissi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2683">论文</a> | <a href="https://eprint.iacr.org/2026/2683.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 密码协议的安全性声明依赖于理论、分析软件、协议模型及待验证安全属性的综合考量，而ProVerif与Tamarin作为主流工具，其公开的声音性论证存在虚假陈述、证明缺失以及理论与实现间的断层。</p>
+<p><strong>主要贡献:</strong> 作者审计了这两款工具的文献论证，复现了导致Tamarin错误接受提交模型的已知漏洞，并指出ProVerif缺乏完整分析证书且Tamarin依赖自身求解器重放证明树，从而将正确性置于信任黑盒之中。</p>
+<p><strong>达到效果:</strong> 研究揭示仅凭符号学结果不足以支撑协议的安全宣称，因模型可能省略解析器与状态机行为、机密性查询可能导致信息泄露，且密码原语方程缺乏对计算保证的充分论证。</p>
+<p><strong>技术梗概:</strong> 本文主张将ProVerif和Tamarin重新定义为“符号协议分析器”而非“证明器”，强调在报告结果时必须附带支持性的模型、假设及证据，以明确其适用于发现攻击及确立无界会话下的符号属性。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-10-29 11:09</h2>
 <p><em>新增 17 篇论文 (编号 2655--2671)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2656] Falcon Key Recovery from Joint Sampler Leakages</h3>
