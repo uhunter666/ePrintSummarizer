@@ -503,19 +503,26 @@
 > **技术梗概:** 论文采用极小极大分析推导下一位预测的锐界，结合遍历理论构建有限样本保证，并针对高维相关性度量进行线性化建模以量化熵率亏损。
 
 ---
-### [2026/2784] Privacy-Preserving Multi-Institutional Clinical Prediction via Multiparty Encrypted Newton-CG Logistic Regression
+### [推荐] [2026/2784] Privacy-Preserving Multi-Institutional Clinical Prediction via Multiparty Encrypted Newton-CG Logistic Regression
+
+- **匹配关键字:** homomorphic encryption
 
 - **作者:** Xiaokang Dai, Weijie Miao, Wenyuan Wu, Yong Feng
 
 - **分类:** Applications
 
+- **关键词:** CKKS；multiparty homomorphic encryption
+
 - **链接:** [论文](https://eprint.iacr.org/2026/2784) | [PDF](https://eprint.iacr.org/2026/2784.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 多机构临床预测虽能利用更庞大多样的患者群体，但隐私保护与数据治理约束通常阻碍了患者级记录的集中池化。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本研究提出了一种结合多方 CKKS 同态加密与牛顿共轭梯度优化的框架，实现了在保持记录本地的情况下进行协作逻辑回归训练。
 >
+> **达到效果:** 在 NHANES 2017–2018 的九项临床预测任务中，该方法的 AUC、APR 及平均精度均值绝对偏差低于 0.002；在 PIMA 糖尿病和乳腺癌威斯康星数据集上五折交叉验证准确率分别达到 77.21%±1.28% 和 96.42%±1.44%。
+>
+> **技术梗概:** 各机构计算本地梯度与阻尼海森矩阵贡献，仅聚合加密的固定维度统计量；全局牛顿系统通过带对角预条件及延迟除法的加密预条件共轭梯度法求解，使主导同态成本主要取决于模型维度。
 
 ---
 ### [2026/2785] Optimal Early-Stopping Broadcast via Exponential Information Gathering
@@ -524,13 +531,18 @@
 
 - **分类:** Foundations
 
+- **关键词:** Byzantine broadcast, early stopping, round complexity, exponential information gathering, authenticated broadcast
+
 - **链接:** [论文](https://eprint.iacr.org/2026/2785) | [PDF](https://eprint.iacr.org/2026/2785.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 早期停止广播协议旨在根据实际遇到的恶意方数量 $f$ 而非最坏情况终止，尽管在计算设置下将 $t < n/2$ 场景的轮数复杂度从 $O(f)$ 降至最优界 $\min\{f+2, t+1\}$ 仍是长期未解难题。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本文在两个方向取得突破：首先针对无设局的 $t < n/2$ 场景，提出了达到理论最优轮数复杂度的广播协议；其次（根据摘要截断推断）进一步扩展了不诚实多数派 ($t = (1-\epsilon)n$) 下的渐近最优协议性能。
 >
+> **达到效果:** 在 $t < n/2$ 且仅依赖公开密钥基础设施 (PKI) 的设定下，所有参与方均能在 $\min\{f+2, t+1\}$ 轮内完成输出，填补了计算设置下的最优性差距。
+>
+> **技术梗概:** 研究结合了指数信息收集机制与先进的密码学原语，以在资源受限环境下实现高效的早期停止广播协议。
 
 ---
 ### [2026/2786] Quantum Key Exchange from Public Quantum Money
@@ -665,13 +677,18 @@
 
 - **分类:** Secret-key cryptography
 
+- **关键词:** committing authenticated encryption, sponge/duplex construction, duplex cipher, deck cipher, SHA-3, TurboSHAKE
+
 - **链接:** [论文](https://eprint.iacr.org/2026/2801) | [PDF](https://eprint.iacr.org/2026/2801.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 针对Daemen等人于EuroS&P 2025提出的基于SHAKE和TurboSHAKE的认证加密方案，现有模式在并行处理效率上存在局限。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本文提出了一种名为FlightDeck的新型可并行化deck cipher模式，该模式能够像KangarooTwelve一样处理输入并像计数器模式一样生成输出，同时将其实例化于基于overwrite duplex (OD)构建的Keccak-p置换之上。
 >
+> **达到效果:** 结合Deck-BO等deck cipher模式，所构建的认证加密方案的安全性可归约至(keyed)TurboSHAKE的伪随机函数安全性及其碰撞抗性，且相较于EuroS&P 2025的方案，替换UpperDeck为FlightDeck显著提升了软件执行效率。
+>
+> **技术梗概:** 核心技术在于设计支持并行评估Keccak-p置换的FlightDeck模式，并将其集成至OD架构以构建高吞吐量的认证加密协议。
 
 ---
 ### [2026/2803] The GGM PRF Construction is Optimal
@@ -5637,10 +5654,13 @@ ho(1,9)=242$这一确切结论，解决了该参数在$n=9$情形下的长期悬
 - **链接:** [论文](https://eprint.iacr.org/2026/2435) | [PDF](https://eprint.iacr.org/2026/2435.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error: unspecified launch failure\nROCm error"}]
+> **研究背景:** 现有的双高效查找论证方案要么依赖椭圆曲线假设导致无法抵御量子攻击，要么因依赖理论算法或在小特征域上操作而缺乏实用性。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本研究利用张量码构建了透明且抗量子的可更新双高效查找论证，并提出了通过优化二维张量码实现具体高效的 TenseUp 方案；同时提出了一种通用编译器，可将任意静态 SNARK 转化为支持动态更新的系统。
 >
+> **达到效果:** 实验表明，TenseUp 在证明者时间和预处理效率上优于或等同于最先进的非抗量子方案，且具备渐近性能优势。
+>
+> **技术梗概:** 核心技术包括基于张量码的构造方法、针对二维张量码的特定优化策略，以及利用可更新双高效查找论证存储和访问见证更新的编译器架构。
 
 ---
 ### [推荐] [2026/2436] Threshold BARGs with Statistical Soundness: Weighted Threshold Encryption without Obfuscation
@@ -5656,10 +5676,13 @@ ho(1,9)=242$这一确切结论，解决了该参数在$n=9$情形下的长期悬
 - **链接:** [论文](https://eprint.iacr.org/2026/2436) | [PDF](https://eprint.iacr.org/2026/2436.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 现有的阈值批量论证（Threshold BARGs）方案存在共同参考串（CRS）长度随实例数$k$多项式增长的缺陷，且除基于不可区分性混淆（$i\mathcal{O}$）的构造外，仅能达到计算安全性。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本文首次针对陷阱门阈值语言类构建了具有统计安全性的阈值 BARG，并提出了基于伪随机置换采样的加权阈值签名及支持$\lambda$位权重的非交互式加权阈值加密新方案。
 >
+> **达到效果:** 所提出的阈值 BARG 方案的共同参考串（CRS）长度仅随$k$呈对数多项式级增长，显著优于现有构造；同时实现了统计不可伪造性及完全非交互式的解密过程。
+>
+> **技术梗概:** 研究结合了圆安全全同态加密或见证加密与学习误差假设，并创新性地利用伪随机置换采样技术构建了具备统计安全性的加权阈值签名与加密协议。
 
 ---
 ### [推荐] [2026/2439] Efficient Vectorized Implementation of MQOM
@@ -5900,13 +5923,18 @@ ho(1,9)=242$这一确切结论，解决了该参数在$n=9$情形下的长期悬
 
 - **分类:** Cryptographic protocols
 
+- **关键词:** post-quantum, blind signature, mldsa, VOLEitH, edaBits
+
 - **链接:** [论文](https://eprint.iacr.org/2026/2473) | [PDF](https://eprint.iacr.org/2026/2473.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 盲签名是匿名凭证和隐私保护数字身份的核心基础，现有基于量子安全假设的方案多依赖专用构造，难以适配存储于安全元件中的标准化后量子签名算法。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本文首次提出了一种由签发方运行未修改的 NIST 标准化后量子签名方案（ML-DSA）的盲签名协议，并结合 VOLE-in-the-Head 零知识证明系统实现了签发方隐藏属性。
 >
+> **达到效果:** 该协议生成的盲签名大小约为 1 MB，生成与验证时间分别低于 1 秒和 0.5 秒，且支持低成本地扩展签发方隐藏及选择性披露功能。
+>
+> **技术梗概:** 核心技术包括基于 ML-DSA 承诺的签发过程、利用 VOLE-in-the-Head 系统对 ML-DSA 签名进行零知识证明验证，以及一种名为 edaBitE 的新型批量一致性检查机制。
 
 ---
 ### [推荐] [2026/2474] Software-Pipelining The Number Theoretic Transform on Neural Processing Units: A Loop-Fission Methodology
@@ -6229,13 +6257,18 @@ ho(1,9)=242$这一确切结论，解决了该参数在$n=9$情形下的长期悬
 
 - **分类:** Public-key cryptography
 
+- **关键词:** Multivariate cryptography, algebraic cryptanalysis, UOV
+
 - **链接:** [论文](https://eprint.iacr.org/2026/2452) | [PDF](https://eprint.iacr.org/2026/2452.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 在多元密码学领域，针对UOV及其变体方案的安全性分析常依赖于多项式方程组的正则性假设，然而这些假设的普遍有效性（genericity）缺乏严格的理论支撑。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本文确立了由UOV公钥生成的理想与簇所具备的泛型性质，具体证明了UOV簇的等维性以及公钥理想的根性质，从而为相关密码分析中的正则性假设提供了坚实的理论依据。
 >
+> **达到效果:** 研究通过回顾性分析揭示了多个因非泛型特性导致方案被攻破的案例，同时也给出了一个非泛型但难以被利用的反例，明确了在方案设计阶段考量泛型性质的重要性。
+>
+> **技术梗概:** 作者结合代数几何理论深入分析了理想与簇的生成元性质，并采用案例研究法对比了不同密码方案中泛型假设成立与否对安全性的具体影响。
 
 ---
 ### [2026/2453] Revisiting Witness-Succinct UC-lifting Compilers
