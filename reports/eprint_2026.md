@@ -117,13 +117,18 @@
 
 - **分类:** Foundations
 
+- **关键词:** Lattices, Hermite, LLL/BKZ output quality
+
 - **链接:** [论文](https://eprint.iacr.org/2026/2826) | [PDF](https://eprint.iacr.org/2026/2826.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 本文是研究十至十二维 Hermite 常数系列论文的一部分，旨在通过维度十一的论证确定该维度的 Hermite 常数上界。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 论文将假设的最小格规模为 4 且行列式低于 972 的维度十一格归约为秩十一、十和九的链节，并证明了基于秩九完美形式分类及全局有限计算得出的数学结论。
 >
+> **达到效果:** 最终在依赖秩九分类、秩十普查及全局局部有限校验的条件下，确立了维度十一 Hermite 常数的上界为 $\gamma_{11}=4/\sqrt[11]{972}$，并通过四种证书格式（迹、域、粘合与树）排除了绝大多数候选形式。
+>
+> **技术梗概:** 研究采用了格归约技术将高维格分解为低秩链节，结合迹、域、粘合及树状证书进行数据验证与排除，并利用局部不等式证明确保分类的完备性与正确性。
 
 ---
 ### [2026/2811] More Keys, Less Commitment: Key-Committing Attacks on BBB Accordions via Encode-then-Encipher and a Key-Committing Transform
