@@ -79,6 +79,348 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-11-11 10:02</h2>
+<p><em>新增 17 篇论文 (编号 2810--2826)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2810] QUASI: Post-Quantum Quorum Attestation of Pre-Validated Statements</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Maksym Ioffe, Dahlia Malkhi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2810">论文</a> | <a href="https://eprint.iacr.org/2026/2810.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对基于法定人数（quorum）的系统，现有机制通常要求各方对完整声明进行签名，导致计算开销巨大。</p>
+<p><strong>主要贡献:</strong> 提出了 QUASI 协议类，通过仅认证少量符号即可实现法定人数对整个声明的公开可验证认证，并提供了无需依赖 SNARKs 聚合的纯哈希与纠错码构建方案。</p>
+<p><strong>达到效果:</strong> 该随机化构造相较于全量基于哈希的签名方案，将各方的贡献大小及生成、验证过程中的哈希计算量降低了超过 10 倍。</p>
+<p><strong>技术梗概:</strong> QUASI 作为通用原语，利用简单的确定性或随机化构建，仅依赖哈希函数和纠错码技术，支持无签名共识的外部认证及 SNARK 聚合的前处理等应用场景。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2816] SoK: Understanding Virtual Machines over Fully Homomorphic Encryption</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Song Bian, Ziwei Ma, Yunhao Fu, Haowen Pan, Ruiyu Shen, Zhou Zhang, Ran Mao, Zaidong Li, Yintai Sun, Ruoyi Li, Zhenyu Guan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2816">论文</a> | <a href="https://eprint.iacr.org/2026/2816.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 全同态加密（FHE）下的程序行为与明文环境存在本质差异，形成了受数据隐蔽性约束的全新计算范式。</p>
+<p><strong>主要贡献:</strong> 本文通过系统综述超过125项研究工作，构建了跨层视角的FHE虚拟机视图，并识别出SISD、SIMD及混合三种 distinct 的FHE虚拟机形式。</p>
+<p><strong>达到效果:</strong> 实验量化评估了不同精度的八种虚拟机指令及两个端到端应用程序，证实各类FHE虚拟机展现出独特的效用与性能特征。</p>
+<p><strong>技术梗概:</strong> 研究采用跨层系统化方法，结合现有FHE编译器与硬件加速器，深入剖析加密数据上的具体编程模型及其设计权衡。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2822] Threshold Batched Attribute-Based Encryption from Succinct LWE</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Shayeef Murshid, Ramprasad Sarkar, Mriganka Mandal</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2822">论文</a> | <a href="https://eprint.iacr.org/2026/2822.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有的阈值批量属性基加密（TB-ABE）方案主要依赖双线性对，这促使研究者寻求抗量子替代方案。</p>
+<p><strong>主要贡献:</strong> 本文提出了首个基于格的 TB-ABE 候选构造，结合了 succinct polynomial-digest 机制、算术电路策略的密钥同态评估以及线性秘密共享技术。</p>
+<p><strong>达到效果:</strong> 该方案在满足底层斜坡阈值共享方案的份额均匀性前提下，证明了其在 ℓ-succinct LWE 假设下的安全性。</p>
+<p><strong>技术梗概:</strong> 核心技术包括利用格上 BIBE 的精简多项式摘要机制、针对算术电路策略的密钥同态评估以及线性秘密共享方案。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2824] Incrementally Verifiable Oracle Aided Computation</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Shafi Goldwasser, Yael Tauman Kalai</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2824">论文</a> | <a href="https://eprint.iacr.org/2026/2824.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 增量可验证计算（IVC）允许证明者在无需保留或重算先前执行的情况下，高效更新短证明，但在 AI 安全领域，现有方案未能解决 AI 任务对外部信息源及人类判断的依赖性。</p>
+<p><strong>主要贡献:</strong> 本文在基于学习错误（LWE）假设的前提下，构建了支持预言机辅助计算的增量可验证计算方案，并针对鲁棒性计算场景提供了隐私可验证性构造。</p>
+<p><strong>达到效果:</strong> 该方案确保了对于有界空间计算（包括非确定性计算），任何接受虚假输入的伪执行均包含至少$\varepsilon$比例的错误预言机回答，从而在时间、空间和查询复杂度约束下实现了安全验证。</p>
+<p><strong>技术梗概:</strong> 研究首先构建 succinct non-interactive arguments（SNARGs），随后将其扩展至增量设置，利用 LWE 假设下的密码学原语实现了对外部信息源的兼容验证机制。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2825] The Hermite Constants in Dimensions 10, 11 and 12</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Rémi Géraud-Stewart, David Naccache</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2825">论文</a> | <a href="https://eprint.iacr.org/2026/2825.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文旨在确定 10、11 和 12 维空间中 Hermite 常数的精确值，该常数与最优格（perfect lattice）及接触几何性质密切相关。</p>
+<p><strong>主要贡献:</strong> 研究通过正交于最短对偶向量的截面分析、有限有理覆盖以及 Mordell 不等式等组合方法，严格推导并验证了特定维度下 Hermite 常数的解析表达式。</p>
+<p><strong>达到效果:</strong> 最终确立了 $\gamma_{10}^{10}=4^{10}/768$、$\gamma_{11}^{11}=4^{11}/972$ 以及 $\gamma_{12}=4/\sqrt{3}$ 的精确数值，并证明了 Coxeter–Todd 格在 12 维情形下的最优性。</p>
+<p><strong>技术梗概:</strong> 核心技术包括利用矩阵不等式排除低行列式情况、构建从 11 维到 9 维的秩链截面序列、结合接触几何与有限域上的有理覆盖，并辅以 Lean 形式化验证系统确保推导无误。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2826] A Focus on Hermite Constant 11</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Rémi Géraud-Stewart, David Naccache</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2826">论文</a> | <a href="https://eprint.iacr.org/2026/2826.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]</p>
+<p><strong>主要贡献:</strong> [Summary generation failed - see abstract]<br />
+</p>
+</blockquote>
+<hr />
+<h3>[2026/2811] More Keys, Less Commitment: Key-Committing Attacks on BBB Accordions via Encode-then-Encipher and a Key-Committing Transform</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Donghoon Chang, Yukihito Hiraga, Yusuke Naito, Yu Sasaki, Takeshi Sugawara</p>
+</li>
+<li>
+<p><strong>分类:</strong> Secret-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2811">论文</a> | <a href="https://eprint.iacr.org/2026/2811.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 随着 NIST 标准化工作的推进，具备超越生日界（BBB）安全性的密码学手风琴（cryptographic accordions）成为研究热点，但现有研究表明其额外的密钥引入可能削弱认证加密（AE）方案的密钥承诺性。</p>
+<p><strong>主要贡献:</strong> 本文揭示了 BBB 手风琴中额外自由度对密钥承诺的负面影响，提出了针对广泛 EtE 范式 AE 方案（如 CHCTR2、HCTR+ 等）的 O(1) 复杂度密钥承诺攻击，并设计了名为 CACH 的黑盒变换以构建具备强密钥承诺性的鲁棒认证加密（RAE）。</p>
+<p><strong>达到效果:</strong> CACH 在理想密码模型下实现了 BBB 多用户 RAE 安全性及 t/2 比特的密钥承诺强度（对应 t 比特标签），且仅依赖 AES 组件，支持所有密钥长度；实例化方案 CACH-CHCTR2 在短消息场景下优于现有的 EtE-HCTR2 与 EtE-CHCTR2。</p>
+<p><strong>技术梗概:</strong> 研究利用 BBB 结构中额外密钥带来的自由度进行攻击分析，并通过 CACH 变换将任意 BBB 安全手风琴转化为满足强密钥承诺属性的 RAE 方案，其安全性证明基于理想密码模型且兼容 NIST 设计目标。</p>
+</blockquote>
+<hr />
+<h3>[2026/2812] Constructions of Boolean Correctors with Optimal Nonlinearity and Vectorial Correctors Beyond Optimal Linear Correction Order</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhaole Li, Deng Tang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2812">论文</a> | <a href="https://eprint.iacr.org/2026/2812.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 纠错器作为真随机数生成器的后处理函数，旨在消除物理噪声源产生的原始比特流中的统计偏差。</p>
+<p><strong>主要贡献:</strong> 本文基于二元 Krawtchouk 多项式建立了分析并构建布尔及向量纠错器的框架，将 Walsh 层准则重构为有限矩约束，并确立了非线性的通用上界及可达修正阶的必要条件。</p>
+<p><strong>达到效果:</strong> 对于 $n=2^k\ge 8$，提出的自寻址构造实现了具有最优非线性 $2^{n-1}-2^{n-1}/n$ 和韧性 $n/2-2$ 的 $(n-2)$-纠错器，填补了同时达到最优修正阶与非线性的无限非线性纠错器族空白。</p>
+<p><strong>技术梗概:</strong> 研究利用二元 Krawtchouk 多项式框架对支持层轮廓进行刻画，并结合常数权重寻址技术构造了渐近满足非线性上界的 $(n-d-1)$-纠错器。</p>
+</blockquote>
+<hr />
+<h3>[2026/2813] Overcoming Padding in Cryptography via  Hardness of Certifying Random Strings</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yao-Ching Hsieh, Abhishek Jain, Jiatu Li, Surya Mathialagan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2813">论文</a> | <a href="https://eprint.iacr.org/2026/2813.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现代密码学的安全证明常依赖混合论证，导致方案参数需人为填充以匹配描述尺寸，这种‘冗余填充’现象阻碍了 succinct 密码原语的发展。</p>
+<p><strong>主要贡献:</strong> 本文提出消除密码学中冗余填充的新框架，实现了速率-1的可提取性见证加密、短 CRS 的 succinct 非交互式论证及多输入功能加密等应用。</p>
+<p><strong>达到效果:</strong> 该框架成功将基于‘可压缩实例’的安全性提升至任意实例，为构建参数尺寸不随输入长度增长的 succinct 密码原语提供了理论基础。</p>
+<p><strong>技术梗概:</strong> 核心方法建立了密码学与证明复杂度间的联系，利用命题证明系统中的证明复杂度生成器（PCGs）形式化随机不可压缩字符串的认证难度。</p>
+</blockquote>
+<hr />
+<h3>[2026/2814] Registration-based Encryption with Logarithmic Registration</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Xingfu Yan, Guiqiu Liao, Fan Yang, Haining Yang, Zheng Gong, Fucai Luo, Bowen Zhao</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2814">论文</a> | <a href="https://eprint.iacr.org/2026/2814.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 基于注册的加密（RBE）在保留身份基加密接口同时消除密钥托管，但现有可部署方案面临用户注册需 $O(\sqrt{N})$ 时间更新注册表的性能瓶颈。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于决策 $(R,S,T,f)$-Diffie-Hellman 假设的黑盒配对基 RBE 构造，利用多层树结构将最大容量 $N$ 下的用户注册时间优化至 $O(\log \sqrt{N})$。</p>
+<p><strong>达到效果:</strong> 实验表明当 $N=10^7$ 时注册与密钥生成均在毫秒级完成，相比 Glaeser et al. (CCS'23) 方案注册时间提升高达 158 倍，并支持批量成员资格验证。</p>
+<p><strong>技术梗概:</strong> 该方案构建于多层树架构之上，注册操作仅需更新对应用户从根节点到叶节点的路径，同时实现了高效的单点及批量非成员资格验证机制。</p>
+</blockquote>
+<hr />
+<h3>[2026/2815] Jazzline: Composable CryptoLine Functional Correctness Proofs for Jasmin Programs</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> José Bacelar Almeida, Manuel Barbosa, Gilles Barthe, Lionel Blatter, Gustavo Delerue, João Diogo Duarte, Benjamin Gregoire, Tiago Oliveira, Miguel Quaresma, Pierre-Yves Strub, Ming-Hsien Tsai, Bow-Yaw Wang, Bo-Yin Yang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2815">论文</a> | <a href="https://eprint.iacr.org/2026/2815.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Jasmin 是一种面向高速且高可信密码学程序的语言，其功能正确性证明通常借助 EasyCrypt 进行演绎推理，虽具备通用性与模块化优势，但在处理底层架构特定例程时扩展性不足。CryptoLine 提供了一种半自动形式化验证方法，专门用于代数丰富的低层密码原语，但其证明自包含且难以集成到高层开发中。</p>
+<p><strong>主要贡献:</strong> 本文提出 Jazzline 框架，通过扩展 Jasmin 语言添加注解并实现向 CryptoLine 模型的自动转换，以声地利用 CryptoLine 解决复杂 Jasmin 程序功能正确性证明中的子目标。研究还形式化并实现了从 CryptoLine 证明中提取语义的自动化过程，使大部分复杂变换得以在模型内获得认证。</p>
+<p><strong>达到效果:</strong> Jazzline 成功将 CryptoLine 的验证能力无缝集成至高层开发流程，显著提升了低层密码原语与整体程序正确性证明的可组合性与可扩展性。实验表明该方法能有效处理复杂架构特定例程，同时保持形式化验证的严谨性与自动化程度。</p>
+<p><strong>技术梗概:</strong> 核心技术包括语言扩展以支持特定注解、自动翻译机制将 Jasmin 程序映射至 CryptoLine 代数模型，以及语义提取的形式化实现以桥接自包含证明与高层推理框架。</p>
+</blockquote>
+<hr />
+<h3>[2026/2817] From Degree Three to Degree Two: Statistical Randomized Encodings for All Functions</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Emmanuela Orsini, Arpita Patra</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2817">论文</a> | <a href="https://eprint.iacr.org/2026/2817.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 虽然对于布尔函数已知存在完美的三次随机化编码，但二次编码无法同时保证所有函数的完全正确性和完全隐私性，而允许统计误差时二次编码是否足够这一关键问题长期悬而未决。</p>
+<p><strong>主要贡献:</strong> 本文构造了针对所有布尔函数的二次随机化编码，在输入位与独立均匀随机位上均满足该次数界限，并实现了分解性与输出局部性为三的特性。</p>
+<p><strong>达到效果:</strong> 该方案将正确性与隐私性的统计误差控制在指数级小量，其编码器、解码器及模拟器的复杂度均为模 2 分支程序总规模与安全参数的多项式，进而从 NC^1 中的单向函数导出了具有最优输出局部性三的单向函数。</p>
+<p><strong>技术梗概:</strong> 研究基于模 2 分支程序的代数结构，利用统计误差容忍机制在保持低次数的同时平衡正确性与隐私性，并通过分解性设计确保每个编码位仅依赖至多三个输入与随机位。</p>
+</blockquote>
+<hr />
+<h3>[2026/2818] Round-Optimal Statistical Verifiable Secret Sharing with Polynomial Complexity</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Chen-Da Liu-Zhang, Elisaweta Masserova</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2818">论文</a> | <a href="https://eprint.iacr.org/2026/2818.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 可验证秘密共享（VSS）是安全计算中的核心原语，其轮数复杂度研究已十分深入。Rabin 和 Ben-Or 确立了在 $t/2$ 个合谋者下统计安全性可行性，而 Patra 等人证明至少需要三轮分享。Applebaum、Kachlon 和 Patra 虽提出了三轮分享一轮重构的轮最优 VSS，但其通信复杂度随参与方数量呈指数增长。</p>
+<p><strong>主要贡献:</strong> 本文首次提出了在 $t/2$ 合谋者假设下兼具多项式通信与计算复杂度的统计可验证秘密共享方案，解决了 Applebaum 等人遗留的效率问题。该协议基于一种新颖的弱秘密共享概念，限制了腐败经销商的重构时间自由度仅能选择验证密钥。</p>
+<p><strong>达到效果:</strong> 该方案实现了轮数最优（三轮分享加一轮重构），同时保证了多项式级别的通信与计算开销，显著提升了大规模多方环境下的实用性。引入的弱秘密共享概念本身具有独立的理论价值，为后续协议设计提供了新范式。</p>
+<p><strong>技术梗概:</strong> 核心技术创新在于提出“弱秘密共享”框架，通过约束腐败经销商在重构阶段仅能操作验证密钥而非秘密份额，从而在保持统计安全性的同时实现多项式复杂度。</p>
+</blockquote>
+<hr />
+<h3>[2026/2819] How to Revoke Users in Encryption Schemes?</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Sanjam Garg, Dimitris Kolonelos, Benjamin Ostrovsky, Guru-Vamsi Policharla</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2819">论文</a> | <a href="https://eprint.iacr.org/2026/2819.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在公钥密码体制中，随着密钥泄露、设备失陷或用户离职，撤销机制对于维持加密系统的安全性至关重要。</p>
+<p><strong>主要贡献:</strong> 本文首次提出了一种结合匿名性、抗合谋性、密钥与访问规则不变、密文开销精简以及无需信任撤销权威（即权威无法解密）的综合撤销方案。</p>
+<p><strong>达到效果:</strong> 该方案通过发布看似随机的伪名来标识被撤销用户，同时确保未撤销且满足原始访问规则的方才能解密后续密文。</p>
+<p><strong>技术梗概:</strong> 核心观察是将撤销问题转化为关于满足访问规则且关联伪名未被撤销的见证加密（Witness Encryption）问题，并利用双线性群框架将简短的知识论证 gadget 编译为高效的见证加密实例。</p>
+</blockquote>
+<hr />
+<h3>[2026/2820] The Minimum Bucket Capacity for Reliable Path ORAM</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yijia Chang, Man Ho Au</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2820">论文</a> | <a href="https://eprint.iacr.org/2026/2820.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 路径 ORAM 通过在二叉树桶中存储数据块并利用客户端缓存（stash）处理溢出，旨在隐藏内存访问模式；然而桶容量 $Z$ 的选择在降低存储通信成本与防止 stash 溢出风险之间存在权衡，此前研究尚未明确 $Z=3$ 与 $Z=4$ 下 stash 容量的理论界限。</p>
+<p><strong>主要贡献:</strong> 本文确立了二元路径 ORAM 在树深度 $L=\lceil \log_2 N \rceil$ 下的精确阈值：证明了当桶容量 $Z=4$ 时，stash 大小满足统一的指数衰减上界，而当 $Z=3$ 时则存在导致 stash 大小为 $\Omega(N)$ 的实例族。</p>
+<p><strong>达到效果:</strong> 研究结果表明，$Z=4$ 是允许统一指数型 stash 界限的最小桶容量，在此条件下多项式长度执行仅需对数级 stash 即可将溢出概率降至逆多项式级别；反之在 $Z=3$ 下无法通过亚线性 stash 使溢出概率均匀消失。</p>
+<p><strong>技术梗概:</strong> 证明方法通过将实际路径 ORAM 过程建模为具有依赖关系的节点负载问题，结合概率分析严格推导了 stash 大小的分布界限，并构造特定访问序列实例以证伪 $Z=3$ 下的亚线性 stash 可行性。</p>
+</blockquote>
+<hr />
+<h3>[2026/2821] Designing Quantum-Safe Network Architectures via Certified Randomness Distribution</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Filip-Ioan Ceară, Diana Maimuţ</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2821">论文</a> | <a href="https://eprint.iacr.org/2026/2821.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 当前量子密钥分发（QKD）方案存在实际安全局限性，而基于非对称后量子密码学（PQC）的架构则面临密钥尺寸过大及延迟高的问题。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于不同信任级别认证随机数生成器（QRNG）分布的替代性量子安全网络架构设计，通过模块化方法聚合高层的高熵源与本地贡献，显著增强了本地随机序列的安全保证。</p>
+<p><strong>达到效果:</strong> 该方案利用 QRNG 的物理特性及对称密钥算法实现节点认证，能够部署即用的量子安全基础设施，有效规避了现有方案的实践缺陷。</p>
+<p><strong>技术梗概:</strong> 核心技术在于整合高信任度熵源与本地贡献的模块化方法论，结合 QRNG 物理保证与对称密钥密码算法构建无需大规模密钥交换的高效架构。</p>
+</blockquote>
+<hr />
+<h3>[2026/2823] Revisiting the Security of OleF, t-OleF, and OlÆF</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Tingting Guo, Peng Wang, Shuping Mao, Yan Jia, Jiadong Han</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2823">论文</a> | <a href="https://eprint.iacr.org/2026/2823.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本文重新审视了 OleF、t-OleF 和 OlÆF 三种在线认证加密方案的安全性，指出其原有安全证明存在缺陷。</p>
+<p><strong>主要贡献:</strong> 研究揭示了掩码补偿关系并构建了区分器，同时反驳了变长扩展理想 RUP 完整性界限的声称上界。</p>
+<p><strong>达到效果:</strong> 实验表明 OleF 和 t-OleF 可被高效区分，OlÆF 在特定条件下隐私与完整性均被攻破，且实际伪造概率超出理论安全界限。</p>
+<p><strong>技术梗概:</strong> 主要技术包括建立掩码补偿关系、构造双加密查询区分器、利用有效编码扩展攻击以及推导通用伪造概率表达式。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-11-10 10:00</h2>
 <p><em>新增 40 篇论文 (编号 2768--2808)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2780] Structured Quantum Hardness from Unstructured Assumptions</h3>
