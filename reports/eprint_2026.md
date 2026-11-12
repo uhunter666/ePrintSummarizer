@@ -177,13 +177,18 @@
 
 - **分类:** Cryptographic protocols
 
+- **关键词:** expander codes, lossless expanders, everywhere-short secret sharing, lattice-based cryptography, leakage resilience
+
 - **链接:** [论文](https://eprint.iacr.org/2026/2841) | [PDF](https://eprint.iacr.org/2026/2841.pdf)
 
 
-> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+> **研究背景:** 现有的基于扩码的斜坡秘密共享方案在参与者数量或安全参数增加时，会导致子份额数量或份额系数无界增长，难以满足格密码分布式场景对紧凑性的需求。
 >
-> **主要贡献:** [Summary generation failed - see abstract]
+> **主要贡献:** 本文提出了 SEC 方案，这是一种基于无损二分扩图的新颖 $\mathbb{Z}$-模上斜坡秘密共享协议，实现了无论参与方数量和阈值如何变化，每位参与者仅接收一个份额且系数均保持有界的“处处短”特性。
 >
+> **达到效果:** 该方案在证明正确性、线性性及处处短性的同时，提供了可公开计算的整数重构向量界，并针对相关多查询局部泄露攻击，基于 $\mathsf{MatrixHint\text{-}MLWE}$ 假设证明了其对硬核函数的局部泄露韧性。
+>
+> **技术梗概:** 构造核心依赖于无损二分扩图的二部邻接矩阵性质，利用唯一邻居剥离算法将任意小规模的列集转化为单位模子矩阵，并引入了强化的硬核局部泄露韧性定义以增强安全性。
 
 ---
 ### [推荐] [2026/2845] On Composing Oracle Separations
