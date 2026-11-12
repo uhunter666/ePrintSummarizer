@@ -5,6 +5,410 @@
 
 ---
 
+## 更新: 2026-11-12 11:16
+
+*新增 21 篇论文 (编号 2827--2849)*
+
+### [推荐] [2026/2827] γ₁₁: Contact Geometry — the macadamias 0001, 0014, 0059 and 0015
+
+- **匹配关键字:** lattice
+
+- **作者:** Rémi Géraud-Stewart, David Naccache
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2827) | [PDF](https://eprint.iacr.org/2026/2827.pdf)
+
+
+> **研究背景:** 本文作为一系列研究的基础论文，旨在将 Hermite 常数 $\gamma_{11}$ 的取值 $4/\sqrt[11]{972}$ 的证明归结为关于秩分别为 11、10 和 9 的晶格链 $L\supset M\supset N$ 的陈述，其中秩为 9 的成员位于 Voronoi 分类下的 4,487,813 个完美形式之一。
+>
+> **主要贡献:** 该研究通过接触几何方法解决了被称为“macadamias
+>
+> **达到效果:** 研究成功证明了秩为 9 的晶格在有限个相干中心附近与显式参考晶格进行首次粘合，并利用 Delaunay 胞腔和接触恒等式给出了覆盖半径的统一上界，最终导出行列式不等式 $\det L\ge 972$。
+>
+> **技术梗概:** 证明过程采用计算机辅助方法，利用短对偶向量构成的截面框架限制晶格粘合位置，并结合原初扩张不等式将几何约束转化为代数界限，所有验证均基于有理数比较并附带证书存档记录。
+
+---
+### [推荐] [2026/2828] γ₁₁: A Finite Spectral Relaxation — the macadamia 0008
+
+- **匹配关键字:** lattice
+
+- **作者:** Rémi Géraud-Stewart, David Naccache
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2828) | [PDF](https://eprint.iacr.org/2026/2828.pdf)
+
+
+> **研究背景:** 该研究旨在解决关于秩为 11、10 和 9 的晶格链 $L\\supset M\\supset N$ 的有限谱松弛问题，特别是验证 $\gamma_{11}=4/\\sqrt[11]{972}$ 这一界限在特定完美形式下的成立性。
+>
+> **主要贡献:** 论文确立了形式 0008:022143116 的性质，证明所有由该形式标记的可容许晶格链均满足 $\det L\\ge 972$，并完成了对剩余实谱的有限化松弛计算。
+>
+> **达到效果:** 通过计算机辅助验证，排除了除 81 个网格节点外的所有参数区域，利用包含 1,091 个有理证明的树状结构在两种精确算术实现中完成了最终排除。
+>
+> **技术梗概:** 研究结合了最短对偶向量截断、基于有理比较与 Bernstein 或 Sturm 证书的参数局部归约，以及将连续谱映射至有限网格节点的离散化方法。
+
+---
+### [推荐] [2026/2829] γ₁₁: Reduction by Sections — the macadamias 0019 and 0017
+
+- **匹配关键字:** lattice
+
+- **作者:** Rémi Géraud-Stewart, David Naccache
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2829) | [PDF](https://eprint.iacr.org/2026/2829.pdf)
+
+
+> **研究背景:** 本文针对 Hermite 常数在 11 维空间中的值 $\gamma_{11}=4/\sqrt[11]{972}$ 的研究，旨在解决一系列由完美型构成的晶格链 $L\supset M\supset N$（秩分别为 11, 10, 9）中剩余的十个未决情形，即所谓的'macadamias'。
+>
+> **主要贡献:** 作者证明了其中两个关键情形（形式 $P_S$ 和 $P_K$），确立了所有满足条件的可容许晶格链其行列式均满足 $\det L\ge 972$ 的下界约束。
+>
+> **达到效果:** 研究成功验证了特定晶格形式的几何性质，并通过计算机辅助证明完成了对剩余情形的判定，相关验证记录已归档于证书档案中。
+>
+> **技术梗概:** 核心方法采用截面约化技术，利用单纯形接触将高维问题转化为八维协方差矩阵分析，并结合双向量旗界及度量分解将参数空间缩减，最终通过大规模节点树搜索覆盖剩余区域。
+
+---
+### [推荐] [2026/2830] γ₁₁: One Selected Contact, Two Linked Blocks — the macadamia 0030
+
+- **匹配关键字:** lattice
+
+- **作者:** Rémi Géraud-Stewart, David Naccache
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2830) | [PDF](https://eprint.iacr.org/2026/2830.pdf)
+
+
+> **研究背景:** 本文作为证明 Hermite 常数 $\gamma_{11}=4/\sqrt[11]{972}$ 的五篇配套论文之一，旨在解决将秩为 11、最小值为 4 且行列式小于 972 的格归约至特定链截面的问题，其中秩 9 的成员需进一步验证。
+>
+> **主要贡献:** 研究确立了首个完美形式 $\Lambda_9$ 在 $\Lambda_{10}$ 下的具体形态（标记为 0030:030301719），并针对该边界极窄的情形完成了严格证明，填补了 macadamia 系列格论断的最后一块拼图。
+>
+> **达到效果:** 通过计算机辅助验证，确认了在精确有理算术下，所有有限输入（包括三个外覆盖、两个中覆盖及多个子树）均满足条件，从而最终确立了该格的完美形式属性。
+>
+> **技术梗概:** 证明策略选取参考格的一个接触点并保留截面公用的非对角列，对两个八维块分别应用行列式 - 迹定理，最后通过三个标量参数的有理覆盖完成论证。
+
+---
+### [推荐] [2026/2832] An Agile Homomorphic Encryption and ML-KEM Scheme for Privacy-Preserving Health Data Processing
+
+- **匹配关键字:** lattice, post-quantum, homomorphic encryption, LWE
+
+- **作者:** Daniel RESENDE, Nadia El Mrabet, Ulrich Kühne
+
+- **分类:** Implementation
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2832) | [PDF](https://eprint.iacr.org/2026/2832.pdf)
+
+
+> **研究背景:** 健康数据的存储与处理面临严峻的隐私挑战，全同态加密（FHE）虽能支持密文计算但算法复杂且效率受限。
+>
+> **主要贡献:** 本文提出了一种结合 ML-KEM 与 BGV 方案的敏捷密码学架构，旨在解决嵌入式场景下的效率与安全需求。
+>
+> **达到效果:** 研究通过参数选择分析与概念验证实现，证明了该方案在嵌入式应用中的可行性与高效性。
+>
+> **技术梗概:** 该方案融合了基于学习带误差（LWE）问题的 ML-KEM 后量子密钥封装机制与 BGV 全同态加密算法。
+
+---
+### [推荐] [2026/2833] The Closest Vector Problem on Gadget Lattices: Efficient Algorithms and Voronoi Geometry
+
+- **匹配关键字:** lattice
+
+- **作者:** Daniele Micciancio
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2833) | [PDF](https://eprint.iacr.org/2026/2833.pdf)
+
+
+> **研究背景:** Gadget lattices 是格基密码学、纠错码及计算复杂性理论中的核心结构，其最近向量问题（CVP）的求解效率直接影响系统安全性与实用性。
+>
+> **主要贡献:** 本文针对幂次校验格与 CRT 格及其对偶格，提出了处理任意实值目标向量的高效 CVP 算法；通过显式刻画 Voronoi 胞体，揭示了标准 BDD 算法在奇数基下精确求解而在二进制基下的近似特性，并构造了首个属于
+>
+> **达到效果:** 研究实现了基于新型“延迟贪心”图割技术的确定性 O(n) 线性时间精确 CVP 求解器，以及对偶格通过图最小割归约获得的 O(n^3) 多项式时间精确算法；同时完整枚举了 Voronoi 胞体的所有面并确定了相继极小值。
+>
+> **技术梗概:** 核心技术包括基于 Voronoi 几何的显式胞体刻画、针对校验幂次格的“延迟贪心”图割策略、以及对偶格钝角超基构造与图最小割归约方法。
+
+---
+### [推荐] [2026/2835] Multi-Hop Functional Encryption
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Pratish Datta, Jiaxin Guan, Alexis Korb, Amit Sahai
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2835) | [PDF](https://eprint.iacr.org/2026/2835.pdf)
+
+
+> **研究背景:** 现有多跳全同态加密依赖全局可信密钥且无法安全转发中间状态，标准功能加密缺乏跨阶段重用加密数据的能力，而多方计算则面临交互与协调的高部署摩擦。
+>
+> **主要贡献:** 本文首次提出多跳功能加密（MHFE）原语，支持在递归和多级工作流中对加密数据进行动态有向无环图计算，并实现受控的中间结果释放。
+>
+> **达到效果:** 该方案通过模拟范式形式化定义了安全性，将标准功能加密的合谋抵抗性扩展至多跳场景，精确刻画了敌手仅能获知授权中间输出的信息流视图。
+>
+> **技术梗概:** MHFE 为计算图中的每个节点配备受限秘密密钥，使其仅揭示节点输出同时保持加密状态的向前兼容性，从而在无需全局在线解密或频繁重计算的前提下支持下游连续运算。
+
+---
+### [推荐] [2026/2837] Adaptive Leaky LWE and Its Security
+
+- **匹配关键字:** LWE
+
+- **作者:** Chuanqi Zhang, Muhammed F. Esgin, Ron Steinfeld
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2837) | [PDF](https://eprint.iacr.org/2026/2837.pdf)
+
+
+> **研究背景:** Leaky LWE 问题旨在研究在存在关于秘密和误差的噪声线性信息泄露时，LWE 样本是否仍能保持伪随机性。
+>
+> **主要贡献:** 本文研究了 $t$-轮自适应 Leaky LWE 场景，其中每次泄露矩阵可依赖于挑战及前序泄露答案，并在明确范数、平滑及采样条件下实现了高斯秘密 LWE 的归约。
+>
+> **达到效果:** 该归约在保持公钥矩阵分布及其关联预言机访问权限的同时，支持矩形泄露矩阵以及任意数域上非球面离散高斯分布。
+>
+> **技术梗概:** 研究采用了多项式轮次下的自适应泄露模型，结合显式范数约束与采样技术，将标准 LWE 问题转化为具有特定泄露特性的 Leaky LWE 问题。
+
+---
+### [推荐] [2026/2841] SEC: One-Share Everywhere-Short Secret Sharing from Lossless Expanders
+
+- **匹配关键字:** lattice, LWE
+
+- **作者:** Muhammad Arzaki, Muhammed F. Esgin, Amin Sakzad, Ron Steinfeld
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2841) | [PDF](https://eprint.iacr.org/2026/2841.pdf)
+
+
+> **研究背景:** [LLM error: litellm.APIConnectionError: OllamaException - {"error":"an error was encountered while running the model: ROCm error\nROCm error: unspecified launch failure"}]
+>
+> **主要贡献:** [Summary generation failed - see abstract]
+>
+
+---
+### [推荐] [2026/2845] On Composing Oracle Separations
+
+- **匹配关键字:** homomorphic encryption
+
+- **作者:** Willy Quach, Felix Rohrbach
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2845) | [PDF](https://eprint.iacr.org/2026/2845.pdf)
+
+
+> **研究背景:** 黑盒分离作为构建密码原语的重要技术壁垒，在评估单一构建块组合的实用性方面存在显著局限。
+>
+> **主要贡献:** 本文提出了一套技术条件，使得两个满足特定条件的黑盒分离能够相互复合，从而证明目标原语与构建块的任意黑盒组合均保持分离性。
+>
+> **达到效果:** 研究结果表明，将不可区分性混淆（iO）与抗碰撞哈希函数结合难以生成SZK复杂度类中的困难问题，因此不足以支撑丢失函数或全同态加密等原语的构造。
+>
+> **技术梗概:** 该方法允许在不拆解基础分离完整技术细节的前提下建立复合条件，有效扩展了此前仅针对单向置换组合的下界结论至更广泛的构建块场景。
+
+---
+### [推荐] [2026/2846] The isodual constant of the LLL potential: exact values and structure
+
+- **匹配关键字:** lattice
+
+- **作者:** Nick Howgrave-Graham
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2846) | [PDF](https://eprint.iacr.org/2026/2846.pdf)
+
+
+> **研究背景:** LLL 势定义的等对偶格不变量 $\eta(L)$ 的上确界 $\eta_n$ 是广义 Hermite 常数的阶梯情形，此前仅已知 $n \le 4$ 时的显式值。
+>
+> **主要贡献:** 本文证明了五维情形下 $\eta_5=6$ 且仅在 $D_5$ 及其对偶格处取得，同时发现了一个新的 135-模格 $M_*$ 作为四维约化函数的全局最大值点，并确定了八维情形 $\eta_8=2304$。
+>
+> **达到效果:** 研究证实了 $E_6, E_7, E_8$ 及其对偶格分别为对应维度下的严格局部极大值（其中 $n=6,7$ 时符合猜想的最优格），并给出了 $\eta_n$ 的渐近公式 $\log\eta_n \sim \frac{1}{4}n^2\log n$。
+>
+> **技术梗概:** 证明过程采用计算机辅助计算，通过区间算术对约 $90$ 亿个搜索节点进行独立验证，并引入了 $\Psi$-Hermite 常数 $\mu_m$ 来刻画势最小基中的第一 Gram-Schmidt 范数。
+
+---
+### [推荐] [2026/2849] γ₁₁: Unequal Triangles and Adapted References — the macadamia 0050
+
+- **匹配关键字:** lattice
+
+- **作者:** Rémi Géraud-Stewart, David Naccache
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2849) | [PDF](https://eprint.iacr.org/2026/2849.pdf)
+
+
+> **研究背景:** 本文致力于解决 Hermite 常数在维度 11 下的第九个 Macadamia 问题，即确定秩为 9、行列式为 8192/9 且最小范数至少为 4 的完美型 $P$ = 0050:024468269。
+>
+> **主要贡献:** 研究将 $\gamma_{11}$ 归约为由秩分别为 11、10 和 9 的晶格构成的链，并证明了若秩 9 成员被完美型 $P$ 标记，则任意容许链的行列式满足 $\det L\ge 972$。
+>
+> **达到效果:** 通过计算机辅助验证与显式有限检查，确立了该下界，同时指出在秩 10 层面无法达成此结论，因为存在一个行列式为 $3328/3$ 的实际晶格覆盖于 $P$ 之上。
+>
+> **技术梗概:** 证明过程采用计算机辅助方法，利用截面协向量的三个加法对偶向量与首个法向量的长度差异构建圆障碍，并引入适配的参考形式将接触条件转化为精确有理数测试，最终通过有限覆盖穷尽六千九百九十三个终端区域进行精确算术计算。
+
+---
+### [2026/2831] Twisted Towers: A Faster and Fully Costed SexTNFS Attack
+
+- **作者:** Gautam Botrel
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2831) | [PDF](https://eprint.iacr.org/2026/2831.pdf)
+
+
+> **研究背景:** 本文针对 BLS12-381 曲线目标群$\mathbb{G}_T$中的离散对数问题，深入研究了特殊指数 TNFS（exTNFS）攻击的可行性与成本。
+>
+> **主要贡献:** 作者提出了一种基于显式扭曲塔（twisted tower）的(6,2)设计方案，并在指令级模型下对关系收集、线性代数等所有步骤进行了精确的成本定价。
+>
+> **达到效果:** 实验表明，该设计在至少 0.39 的成功概率下，其计算成本约为 $2^{115.72}$ 次$\mathbb{F}_{p^{12}}$乘法或约 $2^{130}$ 条 AArch64 指令，相比已发表的基础域设计方案节省约 0.8 比特。
+>
+> **技术梗概:** 核心技术包括利用具有对合$\sigma$和单位$c$的六次基域构造扭曲塔、基于范数为 2 元素的陪集筛选（coset sieve）、以及针对 TNFS 系数立方体中单位倍数的平滑性加权计数优化。
+
+---
+### [2026/2836] Doubly-Efficient Private Information Retrieval from Modular Forms
+
+- **作者:** Alexandra Henzinger, Seyoon Ragavan
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2836) | [PDF](https://eprint.iacr.org/2026/2836.pdf)
+
+
+> **研究背景:** 现有信息论安全的私有信息检索（PIR）协议在服务器端时间与空间开销之间存在权衡，难以同时实现双重高效性。
+>
+> **主要贡献:** 本文提出了一种基于模形式的新颖信息论 PIR 协议框架，实现了在亚线性服务器时间及仅需额外一位存储空间的双重高效性。
+>
+> **达到效果:** 在两服务器设置下，将服务器查询时间优化至 $n^{0.82}$ 并将存储需求从 $O(n\sqrt{\log n})$ 缩减至 $n+1$ 比特；在多服务器场景下，进一步将 $s=3$ 和 $s=10$ 时的查询时间分别提升至 $n^{0.74}$ 和 $n^{0.61}$。
+>
+> **技术梗概:** 研究通过推广匹配向量（matching-vector）技术以处理指数中的二次运算，构建了支持预处理阶段仅需 $n+1$ 比特的数据结构，从而在查询阶段实现极低的时间复杂度。
+
+---
+### [2026/2838] DKG: A Dual-Layer Knowledge Graph and LLM Co-Driven Framework for Fully Automated Side-Channel Analysis of Cryptosystems
+
+- **作者:** Wenquan Zhou, An Wang, Yaoling Ding, Jiakun Li, Jingqi Zhang, Liehuang Zhu
+
+- **分类:** Attacks and cryptanalysis
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2838) | [PDF](https://eprint.iacr.org/2026/2838.pdf)
+
+
+> **研究背景:** 加密算法的物理实现面临侧信道攻击导致密钥泄露的风险，而传统的非特征化侧信道分析（SCA）全流程执行高度依赖专家知识。
+>
+> **主要贡献:** 本文提出了 DKG 框架，构建了首个专为 SCA 设计的双层知识图谱架构，并开发了由大语言模型驱动的自动化闭环攻击工作流。
+>
+> **达到效果:** 基于 166 份技术文档构建的图谱包含 1334 个实体和 1813 条关系，在涵盖 AES、DES 及 SM4 算法的八个数据集上实现了 97.5% 的端到端密钥恢复成功率。
+>
+> **技术梗概:** 该方法采用“配置组件 - 诊断策略”双层图结构，利用 Locate & Rewrite、Triple Extraction 及 Knowledge Fusion 三步流水线从原始文档自动提取知识，并通过检索增强生成（RAG）技术实现自主攻击决策。
+
+---
+### [2026/2839] Practical Confidential Clustering for Federated Learning using Efficient Secret-Sharing
+
+- **作者:** Cédric Prigent, Sonia Ben Mokhtar
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2839) | [PDF](https://eprint.iacr.org/2026/2839.pdf)
+
+
+> **研究背景:** 联邦学习（Federated Learning）常受统计异质性困扰，导致单一全局模型难以满足所有参与者的效用需求，而聚类联邦学习（CFL）虽能通过分组训练个性化子模型解决此问题，但在严格保密且低通信开销下进行聚类仍具挑战。
+>
+> **主要贡献:** 本文提出了 CCFL 框架，利用复制秘密共享（RSS）在加密域内执行包括距离计算和质心更新在内的完整聚类逻辑，并整合了客户端特征提取、匿名化服务器的无知识洗牌及多方计算（MPC）聚类，以同时保障输入隐私和参与者不可链接性。
+>
+> **达到效果:** CCFL 通过基于环的欧几里得距离优化显著减少了交互轮次，在真实局域网和广域网约束下实现了高达 46.7 倍的计算加速，其一次性聚类方法将重型密码运算与训练循环解耦，支持无缝扩展至数千客户端且边缘端开销可忽略。
+>
+> **技术梗概:** 该方案采用复制秘密共享（RSS）实现加密域内的距离计算与质心更新，结合多方计算（MPC）确保隐私保护，并利用基于环的欧几里得距离优化算法降低交互轮次以提升效率。
+
+---
+### [2026/2840] MPCTM: MPC-Based Trajectory Matching on Unmanned Autonomous Systems
+
+- **作者:** Dominik Roy George, Martin Zbudila, Barry Van Leeuwen
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2840) | [PDF](https://eprint.iacr.org/2026/2840.pdf)
+
+
+> **研究背景:** 无人自主系统（UAS）在共享空域或陆海空间的部署引发了碰撞风险，而明文传输轨迹数据会泄露敏感的路径模式及基础设施位置信息。
+>
+> **主要贡献:** 本文提出了一种基于多方计算（MPC）的隐私保护轨迹匹配协议 MPCTM，实现了仅输出碰撞检测结果而不泄露任何额外信息的端到端安全方案。
+>
+> **达到效果:** 评估表明，在经销商模式下，MPCTM 在线延迟较现有最先进方案分别提升了超过 2 倍和 8 倍，同时通过轻量级模型有效平衡了精度与效率。
+>
+> **技术梗概:** 该方案构建了针对离散采样点的 UAS 行为建模以精确捕捉碰撞，并设计了适配 MPC 的轻量级模型以优化计算开销。
+
+---
+### [2026/2842] Enabling Memory Encryption Using Ascon Derivatives
+
+- **作者:** Sergej Deutsch, Christoph Dobraunig, David Durham, Simon Johnson, Krystian Matusiewicz, Carlos Rozas, Alexander Tereschenko
+
+- **分类:** Secret-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2842) | [PDF](https://eprint.iacr.org/2026/2842.pdf)
+
+
+> **研究背景:** 在面临物理访问攻击者时，内存加密面临细粒度访问导致的认证标签开销大以及严格的低延迟、面积和能耗约束等挑战。现有方案多依赖 AES 块密码，但在处理高带宽内存接口时存在性能瓶颈。
+>
+> **主要贡献:** 本文探索将 Ascon 及其衍生算法作为构建模块用于内存加密，旨在克服传统方案的局限并提升整体效率。
+>
+> **达到效果:** 分析表明，基于 Ascon 的构造在性能上优于 AES 基础的 HCTR2，并能与 XTS-AES 竞争同时提供更大的块大小。
+>
+> **技术梗概:** 研究利用 Ascon 作为核心组件设计内存加密方案，通过优化其流密码特性以适配高带宽场景并降低延迟。
+
+---
+### [2026/2844] Antipodal necessity for rotation symmetric bent functions of degree at most three
+
+- **作者:** Filipe Martins Vono
+
+- **分类:** Foundations
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2844) | [PDF](https://eprint.iacr.org/2026/2844.pdf)
+
+
+> **研究背景:** 关于齐次旋转对称 Bent 布尔函数是否均具有二阶次的猜想尚未在一般情况下得到解决。
+>
+> **主要贡献:** 本文证明了该猜想在三阶情况下的必要条件，即偶数变量下旋转对称 Bent 函数的代数正规式必须包含特定的对径二次轨道，从而排除了任何齐次旋转对称三次 Bent 函数的存在性。
+>
+> **达到效果:** 研究结果不仅适用于非齐次函数，还通过有限傅里叶分析与二元域上的线性代数证明了该条件，并提供了 Lean 形式化的原始证明及基于单未幂若尔当块的第二种证明。
+>
+> **技术梗概:** 主要技术包括利用奇阶旋转的不变子空间将问题约化为二次数量的变量、应用帕塞瓦尔恒等式以及旋转对称二次型的刚性性质来推导纤维上的不相容条件，并辅以形式化验证与降序论证方法。
+
+---
+### [2026/2847] Access Cost Tradeoffs in Mixed-Mode Oblivious RAM
+
+- **作者:** Wojciech Ciszewski, Emanuele Ragnoli
+
+- **分类:** Cryptographic protocols
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2847) | [PDF](https://eprint.iacr.org/2026/2847.pdf)
+
+
+> **研究背景:** 混合模式 oblivious RAM (ORAM) 允许内存请求被标记为公开或私有，其中公开请求泄露地址而私有请求隐藏地址。本研究在被动服务器（仅读写指定单元）的 cell-probe 模型下，分析此类方案在随机独立负载下的摊销成本下限及分配机制。
+>
+> **主要贡献:** 论文揭示了公开读取与私有写入之间的紧确权衡关系，证明了在给定私有请求概率和平均探测次数约束下，任何方案的预期公开读取成本下界。针对多项式大小的客户端内存，作者构建了匹配该理论下界的构造方案，并确定了适用于期望负载及最坏情况负载的阈值条件。
+>
+> **达到效果:** 研究结果表明，在恒定私有频率下，对数级的私有预算强制要求对数级的公开读取成本，而恒定的公开读取成本则需以 $(n/(m+1))^{\Omega(1)}$ 级别的私有探测成本为代价。这些发现完整回答了 Zhang, Wang 和 Weng 针对被动服务器提出的关于访问成本权衡的问题。
+>
+> **技术梗概:** 研究采用 cell-probe 模型进行复杂度分析，结合随机化负载假设与独立模式设定推导信息论下界。作者通过构造具体的 ORAM 方案验证了理论界限的可达性，并区分处理了基于工作负载期望值与最坏情况平均成本的两种成本度量场景。
+
+---
+### [2026/2848] TUTTI: Parallel CKKS Bootstrapping in under 3 ms on CPU
+
+- **作者:** Robin Köstler, Antonio Guimarães
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/2848) | [PDF](https://eprint.iacr.org/2026/2848.pdf)
+
+
+> **研究背景:** 全同态加密（FHE）领域长期存在 CKKS 与轻量级方案（如 TFHE）在多线程延迟上的性能差距，限制了其在高并发场景下的实用化。
+>
+> **主要贡献:** 本文提出了 TUTTI 框架，通过改进 SPRU 协议以增强并行性并优化 LMSS 块二进制密钥的安全性分析，显著降低了 CKKS 的启动延迟。
+>
+> **达到效果:** 在 192 线程环境下，TUTTI 处理 4096 条消息恢复 1-9 层乘法运算仅需 46 至 83.4 毫秒，单消息启动耗时 4.6 毫秒，全面超越 TFHE-rs 及 SHIP 方案。
+>
+> **技术梗概:** 该方法利用多线程架构并行化 CKKS 启动流程，并针对 ARM 等不同硬件平台进行了跨架构优化，填补了全同态加密实用化文献中长期存在的延迟鸿沟。
+
+---
+
 ## 更新: 2026-11-11 10:02
 
 *新增 17 篇论文 (编号 2810--2826)*
