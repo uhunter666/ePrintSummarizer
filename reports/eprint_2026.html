@@ -79,6 +79,109 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-11-16 15:22</h2>
+<p><em>新增 5 篇论文 (编号 2872--2876)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2873] Optimized Solving Strategy and Two-Step Estimator for LWE with Hints</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Hanbin Yang, Jinzheng Cao, Risheng Yin, Qingfeng Cheng</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2873">论文</a> | <a href="https://eprint.iacr.org/2026/2873.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 侧信道提示（side-channel hints）可显著降低解决学习带误差（LWE）问题的计算成本，但在评估基于格的密码方案安全性时，需精确量化此类信息泄露的影响。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种针对含提示 LWE 问题的优化求解策略与两步估计器，通过联合选择 BKZ 块大小、遍历次数及最终格筛配置，并预测约化基分布与秘密恢复概率，以在满足资源约束下最大化成功概率。</p>
+<p><strong>达到效果:</strong> 实验表明，该策略在使用 BLASterBKZ 和 BGJ 筛法时，针对 CRYSTALS-KYBER 512（190 个完美提示）的实例仅需 7 分钟即可恢复秘密，较现有最优方法分别节省约 56% 与 85% 的时间。</p>
+<p><strong>技术梗概:</strong> 核心技术包括基于成本模型的自适应策略选择、BKZ 约化与格筛的两步协同优化框架，以及用于预测约化后基分布和恢复概率的统计估计器。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2876] Encrypted Authorship Attribution for Fraud Detection</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Zita Baronnet, Leonard Schild</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2876">论文</a> | <a href="https://eprint.iacr.org/2026/2876.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在金融安全领域，基于风格计量的作者归属技术常被用于关联匿名文本与已知作者，以识别网络钓鱼、身份冒充等欺诈行为。然而，调查通信数据与情报数据库往往包含敏感信息，无法跨越组织边界进行共享，导致传统分析面临隐私泄露风险。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于全同态加密（FHE）的隐私保护风格计量作者归属评估框架，重点针对基于词频统计和 Z 分数比较的 Burrows Delta 算法进行了同态实现。研究构建了包含威胁模型与信任假设的欺诈分析场景，并系统分析了该方案的计算复杂度。</p>
+<p><strong>达到效果:</strong> 实验表明，采用 CKKS 同态加密方案实现的完整分析管道无需执行昂贵的 Bootstrapping 操作即可运行，同时保持了较高的数值精度。结果证实风格计量作者归属是适合在隐私保护约束下实际部署的可行目标。</p>
+<p><strong>技术梗概:</strong> 核心方法包括利用 CKKS 同态加密方案对基于词频统计和 Z 分数比较的 Burrows Delta 算法进行同态实现，从而在不解密明文数据的前提下完成风格特征计算与比对。</p>
+</blockquote>
+<hr />
+<h3>[2026/2872] On the Security of the Cubic UOV Variant CML</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Manit Gupta</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2872">论文</a> | <a href="https://eprint.iacr.org/2026/2872.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> CML 是一种基于有限域 $\mathbb{F}_q$（其中 $q=2^8$）设计的三次多元签名方案，旨在通过引入 $\ell$-可逆循环系统和秘密位置隐藏映射来抵御早期 CUOV 和 CSSv 等三次 Oil-Vinegar 变体所遭受的微分攻击和高秩攻击。</p>
+<p><strong>主要贡献:</strong> 本文揭示了 CML 公钥的三次齐次部分张成的空间维度至多为二，且限制在油方向空间后，其二次分量的极化矩阵对应于路径边上的秩二矩阵，从而构建了恢复等价密钥的有效算法。</p>
+<p><strong>达到效果:</strong> 实验结果表明，该攻击方法能够在每个测试参数集（包括针对 256 位安全强度的参数）下，在 5 分钟以内成功恢复出 CML 的等价密钥。</p>
+<p><strong>技术梗概:</strong> 研究主要运用了多元密码分析中的公钥空间维度分析、极化矩阵秩计算以及路径结构推导等技术，以破解该三次多变量签名方案的安全性假设。</p>
+</blockquote>
+<hr />
+<h3>[2026/2874] Triads below the ISA: Optimizing Cryptographic Software in CPU Microcode</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Sabrina Manickam, Rowan Fimmano, Peter Schwabe, Yuval Yarom</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2874">论文</a> | <a href="https://eprint.iacr.org/2026/2874.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 传统密码学软件优化通常局限于处理器指令集架构（ISA），而忽略了现代处理器中具备不同计算能力与约束的深层执行层。</p>
+<p><strong>主要贡献:</strong> 本文提出将可编程微码层视为独立的计算目标架构，并建立了一套适配其状态、操作接口及调度资源的系统化实现方法论。</p>
+<p><strong>达到效果:</strong> 在 Intel Goldmont 平台上，Keccak 置换延迟较最快原生实现降低 7.36%，X25519 完整实现分别比 s2n-bignum 和 OpenSSL 减少 7.3% 与 9.8% 的周期数。</p>
+<p><strong>技术梗概:</strong> 研究通过实例化 Keccak f [1600] 与 X25519 两个计算结构迥异的案例，利用微码层解除乘法器对固定操作数寄存器及进位标志语义的限制以优化性能。</p>
+</blockquote>
+<hr />
+<h3>[2026/2875] Security Analysis of Anonymous Authentication in Apple's Private Cloud Compute</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Callista Gratz, Anja Lehmann, Andrey Sidorenko</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2875">论文</a> | <a href="https://eprint.iacr.org/2026/2875.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Apple 的私有云计算（PCC）旨在将设备端计算卸载至云端以保留隐私，但其核心自定义认证协议缺乏形式化安全证明，难以在限制访问、匿名性及问责制之间取得平衡。</p>
+<p><strong>主要贡献:</strong> 本文提出了 PORTA（伪匿名可开启、限流令牌）模型，形式化定义了包括新型绑定属性在内的隐私、安全及滥用缓解特性，并分析了 Apple 现有协议的实现差距。</p>
+<p><strong>达到效果:</strong> 研究证实 Apple 协议在限流方面有效，经小幅修改可满足所有隐私目标，但其当前的滥用缓解机制即便启用也无法提供预期的问责保证。</p>
+<p><strong>技术梗概:</strong> 工作结合了盲 RSA 签名分层签发、加盐哈希绑定技巧以及基于匿名凭证的替代构造，利用形式化方法验证了协议属性并提出了可证明安全的改进方案。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-11-14 14:43</h2>
 <p><em>新增 21 篇论文 (编号 2850--2871)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2853] ASCENT: Algebraic Structured Compilation of Exact Norms for Succinct Lattice Proofs</h3>
