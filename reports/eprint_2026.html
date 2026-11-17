@@ -79,6 +79,286 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-11-17 16:53</h2>
+<p><em>新增 14 篇论文 (编号 2878--2891)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2878] Batch, Pack, and Prove: More Efficient Verifiable Computation for CKKS</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Ignacio Cascudo, Anamaria Costache, Daniele Cozzo, Dario Fiore, Antonio Guimarães, Eduardo Soria-Vazquez</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2878">论文</a> | <a href="https://eprint.iacr.org/2026/2878.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 同态加密（HE）中确保密文计算完整性面临严峻挑战，尽管可验证计算在理论上可行，但针对 CKKS 方案的现有方案存在多项式承诺证明体积大、范围证明具有 $O(N)$ 开销以及缺乏显式的次线性验证方法等可扩展性瓶颈。</p>
+<p><strong>主要贡献:</strong> 本文提出了更高效的 CKKS 计算算术化方案，并引入了支持批量评估且能生成更短证明的 BatchFold 多项式承诺技术。</p>
+<p><strong>达到效果:</strong> 通过设计消除大规模多项式承诺需求的 Packing 技术及结合两者的高效 SparsePack 协议，成功移除了所有性能瓶颈，并在通用神经网络架构上实现了高效的密文计算可验证性证明。</p>
+<p><strong>技术梗概:</strong> 研究核心采用了算术化（Arithmetization）、批量折叠（BatchFold）多项式承诺、代数打包（Packing）以及针对稀疏电路相关多项式的 SparsePack 协议等密码学技术。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2880] Sum-Checking SmallWood: Smaller Hash-Based Zero-Knowledge Arguments</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Thibauld Feneuil, Killian Provin, Matthieu Rivain</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2880">论文</a> | <a href="https://eprint.iacr.org/2026/2880.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 基于哈希函数的零知识论证因其保守的后量子安全性而备受青睐，但在处理中等规模见证（$2^6$ 至 $2^{16}$）时，SmallWood 方案已实现了最小的证明大小。</p>
+<p><strong>主要贡献:</strong> 本文提出了 SmallWood+ 方案，通过结合求和检查协议进一步压缩证明尺寸，并形式化了求和检查验证约束系统（SVCS）以涵盖 GKR 及 R1CS 等多种协议类别。</p>
+<p><strong>达到效果:</strong> 研究开发了包括隐藏多线性扩展、环切换协议的零知识版本及改进的电路扁平化技术在内的独立工具，成功将 SVCS 实例编译为基于线性或多线性承诺方案的零知识论证。</p>
+<p><strong>技术梗概:</strong> 该技术路线采用 Longfellow ZK 范式，利用哈希基零知识论证封装求和检查协议的验证过程，并基于 SmallWood 高效实例化了从线性及多线性多项式承诺方案生成的通用编译器。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2887] Homomorphic Encryption and Bootstrapping for Real Matrices over Conjugate-Invariant Rings</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption</p>
+</li>
+<li>
+<p><strong>作者:</strong> Ilaria Chillotti, Hyojun Kim, Yeongmin Lee, Yongwoo Lee, Damien Ligier</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2887">论文</a> | <a href="https://eprint.iacr.org/2026/2887.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 现有 CKKS 方案在共轭不变环上加密实向量，而 Gentry-Lee (GL) 方案通过三变量环原生支持复数矩阵乘法并引入基于密文 - 明文乘积的旋转替代技术。</p>
+<p><strong>主要贡献:</strong> 本文结合两者优势，首次为 CI-CKKS 设计了无需共轭密钥且模约简仅执行一次的 Bootstrapping 流程，并构建了三个封闭于矩阵乘积且具有实槽位的子环方案（$\mathsf{CI}^{1}\text{-}\mathsf{GL}$, $\mathsf{CI}^{2}\text{-}\mathsf{GL}$, $\mathsf{CI}^{3}\text{-}\mathsf{GL}$）。</p>
+<p><strong>达到效果:</strong> 重点阐述的 $\mathsf{CI}^{3}\text{-}\mathsf{GL}$ 方案在同等矩阵规模下密钥秩仅为 GL 的一半，且支持实矩阵加密与无需共轭操作的高效 Bootstrapping。</p>
+<p><strong>技术梗概:</strong> 核心技术包括将实解码矩阵分解为稀疏阶段、利用环自同构折叠 GL 变量以构造实槽位子环，以及将 GL 的矩阵乘积 Bootstrapping 适配至 $\mathsf{CI}^{3}\text{-}\mathsf{GL}$ 架构。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2888] FALCON-PARE: Full-Range Side-Channel Key Recovery of Falcon via Prior-Enhanced Evidence</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Shuyi Chen, Yuejun Liu, Jingdian Ming, Wei Cheng, Yuhan Zhao, Yongbin Zhou</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2888">论文</a> | <a href="https://eprint.iacr.org/2026/2888.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Falcon 作为 NIST 选定的后量子签名方案，其数论变换（NTT）运算构成了关键的侧信道攻击面，但现有基于截断系数的攻击无法覆盖完整的秘密系数范围。</p>
+<p><strong>主要贡献:</strong> 本文提出了 FALCON-PARE 框架，通过结合离散高斯先验与聚合泄漏信息构建输入层软证据，并利用后验熵选择可靠系数以完成剩余未知量的恢复。</p>
+<p><strong>达到效果:</strong> 在 STM32F407 平台上评估表明，该方案仅需 40 或 120 次分析轨迹即可实现单次迹的完整密钥恢复，相较于现有软解析侧信道攻击（SASCA）在系数精度上分别提升 54.79% 和 73.83%。</p>
+<p><strong>技术梗概:</strong> 该技术利用 NTT 因子图传播证据，融合范围转换与 Montgomery 乘法产生的泄漏，并借助公钥关系式消除剩余不确定性，从而实现秘密多项式 f 和 g 的全范围恢复。</p>
+</blockquote>
+<hr />
+<h3>[2026/2879] Privacy-Preserving Systemic Portfolio Analysis and Repair</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Martin Zbudila, Roozbeh Sarenche, Aysajan Abidin, Bart Preneel</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2879">论文</a> | <a href="https://eprint.iacr.org/2026/2879.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 金融机构因投资组合重叠及共同流动性冲击而面临系统性风险，但识别并降低这些依赖关系需要机构不愿披露的底层持仓信息。</p>
+<p><strong>主要贡献:</strong> 本文提出了首个结合系统级投资组合分析与协同投资组合修复的隐私保护框架，支持互不信任的机构在不泄露持仓的前提下联合识别系统性漏洞并制定调整方案。</p>
+<p><strong>达到效果:</strong> 在真实公开的投资组合数据集上评估表明，私有化系统性风险分析耗时约 1–4 分钟，MPC 模式下的组合修复需 2.6–8.8 小时，而联邦变体仅需 13–21 分钟，证实了当前 MPC 技术下隐私保护分析与干预的可行性。</p>
+<p><strong>技术梗概:</strong> 该框架基于安全多方计算（MPC）实现联合分析，并设计了将基金本地计算移出 MPC 的联邦变体以平衡安全性与效率，同时量化分析了联邦架构引入的额外信息泄露风险。</p>
+</blockquote>
+<hr />
+<h3>[2026/2881] RRHL: A Relational Logic for Rényi Differential Privacy of Private Learning</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Gilles Barthe, Davide Davoli</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2881">论文</a> | <a href="https://eprint.iacr.org/2026/2881.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 差分隐私是定义隐私保护计算的标准框架，广泛应用于包括工业级私有学习在内的大型生产系统，但其底层算法依赖子采样放大和关联加噪等复杂机制。</p>
+<p><strong>主要贡献:</strong> 本文提出了 RRHL 关系程序逻辑，用于证明包含连续采样指令的强制程序的 Rényi 差分隐私性，其预算组合具有尖锐性且能表达随程序状态变化的隐私预算界限。</p>
+<p><strong>达到效果:</strong> 利用 RRHL 成功证明了多种广泛部署算法（如 DP-SGD、DP-FTRL 及带逐记录 Rényi 滤波器的梯度下降）的差分隐私性，部分案例中的界限达到了当前最优分析水平。</p>
+<p><strong>技术梗概:</strong> 该逻辑在 Lean 中形式化，其健全性证明及案例研究均基于关系程序逻辑框架，实现了针对私有学习算法的最先进 Rényi 差分隐私界限的形式化验证。</p>
+</blockquote>
+<hr />
+<h3>[2026/2882] Limits of Pseudorandom Codes under Adaptive Corruption</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Ganyuan Cao</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2882">论文</a> | <a href="https://eprint.iacr.org/2026/2882.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 伪随机码（PRCs）旨在将消息隐藏在看似均匀随机的字符串中，但在密钥可能被盗用的自适应攻击场景下，需确保已发送的编码与独立生成的均匀字符串及解码后的密钥在统计上不可区分。</p>
+<p><strong>主要贡献:</strong> 研究首先定义了信息论对象</p>
+<p><strong>达到效果:</strong> 在无噪声条件下，解码自身需$\omega(\log\lambda)$个额外密钥比特；在相关度为$\rho$的随机噪声下，解码多数副本需$\frac{1}{\rho^2}\cdot\omega(\log\lambda)$额外比特；若需纠正常数比例的错误模式，则对任意字母表均需占用码字长度的常数比例。</p>
+<p><strong>技术梗概:</strong> 通过构建完美均匀的$q$-use codes作为信息论基准，结合无条件证明方法推导自适应安全伪随机码的密钥长度下界，并量化不同噪声模型下的额外密钥开销。</p>
+</blockquote>
+<hr />
+<h3>[2026/2883] Early-Stopping Dishonest Majority Broadcast with Optimal Round Complexity</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Renas Bacho, Kecheng Shi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2883">论文</a> | <a href="https://eprint.iacr.org/2026/2883.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 早期停止广播协议旨在根据实际被腐蚀的节点数量 $f$ 而非最坏情况下的安全界 $t$ 来保证终止，然而在该不诚实多数体制下同时实现最优轮次复杂度与确定性仍是一个未解难题。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种确定性早期停止广播协议，在任意 $t&lt;n$ 的情况下，所有诚实方均能在 $\min{f+3, t+1}$ 轮内完成输出与终止。</p>
+<p><strong>达到效果:</strong> 该协议在理想化签名的普通公钥基础设施（PKI）模型下，能够抵御强适应性敌手攻击，并在全局范围内达到了理论下界所定义的最优停止轮次复杂度。</p>
+<p><strong>技术梗概:</strong> 协议构建基于指数级信息收集（EIG）图结构，虽然引入了指数级的通信开销，但成功在确定性框架内实现了早期停止机制。</p>
+</blockquote>
+<hr />
+<h3>[2026/2884] A Note on Non-interactive Deniable Secret Sharing from Indistinguishability Obfuscation</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Shafik Nassar</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2884">论文</a> | <a href="https://eprint.iacr.org/2026/2884.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 可否认秘密共享旨在保护股东免受部分胁迫者通过生成与伪造秘密一致且不可区分的假份额的侵害，而近期研究指出非交互式方案要么导致份额指数级膨胀，要么依赖虚拟黑盒混淆器。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种基于抗合谋约束伪随机函数（具备静态安全性）的通用转换框架，可将任意访问结构下的秘密共享方案升级为非交互式可否认秘密共享方案；进一步结合直接利用不可区分性混淆器与某处统计绑定哈希，将份额开销从多项式级降低至对数级。</p>
+<p><strong>达到效果:</strong> 该方案在仅依赖不可区分性混淆器和单向函数等标准假设下实现了 succinct 可否认秘密共享，显著降低了计算与通信开销。</p>
+<p><strong>技术梗概:</strong> 核心技术包括利用抗合谋约束伪随机函数进行静态安全增强、直接应用不可区分性混淆器以及结合某处统计绑定哈希以优化份额大小。</p>
+</blockquote>
+<hr />
+<h3>[2026/2885] Revisiting homomorphic AES evaluation with Hybrid Byte-Bit Packing</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Lu Zhang, Xuan Shen, Ruida Wang, Xianhui Lu, Yin Zhang, Chao Li, Shaojing Fu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2885">论文</a> | <a href="https://eprint.iacr.org/2026/2885.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 同态AES评估是实用全同态加密（FHE）系统的重要基准，现有基于BGV的方案多采用面向字节的表示法以利用乘法求逆的代数结构，但在处理仿射变换及后续线性层时引入了额外的自同构和密钥切换开销。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种混合字节 - 位打包策略，在SubBytes操作的乘法求逆后引入解包程序将槽位打包方案从面向字节转换为面向比特，并将SubBytes的仿射变换及后续AES线性变换统一在GF(2)域上通过同态加法评估，从而规避了面向字节的密钥切换操作。</p>
+<p><strong>达到效果:</strong> 实验结果表明，在满足至少128位安全性的参数下，该方法在未使用自举时本地机器和64线程服务器上的单块延迟分别提升了2.6倍和11.7倍，使用自_bootstrap后分别提升2.1倍和3.3倍。</p>
+<p><strong>技术梗概:</strong> 核心技术包括混合字节 - 位打包策略、面向GF(2)的同态加法评估以及利用hoisting技术优化的解包程序，有效减少了密钥切换操作并显著降低了计算延迟。</p>
+</blockquote>
+<hr />
+<h3>[2026/2886] Round-Key Equivalence and Collisions of the Revised MoFang</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Zhang zhihong, Liu fengyaxuan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2886">论文</a> | <a href="https://eprint.iacr.org/2026/2886.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 修正后的 MoFang 参考实现虽然调整了第二消息半部分的 S-盒位置，但未能消除原有的每轮密钥抵消漏洞。</p>
+<p><strong>主要贡献:</strong> 本文证明了当第二消息半部分的非零字限制在三个指定位置时，完整消息扩展能保持每轮抵消特性，使每个输入对应 16 个轮密钥等价输入，并给出了轮密钥映射的完全分类及 DM 变体等价类的充要条件。</p>
+<p><strong>达到效果:</strong> 研究揭示了六种参考变体在完整填充、固定初始化及 XOF 输出接口下的行为特征，确定了等价类大小仅为 1、2、4 或 16，且针对至少大小为四的等价类提出了三态矩阵计数公式。</p>
+<p><strong>技术梗概:</strong> 通过分析轮密钥抵消机制与消息扩展结构，结合周期二掩码（period-two masks）特性，推导了完整的等价类分类及精确域大小统计方法。</p>
+</blockquote>
+<hr />
+<h3>[2026/2889] Quadratic APN Functions of $\mathbb{F}_2^{10}$ with a Self-Equivalence of Prime Order</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Emanuele Bellini</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2889">论文</a> | <a href="https://eprint.iacr.org/2026/2889.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 偶数维有限域$\mathbb{F}_2^n$上的几乎完美非线性（APN）函数具有最低的微分均匀度，但在$n \geq 8$时未知存在 APN 置换，且高维二次 APN 函数中具有非平凡线性自同构的类别极为罕见。</p>
+<p><strong>主要贡献:</strong> 本文系统研究了$\mathbb{F}_2^{10}$上所有具备素数阶线性自同构的二次 APN 函数，通过结合初等引理排除、穷举搜索及精确等价证书，完成了对 298 种自同构类型的分类判定。</p>
+<p><strong>达到效果:</strong> 研究确认了其中 298 个类型对应于 29 个二次 APN 函数类（含 4 个新类），并完全分类了系数位于子域$\mathbb{F}<em>4$及$\mathbb{F}</em>{32}$的情形，同时揭示了剩余开放类型与最大加性 Hermitian 秩距离码的对应关系。</p>
+<p><strong>技术梗概:</strong> 主要技术包括利用自同构约束缩小线性空间搜索范围、基于共轭与幂相似性的分类框架、针对特定系数子域的代数分析以及构建精确等价证书的穷举验证方法。</p>
+</blockquote>
+<hr />
+<h3>[2026/2890] Byzantine Agreement with Signature Tokens</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Yuval Efron, Mahimna Kelkar, Saachi Mutreja, Tim Roughgarden</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2890">论文</a> | <a href="https://eprint.iacr.org/2026/2890.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 本研究探讨量子密码学在分布式共识协议中的能力与局限，聚焦于部分同步环境下的拜占庭一致性问题。</p>
+<p><strong>主要贡献:</strong> 论文证明了利用有限数量的签名令牌（signature tokens）可突破经典理论中容错率低于三分之一下界的限制，并确立了 $\Omega(\log n)$ 令牌的必要性条件。</p>
+<p><strong>达到效果:</strong> 当令牌数量 $k=\Theta(\log n)$ 时，协议仅需诚实多数即可在部分同步下达成拜占庭一致；特别地，对于 $k=1$，该方案实现了最优的 $3/7$ 容错阈值。</p>
+<p><strong>技术梗概:</strong> 研究通过设计基于签名令牌的拜占庭协议，结合信息论界分析，量化了令牌数量与系统容错率之间的数学关系。</p>
+</blockquote>
+<hr />
+<h3>[2026/2891] Multiparty Computation with Minimal Overhead without Circuit Transformation</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Aditya Hegde, Phuoc Van Long Pham, Mingyuan Wang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2891">论文</a> | <a href="https://eprint.iacr.org/2026/2891.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在诚实多数设置下的安全多方计算（MPC）中，理想开销为$\widetilde{\mathcal{O}}(1)$，但此前基于素数域的高效协议依赖昂贵的电路变换步骤以施加重复结构。</p>
+<p><strong>主要贡献:</strong> 本文提出了首个适用于任意满足$n^{\Omega(n)}$大小要求的素数域$\mathbb{F}_p$的MPC协议，在无需电路变换的情况下实现了$\widetilde{\mathcal{O}}(1)$开销。</p>
+<p><strong>达到效果:</strong> 该工作将Garg等人的去打包技术进行了扩展，并独立开发了整数域上的线性随机性提取新方法。</p>
+<p><strong>技术梗概:</strong> 研究核心在于改进去打包（share unpacking）策略并引入整数环$\mathbb{Z}_p$上的线性随机性提取技术，从而避免了传统协议中昂贵的电路变换开销。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-11-16 15:22</h2>
 <p><em>新增 5 篇论文 (编号 2872--2876)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2873] Optimized Solving Strategy and Two-Step Estimator for LWE with Hints</h3>
