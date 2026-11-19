@@ -79,6 +79,235 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-11-19 14:42</h2>
+<p><em>新增 11 篇论文 (编号 2892--2902)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2892] Phase-Hiding Programmable Bootstrapping with Online Client Assistance</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Xingke Chai</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2892">论文</a> | <a href="https://eprint.iacr.org/2026/2892.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 基于环面全同态加密（TFHE）的可编程自举操作依赖自举密钥（BSK）驱动盲旋转，导致高昂的计算开销及误差传播问题。</p>
+<p><strong>主要贡献:</strong> 本文提出了相位隐藏可编程自举（PH-PBS）方案，通过客户端预计算单次使用的相位令牌并在线协助刷新，利用相位共享与小型混淆电路替代了传统的 BSK 驱动盲旋转机制。</p>
+<p><strong>达到效果:</strong> 该方案使服务器能够对齐令牌以执行查找表评估，仅向客户端交付指定的终端明文，同时显著降低了令牌准备与传输成本。</p>
+<p><strong>技术梗概:</strong> 研究构建了独立于表值的投影技术，在匹配随机性与量化条件下生成与完整量化令牌路径等效的带误差学习（LWE）密文输出，并分析了固定密钥切换顺序下的误差传播及有限精度模型下的失败概率界。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2894] BMuSig-L: Blind Multi-Signature from Lattice</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Anirban Chakraborty, Mriganka Dey, Nikita Dey, Avijit Dutta, Subhabrata Samajder</p>
+</li>
+<li>
+<p><strong>分类:</strong> Public-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2894">论文</a> | <a href="https://eprint.iacr.org/2026/2894.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 盲签名与多签是隐私保护去中心化协议中的基础密码原语，而盲多签作为结合两者优势的复合原语，旨在使用户能从一组签署人处获取联合签名，同时确保消息对每位签署人隐藏且合谋者无法将最终签名关联至具体会话。</p>
+<p><strong>主要贡献:</strong> 本文提出了基于格的 $ extsf{BMuSig-L}$ 方案，该方案在继承 $    extsf{MuSig-L}$ 多签结构的基础上，融合了 Fuchsbauer 和 Wolf 的并发安全盲签名技术，构建了首个支持非交互式零知识论证与公钥加密的格基盲多签协议。</p>
+<p><strong>达到效果:</strong> 该方案实现了两轮交互下的并发安全性，在保持消息对签署人完全隐藏的同时，有效防止了合谋攻击导致的会话链接风险，为后量子时代的隐私保护协议提供了新的安全基准。</p>
+<p><strong>技术梗概:</strong> 技术核心在于将基于格的 $   extsf{MuSig-L}$ 多签方案与非交互式零知识论证（NI-ZK）及公钥加密机制相结合，利用格问题的计算硬度构建知识健全性非交互论证，以抵御量子计算威胁并满足并发安全要求。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2897] Communication-Efficient Threshold-CKKS Aggregation for Secure Cross-Silo Federated Learning</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Jihyung Kook, Dokyeong Kang, Eunsang Lee</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2897">论文</a> | <a href="https://eprint.iacr.org/2026/2897.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 联邦学习（FL）虽能避免原始数据共享，但模型更新交换仍可能泄露敏感信息；同态加密（HE）虽提供保护，但在跨机构 FL 中兼顾抗合谋、灵活聚合、Dropout 处理及通信效率极具挑战。</p>
+<p><strong>主要贡献:</strong> 本文提出一种无需可信密钥分发中心的通信高效阈值-CKKS 协议，支持全量与稀疏两种配置，利用独立本地加密键实现服务器端加权及感知 Dropout 的重聚合，并通过 RLWE-MLWE 转换、密文重构及压缩集体解密等技术优化通信开销。</p>
+<p><strong>达到效果:</strong> 在 CIFAR-10/100 实验显示，全量模式仅损失 0.29–0.32 个百分点准确率且在线通信为明文模式的 1.76–1.78 倍；稀疏模式在匹配准确率下较 FedPHE 降低约 79–84 倍在线通信。</p>
+<p><strong>技术梗概:</strong> 采用基于 RLWE-MLWE 转换的细粒度块级聚合、种子密文重构、选择性系数传输及压缩集体解密，并在半诚实服务器与最多 c 个客户端合谋下建立固定队列执行的整视图模拟安全性（需满足 τ≥c+2）。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2898] LEASH: When LaBRADOR’s Guarantees Go Astray</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Xiang Wang, Ji Xiang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2898">论文</a> | <a href="https://eprint.iacr.org/2026/2898.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> LaBRADOR 通过递归知识归约实现了简洁证明，为后量子安全计算验证提供了有前景的方向，但其正确性与安全性分析依赖于对见证范数、关系保持及知识提取的精细控制。</p>
+<p><strong>主要贡献:</strong> 本文重新审视了 LaBRADOR 的正确性与安全性分析，构建了显式反例揭示其参数选择策略无法保证完备性，并指出了递归关系变换中的不一致性及知识提取概率界的不准确之处。</p>
+<p><strong>达到效果:</strong> 研究提出了针对性的修复方案，并通过数学分析量化了调整范数界限、分解参数及挑战分布对系统安全与效率保证的影响，强调了在格基简洁证明系统中严格参数化与组合推理的重要性。</p>
+<p><strong>技术梗概:</strong> 论文采用形式化验证方法构建反例，结合代数几何与格理论分析递归归约中的关系保持性与见证范数约束，并重新推导了基于挑战分布的知识提取概率界以修正原有安全证明。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2899] Aker: Efficient Two-Party SLH-DSA</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice, post-quantum</p>
+</li>
+<li>
+<p><strong>作者:</strong> Yaron Salman, Ben Riva, Dimitry Kogan</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2899">论文</a> | <a href="https://eprint.iacr.org/2026/2899.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 尽管基于格的签名方案已具备高效的阈值协议，但NIST状态无哈希签名标准（SLH-DSA）因缺乏代数结构而难以实现分布式签名，传统方法成本过高。</p>
+<p><strong>主要贡献:</strong> 本文提出了Aker协议，这是一种兼容未修改FIPS 205验证器的恶意安全两方签名方案，通过结合通用秘密共享多方计算与四项针对SLH-DSA超树结构的优化技术，显著降低了计算开销。</p>
+<p><strong>达到效果:</strong> 实验评估表明，在服务器间部署场景下，该方案利用GPU加速的布尔GMW引擎实现了高效签名，尽管以签名者需保持状态及单密钥总签名数上限为代价，但仍大幅减少了多方计算工作量。</p>
+<p><strong>技术梗概:</strong> 核心技术包括并发评估活动层以压缩哈希深度、缓存公钥以实现认证路径本地计算、固定路径前缀以复用上层签名，以及利用一次性子树样本从本地而非秘密键推导下层签名组件。</p>
+</blockquote>
+<hr />
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2902] Bounds of Falcon's Fast Fourier Sampler with Fixed-Point Arithmetic</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> lattice</p>
+</li>
+<li>
+<p><strong>作者:</strong> Vincent Hwang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2902">论文</a> | <a href="https://eprint.iacr.org/2026/2902.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Falcon 算法已被 NIST 选定为 FIPS 206 标准中的 FN-DSA，其签名生成依赖于定义在复数域上的快速傅里叶采样器。</p>
+<p><strong>主要贡献:</strong> 本文量化了实数算术与定点实现之间在尾截断事件下的 Rényi 散度界限，并针对现有定点实现提出了四项改进措施以增强安全性证明。</p>
+<p><strong>达到效果:</strong> 在参考比特安全性分别为 128 和 256 的情况下，改进后的方案在中心及分数中心处分别保持了约 126.28/126.70 位和 248.78/253.53 位的安全性。</p>
+<p><strong>技术梗概:</strong> 研究采用了修改一维采样器的饱和移位策略、在密钥生成阶段增加树结构偏差与扰动检查、利用 NTRU 恒等式计算根节点以及将逆变换乘法优化为除法等技术手段。</p>
+</blockquote>
+<hr />
+<h3>[2026/2893] Circulant Diffusion Layers: Cost Bounds and Rectangle Reuse</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Enyan Li, Gaoli Wang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2893">论文</a> | <a href="https://eprint.iacr.org/2026/2893.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 针对稀疏可逆循环矩阵在有限域上的加法复杂度研究，传统寻找最优通用电路的方法在大阶数下往往面临困难。</p>
+<p><strong>主要贡献:</strong> 本文首次建立了通用电路与矩形复用模型的成本下界，并利用循环结构实现了最小权重的显式构造及更精确的界限分类。</p>
+<p><strong>达到效果:</strong> 研究表明矩形复用策略不仅能逼近甚至达到通用电路的最优成本，还能在实用密码参数设置下提供浅层实现方案。</p>
+<p><strong>技术梗概:</strong> 研究聚焦于分支数定义的扩散度量，通过比较通用电路成本与矩形复用成本，针对二元域及奇素数域上的权重三循环矩阵完成了完整的成本分类与最小值确定。</p>
+</blockquote>
+<hr />
+<h3>[2026/2895] Concrete Quantum Circuit Implementations and Resource Estimates for the Quantum 3 and 4-Sieves</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> MohamadAli Khajeian</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2895">论文</a> | <a href="https://eprint.iacr.org/2026/2895.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Chailloux 和 Loyer (2023) 提出了针对最短向量问题（SVP）的量子 3 筛和 4 筛算法，但尚未有具体的可逆电路实现。</p>
+<p><strong>主要贡献:</strong> 本文首次完成了这两种算法的可逆电路设计，针对内积谓词设计了带符号对称平方操作，并覆盖了低量子比特、平衡及低深度三种架构；同时修正了原始幅度放大预言机在近似内 Grover 搜索中的失效问题。</p>
+<p><strong>达到效果:</strong> 通过精确的稀疏态向量模拟验证了电路，其与独立数学模型的匹配精度达到 (10^{-13})；应用算术技术优化后，NV 2 筛预言机的 T-count 降低 9.4 至 14 倍，T-depth 减少超过三个数量级。</p>
+<p><strong>技术梗概:</strong> 研究采用低量子比特、平衡及低深度三种架构设计内积谓词，利用精确稀疏态向量模拟验证电路正确性，并在密码学维度下提供了配置谓词与 NV 预言机的精确每调用逻辑资源估算。</p>
+</blockquote>
+<hr />
+<h3>[2026/2896] Four Ciphers in One: Full-Round Attacks on the Reference Implementation of LLBC</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Sei Kofuku, Yasutaka Igarashi</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2896">论文</a> | <a href="https://eprint.iacr.org/2026/2896.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> LLBC 是一种面向物联网应用的 128 比特低延迟分组密码，其设计者发布的参考实现与经同行评审的规范在八处存在差异，特别是轮函数中的旋转量被错误设定为 (32, 16) 而非规范的 (3, 19)。</p>
+<p><strong>主要贡献:</strong> 本文揭示了当最大公约数 $g$ 为 4 的倍数时，LLBC 型密码可分解为 $g/4$ 个独立子密码的特性，并据此证明该参考实现分裂为四个互不混合的 32 比特子密码，从而实现了全轮攻击。</p>
+<p><strong>达到效果:</strong> 研究构建了基于两个选定明文的全概率区分器，利用 $2^{32}$ 个选定明文完成任意密文的解密，并从三个已知明文中以 $2^{80}+3\cdot 2^{16}$ 次加密恢复主密钥，其复杂度比穷举搜索低 $2^{48}$。</p>
+<p><strong>技术梗概:</strong> 攻击核心在于利用参考实现中旋转量错误导致的结构分裂特性，结合自动搜索技术提取全轮不可能差分和相关线性近似，显著优于设计者预估的九轮最佳攻击界限。</p>
+</blockquote>
+<hr />
+<h3>[2026/2900] Modular Walsh rigidity for Boolean functions of degree at most four</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Filipe Martins Vono, André Oliveira Naufel de Toledo, Valéria Gonzaga Santos</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2900">论文</a> | <a href="https://eprint.iacr.org/2026/2900.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 布尔函数的 Bent 性质与其 Walsh 谱系数模特定整数的同余性密切相关，现有研究已针对低次函数建立了部分充分条件。</p>
+<p><strong>主要贡献:</strong> 本文证明了在 $4m$ 个变量上、次数不超过四的布尔函数，若其所有 Walsh 系数模某个奇素数 $p \ge 9M/16$（其中 $M=2^m$）均同余于 $\pm M^2$，则该函数为 Bent 函数。</p>
+<p><strong>达到效果:</strong> 该结果将此前充分条件中的素数阈值从 $p&gt;7M/12$ 改进至 $p \ge 9M/16$，并完整覆盖了端点情形 $(M,p)=(16,9)$；同时展示了其在旋转对称 Bent 函数子空间保持性上的应用。</p>
+<p><strong>技术梗概:</strong> 证明综合运用了归一化谱的低二进制位度数分析、低权重 Reed-Muller 多项式表示以及 Fourier 系数组分的上界估计等代数组合技术。</p>
+</blockquote>
+<hr />
+<h3>[2026/2901] A Bleichenbacher bit-by-bit oracle attack from partial message knowledge</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Juan Carlos García Escartín</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/2901">论文</a> | <a href="https://eprint.iacr.org/2026/2901.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Bleichenbacher 攻击凸显了将 RSA/PKCS#1 v1.5 标准正确实现于代码中的重要性，尤其是针对带有侧信道泄露的 Oracle 场景。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种利用部分消息知识（最低有效字节）结合 Oracle 侧信道，逐比特解密完整 RSA 明文的新攻击方案。</p>
+<p><strong>达到效果:</strong> 该攻击将明文位划分为已知与未知两部分，通过构造特定变换使未知部分远低于已知部分对应的整数，从而根据 Oracle 反馈判定未知位的值并最小化查询次数。</p>
+<p><strong>技术梗概:</strong> 核心技术包括基于已知最低有效字节的模运算变换、利用两种不同 Oracle（验证前缀字节及完整 PKCS 合规性）的位级信息提取，以及针对未知比特概率成功率的常数优化策略。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-11-17 16:53</h2>
 <p><em>新增 14 篇论文 (编号 2878--2891)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/2878] Batch, Pack, and Prove: More Efficient Verifiable Computation for CKKS</h3>
