@@ -5,6 +5,49 @@
 
 ---
 
+## 更新: 2026-11-25 09:25
+
+*新增 2 篇论文 (编号 3001--3002)*
+
+### [推荐] [2026/3001] Representation-Aware Kleptographic Attacks on Post-Quantum Cryptography
+
+- **匹配关键字:** post-quantum
+
+- **作者:** Sayan Das, Suraj Mandal, Thales B. Paiva, Prasanna Ravi, Debapriya Basu Roy, Anupam Chattopadhyay, Shivam Bhasin
+
+- **分类:** Public-key cryptography
+
+- **链接:** [论文](https://eprint.iacr.org/2026/3001) | [PDF](https://eprint.iacr.org/2026/3001.pdf)
+
+
+> **研究背景:** 窃听图攻击（Kleptographic attacks）通过算法替换攻击（ASAs）威胁黑盒密码系统的信任假设，尤其在后量子密码学（PQC）领域，利用公钥表示形式对密钥生成子版本进行了形式化研究。
+>
+> **主要贡献:** 本文首次提出了针对 HQC 的窃听图密钥生成后门，构建了利用 BIKE 解码实例结构相似性的带内载体，并实现了维度对齐的概念验证及条件不可区分性证明。
+>
+> **达到效果:** 实验评估了该攻击的功能正确性、运行时开销及粗粒度黑盒统计测试，证实了持有 BIKE 解码陷门者可恢复受害者 HQC 秘密状态随机性的可行性。
+>
+> **技术梗概:** 研究区分了种子压缩接口与扩展密钥接口，利用公钥从种子再生特性构建再生屏障，并通过条件不可区分性证明量化了子版本密钥的安全性边界。
+
+---
+### [2026/3002] Where on Earth? Zero-Knowledge Proof of Location from a Phone Photograph of the Moon and Stars
+
+- **作者:** Pavel Shuvalov
+
+- **分类:** Applications
+
+- **链接:** [论文](https://eprint.iacr.org/2026/3002) | [PDF](https://eprint.iacr.org/2026/3002.pdf)
+
+
+> **研究背景:** 研究探讨了利用普通手机拍摄的月星照片作为隐私保护的位置证明的可行性，其物理基础是月球视差效应。
+>
+> **主要贡献:** 首先量化了消费级相机在位置测量中的实际误差范围及限制因素，其次构建了零知识证明方案以绑定原始图像与梅克尔承诺并验证位置合法性。
+>
+> **达到效果:** 基于356次捕获数据的分析显示，仅6张RAW帧能实现定位，误差从数十公里至不足两百公里不等。
+>
+> **技术梗概:** 该方案利用月球视差结合星表与星历计算位置，并通过零知识证明技术在不泄露具体坐标、原始图像或签名设备的前提下验证照片真实性。
+
+---
+
 ## 更新: 2026-11-23 15:26
 
 *新增 37 篇论文 (编号 2961--3000)*
