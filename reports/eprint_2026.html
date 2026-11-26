@@ -79,6 +79,220 @@ code {
 由 <a href="https://github.com/lym/ePrintSummary">ePrint Summary Tool</a> 生成</p>
 </blockquote>
 <hr />
+<h2>更新: 2026-11-26 15:54</h2>
+<p><em>新增 11 篇论文 (编号 3003--3015)</em></p>
+<h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/3012] CHARTS: Compute-efficient Homomorphic Anonymous Routing with Tag Sums</h3>
+<ul>
+<li>
+<p><strong>匹配关键字:</strong> homomorphic encryption, LWE</p>
+</li>
+<li>
+<p><strong>作者:</strong> Anthony Flath, Ke Wu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3012">论文</a> | <a href="https://eprint.iacr.org/2026/3012.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 匿名路由是保护通信隐私的基础工具，但现有基于单一不可信路由器的方案（如 NIAR 和 sPAR）依赖 oblivious 排列或放置加密消息，导致路由器端计算开销巨大。</p>
+<p><strong>主要贡献:</strong> 本文提出了 CHARTS 协议，通过引入随机标签与同态聚合技术，消除了对 oblivious 放置或排列的需求，实现了计算高效的匿名路由。</p>
+<p><strong>达到效果:</strong> 在相同硬件配置下，CHARTS 处理 128 条消息仅需约 260 毫秒路由器计算时间，相比 sPAR 方案性能提升超过 35,000 倍。</p>
+<p><strong>技术梗概:</strong> 该协议利用多方同态加密计算标签的幂和及带权密文聚合，恢复出无序多重集形式的加密消息，并在决策性 RLWE 假设下证明了基于模拟的安全性与 IND-CPA 安全性。</p>
+</blockquote>
+<hr />
+<h3>[2026/3003] EASE-SVM: An Efficient, Accurate, and Secure RBF Kernel SVM Framework for Medical IoT</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Qingyu Mo, Wenyuan Wu, Jingwei Chen</p>
+</li>
+<li>
+<p><strong>分类:</strong> Applications</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3003">论文</a> | <a href="https://eprint.iacr.org/2026/3003.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 物联网环境中机器学习应用的普及加剧了数据交换，引发了对数据隐私的担忧，而现有的安全计算技术因高昂的计算开销往往难以在实际部署中应用。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种面向医疗物联网的高效、准确且安全的基于多方计算的径向基函数（RBF）核支持向量机（SVM）框架 EASE-SVM，涵盖训练与推理两个阶段。</p>
+<p><strong>达到效果:</strong> 在迭代训练阶段，EASE-SVM 利用 PEGASOS 的固定值更新特性避免了通用的安全乘法，相比现有工作实现了 1.22 至 7.25 倍的加速；在推理阶段，通过优化随机特征映射（RFF）参数并采用决策导向变体，在降低特征维度的同时保持了分类性能。</p>
+<p><strong>技术梗概:</strong> 该框架结合了多方计算（MPC）、预计算的核矩阵以及基于随机特征映射的隐私保护技术，实现了在不泄露原始数据和支撑向量的情况下进行分布式 SVM 训练与推理。</p>
+</blockquote>
+<hr />
+<h3>[2026/3004] SinCom: Shallow-and-Narrow Sinusoidal Composites for Low\ Constant-Round Secure Evaluation of Activation Functions</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> min yang</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3004">论文</a> | <a href="https://eprint.iacr.org/2026/3004.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 隐私保护机器学习中的非线性激活函数仍是瓶颈，现有安全比较成本高昂且多项式近似需多轮乘法运算。</p>
+<p><strong>主要贡献:</strong> 本文提出 SinCom 架构，利用多方计算后端中“深度昂贵、宽度免费”的非对称性，构建浅层窄带正弦复合函数以在低常数轮数下实现高精度评估。</p>
+<p><strong>达到效果:</strong> 该方案在六层正弦复合下将 GELU、SiLU 及 Mish 函数的近似误差分别控制在 $1.4\times10^{-6}$、$6.0\times10^{-6}$ 和 $1.2\times10^{-5}$，且轮复杂度仅取决于深度而与宽度无关。</p>
+<p><strong>技术梗概:</strong> 技术核心在于采用 MPC 友好算子构建层间复合结构并引入跨通道权重矩阵，同时通过优化器自动学习每层频率及无分支骨架系数以替代传统固定配方。</p>
+</blockquote>
+<hr />
+<h3>[2026/3005] Time–Memory Tradeoffs for Message Modification in Step-Reduced SHA-512</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Sitong Yuan, Hongbo Yu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3005">论文</a> | <a href="https://eprint.iacr.org/2026/3005.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> SHA-512 作为 NIST SHA-2 哈希族的核心标准，其缩减步数后的碰撞抵抗力评估对于追踪安全余量至关重要。近期针对 35 至 39 步 SHA-2 的碰撞攻击依赖于固定核心双块框架，该框架存在大量链值无关的重计算开销。</p>
+<p><strong>主要贡献:</strong> 本文提出了一种协调的前后时间 - 内存权衡（TMTO）框架，旨在消除核心两侧广泛的链值无关重计算问题。该框架在前端利用共享计数有向无环图（DAG）与在线动态规划快速合成合法前端块，在后端通过紧凑坐标和位窗口位图隐式过滤步数 16 的兼容性关系，避免生成庞大的查找表。</p>
+<p><strong>达到效果:</strong> 在均匀链值模型下，完整的前后 TMTO 将 36 步 SHA-512 的预期在线碰撞复杂度从 $2^{66.2}$ 降低至 $2^{49.8}$（需 7.05 GiB 静态存储），并通过标准 IV 的碰撞消息对实例得到了验证。对于 37、38 和 39 步，该方法进一步降低了特定核心上的复杂度，并成功应用于针对 Gong 等人单字固定攻击的改进。</p>
+<p><strong>技术梗概:</strong> 核心技术包括基于共享计数有向无环图（DAG）的前端批量合成算法、在线动态规划优化以及后端利用位窗口位图的隐式兼容性过滤技术。</p>
+</blockquote>
+<hr />
+<h3>[2026/3006] Jacobi Signatures: Certified Chosen-Offset One-Wayness and Random-Offset Collision Resistance</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Jinrui Sha, Bo Li, Hongrui Cui, Haolin Liu</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3006">论文</a> | <a href="https://eprint.iacr.org/2026/3006.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Jacobi 签名的安全性传统上针对固定连续偏移量进行研究，本文在平衡重复因子分解（Balanced Repeated-Factor Factoring）模型下，针对由模数 $N=p^2q$ 生成的诚实生成器，深入探讨了两种公开偏移模型。</p>
+<p><strong>主要贡献:</strong> 首先，在完整长度的布尔域上构建了全压缩族，证明了认证选择的偏移单向性，并建立了针对所有认证元组的均值纤维界；其次，利用独立采样的偏移量在规范合法剩余类上构建压缩族，结合移位 Legendre 分离界与 Jacobi/CRT 碰撞至分解机制，在不依赖额外 Legendre 签名唯一性猜想的前提下实现了碰撞抗性。</p>
+<p><strong>达到效果:</strong> 研究实现了从二次求逆到因式分解的多项式损失归约，并在合法域形式下获得了具有可忽略加法损失的碰撞抗性，同时成功将构造扩展至完整长度的布尔域上的全压缩族。</p>
+<p><strong>技术梗概:</strong> 核心技术包括均值纤维界分析、条件概率分析、中国剩余定理（CRT）与最大公约数（gcd）因子提取，以及 Jacobi/CRT 碰撞至分解机制的联合应用。</p>
+</blockquote>
+<hr />
+<h3>[2026/3007] On the solving degree and complexity of Gröbner Basis computation over finite fields</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Irene Di Muzio, Igor Semaev</p>
+</li>
+<li>
+<p><strong>分类:</strong> Attacks and cryptanalysis</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3007">论文</a> | <a href="https://eprint.iacr.org/2026/3007.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 在有限域上求解多元多项式方程组是代数密码分析的核心问题，其复杂度主要取决于Gröbner基计算中的求解度（solving degree）。</p>
+<p><strong>主要贡献:</strong> 本文证明了结合线性代数与Buchberger原始算法的Gröbner基算法的求解度受限于由多项式首项定义的正规度（degree of regularity），并据此优化了需处理对数的复杂度上界。</p>
+<p><strong>达到效果:</strong> 该结果从理论上严格论证了在代数密码分析中利用正规度进行复杂度估计的合理性，并在特定参数范围内显著改进了现有的复杂度评估。</p>
+<p><strong>技术梗概:</strong> 研究通过深入分析Buchberger准则在消除冗余对中的作用，建立了基于多项式首项的求解度上界，并推导了处理对数数量的改进型界限。</p>
+</blockquote>
+<hr />
+<h3>[2026/3009] Practical Fixed-Plaintext Key Collisions on Reduced-Round AES</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Stefan Kölbl</p>
+</li>
+<li>
+<p><strong>分类:</strong> Secret-key cryptography</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3009">论文</a> | <a href="https://eprint.iacr.org/2026/3009.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 研究聚焦于固定明文（全零）条件下缩减轮次 AES 的密钥碰撞问题，此类攻击直接威胁基于 AES 的认证加密方案的安全性及 Davies-Meyer 模式下的单块碰撞防御。</p>
+<p><strong>主要贡献:</strong> 论文针对 AES-128/192/256 的不同轮数变体，提出了突破标准求解器局限性的新策略，成功实现了首个实用的固定明文单块碰撞攻击。</p>
+<p><strong>达到效果:</strong> 在 AES-128（4 轮）和 AES-256（7 轮）上分别以约 $2^{43.7}$ 和 $2^{38.3}$ 次 AES 运算完成碰撞，并在 AES-192（6 轮）下首次突破了 $2^{64}$ 生日界限。</p>
+<p><strong>技术梗概:</strong> 核心技术包括利用 MixColumns 行与密钥调度列的线性组合消除非线性 S 盒耦合、结合截断差分空间进行状态隔离，以及在 AES-192 中融合有限域线性化技术与交错中间相遇攻击树。</p>
+</blockquote>
+<hr />
+<h3>[2026/3011] Non-Complete Set Coverings as Combinatorial Designs</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Oriol Farràs, Óscar Fidalgo, Carlos Andres Lara-Nino</p>
+</li>
+<li>
+<p><strong>分类:</strong> Implementation</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3011">论文</a> | <a href="https://eprint.iacr.org/2026/3011.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 非完备集合覆盖（Non-complete set coverings）为构建阈值实现提供了组合框架，该机制是抵御侧信道攻击的掩码防御措施。</p>
+<p><strong>主要贡献:</strong> 本文引入“不完备覆盖”这一设计家族，其包含非完备集合覆盖且对偶补运算封闭，并定义了不含冗余块或元素的简化不完备覆盖；同时证明了不完备覆盖下覆盖率与不完整性互为对偶性质，并推导了导出子覆盖存在性、覆盖数递归规则及 Schönheim 界等经典属性的类比结论。</p>
+<p><strong>达到效果:</strong> 基于上述理论成果，研究显著改进了非完备集合覆盖最小块数的若干下界，并利用增强算法发现了新的覆盖实例及覆盖数上界，特别是在代数次数为四且阶数为三的特定场景下取得了突破。</p>
+<p><strong>技术梗概:</strong> 研究采用组合设计理论构建不完备覆盖结构，利用对偶补运算分析覆盖与不完整性的互逆关系，并通过递归规则与 Schönheim 界等组合不等式工具优化了覆盖数的上下界估计。</p>
+</blockquote>
+<hr />
+<h3>[2026/3013] Fault- and Network-Agnostic Agreement</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Erica Blum, Evan Hart, Vivek Malik, Aidan Mokalla</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3013">论文</a> | <a href="https://eprint.iacr.org/2026/3013.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 传统容错共识协议通常针对特定的时序假设（如同步、部分同步或异步）及故障模型（如崩溃或拜占庭）进行设计，缺乏通用性。</p>
+<p><strong>主要贡献:</strong> 本文提出并形式化了网络与故障无关的协议概念，建立了自然共识问题在15种经典模型组合下的可行性紧确条件，并对比分析了无关共识与传统及混合容错协议的优劣。</p>
+<p><strong>达到效果:</strong> 研究揭示了无关共识协议在不同模型对间的适用边界，量化了其在通用性与性能开销之间的权衡关系。</p>
+<p><strong>技术梗概:</strong> 通过形式化定义网络与故障无关的协议框架，系统性地推导了跨15种经典模型组合的可行性条件，并进行了详细的成本效益分析。</p>
+</blockquote>
+<hr />
+<h3>[2026/3014] Compositional, Computational Security Verification of the Signal Implementation Under Fine-Grained Compromise with Owl</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Pratap Singh, Jacob Ginesin, Joshua Gancher, Bryan Parno</p>
+</li>
+<li>
+<p><strong>分类:</strong> Cryptographic protocols</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3014">论文</a> | <a href="https://eprint.iacr.org/2026/3014.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> 基于密钥棘轮机制的 Signal 协议套件是广泛部署端到端加密通信应用的核心，其安全目标涵盖细粒度保密性属性，如前向保密与抗妥协后恢复，这些特性在形式化验证工具中难以直接推理。</p>
+<p><strong>主要贡献:</strong> 本文扩展了 Owl 协议验证框架，通过引入基于类型的关键派生链模型及针对密钥层级逻辑查询的新颖技术，为可编译至实际实现的模型提供了细粒度保密性的计算安全性保证。</p>
+<p><strong>达到效果:</strong> 研究成功将 Owl 应用于 Signal 完整的双方消息协议套件，构建了高保真模型并形式化证明了其核心细粒度保密性等安全属性，同时实现了与开源实现性能匹配的 Rust 库编译。</p>
+<p><strong>技术梗概:</strong> 采用基于类型的组合式建模方法跨越子协议进行推理，结合逻辑查询技术对协议密钥层级进行分析，并通过专用编译管道将验证模型转化为高性能的 Rust 库实现。</p>
+</blockquote>
+<hr />
+<h3>[2026/3015] Merkle Trees Minimize Verifier Complexity in the ROM</h3>
+<ul>
+<li>
+<p><strong>作者:</strong> Miranda Christ, Oliver Korten, Tal Malkin, Noam Mazor, Shyamal Patel</p>
+</li>
+<li>
+<p><strong>分类:</strong> Foundations</p>
+</li>
+<li>
+<p><strong>链接:</strong> <a href="https://eprint.iacr.org/2026/3015">论文</a> | <a href="https://eprint.iacr.org/2026/3015.pdf">PDF</a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>研究背景:</strong> Merkle 树作为基于哈希的向量承诺方案，其验证者复杂度受限于对数级哈希计算次数，这已成为 SNARKs、凭证系统及认证字典等关键应用的性能瓶颈。</p>
+<p><strong>主要贡献:</strong> 本文在随机预言机模型（ROM）下证明了通过黑盒使用哈希函数无法实现次对数级的验证者复杂度，并确立了确定性验证者的查询复杂度下界为 $\Omega_{\theta}(\log n)$。</p>
+<p><strong>达到效果:</strong> 研究结果表明，高元度的 Merkle 树在该下界上仅相差常数因子，从而在理论上否定了构建更低复杂度哈希基向量承诺的可能性。</p>
+<p><strong>技术梗概:</strong> 证明的核心在于提出了一个不相交乘积引理（disjoint product lemma），将其视为计算复杂性视角下的类比工具，以严格界定验证查询数量的理论极限。</p>
+</blockquote>
+<hr />
 <h2>更新: 2026-11-25 09:25</h2>
 <p><em>新增 2 篇论文 (编号 3001--3002)</em></p>
 <h3><span style="background:#f39c12;color:#fff;padding:2px 6px;border-radius:3px;font-size:0.85em;">推荐</span> [2026/3001] Representation-Aware Kleptographic Attacks on Post-Quantum Cryptography</h3>
